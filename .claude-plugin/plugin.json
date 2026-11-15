@@ -1,0 +1,13 @@
+{
+  "name": "boqo-clips",
+  "version": "0.1.0",
+  "description": "Free branded 9:16 clips from any video, made on your own machine by your own agent with ffmpeg, yt-dlp and whisper.cpp.",
+  "author": {
+    "name": "boqo",
+    "url": "https://boqo.ai"
+  },
+  "homepage": "https://github.com/boqo-ai/boqo-clips",
+  "repository": "https://github.com/boqo-ai/boqo-clips",
+  "license": "MIT",
+  "keywords": ["clips", "short-form video", "ffmpeg", "captions", "agent skill"]
+}

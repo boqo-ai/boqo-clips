@@ -1,6 +1,7 @@
 // Captions as an ASS subtitle file: a clip's words and the person's brand in
 // one of four presets (karaoke, punch, clean, highlight), plus an optional hook
 // title. The render burns it with `ass=captions.ass:fontsdir=<engine/fonts>`.
+import { readFileSync } from 'node:fs';
 import { PRESETS } from './brand.mjs';
 
 /** @typedef {import('./words.mjs').Word} Word */
@@ -23,6 +24,8 @@ const MAX_GAP_SEC = 0.6;
 const HOOK_SEC = 3;
 const CAP_FRACTION = 0.045; // font size, as a fraction of frame height
 const PUNCH_SCALE = 1.25;
+const HOOK_SCALE = 1.1;
+const HOOK_MAX_LINES = 2;
 const OUTLINE_FRACTION = 0.004;
 const HOOK_Y_FRACTION = 0.12;
 const SIDE_MARGIN_FRACTION = 0.055;
@@ -58,6 +61,121 @@ export function assEscape(text) {
     .replace(/\}/g, '｝')
     .replace(/\\/g, '＼')
     .trim();
+}
+
+// Text width from the bundled TTFs: libass sizes a font so that its win
+// ascent + descent equals Fontsize, and a glyph is `advance / (ascent +
+// descent) * Fontsize` wide.
+const metricsCache = new Map();
+function fontMetrics(font) {
+  let m = metricsCache.get(font.file);
+  if (m) return m;
+  const buf = readFileSync(new URL(`./fonts/${font.file}`, import.meta.url));
+  const tables = {};
+  for (let i = 0, n = buf.readUInt16BE(4); i < n; i++) {
+    const o = 12 + i * 16;
+    tables[buf.toString('latin1', o, o + 4)] = buf.readUInt32BE(o + 8);
+  }
+  const nHMetrics = buf.readUInt16BE(tables.hhea + 34);
+  const advance = (gid) => buf.readUInt16BE(tables.hmtx + 4 * Math.min(gid, nHMetrics - 1));
+  const height = buf.readUInt16BE(tables['OS/2'] + 74) + buf.readUInt16BE(tables['OS/2'] + 76);
+
+  // cmap: prefer format 12 (all of Unicode), else format 4 (the BMP)
+  const cm = tables.cmap;
+  const subs = [];
+  for (let i = 0, n = buf.readUInt16BE(cm + 2); i < n; i++) {
+    const o = cm + 4 + i * 8;
+    const off = cm + buf.readUInt32BE(o + 4);
+    subs.push({ platform: buf.readUInt16BE(o), format: buf.readUInt16BE(off), off });
+  }
+  const sub = subs.find((x) => x.format === 12) ?? subs.find((x) => x.format === 4);
+  const glyphOf = (cp) => {
+    if (!sub) return 0;
+    const o = sub.off;
+    if (sub.format === 12) {
+      for (let i = 0, n = buf.readUInt32BE(o + 12); i < n; i++) {
+        const g = o + 16 + i * 12;
+        const lo = buf.readUInt32BE(g);
+        const hi = buf.readUInt32BE(g + 4);
+        if (cp >= lo && cp <= hi) return buf.readUInt32BE(g + 8) + (cp - lo);
+      }
+      return 0;
+    }
+    if (cp > 0xffff) return 0;
+    const segX2 = buf.readUInt16BE(o + 6);
+    const ends = o + 14;
+    const starts = ends + segX2 + 2;
+    const deltas = starts + segX2;
+    const ranges = deltas + segX2;
+    for (let i = 0; i < segX2; i += 2) {
+      if (cp > buf.readUInt16BE(ends + i)) continue;
+      if (cp < buf.readUInt16BE(starts + i)) return 0;
+      const ro = buf.readUInt16BE(ranges + i);
+      if (ro === 0) return (cp + buf.readUInt16BE(deltas + i)) & 0xffff;
+      const g = buf.readUInt16BE(ranges + i + ro + 2 * (cp - buf.readUInt16BE(starts + i)));
+      return g === 0 ? 0 : (g + buf.readUInt16BE(deltas + i)) & 0xffff;
+    }
+    return 0;
+  };
+
+  m = { height, glyphOf, advance };
+  metricsCache.set(font.file, m);
+  return m;
+}
+
+/**
+ * Estimated width in pixels of one line of `text` at ASS `Fontsize` `size`.
+ * A character the bundled font lacks (emoji, CJK, ...) is drawn by a fallback
+ * font; it counts as one em.
+ * @param {{ file: string }} font an entry of `FONT_FILES`
+ * @param {string} text
+ * @param {number} size
+ */
+export function textWidth(font, text, size) {
+  const m = fontMetrics(font);
+  let units = 0;
+  for (const ch of text) {
+    const g = m.glyphOf(ch.codePointAt(0));
+    units += g ? m.advance(g) : m.height;
+  }
+  return (units / m.height) * size;
+}
+
+// A usable fraction under 1: kerning and rounding are not measured.
+const FIT_SLACK = 0.97;
+const MIN_FIT_PCT = 20;
+
+/**
+ * The scale (1 = none) that makes every word fit `avail` px on one line, and
+ * at most `maxLines` lines when given. Text that fits is left alone.
+ * @param {{ file: string }} font
+ * @param {string[]} words as drawn
+ * @param {number} size ASS Fontsize
+ * @param {number} avail pixels between the margins, outline included
+ * @param {number} [maxLines]
+ */
+function fitScale(font, words, size, avail, maxLines = 99) {
+  const limit = avail * FIT_SLACK;
+  const space = textWidth(font, ' ', size);
+  const widths = words.map((x) => textWidth(font, x, size));
+  const lines = (room) => {
+    let n = 1;
+    let used = 0;
+    for (const wd of widths) {
+      if (wd > room) return Infinity; // one word wider than a line cannot wrap
+      if (used > 0 && used + space + wd > room) {
+        n++;
+        used = wd;
+      } else {
+        used += used > 0 ? space + wd : wd;
+      }
+    }
+    return n;
+  };
+  for (let pct = 100; pct > MIN_FIT_PCT; pct--) {
+    if (lines(limit / (pct / 100)) <= maxLines) return pct / 100;
+  }
+  return MIN_FIT_PCT / 100;
 }
 
 const endsSentence = (w) => /[.!?]["'”’)\]]*$/.test(w);
@@ -153,28 +271,31 @@ export function assFor(words, brand, frame = DEFAULT_FRAME, hook) {
   if (!font) throw new Error(`unknown brand font ${JSON.stringify(brand.font)}`);
 
   const text = assColor(brand.colors.text);
-    const size = Math.round(CAP_FRACTION * h * brand.captions.size);
+  const size = Math.round(CAP_FRACTION * h * brand.captions.size);
   const outline = Math.round(OUTLINE_FRACTION * h);
   const side = Math.round(SIDE_MARGIN_FRACTION * w);
   const x = Math.round(w / 2);
   const y = Math.round(brand.captions.position * h);
   const place = `\\an5\\pos(${x},${y})`;
+  // pixels a line may take: between the margins, with room for the outline
+  // (and, in highlight, the box padding) on both sides
+  const avail = w - 2 * side - 4 * outline;
+  // the same percentage on both axes: a long word shrinks, it is not squashed
+  const fsc = (f) => (f < 1 ? `\\fscx${Math.round(f * 100)}\\fscy${Math.round(f * 100)}` : '');
 
   const sorted = [...words].sort((a, b) => a.s - b.s);
   const hookText = typeof hook === 'string' ? assEscape(hook) : '';
 
   const styles = [styleLine('Default', font, size, { primary: text, outline }, side)];
-  if (preset === 'punch') {
-    styles.push(styleLine('Punch', font, Math.round(size * PUNCH_SCALE), { primary: text, outline }, side));
-  }
+  const punchSize = Math.round(size * PUNCH_SCALE);
+  if (preset === 'punch') styles.push(styleLine('Punch', font, punchSize, { primary: text, outline }, side));
   if (preset === 'highlight') {
     // BorderStyle 3 draws the outline colour as a box; its width is the padding
     const box = { primary: text, outlineColor: brand.colors.accent, borderStyle: 3, outline: outline * 2 };
     styles.push(styleLine('Box', font, size, box, side));
   }
-  if (hookText) {
-    styles.push(styleLine('Hook', font, Math.round(size * 1.1), { primary: text, outline, alignment: 8 }, side));
-  }
+  const hookSize = Math.round(size * HOOK_SCALE);
+  if (hookText) styles.push(styleLine('Hook', font, hookSize, { primary: text, outline, alignment: 8 }, side));
 
   const events = [];
   const add = (style, startSec, endSec, body) => {
@@ -187,15 +308,21 @@ export function assFor(words, brand, frame = DEFAULT_FRAME, hook) {
   if (hookText) {
     const last = sorted.at(-1);
     const end = last ? Math.min(HOOK_SEC, last.e) : HOOK_SEC;
-    add('Hook', 0, end, `{\\an8\\pos(${x},${Math.round(HOOK_Y_FRACTION * h)})\\fad(150,150)}${hookText}`);
+    // at most two lines; longer is scaled down to fit
+    const f = fitScale(font, hookText.split(' '), hookSize, avail, HOOK_MAX_LINES);
+    add('Hook', 0, end, `{\\an8\\pos(${x},${Math.round(HOOK_Y_FRACTION * h)})${fsc(f)}\\fad(150,150)}${hookText}`);
   }
 
   const shown = (word) => assEscape(preset === 'punch' ? word.w.toUpperCase() : word.w);
   for (const group of groupWords(sorted, preset)) {
+    // one scale for the whole group, so a karaoke group does not jump between
+    // its per-word Dialogues; only a word too wide for a line ever shrinks it
+    const f = fitScale(font, group.map(shown), preset === 'punch' ? punchSize : size, avail);
+    const scale = fsc(f);
     if (preset === 'clean') {
-      add('Default', group[0].s, group.at(-1).e, `{${place}}${group.map(shown).join(' ')}`);
+      add('Default', group[0].s, group.at(-1).e, `{${place}${scale}}${group.map(shown).join(' ')}`);
     } else if (preset === 'punch') {
-      const pop = '\\fscx85\\fscy85\\t(0,100,\\fscx100\\fscy100)';
+      const pop = `\\fscx${Math.round(f * 85)}\\fscy${Math.round(f * 85)}\\t(0,100,\\fscx${Math.round(f * 100)}\\fscy${Math.round(f * 100)})`;
       add('Punch', group[0].s, group.at(-1).e, `{${place}${pop}}${group.map(shown).join(' ')}`);
     } else {
       // karaoke and highlight: the whole group stays up, one Dialogue per
@@ -208,9 +335,9 @@ export function assFor(words, brand, frame = DEFAULT_FRAME, hook) {
           if (word !== spoken) return shown(word);
           return preset === 'karaoke'
             ? `{\\1c${accent}}${shown(word)}{\\1c${plain}}`
-            : `{\\rBox\\3c${accent}\\1c${boxText}}${shown(word)}{\\r}`;
+            : `{\\rBox\\3c${accent}\\1c${boxText}${scale}}${shown(word)}{\\r${scale}}`;
         });
-        add('Default', spoken.s, i < group.length - 1 ? group[i + 1].s : spoken.e, `{${place}}${parts.join(' ')}`);
+        add('Default', spoken.s, i < group.length - 1 ? group[i + 1].s : spoken.e, `{${place}${scale}}${parts.join(' ')}`);
       });
     }
   }

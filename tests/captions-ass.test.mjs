@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { readFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { join } from 'node:path'
-import { assFor, assColor, assEscape, groupWords, FONT_FILES } from '../engine/captions-ass.mjs'
+import { assFor, assColor, assEscape, groupWords, textWidth, FONT_FILES } from '../engine/captions-ass.mjs'
 import { defaultBrand, FONTS } from '../engine/brand.mjs'
 
 const FONTS_DIR = fileURLToPath(new URL('../engine/fonts/', import.meta.url))
@@ -287,6 +287,106 @@ test('no words: just the header; unknown preset throws', () => {
   assert.ok(ass.includes('[Events]'))
   assert.equal(dialogues(ass).length, 0)
   assert.throws(() => assFor(flow(3), brandWith({ preset: 'bold' })))
+})
+
+// ---- fit: a caption never leaves the frame ----
+
+// the room a line has: frame width minus both side margins
+const USABLE = 1080 - 2 * Math.round(0.055 * 1080)
+const scaleOf = (text) => {
+  const all = [...text.matchAll(/\\fscx(\d+)\\fscy(\d+)/g)]
+  if (!all.length) return null
+  for (const m of all) assert.equal(m[1], m[2], 'one percentage on both axes: scaled, not squashed')
+  return Number(all.at(-1)[1]) / 100 // punch pops in from a smaller one; the last is where it settles
+}
+const one = (w) => [{ w, s: 0, e: 0.5 }]
+const SIZE14 = Math.round(0.045 * 1920 * 1.4)
+
+test('punch: a 14-letter word at size 1.4 is scaled to fit the frame', () => {
+  const brand = brandWith({ preset: 'punch', size: 1.4 })
+  const ass = assFor(one('Transformation'), brand)
+  const [d] = dialogues(ass)
+  const f = scaleOf(d.text.split('}')[0])
+  // without a scale it would not fit: that is the bug
+  const full = textWidth(FONT_FILES.Inter, 'TRANSFORMATION', Math.round(SIZE14 * 1.25))
+  assert.ok(full > USABLE, `unscaled ${full}`)
+  assert.ok(f !== null && f < 1, d.text)
+  assert.ok(full * f <= USABLE, `scaled ${full * f} fits ${USABLE}`)
+  // the pop-in grows to the fitted size, not to 100
+  assert.match(d.text, new RegExp(`\\\\t\\(0,100,\\\\fscx${Math.round(f * 100)}\\\\fscy${Math.round(f * 100)}\\)`))
+  // a short word is left alone: only the usual 85 -> 100 pop
+  const short = dialogues(assFor(one('Wow'), brand))[0]
+  assert.equal(scaleOf(short.text), 1)
+  assert.ok(short.text.includes('\\fscx85\\fscy85\\t(0,100,\\fscx100\\fscy100)'), short.text)
+})
+
+test('every preset fits a 22-letter word, in both fonts', () => {
+  const word = 'Internationalizational'
+  for (const font of FONTS) {
+    for (const preset of ['karaoke', 'highlight', 'clean', 'punch']) {
+      const brand = brandWith({ preset, size: 1.4 }, { font })
+      const ds = dialogues(assFor(one(word), brand))
+      assert.ok(ds.length >= 1)
+      for (const d of ds) {
+        const f = scaleOf(d.text.split('}')[0])
+        const shown = preset === 'punch' ? word.toUpperCase() : word
+        const px = preset === 'punch' ? Math.round(SIZE14 * 1.25) : SIZE14
+        const full = textWidth(FONT_FILES[font], shown, px)
+        assert.ok(f !== null || full <= USABLE, `${font} ${preset} needs a scale`)
+        assert.ok(full * (f ?? 1) <= USABLE, `${font} ${preset}: ${full * (f ?? 1)} > ${USABLE}`)
+      }
+    }
+  }
+  // highlight re-applies the scale after \\r, which would reset it
+  const hl = dialogues(assFor(one(word), brandWith({ preset: 'highlight', size: 1.4 })))[0]
+  assert.match(hl.text, /\{\\rBox[^}]*\\fscx\d+\\fscy\d+\}[^{]*\{\\r\\fscx\d+\\fscy\d+\}/)
+})
+
+test('a group is scaled alike in all its per-word Dialogues', () => {
+  const words = [
+    { w: 'so', s: 0, e: 0.3 },
+    { w: 'extraordinarily', s: 0.3, e: 0.7 },
+    { w: 'good', s: 0.7, e: 1.0 },
+  ]
+  const ds = dialogues(assFor(words, brandWith({ preset: 'karaoke', size: 1.4 })))
+  assert.equal(ds.length, 3)
+  const f = scaleOf(ds[0].text.split('}')[0])
+  assert.ok(f < 1)
+  for (const d of ds) assert.equal(scaleOf(d.text.split('}')[0]), f)
+})
+
+test('text that fits gets no scale tag', () => {
+  for (const preset of ['karaoke', 'highlight', 'clean']) {
+    const ass = assFor(flow(8), brandWith({ preset, size: 1.4 }))
+    assert.ok(!/\\fscx/.test(ass), preset)
+  }
+})
+
+test('a hook is at most two lines, scaled down when it needs more', () => {
+  const lineCount = (text, f, px) => {
+    const room = USABLE / f
+    const sp = textWidth(FONT_FILES.Inter, ' ', px)
+    let n = 1, used = 0
+    for (const w of text.split(' ')) {
+      const wd = textWidth(FONT_FILES.Inter, w, px)
+      if (used > 0 && used + sp + wd > room) { n++; used = wd } else used += used > 0 ? sp + wd : wd
+    }
+    return n
+  }
+  const brand = brandWith({ size: 1.4 })
+  const hookPx = Math.round(SIZE14 * 1.1)
+  const long = 'what happens next in this clip will honestly change how you think about every single thing'
+  const h = dialogues(assFor(flow(12), brand, undefined, long)).find((d) => d.style === 'Hook')
+  const f = scaleOf(h.text.split('}')[0])
+  assert.ok(lineCount(long, 1, hookPx) > 2, 'unscaled it needs 3+ lines')
+  assert.ok(f !== null && f < 1)
+  assert.ok(lineCount(long, f, hookPx) <= 2, `lines at ${f}`)
+  // a short hook keeps its size
+  const s = dialogues(assFor(flow(12), brand, undefined, 'Wait for it')).find((d) => d.style === 'Hook')
+  assert.equal(scaleOf(s.text), null)
+  // one very long word in a hook fits too
+  const w = dialogues(assFor(flow(12), brand, undefined, 'Internationalizational')).find((d) => d.style === 'Hook')
+  assert.ok(textWidth(FONT_FILES.Inter, 'Internationalizational', hookPx) * scaleOf(w.text.split('}')[0]) <= USABLE)
 })
 
 // A tiny TrueType reader: family from the `name` table (ID 16, else 1) and the

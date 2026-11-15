@@ -101,6 +101,52 @@ test('wordsFromJson3: speech then a tag then speech keeps both sides', () => {
   assert.deepEqual(wordsFromJson3(j).map((x) => x.w), ['before', 'after'])
 })
 
+test('wordsFromJson3: a speaker mark alone is dropped, in every spelling', () => {
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 500, segs: [{ utf8: 'before' }] },
+      { tStartMs: 500, dDurationMs: 500, segs: [{ utf8: '>>' }, { utf8: ' >>', tOffsetMs: 100 }, { utf8: '>', tOffsetMs: 150 }, { utf8: ' &gt;&gt;', tOffsetMs: 200 }] },
+      { tStartMs: 1000, dDurationMs: 500, segs: [{ utf8: 'after' }] },
+    ],
+  }
+  // the word before a mark ends where the next kept word starts, not at the mark
+  assert.deepEqual(wordsFromJson3(j), [
+    { w: 'before', s: 0, e: 1 },
+    { w: 'after', s: 1, e: 1.5 },
+  ])
+})
+
+test('wordsFromJson3: a leading speaker mark is stripped, one inside a word is not', () => {
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 2000, segs: [{ utf8: '>>I' }, { utf8: ' &gt;&gt;think', tOffsetMs: 300 }, { utf8: ' a>>b', tOffsetMs: 600 }, { utf8: ' x>', tOffsetMs: 900 }] },
+    ],
+  }
+  assert.deepEqual(wordsFromJson3(j).map((x) => x.w), ['I', 'think', 'a>>b', 'x>'])
+})
+
+test('wordsFromJson3: a speaker dash at the start of an event is stripped or dropped', () => {
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 500, segs: [{ utf8: '- Yeah' }] },
+      { tStartMs: 500, dDurationMs: 500, segs: [{ utf8: '-' }, { utf8: ' No', tOffsetMs: 100 }] },
+      { tStartMs: 1000, dDurationMs: 500, segs: [{ utf8: '>>' }, { utf8: ' - Okay', tOffsetMs: 100 }] },
+      { tStartMs: 1500, dDurationMs: 500, segs: [{ utf8: 'so' }, { utf8: ' -', tOffsetMs: 100 }, { utf8: ' it', tOffsetMs: 200 }] },
+    ],
+  }
+  assert.deepEqual(wordsFromJson3(j).map((x) => x.w), ['Yeah', 'No', 'Okay', 'so', 'it'])
+})
+
+test('wordsFromJson3: real hyphens and negative numbers are kept', () => {
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 2000, segs: [{ utf8: 'well-known' }, { utf8: ' -5', tOffsetMs: 300 }, { utf8: ' -ish', tOffsetMs: 600 }, { utf8: ' a-', tOffsetMs: 900 }] },
+      { tStartMs: 2000, dDurationMs: 500, segs: [{ utf8: '-5' }] },
+    ],
+  }
+  assert.deepEqual(wordsFromJson3(j).map((x) => x.w), ['well-known', '-5', '-ish', 'a-', '-5'])
+})
+
 test('wordsFromWhisper converts ms offsets, skips empty text, adds the offset', () => {
   const j = {
     transcription: [

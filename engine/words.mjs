@@ -12,9 +12,30 @@ const MIN_WORD_SEC = 0.01;
 const round3 = (x) => Math.round(x * 1000) / 1000;
 const num = (x) => (typeof x === 'number' && Number.isFinite(x) ? x : null);
 
+// A speaker change is `>>` (also `&gt;&gt;`, or a lone `>`), alone or glued to
+// the word that follows. A speaker dash is a `-` alone, or `- ` opening an event.
+const MARK_ONLY = /^(?:>|&gt;)+$/;
+const MARK_LEAD = /^(?:>>+|(?:&gt;){2,})\s*/;
+const DASH_LEAD = /^-\s+/;
+
+/**
+ * The seg text without a speaker mark ('' when nothing is left). A mark inside
+ * a word, and hyphens that belong to a word (`well-known`, `-5`), stay.
+ * @param {string} text trimmed
+ * @param {boolean} atStart no speech seg has come yet in this event
+ */
+function speakerStripped(text, atStart) {
+  let t = text;
+  if (MARK_ONLY.test(t)) return '';
+  t = t.replace(MARK_LEAD, '');
+  if (atStart) t = t.replace(DASH_LEAD, '');
+  return t === '-' || MARK_ONLY.test(t) ? '' : t;
+}
+
 /**
  * Words from a YouTube json3 caption track. Sound tags (`[Music]`,
- * `[Applause]`) are dropped as in `wordsFromWhisper`. Each seg starts at
+ * `[Applause]`) are dropped as in `wordsFromWhisper`, and so are speaker
+ * marks (`>>`, a speaker dash); a dropped mark gives its time to no one. Each seg starts at
  * `tStartMs + tOffsetMs`. A word ends where the next one starts, and never
  * runs longer than one second; the last word ends at its event's end, also
  * capped.
@@ -28,9 +49,11 @@ export function wordsFromJson3(j) {
     const t0 = num(ev?.tStartMs);
     if (t0 === null || !Array.isArray(ev.segs)) continue;
     const d = num(ev.dDurationMs);
+    let atStart = true;
     for (const seg of ev.segs) {
-      const text = typeof seg?.utf8 === 'string' ? seg.utf8.trim() : '';
+      const text = speakerStripped(typeof seg?.utf8 === 'string' ? seg.utf8.trim() : '', atStart);
       if (!text) continue;
+      atStart = false;
       const startMs = t0 + (num(seg.tOffsetMs) ?? 0);
       raw.push({ w: text, startMs, endMs: d === null ? null : t0 + d });
     }

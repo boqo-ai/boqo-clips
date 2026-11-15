@@ -76,6 +76,29 @@ test('wordsFromWhisper converts ms offsets, skips empty text, adds the offset', 
   assert.deepEqual(wordsFromWhisper(j), [{ w: 'We', s: 0, e: 0.17 }])
 })
 
+test("wordsFromWhisper drops whisper's non-speech markers", () => {
+  const item = (text, i) => ({ offsets: { from: i * 100, to: i * 100 + 90 }, text })
+  const j = {
+    transcription: [
+      item(' [_BEG_]', 0),
+      item(' [BLANK_AUDIO]', 1),
+      item(' [Music]', 2),
+      item(' (music)', 3),
+      item(' (laughs)', 4),
+      item(' [ Silence ]', 5),
+      item(' \u266a', 6),
+      item(' \u266a\u266a ', 7),
+      item(' Hello', 8),
+      item(' [word]s', 9),
+      item(' (yes) no', 10),
+    ],
+  }
+  assert.deepEqual(
+    wordsFromWhisper(j).map((x) => x.w),
+    ['Hello', '[word]s', '(yes) no'],
+  )
+})
+
 test('wordsFromWhisper: sorted, s < e, tolerates junk', () => {
   const j = {
     transcription: [

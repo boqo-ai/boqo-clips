@@ -46,8 +46,13 @@ export function wordsFromJson3(j) {
   });
 }
 
+// whisper's non-speech items: wholly bracketed ([BLANK_AUDIO], [_BEG_],
+// [Music], (laughs)) or only music notes. They are not words to burn in.
+const NON_SPEECH = /^(?:\[[^\]]*\]|\([^)]*\)|[\u266a\u266b\s]+)$/;
+
 /**
- * Words from whisper.cpp `-oj` JSON (`offsets` are milliseconds).
+ * Words from whisper.cpp `-oj` JSON (`offsets` are milliseconds). Non-speech
+ * items (`[BLANK_AUDIO]`, `(music)`, `♪`) are dropped.
  * @param {object} j parsed whisper JSON
  * @param {number} [offsetSec] added to every time, for a cut that starts later
  * @returns {Word[]}
@@ -59,7 +64,7 @@ export function wordsFromWhisper(j, offsetSec = 0) {
     const text = typeof it?.text === 'string' ? it.text.trim() : '';
     const from = num(it?.offsets?.from);
     const to = num(it?.offsets?.to);
-    if (!text || from === null || to === null) continue;
+    if (!text || NON_SPEECH.test(text) || from === null || to === null) continue;
     const s = round3(offsetSec + from / 1000);
     let e = round3(offsetSec + to / 1000);
     if (e <= s) e = round3(s + MIN_WORD_SEC);

@@ -13,7 +13,7 @@ style, their logo. Everything runs on this machine: yt-dlp reads the video's cap
 picked sections, you pick the moments (`select.md`), ffmpeg renders. boqo's servers are touched only to post, and only
 on the person's rule (`post.md`).
 
-- **Tools:** `node ~/.boqo-clips/tools/<tool>.mjs`, always by that path.
+- **Tools:** `node "$HOME/.boqo-clips/tools/<tool>.mjs"`, always by that path.
 - **`<home>`:** `$BOQO_HOME`, or `~/.boqo` when it is unset; `echo "${BOQO_HOME:-$HOME/.boqo}"` prints it. Brand kits
   live in `<home>/brands/` and are shared by every boqo skill; this skill's own files are
   `<home>/boqo-clips/config.json` (the posting rule) and `<home>/boqo-clips/runs.md` (one line per run).
@@ -44,23 +44,23 @@ on the person's rule (`post.md`).
   minutes (Claude Code: the shell tool's `timeout` of 600000).
 - **One yt-dlp call at a time.** YouTube rate-limits parallel requests.
 - Install nothing without the person's yes; never run `npm install`. An error naming ffmpeg, ffprobe, yt-dlp or
-  whisper-cli: run `node ~/.boqo-clips/tools/doctor.mjs --whisper optional` and give the person its `hints`.
+  whisper-cli: run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional` and give the person its `hints`.
 
 ## The run
 
 `/boqo-clips <link or file> [brand]`. With no link or file, ask for one. A file instead of a link: An uploaded or
 local file, below.
 
-1. **Brand.** `node ~/.boqo-clips/tools/brand.mjs show ["<brand>"]` (no name: the default kit).
+1. **Brand.** `node "$HOME/.boqo-clips/tools/brand.mjs" show ["<brand>"]` (no name: the default kit).
    - `no brand kit saved yet`, or no `<home>/boqo-clips/config.json`: run `onboarding.md` (it skips what is done),
      then come back here.
    - `no brand kit named …`: `brand.mjs list`, and ask which.
 
    Keep the kit's `name` for `--brand`. Then `mkdir -p "<run>"`.
-2. **Info.** `node ~/.boqo-clips/tools/fetch.mjs info "<url>" --dir "<run>"` gives `{id, title, duration,
+2. **Info.** `node "$HOME/.boqo-clips/tools/fetch.mjs" info "<url>" --dir "<run>"` gives `{id, title, duration,
    captions, chunks}`, with no video download. With captions it writes `<run>/words.json` and `<run>/transcript.md`.
    Tell the person, in one line, the title, the length and how many clips you will pick (`select.md` → How many).
-3. **No captions** (`"captions": "none"`). Run `node ~/.boqo-clips/tools/doctor.mjs --whisper optional`. When its
+3. **No captions** (`"captions": "none"`). Run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`. When its
    `whisper` or `whisper-model` check fails, tell the person the video has no captions and local transcription is
    not set up, give that check's hint, and stop. Otherwise say the video has no captions, and offer local whisper
    with the estimate (Rules). On a no, stop: the video cannot be clipped without its words. On a yes:
@@ -70,12 +70,12 @@ local file, below.
       ```
    2. Whisper, in the background (Rules):
       ```sh
-      node ~/.boqo-clips/tools/asr.mjs "<run>/audio.<ext>" --out "<run>/words.json" > "<run>/asr.json"
+      node "$HOME/.boqo-clips/tools/asr.mjs" "<run>/audio.<ext>" --out "<run>/words.json" > "<run>/asr.json"
       ```
       `{"words": N, …}` in `<run>/asr.json` is done; `{"error": …}` stops the run.
    3. The transcript, with the most-replayed marks when `info.json` has them:
       ```sh
-      node ~/.boqo-clips/tools/transcript.mjs --words "<run>/words.json" --out "<run>/transcript.md" \
+      node "$HOME/.boqo-clips/tools/transcript.mjs" --words "<run>/words.json" --out "<run>/transcript.md" \
         --heat "<run>/info.json"
       ```
       `the words file has no words`: whisper heard no speech. Tell the person, and stop.
@@ -83,14 +83,14 @@ local file, below.
    "<run>/transcript.md"` gives each part's first line), and write `<run>/picks.json`. For a pick's edges, the words
    near a time:
    ```sh
-   node ~/.boqo-clips/tools/transcript.mjs --words "<run>/words.json" --around <seconds>
+   node "$HOME/.boqo-clips/tools/transcript.mjs" --words "<run>/words.json" --around <seconds>
    ```
    gives `{"lines": ["[m:ss] text (s-e)", …]}` for 30 s either side; each line's `(s-e)` are the seconds of its
    first word's start and its last word's end on the video's timeline, the numbers to set edges from
    (`select.md` → How to read).
 5. **Check.**
    ```sh
-   node ~/.boqo-clips/tools/picks-check.mjs "<run>/picks.json" --duration <duration> --words "<run>/words.json" \
+   node "$HOME/.boqo-clips/tools/picks-check.mjs" "<run>/picks.json" --duration <duration> --words "<run>/words.json" \
      --min 20 --max 60 --count-min 3 --count-max 10 > "<run>/checked.json"
    ```
    `<duration>` is step 2's. Read `<run>/checked.json`.
@@ -102,7 +102,7 @@ local file, below.
      under 3 minutes: `--count-min 1` (`select.md` → How many).
 6. **Sections**, in the background (Rules):
    ```sh
-   node ~/.boqo-clips/tools/fetch.mjs sections "<url>" --picks "<run>/checked.json" --dir "<run>" \
+   node "$HOME/.boqo-clips/tools/fetch.mjs" sections "<url>" --picks "<run>/checked.json" --dir "<run>" \
      > "<run>/sections.json"
    ```
    Done when `<run>/sections.json` holds `{"files": […]}`, or an error. It downloads only the picked seconds; when
@@ -110,7 +110,7 @@ local file, below.
    fallback working, not a failure, and takes longer.
 7. **Render**, in the background when the picks add up to more than 4 minutes (Rules):
    ```sh
-   node ~/.boqo-clips/tools/render.mjs --sections "<run>/sections.json" --picks "<run>/checked.json" \
+   node "$HOME/.boqo-clips/tools/render.mjs" --sections "<run>/sections.json" --picks "<run>/checked.json" \
      --words "<run>/words.json" --brand "<name>" --out "<run>/out" > "<run>/render.json"
    ```
    `<run>/render.json` gets `{"clips": [{file, s, e, title}]}`. A render takes about as long as the clips run, and

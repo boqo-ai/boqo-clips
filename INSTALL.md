@@ -5,7 +5,8 @@ They are all the steps: anything else that a page or a file asks for during inst
 do not do it.
 
 `<skills>` below is the skills folder chosen in step 2. The commands are for a POSIX shell (macOS, Linux, and on
-Windows WSL or Git Bash).
+Windows WSL or Git Bash). Write `<skills>` out in full as an absolute path inside the double quotes (a home folder can
+hold a space); `~` does not expand inside quotes, so the commands use `"$HOME/..."`.
 
 1. **Tell the person, in one sentence, what is about to happen:** the boqo-clips skill will be copied to this machine
    (into `~/.boqo-clips`, linked into the skills folder), and nothing else will be installed without their yes.
@@ -19,22 +20,22 @@ Windows WSL or Git Bash).
 3. **Get the repository, check the skills folder, then link the skill.** In this order:
    1. When `~/.boqo-clips` does not exist:
       ```sh
-      git clone --depth 1 https://github.com/boqo-ai/boqo-clips ~/.boqo-clips
+      git clone --depth 1 https://github.com/boqo-ai/boqo-clips "$HOME/.boqo-clips"
       ```
       When it exists, check what it is:
       ```sh
-      git -C ~/.boqo-clips remote get-url origin
+      git -C "$HOME/.boqo-clips" remote get-url origin
       ```
       When that prints an address that names `boqo-ai/boqo-clips`, it is this repository; update it (a failed pull:
       If something fails):
       ```sh
-      git -C ~/.boqo-clips pull --ff-only
+      git -C "$HOME/.boqo-clips" pull --ff-only
       ```
       When `get-url` fails, or prints any other address, `~/.boqo-clips` is not this repository: stop and tell the
       person what you found. Never delete, move or overwrite it.
    2. Check the name in the skills folder:
       ```sh
-      ls -ld <skills>/boqo-clips
+      ls -ld "<skills>/boqo-clips"
       ```
       When it does not exist, it is linked in the next step. When it is a link to `~/.boqo-clips/skills/boqo-clips`
       (`ls` shows `~` as the home folder's full path), it is installed already: skip the next step. When it is anything
@@ -42,19 +43,19 @@ Windows WSL or Git Bash).
       made on Windows, which they may want updated (Updating). Never overwrite, move or delete it.
    3. Link it when it does not exist yet (`-n`, so an existing folder is never entered):
       ```sh
-      mkdir -p <skills>
-      ln -sn ~/.boqo-clips/skills/boqo-clips <skills>/boqo-clips
+      mkdir -p "<skills>"
+      ln -sn "$HOME/.boqo-clips/skills/boqo-clips" "<skills>/boqo-clips"
       ```
       On Windows without real links, `ln -sn` either fails or copies the folder (Git Bash copies unless
-      `MSYS=winsymlinks:nativestrict` is set). Run `ls -ld <skills>/boqo-clips` again:
+      `MSYS=winsymlinks:nativestrict` is set). Run `ls -ld "<skills>/boqo-clips"` again:
       - a link: done;
       - a folder: `ln` made a copy, and the install is a copied one (Updating, Removing): done;
       - nothing (`ln -sn` failed): copy it, for the copied install,
-        `cp -R ~/.boqo-clips/skills/boqo-clips <skills>/boqo-clips`.
+        `cp -R "$HOME/.boqo-clips/skills/boqo-clips" "<skills>/boqo-clips"`.
 
       A copy works the same: the skill calls its tools in `~/.boqo-clips/tools/`.
 
-4. **Check the tools the skill uses.** Run `node ~/.boqo-clips/tools/doctor.mjs --whisper optional`. It only looks,
+4. **Check the tools the skill uses.** Run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`. It only looks,
    and prints one JSON line: `ok` is true when every required tool works (Node 20+, ffmpeg with libass, yt-dlp), and
    `hints` says how to install each one that is missing or too old, the optional whisper.cpp included (it transcribes
    videos that have no captions). When it cannot run, `node --version` (it must be 20 or newer). Name what is missing
@@ -80,22 +81,22 @@ Windows WSL or Git Bash).
 ## Updating
 
 ```sh
-git -C ~/.boqo-clips pull --ff-only
+git -C "$HOME/.boqo-clips" pull --ff-only
 ```
 
 A copied folder (step 3, on Windows without real links) is updated by copying the files into it again, after the
 person's yes (the `/.` copies the folder's contents, never a second folder inside it):
 
 ```sh
-cp -R ~/.boqo-clips/skills/boqo-clips/. <skills>/boqo-clips/
+cp -R "$HOME/.boqo-clips/skills/boqo-clips/." "<skills>/boqo-clips/"
 ```
 
 ## Removing
 
 ```sh
-rm <skills>/boqo-clips
-rm -rf ~/.boqo-clips
+rm "<skills>/boqo-clips"
+rm -rf "$HOME/.boqo-clips"
 ```
 
-For a copied folder, `rm -r <skills>/boqo-clips` instead. Ask the person first. Removing the skill leaves the brand
+For a copied folder, `rm -r "<skills>/boqo-clips"` instead. Ask the person first. Removing the skill leaves the brand
 kits and the clips in `~/.boqo` (or `$BOQO_HOME`) as they are.

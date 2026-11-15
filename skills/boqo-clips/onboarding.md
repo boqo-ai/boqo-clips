@@ -2,7 +2,7 @@
 
 Runs from INSTALL.md step 6, and from a run that finds no brand kit or no `<home>/boqo-clips/config.json`
 (SKILL.md → The run, step 1). Three parts, in order: the brand kit, the boqo connection, the posting rule. Skip a part
-that is done: a kit `node ~/.boqo-clips/tools/brand.mjs list` already shows (kits are shared by every boqo skill, so
+that is done: a kit `node "$HOME/.boqo-clips/tools/brand.mjs" list` already shows (kits are shared by every boqo skill, so
 another one may have made it), the rule already in `config.json`.
 
 Open with two sentences: in about two minutes you set up their brand kit (a name, a logo, two colours, and a caption
@@ -21,7 +21,7 @@ Four questions. Ask the first two in one message.
    10 MB:
    ```sh
    echo '{"name": "logo"}' > "<samples>/logo.json"
-   BOQO_HOME="<samples>/home" node ~/.boqo-clips/tools/brand.mjs save "<samples>/logo.json" --logo "<url>"
+   BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/brand.mjs" save "<samples>/logo.json" --logo "<url>"
    ```
    From then on `<logo>` is the file its reply names in `brand.logo.file`.
 3. **Two colours:** the caption text (usually white) and the accent, the colour of the spoken or stressed word.
@@ -48,9 +48,9 @@ the person chooses.
 4. For each preset, `karaoke`, `punch`, `clean` and `highlight`: write `<samples>/<preset>.json`, the kit (below)
    with `"name": "<preset>"` and that preset, then
    ```sh
-   BOQO_HOME="<samples>/home" node ~/.boqo-clips/tools/brand.mjs save "<samples>/<preset>.json" --logo "<logo>"
-   BOQO_HOME="<samples>/home" node ~/.boqo-clips/tools/render.mjs --src "<samples>/src.mp4" \
-     --picks "<samples>/pick.json" --words "<samples>/words.json" --brand <preset> --out "<samples>/<preset>"
+   BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/brand.mjs" save "<samples>/<preset>.json" --logo "<logo>"
+   BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/render.mjs" --src "<samples>/src.mp4" \
+     --picks "<samples>/pick.json" --words "<samples>/words.json" --brand "<preset>" --out "<samples>/<preset>"
    ```
    With no logo, leave out `--logo`. Each sample is `<samples>/<preset>/clip-01.mp4`.
 5. One picture of the four side by side, at 2.8 s, in the order karaoke, punch, clean, highlight:
@@ -75,7 +75,7 @@ the person chooses.
 ```
 
 ```sh
-node ~/.boqo-clips/tools/brand.mjs save "<samples>/brand.json" --logo "<logo>"
+node "$HOME/.boqo-clips/tools/brand.mjs" save "<samples>/brand.json" --logo "<logo>"
 ```
 
 Then `rm -rf "<samples>"`, with the path written out in full (never empty), and tell the person in one line that the
@@ -84,8 +84,8 @@ kit is saved and every boqo skill uses it.
 - On the person's ask only: `"font": "Anton"` (tall and condensed), `logo.corner` `tl`, `tr`, `bl` or `br`,
   `logo.scale` 0.08 to 0.3 (0.16, the share of the frame's width), `captions.position` 0.1 to 0.9 (0.72, how far
   down), `captions.size` 0.7 to 1.4 (1.0), and `"hook": false` for no title at the top.
-- The first kit saved becomes the default; `brand.mjs default <name>` changes it.
-- **Changing a kit later:** `brand.mjs show <name>`, change the keys in its `brand`, and save that with `--logo`
+- The first kit saved becomes the default; `brand.mjs default "<name>"` changes it.
+- **Changing a kit later:** `brand.mjs show "<name>"`, change the keys in its `brand`, and save that with `--logo`
   again, or with `logo.file` as `show` printed it. A save with neither drops the logo.
 
 ## 2. The boqo connection
@@ -107,7 +107,7 @@ it) before its absence means anything.
 
 ## 3. The posting rule
 
-`mkdir -p <home>/boqo-clips`. With boqo's tools, ask once: post each clip only after they say yes (the default), or
+`mkdir -p "<home>/boqo-clips"`. With boqo's tools, ask once: post each clip only after they say yes (the default), or
 post automatically, up to N a day, to the accounts they name. Without them, write the default and ask nothing.
 
 `<home>/boqo-clips/config.json`:

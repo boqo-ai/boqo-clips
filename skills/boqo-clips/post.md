@@ -23,13 +23,13 @@ full, in double quotes (SKILL.md → Overview).
 ## Each clip
 
 One clip at a time. `<file>` is its path, `<k>` its number.
-1. `node ~/.boqo-clips/tools/boqo-upload.mjs probe "<file>"` gives `sizeBytes`, `contentType` and `passthrough`.
+1. `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" probe "<file>"` gives `sizeBytes`, `contentType` and `passthrough`.
    `passthrough: false`: say its `reasons` and skip the clip.
-2. `node ~/.boqo-clips/tools/boqo-upload.mjs name "<the clip's title>"` gives `filename`. An error (a `-`, `_` or `/`,
+2. `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" name "<the clip's title>"` gives `filename`. An error (a `-`, `_` or `/`,
    a single word): reword the title without it, and use the new title from here on.
 3. `create_upload {filename, contentType: "video/mp4", sizeBytes, kind: "post"}`. Write its reply, exactly as it came,
    to `<run>/upload-<k>.json`. It holds signed upload URLs: never print them, quote them or put them in `runs.md`.
-4. `node ~/.boqo-clips/tools/boqo-upload.mjs put "<file>" --reply "<run>/upload-<k>.json"` gives
+4. `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" put "<file>" --reply "<run>/upload-<k>.json"` gives
    `{"ok": true, "projectId", …}`: delete `<run>/upload-<k>.json`. `"ok": false` or an error: say which part failed,
    and offer one retry, `put` again with the same reply file (its URLs live 48 hours). Once the person stops, delete
    `<run>/upload-<k>.json`: it still holds live signed URLs.

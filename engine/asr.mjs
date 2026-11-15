@@ -11,7 +11,7 @@ import { wordsFromWhisper } from './words.mjs';
 
 /** @typedef {import('./words.mjs').Word} Word */
 
-const MODEL_URL = 'https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin';
+export const MODEL_URL = 'https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin';
 
 // smaller number = preferred; `.en` models sort after multilingual ones
 function rank(name) {

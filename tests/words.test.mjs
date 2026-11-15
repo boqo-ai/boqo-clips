@@ -5,6 +5,7 @@ import {
   wordsFromWhisper,
   wordsInRange,
   wordsAround,
+  findPhrase,
   transcriptChunks,
   transcriptMarkdown,
 } from '../engine/words.mjs'
@@ -452,4 +453,96 @@ test('wordsAround: unsorted input, blank and malformed words are tolerated; noth
 test('wordsAround: minutes keep counting past an hour', () => {
   const r = wordsAround([W('late', 3725, 3725.5)], 3725, 5)
   assert.equal(r.lines[0], '[62:05] late (3725.00-3725.50)')
+})
+
+// A YouTube auto-caption line: tokens bunched at its start, 0.1 s apart.
+const LINE = [
+  W('And', 259.994, 260.094), W('what', 260.094, 260.194), W('we', 260.194, 260.294),
+  W('like', 260.294, 260.394), W('to', 260.394, 260.494), W('say', 260.494, 260.594),
+  W('around', 260.594, 260.694), W('here', 260.694, 261.2), W('is', 262.5, 262.7),
+  W('ship', 262.7, 263.0), W('it.', 263.0, 263.4),
+];
+
+test('findPhrase: an exact phrase gives its first word start and last word end', () => {
+  assert.deepEqual(findPhrase(LINE, 'what we like to say', 262, 60), {
+    s: 260.094, e: 260.594, match: 'what we like to say', score: 1,
+  })
+  assert.deepEqual(findPhrase(LINE, 'is ship it', 262, 60), { s: 262.5, e: 263.4, match: 'is ship it.', score: 1 })
+})
+
+test('findPhrase ignores case, punctuation and the kind of apostrophe; match is the words as written', () => {
+  const words = [W('So,', 10, 10.2), W('Don’t', 10.2, 10.5), W('STOP.', 10.5, 10.9), W('"Ever"', 11, 11.3), W('well-known', 11.3, 11.8)]
+  assert.deepEqual(findPhrase(words, "don't stop ever", 10, 60), { s: 10.2, e: 11.3, match: 'Don’t STOP. "Ever"', score: 1 })
+  assert.deepEqual(findPhrase(words, 'Ever, well-known!', 10, 60), { s: 11, e: 11.8, match: '"Ever" well-known', score: 1 })
+  // punctuation inside a word is dropped, not split on: Q&A is QA, 5.5 is 55
+  const caps = [W('uh', 20, 20.2), W('QA', 20.2, 20.5), W('on', 20.5, 20.7), W('Opus', 20.7, 21), W('55', 21, 21.4)]
+  assert.deepEqual(findPhrase(caps, 'Q&A on Opus 5.5', 20, 60), { s: 20.2, e: 21.4, match: 'QA on Opus 55', score: 1 })
+})
+
+test('findPhrase: one misspelt word (auto-caption spelling) still matches, scored under 1', () => {
+  const words = [W('Justin', 30, 30.3), W('Shroder', 30.3, 30.8), W('from', 30.8, 31), W('Standard', 31, 31.5), W('Agents', 31.5, 32)]
+  const r = findPhrase(words, 'Justin Schroeder from Standard', 31, 60)
+  assert.equal(r.s, 30)
+  assert.equal(r.e, 31.5)
+  assert.equal(r.match, 'Justin Shroder from Standard')
+  assert.ok(r.score >= 0.6 && r.score < 1, String(r.score))
+  // a wholly different word in four is still a match; in two it is not
+  const other = findPhrase(LINE, 'what we love to', 262, 60)
+  assert.equal(other.s, 260.094)
+  assert.equal(other.e, 260.494)
+  assert.ok(other.score >= 0.6 && other.score < 1)
+  assert.equal(findPhrase(LINE, 'we hate', 262, 60), null)
+})
+
+test('findPhrase: a caption word the quote leaves out is taken in, never cut', () => {
+  const words = [W('what', 50, 50.2), W('uh', 50.2, 50.4), W('we', 50.4, 50.6), W('like', 50.6, 50.8), W('to', 50.8, 51), W('do', 51, 51.3)]
+  const r = findPhrase(words, 'what we like to', 50, 60)
+  assert.equal(r.s, 50)
+  assert.equal(r.e, 51)
+  assert.equal(r.match, 'what uh we like to')
+})
+
+test('findPhrase: a caption word before the first quoted word is not taken in; one in its place is', () => {
+  const words = [W('uh', 70, 70.2), W('what', 70.2, 70.4), W('we', 70.4, 70.6), W('like', 70.6, 70.8), W('to', 70.8, 71)]
+  // "really" is not in the captions: the window still opens on "what", not "uh"
+  const r = findPhrase(words, 'what we really like', 70.5, 60)
+  assert.equal(r.s, 70.2)
+  assert.equal(r.match, 'what we like')
+  // "so" is not in the captions, and "uh" stands where it would be: taken in
+  const sub = findPhrase(words, 'so what we like', 70.5, 60)
+  assert.equal(sub.s, 70)
+  assert.equal(sub.match, 'uh what we like')
+  // the same at the end: "to" stands in for "eat", but nothing past it is taken
+  const end = findPhrase([...words, W('ok', 71, 71.2)], 'we like eat', 70.5, 60)
+  assert.equal(end.e, 71)
+  assert.equal(end.match, 'we like to')
+})
+
+test('findPhrase: two occurrences give the one closest to near', () => {
+  const words = [
+    W('you', 100, 100.2), W('know', 100.2, 100.4), W('what', 100.4, 100.6), W('filler', 101, 101.5),
+    W('you', 140, 140.2), W('know', 140.2, 140.4), W('what', 140.4, 140.6),
+  ]
+  assert.equal(findPhrase(words, 'you know what', 130, 60).s, 140)
+  assert.equal(findPhrase(words, 'you know what', 112, 60).s, 100)
+  // an exact match beats a closer near-miss
+  const near = [...words, W('you', 129, 129.2), W('knew', 129.2, 129.4), W('that', 129.4, 129.6)]
+  assert.equal(findPhrase(near, 'you know what', 129, 60).s, 140)
+})
+
+test('findPhrase searches only [near - span, near + span], from clamped at 0', () => {
+  const words = [W('opening', 0.5, 0.9), W('words', 0.9, 1.2), W('far', 300, 300.3), W('away', 300.3, 300.6)]
+  assert.equal(findPhrase(words, 'opening words', 10, 60).s, 0.5)
+  assert.equal(findPhrase(words, 'far away', 100, 60), null)
+  assert.equal(findPhrase(words, 'far away', 100, 250).s, 300)
+  assert.equal(findPhrase(words, 'purple elephant', 10, 60), null)
+})
+
+test('findPhrase: unsorted, blank, punctuation-only and malformed words are tolerated', () => {
+  const words = [W('ship', 262.7, 263.0), W('-', 262.6, 262.65), null, { w: 'x', s: 'n', e: 1 }, W('  ', 262.65, 262.69), W('is', 262.5, 262.6), W('it.', 263.0, 263.4)]
+  assert.deepEqual(findPhrase(words, 'is ship it', 262, 60), { s: 262.5, e: 263.4, match: 'is ship it.', score: 1 })
+})
+
+test('findPhrase: a phrase with no words throws', () => {
+  assert.throws(() => findPhrase(LINE, ' ... ', 262, 60), /no words/)
 })

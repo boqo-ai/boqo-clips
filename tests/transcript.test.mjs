@@ -67,7 +67,7 @@ test('transcript.mjs errors are one JSON line, exit 1', () => {
   writeFileSync(obj, '{"a":1}');
   const cases = [
     [[], /--words is required/],
-    [['--words', join(d, 'w.json')], /--out is required/],
+    [['--words', join(d, 'w.json')], /one of --out, --around or --find/],
     [['--words', join(d, 'missing.json'), '--out', out], /cannot read/],
     [['--words', bad, '--out', out], /not valid JSON/],
     [['--words', obj, '--out', out], /array of words/],
@@ -140,7 +140,7 @@ test('transcript.mjs --around errors are one JSON line, exit 1', () => {
   const out = join(d, 't.md');
   const cases = [
     [['--words', wf, '--around', '5', '--out', out], /mutually exclusive/],
-    [['--words', wf], /--around or --out/],
+    [['--words', wf], /one of --out, --around or --find/],
     [['--words', wf, '--around', 'x'], /--around/],
     [['--words', wf, '--around', '-1'], /--around/],
     [['--words', wf, '--around', ''], /--around/],
@@ -156,6 +156,79 @@ test('transcript.mjs --around errors are one JSON line, exit 1', () => {
     assert.equal(r.status, 1, args.join(' '));
     const lines = r.stdout.trim().split('\n');
     assert.equal(lines.length, 1);
+    assert.match(JSON.parse(lines[0]).error, re, args.join(' '));
+  }
+  assert.equal(existsSync(out), false);
+});
+
+const FIND = [
+  { w: 'And', s: 259.994, e: 260.094 },
+  { w: 'what', s: 260.094, e: 260.194 },
+  { w: 'we', s: 260.194, e: 260.294 },
+  { w: 'like', s: 260.294, e: 260.394 },
+  { w: 'to', s: 260.394, e: 260.494 },
+  { w: 'say,', s: 260.494, e: 260.594 },
+  { w: 'later', s: 315, e: 315.4 },
+  { w: 'words', s: 315.4, e: 315.8 },
+];
+
+test('transcript.mjs --find prints one JSON line with the exact edges of the phrase', () => {
+  const d = tmp();
+  const wf = join(d, 'words.json');
+  writeFileSync(wf, JSON.stringify(FIND));
+  const r = run(['--words', wf, '--find', 'What we like to say', '--near', '262']);
+  assert.equal(r.status, 0, r.stderr);
+  assert.equal(r.stdout.trim().split('\n').length, 1);
+  assert.deepEqual(lastJson(r), { s: 260.094, e: 260.594, match: 'what we like to say,', score: 1 });
+  assert.deepEqual(r.stderr, '');
+});
+
+test('transcript.mjs --find searches 60 s either side by default; --span changes it', () => {
+  const d = tmp();
+  const wf = join(d, 'words.json');
+  writeFileSync(wf, JSON.stringify(FIND));
+  assert.equal(lastJson(run(['--words', wf, '--find', 'later words', '--near', '262'])).s, 315);
+  assert.equal(run(['--words', wf, '--find', 'later words', '--near', '250']).status, 1);
+  assert.equal(lastJson(run(['--words', wf, '--find', 'later words', '--near', '250', '--span', '70'])).s, 315);
+  assert.equal(run(['--words', wf, '--find', 'later words', '--near', '262', '--span', '10']).status, 1);
+});
+
+test('transcript.mjs --find: a phrase not near that time is exit 1, one JSON line', () => {
+  const d = tmp();
+  const wf = join(d, 'words.json');
+  writeFileSync(wf, JSON.stringify(FIND));
+  const r = run(['--words', wf, '--find', 'purple elephant', '--near', '262']);
+  assert.equal(r.status, 1);
+  assert.equal(r.stdout.trim().split('\n').length, 1);
+  assert.deepEqual(lastJson(r), { error: 'phrase not found near 262' });
+});
+
+test('transcript.mjs --find errors are one JSON line, exit 1', () => {
+  const d = tmp();
+  const wf = join(d, 'w.json');
+  writeFileSync(wf, JSON.stringify(FIND));
+  const out = join(d, 't.md');
+  const cases = [
+    [['--words', wf, '--find', 'what we'], /--near/],
+    [['--words', wf, '--near', '5'], /--near needs --find/],
+    [['--words', wf, '--near', '5', '--around', '5'], /--near goes with --find, not --around/],
+    [['--words', wf, '--find', 'what we', '--near', '5', '--out', out], /mutually exclusive/],
+    [['--words', wf, '--find', 'what we', '--near', '5', '--around', '5'], /mutually exclusive/],
+    [['--words', wf, '--find', 'what we', '--near', 'x'], /--near/],
+    [['--words', wf, '--find', 'what we', '--near', '-1'], /--near/],
+    [['--words', wf, '--find', 'what we', '--near', ''], /--near/],
+    [['--words', wf, '--find', ' ... ', '--near', '5'], /--find needs words/],
+    [['--words', wf, '--find', 'what we', '--near', '5', '--span', '0'], /--span/],
+    [['--words', wf, '--find', 'what we', '--near', '5', '--heat', wf], /--heat goes with --out, not --find/],
+    [['--words', wf, '--find', 'what we', '--near', '5', '--line-sec', '4'], /--line-sec goes with --out, not --find/],
+    [['--words', wf, '--find'], /needs a value/],
+    [['--words', join(d, 'missing.json'), '--find', 'what we', '--near', '5'], /cannot read/],
+  ];
+  for (const [args, re] of cases) {
+    const r = run(args);
+    assert.equal(r.status, 1, args.join(' '));
+    const lines = r.stdout.trim().split('\n');
+    assert.equal(lines.length, 1, args.join(' '));
     assert.match(JSON.parse(lines[0]).error, re, args.join(' '));
   }
   assert.equal(existsSync(out), false);

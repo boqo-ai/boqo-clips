@@ -116,8 +116,8 @@ async function main(argv) {
           logoSrc = await download(logo, tmp);
         }
         const dir = await saveBrand(raw, logoSrc);
-        const name = String(raw.name).trim();
-        return out({ saved: name, dir, default: (await defaultBrandName()) === name });
+        const brand = await loadBrand(String(raw.name).trim());
+        return out({ saved: brand.name, dir, default: (await defaultBrandName()) === brand.name, brand });
       } finally {
         if (tmp) await rm(tmp, { recursive: true, force: true });
       }

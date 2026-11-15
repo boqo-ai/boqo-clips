@@ -3,7 +3,7 @@
 //   brand.json         the kit (logo.file is the bare file name)
 //   logo.png|logo.jpg  at most one logo
 //   ../default.txt     the name of the default kit
-import { copyFile, mkdir, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, readFile, readdir, rename, rm, stat, writeFile } from 'node:fs/promises';
 import { homedir } from 'node:os';
 import { basename, extname, isAbsolute, join } from 'node:path';
 
@@ -11,6 +11,11 @@ export const FONTS = ['Inter', 'Anton'];
 export const PRESETS = ['karaoke', 'punch', 'clean', 'highlight'];
 export const CORNERS = ['tl', 'tr', 'bl', 'br'];
 const NAME_RE = /^[A-Za-z0-9 _-]{1,40}$/;
+const SECTION_KEYS = {
+  colors: ['text', 'accent'],
+  captions: ['preset', 'position', 'size'],
+  logo: ['file', 'corner', 'scale'],
+};
 const HEX_RE = /^#[0-9A-Fa-f]{6}$/;
 const LOGO_NAMES = ['logo.png', 'logo.jpg'];
 
@@ -30,6 +35,39 @@ export function defaultBrand(name) {
   };
 }
 
+// the closest known key, for "did you mean"
+function nearest(key, known) {
+  const dist = (a, b) => {
+    let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+    for (let i = 1; i <= a.length; i++) {
+      const cur = [i];
+      for (let j = 1; j <= b.length; j++) {
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      }
+      prev = cur;
+    }
+    return prev[b.length];
+  };
+  const k = key.toLowerCase();
+  let best = null;
+  for (const c of known) {
+    const d = dist(k, c.toLowerCase());
+    if (d <= 2 && (best === null || d < best.d)) best = { c, d };
+  }
+  return best?.c ?? null;
+}
+
+function unknownKeys(obj, known, where, errors) {
+  for (const key of Object.keys(obj)) {
+    if (known.includes(key)) continue;
+    const hint = nearest(key, known);
+    errors.push(
+      `unknown key "${key}"${where ? ` in ${where}` : ''}` +
+        (hint ? ` - did you mean "${hint}"?` : ` - allowed: ${known.join(', ')}`),
+    );
+  }
+}
+
 const isObj = (x) => x !== null && typeof x === 'object' && !Array.isArray(x);
 const inRange = (n, lo, hi) => typeof n === 'number' && Number.isFinite(n) && n >= lo && n <= hi;
 
@@ -38,6 +76,7 @@ const inRange = (n, lo, hi) => typeof n === 'number' && Number.isFinite(n) && n 
 export function validateBrand(b) {
   if (!isObj(b)) return { ok: false, errors: ['brand must be an object'] };
   const errors = [];
+  unknownKeys(b, ['name', 'colors', 'font', 'captions', 'logo', 'hook'], '', errors);
   const name = typeof b.name === 'string' ? b.name.trim() : b.name;
   if (typeof name !== 'string' || !NAME_RE.test(name)) {
     errors.push('name must be 1-40 characters: letters, digits, space, _ or -');
@@ -49,6 +88,7 @@ export function validateBrand(b) {
       errors.push(`${key} must be an object`);
       return {};
     }
+    unknownKeys(b[key], SECTION_KEYS[key], key, errors);
     return b[key];
   };
   const colors = { ...d.colors, ...section('colors') };
@@ -130,9 +170,17 @@ export async function saveBrand(b, logoSrc) {
 
   await mkdir(dir, { recursive: true });
   if (copyFrom) await copyFile(copyFrom, join(dir, fileName));
-  for (const other of LOGO_NAMES) if (other !== fileName) await rm(join(dir, other), { force: true });
   brand.logo.file = fileName;
-  await writeFile(join(dir, 'brand.json'), JSON.stringify(brand, null, 2) + '\n');
+  // brand.json goes in atomically; only then is an old logo of the other type removed
+  const tmp = join(dir, `brand.json.${process.pid}.tmp`);
+  try {
+    await writeFile(tmp, JSON.stringify(brand, null, 2) + '\n');
+    await rename(tmp, join(dir, 'brand.json'));
+  } catch (err) {
+    await rm(tmp, { force: true });
+    throw err;
+  }
+  for (const other of LOGO_NAMES) if (other !== fileName) await rm(join(dir, other), { force: true });
   if (!(await exists(defaultFile()))) await writeFile(defaultFile(), brand.name + '\n');
   return dir;
 }
@@ -174,12 +222,16 @@ export async function loadBrand(name) {
   } catch {
     throw new Error(`brand kit "${n}" is damaged: brand.json is not valid JSON`);
   }
+  if (!isObj(raw)) throw new Error(`brand kit "${n}" is damaged: brand.json is not an object`);
   const v = validateBrand({ ...raw, name: n });
   if (!v.ok) throw new Error(`brand kit "${n}" is damaged: ${v.errors.join('; ')}`);
   const brand = v.brand;
   if (brand.logo.file !== null) {
     const abs = join(kitDir(n), basename(brand.logo.file));
-    brand.logo.file = (await exists(abs)) ? abs : null;
+    if (!(await exists(abs))) {
+      throw new Error(`brand "${n}": logo file ${basename(brand.logo.file)} is missing - save the kit again with --logo`);
+    }
+    brand.logo.file = abs;
   }
   return brand;
 }

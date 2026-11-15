@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFile, spawnSync } from 'node:child_process';
 import { createServer } from 'node:http';
-import { existsSync, mkdtempSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -107,6 +107,54 @@ test('validateBrand fills missing sections from the defaults', () => {
   const r = validateBrand({ name: 'tiny', colors: { accent: '#ff0000' } });
   assert.equal(r.ok, true);
   assert.deepEqual(r.brand, { ...defaultBrand('tiny'), colors: { text: '#FFFFFF', accent: '#FF0000' } });
+});
+
+test('validateBrand rejects unknown keys at every level and names them', () => {
+  const r = validateBrand({
+    name: 't',
+    color: { accent: '#ff0000' },
+    fonts: 'Anton',
+    colors: { accnt: '#ff0000' },
+    captions: { preset: 'punch', sise: 1 },
+    logo: { corner: 'tl', cornr: 'tl' },
+  });
+  assert.equal(r.ok, false);
+  assert.equal(r.errors.length, 5, r.errors.join(' | '));
+  assert.ok(r.errors.some((e) => e.includes('unknown key "color"') && e.includes('"colors"')));
+  assert.ok(r.errors.some((e) => e.includes('unknown key "fonts"') && e.includes('"font"')));
+  assert.ok(r.errors.some((e) => e.includes('unknown key "accnt"') && e.includes('colors')));
+  assert.ok(r.errors.some((e) => e.includes('unknown key "sise"') && e.includes('captions')));
+  assert.ok(r.errors.some((e) => e.includes('unknown key "cornr"') && e.includes('logo')));
+});
+
+test('a kit that is not a plain object on disk is damaged, not the default', async () => {
+  const home = tempHome();
+  for (const [i, text] of ['null', '[]', '"brand"', '7', '{"colour":{"accent":"#ff0000"}}'].entries()) {
+    await saveBrand(mk({ name: `k${i}` }));
+    writeFileSync(join(home, 'brands', `k${i}`, 'brand.json'), text);
+    await assert.rejects(loadBrand(`k${i}`), /is damaged/, text);
+  }
+});
+
+test('a kit whose logo file is gone throws instead of loading without a logo', async () => {
+  const home = tempHome();
+  const src = join(mkdtempSync(join(tmpdir(), 'boqo-logo-')), 'l.png');
+  writeFileSync(src, PNG);
+  const dir = await saveBrand(mk(), src);
+  rmSync(join(dir, 'logo.png'));
+  await assert.rejects(loadBrand('mine'), /brand "mine": logo file logo\.png is missing .* --logo/);
+  assert.ok(home);
+});
+
+test('a save that fails on its logo leaves the saved kit as it was', async () => {
+  tempHome();
+  const d = mkdtempSync(join(tmpdir(), 'boqo-logo-'));
+  writeFileSync(join(d, 'a.png'), PNG);
+  const dir = await saveBrand(mk(), join(d, 'a.png'));
+  const before = readFileSync(join(dir, 'brand.json'), 'utf8');
+  await assert.rejects(saveBrand(mk({ font: 'Anton' }), join(d, 'gone.png')), /logo/);
+  assert.equal(readFileSync(join(dir, 'brand.json'), 'utf8'), before);
+  assert.deepEqual(readdirSync(dir).sort(), ['brand.json', 'logo.png']);
 });
 
 test('save then load round-trips under BOQO_HOME', async () => {
@@ -218,6 +266,8 @@ test('CLI: save, list, show, default', () => {
   r = run(home, ['save', json, '--logo', join(d, 'my logo.png')]);
   assert.equal(r.status, 0);
   assert.equal(r.json.saved, 'alpha');
+  assert.equal(r.json.brand.name, 'alpha');
+  assert.ok(isAbsolute(r.json.brand.logo.file));
 
   writeFileSync(json, JSON.stringify(mk({ name: 'beta', font: 'Anton' })));
   assert.equal(run(home, ['save', json]).status, 0);
@@ -259,6 +309,12 @@ test('CLI: failures exit 1 with {"error"}', () => {
     assert.equal(r.status, 1, args.join(' '));
     assert.equal(typeof r.json.error, 'string', args.join(' '));
   }
+  const typo = join(d, 'typo.json');
+  writeFileSync(typo, JSON.stringify({ name: 't', color: { accent: '#ff0000' }, fonts: 'Anton' }));
+  const t = run(home, ['save', typo]);
+  assert.equal(t.status, 1);
+  assert.match(t.json.error, /unknown key "color"/);
+  assert.match(t.json.error, /unknown key "fonts"/);
   const r = run(home, ['save', bad]);
   assert.match(r.json.error, /preset/);
   assert.match(r.json.error, /position/);

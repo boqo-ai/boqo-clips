@@ -4,6 +4,7 @@ import {
   wordsFromJson3,
   wordsFromWhisper,
   wordsInRange,
+  wordsAround,
   transcriptChunks,
   transcriptMarkdown,
 } from '../engine/words.mjs'
@@ -353,4 +354,56 @@ test('transcriptMarkdown joins chunks with a blank line and ends with a newline'
   assert.equal(out.chunks, 2)
   assert.equal(out.text, chunks.join('\n\n') + '\n')
   assert.deepEqual(transcriptMarkdown([]), { text: '', chunks: 0 })
+})
+
+const W = (w, s, e) => ({ w, s, e });
+
+test('wordsAround: lines of "[m:ss] text (s-e)" for the words overlapping [around - span, around + span]', () => {
+  const words = [W('far', 1, 1.4), W('Hello', 59, 59.4), W('there.', 60, 60.52), W('Next', 61.2, 61.5), W('gone', 200, 200.4)];
+  const r = wordsAround(words, 60, 10);
+  assert.deepEqual(r, {
+    lines: ['[0:59] Hello there. (59.00-60.52)', '[1:01] Next (61.20-61.50)'],
+    from: 50,
+    to: 70,
+  });
+})
+
+test('wordsAround: from clamps at 0, span defaults to 30, to is not clamped', () => {
+  const r = wordsAround([W('a', 0, 0.5), W('b', 29, 29.5), W('c', 31, 31.5)], 5);
+  assert.equal(r.from, 0)
+  assert.equal(r.to, 35)
+  assert.deepEqual(r.lines, ['[0:00] a (0.00-0.50)', '[0:29] b (29.00-29.50)', '[0:31] c (31.00-31.50)'])
+})
+
+test('wordsAround: a word straddling an edge is kept; one wholly outside is not', () => {
+  const words = [W('in', 48, 50.5), W('out', 40, 49.9), W('also', 69.9, 71), W('no', 70, 71)];
+  const r = wordsAround(words, 60, 10);
+  assert.match(r.lines.join(' '), /in/)
+  assert.match(r.lines.join(' '), /also/)
+  assert.doesNotMatch(r.lines.join(' '), /out|no /)
+})
+
+test('wordsAround groups like the sniper tool: sentence end, a pause over 0.7 s, or 8 s closes a line', () => {
+  const words = [
+    W('one', 10, 10.3), W('two.', 10.4, 10.8), W('three', 11, 11.3),
+    W('four', 12.5, 12.8), W('five', 12.9, 13.2),
+    ...Array.from({ length: 12 }, (_, i) => W(`w${i}`, 20 + i, 20.5 + i)),
+  ];
+  const r = wordsAround(words, 15, 30);
+  assert.equal(r.lines[0], '[0:10] one two. (10.00-10.80)')
+  assert.equal(r.lines[1], '[0:11] three (11.00-11.30)')
+  assert.equal(r.lines[2], '[0:12] four five (12.50-13.20)')
+  assert.match(r.lines[3], /^\[0:20\] w0 w1 w2 w3 w4 w5 w6 w7 \(20\.00-27\.50\)$/)
+  assert.match(r.lines[4], /^\[0:28\] w8 w9 w10 w11 \(28\.00-31\.50\)$/)
+})
+
+test('wordsAround: unsorted input, blank and malformed words are tolerated; nothing near gives no lines', () => {
+  const words = [W('b', 11, 11.4), W('  ', 10.5, 10.6), { w: 'x', s: 'n', e: 1 }, null, W('a', 10, 10.4)];
+  assert.deepEqual(wordsAround(words, 10, 5).lines, ['[0:10] a b (10.00-11.40)'])
+  assert.deepEqual(wordsAround(words, 500, 5), { lines: [], from: 495, to: 505 })
+})
+
+test('wordsAround: minutes keep counting past an hour', () => {
+  const r = wordsAround([W('late', 3725, 3725.5)], 3725, 5)
+  assert.equal(r.lines[0], '[62:05] late (3725.00-3725.50)')
 })

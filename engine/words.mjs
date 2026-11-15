@@ -257,3 +257,49 @@ export function transcriptMarkdown(words, opts) {
   const chunks = transcriptChunks(words, opts);
   return { text: chunks.length ? chunks.join('\n\n') + '\n' : '', chunks: chunks.length };
 }
+
+const LINE_MAX_SEC = 8;
+const PAUSE_SEC = 0.7;
+const AROUND_SPAN_SEC = 30;
+
+const minSec = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+const sec2 = (s) => (Math.round(s * 100) / 100).toFixed(2);
+
+/**
+ * The words near a time, as the lines the agent reads to set a clip edge:
+ * every word overlapping [around - span, around + span] (from clamped at 0),
+ * grouped into lines of `[m:ss] text (start-end)`, the seconds exact to 0.01.
+ * A line closes after a word ending a sentence, at a pause over 0.7 s, or once
+ * it is 8 s long. Blank and malformed words are skipped; `words` need not be
+ * sorted.
+ * @param {Word[]} words
+ * @param {number} around seconds
+ * @param {number} [span] seconds each side, default 30
+ * @returns {{ lines: string[], from: number, to: number }}
+ */
+export function wordsAround(words, around, span = AROUND_SPAN_SEC) {
+  const from = Math.max(0, around - span);
+  const to = around + span;
+  const list = words
+    .filter((x) => x && Number.isFinite(x.s) && Number.isFinite(x.e) && String(x.w ?? '').trim())
+    .filter((x) => x.e > from && x.s < to)
+    .sort((a, b) => a.s - b.s);
+  const lines = [];
+  let cur = null;
+  const close = () => {
+    if (cur) lines.push(`[${minSec(cur.s)}] ${cur.text.join(' ')} (${sec2(cur.s)}-${sec2(cur.e)})`);
+    cur = null;
+  };
+  for (const x of list) {
+    if (cur) {
+      const sentenceEnd = /[.?!]["')\]]*$/.test(String(cur.last.w).trim());
+      if (sentenceEnd || x.s - cur.last.e > PAUSE_SEC || x.s - cur.s >= LINE_MAX_SEC) close();
+    }
+    if (!cur) cur = { s: x.s, e: x.e, text: [], last: x };
+    cur.text.push(String(x.w).trim());
+    cur.e = Math.max(cur.e, x.e);
+    cur.last = x;
+  }
+  close();
+  return { lines, from, to };
+}

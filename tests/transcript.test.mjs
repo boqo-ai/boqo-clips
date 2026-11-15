@@ -95,3 +95,68 @@ test('transcript.mjs rejects a word that is not {w,s,e}', () => {
   assert.equal(r.status, 1);
   assert.match(JSON.parse(r.stdout).error, /word 2/);
 });
+
+const AROUND = [
+  { w: 'before', s: 10, e: 10.4 },
+  { w: 'He', s: 59, e: 59.3 },
+  { w: 'said.', s: 59.4, e: 60.05 },
+  { w: 'Then', s: 61, e: 61.4 },
+  { w: 'faraway', s: 300, e: 300.5 },
+];
+
+test('transcript.mjs --around prints one JSON line with the words near that time', () => {
+  const d = tmp();
+  const wf = join(d, 'words.json');
+  writeFileSync(wf, JSON.stringify(AROUND));
+  const r = run(['--words', wf, '--around', '60', '--span', '5']);
+  assert.equal(r.status, 0, r.stderr);
+  assert.equal(r.stdout.trim().split('\n').length, 1);
+  assert.deepEqual(lastJson(r), {
+    lines: ['[0:59] He said. (59.00-60.05)', '[1:01] Then (61.00-61.40)'],
+    from: 55,
+    to: 65,
+  });
+  const dflt = lastJson(run(['--words', wf, '--around', '10']));
+  assert.equal(dflt.from, 0);
+  assert.equal(dflt.to, 40);
+  assert.deepEqual(dflt.lines, ['[0:10] before (10.00-10.40)']);
+});
+
+test('transcript.mjs --around: an empty window is an empty list, not an error; no file is written', () => {
+  const d = tmp();
+  const wf = join(d, 'words.json');
+  writeFileSync(wf, JSON.stringify(AROUND));
+  const r = run(['--words', wf, '--around', '1000', '--span', '2']);
+  assert.equal(r.status, 0, r.stderr);
+  assert.deepEqual(lastJson(r), { lines: [], from: 998, to: 1002 });
+});
+
+test('transcript.mjs --around errors are one JSON line, exit 1', () => {
+  const d = tmp();
+  const wf = join(d, 'w.json');
+  writeFileSync(wf, JSON.stringify(AROUND));
+  const empty = join(d, 'empty.json');
+  writeFileSync(empty, '[]');
+  const out = join(d, 't.md');
+  const cases = [
+    [['--words', wf, '--around', '5', '--out', out], /mutually exclusive/],
+    [['--words', wf], /--around or --out/],
+    [['--words', wf, '--around', 'x'], /--around/],
+    [['--words', wf, '--around', '-1'], /--around/],
+    [['--words', wf, '--around', ''], /--around/],
+    [['--words', wf, '--around', '5', '--span', '0'], /--span/],
+    [['--words', wf, '--around', '5', '--span', 'x'], /--span/],
+    [['--words', wf, '--span', '5', '--out', out], /--span/],
+    [['--words', wf, '--around', '5', '--heat', wf], /--heat|--out|does not go/],
+    [['--words', empty, '--around', '5'], /no words/],
+    [['--words', join(d, 'missing.json'), '--around', '5'], /cannot read/],
+  ];
+  for (const [args, re] of cases) {
+    const r = run(args);
+    assert.equal(r.status, 1, args.join(' '));
+    const lines = r.stdout.trim().split('\n');
+    assert.equal(lines.length, 1);
+    assert.match(JSON.parse(lines[0]).error, re, args.join(' '));
+  }
+  assert.equal(existsSync(out), false);
+});

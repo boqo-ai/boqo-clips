@@ -49,7 +49,7 @@ const sync = (source, target) =>
 test('SHARED is the agreed list', () => {
   assert.deepEqual(SHARED, [
     'engine/', 'tools/doctor.mjs', 'tools/fetch.mjs', 'tools/render.mjs',
-    'tools/picks-check.mjs', 'tools/brand.mjs', 'tools/asr.mjs', 'tools/boqo-upload.mjs',
+    'tools/picks-check.mjs', 'tools/brand.mjs', 'tools/asr.mjs', 'tools/boqo-upload.mjs', 'tools/transcript.mjs',
   ]);
 });
 

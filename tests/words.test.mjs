@@ -5,6 +5,7 @@ import {
   wordsFromWhisper,
   wordsInRange,
   transcriptChunks,
+  transcriptMarkdown,
 } from '../engine/words.mjs'
 
 test('wordsFromJson3 builds words from overlapping events', () => {
@@ -338,4 +339,18 @@ test('wordsFromWhisper: a tight gap keeps starts strictly increasing and below t
     assert.ok(out[i].s < out[i].e, JSON.stringify(out[i]))
     if (i) assert.ok(out[i].s > out[i - 1].s && out[i].s >= out[i - 1].e)
   }
+})
+
+test('transcriptMarkdown joins chunks with a blank line and ends with a newline', () => {
+  const words = [
+    { w: 'one', s: 0, e: 0.5 },
+    { w: 'two', s: 3, e: 3.5 },
+    { w: 'late', s: 1000, e: 1000.5 },
+  ]
+  const opts = { chunkSec: 900 }
+  const out = transcriptMarkdown(words, opts)
+  const chunks = transcriptChunks(words, opts)
+  assert.equal(out.chunks, 2)
+  assert.equal(out.text, chunks.join('\n\n') + '\n')
+  assert.deepEqual(transcriptMarkdown([]), { text: '', chunks: 0 })
 })

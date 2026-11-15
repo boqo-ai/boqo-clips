@@ -245,3 +245,15 @@ export function transcriptChunks(words, opts = {}) {
     return [`## Part ${i + 1} (${stamp(from)}–${stamp(to)})`, ...c.lines].join('\n');
   });
 }
+
+/**
+ * The text of `transcript.md`: the chunks of `transcriptChunks` joined by a
+ * blank line, ending with a newline. `text` is '' when there are no words.
+ * @param {Word[]} words
+ * @param {Parameters<typeof transcriptChunks>[1]} [opts]
+ * @returns {{ text: string, chunks: number }}
+ */
+export function transcriptMarkdown(words, opts) {
+  const chunks = transcriptChunks(words, opts);
+  return { text: chunks.length ? chunks.join('\n\n') + '\n' : '', chunks: chunks.length };
+}

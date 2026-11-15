@@ -11,20 +11,30 @@ clipped right after.
 
 ## 1. The brand kit
 
-Four questions. Ask the first three in one message.
+`<samples>` is `<home>/boqo-clips/samples`, written out in full in every command, in double quotes (SKILL.md →
+Overview, Paths in commands). `mkdir -p "<samples>"` first.
+
+Four questions. Ask the first two in one message.
 1. **Name:** the brand's name, 1 to 40 letters, digits, spaces, `-` or `_`.
 2. **Logo:** a PNG or JPG, as a file path or a URL. A PNG with a transparent background looks best. No logo is fine:
-   the clips then carry none.
+   the clips then carry none. A URL is fetched once into a scratch home, which also checks it is a PNG or JPG under
+   10 MB:
+   ```sh
+   echo '{"name": "logo"}' > "<samples>/logo.json"
+   BOQO_HOME="<samples>/home" node ~/.boqo-clips/tools/brand.mjs save "<samples>/logo.json" --logo "<url>"
+   ```
+   From then on `<logo>` is the file its reply names in `brand.logo.file`.
 3. **Two colours:** the caption text (usually white) and the accent, the colour of the spoken or stressed word.
    Open the logo image and offer its strongest colour as the accent, in hex: "#E63946 from your logo, with white
    text?".
 4. **Caption style,** by sight: render the four samples below, show them, and ask which one they want.
 
-**The samples.** `<samples>` is `<home>/boqo-clips/samples`. The sample kits are saved into a scratch home inside it,
-so nothing real is saved before the person chooses.
-1. `mkdir -p <samples>`, and a 5 s source:
+**The samples.** The sample kits are saved into a scratch home inside `<samples>`, so nothing real is saved before
+the person chooses.
+1. A 5 s source:
    ```sh
-   ffmpeg -v error -y -f lavfi -i color=c=0x24242C:s=1920x1080:r=30:d=5 -c:v libx264 -pix_fmt yuv420p <samples>/src.mp4
+   ffmpeg -v error -y -f lavfi -i color=c=0x24242C:s=1920x1080:r=30:d=5 -c:v libx264 -pix_fmt yuv420p \
+     "<samples>/src.mp4"
    ```
 2. `<samples>/words.json`, the sample line (in the person's language when it is not English: keep the times, change
    the words):
@@ -38,17 +48,17 @@ so nothing real is saved before the person chooses.
 4. For each preset, `karaoke`, `punch`, `clean` and `highlight`: write `<samples>/<preset>.json`, the kit (below)
    with `"name": "<preset>"` and that preset, then
    ```sh
-   BOQO_HOME=<samples>/home node ~/.boqo-clips/tools/brand.mjs save <samples>/<preset>.json --logo "<logo>"
-   BOQO_HOME=<samples>/home node ~/.boqo-clips/tools/render.mjs --src <samples>/src.mp4 --picks <samples>/pick.json \
-     --words <samples>/words.json --brand <preset> --out <samples>/<preset>
+   BOQO_HOME="<samples>/home" node ~/.boqo-clips/tools/brand.mjs save "<samples>/<preset>.json" --logo "<logo>"
+   BOQO_HOME="<samples>/home" node ~/.boqo-clips/tools/render.mjs --src "<samples>/src.mp4" \
+     --picks "<samples>/pick.json" --words "<samples>/words.json" --brand <preset> --out "<samples>/<preset>"
    ```
    With no logo, leave out `--logo`. Each sample is `<samples>/<preset>/clip-01.mp4`.
 5. One picture of the four side by side, at 2.8 s, in the order karaoke, punch, clean, highlight:
    ```sh
-   ffmpeg -v error -y -ss 2.8 -i <samples>/karaoke/clip-01.mp4 -ss 2.8 -i <samples>/punch/clip-01.mp4 \
-     -ss 2.8 -i <samples>/clean/clip-01.mp4 -ss 2.8 -i <samples>/highlight/clip-01.mp4 -filter_complex \
+   ffmpeg -v error -y -ss 2.8 -i "<samples>/karaoke/clip-01.mp4" -ss 2.8 -i "<samples>/punch/clip-01.mp4" \
+     -ss 2.8 -i "<samples>/clean/clip-01.mp4" -ss 2.8 -i "<samples>/highlight/clip-01.mp4" -filter_complex \
      "[0:v]scale=360:640[a];[1:v]scale=360:640[b];[2:v]scale=360:640[c];[3:v]scale=360:640[d];[a][b][c][d]hstack=4" \
-     -frames:v 1 <samples>/styles.jpg
+     -frames:v 1 "<samples>/styles.jpg"
    ```
    Give the person `<samples>/styles.jpg` first, then the four clips, which show how the words move.
 
@@ -65,10 +75,11 @@ so nothing real is saved before the person chooses.
 ```
 
 ```sh
-node ~/.boqo-clips/tools/brand.mjs save <samples>/brand.json --logo "<logo>"
+node ~/.boqo-clips/tools/brand.mjs save "<samples>/brand.json" --logo "<logo>"
 ```
 
-Then `rm -rf <samples>`, and tell the person in one line that the kit is saved and every boqo skill uses it.
+Then `rm -rf "<samples>"`, with the path written out in full (never empty), and tell the person in one line that the
+kit is saved and every boqo skill uses it.
 - A key not in the kit's schema is refused, and the error names it: fix the file, never work around it.
 - On the person's ask only: `"font": "Anton"` (tall and condensed), `logo.corner` `tl`, `tr`, `bl` or `br`,
   `logo.scale` 0.08 to 0.3 (0.16, the share of the frame's width), `captions.position` 0.1 to 0.9 (0.72, how far

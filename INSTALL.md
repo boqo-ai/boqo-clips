@@ -38,16 +38,21 @@ Windows WSL or Git Bash).
       ```
       When it does not exist, it is linked in the next step. When it is a link to `~/.boqo-clips/skills/boqo-clips`
       (`ls` shows `~` as the home folder's full path), it is installed already: skip the next step. When it is anything
-      else (a folder, a file, a link elsewhere), stop and ask the person. Never overwrite, move or delete it.
+      else (a folder, a file, a link elsewhere), stop and ask the person; a folder may be the copy an earlier install
+      made on Windows, which they may want updated (Updating). Never overwrite, move or delete it.
    3. Link it when it does not exist yet (`-n`, so an existing folder is never entered):
       ```sh
       mkdir -p <skills>
       ln -sn ~/.boqo-clips/skills/boqo-clips <skills>/boqo-clips
       ```
-      On Windows without real links (`ln -sn` fails, or `ls -ld` then shows the name as a folder, not a link), the
-      install is a copied one (Updating, Removing): copy the folder instead,
-      `cp -R ~/.boqo-clips/skills/boqo-clips <skills>/boqo-clips`. A copy works the same: the skill calls its tools
-      in `~/.boqo-clips/tools/`.
+      On Windows without real links, `ln -sn` either fails or copies the folder (Git Bash copies unless
+      `MSYS=winsymlinks:nativestrict` is set). Run `ls -ld <skills>/boqo-clips` again:
+      - a link: done;
+      - a folder: `ln` made a copy, and the install is a copied one (Updating, Removing): done;
+      - nothing (`ln -sn` failed): copy it, for the copied install,
+        `cp -R ~/.boqo-clips/skills/boqo-clips <skills>/boqo-clips`.
+
+      A copy works the same: the skill calls its tools in `~/.boqo-clips/tools/`.
 
 4. **Check the tools the skill uses.** Run `node ~/.boqo-clips/tools/doctor.mjs --whisper optional`. It only looks,
    and prints one JSON line: `ok` is true when every required tool works (Node 20+, ffmpeg with libass, yt-dlp), and
@@ -78,7 +83,12 @@ Windows WSL or Git Bash).
 git -C ~/.boqo-clips pull --ff-only
 ```
 
-A copied folder (step 3, on Windows without real links) is updated by copying it again, after the person's yes.
+A copied folder (step 3, on Windows without real links) is updated by copying the files into it again, after the
+person's yes (the `/.` copies the folder's contents, never a second folder inside it):
+
+```sh
+cp -R ~/.boqo-clips/skills/boqo-clips/. <skills>/boqo-clips/
+```
 
 ## Removing
 

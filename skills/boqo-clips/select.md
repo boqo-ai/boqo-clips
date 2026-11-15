@@ -28,9 +28,9 @@ an hour), a new line about every 8 s. A line that ends in `▲` falls in a stret
 
 ## How many
 
-`n` is the video's minutes divided by 6, rounded, at least 3 and at most 10: a 40-minute talk gets 7. Pick fewer
-only when fewer moments pass the rules, and tell the person why. Never fill the count with weak ones. Picks never
-overlap.
+`n` is the video's minutes divided by 6, rounded, at least 3 and at most 10: a 40-minute talk gets 7. A video under
+3 minutes may hold only 1 or 2. Pick fewer only when fewer moments pass the rules, and tell the person why. Never
+fill the count with weak ones. Picks never overlap.
 
 ## How to read
 
@@ -38,12 +38,13 @@ overlap.
    line; then read the next part. Several candidates in a part is normal.
 2. **Rank,** after the last part: the strongest opening line and the clearest payoff win. Keep `n`. Spread them over
    the video only to break a tie.
-3. **Set the edges** from the words (SKILL.md → Helpers → Words around a time), at each pick's start and end:
-   `s` a little inside the opening word (its start + 0.05), `e` a little inside the payoff's last word (its end −
-   0.05). `picks-check.mjs` then moves each edge out to that word's boundary. An edge set exactly on a boundary can
-   take in the neighbouring word ("and", "but") instead.
-4. **Keep sound tags out.** YouTube's automatic captions carry `[Music]` and `[Applause]` as words: inside a pick
-   they burn into the captions. End before one, or start after it.
+3. **Set the edges** from the words near each one (SKILL.md → The run, step 4, `--around`): `s` a little inside the
+   opening word (its start + 0.05), `e` a little inside the payoff's last word (its end − 0.05). A line's `(s-e)` are
+   its first word's start and its last word's end, so a pick that opens at a line's start takes that line's `s`
+   + 0.05, and one that ends at a line's end takes its `e` − 0.05. An opening in the middle of a line: estimate its
+   time from where its words fall in the line's span. `picks-check.mjs` then moves each edge out to that word's
+   boundary, and says how far (`moved`). An edge set exactly on a boundary can take in the neighbouring word ("and",
+   "but") instead.
 
 ## Titles and hooks
 

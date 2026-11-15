@@ -99,9 +99,23 @@ test('wordsInRange keeps overlapping words and rebases to 0', () => {
   ]
   assert.deepEqual(wordsInRange(words, 5, 10), [
     { w: 'b', s: 0, e: 1 },
-    { w: 'c', s: 4.5, e: 5.5 },
+    { w: 'c', s: 4.5, e: 5 },
   ])
   assert.deepEqual(wordsInRange(words, 20, 30), [])
+})
+
+test('wordsInRange clamps words that straddle either edge into [0, e - s]', () => {
+  const words = [
+    { w: 'in', s: 4.5, e: 5.5 }, // starts before the range
+    { w: 'out', s: 9.5, e: 10.8 }, // ends after the range
+    { w: 'wide', s: 4, e: 11 }, // straddles both
+  ]
+  assert.deepEqual(wordsInRange(words, 5, 10), [
+    { w: 'in', s: 0, e: 0.5 },
+    { w: 'out', s: 4.5, e: 5 },
+    { w: 'wide', s: 0, e: 5 },
+  ])
+  for (const x of wordsInRange(words, 5, 10)) assert.ok(x.s >= 0 && x.s < x.e && x.e <= 5, JSON.stringify(x))
 })
 
 test('transcriptChunks: [mm:ss] lines, a new line every lineSec', () => {

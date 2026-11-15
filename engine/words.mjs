@@ -69,7 +69,9 @@ export function wordsFromWhisper(j, offsetSec = 0) {
 }
 
 /**
- * Words overlapping [s, e], with times rebased so `s` becomes 0.
+ * Words overlapping [s, e], rebased so `s` becomes 0 and clamped to
+ * [0, e - s]: a word straddling an edge is cut at it, so no consumer can emit
+ * a negative time or a caption past the clip end.
  * @param {Word[]} words
  * @param {number} s
  * @param {number} e
@@ -78,7 +80,7 @@ export function wordsFromWhisper(j, offsetSec = 0) {
 export function wordsInRange(words, s, e) {
   return words
     .filter((x) => x.e > s && x.s < e)
-    .map((x) => ({ w: x.w, s: round3(x.s - s), e: round3(x.e - s) }));
+    .map((x) => ({ w: x.w, s: round3(Math.max(0, x.s - s)), e: round3(Math.min(e - s, x.e - s)) }));
 }
 
 const pad2 = (n) => String(n).padStart(2, '0');

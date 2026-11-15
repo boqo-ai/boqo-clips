@@ -65,6 +65,40 @@ test('wordsFromJson3: every word has s < e, even for duplicate starts', () => {
   for (const w of wordsFromJson3(j)) assert.ok(w.s < w.e, JSON.stringify(w))
 })
 
+test('wordsFromJson3 drops caption sound tags, whole and split across segs', () => {
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 1000, segs: [{ utf8: '[Music]' }] },
+      { tStartMs: 1000, dDurationMs: 1000, segs: [{ utf8: '[Applause]' }, { utf8: ' [Laughter]', tOffsetMs: 300 }] },
+      { tStartMs: 2000, dDurationMs: 1000, segs: [{ utf8: '(upbeat' }, { utf8: ' music)', tOffsetMs: 200 }] },
+      { tStartMs: 3000, dDurationMs: 1000, segs: [{ utf8: '[' }, { utf8: 'Music', tOffsetMs: 100 }, { utf8: ']', tOffsetMs: 200 }] },
+      { tStartMs: 4000, dDurationMs: 1000, segs: [{ utf8: '\u266a' }] },
+      { tStartMs: 5000, dDurationMs: 600, segs: [{ utf8: 'Hello' }, { utf8: ' [word]s', tOffsetMs: 300 }, { utf8: ' (yes) no', tOffsetMs: 450 }] },
+    ],
+  }
+  assert.deepEqual(wordsFromJson3(j), [
+    { w: 'Hello', s: 5, e: 5.3 },
+    { w: '[word]s', s: 5.3, e: 5.45 },
+    { w: '(yes) no', s: 5.45, e: 5.6 },
+  ])
+})
+
+test('wordsFromJson3: a tag-only track gives no words', () => {
+  const j = { events: [{ tStartMs: 0, dDurationMs: 2000, segs: [{ utf8: '[Music]' }] }] }
+  assert.deepEqual(wordsFromJson3(j), [])
+})
+
+test('wordsFromJson3: speech then a tag then speech keeps both sides', () => {
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 500, segs: [{ utf8: 'before' }] },
+      { tStartMs: 500, dDurationMs: 500, segs: [{ utf8: '[Music]' }] },
+      { tStartMs: 1000, dDurationMs: 500, segs: [{ utf8: 'after' }] },
+    ],
+  }
+  assert.deepEqual(wordsFromJson3(j).map((x) => x.w), ['before', 'after'])
+})
+
 test('wordsFromWhisper converts ms offsets, skips empty text, adds the offset', () => {
   const j = {
     transcription: [

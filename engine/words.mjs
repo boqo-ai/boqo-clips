@@ -13,7 +13,8 @@ const round3 = (x) => Math.round(x * 1000) / 1000;
 const num = (x) => (typeof x === 'number' && Number.isFinite(x) ? x : null);
 
 /**
- * Words from a YouTube json3 caption track. Each seg starts at
+ * Words from a YouTube json3 caption track. Sound tags (`[Music]`,
+ * `[Applause]`) are dropped as in `wordsFromWhisper`. Each seg starts at
  * `tStartMs + tOffsetMs`. A word ends where the next one starts, and never
  * runs longer than one second; the last word ends at its event's end, also
  * capped.
@@ -35,10 +36,11 @@ export function wordsFromJson3(j) {
     }
   }
   raw.sort((a, b) => a.startMs - b.startMs);
-  return raw.map((r, i) => {
+  const spoken = dropNonSpeech(raw, (r) => r.w);
+  return spoken.map((r, i) => {
     const s = r.startMs / 1000;
     const cap = s + MAX_WORD_SEC;
-    const next = raw[i + 1];
+    const next = spoken[i + 1];
     let e = next ? next.startMs / 1000 : r.endMs === null ? cap : r.endMs / 1000;
     e = Math.min(e, cap);
     if (e <= s) e = s + MIN_WORD_SEC;
@@ -77,6 +79,21 @@ function splitTagFlags(texts) {
     }
   }
   return drop;
+}
+
+/**
+ * Items that are speech: whole-item sound tags and tags split across items
+ * are dropped (the same rules for whisper and for YouTube captions). Order is
+ * kept.
+ * @template T
+ * @param {T[]} items
+ * @param {(item: T) => string} textOf trimmed text of an item
+ * @returns {T[]}
+ */
+function dropNonSpeech(items, textOf) {
+  const kept = items.filter((it) => !NON_SPEECH.test(textOf(it)));
+  const drop = splitTagFlags(kept.map(textOf));
+  return kept.filter((_, i) => !drop[i]);
 }
 
 const STACK_SEC = 0.03;
@@ -145,17 +162,14 @@ export function wordsFromWhisper(j, offsetSec = 0) {
     const text = typeof it?.text === 'string' ? it.text.trim() : '';
     const from = num(it?.offsets?.from);
     const to = num(it?.offsets?.to);
-    if (!text || NON_SPEECH.test(text) || from === null || to === null) continue;
+    if (!text || from === null || to === null) continue;
     kept.push({ text, from, to });
   }
-  const drop = splitTagFlags(kept.map((x) => x.text));
-  const out = [];
-  kept.forEach(({ text, from, to }, i) => {
-    if (drop[i]) return;
+  const out = dropNonSpeech(kept, (x) => x.text).map(({ text, from, to }) => {
     const s = round3(offsetSec + from / 1000);
     let e = round3(offsetSec + to / 1000);
     if (e <= s) e = round3(s + MIN_WORD_SEC);
-    out.push({ w: text, s, e });
+    return { w: text, s, e };
   });
   return spreadStacked(out.sort((a, b) => a.s - b.s));
 }

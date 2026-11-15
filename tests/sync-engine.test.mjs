@@ -222,7 +222,9 @@ test('every SHARED file in this repo has text unset, so no checkout rewrites its
 });
 
 test('this repo .gitattributes carries the same block the sync writes', () => {
-  assert.ok(readFileSync(join(repoRoot, '.gitattributes'), 'utf8').includes(gitattributes()));
+  // .gitattributes itself is not hashed, so a Windows checkout may make it CRLF.
+  const text = readFileSync(join(repoRoot, '.gitattributes'), 'utf8').replace(/\r\n/g, '\n');
+  assert.ok(text.includes(gitattributes()));
 });
 
 test('a synced target checked out with core.autocrlf=true hashes the same (and without the sync .gitattributes it would not)', () => {

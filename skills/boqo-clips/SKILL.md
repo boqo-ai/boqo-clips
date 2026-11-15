@@ -34,7 +34,7 @@ on the person's rule (`post.md`).
   language. Files stay in English.
 - **Short messages:** what happened, what comes next. No tour of the tools unless asked.
 - **Long steps** (sections, render, whisper) take minutes: give each such command up to 10 minutes (Claude Code: the
-  shell tool's `timeout` of 600000). Whisper runs in the background (The run, step 3).
+  shell tool's `timeout` of 600000). Whisper, and a long render, run in the background (The run, steps 3 and 7).
 - **One yt-dlp call at a time.** YouTube rate-limits parallel requests.
 - Install nothing without the person's yes; never run `npm install`. An error naming ffmpeg, ffprobe, yt-dlp or
   whisper-cli: run `node ~/.boqo-clips/tools/doctor.mjs --whisper optional` and give the person its `hints`.
@@ -95,13 +95,15 @@ local file, below.
      --words <run>/words.json --brand "<name>" --out <run>/out
    ```
    gives `{"clips": [{file, s, e, title}]}`. The layout is `blur` (the whole picture over a blurred fill of itself);
-   `--layout crop` (a centre crop that fills the frame) only when the person asks.
+   `--layout crop` (a centre crop that fills the frame) only when the person asks. A render takes about as long as
+   the clips run, and longer on a laptop: when the picks add up to more than 4 minutes, run it in the background as
+   whisper runs (step 3), its line going to `<run>/render.json`.
 8. **Show.** One line per clip: its number, title, length (`e - s`, in whole seconds) and file path; then the
    `<run>/out` folder. Then delete what the run downloaded or no longer needs (`find`, because zsh stops a whole `rm`
    on a pattern that matches nothing):
    ```sh
    find <run> -maxdepth 1 -type f \( -name 'sec-*.mp4' -o -name 'audio.*' -o -name 'captions.*.json3' \
-     -o -name info.json -o -name sections.json -o -name asr.json \) -delete
+     -o -name info.json -o -name sections.json -o -name asr.json -o -name render.json \) -delete
    ```
    Keep `out/` and the small text files (`picks.json`, `checked.json`, `words.json`, `transcript.md`): they let you
    redo a clip in this chat.

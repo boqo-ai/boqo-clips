@@ -46,31 +46,107 @@ export function wordsFromJson3(j) {
   });
 }
 
-// whisper's non-speech items: wholly bracketed ([BLANK_AUDIO], [_BEG_],
-// [Music], (laughs)) or only music notes. They are not words to burn in.
-const NON_SPEECH = /^(?:\[[^\]]*\]|\([^)]*\)|[\u266a\u266b\s]+)$/;
+// whisper's non-speech items: wholly bracketed ([BLANK_AUDIO], [Music],
+// (laughs), several in a row) or only music notes. They are not words to burn in.
+const NON_SPEECH = /^(?:\[[^\]]*\]|\([^)]*\)|[♪♫♬\s])+$/;
+
+// whisper with one word per item also splits a tag across items: " (upbeat" +
+// " music)". An item that opens a bracket (or a note) without closing it opens
+// a span; the item that ends with the matching closer ends it.
+const OPENERS = [
+  { open: /^\(/, hasClose: /\)/, close: /\)[.,!?;:'"…-]*$/ },
+  { open: /^\[/, hasClose: /\]/, close: /\][.,!?;:'"…-]*$/ },
+  { open: /^[♪♫♬]/, hasClose: /^.[^]*[♪♫♬]/, close: /[♪♫♬][.,!?;:'"…-]*$/ },
+];
+// A span is at most this many items, opener included: an unmatched "(" in
+// real speech must not eat the rest of the transcript.
+const MAX_TAG_ITEMS = 6;
+
+/** Drops items inside split sound tags; `texts` are trimmed, in order. */
+function splitTagFlags(texts) {
+  const drop = new Array(texts.length).fill(false);
+  for (let i = 0; i < texts.length; i++) {
+    if (drop[i]) continue;
+    const o = OPENERS.find((x) => x.open.test(texts[i]) && !x.hasClose.test(texts[i]));
+    if (!o) continue;
+    for (let j = i + 1; j < texts.length && j < i + MAX_TAG_ITEMS; j++) {
+      if (o.close.test(texts[j])) {
+        for (let k = i; k <= j; k++) drop[k] = true;
+        break;
+      }
+    }
+  }
+  return drop;
+}
+
+const STACK_SEC = 0.03;
+const STACK_WORD_SEC = 0.35;
+
+/**
+ * whisper sometimes puts several words on one ~10 ms stamp, so a caption group
+ * would flash at once. A run of words whose starts are within 0.03 s of the
+ * run's first gets the span from that start to the next word's start (or the
+ * run's last end, whichever is later, at most 0.35 s a word), split evenly.
+ * A word never moves earlier than it started. `words` is sorted; mutated.
+ */
+function spreadStacked(words) {
+  let i = 0;
+  while (i < words.length) {
+    let j = i + 1;
+    while (j < words.length && words[j].s - words[i].s <= STACK_SEC + 1e-9) j++;
+    const n = j - i;
+    if (n >= 2) {
+      const start = words[i].s;
+      const after = j < words.length ? words[j].s : -Infinity;
+      const end = Math.min(Math.max(after, words[j - 1].e), start + STACK_WORD_SEC * n);
+      const step = (end - start) / n;
+      const orig = words.slice(i, j).map((x) => x.s);
+      const starts = [];
+      for (let k = 0; k < n; k++) {
+        let s = Math.max(round3(start + k * step), orig[k]);
+        if (k > 0 && s <= starts[k - 1]) s = round3(starts[k - 1] + 0.001);
+        starts.push(s);
+      }
+      for (let k = 0; k < n; k++) {
+        const w = words[i + k];
+        w.s = starts[k];
+        w.e = k < n - 1 ? starts[k + 1] : Math.max(round3(end), round3(starts[k] + 0.001));
+      }
+    }
+    i = j;
+  }
+  return words;
+}
 
 /**
  * Words from whisper.cpp `-oj` JSON (`offsets` are milliseconds). Non-speech
- * items (`[BLANK_AUDIO]`, `(music)`, `♪`) are dropped.
+ * items (`[BLANK_AUDIO]`, `(music)`, `♪`) and sound tags split across items
+ * (`(upbeat` + `music)`) are dropped; words stacked on one timestamp are
+ * spread out.
  * @param {object} j parsed whisper JSON
  * @param {number} [offsetSec] added to every time, for a cut that starts later
  * @returns {Word[]}
  */
 export function wordsFromWhisper(j, offsetSec = 0) {
   const items = Array.isArray(j?.transcription) ? j.transcription : [];
-  const out = [];
+  const kept = [];
   for (const it of items) {
     const text = typeof it?.text === 'string' ? it.text.trim() : '';
     const from = num(it?.offsets?.from);
     const to = num(it?.offsets?.to);
     if (!text || NON_SPEECH.test(text) || from === null || to === null) continue;
+    kept.push({ text, from, to });
+  }
+  const drop = splitTagFlags(kept.map((x) => x.text));
+  const out = [];
+  kept.forEach(({ text, from, to }, i) => {
+    if (drop[i]) return;
     const s = round3(offsetSec + from / 1000);
     let e = round3(offsetSec + to / 1000);
     if (e <= s) e = round3(s + MIN_WORD_SEC);
     out.push({ w: text, s, e });
-  }
-  return out.sort((a, b) => a.s - b.s);
+  });
+  return spreadStacked(out.sort((a, b) => a.s - b.s));
 }
 
 /**

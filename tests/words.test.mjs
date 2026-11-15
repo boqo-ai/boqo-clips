@@ -195,3 +195,79 @@ test('transcriptChunks: heat v >= 0.6 marks overlapping lines with a trailing tr
 test('transcriptChunks: no words gives no chunks', () => {
   assert.deepEqual(transcriptChunks([]), [])
 })
+
+const wItems = (texts, step = 100) =>
+  texts.map((text, i) => ({ offsets: { from: i * step, to: i * step + step - 10 }, text }))
+
+test('wordsFromWhisper drops a sound tag split across items', () => {
+  const j = { transcription: wItems([' Hi', ' (upbeat', ' music)', ' there', ' [Music', ']', ' ok', ' (keyboard', ' clicking).', ' end']) }
+  assert.deepEqual(
+    wordsFromWhisper(j).map((x) => x.w),
+    ['Hi', 'there', 'ok', 'end'],
+  )
+})
+
+test('wordsFromWhisper drops a split tag whose closer is the last item, and a split music span', () => {
+  const j = { transcription: wItems([' a', ' (soft', ' gentle', ' music)', ' ♪', ' la']) }
+  assert.deepEqual(wordsFromWhisper(j).map((x) => x.w), ['a', 'la'])
+  const k = { transcription: wItems([' x', ' [Music', ']']) }
+  assert.deepEqual(wordsFromWhisper(k).map((x) => x.w), ['x'])
+})
+
+test('wordsFromWhisper drops an item holding several markers and the double note', () => {
+  const j = { transcription: wItems([' [Music] [Applause]', ' (laughs) (cheers)', ' ♬', ' Hello']) }
+  assert.deepEqual(wordsFromWhisper(j).map((x) => x.w), ['Hello'])
+})
+
+test('wordsFromWhisper keeps an unmatched opening bracket in real speech', () => {
+  const j = { transcription: wItems([' (really', ' this', ' is', ' normal', ' speech', ' with', ' no', ' closer']) }
+  assert.deepEqual(
+    wordsFromWhisper(j).map((x) => x.w),
+    ['(really', 'this', 'is', 'normal', 'speech', 'with', 'no', 'closer'],
+  )
+  // the closer is 6 items away: too far, so nothing is dropped
+  const k = { transcription: wItems([' [oh', ' a', ' b', ' c', ' d', ' e', ' f]', ' g']) }
+  assert.equal(wordsFromWhisper(k).length, 8)
+  // exactly 6 items is still a tag
+  const m = { transcription: wItems([' [oh', ' a', ' b', ' c', ' d', ' e]', ' g']) }
+  assert.deepEqual(wordsFromWhisper(m).map((x) => x.w), ['g'])
+})
+
+test('wordsFromWhisper spreads words stacked on one timestamp', () => {
+  const at = (ms, text) => ({ offsets: { from: ms, to: ms + 10 }, text })
+  const j = { transcription: [at(1000, ' Hey'), at(1000, ' bro'), at(1000, ' it'), at(1500, ' is')] }
+  const out = wordsFromWhisper(j)
+  assert.deepEqual(out.map((x) => x.w), ['Hey', 'bro', 'it', 'is'])
+  assert.deepEqual(out.map((x) => x.s), [1, 1.167, 1.333, 1.5])
+  assert.deepEqual(out.slice(0, 3).map((x) => x.e), [1.167, 1.333, 1.5])
+  assert.deepEqual(out[3], { w: 'is', s: 1.5, e: 1.51 })
+  for (let i = 0; i < out.length; i++) {
+    assert.ok(out[i].s < out[i].e)
+    if (i) assert.ok(out[i].s > out[i - 1].s)
+  }
+})
+
+test('wordsFromWhisper: a stacked run is capped at 0.35 s a word and may end the list', () => {
+  const at = (ms, text) => ({ offsets: { from: ms, to: ms + 10 }, text })
+  const far = { transcription: [at(2000, ' a'), at(2010, ' b'), at(9000, ' c')] }
+  assert.deepEqual(wordsFromWhisper(far), [
+    { w: 'a', s: 2, e: 2.35 },
+    { w: 'b', s: 2.35, e: 2.7 },
+    { w: 'c', s: 9, e: 9.01 },
+  ])
+  const last = { transcription: [at(500, ' x'), at(500, ' y')] }
+  assert.deepEqual(wordsFromWhisper(last), [
+    { w: 'x', s: 0.5, e: 0.505 },
+    { w: 'y', s: 0.505, e: 0.51 },
+  ])
+})
+
+test('wordsFromWhisper leaves words that are not stacked alone', () => {
+  const j = { transcription: wItems([' one', ' two', ' three', ' four']) }
+  assert.deepEqual(wordsFromWhisper(j), [
+    { w: 'one', s: 0, e: 0.09 },
+    { w: 'two', s: 0.1, e: 0.19 },
+    { w: 'three', s: 0.2, e: 0.29 },
+    { w: 'four', s: 0.3, e: 0.39 },
+  ])
+})

@@ -85,9 +85,11 @@ const STACK_WORD_SEC = 0.35;
 /**
  * whisper sometimes puts several words on one ~10 ms stamp, so a caption group
  * would flash at once. A run of words whose starts are within 0.03 s of the
- * run's first gets the span from that start to the next word's start (or the
- * run's last end, whichever is later, at most 0.35 s a word), split evenly.
- * A word never moves earlier than it started. `words` is sorted; mutated.
+ * run's first gets the span from that start to the next word's start (or, at
+ * the end of the list, the run's last end), at most 0.35 s a word, split
+ * evenly. The run never passes the next word. A word does not move earlier
+ * than it started, except by a millisecond or two when the gap before the next
+ * word is that tight. `words` is sorted; mutated.
  */
 function spreadStacked(words) {
   let i = 0;
@@ -97,20 +99,29 @@ function spreadStacked(words) {
     const n = j - i;
     if (n >= 2) {
       const start = words[i].s;
-      const after = j < words.length ? words[j].s : -Infinity;
-      const end = Math.min(Math.max(after, words[j - 1].e), start + STACK_WORD_SEC * n);
-      const step = (end - start) / n;
-      const orig = words.slice(i, j).map((x) => x.s);
-      const starts = [];
-      for (let k = 0; k < n; k++) {
-        let s = Math.max(round3(start + k * step), orig[k]);
-        if (k > 0 && s <= starts[k - 1]) s = round3(starts[k - 1] + 0.001);
-        starts.push(s);
-      }
-      for (let k = 0; k < n; k++) {
-        const w = words[i + k];
-        w.s = starts[k];
-        w.e = k < n - 1 ? starts[k + 1] : Math.max(round3(end), round3(starts[k] + 0.001));
+      const hasNext = j < words.length;
+      const after = hasNext ? words[j].s : Infinity;
+      // With a next word the run ends at that word's start, never past it;
+      // the run's last source end only matters when the run ends the list.
+      const end = Math.min(hasNext ? after : words[j - 1].e, start + STACK_WORD_SEC * n);
+      // The run must fit below `after` at 1 ms a word; if not, leave it be.
+      if (!hasNext || after - start >= n * 0.001) {
+        const step = (end - start) / n;
+        const starts = [];
+        for (let k = 0; k < n; k++) {
+          // even split first, then the floor (never earlier than the word's own
+          // start), then clamp into the gap so every later word keeps 1 ms,
+          // then strictly increasing.
+          let s = Math.max(round3(start + k * step), words[i + k].s);
+          s = Math.min(s, round3(after - (n - k) * 0.001));
+          if (k > 0 && s <= starts[k - 1]) s = round3(starts[k - 1] + 0.001);
+          starts.push(s);
+        }
+        for (let k = 0; k < n; k++) {
+          const w = words[i + k];
+          w.s = starts[k];
+          w.e = k < n - 1 ? starts[k + 1] : Math.max(round3(end), round3(starts[k] + 0.001));
+        }
       }
     }
     i = j;

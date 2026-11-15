@@ -271,3 +271,37 @@ test('wordsFromWhisper leaves words that are not stacked alone', () => {
     { w: 'four', s: 0.3, e: 0.39 },
   ])
 })
+
+test('wordsFromWhisper: a stacked run never passes the next word, even when its last end does', () => {
+  const j = {
+    transcription: [
+      { offsets: { from: 1000, to: 1010 }, text: ' a' },
+      { offsets: { from: 1000, to: 1010 }, text: ' b' },
+      { offsets: { from: 1000, to: 1400 }, text: ' c' },
+      { offsets: { from: 1100, to: 1200 }, text: ' d' },
+    ],
+  }
+  const out = wordsFromWhisper(j)
+  assert.deepEqual(out.map((x) => x.w), ['a', 'b', 'c', 'd'])
+  assert.deepEqual(out.map((x) => x.s), [1, 1.033, 1.067, 1.1])
+  assert.deepEqual(out.slice(0, 3).map((x) => x.e), [1.033, 1.067, 1.1])
+  for (let i = 0; i < out.length; i++) {
+    assert.ok(out[i].s < out[i].e, JSON.stringify(out[i]))
+    if (i) {
+      assert.ok(out[i].s > out[i - 1].s)
+      assert.ok(out[i].s >= out[i - 1].e, `overlap at ${i}`)
+    }
+  }
+})
+
+test('wordsFromWhisper: a tight gap keeps starts strictly increasing and below the next word', () => {
+  const at = (ms, text) => ({ offsets: { from: ms, to: ms + 10 }, text })
+  const j = { transcription: [at(1000, ' a'), at(1030, ' b'), at(1030, ' c'), at(1031, ' d')] }
+  const out = wordsFromWhisper(j)
+  assert.deepEqual(out.map((x) => x.w), ['a', 'b', 'c', 'd'])
+  assert.deepEqual(out.map((x) => x.s), [1, 1.029, 1.03, 1.031])
+  for (let i = 0; i < out.length; i++) {
+    assert.ok(out[i].s < out[i].e, JSON.stringify(out[i]))
+    if (i) assert.ok(out[i].s > out[i - 1].s && out[i].s >= out[i - 1].e)
+  }
+})

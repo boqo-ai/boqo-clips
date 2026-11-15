@@ -134,7 +134,7 @@ test('transcriptChunks: h:mm:ss from an hour up', () => {
   const words = [{ w: 'late', s: 3725, e: 3726 }]
   const [chunk] = transcriptChunks(words)
   assert.match(chunk, /\[1:02:05\] late/)
-  assert.match(chunk, /^## Part 1 \(0:00:00–1:02:06\)/)
+  assert.match(chunk, /^## Part 1 \(1:00:00–1:02:06\)/)
 })
 
 test('transcriptChunks: heat v >= 0.6 marks overlapping lines with a trailing triangle', () => {

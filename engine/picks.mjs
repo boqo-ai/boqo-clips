@@ -6,6 +6,8 @@
 /** @typedef {{ s: number, e: number, title: string, hook?: string }} Pick */
 
 const SNAP_SEC = 0.3;
+/** An edge never moves further than this when snapping. */
+export const SNAP_MAX_SEC = 1.5;
 const MIN_SNAPPED_SEC = 1;
 const EPS = 1e-9;
 
@@ -60,9 +62,13 @@ export function checkPicks(picks, o) {
 }
 
 /**
- * Snap a pick's edges to word boundaries: `s` becomes the start of the first
- * word starting at or after `s - 0.3`, `e` the end of the last word ending at
- * or before `e + 0.3`. A side with no such word stays as it was; if snapping
+ * Snap a pick's edges to whole words, moving an edge at most `SNAP_MAX_SEC`.
+ * Start: a word straddling `s` (and started at most 1.5 s earlier) backs `s`
+ * up to its start; otherwise `s` moves to the first word starting at or after
+ * `s - 0.3`, if that word starts within `s + 1.5`. End, mirrored: a word
+ * straddling `e` (and ending at most 1.5 s later) extends `e` to its end;
+ * otherwise `e` moves to the last word ending at or before `e + 0.3`, if that
+ * word ends at or after `e - 1.5`. An edge with no such word stays. If snapping
  * would leave under 1 s, the pick is returned unchanged.
  * @param {Pick} p
  * @param {Word[]} words sorted by `s`
@@ -70,15 +76,32 @@ export function checkPicks(picks, o) {
  */
 export function snapPick(p, words) {
   if (!Array.isArray(words) || words.length === 0) return { ...p };
-  const from = p.s - SNAP_SEC - EPS;
-  const to = p.e + SNAP_SEC + EPS;
 
-  const first = words.find((x) => x.s >= from);
-  let last = null;
-  for (const x of words) if (x.e <= to && (last === null || x.e > last.e)) last = x;
+  let s = p.s;
+  const startWord = words.reduce(
+    (best, x) => (x.s < p.s && p.s < x.e && p.s - x.s <= SNAP_MAX_SEC + EPS && (!best || x.s > best.s) ? x : best),
+    null,
+  );
+  if (startWord) {
+    s = startWord.s;
+  } else {
+    const first = words.find((x) => x.s >= p.s - SNAP_SEC - EPS);
+    if (first && first.s <= p.s + SNAP_MAX_SEC + EPS) s = first.s;
+  }
 
-  const s = first ? first.s : p.s;
-  const e = last ? last.e : p.e;
+  let e = p.e;
+  const endWord = words.reduce(
+    (best, x) => (x.s < p.e && p.e < x.e && x.e - p.e <= SNAP_MAX_SEC + EPS && (!best || x.e < best.e) ? x : best),
+    null,
+  );
+  if (endWord) {
+    e = endWord.e;
+  } else {
+    let last = null;
+    for (const x of words) if (x.e <= p.e + SNAP_SEC + EPS && (last === null || x.e > last.e)) last = x;
+    if (last && last.e >= p.e - SNAP_MAX_SEC - EPS) e = last.e;
+  }
+
   if (e - s < MIN_SNAPPED_SEC - EPS) return { ...p };
   return { ...p, s: round3(s), e: round3(e) };
 }

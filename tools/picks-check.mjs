@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // node tools/picks-check.mjs <picks.json> --duration <sec> [--words <words.json>]
 //   [--min 15] [--max 90] [--count-min 1] [--count-max 10]
-// Snaps the picks to word boundaries (when --words is given), then checks them.
+// Snaps the picks to word boundaries (when --words is given; each snapped pick
+// carries `moved: {s, e}`, how far snapping shifted each edge), then checks them.
 // Prints one JSON line: {"ok":true,"picks":[...]} (exit 0), {"ok":false,"errors":[...]}
 // (exit 1), or {"error":"..."} (exit 1) when it cannot run at all.
 import { readFileSync } from 'node:fs';
@@ -67,8 +68,19 @@ if (!Array.isArray(picks)) fail('picks file must hold an array, or {"picks": [..
 if (opt.words !== undefined) {
   const words = readJson(opt.words, 'words file');
   if (!Array.isArray(words)) fail('words file must hold an array of {w, s, e}');
+  words.forEach((x, i) => {
+    if (!x || typeof x !== 'object' || !Number.isFinite(x.s) || !Number.isFinite(x.e)) {
+      fail(`words file item ${i + 1} needs numeric s and e in seconds`);
+    }
+  });
   const sorted = [...words].sort((a, b) => a.s - b.s);
-  picks = picks.map((p) => (p && typeof p === 'object' && Number.isFinite(p.s) && Number.isFinite(p.e) ? snapPick(p, sorted) : p));
+  // 0.01 s drift per edge, so the agent sees what snapping did
+  const drift = (to, from) => Math.round((to - from) * 100) / 100 + 0;
+  picks = picks.map((p) => {
+    if (!p || typeof p !== 'object' || !Number.isFinite(p.s) || !Number.isFinite(p.e)) return p;
+    const q = snapPick(p, sorted);
+    return { ...q, moved: { s: drift(q.s, p.s), e: drift(q.e, p.e) } };
+  });
 }
 
 const { duration, ...rest } = numbers;

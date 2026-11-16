@@ -91,7 +91,9 @@ local file, below.
    ```sh
    node "$HOME/.boqo-clips/tools/transcript.mjs" --words "<run>/words.json" --around <seconds>
    ```
-   (`{"lines": ["[m:ss] text (s-e)", …]}` for 30 s either side), and quote again from them.
+   (`{"lines": ["[m:ss] text (s-e)", …]}` for 30 s either side), and quote again from them. Then check the returned
+   `s` or `e` lies within a few seconds of the line's `[m:ss]` stamp you meant: a far exact repeat of the phrase can
+   beat a near mis-captioned one, and then the edge is on the wrong line.
 5. **Check.**
    ```sh
    node "$HOME/.boqo-clips/tools/picks-check.mjs" "<run>/picks.json" --duration <duration> --words "<run>/words.json" \
@@ -100,8 +102,8 @@ local file, below.
    `<duration>` is step 2's. Read `<run>/checked.json`.
    - `"ok": false`: fix each pick its `errors` name in `picks.json`, and check again.
    - `"ok": true`: every pick is snapped to whole words and carries `moved: {s, e}`, how far each edge moved. An edge
-     set from `--find` moves 0.05 s. One that moved more than 0.1 s landed somewhere you did not choose: find its
-     phrase again (step 4), set that edge in `picks.json`, and check again, once.
+     set from `--find` moves 0.05 s. One that moved more than 0.1 s either way (`|moved.s|` or `|moved.e|`) landed
+     somewhere you did not choose: find its phrase again (step 4), set that edge in `picks.json`, and check again, once.
    - Other lengths only on the person's ask ("30-second clips": `--min 25 --max 35`), within 15 to 90 s. A video
      under 3 minutes: `--count-min 1` (`select.md` → How many).
 6. **Sections**, in the background (Rules):
@@ -163,7 +165,7 @@ with `--src`.
 | "The person said 'nice', so I'll post them" | Only the rule posts. With `ask`, a post needs a yes to posting |
 | "I'll download the whole video, it's simpler" | Sections first. `fetch.mjs` falls back to the whole video by itself |
 | "The opening is mid-line, I'll estimate where it falls" | Quote its first words and `--find` them |
-| "picks-check moved an edge 0.4 s, close enough" | More than 0.1 s: find its phrase again and set it |
+| "picks-check moved an edge 0.4 s, close enough" | More than 0.1 s either way (`\|moved.s\|` or `\|moved.e\|`): find its phrase again and set it |
 | "A ▲ line, so it's a clip" | ▲ is evidence, not an order (`select.md`) |
 | "Ten clips look generous" | One per ~6 minutes, 3 to 10, and fewer when fewer pass `select.md` |
 | "The tool failed, I'll write my own ffmpeg line" | Say the error and stop that step |

@@ -43,7 +43,9 @@ fill the count with weak ones. Picks never overlap.
    pick's `s` is the opening's `s` + 0.05 and its `e` the payoff's `e` − 0.05: a little inside the word, so
    `picks-check.mjs` moves each edge out to that word's boundary (an edge set exactly on a boundary can take in the
    neighbouring word, "and" or "but", instead). `match` must start on your first word and end on your last. When it
-   does not, or the phrase is not found, read the words there (`--around`) and quote again. Never set an edge from a
+   does not, or the phrase is not found, read the words there (`--around`) and quote again. The returned `s` or `e`
+   must also lie within a few seconds of the line's `[m:ss]` stamp you meant: a far exact repeat can beat a near
+   mis-captioned one. Never set an edge from a
    line's `(s-e)` or from where a word seems to fall in a line: words do not spread evenly over a line, and an
    estimate lands a word or two off.
 

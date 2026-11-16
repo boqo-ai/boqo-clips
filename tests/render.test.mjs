@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFile, spawnSync } from 'node:child_process';
-import { existsSync, mkdirSync, mkdtempSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { chmodSync, existsSync, mkdirSync, mkdtempSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -218,6 +218,35 @@ test('renderClip: a failed render keeps the work folder and names it', async () 
   rmSync(root, { recursive: true, force: true });
 });
 
+// Windows keeps a just-closed file busy for a moment (EBUSY): a work folder
+// that will not go away must not fail a clip that is already in place. Here
+// the folder holding the work folder turns read-only mid-render, so the work
+// folder cannot be removed.
+const canLock = process.platform !== 'win32' && process.getuid?.() !== 0;
+test('renderClip: a work folder that cannot be removed does not fail a rendered clip', { skip: !canLock && 'needs POSIX permissions, not root' }, async () => {
+  const { src, words, brand } = fixtures();
+  const { root, outDir, tmpRoot } = sandbox();
+  mkdirSync(tmpRoot, { recursive: true });
+  let locked = false;
+  try {
+    const r = await renderClip({
+      src, s: 0, e: 3, words, brand, outDir, name: 'kept', tmpRoot, loglevel: 'info',
+      onLog: () => {
+        if (!locked) chmodSync(tmpRoot, 0o555);
+        locked = true;
+      },
+    });
+    assert.ok(locked, 'the lock was set during the render');
+    assert.equal(r.out, join(outDir, 'kept.mp4'));
+    assert.ok(existsSync(r.out));
+    assert.ok(Math.abs(r.seconds - 3) <= 0.2, `duration ${r.seconds}`);
+    assert.equal(readdirSync(tmpRoot).length, 1, 'the work folder could not be removed, and that is fine');
+  } finally {
+    chmodSync(tmpRoot, 0o755);
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('renderClip: a source ffprobe cannot read is a clear error', async () => {
   const { words, brand } = fixtures();
   const { root, outDir } = sandbox();
@@ -295,6 +324,44 @@ test('CLI sections mode renders pick i from its own file at its offset', async (
   const j = JSON.parse(r.stdout);
   assert.equal(j.clips.length, 1);
   assert.ok(Math.abs(probe(j.clips[0].file).format.duration - 4) <= 0.2);
+  rmSync(root, { recursive: true, force: true });
+});
+
+test('CLI: a failure mid-batch names the clips already rendered', async () => {
+  const { dir, src, words } = fixtures();
+  const { root, outDir } = sandbox();
+  const picks = join(dir, 'picks-mid.json');
+  writeFileSync(picks, JSON.stringify([{ s: 1, e: 4, title: 'Good' }, { s: 5, e: 8, title: 'Bad' }, { s: 9, e: 12, title: 'Never' }]));
+  const bad = join(root, 'broken.mp4');
+  mkdirSync(root, { recursive: true });
+  writeFileSync(bad, 'not a video');
+  const sections = join(dir, 'sections-mid.json');
+  writeFileSync(sections, JSON.stringify({ files: [{ pick: 0, file: src, offset: 1 }, { pick: 1, file: bad, offset: 0 }, { pick: 2, file: src, offset: 9 }] }));
+  const wf = join(dir, 'words-mid.json');
+  writeFileSync(wf, JSON.stringify(words));
+  const r = await cli(['--sections', sections, '--picks', picks, '--words', wf, '--out', outDir], { BOQO_HOME: await homeWithKit(root) });
+  assert.equal(r.code, 1, r.stdout + r.stderr);
+  assert.equal(r.stdout.trim().split('\n').length, 1);
+  const j = JSON.parse(r.stdout);
+  assert.match(j.error, /clip 2: .*ffprobe could not read/);
+  assert.deepEqual(j.rendered, [{ file: join(outDir, 'clip-01.mp4'), s: 1, e: 4, title: 'Good' }]);
+  assert.ok(existsSync(join(outDir, 'clip-01.mp4')));
+  assert.equal(existsSync(join(outDir, 'clip-03.mp4')), false);
+  rmSync(root, { recursive: true, force: true });
+});
+
+test('CLI: a failure on the first clip says none was rendered', async () => {
+  const { dir, words } = fixtures();
+  const { root, outDir } = sandbox();
+  const picks = join(dir, 'picks-first.json');
+  writeFileSync(picks, JSON.stringify([{ s: 1, e: 4 }]));
+  const wf = join(dir, 'words-first.json');
+  writeFileSync(wf, JSON.stringify(words));
+  const r = await cli(['--src', join(root, 'missing.mp4'), '--picks', picks, '--words', wf, '--out', outDir], { BOQO_HOME: await homeWithKit(root) });
+  assert.equal(r.code, 1);
+  const j = JSON.parse(r.stdout);
+  assert.match(j.error, /^clip 1: /);
+  assert.deepEqual(j.rendered, []);
   rmSync(root, { recursive: true, force: true });
 });
 

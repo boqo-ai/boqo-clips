@@ -157,7 +157,8 @@ async function moveFile(from, to) {
  *   `words` are on the source timeline; the clip runs `s`..`e` on it. `seek` is
  *   where the clip starts inside `src` when that differs from `s` (a downloaded
  *   section starts at its own 0). `tmpRoot` is where the work folder goes (the
- *   OS temp dir by default); `loglevel`/`onLog` expose ffmpeg's log.
+ *   OS temp dir by default); `loglevel`/`onLog` expose ffmpeg's log. The work
+ *   folder is removed best-effort once the clip is in place.
  * @returns {Promise<{ out: string, seconds: number }>}
  */
 export async function renderClip(o) {
@@ -211,7 +212,9 @@ export async function renderClip(o) {
     await mkdir(outDir, { recursive: true });
     const out = join(outDir, `${name}.mp4`);
     await moveFile(join(work, 'out.mp4'), out);
-    await rm(work, { recursive: true, force: true });
+    // The clip is in place: a work folder that will not go away (Windows keeps a
+    // just-closed file busy, EBUSY) is left behind, and the clip still counts.
+    await rm(work, { recursive: true, force: true, maxRetries: 3, retryDelay: 200 }).catch(() => {});
     return { out, seconds: Math.round(seconds * 1000) / 1000 };
   } catch (err) {
     err.message = `${err.message} (work folder kept at ${work})`;

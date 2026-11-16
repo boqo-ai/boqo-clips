@@ -119,7 +119,8 @@ local file, below.
    node "$HOME/.boqo-clips/tools/render.mjs" --sections "<run>/sections.json" --picks "<run>/checked.json" \
      --words "<run>/words.json" --brand "<name>" --out "<run>/out" > "<run>/render.json"
    ```
-   `<run>/render.json` gets `{"clips": [{file, s, e, title}]}`. A render takes about as long as the clips run, and
+   `<run>/render.json` gets `{"clips": [{file, s, e, title}]}`. An error stops at the clip it names, and its
+   `rendered` lists the clips already in `<run>/out`: say both. A render takes about as long as the clips run, and
    longer on a laptop. The layout is `blur` (the whole picture over a blurred fill of itself); `--layout crop` (a
    centre crop that fills the frame) only when the person asks.
 8. **Show.** One line per clip: its number, title, length (`e - s`, in whole seconds) and file path; then the

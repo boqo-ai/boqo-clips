@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -82,6 +82,39 @@ test('golden.mjs refuses without --boqo/--case, and on a checkout that is not bo
   assert.match(r.stderr, /apps\/worker/);
 });
 
+test('golden.mjs refuses a checkout that is not at the PIN, before it touches the checkout', () => {
+  const boqo = tmp('golden-drifted');
+  git(boqo, 'init', '-q', '-b', 'main');
+  put(boqo, 'apps/worker/package.json', '{}\n');
+  git(boqo, 'add', '-A');
+  git(boqo, 'commit', '-q', '-m', 'one');
+  const head = git(boqo, 'rev-parse', 'HEAD');
+  const skill = tmp('golden-skill');
+  for (const rel of ['scripts/parity/golden.mjs']) cpSync(join(repoRoot, rel), join(skill, rel));
+  const run = () => spawnSync(process.execPath, [join(skill, 'scripts/parity/golden.mjs'), '--boqo', boqo, '--case', 'clip-target'], { encoding: 'utf8' });
+
+  put(skill, 'engine/boqo/PIN', 'deadbeef0\n2026-11-16\n');
+  const r = run();
+  assert.equal(r.status, 2);
+  assert.equal(r.stderr.trim().split('\n').length, 1, r.stderr);
+  assert.match(r.stderr, /deadbeef0/);
+  assert.match(r.stderr, new RegExp(head.slice(0, 9)));
+  assert.equal(existsSync(join(boqo, 'apps/worker/src/.parity')), false);
+
+  // at the pin (a short sha is a prefix of HEAD) it gets past the check, to the next refusal
+  put(skill, 'engine/boqo/PIN', `${head.slice(0, 9)}\n2026-11-16\n`);
+  const ok = run();
+  assert.equal(ok.status, 2);
+  assert.match(ok.stderr, /no case file/);
+
+  // not a git checkout at all is a refusal too
+  const plain = tmp('golden-plain');
+  put(plain, 'apps/worker/package.json', '{}\n');
+  const n = spawnSync(process.execPath, [join(skill, 'scripts/parity/golden.mjs'), '--boqo', plain, '--case', 'clip-target'], { encoding: 'utf8' });
+  assert.equal(n.status, 2);
+  assert.match(n.stderr, /PIN/);
+});
+
 // ---- strip.mjs
 
 test('strip.mjs removes types, keeps comments, adds the port header with the pin', () => {
@@ -132,7 +165,7 @@ function drift({ ported, ref } = {}) {
   const skill = tmp('drift-skill');
   cpSync(join(repoRoot, 'scripts/boqo-drift.mjs'), join(skill, 'scripts/boqo-drift.mjs'), { recursive: true });
   put(skill, 'engine/boqo/PIN', `${pin}\n2026-11-16\n`);
-  for (const [rel, text] of Object.entries(ported ?? {})) put(skill, rel, text.replaceAll('<pin>', pin));
+  for (const [rel, text] of Object.entries(ported ?? {})) put(skill, rel, text.replaceAll('<pin>', pin).replaceAll('<pin7>', pin.slice(0, 7)));
   const args = [join(skill, 'scripts/boqo-drift.mjs'), boqo, ...(ref ? ['--ref', ref] : [])];
   return spawnSync(process.execPath, args, { encoding: 'utf8' });
 }
@@ -185,4 +218,35 @@ test('drift: a bad header path, ref or checkout is an error, not a clean run', (
   cpSync(join(repoRoot, 'scripts/boqo-drift.mjs'), join(skill, 'scripts/boqo-drift.mjs'), { recursive: true });
   put(skill, 'engine/boqo/PIN', 'deadbeef\n2026-11-16\n');
   assert.equal(spawnSync(process.execPath, [join(skill, 'scripts/boqo-drift.mjs'), tmp('nogit')], { encoding: 'utf8' }).status, 2);
+});
+
+test('drift: prints how many sources it scanned to stderr, so a vacuous pass shows', () => {
+  const none = drift();
+  assert.equal(none.status, 0, none.stderr);
+  assert.match(none.stderr, /scanned 0 sources/);
+  const two = drift({
+    ported: {
+      'engine/boqo/same.mjs': hdr('packages/core/src/same.ts'),
+      'lib/boqo/same-again.mjs': hdr('packages/core/src/same.ts'),
+      'engine/top.mjs': hdr('packages/core/src/moves.ts'),
+    },
+  });
+  assert.equal(two.status, 1, two.stderr);
+  assert.match(two.stderr, /scanned 2 sources/, 'distinct sources, and a port header directly under engine/ counts');
+  assert.equal(two.stdout, 'packages/core/src/moves.ts changed\n');
+});
+
+test('drift: a header pinned at another sha than PIN is reported, exit 1', () => {
+  const r = drift({
+    ported: {
+      'engine/boqo/same.mjs': '// ported from boqo-ai/boqo packages/core/src/same.ts @ abcdef012; keep in step (scripts/boqo-drift.mjs)\nexport {};\n',
+    },
+  });
+  assert.equal(r.status, 1, r.stderr);
+  assert.match(r.stdout, /^packages\/core\/src\/same\.ts pinned at abcdef012, PIN is [0-9a-f]{9}\n$/);
+  // a header sha that is a prefix of PIN (or the reverse) is the same commit
+  const ok = drift({
+    ported: { 'engine/boqo/same.mjs': hdr('packages/core/src/same.ts').replace('@ <pin>', '@ <pin7>') },
+  });
+  assert.equal(ok.status, 0, ok.stderr);
 });

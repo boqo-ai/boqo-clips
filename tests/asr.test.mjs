@@ -1,10 +1,11 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { spawnSync } from 'node:child_process';
-import { mkdtempSync, writeFileSync, mkdirSync, rmSync, readdirSync, existsSync } from 'node:fs';
+import { execFile, spawnSync } from 'node:child_process';
+import { chmodSync, mkdtempSync, writeFileSync, mkdirSync, rmSync, readdirSync, existsSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join, basename } from 'node:path';
-import { findModel, whisperArgs, transcribe } from '../engine/asr.mjs';
+import { delimiter, dirname, join, basename } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { findModel, whisperArgs, whisperLang, transcribe } from '../engine/asr.mjs';
 import { toolEnv } from '../engine/env.mjs';
 
 const tmp = () => mkdtempSync(join(tmpdir(), 'boqo-asr-test-'));
@@ -153,6 +154,69 @@ test('transcribe: real speech gives words, offset by the cut start, temp files r
     assert.ok(cut.every((x) => x.s >= 0.9), 'cut words sit on the source timeline');
     const after = readdirSync(tmpdir()).filter((n) => n.startsWith('boqo-asr-')).length;
     assert.equal(after, before, 'work folders are removed');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+// ---- the language a transcription ran in (an `.en` model forces English)
+
+test('whisperLang: an English-only model is English, whatever was asked or heard', () => {
+  assert.deepEqual(whisperLang('/m/ggml-small.en.bin', 'auto', { result: { language: 'en' } }), { lang: 'en', englishOnly: true });
+  assert.deepEqual(whisperLang('/m/ggml-base.en.bin', 'ru', {}), { lang: 'en', englishOnly: true });
+  assert.deepEqual(whisperLang('C:\\m\\GGML-SMALL.EN.BIN', 'auto', null), { lang: 'en', englishOnly: true });
+});
+
+test('whisperLang: a multilingual model reports the language whisper heard, else the one asked', () => {
+  assert.deepEqual(whisperLang('/m/ggml-small.bin', 'auto', { result: { language: 'de' } }), { lang: 'de', englishOnly: false });
+  assert.deepEqual(whisperLang('/m/ggml-small.bin', 'fr', {}), { lang: 'fr', englishOnly: false });
+  assert.deepEqual(whisperLang('/m/ggml-small.bin', 'auto', { result: {} }), { lang: 'auto', englishOnly: false });
+  assert.deepEqual(whisperLang('/m/ggml-small.bin', undefined, null), { lang: 'auto', englishOnly: false });
+});
+
+const CLI = fileURLToPath(new URL('../tools/asr.mjs', import.meta.url));
+const ffmpegOk = has('ffmpeg', ['-version']);
+
+// A whisper-cli stand-in: `-h` exits 0; a run writes `<-of>.json` with one word.
+function fakeWhisper(dir, language) {
+  mkdirSync(dir, { recursive: true });
+  const p = join(dir, 'whisper-cli');
+  const json = JSON.stringify({ result: { language }, transcription: [{ offsets: { from: 0, to: 0 }, text: '' }, { offsets: { from: 100, to: 400 }, text: ' Hello' }] });
+  writeFileSync(p, `#!/bin/sh\nout=""; prev=""\nfor a in "$@"; do [ "$prev" = "-of" ] && out="$a"; prev="$a"; done\n[ -z "$out" ] && exit 0\nprintf '%s' '${json}' > "$out.json"\n`);
+  chmodSync(p, 0o755);
+  return dir;
+}
+
+const runCli = (args, env) =>
+  new Promise((resolve) => {
+    execFile(process.execPath, [CLI, ...args], { env, encoding: 'utf8' }, (err, stdout, stderr) => resolve({ code: err ? err.code : 0, stdout, stderr }));
+  });
+
+test('tools/asr.mjs says the language it ran in, and englishOnly for an .en model', { skip: (process.platform === 'win32' || !ffmpegOk) && 'needs sh and ffmpeg' }, async () => {
+  const root = tmp();
+  try {
+    const audio = join(root, 'a b.wav');
+    const mk = spawnSync('ffmpeg', ['-v', 'error', '-f', 'lavfi', '-i', 'sine=frequency=440:duration=1', audio], { env: toolEnv() });
+    assert.equal(mk.status, 0, String(mk.stderr));
+    const bin = fakeWhisper(join(root, 'bin'), 'en');
+    const env = { ...toolEnv(), PATH: [bin, toolEnv().PATH].join(delimiter) };
+    const en = touch(root, 'ggml-small.en.bin');
+    const out = join(root, 'words.json');
+    const r = await runCli([audio, '--out', out], { ...env, BOQO_WHISPER_MODEL: en });
+    assert.equal(r.code, 0, r.stdout + r.stderr);
+    assert.equal(r.stdout.trim().split('\n').length, 1);
+    const j = JSON.parse(r.stdout);
+    assert.equal(j.words, 1);
+    assert.equal(j.model, 'ggml-small.en.bin');
+    assert.equal(j.lang, 'en');
+    assert.equal(j.englishOnly, true);
+    assert.deepEqual(JSON.parse(readFileSync(out, 'utf8')).map((x) => x.w), ['Hello']);
+
+    const multi = touch(root, 'ggml-small.bin');
+    fakeWhisper(bin, 'de');
+    const m = JSON.parse((await runCli([audio, '--out', out], { ...env, BOQO_WHISPER_MODEL: multi })).stdout);
+    assert.equal(m.lang, 'de');
+    assert.equal(m.englishOnly, false);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

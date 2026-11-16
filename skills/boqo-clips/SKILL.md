@@ -72,7 +72,13 @@ local file, below.
       ```sh
       node "$HOME/.boqo-clips/tools/asr.mjs" "<run>/audio.<ext>" --out "<run>/words.json" > "<run>/asr.json"
       ```
-      `{"words": N, …}` in `<run>/asr.json` is done; `{"error": …}` stops the run.
+      `{"words": N, …}` in `<run>/asr.json` is done; `{"error": …}` stops the run. `"englishOnly": true` is a
+      model that hears every video as English: when this one is not in English (`info.json`'s `language`, the title,
+      the person), say so, and offer the multilingual model (about 150 MB). On a yes, then run whisper again:
+      ```sh
+      mkdir -p "<home>/models" && curl -L -o "<home>/models/ggml-base.bin" \
+        "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin"
+      ```
    3. The transcript, with the most-replayed marks when `info.json` has them:
       ```sh
       node "$HOME/.boqo-clips/tools/transcript.mjs" --words "<run>/words.json" --out "<run>/transcript.md" \

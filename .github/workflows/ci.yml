@@ -29,7 +29,9 @@ jobs:
         if: runner.os == 'macOS'
         run: |
           brew install ffmpeg-full
-          if command -v ffmpeg; then echo "::warning::an ffmpeg is on PATH; the keg-only check proves less"; else echo "ffmpeg is not on PATH"; fi
+          if ! command -v ffmpeg; then echo "no ffmpeg on PATH: the tests find ffmpeg-full only through toolEnv"
+          elif ffmpeg -hide_banner -filters | grep -qE '^ *[^ ]+ +ass '; then echo "::warning::the ffmpeg on PATH has libass; the toolEnv check proves less"
+          else echo "the ffmpeg on PATH has no libass: the libass tests pass only through toolEnv"; fi
       - name: Install ffmpeg (Windows)
         if: runner.os == 'Windows'
         run: choco install ffmpeg-full -y

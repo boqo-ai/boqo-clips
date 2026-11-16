@@ -314,7 +314,8 @@ test('faces unavailable: a shot with a panels read keeps its layout (faces: []),
 
 // ---- the skill's doc ----------------------------------------------------------------------------------------------
 
-const panelsMd = readFileSync(join(here, '..', 'skills/boqo-clips/panels.md'), 'utf8');
+// A Windows checkout may turn the doc's line ends into CRLF; the prompts are compared as the agent reads lines.
+const panelsMd = readFileSync(join(here, '..', 'skills/boqo-clips/panels.md'), 'utf8').replace(/\r\n/g, '\n');
 
 test('panels.md carries both prompts verbatim, the frame labels, the port headers and one line about content', () => {
   const block = (text) => `<!-- system prompt begins -->\n${text}\n<!-- system prompt ends -->`;

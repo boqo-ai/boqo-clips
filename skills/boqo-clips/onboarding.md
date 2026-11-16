@@ -96,9 +96,10 @@ kit is saved and every boqo skill uses it.
 - The first kit saved becomes the default; `brand.mjs default "<name>"` changes it.
 - **Changing a kit later:** `brand.mjs show "<name>"`, change the keys in its `brand`, and save that with `--logo`
   again, or with `logo.file` as `show` printed it. A save with neither drops the logo.
-- **A kit made before boqo's template shape** (no `"version"`: `preset`, `colors`, `font`, `hook`) loads converted and
-  stays as it is on disk until the person next saves it. One that used `"font": "Anton"` now draws as `boldkeys`; say
-  so once, in one line, when you meet one.
+- **A kit made before boqo's template shape** (`preset`, `colors`, `font`, `hook`) loads converted: `show` prints it
+  with `migratedFrom: 1` and `notes`, and the file stays as it is until the person next saves it, which drops both.
+  Tell the person each note once, in one line: `font Anton → boldkeys` (it now draws as Bold Keys),
+  `hook → 3 s title plate`. A kit with no `migratedFrom` needs no note.
 
 ## 2. The boqo connection
 

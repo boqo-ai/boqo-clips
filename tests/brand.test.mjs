@@ -420,7 +420,7 @@ test('loadBrand of a v1 file answers v2 and does not rewrite the file', async ()
   const b = await loadBrand('old');
   assert.equal(b.version, 2);
   assert.equal(b.captions.style, 'karaoke');
-  assert.deepEqual(b, { ...migrateV1(defaultBrandV1('old')) });
+  assert.deepEqual(b, { ...migrateV1(defaultBrandV1('old')), migratedFrom: 1, notes: ['hook → 3 s title plate'] });
   assert.deepEqual(readFileSync(file), before, 'the file on disk is byte for byte the v1 kit');
   assert.equal(JSON.parse(readFileSync(file, 'utf8')).version, undefined);
   await loadBrand('old');
@@ -456,7 +456,9 @@ test('saveBrand writes version 2, and the next edit of a v1 kit writes it as v2'
   assert.equal(after.captions.positionFraction, 0.6);
   assert.equal(after.logo.file, 'logo.png', 'the logo file is the bare name on disk');
   assert.deepEqual(readdirSync(join(home, 'brands', 'old')).sort(), ['brand.json', 'logo.png']);
-  assert.deepEqual(await loadBrand('old'), { ...loaded, captions: { ...loaded.captions, positionFraction: 0.6 } });
+  const { migratedFrom, notes, ...kit } = loaded;
+  assert.deepEqual(await loadBrand('old'), { ...kit, captions: { ...kit.captions, positionFraction: 0.6 } });
+  assert.equal(JSON.stringify(after).includes('migratedFrom'), false);
 });
 
 test('saveBrand of a v1 object writes v2; brand.json is replaced atomically (no temp file left)', async () => {
@@ -481,7 +483,9 @@ test('onboarding.md names every gallery caption style and headline style, in ord
   const keys = (list) => list.map((k) => `\`${k}\``).join(', ');
   assert.ok(flat.includes(keys(GALLERY_CAPTION_STYLE_KEYS)), 'the 15 caption styles, in the gallery order');
   assert.ok(flat.includes(keys(HEADLINE_STYLE_KEYS)), 'the 6 headline styles');
-  assert.match(doc, /"font": "Anton"` now draws as `boldkeys`/);
+  assert.match(doc, /`migratedFrom: 1`/);
+  assert.match(doc, /font Anton → boldkeys/);
+  assert.match(doc, /hook → 3 s title plate/);
   assert.match(doc, /styles\.jpg/);
   assert.match(doc, /tile=5x3/);
   assert.equal(GALLERY_CAPTION_STYLE_KEYS.length, 15);
@@ -521,6 +525,54 @@ test('legacyView (until the render reads v2): the v1 fields the render reads, fr
   assert.equal(legacyView({ ...defaultBrand('x'), logo: null, headline: null }).hook, false);
   const round = legacyView(migrateV1(defaultBrandV1('x')));
   assert.deepEqual(round, defaultBrandV1('x'));
+});
+
+test('a converted v1 kit loads with migratedFrom 1 and notes saying what changed; nothing is written', async () => {
+  const home = tempHome();
+  const anton = writeKit(home, 'anton', { ...defaultBrandV1('anton'), font: 'Anton' });
+  const plain = writeKit(home, 'plain', { ...defaultBrandV1('plain'), hook: false });
+  const both = [readFileSync(anton), readFileSync(plain)];
+  const a = await loadBrand('anton');
+  assert.equal(a.migratedFrom, 1);
+  assert.deepEqual(a.notes, ['font Anton → boldkeys', 'hook → 3 s title plate']);
+  const p = await loadBrand('plain');
+  assert.equal(p.migratedFrom, 1);
+  assert.deepEqual(p.notes, []);
+  assert.deepEqual([readFileSync(anton), readFileSync(plain)], both);
+  assert.equal(JSON.parse(readFileSync(anton, 'utf8')).migratedFrom, undefined);
+});
+
+test('a native v2 kit has no marker, and a native boldkeys kit looks different from a migrated Anton one', async () => {
+  const home = tempHome();
+  await saveBrand(mk({ captions: { style: 'boldkeys' } }));
+  const native = await loadBrand('mine');
+  assert.equal('migratedFrom' in native, false);
+  assert.equal('notes' in native, false);
+  writeKit(home, 'anton', { ...defaultBrandV1('anton'), font: 'Anton' });
+  assert.equal((await loadBrand('anton')).captions.style, 'boldkeys');
+  assert.equal((await loadBrand('anton')).migratedFrom, 1);
+});
+
+test('after saveBrand of a loaded v1 kit the marker is gone, on disk and on the next load', async () => {
+  const home = tempHome();
+  writeKit(home, 'anton', { ...defaultBrandV1('anton'), font: 'Anton' });
+  const loaded = await loadBrand('anton');
+  assert.equal(loaded.migratedFrom, 1);
+  await saveBrand(loaded);
+  const disk = JSON.parse(readFileSync(join(home, 'brands', 'anton', 'brand.json'), 'utf8'));
+  assert.deepEqual(Object.keys(disk), ['version', 'name', 'ratio', 'captions', 'headline', 'logo']);
+  const again = await loadBrand('anton');
+  assert.equal('migratedFrom' in again, false);
+  assert.equal('notes' in again, false);
+  assert.equal(again.captions.style, 'boldkeys');
+});
+
+test('a kit file from a newer skill (version 3) says so instead of "damaged"', async () => {
+  const home = tempHome();
+  writeKit(home, 'future', { ...defaultBrand('future'), version: 3 });
+  await assert.rejects(loadBrand('future'), (e) => /newer boqo skill/.test(e.message) && /version 3/.test(e.message) && !/damaged/.test(e.message));
+  writeKit(home, 'odd', { ...defaultBrand('odd'), version: 'x' });
+  await assert.rejects(loadBrand('odd'), /is damaged/);
 });
 
 // ---- CLI ----
@@ -581,7 +633,16 @@ test('CLI: save of a v1 kit file writes v2, and show of an untouched v1 kit answ
   r = run(home, ['show', 'untouched']);
   assert.equal(r.json.brand.version, 2);
   assert.equal(r.json.brand.captions.style, 'karaoke');
+  assert.equal(r.json.brand.migratedFrom, 1);
+  assert.deepEqual(r.json.brand.notes, ['hook → 3 s title plate']);
   assert.deepEqual(readFileSync(file), before);
+  // saving what show printed (marker and all) writes a clean v2 kit
+  const shown = join(d, 'shown.json');
+  writeFileSync(shown, JSON.stringify(r.json.brand));
+  r = run(home, ['save', shown]);
+  assert.equal(r.status, 0, JSON.stringify(r.json));
+  assert.equal('migratedFrom' in r.json.brand, false);
+  assert.equal('migratedFrom' in JSON.parse(readFileSync(file, 'utf8')), false);
 });
 
 test('CLI: failures exit 1 with {"error"}', () => {

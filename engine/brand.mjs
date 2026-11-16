@@ -200,6 +200,15 @@ export function migrateV1(v1) {
   return v1ToV2(r.brand);
 }
 
+// What a v1 kit's conversion changed that the person would see: an Anton kit now draws as a hosted style, a hook is a
+// 3 s title plate.
+function migrationNotes(v1) {
+  const notes = [];
+  if (v1.font === 'Anton' && ANTON_STYLE) notes.push(`font Anton → ${ANTON_STYLE}`);
+  if (v1.hook !== false) notes.push('hook → 3 s title plate'); // v1's hook defaults to on
+  return notes;
+}
+
 // A kit file with no "version" is v1 when it has any v1-only key.
 function isV1(b) {
   if (b.version === 1) return true;
@@ -351,7 +360,9 @@ function logoFileName(src) {
 // Saves the kit and, when logoSrc (a local path) is given, copies the logo in as
 // logo.png / logo.jpg. Returns the kit folder. The first kit saved becomes the default.
 export async function saveBrand(b, logoSrc) {
-  const v = validateBrand(b);
+  // the marker a load of a converted v1 kit adds is not part of the kit: saving drops it
+  const { migratedFrom, notes, ...kit } = isObj(b) ? b : {};
+  const v = validateBrand(isObj(b) ? kit : b);
   if (!v.ok) throw new Error(`invalid brand: ${v.errors.join('; ')}`);
   const brand = v.brand;
   const dir = kitDir(brand.name);
@@ -434,9 +445,17 @@ export async function loadBrand(name) {
     throw new Error(`brand kit "${n}" is damaged: brand.json is not valid JSON`);
   }
   if (!isObj(raw)) throw new Error(`brand kit "${n}" is damaged: brand.json is not an object`);
+  if (typeof raw.version === 'number' && raw.version > BRAND_VERSION) {
+    throw new Error(`brand kit "${n}" was made by a newer boqo skill (version ${raw.version}): update this skill to use it`);
+  }
   const v = validateBrand({ ...raw, name: n });
   if (!v.ok) throw new Error(`brand kit "${n}" is damaged: ${v.errors.join('; ')}`);
   const brand = v.brand;
+  if (isV1(raw)) {
+    // a converted v1 kit says so; nothing is written, and saveBrand drops the marker
+    brand.migratedFrom = 1;
+    brand.notes = migrationNotes(raw);
+  }
   if (brand.logo?.file != null) {
     const abs = join(kitDir(n), basename(brand.logo.file));
     if (!(await exists(abs))) {

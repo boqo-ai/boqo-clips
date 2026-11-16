@@ -25,6 +25,11 @@ import {
 import { buildEmphasisSet, captionDisplayText, captionText, emphasisKey } from '../engine/boqo/caption-words.mjs';
 import { DEFAULT_CAPTION_STYLE, assTime, buildAss, buildCaptions, captionLines, escapeText, scaleCaptionStyle } from '../engine/boqo/captions.mjs';
 import { glowTags, lineEntrance, markerEvent, opacityTags, popTags, shadowTags, wordEntrance } from '../engine/boqo/caption-effects.mjs';
+import { cutSecFromShots } from '../engine/boqo/caption-cuts.mjs';
+import {
+  BUNDLED_FACES, DEFAULT_OUTPUT, DEFAULT_TEMPLATE_CAPTIONS, FONTS_DIR, captionsAss, captionsTrack, emphasisForWords, filterPath,
+  fontFallbacks, subtitlesFilter, tolerantKey,
+} from '../engine/captions.mjs';
 import { toolEnv } from '../engine/env.mjs';
 import { expectGolden } from './helpers/golden.mjs';
 
@@ -196,6 +201,240 @@ test('the brand caption block and applyCaptionOverrides match boqo, from the Def
       }),
     })),
   }, TOL0);
+});
+
+test('the skill\'s caption track is boqo\'s: words through the window and cuts, the brand\'s style, buildCaptions (golden caption-track)', () => {
+  const i = input('caption-track');
+  expectGolden('caption-track', i.scenarios.map((s) => {
+    const t = captionsTrack({
+      words: i.words[s.words], clipStart: s.startSec, clipEnd: s.endSec, cuts: s.cuts, sceneCuts: s.sceneCuts,
+      emphasis: s.emphasis, brandCaptions: s.brandCaptions, output: s.output,
+    });
+    return { name: s.name, words: t.words, result: { ass: t.ass, overflowGroups: t.overflowGroups, emphasisMatched: t.emphasisMatched, fallbackUsed: t.fallbackUsed } };
+  }), TOL0);
+});
+
+// ---- the skill's own: the default kit, emphasis tolerance, the Cyrillic face ---------------------------------------
+
+const SRC = input('caption-track');
+const EN = SRC.words.en;
+const RU = SRC.words.ru;
+const WIN = { clipStart: 99.9, clipEnd: 105.2 };
+const styleLine = (ass) => ass.split('\n').find((l) => l.startsWith('Style: '))?.slice('Style: '.length).split(',');
+
+test('the default kit is boqo\'s Default template: Punch, #E900FA keywords, centred at 0.7, 9:16', () => {
+  assert.deepEqual({ ...DEFAULT_TEMPLATE_CAPTIONS, accentColours: [...DEFAULT_TEMPLATE_CAPTIONS.accentColours] }, { style: 'punch', accentColours: ['#E900FA'], positionFraction: 0.7 });
+  assert.deepEqual(DEFAULT_OUTPUT, { width: 1080, height: 1920 });
+  const t = captionsTrack({ words: EN, ...WIN, emphasis: ['rockets'] });
+  assert.equal(t.preset.key, BRAND_CAPTION_KEY);
+  assert.equal(t.preset.fontName, 'Oswald');
+  assert.equal(t.preset.centreFraction, 0.7);
+  assert.deepEqual(t.preset.accentColours, ['#E900FA']);
+  assert.equal(t.ass, captionsAss({ words: EN, ...WIN, emphasis: ['rockets'], brandCaptions: DEFAULT_TEMPLATE_CAPTIONS, output: { width: 1080, height: 1920 } }));
+  assert.match(t.ass, /PlayResX: 1080\nPlayResY: 1920/);
+  assert.equal(styleLine(t.ass)[1], 'Oswald');
+  // Every style resolves by family: no embedded [Fonts] section, and every face named is a bundled one.
+  for (const key of GALLERY_CAPTION_STYLE_KEYS) {
+    const ass = captionsAss({ words: EN, ...WIN, emphasis: ['rockets', 'coming'], brandCaptions: { style: key } });
+    assert.ok(!ass.includes('[Fonts]'), key);
+    const faces = [styleLine(ass)[1], ...[...ass.matchAll(/\\fn([^\\}]+)/g)].map((m) => m[1])];
+    for (const f of faces) assert.ok(BUNDLED_FACES[f], `${key}: ${f} is bundled`);
+  }
+  // The skill's `{ w, s, e }` words read the same as hosted's `{ word, start, end }`.
+  const skillWords = EN.map((x) => ({ w: x.word, s: x.start, e: x.end }));
+  assert.equal(captionsAss({ words: skillWords, ...WIN, cuts: [{ start: 3.55, end: 4.35 }] }), captionsAss({ words: EN, ...WIN, cuts: [{ start: 3.55, end: 4.35 }] }));
+});
+
+test('emphasis words match the clip\'s words through case, punctuation and quote marks; hosted\'s exact matches are untouched', () => {
+  const words = [{ word: 'Rockets,' }, { word: 'didn’t' }, { word: '"Really?"' }, { word: 'can\'t' }];
+  assert.deepEqual(emphasisForWords(['rockets', "didn't", '\'really\'', 'nowhere'], words), ['rockets', "didn't", '\'really\'', 'nowhere', 'didn’t']);
+  assert.deepEqual(emphasisForWords(['CAN’T'], words), ['CAN’T', "can't"]);
+  assert.equal(emphasisForWords(null, words), null);
+  assert.deepEqual(emphasisForWords([], words), []);
+  assert.equal(tolerantKey('“Didn’t”'), tolerantKey("didn't"));
+  assert.equal(tolerantKey('Ｒｏｃｋｅｔｓ'), 'rockets');
+  // On a clip: a sanitised spelling ("didn’t" asked as "didn't") highlights what hosted's matcher alone would not.
+  const curly = EN.map((w) => (w.word === "didn't" ? { ...w, word: 'didn’t' } : w));
+  const bare = buildCaptions(captionsTrack({ words: curly, ...WIN }).words, captionsTrack({ words: curly, ...WIN }).preset, DEFAULT_OUTPUT, [], ["didn't"]);
+  const tolerant = captionsTrack({ words: curly, ...WIN, emphasis: ["didn't"] });
+  assert.equal(bare.emphasisMatched, 0);
+  assert.equal(tolerant.emphasisMatched, 1);
+  // The Default template has one accent, so its keyword shows as the spoken colour; a two-colour brand shows it as the key colour.
+  const two = captionsTrack({ words: curly, ...WIN, emphasis: ["didn't"], brandCaptions: { style: 'karaoke', accentColours: ['#F8F800', '#00F020'] } });
+  assert.match(two.ass, /\{\\c&H20F000&\\fscx128\\fscy128\}DIDN’T/);
+});
+
+test('a Cyrillic clip\'s style resolves to its covering face; Latin keeps the style\'s own', () => {
+  const ru = (brandCaptions) => captionsTrack({ words: RU, ...WIN, emphasis: ['ракеты'], brandCaptions });
+  // Comic draws Bangers, which has no Cyrillic: the clip is drawn in Montserrat ExtraBold, at its own Bold flag.
+  const comic = ru({ style: 'comic' });
+  assert.equal(comic.fallbackUsed, true);
+  assert.deepEqual([styleLine(comic.ass)[1], styleLine(comic.ass)[6]], ['Montserrat ExtraBold', '-1']);
+  assert.equal(coveringFace('Bangers', RU.map((w) => w.word)), 'Montserrat ExtraBold');
+  // Bold Keys: Poppins Black and its Anton key face both fall back; the key words switch to Oswald, never Anton.
+  const boldkeys = ru({ style: 'boldkeys' });
+  assert.equal(boldkeys.fallbackUsed, true);
+  assert.equal(styleLine(boldkeys.ass)[1], 'Montserrat ExtraBold');
+  assert.match(boldkeys.ass, /\\fnOswald\\fs\d+\\b1/);
+  assert.doesNotMatch(boldkeys.ass, /Anton|Poppins/);
+  // Punch (the Default template) draws Oswald, which covers Cyrillic: no fallback.
+  const punch = ru(undefined);
+  assert.equal(punch.fallbackUsed, false);
+  assert.equal(styleLine(punch.ass)[1], 'Oswald');
+  assert.match(punch.ass, /РАКЕТЫ/);
+  // The same style on Latin text keeps Bangers.
+  const latin = captionsTrack({ words: EN, ...WIN, brandCaptions: { style: 'comic' } });
+  assert.equal(latin.fallbackUsed, false);
+  assert.equal(styleLine(latin.ass)[1], 'Bangers');
+});
+
+test('captionsTrack refuses a malformed call with the cause, and a brand block that does not parse', () => {
+  assert.throws(() => captionsTrack({ words: EN, clipStart: 5, clipEnd: 5 }), /clipStart < clipEnd/);
+  assert.throws(() => captionsTrack({ words: 'x', ...WIN }), /words must be an array/);
+  assert.throws(() => captionsTrack({ words: [{ w: 'a', s: 'x', e: 1 }], ...WIN }), /words\[0\]/);
+  assert.throws(() => captionsTrack({ words: EN, ...WIN, cuts: [{ start: 2, end: 1 }] }), /cuts must be/);
+  assert.throws(() => captionsTrack({ words: EN, ...WIN, emphasis: 'rockets' }), /emphasis must be/);
+  assert.throws(() => captionsTrack({ words: EN, ...WIN, output: { width: 1080.5, height: 1920 } }), /whole pixels/);
+  assert.throws(() => captionsTrack({ words: EN, ...WIN, brandCaptions: { positionFraction: 0.95 } }), /positionFraction/);
+  // A style this build does not know reads as absent (zod .catch, as hosted): karaoke under the brand key.
+  assert.equal(captionsTrack({ words: EN, ...WIN, brandCaptions: { style: 'sparkle' } }).preset.fontName, 'Montserrat ExtraBold');
+  // A resolved preset passed in is drawn as it is (the stream panels' adjusted style).
+  const own = { ...resolveCaptionStyle('punch'), centreFraction: 0.4 };
+  assert.equal(captionsTrack({ words: EN, ...WIN, preset: own }).ass, buildCaptions(captionsTrack({ words: EN, ...WIN }).words, own, DEFAULT_OUTPUT, [], null).ass);
+  assert.deepEqual(cutSecFromShots([{ startSec: 0 }, { startSec: 1.62 }, { startSec: 4 }]), [1.62, 4]);
+});
+
+// ---- the bundled fonts ------------------------------------------------------------------------------------------
+
+function fontNames(buf) {
+  const tables = {};
+  for (let k = 0, n = buf.readUInt16BE(4); k < n; k++) tables[buf.toString('latin1', 12 + k * 16, 16 + k * 16)] = buf.readUInt32BE(12 + k * 16 + 8);
+  const at = tables.name;
+  const strings = at + buf.readUInt16BE(at + 4);
+  const names = {};
+  for (let k = 0, n = buf.readUInt16BE(at + 2); k < n; k++) {
+    const o = at + 6 + k * 12;
+    if (buf.readUInt16BE(o) !== 3) continue;
+    const off = strings + buf.readUInt16BE(o + 10);
+    names[buf.readUInt16BE(o + 6)] = Buffer.from(buf.subarray(off, off + buf.readUInt16BE(o + 8))).swap16().toString('utf16le');
+  }
+  return { family: names[1], postscript: names[6], weight: buf.readUInt16BE(tables['OS/2'] + 4), hasFvar: 'fvar' in tables };
+}
+
+test('every caption face is bundled once, by its family, with its licence, and each file is the one SOURCES.md lists', () => {
+  assert.deepEqual(Object.keys(BUNDLED_FACES).sort(), Object.keys(CAPTION_FACES).sort());
+  assert.deepEqual([...CAPTION_FONTS].sort(), Object.keys(CAPTION_FACES).sort());
+  const sources = readFileSync(join(FONTS_DIR, 'SOURCES.md'), 'utf8');
+  const shaOf = (file) => new RegExp(`^- \`${file.replace(/[.[\]]/g, '\\$&')}\` ([0-9a-f]{64})$`, 'm').exec(sources)?.[1];
+  for (const [family, f] of Object.entries(BUNDLED_FACES)) {
+    const buf = readFileSync(join(FONTS_DIR, f.file));
+    const n = fontNames(buf);
+    assert.equal(n.family === family || `${n.family}` === family, true, `${f.file}: family ${n.family}, not ${family}`);
+    assert.equal(n.postscript, f.postscript, f.file);
+    assert.equal(n.hasFvar, false, `${f.file}: a static face (libass registers only a variable font's default instance from fontsdir)`);
+    assert.ok(existsSync(join(FONTS_DIR, f.license)), `${f.file}: licence ${f.license}`);
+    assert.equal(createHash('sha256').update(buf).digest('hex'), shaOf(f.file), `${f.file}: sha256 as SOURCES.md lists`);
+    assert.equal(createHash('sha256').update(readFileSync(join(FONTS_DIR, f.license))).digest('hex'), shaOf(f.license), `${f.license}: sha256`);
+  }
+  // One face per family in the folder: a second file of a family would make libass's choice depend on load order.
+  const fontFiles = readdirSync(FONTS_DIR).filter((f) => /\.(ttf|otf)$/i.test(f)).sort();
+  assert.deepEqual(fontFiles, Object.values(BUNDLED_FACES).map((f) => f.file).sort());
+  // The two static copies carry the variable font's default-instance weight, which makes libass embolden them as it
+  // emboldens the named instances in boqo's image (scripts/fonts/static_instance.py).
+  assert.equal(fontNames(readFileSync(join(FONTS_DIR, 'Montserrat-ExtraBold.ttf'))).weight, 100);
+  assert.equal(fontNames(readFileSync(join(FONTS_DIR, 'Oswald-Bold.ttf'))).weight, 400);
+});
+
+test('filterPath escapes a path for both filtergraph levels; subtitlesFilter names the ASS and the fonts dir', () => {
+  assert.equal(filterPath('C:\\Users\\Jo Doe\\fonts'), 'C\\\\:/Users/Jo Doe/fonts');
+  assert.equal(filterPath("/home/o'brien/a,b;[c]"), "/home/o\\\\\\'brien/a\\,b\\;\\[c\\]");
+  assert.equal(filterPath('/plain/path'), '/plain/path');
+  assert.equal(subtitlesFilter('/a/c.ass', '/f d'), 'subtitles=filename=/a/c.ass:fontsdir=/f d');
+});
+
+test('fontFallbacks: a bundled face is clean; a system face, a wrong instance, an unknown family or a missing glyph is not', () => {
+  const ok = '[Parsed_subtitles_0 @ 0x1] fontselect: (Oswald, 700, 0) -> Oswald-Bold, 0, Oswald-Bold';
+  assert.deepEqual(fontFallbacks(['Using font provider fontconfig', ok, "Loading font file 'x/Oswald-Bold.ttf'"].join('\n')), []);
+  const bad = [
+    'fontselect: (Montserrat ExtraBold, 700, 0) -> /usr/share/fonts/truetype/noto/NotoSans-Bold.ttf, 0, NotoSans-Bold',
+    'fontselect: (Oswald, 700, 0) -> Oswald-Regular, 0, Oswald-Regular',
+    // A system copy of the same face: another file (perhaps another version), even under the bundled name.
+    'fontselect: (Oswald, 700, 0) -> /Library/Fonts/Oswald-Bold.ttf, 0, Oswald-Bold',
+    'fontselect: (Comic Sans, 400, 0) -> ComicSans, 0, ComicSans',
+    'Glyph 0x41F not found, selecting one more font for (Anton, 400, 0)',
+    'fontselect: failed to find any fallback with glyph 0x41F for font: (Anton, 400, 0)',
+    "Error opening font: 'x.ttf', 0",
+  ];
+  assert.deepEqual(fontFallbacks([ok, ...bad].join('\r\n')), bad);
+});
+
+// ---- a real burn: libass, fontsdir, a path with a space ------------------------------------------------------------
+
+const ffmpeg = (args) => spawnSync('ffmpeg', args, { encoding: 'utf8', env: toolEnv(), maxBuffer: 64 << 20 });
+const burn = (assPath, fontsDir) => ffmpeg([
+  '-hide_banner', '-nostdin', '-loglevel', 'verbose', '-f', 'lavfi', '-i', 'color=c=0x336699:s=1080x1920:r=5:d=3',
+  '-vf', subtitlesFilter(assPath, fontsDir), '-f', 'null', '-',
+]);
+const selected = (log) => log.split(/\r?\n/).filter((l) => /fontselect:/.test(l)).map((l) => l.replace(/^.*fontselect: /, ''));
+
+test('the punch golden ASS burns through fontsdir in a folder with a space: exit 0, every face from the folder', () => {
+  const root = mkdtempSync(join(tmpdir(), 'boqo captions '));
+  try {
+    const fonts = join(root, 'bundled fonts');
+    cpSync(FONTS_DIR, fonts, { recursive: true });
+    const assPath = join(root, 'punch golden.ass');
+    writeFileSync(assPath, golden('build-ass').gallery.find((g) => g.key === 'punch').result.ass);
+    const r = burn(assPath, fonts);
+    assert.equal(r.status, 0, r.stderr.slice(-3000));
+    assert.deepEqual(fontFallbacks(r.stderr), [], selected(r.stderr).join('\n'));
+    // Positive control: the detector saw libass load the face from the folder and select it.
+    assert.match(r.stderr, /Loading font file '[^']*bundled fonts[\\/]Oswald-Bold\.ttf'/);
+    assert.ok(selected(r.stderr).some((l) => l.startsWith('(Oswald, 700, 0) -> Oswald-Bold')), selected(r.stderr).join('\n'));
+    // Negative control: a family the folder lacks is drawn from somewhere else, silently, and the detector says so.
+    const missing = join(root, 'missing face.ass');
+    writeFileSync(missing, golden('build-ass').gallery.find((g) => g.key === 'punch').result.ass.replace('Style: boqo,Oswald,', 'Style: boqo,Nonexistent Face,'));
+    const m = burn(missing, fonts);
+    assert.equal(m.status, 0, 'libass draws it anyway');
+    assert.ok(fontFallbacks(m.stderr).length > 0, `a missing family must show: ${selected(m.stderr).join('\n')}`);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('every bundled face burns from fontsdir at its Bold flag, and a Cyrillic clip in a Latin-only style draws with no missing glyph', () => {
+  const root = mkdtempSync(join(tmpdir(), 'boqo faces '));
+  try {
+    // A folder with a space and filtergraph specials in its name (a colon too, where the OS allows one).
+    const fonts = join(root, process.platform === 'win32' ? "it's, [odd]; fonts" : "it's, [odd]; fo:nts");
+    mkdirSync(fonts);
+    cpSync(FONTS_DIR, fonts, { recursive: true });
+    const styles = Object.entries(CAPTION_FACES).map(([name, f], k) =>
+      `Style: f${k},${name},80,&H00FFFFFF,&H00000000,&H00000000,${f.bold},0,0,0,100,100,0,0,1,4,0,5,0,0,0,1`);
+    const lines = Object.entries(CAPTION_FACES).map(([name, f], k) =>
+      `Dialogue: 0,0:00:00.00,0:00:02.00,f${k},,0,0,0,,{\\pos(540,${100 + k * 160})}HAMBURG 0123 you've${f.fallback === null ? ' ПРИВЕТ' : ''}`);
+    const ass = ['[Script Info]', 'ScriptType: v4.00+', 'PlayResX: 1080', 'PlayResY: 1920', 'WrapStyle: 2', '', '[V4+ Styles]',
+      'Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding',
+      ...styles, '', '[Events]', 'Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text', ...lines, ''].join('\n');
+    const all = join(root, 'all faces.ass');
+    writeFileSync(all, ass);
+    const r = burn(all, fonts);
+    assert.equal(r.status, 0, r.stderr.slice(-3000));
+    assert.deepEqual(fontFallbacks(r.stderr), [], selected(r.stderr).join('\n'));
+    for (const [name, f] of Object.entries(BUNDLED_FACES)) {
+      assert.ok(selected(r.stderr).some((l) => l.startsWith(`(${name}, `) && l.includes(`-> ${f.postscript},`)), `${name} -> ${f.postscript}:\n${selected(r.stderr).join('\n')}`);
+    }
+    // The Cyrillic clip in Comic and in Bold Keys: drawn in the covering faces, every glyph found.
+    for (const style of ['comic', 'boldkeys']) {
+      const cyr = join(root, `cyrillic ${style}.ass`);
+      writeFileSync(cyr, captionsAss({ words: RU, ...WIN, emphasis: ['ракеты', 'этого'], brandCaptions: { style } }));
+      const c = burn(cyr, fonts);
+      assert.equal(c.status, 0, c.stderr.slice(-3000));
+      assert.deepEqual(fontFallbacks(c.stderr), [], `${style}:\n${selected(c.stderr).join('\n')}`);
+      assert.ok(selected(c.stderr).some((l) => l.startsWith('(Montserrat ExtraBold, 700, 0) -> Montserrat-ExtraBold')), style);
+    }
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
 });
 
 // ---- A11's parameters, against this task's copies ------------------------------------------------------------------

@@ -35,7 +35,7 @@ The image installs `Montserrat[wght].ttf` and `Oswald[wght].ttf`, variable fonts
 every named instance and libass draws `Montserrat_800wght` and `Oswald_700wght`. Through `fontsdir` libass registers
 only a variable font's default instance (measured 2026-11-16, BtbN ffmpeg 8.1): "Montserrat ExtraBold" found no face
 and fell back to a system font, and "Oswald" Bold drew `Oswald-Regular`, a silent wrong face either way. So the two
-named instances are bundled as static fonts, made from the pinned files by `scripts/fonts/static_instance.py`
+named instances are bundled as static fonts, made from the pinned files by `scripts/fonts/static_instance.py` (in boqo-clips)
 (fontTools 4.60.1: the instance at wght 800 and wght 700, names from STAT, and the default instance's OS/2 weight and
 style bits, which make libass embolden them as it emboldens the named instances in the image). OFL 1.1 allows
 modified versions under the same licence; neither family declares a Reserved Font Name. Input sha256:
@@ -48,7 +48,7 @@ modified versions under the same licence; neither family declares a Reserved Fon
 - Every downloaded font file is byte-identical to the file of the same name in the worker image: sha256 compared
   with the files copied out of `boqo-render:latest` (built 2026-10-06) and `boqo-render:stream-panels` (built
   2026-11-10), which agree with each other.
-- `scripts/fonts/verify-in-image.sh` renders four lines per face at its `CAPTION_FACES` Bold flag inside the image,
+- `scripts/fonts/verify-in-image.sh` (in boqo-clips) renders four lines per face at its `CAPTION_FACES` Bold flag inside the image,
   with the image's own fonts and then through `fontsdir` with this folder (the image's files moved away): 2026-11-16,
   nine faces pixel-identical; Oswald 169 pixels differ and Montserrat ExtraBold 17,004 (anti-aliasing; every line's
   left and right ink edges agree to the pixel, Montserrat's bottom by one row on one line; ink sums 1.0000 and 1.0017).

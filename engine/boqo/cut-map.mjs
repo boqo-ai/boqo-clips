@@ -1,7 +1,8 @@
 // ported from boqo-ai/boqo packages/core/src/cut-map.ts @ bcc9d99cc; keep in step (scripts/boqo-drift.mjs)
 // Only the part the render stage needs is ported (constants, guardSpans, mergeSpans, capSpans, cutsDurationSec,
-// keptSegments, and the two time maps windowToClipSec and clipToWindowSec, which the stream panels read needs);
-// planCuts, mergeCutLists, clipDurationSec, wordsThroughCuts and cutsFromRow are not copied.
+// keptSegments, the two time maps windowToClipSec and clipToWindowSec, which the stream panels read needs, and
+// wordsThroughCuts, which moves a clip's caption words onto the cut timeline as captionWordsFor does);
+// planCuts, mergeCutLists, clipDurationSec and cutsFromRow are not copied.
 // Cut import: CUT_REASONS is `export const CUT_REASONS = { overLimit: "over-limit" } as const;` in packages/core/src/audio-enhance.ts, a module of schemas and strings this skill has no use for.
 export const CUT_REASONS = { overLimit: "over-limit" };
 
@@ -132,4 +133,43 @@ export function clipToWindowSec(t, cuts) {
     windowSec += cut.end - cut.start;
   }
   return windowSec;
+}
+
+/**
+ * Words with window times, moved onto the clip's timeline.
+ *
+ * A word wholly inside a cut is dropped: it is not in the file. A word
+ * straddling a cut's edge is clamped to the side that stays, so its caption
+ * never shows during footage it is not in. A word spanning a whole cut keeps
+ * both ends, and shrinks by the cut. Every other field is carried over.
+ *
+ * With no cuts this returns the words unchanged -- the same objects, in a new
+ * array -- which is what makes every existing clip's captions byte-identical.
+ */
+export function wordsThroughCuts(words, cuts) {
+  if (cuts.length === 0) return [...words];
+  const out = [];
+  for (const word of words) {
+    let start = word.start;
+    let end = word.end;
+    let inside = false;
+    for (const cut of cuts) {
+      if (cut.start <= start && end <= cut.end) {
+        inside = true;
+        break;
+      }
+      if (cut.start < start && start < cut.end) start = cut.end;
+      if (cut.start < end && end < cut.end) end = cut.start;
+    }
+    if (inside) continue;
+    const clipStart = windowToClipSec(start, cuts);
+    const clipEnd = windowToClipSec(end, cuts);
+    // Unreachable for sorted, disjoint cuts -- the clamps above leave neither
+    // end strictly inside one -- but the map's own type is nullable, so this
+    // drops such a word rather than asserting the case away. No test can reach
+    // it with cuts `planCuts` would return.
+    if (clipStart === null || clipEnd === null) continue;
+    out.push({ ...word, start: clipStart, end: clipEnd });
+  }
+  return out;
 }

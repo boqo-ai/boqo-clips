@@ -104,12 +104,14 @@ test('renderClip: 20 s of testsrc2 and a tone become a 1080x1920 h264/aac 48 kHz
   assert.ok(existsSync(r.thumb));
   const th = probe(r.thumb).streams[0];
   assert.deepEqual([th.width, th.height], [1080, 1920]);
-  assert.equal(r.notes.length, 1);
+  assert.equal(r.notes.length, 2);
   assert.match(r.notes[0], /^Faces unavailable, every shot is Fit: .*onnxruntime-node is not installed/);
+  assert.equal(r.notes[1], 'No logo: the kit has none.', 'a kit with no logo says so, as SKILL.md promises');
   assert.deepEqual(r.layouts, ['fit']);
   assert.deepEqual(r.cuts, []);
   assert.deepEqual(r.window, { start: 0, end: 20 });
   assert.equal(existsSync(join(run, 'render', 'clip-01')), false, 'the work folder is gone');
+  assert.equal(existsSync(join(run, 'render')), false, 'and so is the empty render folder it was in');
 });
 
 test('renderClip: a downloaded section renders the clip on the section\'s own clock: the same window, pause cut and length as the whole video', { skip }, async () => {

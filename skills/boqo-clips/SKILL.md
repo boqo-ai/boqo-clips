@@ -72,13 +72,15 @@ local file, below. `/boqo-clips render …`: Render more, below.
    ```sh
    node "$HOME/.boqo-clips/tools/fetch.mjs" info "<url>" --dir "<run>"
    node "$HOME/.boqo-clips/tools/fetch.mjs" comments "<url>" --dir "<run>"
-   rm -f "<run>/transcript-language.txt"
    ```
-   `info` gives `{id, title, duration, captions}` with no video download; with captions it writes `<run>/words.json`
-   and `<run>/segments.json`. `comments` is best effort (`{"comments": null}` is fine) and runs now, before
-   `select-request`, which reads `<run>/comments.json` once and without it the viewers' reactions are left out. The
-   `rm` clears a language file an earlier run left. Tell the person, in one line, the title and the length.
-3. **No captions** (`"captions": "none"`). `"transcript": "boqo"` in `config.json`: the boqo transcript, below.
+   `info` gives `{id, title, duration, captions}` with no video download; with captions it writes `<run>/words.json`,
+   `<run>/segments.json` and `<run>/transcript-language.txt` (the language of the track it took, which
+   `select-request` prints). It takes only a track of the video's own speech, never a translation, so a video whose
+   speech has no such track says `"captions": "none"` with a `note`. `comments` is best effort (`{"comments": null}`
+   is fine) and runs now, before `select-request`, which reads `<run>/comments.json` once and without it the viewers'
+   reactions are left out. Tell the person, in one line, the title and the length.
+3. **No captions** (`"captions": "none"`; with a `note`, say it in one line: the captions were not the video's own
+   speech, so whisper is the way). `"transcript": "boqo"` in `config.json`: the boqo transcript, below.
    Otherwise (and after a boqo failure) local whisper:
    run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`. When its `whisper` or `whisper-model` check
    fails, tell the person the video has no captions and local transcription is not set up, give that check's hint,
@@ -177,7 +179,7 @@ local file, below. `/boqo-clips render …`: Render more, below.
     `<run>/render.json` gets `{"rendered": [{n, file, thumb, seconds, notes}], "failed": [{n, error}]}`, and each
     rendered row of `clips.json` says `rendered: true`. A failed clip does not stop the others; its work folder stays
     at `<run>/render/clip-<nn>/` (`<nn>` its number, two digits). Say each `n` and error in one line, and where that
-    folder is. A render takes about as long as the clips run, and longer on a laptop. A note is a step that was
+    folder is. A render takes about 1–2× the clips' length, longer on a laptop. A note is a step that was
     skipped, not a failure (no face model: every shot framed to fit; no logo): give the person the notes that
     matter, one line each, with no file paths. Framing, captions, headline, logo, pauses and loudness are boqo's own
     defaults, from the kit.

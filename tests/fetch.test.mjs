@@ -9,6 +9,7 @@ import { pickReactions } from '../engine/boqo/viewer-reactions.mjs';
 import {
   FORMAT,
   captionArgs,
+  captionPlan,
   captionTrackOf,
   commentArgs,
   commentsFromInfo,
@@ -97,24 +98,89 @@ test('captionTrackOf: a different -orig for another language', () => {
   assert.deepEqual(captionTrackOf(info), { kind: 'auto', lang: 'fr-orig' });
 });
 
-test('captionTrackOf: any manual track beats a foreign auto one; live chat is not a track', () => {
-  assert.deepEqual(
+test('captionTrackOf: a manual track in another language is a translation, so never taken; live chat is not a track', () => {
+  assert.equal(
     captionTrackOf({
       language: 'ru',
       subtitles: { live_chat: [{ ext: 'json' }], ja: [{ ext: 'json3' }] },
       automatic_captions: { 'en-orig': [{ ext: 'json3' }] },
     }),
-    { kind: 'manual', lang: 'ja' },
+    null,
   );
+  assert.deepEqual(captionTrackOf({ language: 'ru', subtitles: { live_chat: [{}], ru: [{}], ja: [{}] } }), { kind: 'manual', lang: 'ru' });
 });
 
-test('captionTrackOf: language unknown gives en-orig, then any -orig, then a manual track', () => {
-  assert.deepEqual(captionTrackOf({ automatic_captions: { 'en-orig': [{}], 'de-orig': [{}] } }), { kind: 'auto', lang: 'en-orig' });
+test('captionTrackOf: language unknown takes the one -orig track, else the one manual track, else none', () => {
   assert.deepEqual(captionTrackOf({ automatic_captions: { 'de-orig': [{}] } }), { kind: 'auto', lang: 'de-orig' });
+  // two -orig tracks and no language: which is the speech cannot be told
+  assert.equal(captionTrackOf({ automatic_captions: { 'en-orig': [{}], 'de-orig': [{}] } }), null);
   // an -orig track is the speech as spoken, word-timed: it beats a manual one
   assert.deepEqual(captionTrackOf({ subtitles: { en: [{}] }, automatic_captions: { 'en-orig': [{}] } }), { kind: 'auto', lang: 'en-orig' });
   assert.deepEqual(captionTrackOf({ subtitles: { en: [{}] }, automatic_captions: { 'de-orig': [{}] } }), { kind: 'auto', lang: 'de-orig' });
   assert.deepEqual(captionTrackOf({ subtitles: { en: [{}] }, automatic_captions: { fr: [{}] } }), { kind: 'manual', lang: 'en' });
+  assert.equal(captionTrackOf({ subtitles: { en: [{}], de: [{}] } }), null, 'two manual tracks, no language');
+});
+
+// Shaped like the Urdu-speech vivo review (yt-dlp -J, 2026-11-16): `language` ur, automatic tracks en-orig, en, ur and
+// hi-orig and no ur-orig. Every URL there is a plain object with `url`; only the translations carry `tlang`.
+const URDU = (over = {}) => ({
+  language: 'ur',
+  subtitles: {},
+  automatic_captions: {
+    ab: [{ ext: 'json3', url: 'https://x/api/timedtext?kind=asr&lang=en&variant=timing-optimized&tlang=ab&fmt=json3' }],
+    'en-orig': [{ ext: 'json3', url: 'https://x/api/timedtext?kind=asr&lang=en&variant=timing-optimized&fmt=json3' }],
+    en: [
+      { ext: 'json3', url: 'https://x/api/timedtext?kind=asr&lang=en&variant=timing-optimized&fmt=json3' },
+      { ext: 'json3', url: 'https://x/api/timedtext?kind=asr&lang=hi&variant=gemini&tlang=en&fmt=json3' },
+    ],
+    ur: [
+      { ext: 'json3', url: 'https://x/api/timedtext?kind=asr&lang=en&variant=timing-optimized&tlang=ur&fmt=json3' },
+      { ext: 'json3', url: 'https://x/api/timedtext?kind=asr&lang=hi&variant=gemini&tlang=ur&fmt=json3' },
+    ],
+    'hi-orig': [{ ext: 'json3', url: 'https://x/api/timedtext?kind=asr&lang=hi&variant=gemini&fmt=json3' }],
+  },
+  ...over,
+});
+
+test('captionTrackOf: Urdu speech takes hi-orig (the same spoken language), never the English en-orig', () => {
+  assert.deepEqual(captionTrackOf(URDU()), { kind: 'auto', lang: 'hi-orig' });
+});
+
+test('captionTrackOf: a video in a language with no -orig of its own or a cognate has no usable track, so whisper', () => {
+  const info = URDU();
+  delete info.automatic_captions['hi-orig'];
+  assert.equal(captionTrackOf(info), null);
+  const plan = captionPlan(info);
+  assert.equal(plan.track, null);
+  assert.match(plan.note, /translation/);
+  // the video really is English: en-orig is its speech
+  assert.deepEqual(captionTrackOf({ ...URDU(), language: 'en' }), { kind: 'auto', lang: 'en-orig' });
+});
+
+test('captionTrackOf: an Urdu manual track wins over nothing, and the exact -orig over a cognate', () => {
+  assert.deepEqual(captionTrackOf({ ...URDU(), automatic_captions: {}, subtitles: { ur: [{ ext: 'json3' }], en: [{ ext: 'json3' }] } }), { kind: 'manual', lang: 'ur' });
+  const both = URDU();
+  both.automatic_captions['ur-orig'] = [{ ext: 'json3', url: 'https://x/api/timedtext?kind=asr&lang=ur&fmt=json3' }];
+  assert.deepEqual(captionTrackOf(both), { kind: 'auto', lang: 'ur-orig' });
+});
+
+test('captionTrackOf: a track every URL of which is a tlang translation is never the speech', () => {
+  const info = { language: 'fr', automatic_captions: { 'fr-orig': [{ ext: 'json3', url: 'https://x/t?lang=en&tlang=fr&fmt=json3' }] } };
+  assert.equal(captionTrackOf(info), null);
+});
+
+test('captionPlan: no note when the video has no captions at all', () => {
+  assert.deepEqual(captionPlan({ language: 'en' }), { track: null, note: null });
+});
+
+test('captionTrackOf: a normal English video (en-orig, en, manual en, translations) takes en-orig', () => {
+  const t = (q) => [{ ext: 'json3', url: `https://x/t?kind=asr&lang=en&${q}fmt=json3` }];
+  const info = {
+    language: 'en',
+    subtitles: { en: [{ ext: 'json3', url: 'https://x/t?lang=en&fmt=json3' }] },
+    automatic_captions: { 'en-orig': t(''), en: t(''), de: t('tlang=de&'), ur: t('tlang=ur&') },
+  };
+  assert.deepEqual(captionTrackOf(info), { kind: 'auto', lang: 'en-orig' });
 });
 
 test('captionTrackOf: no captions at all is null', () => {
@@ -493,5 +559,47 @@ test('live: info then two sections', { skip: !LIVE, timeout: 900_000 }, () => {
   const out = JSON.parse(sec.stdout.trim());
   assert.equal(out.files.length, 2);
   for (const f of out.files) assert.ok(existsSync(f.file));
+  rmSync(dir, { recursive: true });
+});
+
+test('fetchInfo on the Urdu case asks for hi-orig and records the transcript language hi', async () => {
+  const dir = tmp();
+  writeFileSync(join(dir, 'transcript-language.txt'), 'xx\n');
+  const info = { id: 'u', title: 'Urdu', duration: 600, ...URDU() };
+  const json3 = { events: [{ tStartMs: 1000, dDurationMs: 2000, segs: [{ utf8: 'ek' }, { utf8: ' do', tOffsetMs: 500 }] }] };
+  const calls = [];
+  const run = fakeRun({
+    ytdlp: async (args) => {
+      calls.push(args);
+      if (args.includes('-J')) return { stdout: JSON.stringify(info), stderr: '' };
+      writeFileSync(join(dir, 'captions.hi-orig.json3'), JSON.stringify(json3));
+      return { stdout: '', stderr: '' };
+    },
+  });
+  const out = await fetchInfo({ url: URL1, dir, run });
+  assert.equal(out.captions, 'auto');
+  assert.equal(calls[1][calls[1].indexOf('--sub-langs') + 1], 'hi-orig');
+  assert.equal(readFileSync(join(dir, 'transcript-language.txt'), 'utf8'), 'hi\n');
+  rmSync(dir, { recursive: true });
+});
+
+test('fetchInfo with only a translation: captions none with a one-line note, no old language file left', async () => {
+  const dir = tmp();
+  writeFileSync(join(dir, 'transcript-language.txt'), 'hi\n');
+  const info = URDU();
+  delete info.automatic_captions['hi-orig'];
+  const calls = [];
+  const run = fakeRun({
+    ytdlp: async (args) => {
+      calls.push(args);
+      return { stdout: JSON.stringify({ id: 'u', title: 'Urdu', duration: 600, ...info }), stderr: '' };
+    },
+  });
+  const out = await fetchInfo({ url: URL1, dir, run });
+  assert.equal(out.captions, 'none');
+  assert.equal(calls.length, 1, 'no caption download');
+  assert.match(out.note, /translation/);
+  assert.equal(out.note.includes('\n'), false);
+  assert.equal(existsSync(join(dir, 'transcript-language.txt')), false);
   rmSync(dir, { recursive: true });
 });

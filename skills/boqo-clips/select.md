@@ -67,6 +67,8 @@ Emphasis words: the words within the clip that a viewer should catch, which the 
 Return clips ordered by score, highest first, and do not return two clips covering the same moment.
 <!-- rubric ends -->
 
+The check keeps at most the cap in `clips.json` (the target × 1.25, never more than 120) and drops the lowest scores beyond it as `over_cap`: a clip returned past the cap is left out, so the target stays a floor to reach and the cap is where the check stops.
+
 ## Where the words show
 
 The kit chooses what the clip's title plate says, `headline.source` (`brand.mjs show` prints it). The Default kit's

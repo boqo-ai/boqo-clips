@@ -736,3 +736,57 @@ test('findPhrase: unsorted, blank, punctuation-only and malformed words are tole
 test('findPhrase: a phrase with no words throws', () => {
   assert.throws(() => findPhrase(LINE, ' ... ', 262, 60), /no words/)
 })
+
+test('wordsFromJson3 joins a punctuation-only token to the word before it, keeping s of the first and e of the last', () => {
+  // shaped like the track of the vivo review: "," "." "%" arrive as their own words
+  const seg = (utf8, tOffsetMs) => (tOffsetMs === undefined ? { utf8 } : { utf8, tOffsetMs })
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 3000, segs: [seg('series'), seg(',', 300), seg(' and', 450), seg(' 90', 700), seg('%', 900), seg(' done', 1100), seg('.', 1400)] },
+    ],
+  }
+  const out = wordsFromJson3(j)
+  assert.deepEqual(out.map((x) => x.w), ['series,', 'and', '90%', 'done.'])
+  assert.equal(out[0].s, 0)
+  assert.equal(out[0].e, 0.45)
+  assert.equal(out[2].s, 0.7)
+  assert.equal(out[2].e, 1.1)
+  for (const x of out) assert.ok(x.e > x.s)
+})
+
+test('wordsFromJson3: a leading punctuation token joins the next word, and a run of them joins once', () => {
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 3000, segs: [{ utf8: '¿' }, { utf8: ' que', tOffsetMs: 200 }, { utf8: '?', tOffsetMs: 500 }, { utf8: '!', tOffsetMs: 700 }, { utf8: ' costs', tOffsetMs: 900 }, { utf8: ' $', tOffsetMs: 1200 }, { utf8: '5', tOffsetMs: 1300 }] },
+    ],
+  }
+  const out = wordsFromJson3(j)
+  assert.deepEqual(out.map((x) => x.w), ['¿que?!', 'costs', '$5'])
+  assert.equal(out[0].s, 0)
+})
+
+test('wordsFromJson3: only punctuation means no words; a word with a digit or a letter is never joined', () => {
+  assert.deepEqual(wordsFromJson3({ events: [{ tStartMs: 0, dDurationMs: 500, segs: [{ utf8: ',' }, { utf8: '.', tOffsetMs: 200 }] }] }), [])
+  const out = wordsFromJson3({ events: [{ tStartMs: 0, dDurationMs: 2000, segs: [{ utf8: 'a' }, { utf8: ' 5', tOffsetMs: 300 }, { utf8: ' é', tOffsetMs: 600 }] }] })
+  assert.deepEqual(out.map((x) => x.w), ['a', '5', 'é'])
+})
+
+test('wordsFromWhisper joins a punctuation-only item to the word before it', () => {
+  const item = (text, from, to) => ({ offsets: { from, to }, text })
+  const j = { transcription: [item(' Hello', 0, 400), item(',', 400, 450), item(' world', 500, 900), item('.', 900, 950), item(' (', 1000, 1050), item('Hi', 1100, 1300)] }
+  const out = wordsFromWhisper(j)
+  assert.deepEqual(out.map((x) => x.w), ['Hello,', 'world.', '(Hi'])
+  assert.equal(out[0].s, 0)
+  assert.ok(out[0].e >= 0.45 - 1e-9)
+  assert.equal(out[1].e, 0.95)
+})
+
+test('transcriptMarkdown and segments read the joined words (no detached comma)', async () => {
+  const { segmentsFromWords } = await import('../engine/segments.mjs')
+  const words = wordsFromJson3({
+    events: [{ tStartMs: 0, dDurationMs: 3000, segs: [{ utf8: 'yes' }, { utf8: ',', tOffsetMs: 300 }, { utf8: ' it', tOffsetMs: 500 }, { utf8: ' is', tOffsetMs: 800 }, { utf8: '.', tOffsetMs: 1100 }] }],
+  })
+  const segs = segmentsFromWords(words, { source: 'auto' })
+  assert.ok(segs.every((s) => !/ [,.]/.test(s.text)), JSON.stringify(segs))
+  assert.match(transcriptMarkdown(words).text, /yes, it is\./)
+})

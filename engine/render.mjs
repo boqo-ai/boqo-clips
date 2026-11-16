@@ -26,7 +26,7 @@
 // the default runs the real ffmpeg and ffprobe with stdin closed (a reused output path can never wait on ffmpeg's
 // overwrite prompt) and no output-size ceiling (the scene pass prints about 75 bytes a frame).
 import { spawn } from 'node:child_process';
-import { copyFile, mkdir, open, rename, rm, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, open, rename, rmdir, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { FONTS_DIR, DEFAULT_OUTPUT, brandCaptionPreset, captionsTrack, subtitlesFilter } from './captions.mjs';
 import { toolEnv } from './env.mjs';
@@ -260,7 +260,8 @@ export async function renderClip({
     }
 
     let logo = null;
-    if (brand.logo && brand.logo.file) {
+    if (!(brand.logo && brand.logo.file)) notes.push('No logo: the kit has none.');
+    else {
       const kind = await logoKind(brand.logo.file);
       // A file that starts like a PNG and is damaged after: decoded once here, because looped as input #1 of the
       // encode (`-loop 1`) it kept the encode from ending (measured 2026-11-16, BtbN ffmpeg 8.1, a PNG signature then
@@ -340,6 +341,8 @@ export async function renderClip({
     // The clip is in place: a work folder that will not go away (Windows keeps a just-closed file busy, EBUSY) is
     // left behind, and the clip still counts.
     await rm(work, { recursive: true, force: true, maxRetries: 3, retryDelay: 200 }).catch(() => {});
+    // rmdir only removes an empty folder: another clip's (a failed one's) work folder keeps `render/`.
+    await rmdir(join(run, WORK_DIR)).catch(() => {});
     const round = (x) => Math.round(x * 1000) / 1000;
     return {
       file,

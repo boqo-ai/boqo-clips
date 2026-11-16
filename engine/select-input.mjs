@@ -1,3 +1,8 @@
+// ported from boqo-ai/boqo apps/worker/src/ingest/metadata.ts @ bcc9d99cc; keep in step (scripts/boqo-drift.mjs)
+// ported from boqo-ai/boqo apps/worker/src/select/handler.ts @ bcc9d99cc; keep in step (scripts/boqo-drift.mjs)
+// A partial hand port, not a strip: heatmapOf, descriptionOf and chaptersOf are
+// parseHeatmap, parseDescription and parseChapters; buildSelectionInput is the
+// `input` half of loadSelectionInput. The goldens compare its output with boqo's.
 // The SelectionInput of one selection request, built from what the skill has:
 // a yt-dlp info dict (null for a local file; only an `extractor_key` of Youtube gives the video context), the run's sentence segments,
 // the viewer comments (or null), and the person's choices. It derives every
@@ -44,7 +49,9 @@ const isRecord = (v) => typeof v === 'object' && v !== null;
 const NO_CAP = Number.MAX_SAFE_INTEGER;
 const cleanSegment = (s) => {
   if (!isRecord(s) || typeof s.text !== 'string') throw new Error('a transcript segment has no text');
-  return { ...s, text: sanitiseQuote(s.text, NO_CAP) };
+  // A hand-edited file may hold a string or nothing as the speaker: only a whole number leads a line.
+  const speaker = Number.isInteger(s.speaker) ? s.speaker : null;
+  return { ...s, speaker, text: sanitiseQuote(s.text, NO_CAP) };
 };
 
 // A BCP-47-shaped tag (the transcript language is printed in the request), else English.

@@ -1,0 +1,6106 @@
+{
+ "cases": [
+  {
+   "name": "inverted",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 100,
+     "endSec": 100,
+     "title": "clip 100-100",
+     "hook": "hook for clip 100-100",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 120,
+     "endSec": 110,
+     "title": "clip 120-110",
+     "hook": "hook for clip 120-110",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 150,
+     "endSec": 180,
+     "title": "fine",
+     "hook": "hook for fine",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "too-short",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 10,
+     "endSec": 20,
+     "title": "clip 10-20",
+     "hook": "hook for clip 10-20",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 40,
+     "endSec": 55,
+     "title": "exactly 15 s",
+     "hook": "hook for exactly 15 s",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "too-long",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 0,
+     "endSec": 100,
+     "title": "clip 0-100",
+     "hook": "hook for clip 0-100",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 100,
+     "endSec": 190,
+     "title": "exactly 90 s",
+     "hook": "hook for exactly 90 s",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "overlap-30-dropped",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 0,
+     "endSec": 50,
+     "title": "high",
+     "hook": "hook for high",
+     "score": 90,
+     "hookScore": 90,
+     "flowScore": 90,
+     "standaloneScore": 90,
+     "valueScore": 90,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 35,
+     "endSec": 85,
+     "title": "low, 30% over",
+     "hook": "hook for low, 30% over",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "overlap-20-kept",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 100,
+     "endSec": 150,
+     "title": "high",
+     "hook": "hook for high",
+     "score": 90,
+     "hookScore": 90,
+     "flowScore": 90,
+     "standaloneScore": 90,
+     "valueScore": 90,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 140,
+     "endSec": 190,
+     "title": "low, 20% over",
+     "hook": "hook for low, 20% over",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "overlap-25-kept",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 0,
+     "endSec": 40,
+     "title": "clip 0-40",
+     "hook": "hook for clip 0-40",
+     "score": 90,
+     "hookScore": 90,
+     "flowScore": 90,
+     "standaloneScore": 90,
+     "valueScore": 90,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 30,
+     "endSec": 70,
+     "title": "clip 30-70",
+     "hook": "hook for clip 30-70",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "over-cap",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 2,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 0,
+     "endSec": 30,
+     "title": "clip 0-30",
+     "hook": "hook for clip 0-30",
+     "score": 60,
+     "hookScore": 60,
+     "flowScore": 60,
+     "standaloneScore": 60,
+     "valueScore": 60,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 40,
+     "endSec": 70,
+     "title": "clip 40-70",
+     "hook": "hook for clip 40-70",
+     "score": 95,
+     "hookScore": 95,
+     "flowScore": 95,
+     "standaloneScore": 95,
+     "valueScore": 95,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 80,
+     "endSec": 110,
+     "title": "clip 80-110",
+     "hook": "hook for clip 80-110",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 120,
+     "endSec": 150,
+     "title": "clip 120-150",
+     "hook": "hook for clip 120-150",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 160,
+     "endSec": 190,
+     "title": "clip 160-190",
+     "hook": "hook for clip 160-190",
+     "score": 99,
+     "hookScore": 99,
+     "flowScore": 99,
+     "standaloneScore": 99,
+     "valueScore": 99,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "over-cap-reported-as-overlap",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 1,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 0,
+     "endSec": 40,
+     "title": "clip 0-40",
+     "hook": "hook for clip 0-40",
+     "score": 90,
+     "hookScore": 90,
+     "flowScore": 90,
+     "standaloneScore": 90,
+     "valueScore": 90,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 20,
+     "endSec": 60,
+     "title": "clip 20-60",
+     "hook": "hook for clip 20-60",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 100,
+     "endSec": 140,
+     "title": "clip 100-140",
+     "hook": "hook for clip 100-140",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "below-threshold",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 50,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 0,
+     "endSec": 30,
+     "title": "clip 0-30",
+     "hook": "hook for clip 0-30",
+     "score": 40,
+     "hookScore": 40,
+     "flowScore": 40,
+     "standaloneScore": 40,
+     "valueScore": 40,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 40,
+     "endSec": 70,
+     "title": "at the threshold",
+     "hook": "hook for at the threshold",
+     "score": 50,
+     "hookScore": 50,
+     "flowScore": 50,
+     "standaloneScore": 50,
+     "valueScore": 50,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "snaps-to-edges",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 7.4,
+     "endSec": 41.2,
+     "title": "inside segments",
+     "hook": "hook for inside segments",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 52.5,
+     "endSec": 97.6,
+     "title": "tie goes to the earlier edge",
+     "hook": "hook for tie goes to the earlier edge",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "score-tie-by-start",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 1,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 100,
+     "endSec": 140,
+     "title": "later",
+     "hook": "hook for later",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 0,
+     "endSec": 40,
+     "title": "earlier",
+     "hook": "hook for earlier",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "transcript-order",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 200,
+     "endSec": 230,
+     "title": "clip 200-230",
+     "hook": "hook for clip 200-230",
+     "score": 99,
+     "hookScore": 99,
+     "flowScore": 99,
+     "standaloneScore": 99,
+     "valueScore": 99,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 0,
+     "endSec": 30,
+     "title": "clip 0-30",
+     "hook": "hook for clip 0-30",
+     "score": 50,
+     "hookScore": 50,
+     "flowScore": 50,
+     "standaloneScore": 50,
+     "valueScore": 50,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 100,
+     "endSec": 130,
+     "title": "clip 100-130",
+     "hook": "hook for clip 100-130",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "no-segments",
+   "segments": [],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90
+   },
+   "candidates": [
+    {
+     "startSec": 0,
+     "endSec": 30,
+     "title": "clip 0-30",
+     "hook": "hook for clip 0-30",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "seed-window",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 15,
+    "hardMaxSec": 90,
+    "seedWindow": {
+     "startSec": 0,
+     "endSec": 40
+    }
+   },
+   "candidates": [
+    {
+     "startSec": 5,
+     "endSec": 45,
+     "title": "three quarters in the seed",
+     "hook": "hook for three quarters in the seed",
+     "score": 90,
+     "hookScore": 90,
+     "flowScore": 90,
+     "standaloneScore": 90,
+     "valueScore": 90,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 30,
+     "endSec": 70,
+     "title": "a quarter in the seed",
+     "hook": "hook for a quarter in the seed",
+     "score": 80,
+     "hookScore": 80,
+     "flowScore": 80,
+     "standaloneScore": 80,
+     "valueScore": 80,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "length-preset-band",
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    }
+   ],
+   "opts": {
+    "minScore": 0,
+    "maxClips": 50,
+    "hardMinSec": 20,
+    "hardMaxSec": 75
+   },
+   "candidates": [
+    {
+     "startSec": 0,
+     "endSec": 15,
+     "title": "clip 0-15",
+     "hook": "hook for clip 0-15",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 20,
+     "endSec": 100,
+     "title": "clip 20-100",
+     "hook": "hook for clip 20-100",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    },
+    {
+     "startSec": 110,
+     "endSec": 150,
+     "title": "inside",
+     "hook": "hook for inside",
+     "score": 70,
+     "hookScore": 70,
+     "flowScore": 70,
+     "standaloneScore": 70,
+     "valueScore": 70,
+     "emphasisWords": [
+      "alpha"
+     ],
+     "standalone": {
+      "standsAlone": true,
+      "claim": "a claim",
+      "bridgeFromSec": null,
+      "contextLine": null
+     },
+     "titleAlternatives": [
+      "one",
+      "two"
+     ]
+    }
+   ]
+  }
+ ]
+}

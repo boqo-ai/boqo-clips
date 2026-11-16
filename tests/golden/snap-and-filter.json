@@ -1,0 +1,1405 @@
+[
+  {
+    "name": "inverted",
+    "result": {
+      "kept": [
+        {
+          "startSec": 150,
+          "endSec": 180,
+          "title": "fine",
+          "hook": "hook for fine",
+          "score": 70,
+          "hookScore": 70,
+          "flowScore": 70,
+          "standaloneScore": 70,
+          "valueScore": 70,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 100,
+            "endSec": 100,
+            "title": "clip 100-100",
+            "hook": "hook for clip 100-100",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 100,
+            "endSec": 100,
+            "title": "clip 100-100",
+            "hook": "hook for clip 100-100",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "inverted"
+        },
+        {
+          "candidate": {
+            "startSec": 120,
+            "endSec": 110,
+            "title": "clip 120-110",
+            "hook": "hook for clip 120-110",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 120,
+            "endSec": 110,
+            "title": "clip 120-110",
+            "hook": "hook for clip 120-110",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "inverted"
+        }
+      ]
+    }
+  },
+  {
+    "name": "too-short",
+    "result": {
+      "kept": [
+        {
+          "startSec": 40,
+          "endSec": 55,
+          "title": "exactly 15 s",
+          "hook": "hook for exactly 15 s",
+          "score": 80,
+          "hookScore": 80,
+          "flowScore": 80,
+          "standaloneScore": 80,
+          "valueScore": 80,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 10,
+            "endSec": 20,
+            "title": "clip 10-20",
+            "hook": "hook for clip 10-20",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 10,
+            "endSec": 20,
+            "title": "clip 10-20",
+            "hook": "hook for clip 10-20",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "too_short"
+        }
+      ]
+    }
+  },
+  {
+    "name": "too-long",
+    "result": {
+      "kept": [
+        {
+          "startSec": 100,
+          "endSec": 190,
+          "title": "exactly 90 s",
+          "hook": "hook for exactly 90 s",
+          "score": 80,
+          "hookScore": 80,
+          "flowScore": 80,
+          "standaloneScore": 80,
+          "valueScore": 80,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 0,
+            "endSec": 100,
+            "title": "clip 0-100",
+            "hook": "hook for clip 0-100",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 0,
+            "endSec": 100,
+            "title": "clip 0-100",
+            "hook": "hook for clip 0-100",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "too_long"
+        }
+      ]
+    }
+  },
+  {
+    "name": "overlap-30-dropped",
+    "result": {
+      "kept": [
+        {
+          "startSec": 0,
+          "endSec": 50,
+          "title": "high",
+          "hook": "hook for high",
+          "score": 90,
+          "hookScore": 90,
+          "flowScore": 90,
+          "standaloneScore": 90,
+          "valueScore": 90,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 35,
+            "endSec": 85,
+            "title": "low, 30% over",
+            "hook": "hook for low, 30% over",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 35,
+            "endSec": 85,
+            "title": "low, 30% over",
+            "hook": "hook for low, 30% over",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "overlaps"
+        }
+      ]
+    }
+  },
+  {
+    "name": "overlap-20-kept",
+    "result": {
+      "kept": [
+        {
+          "startSec": 100,
+          "endSec": 150,
+          "title": "high",
+          "hook": "hook for high",
+          "score": 90,
+          "hookScore": 90,
+          "flowScore": 90,
+          "standaloneScore": 90,
+          "valueScore": 90,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        },
+        {
+          "startSec": 140,
+          "endSec": 190,
+          "title": "low, 20% over",
+          "hook": "hook for low, 20% over",
+          "score": 80,
+          "hookScore": 80,
+          "flowScore": 80,
+          "standaloneScore": 80,
+          "valueScore": 80,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": []
+    }
+  },
+  {
+    "name": "overlap-25-kept",
+    "result": {
+      "kept": [
+        {
+          "startSec": 0,
+          "endSec": 40,
+          "title": "clip 0-40",
+          "hook": "hook for clip 0-40",
+          "score": 90,
+          "hookScore": 90,
+          "flowScore": 90,
+          "standaloneScore": 90,
+          "valueScore": 90,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        },
+        {
+          "startSec": 30,
+          "endSec": 70,
+          "title": "clip 30-70",
+          "hook": "hook for clip 30-70",
+          "score": 80,
+          "hookScore": 80,
+          "flowScore": 80,
+          "standaloneScore": 80,
+          "valueScore": 80,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": []
+    }
+  },
+  {
+    "name": "over-cap",
+    "result": {
+      "kept": [
+        {
+          "startSec": 40,
+          "endSec": 70,
+          "title": "clip 40-70",
+          "hook": "hook for clip 40-70",
+          "score": 95,
+          "hookScore": 95,
+          "flowScore": 95,
+          "standaloneScore": 95,
+          "valueScore": 95,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        },
+        {
+          "startSec": 160,
+          "endSec": 190,
+          "title": "clip 160-190",
+          "hook": "hook for clip 160-190",
+          "score": 99,
+          "hookScore": 99,
+          "flowScore": 99,
+          "standaloneScore": 99,
+          "valueScore": 99,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 80,
+            "endSec": 110,
+            "title": "clip 80-110",
+            "hook": "hook for clip 80-110",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 80,
+            "endSec": 110,
+            "title": "clip 80-110",
+            "hook": "hook for clip 80-110",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "over_cap"
+        },
+        {
+          "candidate": {
+            "startSec": 120,
+            "endSec": 150,
+            "title": "clip 120-150",
+            "hook": "hook for clip 120-150",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 120,
+            "endSec": 150,
+            "title": "clip 120-150",
+            "hook": "hook for clip 120-150",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "over_cap"
+        },
+        {
+          "candidate": {
+            "startSec": 0,
+            "endSec": 30,
+            "title": "clip 0-30",
+            "hook": "hook for clip 0-30",
+            "score": 60,
+            "hookScore": 60,
+            "flowScore": 60,
+            "standaloneScore": 60,
+            "valueScore": 60,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 0,
+            "endSec": 30,
+            "title": "clip 0-30",
+            "hook": "hook for clip 0-30",
+            "score": 60,
+            "hookScore": 60,
+            "flowScore": 60,
+            "standaloneScore": 60,
+            "valueScore": 60,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "over_cap"
+        }
+      ]
+    }
+  },
+  {
+    "name": "over-cap-reported-as-overlap",
+    "result": {
+      "kept": [
+        {
+          "startSec": 0,
+          "endSec": 40,
+          "title": "clip 0-40",
+          "hook": "hook for clip 0-40",
+          "score": 90,
+          "hookScore": 90,
+          "flowScore": 90,
+          "standaloneScore": 90,
+          "valueScore": 90,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 20,
+            "endSec": 60,
+            "title": "clip 20-60",
+            "hook": "hook for clip 20-60",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 20,
+            "endSec": 60,
+            "title": "clip 20-60",
+            "hook": "hook for clip 20-60",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "overlaps"
+        },
+        {
+          "candidate": {
+            "startSec": 100,
+            "endSec": 140,
+            "title": "clip 100-140",
+            "hook": "hook for clip 100-140",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 100,
+            "endSec": 140,
+            "title": "clip 100-140",
+            "hook": "hook for clip 100-140",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "over_cap"
+        }
+      ]
+    }
+  },
+  {
+    "name": "below-threshold",
+    "result": {
+      "kept": [
+        {
+          "startSec": 40,
+          "endSec": 70,
+          "title": "at the threshold",
+          "hook": "hook for at the threshold",
+          "score": 50,
+          "hookScore": 50,
+          "flowScore": 50,
+          "standaloneScore": 50,
+          "valueScore": 50,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 0,
+            "endSec": 30,
+            "title": "clip 0-30",
+            "hook": "hook for clip 0-30",
+            "score": 40,
+            "hookScore": 40,
+            "flowScore": 40,
+            "standaloneScore": 40,
+            "valueScore": 40,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 0,
+            "endSec": 30,
+            "title": "clip 0-30",
+            "hook": "hook for clip 0-30",
+            "score": 40,
+            "hookScore": 40,
+            "flowScore": 40,
+            "standaloneScore": 40,
+            "valueScore": 40,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "below_threshold"
+        }
+      ]
+    }
+  },
+  {
+    "name": "snaps-to-edges",
+    "result": {
+      "kept": [
+        {
+          "startSec": 5,
+          "endSec": 40,
+          "title": "inside segments",
+          "hook": "hook for inside segments",
+          "score": 70,
+          "hookScore": 70,
+          "flowScore": 70,
+          "standaloneScore": 70,
+          "valueScore": 70,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        },
+        {
+          "startSec": 50,
+          "endSec": 100,
+          "title": "tie goes to the earlier edge",
+          "hook": "hook for tie goes to the earlier edge",
+          "score": 70,
+          "hookScore": 70,
+          "flowScore": 70,
+          "standaloneScore": 70,
+          "valueScore": 70,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": []
+    }
+  },
+  {
+    "name": "score-tie-by-start",
+    "result": {
+      "kept": [
+        {
+          "startSec": 0,
+          "endSec": 40,
+          "title": "earlier",
+          "hook": "hook for earlier",
+          "score": 80,
+          "hookScore": 80,
+          "flowScore": 80,
+          "standaloneScore": 80,
+          "valueScore": 80,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 100,
+            "endSec": 140,
+            "title": "later",
+            "hook": "hook for later",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 100,
+            "endSec": 140,
+            "title": "later",
+            "hook": "hook for later",
+            "score": 80,
+            "hookScore": 80,
+            "flowScore": 80,
+            "standaloneScore": 80,
+            "valueScore": 80,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "over_cap"
+        }
+      ]
+    }
+  },
+  {
+    "name": "transcript-order",
+    "result": {
+      "kept": [
+        {
+          "startSec": 0,
+          "endSec": 30,
+          "title": "clip 0-30",
+          "hook": "hook for clip 0-30",
+          "score": 50,
+          "hookScore": 50,
+          "flowScore": 50,
+          "standaloneScore": 50,
+          "valueScore": 50,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        },
+        {
+          "startSec": 100,
+          "endSec": 130,
+          "title": "clip 100-130",
+          "hook": "hook for clip 100-130",
+          "score": 70,
+          "hookScore": 70,
+          "flowScore": 70,
+          "standaloneScore": 70,
+          "valueScore": 70,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        },
+        {
+          "startSec": 200,
+          "endSec": 230,
+          "title": "clip 200-230",
+          "hook": "hook for clip 200-230",
+          "score": 99,
+          "hookScore": 99,
+          "flowScore": 99,
+          "standaloneScore": 99,
+          "valueScore": 99,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": []
+    }
+  },
+  {
+    "name": "no-segments",
+    "result": {
+      "kept": [],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 0,
+            "endSec": 30,
+            "title": "clip 0-30",
+            "hook": "hook for clip 0-30",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": null,
+          "reason": "no_segments"
+        }
+      ]
+    }
+  },
+  {
+    "name": "seed-window",
+    "result": {
+      "kept": [
+        {
+          "startSec": 30,
+          "endSec": 70,
+          "title": "a quarter in the seed",
+          "hook": "hook for a quarter in the seed",
+          "score": 80,
+          "hookScore": 80,
+          "flowScore": 80,
+          "standaloneScore": 80,
+          "valueScore": 80,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 5,
+            "endSec": 45,
+            "title": "three quarters in the seed",
+            "hook": "hook for three quarters in the seed",
+            "score": 90,
+            "hookScore": 90,
+            "flowScore": 90,
+            "standaloneScore": 90,
+            "valueScore": 90,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 5,
+            "endSec": 45,
+            "title": "three quarters in the seed",
+            "hook": "hook for three quarters in the seed",
+            "score": 90,
+            "hookScore": 90,
+            "flowScore": 90,
+            "standaloneScore": 90,
+            "valueScore": 90,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "seed_window"
+        }
+      ]
+    }
+  },
+  {
+    "name": "length-preset-band",
+    "result": {
+      "kept": [
+        {
+          "startSec": 110,
+          "endSec": 150,
+          "title": "inside",
+          "hook": "hook for inside",
+          "score": 70,
+          "hookScore": 70,
+          "flowScore": 70,
+          "standaloneScore": 70,
+          "valueScore": 70,
+          "emphasisWords": [
+            "alpha"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "a claim",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "one",
+            "two"
+          ]
+        }
+      ],
+      "dropped": [
+        {
+          "candidate": {
+            "startSec": 0,
+            "endSec": 15,
+            "title": "clip 0-15",
+            "hook": "hook for clip 0-15",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 0,
+            "endSec": 15,
+            "title": "clip 0-15",
+            "hook": "hook for clip 0-15",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "too_short"
+        },
+        {
+          "candidate": {
+            "startSec": 20,
+            "endSec": 100,
+            "title": "clip 20-100",
+            "hook": "hook for clip 20-100",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "snapped": {
+            "startSec": 20,
+            "endSec": 100,
+            "title": "clip 20-100",
+            "hook": "hook for clip 20-100",
+            "score": 70,
+            "hookScore": 70,
+            "flowScore": 70,
+            "standaloneScore": 70,
+            "valueScore": 70,
+            "emphasisWords": [
+              "alpha"
+            ],
+            "standalone": {
+              "standsAlone": true,
+              "claim": "a claim",
+              "bridgeFromSec": null,
+              "contextLine": null
+            },
+            "titleAlternatives": [
+              "one",
+              "two"
+            ]
+          },
+          "reason": "too_long"
+        }
+      ]
+    }
+  }
+]

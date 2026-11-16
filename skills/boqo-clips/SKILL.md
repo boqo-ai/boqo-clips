@@ -73,13 +73,19 @@ local file, below. `/boqo-clips render …`: Render more, below.
    node "$HOME/.boqo-clips/tools/fetch.mjs" info "<url>" --dir "<run>"
    node "$HOME/.boqo-clips/tools/fetch.mjs" comments "<url>" --dir "<run>"
    ```
-   `info` gives `{id, title, duration, captions}` with no video download; with captions it writes `<run>/words.json`,
-   `<run>/segments.json` and `<run>/transcript-language.txt` (the language of the track it took, which
-   `select-request` prints). It takes only a track of the video's own speech, never a translation, so a video whose
-   speech has no such track says `"captions": "none"` with a `note`. `comments` is best effort (`{"comments": null}`
-   is fine) and runs now, before `select-request`, which reads `<run>/comments.json` once and without it the viewers'
-   reactions are left out. Tell the person, in one line, the title and the length.
-3. **No captions** (`"captions": "none"`; with a `note`, say it in one line: the captions were not the video's own
+   `info` gives `{id, title, duration, captions}` (`captions` is `manual`, `auto`, `partial` or `none`) with no
+   video download; with captions it writes `<run>/words.json`, `<run>/segments.json`, `<run>/transcript.md` (a
+   readable copy, which nothing in the run reads) and `<run>/transcript-language.txt` (the language of the track it
+   took, which `select-request` prints). It takes only a track of the video's own speech, never a translation, so a
+   video whose speech has no such track says `"captions": "none"` with a `note`. `comments` is best effort
+   (`{"comments": null}` is fine) and runs now, before `select-request`, which reads `<run>/comments.json` once: only comments that carry
+   a timestamp reach the request (hosted's filter), and without the file the viewers' reactions are left out.
+   Tell the person, in one line, the title and the length.
+3. **Partial captions** (`"captions": "partial"` with `gaps`, `[{start, end}]` in seconds): the words are there, so
+   step 4 is next, but the track has no words for a stretch of 40 s or more (another language, or silence). Say so
+   in one line, with the stretches, and offer whisper over the whole video (Rules, with the estimate): on a yes,
+   step 3's whisper below, which replaces `words.json` and `segments.json`; on a no, go on with these captions.
+   **No captions** (`"captions": "none"`; with a `note`, say it in one line: the captions were not the video's own
    speech, so whisper is the way). `"transcript": "boqo"` in `config.json`: the boqo transcript, below.
    Otherwise (and after a boqo failure) local whisper:
    run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`. When its `whisper` or `whisper-model` check
@@ -143,8 +149,8 @@ local file, below. `/boqo-clips render …`: Render more, below.
    ```sh
    node "$HOME/.boqo-clips/tools/select-request.mjs" --run "<run>"
    ```
-   It writes `<run>/select-request.md` and prints `{"target", "segments", "chars"}`. Tell the person, in one line,
-   how many clips it aims for (`target`). The language comes from `info.json`, or from
+   It writes `<run>/select-request.md` and `<run>/select-options.json` (the length band the check reads) and
+   prints `{"target", "segments", "chars"}`. Tell the person, in one line, how many clips it aims for (`target`). The language comes from `info.json`, or from
    `<run>/transcript-language.txt` on the boqo path; `--lang` overrides both.
 6. **Select.** Read `select.md`, then the whole of `<run>/select-request.md` (in pages when it is long), and write
    `<run>/selection.json` once.
@@ -154,9 +160,10 @@ local file, below. `/boqo-clips render …`: Render more, below.
    ```
    - `{"ok": false, "errors": [...]}`: each error is `clips[i].field: what is wrong`, `clips[0]` being the first
      clip. Fix them in `<run>/selection.json` and run the check again.
-   - `{"ok": true, "kept": n, "dropped": {...}}`: `<run>/clips.json` is the run's record, one row for each clip kept,
-     its edges set on sentence edges, with its scores and its replay percentile. `dropped` counts what was left out,
-     by reason. Re-running the check rebuilds the record, and every clip is unrendered again.
+   - `{"ok": true, "kept": n, "dropped": {...}, "dropped_clips": [...]}`: `<run>/clips.json` is the run's record, one
+     row for each clip kept, its edges set on sentence edges, with its scores and its replay percentile. `dropped`
+     counts what was left out, by reason; `dropped_clips` (absent when none) names each, `{clip, start, end, reason}`,
+     `clip` being its place in `selection.json` (1 is the first). Re-running the check rebuilds the record, and every clip is unrendered again.
 8. **Order.** `node "$HOME/.boqo-clips/tools/clips.mjs" order --run "<run>"`: the rows are numbered in boqo's
    Ranked order (clips that fail the stand-alone test last, then the replay percentile, then the score). Clips 1 to
    10 are the ones rendered. Say so in one line when there are more than 10.
@@ -197,11 +204,12 @@ local file, below. `/boqo-clips render …`: Render more, below.
     ```sh
     find "<run>" -maxdepth 1 -type f \( -name 'sec-*' -o -name 'whole.*' -o -name 'audio.*' -o -name '*.part' \
       -o -name '*.part-*' -o -name '*.ytdl' -o -name 'captions.*.json3' -o -name sections.json \
-      -o -name asr.json -o -name render.json -o -name 'upload-*.json' \) -delete
+      -o -name asr.json -o -name transcript.md -o -name render.json -o -name 'upload-*.json' \) -delete
     rm -rf "<run>/stranger" "<run>/panels"
     ```
     Keep `out/`, a failed clip's `render/clip-<nn>/` and the small files (`clips.json`, `selection.json`,
-    `select-request.md`, `segments.json`, `words.json`, `info.json`, `comments.json`): they let you redo a clip or
+    `select-request.md`, `select-options.json`, `segments.json`, `words.json`,
+    `transcript-language.txt`, `info.json`, `comments.json`): they let you redo a clip or
     render more in this chat. A run that stopped half way is cleaned the same way.
 15. **Post**, by `post.md`, the clips in final order.
 16. **Log.** Append one line to `<home>/boqo-clips/runs.md`:
@@ -254,7 +262,7 @@ The cleanup deletes only what the run made. Never move, change or delete the per
 | "I'll read comments after the request" | `select-request` reads `comments.json` once: fetch them first |
 | "I'll write `selection.json` in two goes" | One read of the whole request, one answer |
 | "select-check moved an edge, I'll put it back" | Edges snap to sentence edges on purpose; choose the line you mean |
-| "A ▲ line, so it's a clip" | ▲ is evidence, not an order (`select.md`) |
+| "A `<<< most-replayed region begins >>>` region, so it's a clip" | The marker is evidence, not an order (`select.md`) |
 | "Render all of them, ten is stingy" | 10 by default; the rest on `/boqo-clips render` |
 | "The stranger frames cost time, I'll skip them" | The final order reads them: record each rendered clip's judgment |
 | "The tool failed, I'll write my own ffmpeg line" | Say the error and stop that step |

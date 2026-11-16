@@ -1,0 +1,155 @@
+{
+ "cases": [
+  {
+   "scores": []
+  },
+  {
+   "scores": [
+    {
+     "timeSec": 0,
+     "score": 0
+    }
+   ]
+  },
+  {
+   "scores": [
+    {
+     "timeSec": 0,
+     "score": 0
+    },
+    {
+     "timeSec": 0.04,
+     "score": 0
+    },
+    {
+     "timeSec": 0.08,
+     "score": 0
+    },
+    {
+     "timeSec": 0.12,
+     "score": 0
+    },
+    {
+     "timeSec": 0.16,
+     "score": 0
+    }
+   ]
+  },
+  {
+   "scores": [
+    {
+     "timeSec": 0,
+     "score": 0
+    },
+    {
+     "timeSec": 0.016667,
+     "score": 0
+    },
+    {
+     "timeSec": 0.033334,
+     "score": 0
+    },
+    {
+     "timeSec": 0.066667,
+     "score": 0
+    },
+    {
+     "timeSec": 0.083334,
+     "score": 0
+    },
+    {
+     "timeSec": 0.100001,
+     "score": 0
+    }
+   ]
+  },
+  {
+   "scores": [
+    {
+     "timeSec": 0,
+     "score": 0
+    },
+    {
+     "timeSec": 0.04,
+     "score": 0
+    },
+    {
+     "timeSec": 0.12,
+     "score": 0
+    },
+    {
+     "timeSec": 0.16,
+     "score": 0
+    },
+    {
+     "timeSec": 0.28,
+     "score": 0
+    },
+    {
+     "timeSec": 0.32,
+     "score": 0
+    },
+    {
+     "timeSec": 0.36,
+     "score": 0
+    }
+   ]
+  },
+  {
+   "scores": [
+    {
+     "timeSec": 1,
+     "score": 0
+    },
+    {
+     "timeSec": 1,
+     "score": 0
+    },
+    {
+     "timeSec": 1,
+     "score": 0
+    }
+   ]
+  },
+  {
+   "scores": [
+    {
+     "timeSec": 2,
+     "score": 0
+    },
+    {
+     "timeSec": 1,
+     "score": 0
+    },
+    {
+     "timeSec": 0.5,
+     "score": 0
+    }
+   ]
+  },
+  {
+   "scores": [
+    {
+     "timeSec": 0,
+     "score": 0
+    },
+    {
+     "timeSec": 0.033333,
+     "score": 0
+    },
+    {
+     "timeSec": 0.066667,
+     "score": 0
+    },
+    {
+     "timeSec": 0.1,
+     "score": 0
+    },
+    {
+     "timeSec": 0.166667,
+     "score": 0
+    }
+   ]
+  }
+ ]
+}

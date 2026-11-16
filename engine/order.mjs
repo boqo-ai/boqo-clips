@@ -111,29 +111,57 @@ function filesOf(run, row) {
   return out;
 }
 
-// A file that is mid-move waits as `<its dir>/.order-tmp.<its own name>`, so a crash leaves it findable by name. The journal
-// (`<run>/.order-tmp.journal.json`) lists every move and the phase (1: out of the way, 2: into place), so the next run can
-// put everything back exactly, even when a file already sits where another one used to be.
+// The renames are a plan that is written down first and then carried out to the end, so a crash at any point is finished
+// by the next run instead of undone. A file that is mid-move waits as `<its dir>/.order-tmp.<its own name>`, findable by name.
+// The journal `<run>/.order-tmp.journal.json` holds the moves, the phase (1: out of the way, 2: into place) and the final
+// clips.json text. Every step of finishing it checks the disk first (a temp file is placed once, a record written the same
+// bytes twice), so running it again, or after a crash inside it, changes nothing it already did. The journal and clips.json
+// are written through a temporary name and a rename, so neither is ever half there.
 const TMP = '.order-tmp.';
 const JOURNAL = `${TMP}journal.json`;
 
-function undoJournal(run, rename) {
-  const file = join(run, JOURNAL);
-  let journal;
-  try {
-    journal = JSON.parse(readFileSync(file, 'utf8'));
-  } catch (err) {
-    if (err.code === 'ENOENT') return;
-    throw new Error(`cannot read ${JOURNAL}: ${err.code ?? err.message}`);
-  }
-  const moves = Array.isArray(journal?.moves) ? journal.moves : [];
-  // Phase 2 began with every file waiting in its temp name, so a missing temp file means that move was done: back to the temp name.
-  if (journal.phase === 2) for (const m of moves) if (!existsSync(m.tmp) && existsSync(m.to)) rename(m.to, m.tmp);
-  for (const m of moves) if (existsSync(m.tmp)) rename(m.tmp, m.from);
-  rmSync(file, { force: true });
+function writeAtomic(path, text, rename) {
+  const next = join(dirname(path), `.order-new.${basename(path)}`);
+  writeFileSync(next, text);
+  rename(next, path);
 }
 
-// Temp files with no journal (it was lost): back to the name they carry, unless a different file has taken it.
+// The journal, or null when it is absent, empty, truncated or not a journal at all (restoreByName then does the work).
+function readJournal(run) {
+  let j;
+  try {
+    j = JSON.parse(readFileSync(join(run, JOURNAL), 'utf8'));
+  } catch {
+    return null;
+  }
+  const ok =
+    j && (j.phase === 1 || j.phase === 2) && typeof j.record === 'string' && Array.isArray(j.moves) &&
+    j.moves.every((m) => m && typeof m.from === 'string' && typeof m.tmp === 'string' && typeof m.to === 'string');
+  return ok ? j : null;
+}
+
+// Carry a written plan to the end. Returns the refusals (a target held by a file that is not ours), empty when done.
+function finishJournal(run, journal, { rename, rm }) {
+  const { moves } = journal;
+  if (journal.phase === 1) {
+    // Out of the way. Nothing is placed in phase 1, so a file still at `from` is one that has not moved yet.
+    for (const m of moves) if (existsSync(m.from) && !existsSync(m.tmp)) rename(m.from, m.tmp);
+    writeAtomic(join(run, JOURNAL), JSON.stringify({ ...journal, phase: 2 }), rename);
+  }
+  // Into place. A missing temp file was placed already.
+  const errors = [];
+  for (const m of moves) {
+    if (!existsSync(m.tmp)) continue;
+    if (existsSync(m.to)) errors.push(`${basename(m.to)} is already there; ${basename(m.tmp)} is left from an interrupted order`);
+  }
+  if (errors.length > 0) return errors;
+  for (const m of moves) if (existsSync(m.tmp)) rename(m.tmp, m.to);
+  writeAtomic(join(run, 'clips.json'), journal.record, rename);
+  rm(join(run, JOURNAL));
+  return [];
+}
+
+// Temp files with no usable journal: back to the name they carry, unless a different file has taken it.
 function restoreByName(dirs, rename) {
   const errors = [];
   for (const dir of dirs) {
@@ -157,12 +185,17 @@ function restoreByName(dirs, rename) {
  * Put `<run>/clips.json` in the final order: `n` becomes the place in it (the array follows), and every rendered clip's
  * file (and thumbnail) is renamed to `clip-<nn><ext>` for its new `n`. Two clips that swap are moved through temporary
  * names. Nothing is touched if a file is missing or a target would overwrite a file that is not moving. A run that was
- * interrupted mid-rename is put back first (see the journal above), so every file is under its own name before planning.
- * `rename` is injectable for tests.
+ * interrupted is finished first, to the order it had planned (see the journal above), so every file is under its final
+ * name before this one plans. `rename` and `rm` are injectable for tests.
  * @returns {{ ok: false, errors: string[] } | { ok: true, clips: number, rendered: number, renamed: number }}
  */
-export function reorderRun(run, { rename = renameSync } = {}) {
+export function reorderRun(run, { rename = renameSync, rm = (p) => rmSync(p, { force: true }) } = {}) {
   const file = join(run, 'clips.json');
+  const journal = readJournal(run);
+  if (journal) {
+    const refused = finishJournal(run, journal, { rename, rm });
+    if (refused.length > 0) return { ok: false, errors: refused };
+  }
   let record;
   try {
     record = JSON.parse(readFileSync(file, 'utf8'));
@@ -171,11 +204,13 @@ export function reorderRun(run, { rename = renameSync } = {}) {
   }
   if (!record || !Array.isArray(record.clips)) return { ok: false, errors: ['clips.json has no clips array'] };
 
-  undoJournal(run, rename);
-  const dirs = new Set([run]);
-  for (const row of record.clips) for (const f of filesOf(run, row)) dirs.add(dirname(f.from));
-  const leftover = restoreByName(dirs, rename);
-  if (leftover.length > 0) return { ok: false, errors: leftover };
+  if (!journal) {
+    const dirs = new Set([run]);
+    for (const row of record.clips) for (const f of filesOf(run, row)) dirs.add(dirname(f.from));
+    const leftover = restoreByName(dirs, rename);
+    if (leftover.length > 0) return { ok: false, errors: leftover };
+    if (existsSync(join(run, JOURNAL))) rm(join(run, JOURNAL)); // an unusable one
+  }
 
   const ordered = finalOrder(record.clips);
   const moves = [];
@@ -197,22 +232,21 @@ export function reorderRun(run, { rename = renameSync } = {}) {
   for (const m of moves) if (existsSync(m.to) && !moving.has(m.to)) errors.push(`${basename(m.to)} is already there and is not one of the clips`);
   if (errors.length > 0) return { ok: false, errors };
 
-  // Out of the way first, then into place: a swap never loses a file.
-  const journal = (phase) => writeFileSync(join(run, JOURNAL), JSON.stringify({ phase, moves: moves.map((m) => ({ from: m.from, tmp: m.tmp, to: m.to })) }));
-  if (moves.length > 0) journal(1);
-  for (const m of moves) rename(m.from, m.tmp);
-  if (moves.length > 0) journal(2);
   for (const m of moves) {
-    rename(m.tmp, m.to);
     // the stored path keeps its own folder and separators; only the file name changes
     if (m.field !== null) m.row[m.field] = m.stored.slice(0, m.stored.length - basename(m.stored).length) + m.name;
   }
-
   ordered.forEach((row, i) => {
     row.n = i + 1;
   });
   record.clips = ordered;
-  writeFileSync(file, JSON.stringify(record, null, 2) + '\n');
-  rmSync(join(run, JOURNAL), { force: true });
-  return { ok: true, clips: ordered.length, rendered: ordered.filter((c) => c.rendered === true).length, renamed: moves.length };
+  const text = JSON.stringify(record, null, 2) + '\n';
+  const summary = { ok: true, clips: ordered.length, rendered: ordered.filter((c) => c.rendered === true).length, renamed: moves.length };
+  if (moves.length === 0) {
+    writeAtomic(file, text, rename);
+    return summary;
+  }
+  writeAtomic(join(run, JOURNAL), JSON.stringify({ phase: 1, moves: moves.map((m) => ({ from: m.from, tmp: m.tmp, to: m.to })), record: text }), rename);
+  const refused = finishJournal(run, { phase: 1, moves, record: text }, { rename, rm });
+  return refused.length > 0 ? { ok: false, errors: refused } : summary;
 }

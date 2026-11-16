@@ -33,7 +33,7 @@ function main(argv) {
     try {
       r = reorderRun(run);
     } catch (err) {
-      stop([`order was interrupted (${err.code ?? err.message}); run it again, it puts every file back under its own name first`]);
+      stop([`order was interrupted (${err.code ?? err.message}); run it again, it finishes the interrupted order first`]);
     }
     if (!r.ok) stop(r.errors);
     say(r, 0);

@@ -294,7 +294,8 @@ test('summary prints the lines, one each', () => {
 
 // ---- a crash in the middle of the renames
 
-// Two clips that swap, each with a thumbnail: 4 moves, 8 renames (out, then in).
+// Two clips that swap, each with a thumbnail: 4 moves. The journal is written, the files go out of the way, the journal
+// moves to phase 2, the files go into place, clips.json is replaced, the journal is removed: 11 renames and one removal.
 const swapRun = () =>
   runDir(
     [
@@ -303,51 +304,108 @@ const swapRun = () =>
     ],
     { 'clip-01.mp4': 'one', 'clip-02.mp4': 'two', 'clip-01.jpg': 'one thumb', 'clip-02.jpg': 'two thumb' },
   );
-// A rename that throws on its k-th call, as a crash would stop the process there.
-const crashAt = (k) => {
-  let calls = 0;
-  return (from, to) => {
-    if (++calls === k) throw new Error('simulated crash');
+// A rename (and a removal) that throws on its k-th call, as a crash would stop the process there; 0 never throws.
+const crashAt = (k, { counter = { calls: 0, rms: 0 }, rmAt = 0 } = {}) => ({
+  counter,
+  rename: (from, to) => {
+    if (++counter.calls === k) throw new Error('simulated crash');
     renameSync(from, to);
-  };
-};
+  },
+  rm: (p) => {
+    if (++counter.rms === rmAt) throw new Error('simulated crash');
+    rmSync(p, { force: true });
+  },
+});
+const crashed = (dir, k, rmAt = 0) => assert.throws(() => reorderRun(dir, crashAt(k, { rmAt })), /simulated crash/, `crash at ${rmAt ? `rm ${rmAt}` : `rename ${k}`}`);
+// What a finished swap looks like: every file present under its final name, nothing else, the record in the new order.
+function assertSwapped(dir, where) {
+  assert.deepEqual(files(dir), ['clip-01.jpg', 'clip-01.mp4', 'clip-02.jpg', 'clip-02.mp4'], `${where}: no temp file or journal left`);
+  assert.equal(readFileSync(join(dir, 'clip-01.mp4'), 'utf8'), 'two', where);
+  assert.equal(readFileSync(join(dir, 'clip-02.mp4'), 'utf8'), 'one', where);
+  assert.equal(readFileSync(join(dir, 'clip-01.jpg'), 'utf8'), 'two thumb', where);
+  assert.equal(readFileSync(join(dir, 'clip-02.jpg'), 'utf8'), 'one thumb', where);
+  assert.deepEqual(record(dir).clips.map((c) => [c.n, c.title, c.file, c.judgment.overall]), [[1, 'Clip 2', 'clip-01.mp4', 5], [2, 'Clip 1', 'clip-02.mp4', 1]], where);
+}
+const RENAMES = 11;
 
-test('order: a crash after any number of renames is put back and completed by the next run, every file present', () => {
-  for (let k = 1; k <= 8; k++) {
+test('order: the renames of a swap are 11 and one removal (the crash tests below cover every one)', () => {
+  const dir = swapRun();
+  try {
+    const probe = crashAt(0);
+    assert.equal(reorderRun(dir, probe).ok, true);
+    assert.deepEqual(probe.counter, { calls: RENAMES, rms: 1 });
+    assertSwapped(dir, 'no crash');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('order: a crash at any rename is finished by the next run, every file present and every clip under its own name', () => {
+  for (let k = 1; k <= RENAMES; k++) {
     const dir = swapRun();
     try {
-      assert.throws(() => reorderRun(dir, { rename: crashAt(k) }), /simulated crash/, `crash at rename ${k}`);
-      // the clips.json was not rewritten, and a file that is mid-move waits under its own name
-      assert.deepEqual(nums(record(dir).clips), [1, 2]);
+      crashed(dir, k);
+      // a file that is mid-move waits under its own name
       for (const f of files(dir)) if (f.startsWith('.order-tmp.') && f !== '.order-tmp.journal.json') assert.match(f, /^\.order-tmp\.clip-0[12]\.(mp4|jpg)$/);
-
       const r = order(dir);
       assert.equal(r.code, 0, `rerun after a crash at rename ${k}: ${JSON.stringify(r.out)}`);
-      assert.deepEqual(r.out, { ok: true, clips: 2, rendered: 2, renamed: 4 });
-      assert.deepEqual(files(dir), ['clip-01.jpg', 'clip-01.mp4', 'clip-02.jpg', 'clip-02.mp4']); // no temp file, no journal left
-      assert.equal(readFileSync(join(dir, 'clip-01.mp4'), 'utf8'), 'two');
-      assert.equal(readFileSync(join(dir, 'clip-02.mp4'), 'utf8'), 'one');
-      assert.equal(readFileSync(join(dir, 'clip-01.jpg'), 'utf8'), 'two thumb');
-      assert.equal(readFileSync(join(dir, 'clip-02.jpg'), 'utf8'), 'one thumb');
-      assert.deepEqual(record(dir).clips.map((c) => [c.n, c.title, c.file]), [[1, 'Clip 2', 'clip-01.mp4'], [2, 'Clip 1', 'clip-02.mp4']]);
+      assertSwapped(dir, `rerun after a crash at rename ${k}`);
+      assert.equal(order(dir).out.renamed, 0); // and a further run changes nothing
+      assertSwapped(dir, `second rerun after a crash at rename ${k}`);
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }
   }
 });
 
-test('order: a crash restores to the original names even when the journal is gone and nothing is in the way', () => {
+test('order (case A): a crash after clips.json was replaced and before the journal was removed leaves the run as it should be', () => {
   const dir = swapRun();
   try {
-    assert.throws(() => reorderRun(dir, { rename: crashAt(2) }), /simulated crash/); // one video is out, nothing placed yet
-    rmSync(join(dir, '.order-tmp.journal.json'));
-    assert.ok(files(dir).includes('.order-tmp.clip-02.mp4'));
-    const r = order(dir);
-    assert.equal(r.code, 0);
-    assert.equal(readFileSync(join(dir, 'clip-01.mp4'), 'utf8'), 'two');
-    assert.equal(readFileSync(join(dir, 'clip-02.mp4'), 'utf8'), 'one');
+    crashed(dir, 0, 1); // every rename done, the removal of the journal throws
+    assert.ok(files(dir).includes('.order-tmp.journal.json'));
+    assert.deepEqual(record(dir).clips.map((c) => c.title), ['Clip 2', 'Clip 1']); // the new record is already in place
+    assert.equal(order(dir).code, 0);
+    assertSwapped(dir, 'rerun after the journal removal crashed'); // clip 1 is not relabelled by a replay
   } finally {
     rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('order (case E): a crash inside the recovery, at every rename and at the removal, is finished by the run after it', () => {
+  for (let k = 1; k <= RENAMES; k++) {
+    for (let j = 1; j <= RENAMES + 1; j++) {
+      const dir = swapRun();
+      try {
+        crashed(dir, k);
+        // the recovery itself crashes at its j-th rename (j past its last rename: at the removal of the journal)
+        const second = crashAt(j <= RENAMES ? j : 0, { rmAt: j <= RENAMES ? 0 : 1 });
+        try {
+          reorderRun(dir, second);
+        } catch (err) {
+          assert.match(err.message, /simulated crash/);
+        }
+        assert.equal(order(dir).code, 0, `crash at ${k}, then at ${j}`);
+        assertSwapped(dir, `crash at ${k}, then at ${j}`);
+      } finally {
+        rmSync(dir, { recursive: true, force: true });
+      }
+    }
+  }
+});
+
+test('order: a truncated, an empty or an unparseable journal is treated as absent: the files in temp names go back by name, then the order completes', () => {
+  for (const garbage of ['{"phase":2,"mov', '', 'not json', '{"phase":3}', 'null']) {
+    const dir = swapRun();
+    try {
+      crashed(dir, 3); // the journal is written; one video is out of the way
+      assert.ok(files(dir).includes('.order-tmp.clip-02.mp4'));
+      writeFileSync(join(dir, '.order-tmp.journal.json'), garbage);
+      const r = order(dir);
+      assert.equal(r.code, 0, `journal ${JSON.stringify(garbage)}: ${JSON.stringify(r.out)}`);
+      assertSwapped(dir, `journal ${JSON.stringify(garbage)}`);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
   }
 });
 
@@ -359,6 +417,24 @@ test('order: a leftover temp file whose original name is held by a different fil
     assert.match(r.out.errors[0], /clip-01\.mp4 is already there/);
     assert.equal(readFileSync(join(dir, 'clip-01.mp4'), 'utf8'), 'current');
     assert.equal(readFileSync(join(dir, '.order-tmp.clip-01.mp4'), 'utf8'), 'stranded');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('order: a journal whose target is held by a file that is not ours is refused and left for the person', () => {
+  const dir = swapRun();
+  try {
+    crashed(dir, 7); // phase 2 has begun and a file is placed
+    const stray = files(dir).find((f) => f.startsWith('.order-tmp.clip-') && f !== '.order-tmp.journal.json');
+    assert.ok(stray, files(dir).join(','));
+    const target = JSON.parse(readFileSync(join(dir, '.order-tmp.journal.json'), 'utf8')).moves.find((m) => m.tmp.endsWith(stray)).to;
+    writeFileSync(target, 'someone else'); // the name the stranded file was to take
+    const r = order(dir);
+    assert.equal(r.code, 1);
+    assert.match(r.out.errors[0], /is already there/);
+    assert.equal(readFileSync(target, 'utf8'), 'someone else');
+    assert.ok(files(dir).includes(stray));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

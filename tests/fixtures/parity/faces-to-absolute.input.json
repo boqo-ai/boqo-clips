@@ -1,0 +1,88 @@
+{
+ "calls": [
+  {
+   "box": {
+    "x": 0.3,
+    "y": 0.3,
+    "width": 0.2,
+    "height": 0.35,
+    "confidence": 0.95
+   },
+   "x0": 0,
+   "win": 1920,
+   "frameWidth": 1920
+  },
+  {
+   "box": {
+    "x": 0.3,
+    "y": 0.3,
+    "width": 0.2,
+    "height": 0.35,
+    "confidence": 0.95
+   },
+   "x0": 840,
+   "win": 1080,
+   "frameWidth": 1920
+  },
+  {
+   "box": {
+    "x": 0.42,
+    "y": 0.31,
+    "width": 0.21,
+    "height": 0.4,
+    "confidence": 0.93,
+    "faceCentreX": 0.5145,
+    "eyeLineY": 0.42,
+    "facing": -0.12,
+    "mouthDrop": 0.31
+   },
+   "x0": 540,
+   "win": 1080,
+   "frameWidth": 1920
+  },
+  {
+   "box": {
+    "x": 0.8,
+    "y": 0.31,
+    "width": 0.19,
+    "height": 0.4,
+    "confidence": 0.93,
+    "faceCentreX": 0.8855000000000001,
+    "eyeLineY": 0.42,
+    "facing": -0.12,
+    "mouthDrop": 0.31
+   },
+   "x0": 840,
+   "win": 1080,
+   "frameWidth": 1920
+  },
+  {
+   "box": {
+    "x": 0.1,
+    "y": 0.31,
+    "width": 0.3,
+    "height": 0.4,
+    "confidence": 0.93,
+    "faceCentreX": 0.23500000000000001,
+    "eyeLineY": 0.42,
+    "facing": -0.12,
+    "mouthDrop": 0.31
+   },
+   "x0": 1080,
+   "win": 1080,
+   "frameWidth": 2160
+  },
+  {
+   "box": {
+    "x": -0.05,
+    "y": 0.2,
+    "width": 0.3,
+    "height": 0.35,
+    "confidence": 0.95
+   },
+   "x0": 0,
+   "win": 1080,
+   "frameWidth": 1920
+  }
+ ]
+}

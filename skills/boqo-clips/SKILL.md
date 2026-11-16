@@ -31,7 +31,8 @@ on the person's rule (`post.md`).
   On an error, tell the person in one sentence what failed, in the error's words, and stop that step. Do not work
   around a tool with your own ffmpeg or yt-dlp commands, except the ones these files give.
 - **Never post without the rule** in `<home>/boqo-clips/config.json`. With `ask` (the default), every post waits for
-  the person's yes. `post.md` has the steps.
+  the person's yes. With `auto`, a link already posted from (its `runs.md` line) is asked about first. `post_video`
+  goes once per clip, never again after an unclear reply. `post.md` has the steps.
 - **Ask before whisper on a whole file.** Local transcription is slow on a CPU: about 13 s per minute of audio on an
   8-core CPU with the small model, more on fewer cores. Say the estimate for this video, and wait for a yes.
 - **The person's language.** Answer in the language the person writes in. Titles and hooks are in the video's
@@ -56,10 +57,15 @@ local file, below.
      then come back here.
    - `no brand kit named …`: `brand.mjs list`, and ask which.
 
-   Keep the kit's `name` for `--brand`. Then `mkdir -p "<run>"`.
+   Keep the kit's `name` for `--brand`. Then `mkdir -p "<run>"`, and delete the upload replies an earlier run left
+   (they hold live signed URLs; one under an hour old may be another chat's, posting now):
+   ```sh
+   find "<home>/boqo-clips/runs" -mindepth 2 -maxdepth 2 -type f -name 'upload-*.json' -mmin +60 -delete
+   ```
 2. **Info.** `node "$HOME/.boqo-clips/tools/fetch.mjs" info "<url>" --dir "<run>"` gives `{id, title, duration,
-   captions, chunks}`, with no video download. With captions it writes `<run>/words.json` and `<run>/transcript.md`.
-   Tell the person, in one line, the title, the length and how many clips you will pick (`select.md` → How many).
+   captions, chunks}`, with no video download. With captions it writes `<run>/words.json` and `<run>/transcript.md`;
+   `chunks` is how many parts the transcript has: read them in order (step 4). Tell the person, in one line, the
+   title, the length and how many clips you will pick (`select.md` → How many).
 3. **No captions** (`"captions": "none"`). Run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`. When its
    `whisper` or `whisper-model` check fails, tell the person the video has no captions and local transcription is
    not set up, give that check's hint, and stop. Otherwise say the video has no captions, and offer local whisper
@@ -84,7 +90,8 @@ local file, below.
       node "$HOME/.boqo-clips/tools/transcript.mjs" --words "<run>/words.json" --out "<run>/transcript.md" \
         --heat "<run>/info.json"
       ```
-      `the words file has no words`: whisper heard no speech. Tell the person, and stop.
+      `the words file has no words`: whisper heard no speech. Tell the person, and stop. Known limit: whisper can
+      hear a word that is not there ("Oh") in silence at a multiple of 30 s, its window edge; never set an edge on one.
 4. **Pick.** Read `select.md`, then `<run>/transcript.md` one part at a time (`grep -n '^## Part'
    "<run>/transcript.md"` gives each part's first line), and write `<run>/picks.json`. Every edge is set on a quoted
    phrase (`select.md` → How to read):
@@ -103,15 +110,15 @@ local file, below.
 5. **Check.**
    ```sh
    node "$HOME/.boqo-clips/tools/picks-check.mjs" "<run>/picks.json" --duration <duration> --words "<run>/words.json" \
-     --min 20 --max 60 --count-min 3 --count-max 10 > "<run>/checked.json"
+     --min 20 --max 60 --count-min 1 --count-max 10 > "<run>/checked.json"
    ```
    `<duration>` is step 2's. Read `<run>/checked.json`.
    - `"ok": false`: fix each pick its `errors` name in `picks.json`, and check again.
    - `"ok": true`: every pick is snapped to whole words and carries `moved: {s, e}`, how far each edge moved. An edge
      set from `--find` moves 0.05 s. One that moved more than 0.1 s either way (`|moved.s|` or `|moved.e|`) landed
      somewhere you did not choose: find its phrase again (step 4), set that edge in `picks.json`, and check again, once.
-   - Other lengths only on the person's ask ("30-second clips": `--min 25 --max 35`), within 15 to 90 s. A video
-     under 3 minutes: `--count-min 1` (`select.md` → How many).
+   - Other lengths only on the person's ask ("30-second clips": `--min 25 --max 35`), within 15 to 90 s. Fewer
+     picks than `select.md` → How many is fine when fewer pass its rules.
 6. **Sections**, in the background (Rules):
    ```sh
    node "$HOME/.boqo-clips/tools/fetch.mjs" sections "<url>" --picks "<run>/checked.json" --dir "<run>" \
@@ -136,7 +143,7 @@ local file, below.
    ```sh
    find "<run>" -maxdepth 1 -type f \( -name 'sec-*' -o -name 'whole.*' -o -name 'audio.*' -o -name '*.part' \
      -o -name '*.part-*' -o -name '*.ytdl' -o -name 'captions.*.json3' -o -name info.json -o -name sections.json \
-     -o -name asr.json -o -name render.json \) -delete
+     -o -name asr.json -o -name render.json -o -name 'upload-*.json' \) -delete
    ```
    Keep `out/` and the small text files (`picks.json`, `checked.json`, `words.json`, `transcript.md`): they let you
    redo a clip in this chat. A run that stopped half way is cleaned the same way.

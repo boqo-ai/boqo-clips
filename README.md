@@ -15,13 +15,16 @@ brand kit.
 
 ## What it does
 
-Give your agent a video link or a file. It reads the words, picks the moments worth clipping, and renders each one as
-a 1080×1920 short with burned-in captions and your logo if you set one. On an 8-core Linux box, a 39-minute talk became 7 clips in
-about 5 minutes of tool time.
+Give your agent a video link or a file. It runs boqo's own clipping pipeline on your machine: your agent selects the
+moments from the whole transcript on boqo's rubric, they are snapped to sentence edges, scored and ranked (most-replayed
+data, the stand-alone test), the first 10 render as 1080×1920 shorts with face-aware framing, burned-in word-level
+captions, a title plate and your logo, and your agent then judges each rendered clip as a stranger would and sets the
+final order. The rest render on request.
 
 - **Captions first.** It starts from the video's own captions when it has them; whisper.cpp transcribes only videos that have none.
-- **Your model picks.** The moments are chosen by your own agent's model, not by a boqo server.
-- **Only the picked sections are downloaded,** not the whole video.
+- **Your model picks.** The moments are chosen by your own agent's model, not by a boqo server. boqo 1.1, hosted, runs
+  Opus 5.5: for the closest picks to hosted's, use a model of that class.
+- **Only the seconds that render are downloaded,** not the whole video.
 - **Rendered locally with your brand:** logo, caption style and colours from your brand kit, with ffmpeg.
 
 ## Requirements
@@ -29,17 +32,19 @@ about 5 minutes of tool time.
 - Node 20 or newer
 - ffmpeg with libass (macOS: `brew install ffmpeg-full`)
 - yt-dlp
+- Two npm packages, installed into `~/.boqo-clips` after your yes: `onnxruntime-node` (face detection; about 258 MB unpacked) and `zod`
 - Optional: whisper.cpp (`whisper-cli`) and a model, for videos without captions
 
-The install runs `tools/doctor.mjs`, which checks all of these and says how to get what is missing on macOS, Windows
-and Linux.
+The install runs `tools/doctor.mjs`, which checks all of these and the bundled fonts, and says how to get what is
+missing on macOS, Windows and Linux.
 
 ## What runs where
 
 | Where | What |
 | --- | --- |
-| Your machine | Captions and transcript, section download, rendering, your brand kits and the finished clips |
-| Your agent | Picking the moments, titles and hooks |
+| Your machine | Captions and transcript, section download, scoring and ranking, face detection and rendering, your brand kits and the finished clips |
+| Your agent | Picking the moments, titles and hooks, and judging each rendered clip |
+| Transcript | Local by default: the video's captions, or whisper.cpp. Optional, with `"transcript": "boqo"` in the skill's config: boqo's `transcribe` tool (Deepgram) for videos without captions, 1 credit for each started 10 minutes, asked before each use |
 | boqo | Posting and scheduling, through the boqo MCP connector (`https://mcp.boqo.ai/mcp`). Autoposting comes with the 7-day trial, or with Starter from $12. Without boqo you keep the files |
 
 Want boqo to do the whole job instead? Hand it over at boqo.ai — that runs on credits.

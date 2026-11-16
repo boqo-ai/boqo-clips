@@ -1,6 +1,6 @@
 # Posting through boqo
 
-Runs after the clips are shown (SKILL.md → The run, step 9). It posts only through boqo's tools, and only by the rule
+Runs after the clips are shown (SKILL.md → The run, step 15). It posts only through boqo's tools, and only by the rule
 in `<home>/boqo-clips/config.json`. Posting the clip as it is costs no credits. Paths go into commands written out in
 full, in double quotes (SKILL.md → Overview).
 
@@ -60,9 +60,10 @@ clip will not be posted. To look again later without a foreground `sleep` (Claud
 Boqo writes a post's words from the file name: the clip's title, plus the account's default tags. Hosted's own
 Clips page writes more: the clip's hook, then its title, then the tags, each after a blank line (the `caption`
 command in step 2; YouTube's title is the clip's title, its description the hook and the tags). Those words need
-"Captions written by the agent" switched on in boqo (Accounts, the account, Defaults). Say so once, the first time
-you post.
-- **Not on, or not known:** leave `caption` out. The post says the title and the account's tags.
+"Captions written by the agent" switched on in boqo (Accounts, the account, Defaults).
+- **Not on, or not known:** leave `caption` out. The post says the title and the account's tags. The first time, say
+  this one sentence and no more: "These posts carry only each clip's title and the account's tags; switch on
+  'Captions written by the agent' in boqo (Accounts, the account, Defaults) and they carry the hook too."
 - **On** (the person says so): pass `caption` in step 6, one for the clip: the `text` of `youtube` when every chosen
   account is on YouTube, else the `text` of `instagram` (it fits TikTok and YouTube too). Show the words in the
   one line of step 7. A caption written this way carries only the tags you gave `--tags`: boqo adds none of the
@@ -75,4 +76,4 @@ A refusal from boqo is its own sentence: say it as it came, keep the files, stop
 all, with the plan line, "Autoposting comes with the 7-day trial or Starter from $12": "Accounts and scheduling are
 on paid plans." from `create_upload`, or "Publishing needs a paid plan." from `post_video`.
 
-The number of clips posted goes into the run's line in `runs.md` (SKILL.md → The run, step 10).
+The number of clips posted goes into the run's line in `runs.md` (SKILL.md → The run, step 16).

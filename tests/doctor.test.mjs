@@ -5,7 +5,8 @@ import { mkdtempSync, writeFileSync, chmodSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { hintsFor, runChecks, isOk, ytDlpAtLeast, MIN_YTDLP } from '../engine/doctor.mjs';
+import { BUNDLED_FONTS, hintsFor, runChecks, isOk, ytDlpAtLeast, MIN_YTDLP } from '../engine/doctor.mjs';
+import { copyFileSync, mkdirSync, readdirSync } from 'node:fs';
 
 const chk = (name, ok, detail = '', required = true) => ({ name, ok, detail, required });
 const fail = (name, detail = '', required = true) => chk(name, false, detail, required);
@@ -171,7 +172,7 @@ test('runChecks on an empty PATH: tools fail with where-to-look details, node st
       runChecks({ nodeMin: 20, whisper: 'required', streamlink: true, env: process.env }),
     );
     const c = byName(checks);
-    assert.deepEqual(checks.map((x) => x.name), ['node', 'ffmpeg', 'ffprobe', 'ffmpeg-filters', 'ffmpeg-https', 'yt-dlp', 'whisper', 'whisper-model', 'onnxruntime', 'streamlink']);
+    assert.deepEqual(checks.map((x) => x.name), ['node', 'ffmpeg', 'ffprobe', 'ffmpeg-filters', 'ffmpeg-https', 'yt-dlp', 'whisper', 'whisper-model', 'onnxruntime', 'fonts', 'streamlink']);
     assert.equal(c.node.ok, true);
     assert.match(c.node.detail, /^node \d+\.\d+\.\d+/);
     for (const n of ['ffmpeg', 'ffprobe', 'ffmpeg-filters', 'yt-dlp', 'whisper', 'whisper-model']) assert.equal(c[n].ok, false, n);
@@ -361,7 +362,7 @@ test('tools/doctor.mjs prints one JSON line, exits 0 even when checks fail, and 
     assert.equal(lines.length, 1);
     const out = JSON.parse(lines[0]);
     assert.equal(out.ok, false);
-    assert.equal(out.checks.length, 10);
+    assert.equal(out.checks.length, 11);
     assert.ok(out.hints.length >= 4);
     const bad = spawnSync(process.execPath, [script, '--node', '18'], { encoding: 'utf8' });
     assert.equal(bad.status, 1);
@@ -440,4 +441,38 @@ test('hintsFor onnxruntime: VC++ runtime on Windows, the packages reinstalled el
   const words = hintsFor([runtime('onnxruntime-node could not open the face model: the face model is missing a required input')], 'linux');
   assert.ok(!all(words, 'reinstall the skill (https'));
   assert.ok(all(words, 'npm ci'));
+});
+
+// ---- the bundled fonts
+
+const FONTS = fileURLToPath(new URL('../engine/fonts/', import.meta.url));
+
+test('BUNDLED_FONTS is every face engine/fonts holds, and the check passes on the shipped folder', async () => {
+  const shipped = readdirSync(FONTS).filter((f) => /\.(ttf|otf)$/.test(f)).sort();
+  assert.deepEqual([...BUNDLED_FONTS].sort(), shipped);
+  const checks = await runChecks({ nodeMin: 20, whisper: 'optional', env: { PATH: '' } });
+  const f = byName(checks).fonts;
+  assert.equal(f.ok, true, f.detail);
+  assert.equal(f.required, true);
+});
+
+test('runChecks: a missing or empty face fails the required fonts check, and the hint restores it with a command PowerShell 5.1 runs', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'boqo doctor fonts '));
+  try {
+    for (const name of BUNDLED_FONTS) copyFileSync(join(FONTS, name), join(dir, name));
+    rmSync(join(dir, 'Anton-Regular.ttf'));
+    writeFileSync(join(dir, 'Bangers-Regular.ttf'), '');
+    const checks = await runChecks({ nodeMin: 20, whisper: 'optional', env: { PATH: '' }, fontsDir: dir });
+    const f = byName(checks).fonts;
+    assert.equal(f.ok, false);
+    assert.equal(f.detail, 'missing or empty: Anton-Regular.ttf, Bangers-Regular.ttf');
+    for (const p of ['darwin', 'win32', 'linux']) {
+      const h = hintsFor([f], p);
+      assert.equal(h.length, 1, p);
+      assert.match(h[0], /git -C "\$HOME\/\.boqo-clips" checkout -- engine\/fonts/);
+      assert.ok(!h[0].includes('&&'), p);
+    }
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });

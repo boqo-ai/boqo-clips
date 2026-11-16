@@ -9,7 +9,8 @@ Windows WSL or Git Bash). Write `<skills>` out in full as an absolute path insid
 hold a space); `~` does not expand inside quotes, so the commands use `"$HOME/..."`.
 
 1. **Tell the person, in one sentence, what is about to happen:** the boqo-clips skill will be copied to this machine
-   (into `~/.boqo-clips`, linked into the skills folder), and nothing else will be installed without their yes.
+   (into `~/.boqo-clips`, linked into the skills folder), its two npm packages installed after one yes from them, and
+   nothing else installed without their yes.
 
 2. **Choose `<skills>`.**
    - Claude Code: `~/.claude/skills/`, for every project. Use `.claude/skills/` in the current folder (this project
@@ -55,17 +56,27 @@ hold a space); `~` does not expand inside quotes, so the commands use `"$HOME/..
 
       A copy works the same: the skill calls its tools in `~/.boqo-clips/tools/`.
 
-4. **Check the tools the skill uses.** Run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`. It only looks,
-   and prints one JSON line: `ok` is true when every required tool works (Node 20+, ffmpeg with libass and its ffprobe, yt-dlp), and
-   `hints` says how to install each one that is missing or too old, the optional whisper.cpp included (it transcribes
-   videos that have no captions). When it cannot run, `node --version` (it must be 20 or newer). Name what is missing
-   and how the person installs it, in the words of `hints`. Install nothing yourself. A missing tool does not stop the
-   install: say what it is needed for and go on.
+4. **Install the skill's two npm packages, after one yes.** Ask once, in one message: the skill needs `zod` and
+   `onnxruntime-node` (its face detection), installed into `~/.boqo-clips` only, and onnxruntime-node unpacks to about
+   258 MB; install them? On a yes:
+   ```sh
+   cd "$HOME/.boqo-clips" && npm ci --omit=dev --ignore-scripts
+   ```
+   `--ignore-scripts` skips onnxruntime-node's installer, which would fetch GPU binaries this skill does not use; its
+   CPU binary comes in the package. On a no, stop: the skill's tools do not run without them. When `npm` is missing, it
+   comes with Node: say so and stop (the doctor, next, says how to install Node).
 
-5. **Connect no service and run no `npm install`.** Onboarding asks for each of those when it is needed.
+5. **Check the tools the skill uses.** Run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`, after the
+   install, so that it can load onnxruntime-node. It only looks, and prints one JSON line: `ok` is true when every
+   required tool works (Node 20+, ffmpeg with libass and its ffprobe, yt-dlp, onnxruntime-node running the face model,
+   the bundled fonts), and `hints` says how to install each one that is missing or too old, the optional whisper.cpp
+   included (it transcribes videos that have no captions). Its Windows hints run in PowerShell 5.1 as they stand.
+   When it cannot run, `node --version` (it must be 20 or newer). Name what is missing and how the person installs
+   it, in the words of `hints`. Install nothing yourself. A missing tool does not stop the install: say what it is
+   needed for and go on.
 
-6. **Start now, in this chat.** Read `<skills>/boqo-clips/SKILL.md`, then `<skills>/boqo-clips/onboarding.md`, and
-   run onboarding. It opens with what the next minutes give them (their brand kit, then their first clips) and
+6. **Start now, in this chat,** connecting no service first (onboarding asks for each when it is needed). Read
+   `<skills>/boqo-clips/SKILL.md`, then `<skills>/boqo-clips/onboarding.md`, and run onboarding. It opens with what the next minutes give them (their brand kit, then their first clips) and
    roughly how long. When the person already gave a video link or file, onboarding ends by clipping it.
 
 ## If something fails
@@ -77,14 +88,18 @@ hold a space); `~` does not expand inside quotes, so the commands use `"$HOME/..
   first line, and stop. Do not fetch the files from anywhere else.
 - **The pull fails** (local changes, a branch that has moved, no network): tell the person the command and the
   error's first line, and stop. Never delete, move or reset `~/.boqo-clips`.
+- **`npm ci` fails** (no network, a proxy, a platform without a prebuilt onnxruntime-node binary: it has win32-x64,
+  darwin-arm64, darwin-x64 and linux-x64): tell the person the command and the error's first line, and stop. Do not
+  install the packages another way.
 
 ## Updating
 
 ```sh
 git -C "$HOME/.boqo-clips" pull --ff-only
+cd "$HOME/.boqo-clips" && npm ci --omit=dev --ignore-scripts
 ```
 
-A copied folder (step 3, on Windows without real links) is updated by copying the files into it again, after the
+The second command puts the packages back in step with the update (the person's yes in step 4 covers it). A copied folder (step 3, on Windows without real links) is updated by copying the files into it again, after the
 person's yes (the `/.` copies the folder's contents, never a second folder inside it):
 
 ```sh

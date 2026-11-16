@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFile, spawnSync } from 'node:child_process';
 import http from 'node:http';
-import { mkdtempSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -65,6 +65,21 @@ test('select-request reads the language the boqo transcript wrote, and --lang st
   };
   assert.equal(sel([]), 'ru');
   assert.equal(sel(['--lang', 'de']), 'de');
+});
+
+test('the transcript-language file wins over info.json\'s language', () => {
+  const run = tmp();
+  assert.equal(cli(['--file', FIXTURE, '--run', run]).status, 0);
+  writeFileSync(join(run, 'info.json'), JSON.stringify({ id: 'x', title: 't', language: 'fr' }));
+  const sel = () => {
+    const r = spawnSync(process.execPath, [REQUEST, '--run', run], { encoding: 'utf8' });
+    assert.equal(r.status, 0, r.stdout + r.stderr);
+    return JSON.parse(readFileSync(join(run, 'select-options.json'), 'utf8')).language;
+  };
+  assert.equal(sel(), 'en');
+  // a reused run whose file was removed falls back to info.json: the skill removes a stale file by hand
+  unlinkSync(join(run, 'transcript-language.txt'));
+  assert.equal(sel(), 'fr');
 });
 
 test('a language that is not a tag reads as English', () => {
@@ -165,6 +180,7 @@ test('--url downloads the JSON and writes the files; the signed link is never pr
 test('--url with an error status or a redirect is a one-line error with no link in it', async () => {
   const { server, url } = await serve((req, res) => {
     if (req.url.startsWith('/t.json')) { res.statusCode = 403; res.end('denied X-Amz-Signature=secret'); }
+    else { res.statusCode = 302; res.setHeader('location', '/t.json?X-Amz-Signature=secret'); res.end(); }
   });
   try {
     for (const target of [url, url.replace('/t.json', '/other.json')]) {

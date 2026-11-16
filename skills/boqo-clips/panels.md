@@ -10,7 +10,7 @@ Both reads need a landscape source of at least 480 lines. `probe-frames` prints 
 
 ## The probe, once a run
 
-After the clips are checked and `clips order` has run:
+After `clips order` and the sections (SKILL.md → The run, steps 8 and 9):
 
 1. `node "$HOME/.boqo-clips/tools/panels.mjs" probe-frames --run "<run>"`. With a local file add `--src "<file>"`.
    - `{"eligible": false}`: stop; the clips render as they are.

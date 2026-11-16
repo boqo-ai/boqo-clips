@@ -456,6 +456,25 @@ test('CLI: usage errors are one JSON line and exit 1', () => {
   }
 });
 
+test('CLI sections --run: refusals for a run with no clips.json, a clip it does not have, mixed flags, and flags on another command', () => {
+  const dir = tmp();
+  writeFileSync(join(dir, 'info.json'), JSON.stringify({ duration: 100 }));
+  const say = (args) => {
+    const r = spawnSync(process.execPath, [CLI, ...args], { encoding: 'utf8' });
+    assert.equal(r.status, 1, args.join(' ') + r.stdout);
+    assert.equal(r.stdout.trim().split('\n').length, 1);
+    return JSON.parse(r.stdout.trim()).error;
+  };
+  assert.match(say(['sections', URL1, '--run', dir]), /cannot read clips\.json/);
+  writeFileSync(join(dir, 'clips.json'), JSON.stringify({ clips: [{ n: 1, start: 10, end: 40 }, { n: 2, start: 50, end: 80 }] }));
+  assert.match(say(['sections', URL1, '--run', dir, '--n', '3']), /no clip 3/);
+  assert.match(say(['sections', URL1, '--run', dir, '--n', '1', '--all']), /at most one/);
+  assert.match(say(['sections', URL1, '--run', dir, '--picks', join(dir, 'p.json')]), /not both/);
+  assert.match(say(['sections', URL1, '--n', '1', '--dir', dir]), /go with --run/);
+  assert.match(say(['info', URL1, '--dir', dir, '--first', '3']), /takes only/);
+  rmSync(dir, { recursive: true });
+});
+
 // Live: needs the network, yt-dlp, ffmpeg. Never in CI.
 const LIVE = process.env.BOQO_LIVE === '1';
 test('live: info then two sections', { skip: !LIVE, timeout: 900_000 }, () => {

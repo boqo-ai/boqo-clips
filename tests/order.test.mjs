@@ -9,7 +9,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renameSync } from 'node:fs';
-import { finalOrder, preRenderOrder, renderSet, reorderRun, summaryLines } from '../engine/order.mjs';
+import { finalOrder, preRenderOrder, renderSet, reorderRun, selectRows, summaryLines } from '../engine/order.mjs';
 
 const TOOL = join(dirname(fileURLToPath(import.meta.url)), '..', 'tools', 'clips.mjs');
 
@@ -63,6 +63,19 @@ test('the render set is the first 10 in the pre-render order, as clip numbers', 
   assert.deepEqual(renderSet(clips), [13, 12, 11, 10, 9, 8, 7, 6, 5, 4]);
   assert.deepEqual(renderSet(clips, 3), [13, 12, 11]);
   assert.deepEqual(renderSet(clips.slice(0, 4)), [4, 3, 2, 1]);
+});
+
+test('selectRows: the first 10 by default, the first K, the numbers given, all; a bad count or number is one line', () => {
+  const record = { clips: Array.from({ length: 12 }, (_, i) => ({ n: 12 - i, start: i, end: i + 20 })) };
+  const ns = (o) => selectRows(record, o).map((r) => r.n);
+  assert.deepEqual(ns({}), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  assert.deepEqual(ns({ first: '3' }), [1, 2, 3]);
+  assert.deepEqual(ns({ n: '11,2,2' }), [2, 11]);
+  assert.equal(ns({ all: true }).length, 12);
+  assert.throws(() => selectRows(record, { n: '13' }), /no clip 13/);
+  assert.throws(() => selectRows(record, { n: '1,x' }), /--n takes clip numbers/);
+  assert.throws(() => selectRows(record, { first: '0' }), /--first takes a count/);
+  assert.throws(() => selectRows(record, { first: '2', all: true }), /at most one/);
 });
 
 // ---- the final order

@@ -24,7 +24,8 @@ Four questions. Ask the first two in one message.
    BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/brand.mjs" save "<samples>/logo.json" --logo "<url>"
    ```
    From then on `<logo>` is the file its reply names in `brand.logo.file`.
-3. **Colours:** the accent, which marks the spoken or key word, and the caption text colour when it is not white.
+3. **Colours:** the accent, which marks the spoken or key word in the styles that mark one (a few colour every word with
+   it), and the caption text colour when it is not white.
    Open the logo image and offer its strongest colour as the accent, in hex: "#E63946 from your logo?".
 4. **Caption style,** by sight: render the sample sheet below, show it, and ask which one they want.
 
@@ -47,17 +48,23 @@ the person chooses.
     {"w":"colours","s":2.55,"e":3.05},{"w":"and","s":3.05,"e":3.25},{"w":"your","s":3.25,"e":3.5},
     {"w":"logo.","s":3.5,"e":4.2}]
    ```
-3. `<samples>/pick.json`: `[{"s": 0, "e": 5, "title": "<name>"}]`.
+3. `<samples>/clips.json`, the one clip every sample renders (`render.mjs` reads a run's `clips.json`):
+   ```json
+   {"clips": [{"n": 1, "start": 0, "end": 5, "title": "<name>", "hook": null, "emphasis_words": ["captions", "logo"], "panels": null}]}
+   ```
 4. For each style key above, in that order, numbered `01` to `15`: write `<samples>/<style>.json`,
    `{"name": "<style>", "captions": {"style": "<style>", "accentColours": ["<accent>"]}}` (add
-   `"baseColour": "<text>"` when the text is not white), then
+   `"baseColour": "<text>"` when the text is not white), then, with `<style>`'s folder as a run of one clip:
    ```sh
+   mkdir -p "<samples>/<style>"
+   cp "<samples>/clips.json" "<samples>/words.json" "<samples>/<style>/"
    BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/brand.mjs" save "<samples>/<style>.json" --logo "<logo>"
-   BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/render.mjs" --src "<samples>/src.mp4" \
-     --picks "<samples>/pick.json" --words "<samples>/words.json" --brand "<style>" --out "<samples>/<style>"
-   ffmpeg -v error -y -ss 2.8 -i "<samples>/<style>/clip-01.mp4" -vf scale=360:640 -frames:v 1 "<samples>/f<NN>.jpg"
+   BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/render.mjs" --run "<samples>/<style>" --first 1 \
+     --src "<samples>/src.mp4" --brand "<style>"
+   ffmpeg -v error -y -ss 2.8 -i "<samples>/<style>/out/clip-01.mp4" -vf scale=360:640 -frames:v 1 "<samples>/f<NN>.jpg"
    ```
-   With no logo, leave out `--logo`. Each sample is `<samples>/<style>/clip-01.mp4`.
+   With no logo, leave out `--logo`. Each sample is `<samples>/<style>/out/clip-01.mp4`. A `Loudness not normalised`
+   note on a sample is expected: its source has no sound.
 5. One sheet, 5 across and 3 down, in the order of the list:
    ```sh
    ffmpeg -v error -y -framerate 1 -i "<samples>/f%02d.jpg" -vf tile=5x3 -frames:v 1 "<samples>/styles.jpg"
@@ -93,6 +100,8 @@ kit is saved and every boqo skill uses it.
   the fields it changes, the other required ones are the Default's. Under `logo`: `anchor` (`top-left`, `top-centre`,
   `top-right`, `bottom-left`, `bottom-centre`, `bottom-right`), `width` up to 0.5, `marginX`, `marginY`, `opacity` 0.05
   to 1, `timing` (`{"kind": "whole"}` or `{"kind": "window", "startSec": 0, "holdSec": 12}`).
+- The Default kit's captions have one accent, which colours every word as it is spoken, so promise no separate
+  keyword highlight on it; the styles that mark key words are shown on the sheet.
 - The first kit saved becomes the default; `brand.mjs default "<name>"` changes it.
 - **Changing a kit later:** `brand.mjs show "<name>"`, change the keys in its `brand`, and save that with `--logo`
   again, or with `logo.file` as `show` printed it. A save with neither drops the logo.
@@ -128,6 +137,9 @@ post automatically, up to N a day, to the accounts they name. Without them, writ
 - `{"posting": {"auto": 2}, "accounts": ["<account id>"]}`, with the ids from `list_accounts`.
 
 The rule changes only when the person says so ("post them automatically", "ask me first"): rewrite the file then.
+
+Add `"transcript": "local"` (the default) to the same file. It becomes `"boqo"` only when the person asks for boqo to
+transcribe videos that have no captions, which spends credits (SKILL.md → Rules); the run asks before each use.
 
 Onboarding is done. With a link or file from the person, go on at SKILL.md → The run, step 1; without one, ask for
 it.

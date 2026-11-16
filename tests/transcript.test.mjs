@@ -67,7 +67,7 @@ test('transcript.mjs errors are one JSON line, exit 1', () => {
   writeFileSync(obj, '{"a":1}');
   const cases = [
     [[], /--words is required/],
-    [['--words', join(d, 'w.json')], /one of --out, --around or --find/],
+    [['--words', join(d, 'w.json')], /one of --out, --around, --find or --segments/],
     [['--words', join(d, 'missing.json'), '--out', out], /cannot read/],
     [['--words', bad, '--out', out], /not valid JSON/],
     [['--words', obj, '--out', out], /array of words/],
@@ -140,7 +140,7 @@ test('transcript.mjs --around errors are one JSON line, exit 1', () => {
   const out = join(d, 't.md');
   const cases = [
     [['--words', wf, '--around', '5', '--out', out], /mutually exclusive/],
-    [['--words', wf], /one of --out, --around or --find/],
+    [['--words', wf], /one of --out, --around, --find or --segments/],
     [['--words', wf, '--around', 'x'], /--around/],
     [['--words', wf, '--around', '-1'], /--around/],
     [['--words', wf, '--around', ''], /--around/],

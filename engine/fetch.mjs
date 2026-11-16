@@ -7,6 +7,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync
 import { join } from 'node:path';
 import { toolEnv } from './env.mjs';
 import { transcriptMarkdown, wordsFromJson3 } from './words.mjs';
+import { segmentsFromWords } from './segments.mjs';
 
 /** @typedef {import('./picks.mjs').Pick} Pick */
 
@@ -201,7 +202,7 @@ const msg = (err) => (err instanceof Error ? err.message : String(err));
 
 /**
  * Read the video info and ONE caption track; write `info.json`, and when
- * there are captions `words.json` and `transcript.md`, into `dir`.
+ * there are captions `words.json`, `segments.json` and `transcript.md`, into `dir`.
  * @param {{ url: string, dir: string, run?: typeof realRun }} o
  * @returns {Promise<{id: string, title: string, duration: number, captions: 'manual'|'auto'|'none', chunks: number}>}
  */
@@ -235,6 +236,7 @@ export async function fetchInfo({ url, dir, run = realRun }) {
   const md = transcriptMarkdown(words, { heat: heatOf(info) });
   writeFileSync(join(dir, 'words.json'), JSON.stringify(words));
   writeFileSync(join(dir, 'transcript.md'), md.text);
+  writeFileSync(join(dir, 'segments.json'), JSON.stringify(segmentsFromWords(words, { source: track.kind })));
   return { ...head, captions: track.kind, chunks: md.chunks };
 }
 

@@ -197,6 +197,7 @@ test('fetchInfo writes info, words, transcript and reports the counts', async ()
   const md = readFileSync(join(dir, 'transcript.md'), 'utf8');
   assert.match(md, /^## Part 1/);
   assert.match(md, /\[00:01\] hello world ▲/);
+  assert.deepEqual(JSON.parse(readFileSync(join(dir, 'segments.json'), 'utf8')), [{ start: words[0].s, end: words[1].e, text: 'hello world', speaker: null }]);
   rmSync(dir, { recursive: true });
 });
 
@@ -235,6 +236,7 @@ test('fetchInfo with no captions: captions none, chunks 0, no words or transcrip
   assert.ok(existsSync(join(dir, 'info.json')));
   assert.equal(existsSync(join(dir, 'words.json')), false);
   assert.equal(existsSync(join(dir, 'transcript.md')), false);
+  assert.equal(existsSync(join(dir, 'segments.json')), false);
   rmSync(dir, { recursive: true });
 });
 

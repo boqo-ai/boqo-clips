@@ -7,6 +7,7 @@ import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import { availableParallelism, homedir, tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { boqoHome } from './brand.mjs';
+import { toolEnv } from './env.mjs';
 import { wordsFromWhisper } from './words.mjs';
 
 /** @typedef {import('./words.mjs').Word} Word */
@@ -73,7 +74,7 @@ function run(cmd, args, missing) {
   return new Promise((resolve, reject) => {
     let child;
     try {
-      child = spawn(cmd, args, { stdio: ['ignore', 'ignore', 'pipe'], windowsHide: true });
+      child = spawn(cmd, args, { stdio: ['ignore', 'ignore', 'pipe'], windowsHide: true, env: toolEnv() });
     } catch (err) {
       reject(new Error(`${cmd} could not start: ${err.message}`));
       return;
@@ -93,7 +94,7 @@ function run(cmd, args, missing) {
 // whisper-cli exists and starts; checked before any audio work
 function probeWhisper() {
   return new Promise((resolve, reject) => {
-    const child = spawn('whisper-cli', ['-h'], { stdio: 'ignore', windowsHide: true });
+    const child = spawn('whisper-cli', ['-h'], { stdio: 'ignore', windowsHide: true, env: toolEnv() });
     child.on('error', (err) => reject(err.code === 'ENOENT' ? new Error(INSTALL_WHISPER) : new Error(`whisper-cli could not start: ${err.message}`)));
     child.on('close', () => resolve());
   });

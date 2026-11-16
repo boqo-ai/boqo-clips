@@ -11,6 +11,7 @@ import { copyFile, mkdir, mkdtemp, rename, rm, writeFile } from 'node:fs/promise
 import { tmpdir } from 'node:os';
 import { extname, join } from 'node:path';
 import { assFor, FONT_FILES } from './captions-ass.mjs';
+import { toolEnv } from './env.mjs';
 import { wordsInRange } from './words.mjs';
 
 /** @typedef {import('./words.mjs').Word} Word */
@@ -85,7 +86,7 @@ export function clipAss(words, s, e, brand, hook) {
 }
 
 function ffprobeJson(args) {
-  const r = spawnSync('ffprobe', ['-v', 'error', '-of', 'json', ...args], { encoding: 'utf8', maxBuffer: 16 << 20 });
+  const r = spawnSync('ffprobe', ['-v', 'error', '-of', 'json', ...args], { encoding: 'utf8', maxBuffer: 16 << 20, env: toolEnv() });
   if (r.error) {
     throw new Error(r.error.code === 'ENOENT' ? 'ffprobe was not found on PATH (it comes with ffmpeg)' : `ffprobe failed: ${r.error.message}`);
   }
@@ -119,7 +120,7 @@ function runFfmpeg(args, cwd, onLog) {
   return new Promise((resolve, reject) => {
     let child;
     try {
-      child = spawn('ffmpeg', args, { cwd, stdio: ['ignore', 'ignore', 'pipe'], windowsHide: true });
+      child = spawn('ffmpeg', args, { cwd, stdio: ['ignore', 'ignore', 'pipe'], windowsHide: true, env: toolEnv() });
     } catch (err) {
       return reject(err);
     }

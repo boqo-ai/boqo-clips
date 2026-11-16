@@ -5,6 +5,7 @@
 import { execFile } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { toolEnv } from './env.mjs';
 import { transcriptMarkdown, wordsFromJson3 } from './words.mjs';
 
 /** @typedef {import('./picks.mjs').Pick} Pick */
@@ -169,7 +170,7 @@ export function planFallback(url, picks, dir, duration) {
 
 const exec = (file, args, opts = {}) =>
   new Promise((resolve, reject) => {
-    execFile(file, args, { maxBuffer: MAX_BUFFER, ...opts }, (err, stdout, stderr) => {
+    execFile(file, args, { maxBuffer: MAX_BUFFER, env: toolEnv(), ...opts }, (err, stdout, stderr) => {
       if (err) {
         const tail = String(stderr || err.message).trim().split('\n').filter(Boolean).slice(-2).join(' ');
         reject(new Error(err.code === 'ENOENT' ? `${file} is not installed or not on PATH` : `${file} failed: ${tail}`));

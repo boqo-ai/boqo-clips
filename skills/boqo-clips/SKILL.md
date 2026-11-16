@@ -140,7 +140,9 @@ local file, below.
 ## An uploaded or local file
 
 The same run, with three changes:
-- **No info step.** The length: `ffprobe -v error -show_entries format=duration -of csv=p=0 "<file>"`.
+- **No info step.** The length: `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" probe "<file>"` gives `durationSec`
+  (it finds macOS ffmpeg-full's ffprobe, which a plain shell may not have). On `unsupported container`:
+  `ffprobe -v error -show_entries format=duration -of csv=p=0 "<file>"`.
 - **Whisper on the whole file**, after asking (Rules): step 3's doctor check, whisper and transcript, with
   `"<file>"` itself in place of the audio, and no `--heat`.
 - **No sections step.** Render from the file: `--src "<file>"` in place of `--sections "<run>/sections.json"`.

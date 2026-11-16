@@ -7,6 +7,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { clipAss, ffmpegArgs, renderClip } from '../engine/render.mjs';
 import { defaultBrand, saveBrand } from '../engine/brand.mjs';
+import { toolEnv } from '../engine/env.mjs';
 
 const CLI = fileURLToPath(new URL('../tools/render.mjs', import.meta.url));
 
@@ -123,13 +124,13 @@ test('clipAss shows the hook only when the brand has hook on', () => {
 // ---- real ffmpeg -------------------------------------------------------------
 
 const probe = (file, extra = ['-show_streams', '-show_format']) => {
-  const r = spawnSync('ffprobe', ['-v', 'error', ...extra, '-of', 'json', file], { encoding: 'utf8' });
+  const r = spawnSync('ffprobe', ['-v', 'error', ...extra, '-of', 'json', file], { encoding: 'utf8', env: toolEnv() });
   assert.equal(r.status, 0, r.stderr);
   return JSON.parse(r.stdout);
 };
 
 const run = (args) => {
-  const r = spawnSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', ...args], { encoding: 'utf8' });
+  const r = spawnSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', ...args], { encoding: 'utf8', env: toolEnv() });
   assert.equal(r.status, 0, r.stderr);
 };
 

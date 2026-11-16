@@ -13,27 +13,40 @@ const all = (list, text) => list.some((l) => l.includes(text));
 
 // ---- hintsFor: the right fix per OS
 
-test('hintsFor darwin: ffmpeg-full, its PATH line, yt-dlp, whisper-cpp', () => {
+test('hintsFor darwin: ffmpeg-full that the engine finds by itself, yt-dlp, whisper-cpp; no PATH line', () => {
   const h = hintsFor([fail('ffmpeg'), fail('yt-dlp'), fail('whisper')], 'darwin');
-  assert.ok(all(h, 'brew install ffmpeg-full'));
-  assert.ok(all(h, 'export PATH="$(brew --prefix ffmpeg-full)/bin:$PATH"'));
+  assert.ok(all(h, '`brew install ffmpeg-full`'));
+  assert.ok(all(h, 'finds it by itself'));
   assert.ok(all(h, 'brew install yt-dlp'));
   assert.ok(all(h, 'brew install whisper-cpp'));
+  // each agent command is a new shell: an export would be gone by the next one
+  assert.ok(!all(h, 'export PATH'));
+  assert.ok(!all(h, 'keg-only'));
+  assert.equal(h.length, 3);
 });
 
-test('hintsFor darwin: missing filters means plain ffmpeg, so ffmpeg-full and the PATH line', () => {
+test('hintsFor darwin: missing filters means plain ffmpeg, so ffmpeg-full', () => {
   const h = hintsFor([fail('ffmpeg-filters', 'missing filters: ass')], 'darwin');
+  assert.equal(h.length, 1);
   assert.ok(all(h, 'brew install ffmpeg-full'));
-  assert.ok(all(h, 'export PATH="$(brew --prefix ffmpeg-full)/bin:$PATH"'));
-  assert.equal(h.filter((l) => l.includes('export PATH')).length, 1);
+  assert.ok(!all(h, 'export PATH'));
 });
 
-test('hintsFor win32: winget ids and the whisper.cpp release zip', () => {
+test('hintsFor win32: winget ids and the whisper.cpp release zip, then restart the agent once', () => {
   const h = hintsFor([fail('ffmpeg'), fail('yt-dlp'), fail('whisper')], 'win32');
   assert.ok(all(h, 'winget install Gyan.FFmpeg'));
   assert.ok(all(h, 'winget install yt-dlp.yt-dlp'));
   assert.ok(all(h, 'https://github.com/ggml-org/whisper.cpp/releases'));
   assert.ok(!all(h, 'brew'));
+  assert.equal(h.filter((l) => l.includes('restart the agent')).length, 1);
+  assert.match(h.at(-1), /restart the agent so it sees the new PATH/);
+});
+
+test('hintsFor: the restart line is for Windows installs only', () => {
+  assert.ok(!all(hintsFor([fail('ffmpeg')], 'darwin'), 'restart the agent'));
+  assert.ok(!all(hintsFor([fail('ffmpeg')], 'linux'), 'restart the agent'));
+  assert.ok(!all(hintsFor([fail('whisper-model', 'no ggml model found')], 'win32'), 'restart the agent'));
+  assert.ok(!all(hintsFor([fail('ffmpeg-https', 'no network or blocked', false)], 'win32'), 'restart the agent'));
 });
 
 test('hintsFor linux: ffmpeg-https crash names the distro package and the BtbN build', () => {
@@ -84,8 +97,10 @@ test('hintsFor: a too-old yt-dlp says upgrade, a missing one says install', () =
 });
 
 test('hintsFor: with ffmpeg missing, its dependents add no second ffmpeg line', () => {
-  const h = hintsFor([fail('ffmpeg', 'not found on PATH'), fail('ffmpeg-filters', 'needs ffmpeg'), fail('ffmpeg-https', 'needs ffmpeg', false)], 'win32');
+  const h = hintsFor([fail('ffmpeg', 'not found on PATH'), fail('ffmpeg-filters', 'needs ffmpeg'), fail('ffmpeg-https', 'needs ffmpeg', false)], 'linux');
   assert.equal(h.length, 1);
+  const w = hintsFor([fail('ffmpeg', 'not found on PATH'), fail('ffmpeg-filters', 'needs ffmpeg'), fail('ffmpeg-https', 'needs ffmpeg', false)], 'win32');
+  assert.deepEqual(w.map((l) => l.split(':')[0]), ['ffmpeg', 'After installing, restart the agent so it sees the new PATH.']);
 });
 
 // ---- the verdict and the version rule
@@ -132,7 +147,7 @@ test('runChecks on an empty PATH: tools fail with where-to-look details, node st
   const dir = mkdtempSync(join(tmpdir(), 'boqo-doctor-'));
   try {
     const checks = await withEnv({ PATH: dir, Path: dir, BOQO_HOME: dir, BOQO_WHISPER_MODEL: undefined, HOME: dir, USERPROFILE: dir }, () =>
-      runChecks({ nodeMin: 20, whisper: 'required', streamlink: true }),
+      runChecks({ nodeMin: 20, whisper: 'required', streamlink: true, env: process.env }),
     );
     const c = byName(checks);
     assert.deepEqual(checks.map((x) => x.name), ['node', 'ffmpeg', 'ffmpeg-filters', 'ffmpeg-https', 'yt-dlp', 'whisper', 'whisper-model', 'streamlink']);
@@ -154,7 +169,7 @@ test('runChecks: node too old fails; whisper optional and no streamlink flag', a
   const dir = mkdtempSync(join(tmpdir(), 'boqo-doctor-'));
   try {
     const checks = await withEnv({ PATH: dir, Path: dir, BOQO_HOME: dir, BOQO_WHISPER_MODEL: undefined, HOME: dir, USERPROFILE: dir }, () =>
-      runChecks({ nodeMin: 99, whisper: 'optional' }),
+      runChecks({ nodeMin: 99, whisper: 'optional', env: process.env }),
     );
     const c = byName(checks);
     assert.equal(c.node.ok, false);
@@ -196,7 +211,7 @@ test('runChecks with fake tools: everything present is ok, details carry version
   writeFileSync(join(home, 'ggml-base.bin'), 'x');
   try {
     const checks = await withEnv({ PATH: bin, BOQO_HOME: home, BOQO_WHISPER_MODEL: join(home, 'ggml-base.bin') }, () =>
-      runChecks({ nodeMin: 20, whisper: 'required', streamlink: true }),
+      runChecks({ nodeMin: 20, whisper: 'required', streamlink: true, env: process.env }),
     );
     for (const x of checks) assert.equal(x.ok, true, `${x.name}: ${x.detail}`);
     const c = byName(checks);
@@ -218,7 +233,7 @@ test('runChecks: an ffmpeg that dies with SIGSEGV on HTTPS fails ffmpeg-https wi
     'yt-dlp': 'echo 2026.10.26',
   });
   try {
-    const checks = await withEnv({ PATH: bin, BOQO_HOME: bin, BOQO_WHISPER_MODEL: undefined }, () => runChecks({ nodeMin: 20, whisper: 'optional' }));
+    const checks = await withEnv({ PATH: bin, BOQO_HOME: bin, BOQO_WHISPER_MODEL: undefined }, () => runChecks({ nodeMin: 20, whisper: 'optional', env: process.env }));
     const c = byName(checks);
     assert.equal(c.ffmpeg.ok, true);
     assert.equal(c['ffmpeg-filters'].ok, true);
@@ -235,7 +250,7 @@ test('runChecks: an HTTPS failure that is not a crash is "no network or blocked"
   const net = fakeBin({ ffmpeg: FFMPEG_OK.replace('*https://*) exit 0;;', () => '*https://*) echo "Connection refused" >&2; exit 1;;') });
   const tls = fakeBin({ ffmpeg: FFMPEG_OK.replace('*https://*) exit 0;;', () => '*https://*) echo "Protocol not found" >&2; exit 1;;') });
   try {
-    const opts = { nodeMin: 20, whisper: 'optional' };
+    const opts = { nodeMin: 20, whisper: 'optional', env: process.env };
     const a = byName(await withEnv({ PATH: net, BOQO_HOME: net, BOQO_WHISPER_MODEL: undefined }, () => runChecks(opts)));
     assert.equal(a['ffmpeg-https'].ok, false);
     assert.equal(a['ffmpeg-https'].detail, 'no network or blocked');
@@ -254,7 +269,7 @@ test('runChecks: ffmpeg without libass fails ffmpeg-filters; an old yt-dlp fails
     'yt-dlp': 'echo 2025.1.1',
   });
   try {
-    const checks = await withEnv({ PATH: bin, BOQO_HOME: bin, BOQO_WHISPER_MODEL: undefined }, () => runChecks({ nodeMin: 20, whisper: 'optional' }));
+    const checks = await withEnv({ PATH: bin, BOQO_HOME: bin, BOQO_WHISPER_MODEL: undefined }, () => runChecks({ nodeMin: 20, whisper: 'optional', env: process.env }));
     const c = byName(checks);
     assert.equal(c['ffmpeg-filters'].ok, false);
     assert.match(c['ffmpeg-filters'].detail, /\bass\b/);
@@ -262,6 +277,24 @@ test('runChecks: ffmpeg without libass fails ffmpeg-filters; an old yt-dlp fails
     assert.match(c['yt-dlp'].detail, /older than 2026\.10\.26/);
   } finally {
     rmSync(bin, { recursive: true, force: true });
+  }
+});
+
+test('runChecks looks for and runs the tools on the PATH of the env it is given', posix, async () => {
+  const bin = fakeBin({ ffmpeg: FFMPEG_OK, 'yt-dlp': 'echo 2026.10.26' });
+  const empty = mkdtempSync(join(tmpdir(), 'boqo-doctor-empty-'));
+  try {
+    const checks = await withEnv({ PATH: empty, BOQO_HOME: empty, BOQO_WHISPER_MODEL: undefined }, () =>
+      runChecks({ nodeMin: 20, whisper: 'optional', env: { ...process.env, PATH: bin } }),
+    );
+    const c = byName(checks);
+    assert.equal(c.ffmpeg.ok, true, c.ffmpeg.detail);
+    assert.equal(c.ffmpeg.detail, `ffmpeg 7.1.1 at ${join(bin, 'ffmpeg')}`);
+    assert.equal(c['ffmpeg-filters'].ok, true);
+    assert.equal(c['yt-dlp'].ok, true);
+  } finally {
+    rmSync(bin, { recursive: true, force: true });
+    rmSync(empty, { recursive: true, force: true });
   }
 });
 

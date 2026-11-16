@@ -5,6 +5,7 @@ import { mkdtempSync, writeFileSync, mkdirSync, rmSync, readdirSync, existsSync 
 import { tmpdir } from 'node:os';
 import { join, basename } from 'node:path';
 import { findModel, whisperArgs, transcribe } from '../engine/asr.mjs';
+import { toolEnv } from '../engine/env.mjs';
 
 const tmp = () => mkdtempSync(join(tmpdir(), 'boqo-asr-test-'));
 const touch = (dir, name) => {
@@ -133,7 +134,7 @@ test('transcribe: a bad range is refused', async () => {
   }
 });
 
-const has = (cmd, args) => spawnSync(cmd, args, { stdio: 'ignore' }).error === undefined;
+const has = (cmd, args) => spawnSync(cmd, args, { stdio: 'ignore', env: toolEnv() }).error === undefined;
 const live = findModel() && has('whisper-cli', ['-h']) && has('ffmpeg', ['-version']) && has('espeak-ng', ['--version']);
 
 test('transcribe: real speech gives words, offset by the cut start, temp files removed', { skip: !live && 'needs whisper-cli, a model, ffmpeg and espeak-ng' }, async () => {

@@ -55,4 +55,4 @@ A demo GIF is coming.
 
 ## Licence
 
-MIT, see [LICENSE](LICENSE). © SSD Technologies LLC. Made by [boqo](https://boqo.ai).
+MIT, see [LICENSE](LICENSE). © PRAC INC. Made by [boqo](https://boqo.ai).

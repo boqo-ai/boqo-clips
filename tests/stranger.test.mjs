@@ -211,6 +211,34 @@ test('frames with --run and --n writes the clip\'s transcript in the clip\'s own
   rmSync(run, { recursive: true });
 });
 
+test('frames stamps the transcript on the rendered window: its settled end and its pause cuts (stored by the render)', { skip: skipFfmpeg }, () => {
+  const dir = tmp();
+  // Rendered from 100 to 126 (the end settled from 130), with 105-108 of the window cut out (window seconds 5-8).
+  const { run } = runWith(ANNOTATION, [{ ...row(1), window: { start: 100, end: 126 }, cuts: [{ start: 5, end: 8 }] }]);
+  const segs = [
+    { start: 100, end: 104, text: 'first line', speaker: null },
+    { start: 112, end: 118, text: 'second line', speaker: null },
+    { start: 127, end: 129, text: 'past the settled end', speaker: null },
+  ];
+  writeFileSync(join(run, 'segments.json'), JSON.stringify(segs));
+  const out = join(dir, 'f');
+  const r = tool('frames', '--clip', synthetic(dir, 30), '--dir', out, '--run', run, '--n', '1');
+  assert.equal(r.status, 0, r.stdout);
+  assert.equal(readFileSync(join(out, 'transcript.txt'), 'utf8'), '[0.0s] first line\n[9.0s] second line');
+  rmSync(dir, { recursive: true });
+  rmSync(run, { recursive: true });
+});
+
+test('record refuses a clip that is not rendered, and changes nothing', () => {
+  const { run, file } = runWith(ANNOTATION, [{ ...row(1), rendered: false }]);
+  const before = readFileSync(join(run, 'clips.json'), 'utf8');
+  const r = tool('record', '--run', run, '--n', '1', '--file', file);
+  assert.equal(r.status, 1);
+  assert.match(lastJson(r).errors[0], /clip 1 is not rendered/);
+  assert.equal(readFileSync(join(run, 'clips.json'), 'utf8'), before);
+  rmSync(run, { recursive: true });
+});
+
 test('frames clears an earlier run\'s extra frames and leaves no work folder', { skip: skipFfmpeg }, () => {
   const dir = tmp();
   const out = join(dir, 'f');

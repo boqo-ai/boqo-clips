@@ -17,7 +17,7 @@ import { DEFAULT_TEMPLATE_HEADLINE, DEFAULT_TEMPLATE_LOGO, logoProblems } from '
 
 export const BRAND_VERSION = 2;
 export const RATIOS = ['9:16'];
-// the v1 vocabulary: read by `migrateV1`, and by render.mjs until it reads the v2 kit (`legacyView`)
+// the v1 vocabulary, read by `migrateV1`
 export const FONTS = ['Inter', 'Anton'];
 export const PRESETS = ['karaoke', 'punch', 'clean', 'highlight'];
 export const CORNERS = ['tl', 'tr', 'bl', 'br'];
@@ -319,27 +319,6 @@ export function validateBrand(b) {
   return validateBrandV2(b);
 }
 
-/**
- * The v2 kit in the shape render.mjs and captions-ass.mjs read until the render takes the v2 kit (remove with
- * captions-ass.mjs): a style the four v1 presets do not have draws as karaoke, the font is always Inter.
- */
-export function legacyView(brand) {
-  const c = brand.captions;
-  const preset = PRESETS.includes(c.style) ? c.style : 'karaoke';
-  const left = brand.logo?.anchor.endsWith('left');
-  const top = brand.logo?.anchor.startsWith('top');
-  return {
-    name: brand.name,
-    colors: { text: c.baseColour ?? '#FFFFFF', accent: c.accentColours?.[0] ?? '#C8FF4D' },
-    font: 'Inter',
-    captions: { preset, position: c.positionFraction ?? 0.72, size: c.sizeScale ?? 1 },
-    logo: brand.logo
-      ? { file: brand.logo.file, corner: `${top ? 't' : 'b'}${left ? 'l' : 'r'}`, scale: Math.min(0.3, Math.max(0.08, brand.logo.width)) }
-      : { file: null, corner: 'tr', scale: 0.16 },
-    hook: brand.headline !== null,
-  };
-}
-
 function checkName(name) {
   const n = typeof name === 'string' ? name.trim() : name;
   if (typeof n !== 'string' || !NAME_RE.test(n)) {
@@ -423,8 +402,10 @@ export async function setDefaultBrand(name) {
 }
 
 // The kit by name, or the default kit, always as a v2 brand (a v1 file is converted in memory and left as it is on
-// disk; the next saveBrand writes it as v2). logo.file comes back as an absolute path.
-export async function loadBrand(name) {
+// disk; the next saveBrand writes it as v2). logo.file comes back as an absolute path. A logo file that is missing
+// throws, unless `missingLogo` is 'keep': the render passes that, keeps the path, and draws the clip without the logo
+// and with a note (a missing logo never fails a render).
+export async function loadBrand(name, { missingLogo = 'throw' } = {}) {
   let n;
   if (name === undefined) {
     n = await defaultBrandName();
@@ -458,7 +439,7 @@ export async function loadBrand(name) {
   }
   if (brand.logo?.file != null) {
     const abs = join(kitDir(n), basename(brand.logo.file));
-    if (!(await exists(abs))) {
+    if (missingLogo !== 'keep' && !(await exists(abs))) {
       throw new Error(`brand "${n}": logo file ${basename(brand.logo.file)} is missing - save the kit again with --logo`);
     }
     brand.logo.file = abs;

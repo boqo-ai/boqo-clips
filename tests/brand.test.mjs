@@ -11,7 +11,6 @@ import {
   defaultBrand,
   defaultBrandV1,
   listBrands,
-  legacyView,
   loadBrand,
   migrateV1,
   saveBrand,
@@ -229,6 +228,16 @@ test('a kit whose logo file is gone throws instead of loading without a logo', a
   rmSync(join(dir, 'logo.png'));
   await assert.rejects(loadBrand('mine'), /brand "mine": logo file logo\.png is missing .* --logo/);
   assert.ok(home);
+});
+
+test('for the render, a kit whose logo file is gone loads with the path kept (the render notes it and draws no logo)', async () => {
+  tempHome();
+  const src = join(mkdtempSync(join(tmpdir(), 'boqo-logo-')), 'l.png');
+  writeFileSync(src, PNG);
+  const dir = await saveBrand(mk(), src);
+  rmSync(join(dir, 'logo.png'));
+  const b = await loadBrand('mine', { missingLogo: 'keep' });
+  assert.equal(b.logo.file, join(dir, 'logo.png'));
 });
 
 test('a save that fails on its logo leaves the saved kit as it was', async () => {
@@ -508,23 +517,6 @@ test('a logo given with the kit logo null turns the logo on at the Default value
   assert.equal(b.logo.anchor, 'bottom-left');
   assert.equal(b.logo.opacity, 0.35);
   assert.ok(isAbsolute(b.logo.file));
-});
-
-test('legacyView (until the render reads v2): the v1 fields the render reads, from a v2 kit', () => {
-  const v = legacyView({ ...defaultBrand('x'), logo: { ...defaultBrand('x').logo, anchor: 'top-right', width: 0.6 } });
-  assert.deepEqual(v, {
-    name: 'x',
-    colors: { text: '#FFFFFF', accent: '#E900FA' },
-    font: 'Inter',
-    captions: { preset: 'punch', position: 0.7, size: 1 },
-    logo: { file: null, corner: 'tr', scale: 0.3 },
-    hook: true,
-  });
-  assert.equal(legacyView(defaultBrand('x')).logo.corner, 'bl');
-  assert.equal(legacyView({ ...defaultBrand('x'), captions: { style: 'neon' }, logo: null, headline: null }).captions.preset, 'karaoke');
-  assert.equal(legacyView({ ...defaultBrand('x'), logo: null, headline: null }).hook, false);
-  const round = legacyView(migrateV1(defaultBrandV1('x')));
-  assert.deepEqual(round, defaultBrandV1('x'));
 });
 
 test('a converted v1 kit loads with migratedFrom 1 and notes saying what changed; nothing is written', async () => {

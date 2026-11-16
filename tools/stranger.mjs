@@ -9,7 +9,7 @@
 //           the closing text block). --run and --n (the clip's row in <run>/clips.json, <run>/segments.json for the
 //           lines) give the transcript; without them transcript.txt is empty. Prints {"frames":n,"turn":"<path>"}.
 //   record  checks the agent's annotation (<file>, the 20 fields of hosted's AnnotationSchema) and stores
-//           `judgment: {overall, why, annotation}` in clip <n>'s row of <run>/clips.json, `overall` from
+//           `judgment: {overall, why, annotation}` in clip <n>'s row of <run>/clips.json (a rendered clip only), `overall` from
 //           overall_quality_judgment (1..5) and `why` from one_line_why, as hosted's order reads them. Prints
 //           {"ok":true,"n":n,"overall":o}, or {"ok":false,"errors":[...]} (exit 1) and changes nothing.
 // Exit 1 with {"error":"..."} (frames) or {"ok":false,"errors":[...]} (record) on failure.
@@ -120,12 +120,16 @@ async function frames(argv) {
     const segs = readJson(join(run, 'segments.json'), 'segments.json');
     if (segs.err) failFrames(segs.err);
     if (!Array.isArray(segs.value)) failFrames('segments.json must hold an array');
-    // The skill renders the window as picked, with no cuts and no hook: the timeline is the plain one.
+    // The window as rendered (tools/render.mjs stores it: the settled end, the pause cuts), so each line is stamped on
+    // the file's own clock, as hosted's `clipTimelineFromRow` and `renderStartSec ?? startSec` do. The skill
+    // renders no hook. A row rendered before the render stored them reads as the window as picked, uncut.
+    const window = row.window && Number.isFinite(row.window.start) && Number.isFinite(row.window.end) ? row.window : { start: row.start, end: row.end };
+    const cuts = Array.isArray(row.cuts) ? row.cuts : [];
     transcript = strangerTranscript({
       segments: segs.value,
-      timeline: { originSec: row.start, cuts: [], hook: null },
-      windowStartSec: row.start,
-      windowEndSec: row.end,
+      timeline: { originSec: window.start, cuts, hook: null },
+      windowStartSec: window.start,
+      windowEndSec: window.end,
     });
   }
 
@@ -198,6 +202,8 @@ function record(argv) {
   if (rec.err) failRecord([rec.err]);
   const row = Array.isArray(rec.value?.clips) ? rec.value.clips.find((c) => c?.n === n) : undefined;
   if (!row) failRecord([`clips.json has no clip ${n}`]);
+  // A judgment is of the rendered file: an unrendered clip has none to judge, and the final order ranks rendered clips only.
+  if (row.rendered !== true) failRecord([`clip ${n} is not rendered: render it first (render.mjs --run <run> --n ${n})`]);
 
   row.judgment = {
     overall: parsed.data.overall_quality_judgment,

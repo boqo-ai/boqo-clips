@@ -72,7 +72,8 @@ const lettersOf = (axes) => ['hook', 'flow', 'standalone', 'value'].map((k) => s
  *   `1 · 87 exceptional · A B C D · Replayed · top 3% · Keeps watching · 4/5 · Needs context · <title> · 0:42`
  * `Replayed` appears only when the video has a heatmap (the row's replay is not null), `Keeps watching` only when a
  * judgment is stored, and the stand-alone chip (`Opens on context` / `Needs context`) only when hosted shows one. Every
- * chip is hosted's own `handbookChips` text. The clip's place in the order is the rank.
+ * chip is hosted's own `handbookChips` text. The clip's place in the order is the rank. The length is the rendered file's
+ * (`seconds`, after its pauses were cut) when the render stored it.
  */
 export function summaryLines(record) {
   const order = finalOrder(record.clips);
@@ -85,7 +86,7 @@ export function summaryLines(record) {
     }
     const chips = handbookChips({ startSec: c.start, replay: replayBlob(c.replay), stranger: strangerBlob(c.judgment), standaloneTest: c.standalone ?? null });
     lines.push(
-      [`${i + 1}`, `${c.score} ${scoreBand(c.score)}`, lettersOf(c.axes), ...chips.map((x) => x.text), c.title, clock(c.end - c.start)].join(' · '),
+      [`${i + 1}`, `${c.score} ${scoreBand(c.score)}`, lettersOf(c.axes), ...chips.map((x) => x.text), c.title, clock(Number.isFinite(c.seconds) ? c.seconds : c.end - c.start)].join(' · '),
     );
   });
   if (unrendered > 0) lines.push(`+${unrendered} not rendered`);

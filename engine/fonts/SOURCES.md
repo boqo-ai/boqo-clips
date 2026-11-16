@@ -2,8 +2,7 @@
 
 The faces boqo's worker image installs (`apps/worker/Dockerfile` at boqo-ai/boqo `bcc9d99cc`), so captions draw here
 as they draw there. `engine/boqo/caption-faces.mjs` (`CAPTION_FACES`) names them by family; the render hands this
-folder to libass as `fontsdir`, and libass finds each face by its family name. `engine/captions-ass.mjs` (until A14
-removes it) reads `Inter-Bold.otf` and `Anton-Regular.ttf` from here too.
+folder to libass as `fontsdir`, and libass finds each face by its family name.
 
 Every file is redistributable with the licence file beside it: SIL Open Font License 1.1 (OFL), Apache License 2.0,
 or, for DejaVu Sans, the Bitstream Vera licence with the DejaVu changes in the public domain (free to copy and

@@ -11,7 +11,7 @@
 // Not held by a golden of its own: tests/headline.test.mjs holds `headlineTrack` to boqo's own steps (golden
 // build-headline-ass) and `logoStage` to `logoChain` and `logoOverlayPosition` (golden logo-chain). Imports no
 // child_process.
-import { BrandHeadline, headlineStyleFor, headlineText } from './boqo/headline.mjs';
+import { BrandHeadline, headlineStyleFor, headlineText, headlineWindow } from './boqo/headline.mjs';
 import { buildHeadlineAss } from './boqo/headline-ass.mjs';
 import { logoChain, logoFits, logoOverlayPosition, shiftLogoTiming } from './boqo/brand-logo.mjs';
 import { DEFAULT_OUTPUT } from './captions.mjs';
@@ -114,6 +114,32 @@ export function headlineTrack(o) {
   if (text === null) return null;
   const { ass, layout } = buildHeadlineAss(text, parsed.data, durationSec, frame, leadSec, headlineStyleFor(parsed.data));
   return { ass, layout, text };
+}
+
+/**
+ * The clip's headline as a text element for the render: `{ text, settings, style, span }`, the shape boqo's
+ * pipeline.ts hands `panelsTextElements` and `buildTextAss` (its `drawable` over the clip's one text element, the
+ * brand headline: `range` null, so its span is `elementSpan`'s, the headline's own window), or `null` when it draws
+ * none: no headline block, an empty source, or a window with nothing inside the clip (`elementSpan` null).
+ * `buildTextAss([element], durationSec, output)` on it writes the file `headlineTrack` writes.
+ *
+ * Takes `headlineTrack`'s `title`, `hook`, `headline` and `durationSec`.
+ */
+export function headlineElement(o) {
+  const { title, hook = null, durationSec } = o ?? {};
+  if (typeof title !== 'string') fail('title must be a string');
+  if (hook !== null && typeof hook !== 'string') fail('hook must be a string or null');
+  if (!finite(durationSec) || !(durationSec > 0)) fail(`durationSec must be positive, got ${durationSec}`);
+  const block = o.headline === undefined ? DEFAULT_TEMPLATE_HEADLINE : o.headline;
+  if (block === null) return null;
+  const parsed = BrandHeadline.safeParse(block);
+  if (!parsed.success) fail(`the brand's headline does not parse: ${parsed.error.issues.map((i) => `${i.path.join('.') || '(block)'}: ${i.message}`).join('; ')}`);
+  const text = headlineText(parsed.data, { title, hook });
+  if (text === null) return null;
+  // text-layers.ts `elementSpan` for an element with `range` null: the headline's window, or null when it is empty.
+  const span = headlineWindow(parsed.data, durationSec);
+  if (!(span.startSec < span.endSec)) return null;
+  return { text, settings: parsed.data, style: headlineStyleFor(parsed.data), span };
 }
 
 /**

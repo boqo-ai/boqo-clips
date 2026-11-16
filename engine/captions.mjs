@@ -135,12 +135,7 @@ export function captionsTrack(o) {
   const output = o.output ?? DEFAULT_OUTPUT;
   if (!Number.isInteger(output?.width) || !Number.isInteger(output?.height) || output.width <= 0 || output.height <= 0) fail('output must be { width, height } in whole pixels');
 
-  let preset = o.preset;
-  if (preset === undefined) {
-    const parsed = BrandCaptions.safeParse(o.brandCaptions ?? DEFAULT_TEMPLATE_CAPTIONS);
-    if (!parsed.success) fail(`the brand's captions do not parse: ${parsed.error.issues.map((i) => `${i.path.join('.') || '(block)'}: ${i.message}`).join('; ')}`);
-    preset = resolveProjectCaptions(BRAND_CAPTION_KEY, parsed.data).preset;
-  }
+  const preset = o.preset ?? brandCaptionPreset(o.brandCaptions);
 
   // captionWordsFor's `indexedWindow`: every word overlapping the window, with its index, then wordsWithin's filter,
   // rebase and overrun clamp; then the cut map.
@@ -152,6 +147,17 @@ export function captionsTrack(o) {
   const words = wordsThroughCuts(wordsWithin(indexed, clipStart, clipEnd), cuts);
   const built = buildCaptions(words, preset, output, sceneCuts, emphasisForWords(emphasis, words));
   return { ...built, preset, words };
+}
+
+/**
+ * The style a brand's caption block draws in: `resolveProjectCaptions(BRAND_CAPTION_KEY, captions)`, as a project on
+ * the brand's captions resolves; boqo's Default template's when `brandCaptions` is absent. Throws a TypeError naming
+ * every problem when the block does not parse.
+ */
+export function brandCaptionPreset(brandCaptions) {
+  const parsed = BrandCaptions.safeParse(brandCaptions ?? DEFAULT_TEMPLATE_CAPTIONS);
+  if (!parsed.success) fail(`the brand's captions do not parse: ${parsed.error.issues.map((i) => `${i.path.join('.') || '(block)'}: ${i.message}`).join('; ')}`);
+  return resolveProjectCaptions(BRAND_CAPTION_KEY, parsed.data).preset;
 }
 
 /**

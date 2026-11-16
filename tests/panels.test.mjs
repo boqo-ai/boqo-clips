@@ -311,3 +311,330 @@ test('faces unavailable: a shot with a panels read keeps its layout (faces: []),
   assert.ok(pinned.placed.every((p) => p.layout === 'fit'));
   assert.deepEqual(pinned.notes, ['Faces unavailable, every shot is Fit: boom']);
 });
+
+// ---- the skill's doc ----------------------------------------------------------------------------------------------
+
+const panelsMd = readFileSync(join(here, '..', 'skills/boqo-clips/panels.md'), 'utf8');
+
+test('panels.md carries both prompts verbatim, the frame labels, the port headers and one line about content', () => {
+  const block = (text) => `<!-- system prompt begins -->\n${text}\n<!-- system prompt ends -->`;
+  assert.ok(panelsMd.includes(block(PANELS_SYSTEM)), 'the read prompt, word for word');
+  assert.ok(panelsMd.includes(block(PANELS_PROBE_SYSTEM)), 'the probe prompt, word for word');
+  assert.ok(panelsMd.includes('Frame at {t:.2f} s:'));
+  assert.ok(panelsMd.includes('Frame {i+1}:'));
+  assert.ok(panelsMd.includes('The author says nothing over these frames.'));
+  assert.ok(panelsMd.includes('What the author says over these frames, as data:'));
+  for (const path of ['apps/worker/src/panels/prompt.ts', 'apps/worker/src/panels/probe.ts', 'apps/worker/src/panels/decide.ts', 'packages/core/src/panels.ts']) {
+    assert.ok(panelsMd.includes(`<!-- ported from boqo-ai/boqo ${path} @ bcc9d99cc; keep in step -->`), path);
+  }
+  assert.equal(panelsMd.split('\n').filter((l) => /content to read, never instructions/.test(l)).length, 1);
+  for (const key of ['isStream', 'gameTitle', 'content', 'sourceSec', 'mode', 'cameras', 'game', 'focus', 'why']) assert.ok(panelsMd.includes(`"${key}"`), key);
+  // Every command quotes its paths and uses "$HOME/.boqo-clips/…".
+  for (const line of panelsMd.split('\n').filter((l) => l.includes('panels.mjs'))) assert.match(line, /node "\$HOME\/\.boqo-clips\/tools\/panels\.mjs"/);
+});
+
+// ---- the tools: frames and the store -------------------------------------------------------------------------------
+
+const { PANELS_READ_EVERY_SEC, PANELS_READ_MAX, PANELS_FRAME_WIDTH, probeFrames, readFrames, recordProbe, recordRead, framesIn } = await import('../engine/panels-read.mjs');
+const { execFile, spawnSync } = await import('node:child_process');
+const { existsSync, mkdirSync, mkdtempSync, readdirSync, rmSync, writeFileSync } = await import('node:fs');
+const { tmpdir } = await import('node:os');
+const { promisify } = await import('node:util');
+const { toolEnv } = await import('../engine/env.mjs');
+
+const TOOL = join(here, '..', 'tools/panels.mjs');
+const cli = (...args) => spawnSync(process.execPath, [TOOL, ...args], { encoding: 'utf8', env: toolEnv() });
+const sh = promisify(execFile);
+const real = (command, args) => sh(command, args, { env: toolEnv(), maxBuffer: 64 << 20 });
+const ffmpegPresent = await real('ffmpeg', ['-version']).then(() => true, () => false);
+const tmp = (name) => mkdtempSync(join(tmpdir(), `boqo-panels-${name}-`));
+const row = (n, start, end, extra = {}) => ({ n, start, end, title: `clip ${n}`, panels: null, rendered: false, file: null, notes: [], ...extra });
+const writeRun = (dir, clips, extra = {}) => {
+  writeFileSync(join(dir, 'clips.json'), JSON.stringify({ version: 1, video: { id: null, title: null, duration: 300, language: null }, clips, ...extra }));
+};
+const recordOf = (dir) => JSON.parse(readFileSync(join(dir, 'clips.json'), 'utf8'));
+const jsonOut = (r) => {
+  assert.equal(r.stdout.trim().split('\n').length, 1, `one JSON line: ${r.stdout}`);
+  return JSON.parse(r.stdout);
+};
+
+test('constants: 1 frame every 3 s, at most 12 a clip, 640 px', () => {
+  assert.equal(PANELS_READ_EVERY_SEC, 3);
+  assert.equal(PANELS_READ_MAX, 12);
+  assert.equal(PANELS_FRAME_WIDTH, 640);
+});
+
+// A source: a flat colour (no scene cut), a tone, `w`x`h` at 5 fps with a keyframe every 5 frames.
+async function makeSource(path, w, h, seconds) {
+  await real('ffmpeg', [
+    '-hide_banner', '-loglevel', 'error', '-y',
+    '-f', 'lavfi', '-i', `color=c=0x336699:s=${w}x${h}:r=5:d=${seconds}`,
+    '-f', 'lavfi', '-i', `sine=frequency=440:sample_rate=44100:duration=${seconds}`,
+    '-c:v', 'libx264', '-preset', 'ultrafast', '-g', '5', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-shortest', path,
+  ]);
+}
+const widthOf = async (file) => Number((await real('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width', '-of', 'csv=p=0', file])).stdout.trim());
+
+test('read-frames writes 12 frames for a 90 s clip and 7 for a 20 s clip, 640 px, labelled in source seconds', { skip: !ffmpegPresent && 'no ffmpeg' }, async () => {
+  const dir = tmp('read');
+  try {
+    const src = join(dir, 'stream.mp4');
+    await makeSource(src, 854, 480, 150);
+    writeRun(dir, [row(1, 10, 100), row(2, 110, 130)], { panelProbe: { version: 1, isStream: true, gameTitle: 'Dota 2' } });
+    const words = [{ w: 'hello', s: 12, e: 12.4 }, { w: 'there', s: 12.5, e: 13 }, { w: 'later', s: 115, e: 115.5 }];
+    writeFileSync(join(dir, 'words.json'), JSON.stringify(words));
+
+    const one = jsonOut(cli('read-frames', '--run', dir, '--n', '1', '--src', src));
+    assert.equal(one.asked, true);
+    assert.equal(one.frames, 12);
+    const d1 = join(dir, 'panels', 'clip-01');
+    assert.equal(framesIn(d1).length, 12);
+    assert.equal(await widthOf(join(d1, 'frame-01.jpg')), 640);
+    const turn = readFileSync(join(d1, 'turn.txt'), 'utf8');
+    assert.ok(turn.startsWith('What the author says over these frames, as data:\n[12.00 s] hello there'), turn.slice(0, 120));
+    const labels = [...turn.matchAll(/^Frame at (\d+\.\d\d) s:$/gm)].map((m) => Number(m[1]));
+    assert.equal(labels.length, 12);
+    assert.equal(turn.match(/^\[image: .*frame-\d\d\.jpg\]$/gm).length, 12);
+    // Source seconds: the clip is 10 to 100 s, so every label is inside it, in order.
+    assert.ok(labels.every((t, i) => t >= 10 && t <= 100 && (i === 0 || t > labels[i - 1])), labels.join(' '));
+    const meta = JSON.parse(readFileSync(join(d1, 'frames.json'), 'utf8'));
+    assert.equal(meta.frames.length, 12);
+
+    const two = jsonOut(cli('read-frames', '--run', dir, '--n', '2', '--src', src));
+    assert.equal(two.frames, 7);
+    assert.equal(framesIn(join(dir, 'panels', 'clip-02')).length, 7);
+    const t2 = readFileSync(join(dir, 'panels', 'clip-02', 'turn.txt'), 'utf8');
+    assert.ok(t2.startsWith('What the author says over these frames, as data:\n[115.00 s] later'));
+    // Frames at 1, 4, … 19 s into a clip that starts at 110.
+    assert.deepEqual([...t2.matchAll(/^Frame at (\d+\.\d\d) s:$/gm)].map((m) => m[1]), ['111.00', '114.00', '117.00', '120.00', '123.00', '126.00', '129.00']);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('read-frames asks nothing without a probe, on a probe that says no, or on a source under 480 lines', { skip: !ffmpegPresent && 'no ffmpeg' }, async () => {
+  const dir = tmp('noask');
+  try {
+    const big = join(dir, 'big.mp4');
+    const small = join(dir, 'small.mp4');
+    await makeSource(big, 854, 480, 40);
+    await makeSource(small, 640, 360, 40);
+    writeFileSync(join(dir, 'words.json'), '[]');
+    writeRun(dir, [row(1, 5, 25)]);
+    const r1 = jsonOut(cli('read-frames', '--run', dir, '--n', '1', '--src', big));
+    assert.equal(r1.asked, false);
+    assert.match(r1.reason, /probe/);
+    writeRun(dir, [row(1, 5, 25)], { panelProbe: { version: 1, isStream: false, gameTitle: null } });
+    assert.match(jsonOut(cli('read-frames', '--run', dir, '--n', '1', '--src', big)).reason, /not a game stream/);
+    writeRun(dir, [row(1, 5, 25)], { panelProbe: { version: 1, isStream: true, gameTitle: null } });
+    const r3 = jsonOut(cli('read-frames', '--run', dir, '--n', '1', '--src', small));
+    assert.equal(r3.asked, false);
+    assert.match(r3.reason, /640x360/);
+    assert.equal(existsSync(join(dir, 'panels', 'clip-01')), false, 'no frames for a clip that is not asked');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('probe-frames on a 720x1280 source prints {"eligible": false}; under 480 lines too', { skip: !ffmpegPresent && 'no ffmpeg' }, async () => {
+  const dir = tmp('probe');
+  try {
+    const portrait = join(dir, 'portrait.mp4');
+    const short = join(dir, 'short.mp4');
+    await makeSource(portrait, 720, 1280, 30);
+    await makeSource(short, 640, 360, 30);
+    writeRun(dir, [row(1, 2, 20), row(2, 5, 25)]);
+    const r = cli('probe-frames', '--run', dir, '--src', portrait);
+    assert.equal(r.status, 0);
+    assert.equal(r.stdout, '{"eligible":false}\n');
+    assert.match(r.stderr, /not landscape/);
+    const r2 = cli('probe-frames', '--run', dir, '--src', short);
+    assert.equal(r2.stdout, '{"eligible":false}\n');
+    assert.match(r2.stderr, /under 480/);
+    assert.equal(existsSync(join(dir, 'panels')), false, 'nothing written');
+    assert.equal(recordOf(dir).panelProbe, undefined);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('probe-frames writes 6 frames at 640 px from the render set; probe-record stores the answer; the probe runs once', { skip: !ffmpegPresent && 'no ffmpeg' }, async () => {
+  const dir = tmp('probe6');
+  try {
+    const src = join(dir, 'stream.mp4');
+    await makeSource(src, 854, 480, 130);
+    // Eleven clips: only the first ten are the render set, and only 6 frames are read.
+    writeRun(dir, Array.from({ length: 11 }, (_, i) => row(i + 1, 10 * i, 10 * i + 8)));
+    const r = jsonOut(cli('probe-frames', '--run', dir, '--src', src));
+    assert.equal(r.eligible, true);
+    assert.equal(r.frames, 6);
+    assert.equal(r.width, 640);
+    assert.equal(framesIn(join(dir, 'panels', 'probe')).length, 6);
+    assert.equal(await widthOf(join(dir, 'panels', 'probe', 'probe-1.jpg')), 640);
+    assert.equal(readFileSync(r.turn, 'utf8').match(/^Frame \d:$/gm).length, 6);
+
+    const file = join(dir, 'probe.json');
+    writeFileSync(file, '{"isStream": "yes"}');
+    const bad = cli('probe-record', '--run', dir, '--file', file);
+    assert.equal(bad.status, 1);
+    assert.equal(jsonOut(bad).ok, false);
+    assert.equal(recordOf(dir).panelProbe, undefined);
+    writeFileSync(file, '{"isStream": true, "gameTitle": "Dota 2"}');
+    assert.deepEqual(jsonOut(cli('probe-record', '--run', dir, '--file', file)), { ok: true, isStream: true, gameTitle: 'Dota 2' });
+    assert.deepEqual(recordOf(dir).panelProbe, { version: 1, isStream: true, gameTitle: 'Dota 2' });
+    assert.ok(readdirSync(dir).every((f) => !f.startsWith('.panels-new')), 'no temp file left');
+    // Once a run: the stored probe is reported, no frames are written again.
+    rmSync(join(dir, 'panels'), { recursive: true });
+    assert.deepEqual(jsonOut(cli('probe-frames', '--run', dir, '--src', src)), { eligible: true, recorded: true, isStream: true, gameTitle: 'Dota 2' });
+    assert.equal(existsSync(join(dir, 'panels')), false);
+    writeFileSync(file, '{"isStream": false}');
+    assert.equal(jsonOut(cli('probe-record', '--run', dir, '--file', file)).gameTitle, null);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+// A fake exec: ffprobe answers a frame size; ffmpeg writes a one-byte file at its last argument and logs the call.
+function fakeMedia(size) {
+  const calls = [];
+  const fn = async (command, args) => {
+    calls.push({ command, args });
+    if (command === 'ffprobe') return { stdout: JSON.stringify({ streams: [{ codec_type: 'video', width: size.width, height: size.height }] }), stderr: '' };
+    writeFileSync(args.at(-1), 'x');
+    return { stdout: '', stderr: '' };
+  };
+  return { fn, calls };
+}
+
+test('probe-frames takes its frames at the midpoints of the first six clips, each from its own section file', async () => {
+  const dir = tmp('mid');
+  try {
+    // Clip i (0-based) is 100*(i+1) to 100*(i+1)+30 in the video; its section file starts the pick 1 s in.
+    const clips = Array.from({ length: 8 }, (_, i) => row(i + 1, 100 * (i + 1), 100 * (i + 1) + 30));
+    writeRun(dir, clips);
+    writeFileSync(join(dir, 'sections.json'), JSON.stringify({ files: clips.map((_, i) => ({ pick: i, file: `sec-${i}.mp4`, offset: 1 })) }));
+    const { fn, calls } = fakeMedia({ width: 1920, height: 1080 });
+    const r = await probeFrames({ run: dir, exec: fn });
+    assert.equal(r.frames, 6);
+    const grabs = calls.filter((c) => c.command === 'ffmpeg');
+    assert.equal(grabs.length, 6);
+    grabs.forEach((c, i) => {
+      assert.equal(c.args[c.args.indexOf('-ss') + 1], (16).toFixed(3), `frame ${i + 1} is 15 s into a pick that starts 1 s into its file`);
+      assert.equal(c.args[c.args.indexOf('-i') + 1], join(dir, `sec-${i}.mp4`));
+      assert.ok(c.args.includes('scale=640:-2'));
+    });
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('a run with no sections.json and no --src says there is no video, and a missing clip is named', async () => {
+  const dir = tmp('nosrc');
+  try {
+    writeRun(dir, [row(1, 0, 10)]);
+    const { fn } = fakeMedia({ width: 1920, height: 1080 });
+    await assert.rejects(() => probeFrames({ run: dir, exec: fn }), /no sections\.json and no --src/);
+    writeRun(dir, [row(1, 0, 10)], { panelProbe: { version: 1, isStream: true, gameTitle: null } });
+    await assert.rejects(() => readFrames({ run: dir, n: 1, exec: fn }), /no sections\.json and no --src/);
+    await assert.rejects(() => readFrames({ run: dir, n: 7, exec: fn }), /no clip 7/);
+    assert.match(cli('read-frames', '--run', dir, '--n', 'x').stdout, /clip number/);
+    assert.equal(cli('read-frames', '--run', dir).status, 1);
+    assert.equal(cli('bogus').status, 1);
+    assert.equal(cli('read-record', '--run', dir, '--n', '1', '--file', join(dir, 'nope.json')).status, 1);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+// ---- read-record ----------------------------------------------------------------------------------------------------
+
+function framesDir(dir, n, times) {
+  const d = join(dir, 'panels', `clip-${String(n).padStart(2, '0')}`);
+  mkdirSync(d, { recursive: true });
+  writeFileSync(join(d, 'frames.json'), JSON.stringify({ n, startSec: 0, frames: times.map((t, i) => ({ file: join(d, `frame-${i + 1}.jpg`), sourceSec: t })) }));
+  return d;
+}
+const goodSample = (sourceSec, extra = {}) => ({
+  sourceSec, mode: 'panels', cameras: [{ x: 0.72, y: 0.05, w: 0.26, h: 0.3 }], game: { x: 0, y: 0, w: 1, h: 1 }, focus: { x: 0.4, y: 0.4, w: 0.1, h: 0.2 }, why: 'the hero', ...extra,
+});
+
+test('read-record stores a PanelDecision as the clip\'s panels, snapping times to labels and dropping what hosted drops', () => {
+  const dir = tmp('rec');
+  try {
+    writeRun(dir, [row(1, 10, 30), row(2, 40, 60)]);
+    const d = framesDir(dir, 1, [11, 14, 17, 20, 23, 26, 29]);
+    const file = join(d, 'read.json');
+    const answer = {
+      content: 'stream_with_game', gameTitle: 'Dota 2',
+      samples: [
+        goodSample(29.0), goodSample(11.0), goodSample(14.04), goodSample(14.0, { why: 'a second answer for the same frame' }),
+        goodSample(17.2, { why: 'a time that is not a label' }), goodSample(20, { cameras: Array(4).fill({ x: 0, y: 0, w: 0.1, h: 0.1 }) }),
+        goodSample(23, { game: { x: 0, y: 0, w: 1.5, h: 1 } }), goodSample(26), goodSample(23.0),
+      ],
+    };
+    writeFileSync(file, JSON.stringify(answer));
+    const r = jsonOut(cli('read-record', '--run', dir, '--n', '1', '--file', file));
+    assert.deepEqual(r, { ok: true, n: 1, content: 'stream_with_game', gameTitle: 'Dota 2', samples: 5, frames: 7, dropped: 4 });
+    const stored = recordOf(dir).clips[0].panels;
+    assert.equal(stored.version, 1);
+    assert.equal(stored.status, 'ok');
+    assert.equal(stored.promptVersion, PANELS_PROMPT_VERSION);
+    assert.equal(stored.model, 'agent');
+    assert.equal(stored.trigger, 'first');
+    assert.deepEqual(stored.samples.map((s) => s.sourceSec), [11, 14, 23, 26, 29], 'in time order, 14.04 snapped to 14, the first answer for a frame kept');
+    assert.equal(stored.samples[1].why, 'the hero');
+    assert.equal(recordOf(dir).clips[1].panels, null);
+    assert.ok(PanelDecision.safeParse(stored).success);
+    assert.ok(readdirSync(dir).every((f) => !f.startsWith('.panels-new')));
+    // The stored read is what the render plans from: clip 1 is 10 s in the video, so the samples are in source seconds.
+    const shots = [{ startSec: 0, endSec: 19 }];
+    const { placed } = planShots({ shots, faces: { unavailable: true, reason: 'x' }, frame: { width: 1920, height: 1080 }, output: { width: 1080, height: 1920 }, subjectRule: 'speaker', panels: { samples: stored.samples, startSec: 10 } });
+    assert.equal(placed[0].layout, 'panels');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('read-record refuses an answer for fewer than half the frames, a bad envelope, and a clip with no frames', () => {
+  const dir = tmp('recbad');
+  try {
+    writeRun(dir, [row(1, 10, 30)]);
+    const d = framesDir(dir, 1, [11, 14, 17, 20]);
+    const file = join(d, 'read.json');
+    const run = (obj) => {
+      writeFileSync(file, typeof obj === 'string' ? obj : JSON.stringify(obj));
+      return cli('read-record', '--run', dir, '--n', '1', '--file', file);
+    };
+    const few = run({ content: 'stream_with_game', gameTitle: null, samples: [goodSample(11)] });
+    assert.equal(few.status, 1);
+    assert.match(jsonOut(few).errors[0], /answered for 1 of 4 frames/);
+    assert.equal(run({ content: 'stream_with_game', gameTitle: null, samples: [goodSample(11), goodSample(14)] }).status, 0, 'exactly half is enough');
+    assert.match(jsonOut(run({ content: 'game', gameTitle: null, samples: [] })).errors[0], /content/);
+    assert.match(jsonOut(run({ content: 'other', samples: [] })).errors[0], /gameTitle/);
+    assert.match(jsonOut(run('not json')).errors[0], /not valid JSON/);
+    writeRun(dir, [row(1, 10, 30), row(2, 40, 60)]);
+    const noFrames = cli('read-record', '--run', dir, '--n', '2', '--file', file);
+    assert.match(jsonOut(noFrames).errors[0], /run read-frames first/);
+    assert.equal(recordOf(dir).clips[0].panels, null, 'a refused read stores nothing');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('recordProbe and recordRead write clips.json atomically: the old file is replaced by a rename', () => {
+  const dir = tmp('atomic');
+  try {
+    writeRun(dir, [row(1, 10, 30)]);
+    const file = join(dir, 'probe.json');
+    writeFileSync(file, '{"isStream": true}');
+    recordProbe({ run: dir, file });
+    assert.deepEqual(recordOf(dir).panelProbe, { version: 1, isStream: true, gameTitle: null });
+    const d = framesDir(dir, 1, [11, 14]);
+    writeFileSync(join(d, 'read.json'), JSON.stringify({ content: 'other', gameTitle: null, samples: [goodSample(11, { mode: 'none', cameras: [], game: null, focus: null })] }));
+    assert.equal(recordRead({ run: dir, n: 1, file: join(d, 'read.json') }).content, 'other');
+    assert.equal(recordOf(dir).clips[0].panels.content, 'other');
+    assert.equal(recordOf(dir).panelProbe.isStream, true, 'the probe survives a read being recorded');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});

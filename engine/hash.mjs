@@ -16,6 +16,8 @@ export const SHARED = [
   'tools/asr.mjs',
   'tools/boqo-upload.mjs',
   'tools/transcript.mjs',
+  // The stream panels read's frames and record; engine/panels-read.mjs and engine/boqo/panels*.mjs are under engine/ already.
+  'tools/panels.mjs',
   // The parity harness (engine/boqo/ is already under engine/). Files, not
   // scripts/parity/: boqo-sniper keeps its own cases in scripts/parity/cases/.
   'scripts/parity/golden.mjs',

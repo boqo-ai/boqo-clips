@@ -8,6 +8,7 @@ tools/brand.mjs -text
 tools/asr.mjs -text
 tools/boqo-upload.mjs -text
 tools/transcript.mjs -text
+tools/panels.mjs -text
 scripts/parity/golden.mjs -text
 scripts/parity/strip.mjs -text
 scripts/boqo-drift.mjs -text

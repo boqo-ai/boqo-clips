@@ -48,17 +48,32 @@ test('arg builders produce exact arrays', () => {
   ]);
 });
 
-test('captionTrackOf: manual track in the video language comes first', () => {
+test('captionTrackOf: the word-timed <base>-orig track beats a manual one in the video language', () => {
+  // measured on a TED talk: manual `en` has one seg per line and no word times
+  const info = {
+    language: 'en',
+    subtitles: { en: [{ ext: 'json3' }], de: [{ ext: 'json3' }] },
+    automatic_captions: { 'en-orig': [{ ext: 'json3' }], en: [{ ext: 'json3' }], de: [{ ext: 'json3' }] },
+  };
+  assert.deepEqual(captionTrackOf(info), { kind: 'auto', lang: 'en-orig' });
+  assert.deepEqual(captionTrackOf({ ...info, language: 'en-US', subtitles: { 'en-GB': [{ ext: 'json3' }] } }), {
+    kind: 'auto',
+    lang: 'en-orig',
+  });
+});
+
+test('captionTrackOf: with no <base>-orig, a manual track in the video language comes first', () => {
   const info = {
     language: 'en-US',
     subtitles: { 'en-GB': [{ ext: 'json3' }], de: [{ ext: 'json3' }] },
-    automatic_captions: { 'en-orig': [{ ext: 'json3' }] },
+    automatic_captions: { en: [{ ext: 'json3' }], fr: [{ ext: 'json3' }] },
   };
   assert.deepEqual(captionTrackOf(info), { kind: 'manual', lang: 'en-GB' });
   assert.deepEqual(captionTrackOf({ ...info, subtitles: { en: [{ ext: 'json3' }], 'en-GB': [{ ext: 'json3' }] } }), {
     kind: 'manual',
     lang: 'en',
   });
+  assert.deepEqual(captionTrackOf({ ...info, subtitles: { 'en-US': [{}], en: [{}] } }), { kind: 'manual', lang: 'en-US' });
 });
 
 test('captionTrackOf: auto only gives en-orig when the language is en-US', () => {
@@ -89,9 +104,13 @@ test('captionTrackOf: any manual track beats a foreign auto one; live chat is no
   );
 });
 
-test('captionTrackOf: language unknown falls back to en-orig, then any -orig', () => {
+test('captionTrackOf: language unknown gives en-orig, then any -orig, then a manual track', () => {
   assert.deepEqual(captionTrackOf({ automatic_captions: { 'en-orig': [{}], 'de-orig': [{}] } }), { kind: 'auto', lang: 'en-orig' });
   assert.deepEqual(captionTrackOf({ automatic_captions: { 'de-orig': [{}] } }), { kind: 'auto', lang: 'de-orig' });
+  // an -orig track is the speech as spoken, word-timed: it beats a manual one
+  assert.deepEqual(captionTrackOf({ subtitles: { en: [{}] }, automatic_captions: { 'en-orig': [{}] } }), { kind: 'auto', lang: 'en-orig' });
+  assert.deepEqual(captionTrackOf({ subtitles: { en: [{}] }, automatic_captions: { 'de-orig': [{}] } }), { kind: 'auto', lang: 'de-orig' });
+  assert.deepEqual(captionTrackOf({ subtitles: { en: [{}] }, automatic_captions: { fr: [{}] } }), { kind: 'manual', lang: 'en' });
 });
 
 test('captionTrackOf: no captions at all is null', () => {
@@ -178,6 +197,31 @@ test('fetchInfo writes info, words, transcript and reports the counts', async ()
   const md = readFileSync(join(dir, 'transcript.md'), 'utf8');
   assert.match(md, /^## Part 1/);
   assert.match(md, /\[00:01\] hello world ▲/);
+  rmSync(dir, { recursive: true });
+});
+
+test('fetchInfo: a video with manual and en-orig captions asks for en-orig only, once', async () => {
+  const dir = tmp();
+  const info = {
+    id: 'ted', title: 'Talk', duration: 1200, language: 'en',
+    subtitles: { en: [{ ext: 'json3' }] }, automatic_captions: { 'en-orig': [{ ext: 'json3' }], en: [{ ext: 'json3' }] },
+  };
+  const json3 = { events: [{ tStartMs: 1000, dDurationMs: 2000, segs: [{ utf8: 'good' }, { utf8: ' morning', tOffsetMs: 400 }] }] };
+  const calls = [];
+  const run = fakeRun({
+    ytdlp: async (args) => {
+      calls.push(args);
+      if (args.includes('-J')) return { stdout: JSON.stringify(info), stderr: '' };
+      writeFileSync(join(dir, 'captions.en-orig.json3'), JSON.stringify(json3));
+      return { stdout: '', stderr: '' };
+    },
+  });
+  const out = await fetchInfo({ url: URL1, dir, run });
+  assert.equal(out.captions, 'auto');
+  assert.equal(calls.length, 2);
+  const cap = calls[1];
+  assert.ok(cap.includes('--write-auto-subs') && !cap.includes('--write-subs'));
+  assert.equal(cap[cap.indexOf('--sub-langs') + 1], 'en-orig');
   rmSync(dir, { recursive: true });
 });
 

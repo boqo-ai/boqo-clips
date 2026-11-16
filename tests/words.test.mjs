@@ -148,6 +148,96 @@ test('wordsFromJson3: real hyphens and negative numbers are kept', () => {
   assert.deepEqual(wordsFromJson3(j).map((x) => x.w), ['well-known', '-5', '-ish', 'a-', '-5'])
 })
 
+// ---- manual (owner-uploaded) captions: one seg per line, no word offsets
+
+test('wordsFromJson3: a manual line is split into words spread over its event by character count', () => {
+  // weights are a word's characters plus its space: ab 3, cd 3, efgh 5 of 11, over 1.1 s
+  const j = { events: [{ tStartMs: 10000, dDurationMs: 1100, segs: [{ utf8: 'ab cd\nefgh' }] }] }
+  assert.deepEqual(wordsFromJson3(j), [
+    { w: 'ab', s: 10, e: 10.3 },
+    { w: 'cd', s: 10.3, e: 10.6 },
+    { w: 'efgh', s: 10.6, e: 11.1 },
+  ])
+})
+
+test('wordsFromJson3: manual lines in a row; the last word of a line ends at the line end', () => {
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 1100, segs: [{ utf8: 'ab cd efgh' }] },
+      // a speaker mark is no word and gets no share: xy 3, z 2 of 5, over 0.9 s
+      { tStartMs: 1200, dDurationMs: 900, segs: [{ utf8: '>> xy\nz' }] },
+    ],
+  }
+  assert.deepEqual(wordsFromJson3(j), [
+    { w: 'ab', s: 0, e: 0.3 },
+    { w: 'cd', s: 0.3, e: 0.6 },
+    { w: 'efgh', s: 0.6, e: 1.1 },
+    { w: 'xy', s: 1.2, e: 1.74 },
+    { w: 'z', s: 1.74, e: 2.1 },
+  ])
+})
+
+test('wordsFromJson3: speaker marks inside a manual line are dropped per word', () => {
+  const j = { events: [{ tStartMs: 0, dDurationMs: 1000, segs: [{ utf8: '- Yes. >> No. &gt;&gt;Maybe -' }] }] }
+  assert.deepEqual(wordsFromJson3(j).map((x) => x.w), ['Yes.', 'No.', 'Maybe'])
+})
+
+test('wordsFromJson3: a sound tag in a manual line keeps its share of the time, then is dropped', () => {
+  // (Audience) 11, Good. 6 of 17, over 1.7 s: Good. starts 1.1 s in
+  const j = { events: [{ tStartMs: 29000, dDurationMs: 1700, segs: [{ utf8: '(Audience) Good.' }] }] }
+  assert.deepEqual(wordsFromJson3(j), [{ w: 'Good.', s: 30.1, e: 30.7 }])
+})
+
+test('wordsFromJson3: a manual seg spreads up to the next seg of its event, not past it', () => {
+  const j = { events: [{ tStartMs: 0, dDurationMs: 2000, segs: [{ utf8: 'ab cd' }, { utf8: ' ef', tOffsetMs: 600 }] }] }
+  assert.deepEqual(wordsFromJson3(j), [
+    { w: 'ab', s: 0, e: 0.3 },
+    { w: 'cd', s: 0.3, e: 0.6 },
+    { w: 'ef', s: 0.6, e: 1.6 },
+  ])
+})
+
+test('wordsFromJson3: a manual line with no event length gets 0.4 s a word', () => {
+  const j = { events: [{ tStartMs: 5000, segs: [{ utf8: 'ab cd' }] }] }
+  assert.deepEqual(wordsFromJson3(j), [
+    { w: 'ab', s: 5, e: 5.4 },
+    { w: 'cd', s: 5.4, e: 5.8 },
+  ])
+})
+
+test('wordsFromJson3: TED-style manual track gives one word per spoken word, none stuck at the 1 s cap', () => {
+  // the first lines of TED iG9CE55wbtY's manual `en` track, as yt-dlp writes it
+  const lines = [
+    [27103, 2575, 'Good morning. How are you?'],
+    [29702, 1403, '(Audience) Good.'],
+    [31129, 1668, "It's been great, hasn't it?"],
+    [33408, 2321, "I've been blown away by the whole thing."],
+    [35753, 1492, "In fact, I'm leaving."],
+    [37269, 3906, '(Laughter)'],
+    [43096, 3567, 'There have been three themes\nrunning through the conference,'],
+    [46687, 2286, 'which are relevant\nto what I want to talk about.'],
+  ]
+  const j = { events: lines.map(([t, d, utf8]) => ({ tStartMs: t, dDurationMs: d, segs: [{ utf8 }] })) }
+  const words = wordsFromJson3(j)
+  const spoken = lines.flatMap(([, , t]) => t.split(/\s+/)).filter((w) => !/^\(.*\)$/.test(w))
+  assert.deepEqual(words.map((x) => x.w), spoken)
+  for (const x of words) {
+    assert.ok(!x.w.includes('\n'), x.w)
+    assert.ok(x.s < x.e, JSON.stringify(x))
+    assert.ok(x.e - x.s < 0.99, `${x.w} lasts ${x.e - x.s} s`)
+  }
+  for (let i = 1; i < words.length; i++) assert.ok(words[i].s >= words[i - 1].s)
+  // each line's words stay inside that line's event
+  const byLine = words.filter((x) => x.s >= 33.408 && x.s < 35.729)
+  assert.deepEqual(byLine.map((x) => x.w), ['I\'ve', 'been', 'blown', 'away', 'by', 'the', 'whole', 'thing.'])
+  assert.equal(byLine[0].s, 33.408)
+})
+
+test('wordsFromJson3: an auto seg with an offset stays one word, its newline gone', () => {
+  const j = { events: [{ tStartMs: 0, dDurationMs: 1000, segs: [{ utf8: 'a' }, { utf8: ' b\nc', tOffsetMs: 400 }] }] }
+  assert.deepEqual(wordsFromJson3(j).map((x) => x.w), ['a', 'b c'])
+})
+
 test('wordsFromWhisper converts ms offsets, skips empty text, adds the offset', () => {
   const j = {
     transcription: [

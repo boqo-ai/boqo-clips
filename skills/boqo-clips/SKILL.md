@@ -78,72 +78,75 @@ local file, below. `/boqo-clips render …`: Render more, below.
    readable copy, which nothing in the run reads) and `<run>/transcript-language.txt` (the language of the track it
    took, which `select-request` prints). It takes only a track of the video's own speech, never a translation, so a
    video whose speech has no such track says `"captions": "none"` with a `note`. `comments` is best effort
-   (`{"comments": null}` is fine) and runs now, before `select-request`, which reads `<run>/comments.json` once: only comments that carry
-   a timestamp reach the request (hosted's filter), and without the file the viewers' reactions are left out.
-   Tell the person, in one line, the title and the length.
-3. **Partial captions** (`"captions": "partial"` with `gaps`, `[{start, end}]` in seconds): the words are there, so
-   step 4 is next, but the track has no words for a stretch of 40 s or more (another language, or silence). Say so
-   in one line, with the stretches, and offer whisper over the whole video (Rules, with the estimate): on a yes,
-   step 3's whisper below, which replaces `words.json` and `segments.json`; on a no, go on with these captions.
-   **No captions** (`"captions": "none"`; with a `note`, say it in one line: the captions were not the video's own
-   speech, so whisper is the way). `"transcript": "boqo"` in `config.json`: the boqo transcript, below.
-   Otherwise (and after a boqo failure) local whisper:
-   run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`. When its `whisper` or `whisper-model` check
-   fails, tell the person the video has no captions and local transcription is not set up, give that check's hint,
-   and stop. Otherwise say the video has no captions, and offer local whisper with the estimate (Rules). On a no,
-   stop: the video cannot be clipped without its words. On a yes:
-   1. The audio only, then `ls "<run>"` for its name (`audio.m4a`, or `audio.webm`):
-      ```sh
-      yt-dlp -q --js-runtimes node --no-playlist -f "ba[ext=m4a]/ba" -o "<run>/audio.%(ext)s" "<url>"
-      ```
-   2. Whisper, in the background (Rules):
-      ```sh
-      node "$HOME/.boqo-clips/tools/asr.mjs" "<run>/audio.<ext>" --out "<run>/words.json" > "<run>/asr.json"
-      ```
-      `{"words": N, …}` in `<run>/asr.json` is done, and `<run>/segments.json` is written beside the words; `{"error": …}`
-      stops the run. `"englishOnly": true` is a model that hears every video as English: when this one is not in
-      English (`info.json`'s `language`, the title, the person), say so, and offer the multilingual model (about
-      150 MB). On a yes:
-      ```sh
-      mkdir -p "<home>/models" && curl -L -o "<home>/models/ggml-base.bin" \
-        "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin"
-      ```
-      then run whisper again with the video's language, `--lang <code>` (`--lang ru`) before `--out`: with a
-      language other than English it takes a multilingual model, and `select-request` gets the same
-      `--lang <code>` (step 5).
-      `the words file has no words`: whisper heard no speech. Tell the person, and stop. Known limit: whisper can
-      hear a word that is not there ("Oh") in silence at a multiple of 30 s, its window edge; never set an edge on one.
+   (`{"comments": null}` is fine) and runs now, before `select-request`, which reads `<run>/comments.json` once:
+   only comments that carry a timestamp reach the request (hosted's filter), and without the file the viewers'
+   reactions are left out. Tell the person, in one line, the title and the length.
+3. **Transcript.**
+   - **3a. Partial captions** (`"captions": "partial"` with `gaps`, `[{start, end}]` in seconds): the words are there,
+     so step 4 is next, but the track has no words for a stretch of 40 s or more (another language, or silence). Say
+     so in one line, with the stretches, and offer whisper over the whole video (Rules, with the estimate): on a yes,
+     3b's whisper (its doctor check, then items 1 and 2), which replaces `words.json`, `segments.json` and
+     `transcript-language.txt`; on a no, go on with these captions.
+   - **3b. No captions** (`"captions": "none"`; with a `note`, say it in one line: the captions were not the video's
+     own speech, so whisper is the way). `"transcript": "boqo"` in `config.json`: the boqo transcript, below.
+     Otherwise (and after a boqo failure) local whisper:
+     run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`. When its `whisper` or `whisper-model` check
+     fails, tell the person the video has no captions and local transcription is not set up, give that check's hint,
+     and stop. Otherwise say the video has no captions, and offer local whisper with the estimate (Rules). On a no,
+     stop: the video cannot be clipped without its words. On a yes:
+     1. The audio only, then `ls "<run>"` for its name (`audio.m4a`, or `audio.webm`):
+        ```sh
+        yt-dlp -q --js-runtimes node --no-playlist -f "ba[ext=m4a]/ba" -o "<run>/audio.%(ext)s" "<url>"
+        ```
+     2. Whisper, in the background (Rules):
+        ```sh
+        node "$HOME/.boqo-clips/tools/asr.mjs" "<run>/audio.<ext>" --out "<run>/words.json" > "<run>/asr.json"
+        ```
+        `{"words": N, …}` in `<run>/asr.json` is done, and `<run>/segments.json` and `<run>/transcript-language.txt` (the
+        language whisper ran in, which `select-request` prints) are written beside the words; `{"error": …}`
+        stops the run. `"englishOnly": true` is a model that hears every video as English: when this one is not in
+        English (`info.json`'s `language`, the title, the person), say so, and offer the multilingual model (about
+        150 MB). On a yes:
+        ```sh
+        mkdir -p "<home>/models" && curl -L -o "<home>/models/ggml-base.bin" \
+          "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin"
+        ```
+        then run whisper again with the video's language, `--lang <code>` (`--lang ru`) before `--out`: with a
+        language other than English it takes a multilingual model, and `select-request` gets the same
+        `--lang <code>` (step 5).
+        `the words file has no words`: whisper heard no speech. Tell the person, and stop. Known limit: whisper can
+        hear a word that is not there ("Oh") in silence at a multiple of 30 s, its window edge; never set an edge on one.
 
-   **The boqo transcript** (`"transcript": "boqo"`), Deepgram's own sentences, identical to hosted's:
-   1. The person's yes, first. One line, then wait: "No captions: boqo can transcribe it, <N> minutes, <C> credits
-      (1 for each started 10 minutes). Yes?" `<N>` is `duration` rounded up to whole minutes, `<C>` is `duration`
-      divided by 600, rounded up, at least 1. A no: the whisper offer above. With no `create_upload` among your
-      tools (onboarding.md → 2 says how to find a deferred one), skip to item 6 without asking.
-   2. The audio, from this machine's own address (never mp3: boqo reads m4a, webm/opus, ogg, flac and wav):
-      ```sh
-      yt-dlp -q --js-runtimes node --no-playlist -f "ba[ext=m4a]/ba[ext=webm]" -o "<run>/audio.%(ext)s" "<url>"
-      node "$HOME/.boqo-clips/tools/boqo-upload.mjs" probe-audio "<run>/audio.<ext>"
-      ```
-      `ls "<run>"` gives `<ext>`. `probe-audio` gives `sizeBytes` and `contentType`.
-   3. `create_upload {filename: "audio.<ext>", contentType, sizeBytes, kind: "transcribe"}`. Write its reply, exactly
-      as it came, to `<run>/upload-audio.json` (live signed URLs: never print them). Then
-      `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" put "<run>/audio.<ext>" --reply "<run>/upload-audio.json"`
-      gives `{"ok": true, "upload_id", …}`; delete `<run>/upload-audio.json`.
-   4. `complete_upload {upload_id}`, then `transcribe {upload_id}`: `{id, credits, minutes}`. A link in either reply
-      (the connection's daily cap): give it to the person and go to item 6.
-   5. `get_transcript {id}`, about every 20 seconds (a background `sleep 20`, post.md), until `status` is `done`
-      (with a `url`) or `failed` (with an `error`); an answer of `{not_found: true}` is final, so stop polling and go
-      to item 6. Then, with the `url` exactly as it came and never shown:
-      ```sh
-      node "$HOME/.boqo-clips/tools/transcript-boqo.mjs" --url "<url>" --run "<run>"
-      ```
-      It writes `<run>/words.json`, `<run>/segments.json` and `<run>/transcript-language.txt`, which `select-request`
-      reads. Say in one line that boqo transcribed it and the credits spent.
-   6. On any failure above (no boqo tools, a refusal, a failed job, an error from a tool): one line, "boqo's
-      transcript failed (<the reason, as it came>), transcribing here instead", then the local path above: its doctor
-      check, its offer, its yes.
-4. **Segments.** `<run>/segments.json` (sentences, `speaker` null locally) exists after step 2, step 3's whisper or
-   step 3's boqo transcript. Nothing to run; with no file there, the transcript step failed: say so and stop.
+     **The boqo transcript** (`"transcript": "boqo"`), Deepgram's own sentences, identical to hosted's:
+     1. The person's yes, first. One line, then wait: "No captions: boqo can transcribe it, <N> minutes, <C> credits
+        (1 for each started 10 minutes). Yes?" `<N>` is `duration` rounded up to whole minutes, `<C>` is `duration`
+        divided by 600, rounded up, at least 1. A no: the whisper offer above. With no `create_upload` among your
+        tools (onboarding.md → 2 says how to find a deferred one), skip to item 6 without asking.
+     2. The audio, from this machine's own address (never mp3: boqo reads m4a, webm/opus, ogg, flac and wav):
+        ```sh
+        yt-dlp -q --js-runtimes node --no-playlist -f "ba[ext=m4a]/ba[ext=webm]" -o "<run>/audio.%(ext)s" "<url>"
+        node "$HOME/.boqo-clips/tools/boqo-upload.mjs" probe-audio "<run>/audio.<ext>"
+        ```
+        `ls "<run>"` gives `<ext>`. `probe-audio` gives `sizeBytes` and `contentType`.
+     3. `create_upload {filename: "audio.<ext>", contentType, sizeBytes, kind: "transcribe"}`. Write its reply, exactly
+        as it came, to `<run>/upload-audio.json` (live signed URLs: never print them). Then
+        `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" put "<run>/audio.<ext>" --reply "<run>/upload-audio.json"`
+        gives `{"ok": true, "upload_id", …}`; delete `<run>/upload-audio.json`.
+     4. `complete_upload {upload_id}`, then `transcribe {upload_id}`: `{id, credits, minutes}`. A link in either reply
+        (the connection's daily cap): give it to the person and go to item 6.
+     5. `get_transcript {id}`, about every 20 seconds (a background `sleep 20`, post.md), until `status` is `done`
+        (with a `url`) or `failed` (with an `error`); an answer of `{not_found: true}` is final, so stop polling and go
+        to item 6. Then, with the `url` exactly as it came and never shown:
+        ```sh
+        node "$HOME/.boqo-clips/tools/transcript-boqo.mjs" --url "<url>" --run "<run>"
+        ```
+        It writes `<run>/words.json`, `<run>/segments.json` and `<run>/transcript-language.txt`, which `select-request`
+        reads. Say in one line that boqo transcribed it and the credits spent.
+     6. On any failure above (no boqo tools, a refusal, a failed job, an error from a tool): one line, "boqo's
+        transcript failed (<the reason, as it came>), transcribing here instead", then the local path above: its doctor
+        check, its offer, its yes.
+4. **Segments.** `<run>/segments.json` (sentences, `speaker` null locally) exists after step 2, 3a's or 3b's whisper or
+   3b's boqo transcript. Nothing to run; with no file there, the transcript step failed: say so and stop.
 5. **Request.** With the person's choices when they made any (`--genre podcast|talk|gaming|vlog|entertainment`,
    `--length under_30|30_60|60_90|90_120|120_180`, `--prompt "<their words>"`, `--lang <code>`):
    ```sh
@@ -234,7 +237,7 @@ the person named its number. Then, for the numbers that are left (`<list>`, like
 The same run, with three changes:
 - **No info step.** The length: `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" probe "<file>"` gives `durationSec`
   (it finds macOS ffmpeg-full's ffprobe, which a plain shell may not have). No `fetch comments`, no `sections`.
-- **The transcript,** after asking (Rules): whisper on the whole file, step 3's check, offer and whisper, with
+- **The transcript,** after asking (Rules): whisper on the whole file, step 3b's check, offer and whisper, with
   `"<file>"` itself in place of the audio. With `"transcript": "boqo"`, the boqo transcript with the audio made from
   the file, `ffmpeg -nostdin -v error -y -i "<file>" -vn -c:a aac -b:a 64k "<run>/audio.m4a"` in place of yt-dlp;
   the minutes come from `probe`'s `durationSec`.

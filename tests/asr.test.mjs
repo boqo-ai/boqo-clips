@@ -274,6 +274,45 @@ test('tools/asr.mjs says the language it ran in, and englishOnly for an .en mode
   }
 });
 
+test('tools/asr.mjs replaces the caption track\'s language file and transcript.md with whisper\'s own', { skip: (process.platform === 'win32' || !ffmpegOk) && 'needs sh and ffmpeg' }, async () => {
+  const root = tmp();
+  try {
+    const audio = join(root, 'a.wav');
+    const mk = spawnSync('ffmpeg', ['-v', 'error', '-f', 'lavfi', '-i', 'sine=frequency=440:duration=1', audio], { env: toolEnv() });
+    assert.equal(mk.status, 0, String(mk.stderr));
+    const bin = join(root, 'bin');
+    const env = { ...toolEnv(), PATH: [bin, toolEnv().PATH].join(delimiter), BOQO_WHISPER_MODEL: touch(root, 'ggml-small.bin') };
+    const out = join(root, 'words.json');
+    const lang = join(root, 'transcript-language.txt');
+    const md = join(root, 'transcript.md');
+    // what `fetch info` left from a partial caption track
+    const stale = () => {
+      writeFileSync(lang, 'fil\n');
+      writeFileSync(md, '## Part 1\n');
+    };
+
+    stale();
+    fakeWhisper(bin, 'tl');
+    assert.equal((await runCli([audio, '--out', out], env)).code, 0);
+    assert.equal(readFileSync(lang, 'utf8'), 'tl\n', 'the language whisper heard');
+    assert.equal(existsSync(md), false, 'the caption transcript is stale');
+
+    // an explicit --lang that whisper reports back is the one written
+    stale();
+    fakeWhisper(bin, 'de');
+    assert.equal((await runCli([audio, '--lang', 'de', '--out', out], env)).code, 0);
+    assert.equal(readFileSync(lang, 'utf8'), 'de\n');
+
+    // no language heard and none asked: no stale one is left behind either
+    stale();
+    fakeWhisper(bin, undefined);
+    assert.equal((await runCli([audio, '--out', out], env)).code, 0);
+    assert.equal(existsSync(lang), false);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 // whisper hears a lone "Oh" at the seam of its 30 s windows; the filter (spec 7.10)
 const item = (from, to, text) => ({ offsets: { from, to }, text: ` ${text}` });
 const heard = (items, off) => wordsFromWhisper({ transcription: items }, off).map((x) => x.w);

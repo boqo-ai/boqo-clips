@@ -1,0 +1,1058 @@
+{
+ "cases": [
+  {
+   "name": "no faces is fit",
+   "input": {
+    "faces": [],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": true
+   }
+  },
+  {
+   "name": "fill: one face, tracking off by default",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.25,
+      "y": 0.2,
+      "width": 0.08,
+      "height": 0.18,
+      "faceCentreX": 0.29,
+      "eyeLineY": 0.27,
+      "facing": 0.1,
+      "coverage": 1,
+      "track": [
+       {
+        "t": 0.1667,
+        "cx": 0.29,
+        "cy": 0.29
+       },
+       {
+        "t": 0.5,
+        "cx": 0.315,
+        "cy": 0.292
+       },
+       {
+        "t": 0.8333,
+        "cx": 0.34,
+        "cy": 0.294
+       },
+       {
+        "t": 1.1667,
+        "cx": 0.365,
+        "cy": 0.296
+       },
+       {
+        "t": 1.5,
+        "cx": 0.39,
+        "cy": 0.298
+       },
+       {
+        "t": 1.8333,
+        "cx": 0.415,
+        "cy": 0.3
+       },
+       {
+        "t": 2.1667,
+        "cx": 0.44,
+        "cy": 0.302
+       },
+       {
+        "t": 2.5,
+        "cx": 0.465,
+        "cy": 0.304
+       },
+       {
+        "t": 2.8333,
+        "cx": 0.49,
+        "cy": 0.306
+       },
+       {
+        "t": 3.1667,
+        "cx": 0.515,
+        "cy": 0.308
+       },
+       {
+        "t": 3.5,
+        "cx": 0.54,
+        "cy": 0.31
+       },
+       {
+        "t": 3.8333,
+        "cx": 0.565,
+        "cy": 0.312
+       }
+      ]
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    }
+   }
+  },
+  {
+   "name": "fill: tracking off explicitly",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.25,
+      "y": 0.2,
+      "width": 0.08,
+      "height": 0.18,
+      "faceCentreX": 0.29,
+      "eyeLineY": 0.27,
+      "facing": 0.1,
+      "coverage": 1,
+      "track": [
+       {
+        "t": 0.1667,
+        "cx": 0.29,
+        "cy": 0.29
+       },
+       {
+        "t": 0.5,
+        "cx": 0.315,
+        "cy": 0.292
+       },
+       {
+        "t": 0.8333,
+        "cx": 0.34,
+        "cy": 0.294
+       },
+       {
+        "t": 1.1667,
+        "cx": 0.365,
+        "cy": 0.296
+       },
+       {
+        "t": 1.5,
+        "cx": 0.39,
+        "cy": 0.298
+       },
+       {
+        "t": 1.8333,
+        "cx": 0.415,
+        "cy": 0.3
+       },
+       {
+        "t": 2.1667,
+        "cx": 0.44,
+        "cy": 0.302
+       },
+       {
+        "t": 2.5,
+        "cx": 0.465,
+        "cy": 0.304
+       },
+       {
+        "t": 2.8333,
+        "cx": 0.49,
+        "cy": 0.306
+       },
+       {
+        "t": 3.1667,
+        "cx": 0.515,
+        "cy": 0.308
+       },
+       {
+        "t": 3.5,
+        "cx": 0.54,
+        "cy": 0.31
+       },
+       {
+        "t": 3.8333,
+        "cx": 0.565,
+        "cy": 0.312
+       }
+      ]
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": false,
+    "deadzone": 0.2,
+    "maxPan": 200
+   }
+  },
+  {
+   "name": "track: a walking subject",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.25,
+      "y": 0.2,
+      "width": 0.08,
+      "height": 0.18,
+      "faceCentreX": 0.29,
+      "eyeLineY": 0.27,
+      "facing": 0.1,
+      "coverage": 1,
+      "track": [
+       {
+        "t": 0.1667,
+        "cx": 0.29,
+        "cy": 0.29
+       },
+       {
+        "t": 0.5,
+        "cx": 0.315,
+        "cy": 0.292
+       },
+       {
+        "t": 0.8333,
+        "cx": 0.34,
+        "cy": 0.294
+       },
+       {
+        "t": 1.1667,
+        "cx": 0.365,
+        "cy": 0.296
+       },
+       {
+        "t": 1.5,
+        "cx": 0.39,
+        "cy": 0.298
+       },
+       {
+        "t": 1.8333,
+        "cx": 0.415,
+        "cy": 0.3
+       },
+       {
+        "t": 2.1667,
+        "cx": 0.44,
+        "cy": 0.302
+       },
+       {
+        "t": 2.5,
+        "cx": 0.465,
+        "cy": 0.304
+       },
+       {
+        "t": 2.8333,
+        "cx": 0.49,
+        "cy": 0.306
+       },
+       {
+        "t": 3.1667,
+        "cx": 0.515,
+        "cy": 0.308
+       },
+       {
+        "t": 3.5,
+        "cx": 0.54,
+        "cy": 0.31
+       },
+       {
+        "t": 3.8333,
+        "cx": 0.565,
+        "cy": 0.312
+       }
+      ]
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": true,
+    "deadzone": 0.2,
+    "maxPan": 200
+   }
+  },
+  {
+   "name": "track: defaults for dead zone and pan",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.25,
+      "y": 0.2,
+      "width": 0.08,
+      "height": 0.18,
+      "faceCentreX": 0.29,
+      "eyeLineY": 0.27,
+      "facing": 0.1,
+      "coverage": 1,
+      "track": [
+       {
+        "t": 0.1667,
+        "cx": 0.29,
+        "cy": 0.29
+       },
+       {
+        "t": 0.5,
+        "cx": 0.315,
+        "cy": 0.292
+       },
+       {
+        "t": 0.8333,
+        "cx": 0.34,
+        "cy": 0.294
+       },
+       {
+        "t": 1.1667,
+        "cx": 0.365,
+        "cy": 0.296
+       },
+       {
+        "t": 1.5,
+        "cx": 0.39,
+        "cy": 0.298
+       },
+       {
+        "t": 1.8333,
+        "cx": 0.415,
+        "cy": 0.3
+       },
+       {
+        "t": 2.1667,
+        "cx": 0.44,
+        "cy": 0.302
+       },
+       {
+        "t": 2.5,
+        "cx": 0.465,
+        "cy": 0.304
+       },
+       {
+        "t": 2.8333,
+        "cx": 0.49,
+        "cy": 0.306
+       },
+       {
+        "t": 3.1667,
+        "cx": 0.515,
+        "cy": 0.308
+       },
+       {
+        "t": 3.5,
+        "cx": 0.54,
+        "cy": 0.31
+       },
+       {
+        "t": 3.8333,
+        "cx": 0.565,
+        "cy": 0.312
+       }
+      ]
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": true
+   }
+  },
+  {
+   "name": "track: a slow pan cap",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.25,
+      "y": 0.2,
+      "width": 0.08,
+      "height": 0.18,
+      "faceCentreX": 0.29,
+      "eyeLineY": 0.27,
+      "facing": 0.1,
+      "coverage": 1,
+      "track": [
+       {
+        "t": 0.1667,
+        "cx": 0.29,
+        "cy": 0.29
+       },
+       {
+        "t": 0.5,
+        "cx": 0.315,
+        "cy": 0.292
+       },
+       {
+        "t": 0.8333,
+        "cx": 0.34,
+        "cy": 0.294
+       },
+       {
+        "t": 1.1667,
+        "cx": 0.365,
+        "cy": 0.296
+       },
+       {
+        "t": 1.5,
+        "cx": 0.39,
+        "cy": 0.298
+       },
+       {
+        "t": 1.8333,
+        "cx": 0.415,
+        "cy": 0.3
+       },
+       {
+        "t": 2.1667,
+        "cx": 0.44,
+        "cy": 0.302
+       },
+       {
+        "t": 2.5,
+        "cx": 0.465,
+        "cy": 0.304
+       },
+       {
+        "t": 2.8333,
+        "cx": 0.49,
+        "cy": 0.306
+       },
+       {
+        "t": 3.1667,
+        "cx": 0.515,
+        "cy": 0.308
+       },
+       {
+        "t": 3.5,
+        "cx": 0.54,
+        "cy": 0.31
+       },
+       {
+        "t": 3.8333,
+        "cx": 0.565,
+        "cy": 0.312
+       }
+      ]
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": true,
+    "deadzone": 0.2,
+    "maxPan": 40
+   }
+  },
+  {
+   "name": "static path: jitter inside the dead zone",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.45,
+      "y": 0.2,
+      "width": 0.08,
+      "height": 0.18,
+      "faceCentreX": 0.49,
+      "eyeLineY": 0.27,
+      "facing": 0,
+      "coverage": 1,
+      "track": [
+       {
+        "t": 0.1667,
+        "cx": 0.484,
+        "cy": 0.287
+       },
+       {
+        "t": 0.5,
+        "cx": 0.496,
+        "cy": 0.293
+       },
+       {
+        "t": 0.8333,
+        "cx": 0.484,
+        "cy": 0.293
+       },
+       {
+        "t": 1.1667,
+        "cx": 0.496,
+        "cy": 0.287
+       },
+       {
+        "t": 1.5,
+        "cx": 0.484,
+        "cy": 0.293
+       },
+       {
+        "t": 1.8333,
+        "cx": 0.496,
+        "cy": 0.293
+       },
+       {
+        "t": 2.1667,
+        "cx": 0.484,
+        "cy": 0.287
+       },
+       {
+        "t": 2.5,
+        "cx": 0.496,
+        "cy": 0.293
+       },
+       {
+        "t": 2.8333,
+        "cx": 0.484,
+        "cy": 0.293
+       },
+       {
+        "t": 3.1667,
+        "cx": 0.496,
+        "cy": 0.287
+       },
+       {
+        "t": 3.5,
+        "cx": 0.484,
+        "cy": 0.293
+       },
+       {
+        "t": 3.8333,
+        "cx": 0.496,
+        "cy": 0.293
+       }
+      ]
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": true,
+    "deadzone": 0.2,
+    "maxPan": 200
+   }
+  },
+  {
+   "name": "static path: a still profile agrees with its seed",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.5348958333333333,
+      "y": 0.2,
+      "width": 0.16197916666666667,
+      "height": 0.3,
+      "faceCentreX": 0.5208333333333334,
+      "eyeLineY": 0.32,
+      "facing": -0.8,
+      "coverage": 1,
+      "track": [
+       {
+        "t": 0.1667,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 0.5,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 0.8333,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 1.1667,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 1.5,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 1.8333,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 2.1667,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 2.5,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 2.8333,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 3.1667,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 3.5,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 3.8333,
+        "cx": 0.5208,
+        "cy": 0.35
+       }
+      ]
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": true,
+    "deadzone": 0.2,
+    "maxPan": 200
+   }
+  },
+  {
+   "name": "track: a drop-out gap",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.3,
+      "y": 0.25,
+      "width": 0.07,
+      "height": 0.16,
+      "coverage": 0.5,
+      "track": [
+       {
+        "t": 0.1,
+        "cx": 0.33,
+        "cy": 0.33
+       },
+       {
+        "t": 0.4,
+        "cx": 0.34,
+        "cy": 0.33
+       },
+       {
+        "t": 2.6,
+        "cx": 0.6,
+        "cy": 0.34
+       },
+       {
+        "t": 3,
+        "cx": 0.62,
+        "cy": 0.34
+       }
+      ]
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": true,
+    "deadzone": 0.2,
+    "maxPan": 200
+   }
+  },
+  {
+   "name": "track: vertical motion on a zoomed 2560x1440",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.48,
+      "y": 0.1,
+      "width": 0.05,
+      "height": 0.12,
+      "coverage": 1,
+      "track": [
+       {
+        "t": 0.1667,
+        "cx": 0.505,
+        "cy": 0.16
+       },
+       {
+        "t": 0.5,
+        "cx": 0.505,
+        "cy": 0.19
+       },
+       {
+        "t": 0.8333,
+        "cx": 0.505,
+        "cy": 0.22
+       },
+       {
+        "t": 1.1667,
+        "cx": 0.505,
+        "cy": 0.25
+       },
+       {
+        "t": 1.5,
+        "cx": 0.505,
+        "cy": 0.28
+       },
+       {
+        "t": 1.8333,
+        "cx": 0.505,
+        "cy": 0.31
+       },
+       {
+        "t": 2.1667,
+        "cx": 0.505,
+        "cy": 0.34
+       },
+       {
+        "t": 2.5,
+        "cx": 0.505,
+        "cy": 0.37
+       },
+       {
+        "t": 2.8333,
+        "cx": 0.505,
+        "cy": 0.4
+       },
+       {
+        "t": 3.1667,
+        "cx": 0.505,
+        "cy": 0.43
+       },
+       {
+        "t": 3.5,
+        "cx": 0.505,
+        "cy": 0.46
+       },
+       {
+        "t": 3.8333,
+        "cx": 0.505,
+        "cy": 0.49
+       }
+      ]
+     }
+    ],
+    "frameWidth": 2560,
+    "frameHeight": 1440,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": true,
+    "deadzone": 0.2,
+    "maxPan": 200
+   }
+  },
+  {
+   "name": "one-point track stays a rect",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.4,
+      "y": 0.2,
+      "width": 0.08,
+      "height": 0.18,
+      "coverage": 1,
+      "track": [
+       {
+        "t": 0.2,
+        "cx": 0.7,
+        "cy": 0.3
+       }
+      ]
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": true,
+    "deadzone": 0.2,
+    "maxPan": 200
+   }
+  },
+  {
+   "name": "fill: no track at all",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.25,
+      "y": 0.2,
+      "width": 0.08,
+      "height": 0.18,
+      "faceCentreX": 0.29,
+      "eyeLineY": 0.27,
+      "facing": 0.1,
+      "coverage": 1
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "trackEnabled": true
+   }
+  },
+  {
+   "name": "fill: looking room override",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.5348958333333333,
+      "y": 0.2,
+      "width": 0.16197916666666667,
+      "height": 0.3,
+      "faceCentreX": 0.5208333333333334,
+      "eyeLineY": 0.32,
+      "facing": -0.8,
+      "coverage": 1,
+      "track": [
+       {
+        "t": 0.1667,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 0.5,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 0.8333,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 1.1667,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 1.5,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 1.8333,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 2.1667,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 2.5,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 2.8333,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 3.1667,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 3.5,
+        "cx": 0.5208,
+        "cy": 0.35
+       },
+       {
+        "t": 3.8333,
+        "cx": 0.5208,
+        "cy": 0.35
+       }
+      ]
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "lookingRoom": 0.3
+   }
+  },
+  {
+   "name": "fill: speaker among two",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.000025,
+      "id": "streamer",
+      "x": 0.05,
+      "y": 0.6,
+      "width": 0.08,
+      "height": 0.15,
+      "coverage": 1
+     },
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00083,
+      "id": "tiktok",
+      "x": 0.55,
+      "y": 0.3,
+      "width": 0.06,
+      "height": 0.11,
+      "coverage": 0.3205
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    }
+   }
+  },
+  {
+   "name": "fill: presence among two",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.000025,
+      "id": "streamer",
+      "x": 0.05,
+      "y": 0.6,
+      "width": 0.08,
+      "height": 0.15,
+      "coverage": 1
+     },
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00083,
+      "id": "tiktok",
+      "x": 0.55,
+      "y": 0.3,
+      "width": 0.06,
+      "height": 0.11,
+      "coverage": 0.3205
+     }
+    ],
+    "frameWidth": 1920,
+    "frameHeight": 1080,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    },
+    "subjectRule": "presence"
+   }
+  },
+  {
+   "name": "fill: portrait 1080x1920",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.4,
+      "y": 0.2,
+      "width": 0.18,
+      "height": 0.1,
+      "eyeLineY": 0.24,
+      "coverage": 1
+     }
+    ],
+    "frameWidth": 1080,
+    "frameHeight": 1920,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    }
+   }
+  },
+  {
+   "name": "fill: portrait 1080x1920, big face",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.2,
+      "y": 0.2,
+      "width": 0.6,
+      "height": 0.35,
+      "eyeLineY": 0.3,
+      "coverage": 1
+     }
+    ],
+    "frameWidth": 1080,
+    "frameHeight": 1920,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    }
+   }
+  },
+  {
+   "name": "fill: narrow 720x1440",
+   "input": {
+    "faces": [
+     {
+      "confidence": 0.92,
+      "mouthMotion": 0.00002,
+      "x": 0.4,
+      "y": 0.3,
+      "width": 0.2,
+      "height": 0.1,
+      "eyeLineY": 0.34,
+      "coverage": 1
+     }
+    ],
+    "frameWidth": 720,
+    "frameHeight": 1440,
+    "output": {
+     "width": 1080,
+     "height": 1920
+    }
+   }
+  }
+ ]
+}

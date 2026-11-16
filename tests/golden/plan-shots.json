@@ -1,0 +1,1333 @@
+[
+  {
+    "name": "podcast 1920x1080",
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 3
+        },
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 432,
+              "height": 768
+            },
+            "x": [
+              {
+                "t": 0.125,
+                "v": 255
+              },
+              {
+                "t": 0.375,
+                "v": 255
+              },
+              {
+                "t": 0.625,
+                "v": 305
+              },
+              {
+                "t": 0.875,
+                "v": 355
+              },
+              {
+                "t": 1.125,
+                "v": 405
+              },
+              {
+                "t": 1.375,
+                "v": 455
+              },
+              {
+                "t": 1.625,
+                "v": 505
+              },
+              {
+                "t": 1.875,
+                "v": 555
+              },
+              {
+                "t": 2.125,
+                "v": 605
+              },
+              {
+                "t": 2.375,
+                "v": 655
+              },
+              {
+                "t": 2.625,
+                "v": 705
+              },
+              {
+                "t": 2.875,
+                "v": 755
+              }
+            ],
+            "y": [
+              {
+                "t": 0.125,
+                "v": 38
+              }
+            ]
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.2,
+          "y": 0.2,
+          "width": 0.08,
+          "height": 0.18,
+          "faceCentreX": 0.24,
+          "eyeLineY": 0.27,
+          "facing": 0.15,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.24,
+              "cy": 0.29
+            },
+            {
+              "t": 0.375,
+              "cx": 0.27,
+              "cy": 0.29
+            },
+            {
+              "t": 0.625,
+              "cx": 0.3,
+              "cy": 0.29
+            },
+            {
+              "t": 0.875,
+              "cx": 0.33,
+              "cy": 0.29
+            },
+            {
+              "t": 1.125,
+              "cx": 0.36,
+              "cy": 0.29
+            },
+            {
+              "t": 1.375,
+              "cx": 0.39,
+              "cy": 0.29
+            },
+            {
+              "t": 1.625,
+              "cx": 0.42,
+              "cy": 0.29
+            },
+            {
+              "t": 1.875,
+              "cx": 0.45,
+              "cy": 0.29
+            },
+            {
+              "t": 2.125,
+              "cx": 0.48,
+              "cy": 0.29
+            },
+            {
+              "t": 2.375,
+              "cx": 0.51,
+              "cy": 0.29
+            },
+            {
+              "t": 2.625,
+              "cx": 0.54,
+              "cy": 0.29
+            },
+            {
+              "t": 2.875,
+              "cx": 0.57,
+              "cy": 0.29
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "track"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 3,
+          "endSec": 6
+        },
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 432,
+              "height": 768
+            },
+            "x": [
+              {
+                "t": 0.125,
+                "v": 1125
+              },
+              {
+                "t": 0.375,
+                "v": 1125
+              },
+              {
+                "t": 0.625,
+                "v": 1075
+              },
+              {
+                "t": 0.875,
+                "v": 1025
+              },
+              {
+                "t": 1.125,
+                "v": 975
+              },
+              {
+                "t": 1.375,
+                "v": 925
+              },
+              {
+                "t": 1.625,
+                "v": 875
+              },
+              {
+                "t": 1.875,
+                "v": 825
+              },
+              {
+                "t": 2.125,
+                "v": 775
+              },
+              {
+                "t": 2.375,
+                "v": 725
+              },
+              {
+                "t": 2.625,
+                "v": 675
+              },
+              {
+                "t": 2.875,
+                "v": 625
+              }
+            ],
+            "y": [
+              {
+                "t": 0.125,
+                "v": 71
+              }
+            ]
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.66,
+          "y": 0.22,
+          "width": 0.09,
+          "height": 0.2,
+          "faceCentreX": 0.705,
+          "eyeLineY": 0.3,
+          "facing": -0.2,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.705,
+              "cy": 0.32
+            },
+            {
+              "t": 0.375,
+              "cx": 0.677,
+              "cy": 0.324
+            },
+            {
+              "t": 0.625,
+              "cx": 0.649,
+              "cy": 0.328
+            },
+            {
+              "t": 0.875,
+              "cx": 0.621,
+              "cy": 0.332
+            },
+            {
+              "t": 1.125,
+              "cx": 0.593,
+              "cy": 0.336
+            },
+            {
+              "t": 1.375,
+              "cx": 0.565,
+              "cy": 0.34
+            },
+            {
+              "t": 1.625,
+              "cx": 0.537,
+              "cy": 0.344
+            },
+            {
+              "t": 1.875,
+              "cx": 0.509,
+              "cy": 0.348
+            },
+            {
+              "t": 2.125,
+              "cx": 0.481,
+              "cy": 0.352
+            },
+            {
+              "t": 2.375,
+              "cx": 0.453,
+              "cy": 0.356
+            },
+            {
+              "t": 2.625,
+              "cx": 0.425,
+              "cy": 0.36
+            },
+            {
+              "t": 2.875,
+              "cx": 0.397,
+              "cy": 0.364
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "track"
+      },
+      {
+        "shotIndex": 2,
+        "shot": {
+          "startSec": 6,
+          "endSec": 8.5
+        },
+        "placement": {
+          "kind": "stack",
+          "panels": [
+            {
+              "width": 728,
+              "height": 646,
+              "x": 34,
+              "y": 78
+            },
+            {
+              "width": 810,
+              "height": 720,
+              "x": 1075,
+              "y": 86
+            }
+          ]
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.15,
+          "y": 0.2,
+          "width": 0.08,
+          "height": 0.18,
+          "faceCentreX": 0.19,
+          "eyeLineY": 0.27,
+          "facing": 0.3,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.1042,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 0.3125,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 0.5208,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 0.7292,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 0.9375,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 1.1458,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 1.3542,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 1.5625,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 1.7708,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 1.9792,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 2.1875,
+              "cx": 0.19,
+              "cy": 0.29
+            },
+            {
+              "t": 2.3958,
+              "cx": 0.19,
+              "cy": 0.29
+            }
+          ]
+        },
+        "faces": 2,
+        "layout": "stack"
+      },
+      {
+        "shotIndex": 3,
+        "shot": {
+          "startSec": 8.5,
+          "endSec": 10
+        },
+        "placement": {
+          "kind": "fit"
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "fit"
+      },
+      {
+        "shotIndex": 4,
+        "shot": {
+          "startSec": 10,
+          "endSec": 11
+        },
+        "placement": {
+          "kind": "fit"
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "fit"
+      },
+      {
+        "shotIndex": 5,
+        "shot": {
+          "startSec": 11,
+          "endSec": 13
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 432,
+            "height": 768,
+            "x": 725,
+            "y": 38
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.45,
+          "y": 0.2,
+          "width": 0.08,
+          "height": 0.18,
+          "faceCentreX": 0.49,
+          "eyeLineY": 0.27,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.0833,
+              "cx": 0.485,
+              "cy": 0.29
+            },
+            {
+              "t": 0.25,
+              "cx": 0.495,
+              "cy": 0.29
+            },
+            {
+              "t": 0.4167,
+              "cx": 0.485,
+              "cy": 0.29
+            },
+            {
+              "t": 0.5833,
+              "cx": 0.495,
+              "cy": 0.29
+            },
+            {
+              "t": 0.75,
+              "cx": 0.485,
+              "cy": 0.29
+            },
+            {
+              "t": 0.9167,
+              "cx": 0.495,
+              "cy": 0.29
+            },
+            {
+              "t": 1.0833,
+              "cx": 0.485,
+              "cy": 0.29
+            },
+            {
+              "t": 1.25,
+              "cx": 0.495,
+              "cy": 0.29
+            },
+            {
+              "t": 1.4167,
+              "cx": 0.485,
+              "cy": 0.29
+            },
+            {
+              "t": 1.5833,
+              "cx": 0.495,
+              "cy": 0.29
+            },
+            {
+              "t": 1.75,
+              "cx": 0.485,
+              "cy": 0.29
+            },
+            {
+              "t": 1.9167,
+              "cx": 0.495,
+              "cy": 0.29
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "fill"
+      }
+    ],
+    "coverageDropped": 1,
+    "stacksRefused": 0
+  },
+  {
+    "name": "portrait 1080x1920",
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 4
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 432,
+            "height": 768,
+            "x": 324,
+            "y": 207
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.41,
+          "y": 0.2,
+          "width": 0.18,
+          "height": 0.1,
+          "faceCentreX": 0.5,
+          "eyeLineY": 0.24,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.1667,
+              "cx": 0.5,
+              "cy": 0.25
+            },
+            {
+              "t": 0.5,
+              "cx": 0.504,
+              "cy": 0.25
+            },
+            {
+              "t": 0.8333,
+              "cx": 0.508,
+              "cy": 0.25
+            },
+            {
+              "t": 1.1667,
+              "cx": 0.512,
+              "cy": 0.25
+            },
+            {
+              "t": 1.5,
+              "cx": 0.516,
+              "cy": 0.25
+            },
+            {
+              "t": 1.8333,
+              "cx": 0.52,
+              "cy": 0.25
+            },
+            {
+              "t": 2.1667,
+              "cx": 0.524,
+              "cy": 0.25
+            },
+            {
+              "t": 2.5,
+              "cx": 0.528,
+              "cy": 0.25
+            },
+            {
+              "t": 2.8333,
+              "cx": 0.532,
+              "cy": 0.25
+            },
+            {
+              "t": 3.1667,
+              "cx": 0.536,
+              "cy": 0.25
+            },
+            {
+              "t": 3.5,
+              "cx": 0.54,
+              "cy": 0.25
+            },
+            {
+              "t": 3.8333,
+              "cx": 0.544,
+              "cy": 0.25
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "fill"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 4,
+          "endSec": 8
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 1080,
+            "height": 1920,
+            "x": 0,
+            "y": 0
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.2,
+          "y": 0.15,
+          "width": 0.6,
+          "height": 0.35,
+          "faceCentreX": 0.5,
+          "eyeLineY": 0.28,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.1667,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 0.5,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 0.8333,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 1.1667,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 1.5,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 1.8333,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 2.1667,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 2.5,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 2.8333,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 3.1667,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 3.5,
+              "cx": 0.5,
+              "cy": 0.32
+            },
+            {
+              "t": 3.8333,
+              "cx": 0.5,
+              "cy": 0.32
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "fill"
+      },
+      {
+        "shotIndex": 2,
+        "shot": {
+          "startSec": 8,
+          "endSec": 10
+        },
+        "placement": {
+          "kind": "fit"
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "fit"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "narrow 720x1440",
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 5
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 432,
+            "height": 768,
+            "x": 144,
+            "y": 236
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.4,
+          "y": 0.3,
+          "width": 0.2,
+          "height": 0.1,
+          "faceCentreX": 0.5,
+          "eyeLineY": 0.34,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.2083,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 0.625,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 1.0417,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 1.4583,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 1.875,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 2.2917,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 2.7083,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 3.125,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 3.5417,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 3.9583,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 4.375,
+              "cx": 0.5,
+              "cy": 0.35
+            },
+            {
+              "t": 4.7917,
+              "cx": 0.5,
+              "cy": 0.35
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "fill"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 5,
+          "endSec": 9
+        },
+        "placement": {
+          "kind": "fit"
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "fit"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "square 1080x1080",
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 432,
+              "height": 768
+            },
+            "x": [
+              {
+                "t": 0.25,
+                "v": 173
+              },
+              {
+                "t": 4.25,
+                "v": 173
+              },
+              {
+                "t": 4.75,
+                "v": 270
+              }
+            ],
+            "y": [
+              {
+                "t": 0.25,
+                "v": 81
+              }
+            ]
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.3,
+          "y": 0.25,
+          "width": 0.12,
+          "height": 0.18,
+          "eyeLineY": 0.31,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.25,
+              "cx": 0.36,
+              "cy": 0.34
+            },
+            {
+              "t": 0.75,
+              "cx": 0.37,
+              "cy": 0.34
+            },
+            {
+              "t": 1.25,
+              "cx": 0.38,
+              "cy": 0.34
+            },
+            {
+              "t": 1.75,
+              "cx": 0.39,
+              "cy": 0.34
+            },
+            {
+              "t": 2.25,
+              "cx": 0.4,
+              "cy": 0.34
+            },
+            {
+              "t": 2.75,
+              "cx": 0.41,
+              "cy": 0.34
+            },
+            {
+              "t": 3.25,
+              "cx": 0.42,
+              "cy": 0.34
+            },
+            {
+              "t": 3.75,
+              "cx": 0.43,
+              "cy": 0.34
+            },
+            {
+              "t": 4.25,
+              "cx": 0.44,
+              "cy": 0.34
+            },
+            {
+              "t": 4.75,
+              "cx": 0.45,
+              "cy": 0.34
+            },
+            {
+              "t": 5.25,
+              "cx": 0.46,
+              "cy": 0.34
+            },
+            {
+              "t": 5.75,
+              "cx": 0.47,
+              "cy": 0.34
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "track"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "stream, presence",
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 432,
+            "height": 768,
+            "x": 0,
+            "y": 312
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.000025,
+          "x": 0.02,
+          "y": 0.62,
+          "width": 0.08,
+          "height": 0.15,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 0.75,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 1.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 1.75,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 2.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 2.75,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 3.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 3.75,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 4.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 4.75,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 5.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 5.75,
+              "cx": 0.06,
+              "cy": 0.69
+            }
+          ]
+        },
+        "faces": 2,
+        "layout": "fill"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 6,
+          "endSec": 12
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 432,
+            "height": 768,
+            "x": 0,
+            "y": 312
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.000025,
+          "x": 0.02,
+          "y": 0.62,
+          "width": 0.08,
+          "height": 0.15,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 0.75,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 1.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 1.75,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 2.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 2.75,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 3.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 3.75,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 4.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 4.75,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 5.25,
+              "cx": 0.06,
+              "cy": 0.69
+            },
+            {
+              "t": 5.75,
+              "cx": 0.06,
+              "cy": 0.69
+            }
+          ]
+        },
+        "faces": 2,
+        "layout": "fill"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 2
+  },
+  {
+    "name": "stream, speaker",
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 432,
+            "height": 768,
+            "x": 898,
+            "y": 0
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00083,
+          "x": 0.55,
+          "y": 0.3,
+          "width": 0.06,
+          "height": 0.11,
+          "coverage": 0.3333,
+          "track": [
+            {
+              "t": 0.25,
+              "cx": 0.58,
+              "cy": 0.35
+            },
+            {
+              "t": 0.75,
+              "cx": 0.58,
+              "cy": 0.35
+            },
+            {
+              "t": 1.25,
+              "cx": 0.58,
+              "cy": 0.35
+            },
+            {
+              "t": 1.75,
+              "cx": 0.58,
+              "cy": 0.35
+            }
+          ]
+        },
+        "faces": 2,
+        "layout": "fill"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 6,
+          "endSec": 12
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 432,
+            "height": 768,
+            "x": 898,
+            "y": 0
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00083,
+          "x": 0.55,
+          "y": 0.3,
+          "width": 0.06,
+          "height": 0.11,
+          "coverage": 0.3333,
+          "track": [
+            {
+              "t": 0.25,
+              "cx": 0.58,
+              "cy": 0.35
+            },
+            {
+              "t": 0.75,
+              "cx": 0.58,
+              "cy": 0.35
+            },
+            {
+              "t": 1.25,
+              "cx": 0.58,
+              "cy": 0.35
+            },
+            {
+              "t": 1.75,
+              "cx": 0.58,
+              "cy": 0.35
+            }
+          ]
+        },
+        "faces": 2,
+        "layout": "fill"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 2
+  },
+  {
+    "name": "podcast, series_film pin",
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 3
+        },
+        "placement": {
+          "kind": "fit",
+          "chosen": true
+        },
+        "speaker": null,
+        "faces": 1,
+        "layout": "fit"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 3,
+          "endSec": 6
+        },
+        "placement": {
+          "kind": "fit",
+          "chosen": true
+        },
+        "speaker": null,
+        "faces": 1,
+        "layout": "fit"
+      },
+      {
+        "shotIndex": 2,
+        "shot": {
+          "startSec": 6,
+          "endSec": 8.5
+        },
+        "placement": {
+          "kind": "fit",
+          "chosen": true
+        },
+        "speaker": null,
+        "faces": 2,
+        "layout": "fit"
+      },
+      {
+        "shotIndex": 3,
+        "shot": {
+          "startSec": 8.5,
+          "endSec": 10
+        },
+        "placement": {
+          "kind": "fit",
+          "chosen": true
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "fit"
+      },
+      {
+        "shotIndex": 4,
+        "shot": {
+          "startSec": 10,
+          "endSec": 11
+        },
+        "placement": {
+          "kind": "fit",
+          "chosen": true
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "fit"
+      },
+      {
+        "shotIndex": 5,
+        "shot": {
+          "startSec": 11,
+          "endSec": 13
+        },
+        "placement": {
+          "kind": "fit",
+          "chosen": true
+        },
+        "speaker": null,
+        "faces": 1,
+        "layout": "fit"
+      }
+    ],
+    "coverageDropped": 1,
+    "stacksRefused": 0
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "fromStreamMoment": false,
+    "rule": "speaker"
+  },
+  {
+    "fromStreamMoment": true,
+    "rule": "presence"
+  }
+]

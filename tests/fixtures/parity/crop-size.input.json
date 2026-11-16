@@ -1,0 +1,1475 @@
+{
+ "sizes": [
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 810,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 810,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 810,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 810,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 810,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 810,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 810,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 3840,
+   "frameHeight": 2160,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 3840,
+   "frameHeight": 2160,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 3840,
+   "frameHeight": 2160,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 3840,
+   "frameHeight": 2160,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 3840,
+   "frameHeight": 2160,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 3840,
+   "frameHeight": 2160,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 3840,
+   "frameHeight": 2160,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1280,
+   "frameHeight": 720,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1280,
+   "frameHeight": 720,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1280,
+   "frameHeight": 720,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1280,
+   "frameHeight": 720,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1280,
+   "frameHeight": 720,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1280,
+   "frameHeight": 720,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1280,
+   "frameHeight": 720,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 854,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 854,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 854,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 854,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 854,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 854,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 854,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1281,
+   "frameHeight": 721,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1281,
+   "frameHeight": 721,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1281,
+   "frameHeight": 721,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1281,
+   "frameHeight": 721,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1281,
+   "frameHeight": 721,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1281,
+   "frameHeight": 721,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1281,
+   "frameHeight": 721,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1280,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1280,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1280,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1280,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1280,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1280,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1280,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 640,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 640,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 640,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 640,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 640,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 640,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 640,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.05,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.18,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.45,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.9,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1920,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1920,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1920,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1920,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1920,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1920,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1920,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.1,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1920,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.3,
+   "maxUpscale": 2.5,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1920,
+    "height": 1080
+   }
+  },
+  {
+   "faceHeight": 0.2,
+   "maxUpscale": 1,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "faceHeight": 0.2,
+   "maxUpscale": 4,
+   "faceHeightTarget": 0.5,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  }
+ ],
+ "evenDown": [
+  0,
+  1,
+  2,
+  2.4,
+  2.5,
+  3.5,
+  431.9,
+  432,
+  432.5,
+  433,
+  607.5,
+  1079,
+  1080.49,
+  1080.5,
+  -1.5,
+  -2.5
+ ],
+ "outputs": [
+  {
+   "width": 1080,
+   "height": 1920
+  },
+  {
+   "width": 1080,
+   "height": 1080
+  },
+  {
+   "width": 1920,
+   "height": 1080
+  },
+  {
+   "width": 720,
+   "height": 1280
+  }
+ ],
+ "baseWindowWidth": [
+  {
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 1920,
+   "frameHeight": 810,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 2560,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 3840,
+   "frameHeight": 2160,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 1280,
+   "frameHeight": 720,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 854,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 1281,
+   "frameHeight": 721,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 720,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 720,
+   "frameHeight": 1280,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 1080,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 640,
+   "frameHeight": 480,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "frameWidth": 2560,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  }
+ ]
+}

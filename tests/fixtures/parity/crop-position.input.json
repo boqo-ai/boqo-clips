@@ -1,0 +1,547 @@
+{
+ "positions": [
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": -0.4,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": 0.7,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": 3,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": -5,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 100,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 40,
+   "boxRight": 160,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 1880,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 1820,
+   "boxRight": 1915,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 1000,
+   "facing": -0.9,
+   "lookingRoom": 0.15,
+   "boxLeft": 1027,
+   "boxRight": 1338,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 1000,
+   "facing": 0.9,
+   "lookingRoom": 0.15,
+   "boxLeft": 1027,
+   "boxRight": 1338,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 300,
+    "height": 534
+   },
+   "centreX": 1000,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 840,
+   "boxRight": 1160,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 300,
+    "height": 534
+   },
+   "centreX": 1000,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 850,
+   "boxRight": 1150,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": 0.3,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": 0.05,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": 0.95,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": null,
+   "centreY": 0.1,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": null,
+   "centreY": 0.9,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 608,
+    "height": 1080
+   },
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": 0.3,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 1080,
+    "height": 1920
+   },
+   "centreX": 540,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 400,
+   "boxRight": 680,
+   "eyeLineY": 0.3,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1080,
+   "frameHeight": 1920
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 300,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 220,
+   "boxRight": 380,
+   "eyeLineY": 0.25,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1080,
+   "frameHeight": 1920
+  },
+  {
+   "size": {
+    "width": 720,
+    "height": 1280
+   },
+   "centreX": 360,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 300,
+   "boxRight": 420,
+   "eyeLineY": 0.5,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 720,
+   "frameHeight": 1440
+  },
+  {
+   "size": {
+    "width": 624,
+    "height": 1108
+   },
+   "centreX": 1314,
+   "facing": 0.2,
+   "lookingRoom": 0.15,
+   "boxLeft": 1200,
+   "boxRight": 1430,
+   "eyeLineY": 0.15,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 2560,
+   "frameHeight": 1440
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960,
+   "facing": 0.5,
+   "lookingRoom": 0.3,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "size": {
+    "width": 432,
+    "height": 768
+   },
+   "centreX": 960.5,
+   "facing": 0.5,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "eyeLineY": null,
+   "centreY": 0.4,
+   "eyeLineTarget": 0.33,
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  }
+ ],
+ "windows": [
+  {
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "faceHeight": 0.15,
+   "eyeLineY": 0.3,
+   "centreY": 0.35,
+   "maxUpscale": 2.5,
+   "eyeLineTarget": 0.33,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "faceHeight": 0.15,
+   "eyeLineY": null,
+   "centreY": 0.35,
+   "maxUpscale": 2.5,
+   "eyeLineTarget": 0.33,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "faceHeight": 0.4,
+   "eyeLineY": 0.3,
+   "centreY": 0.35,
+   "maxUpscale": 2.5,
+   "eyeLineTarget": 0.33,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "faceHeight": 0.15,
+   "eyeLineY": 0.3,
+   "centreY": 0.35,
+   "maxUpscale": 2.5,
+   "eyeLineTarget": 0.33,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "centreX": 300,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 240,
+   "boxRight": 360,
+   "faceHeight": 0.15,
+   "eyeLineY": 0.3,
+   "centreY": 0.35,
+   "maxUpscale": 2.5,
+   "eyeLineTarget": 0.33,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "targetRatio": 1.125
+  },
+  {
+   "centreX": 1314,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 1200,
+   "boxRight": 1430,
+   "faceHeight": 0.12,
+   "eyeLineY": 0.2,
+   "centreY": 0.35,
+   "maxUpscale": 2.5,
+   "eyeLineTarget": 0.33,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 2560,
+   "frameHeight": 1440,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "centreX": 540,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 450,
+   "boxRight": 630,
+   "faceHeight": 0.08,
+   "eyeLineY": 0.3,
+   "centreY": 0.35,
+   "maxUpscale": 2.5,
+   "eyeLineTarget": 0.33,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1080,
+   "frameHeight": 1920,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "centreX": 960,
+   "facing": 0,
+   "lookingRoom": 0.15,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "faceHeight": 0.15,
+   "eyeLineY": 0.3,
+   "centreY": 0.35,
+   "maxUpscale": 2.5,
+   "eyeLineTarget": 0.33,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "centreX": 960,
+   "facing": -0.6,
+   "lookingRoom": 0.2,
+   "boxLeft": 900,
+   "boxRight": 1020,
+   "faceHeight": 0.15,
+   "eyeLineY": 0.3,
+   "centreY": 0.35,
+   "maxUpscale": 2.5,
+   "eyeLineTarget": 0.33,
+   "faceHeightTarget": 0.3,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   }
+  }
+ ]
+}

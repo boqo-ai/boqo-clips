@@ -1,0 +1,2237 @@
+[
+  {
+    "name": "fit: no faces",
+    "layout": {
+      "placement": {
+        "kind": "fit"
+      },
+      "speaker": null,
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": false,
+    "countedFaces": 0
+  },
+  {
+    "name": "fit: every face under the coverage floor",
+    "layout": {
+      "placement": {
+        "kind": "fit"
+      },
+      "speaker": null,
+      "dropped": 2,
+      "stackRefused": false
+    },
+    "stackAllowed": false,
+    "countedFaces": 0
+  },
+  {
+    "name": "stack: two apart, together the whole shot",
+    "layout": {
+      "placement": {
+        "kind": "stack",
+        "panels": [
+          {
+            "width": 728,
+            "height": 646,
+            "x": 34,
+            "y": 78
+          },
+          {
+            "width": 810,
+            "height": 720,
+            "x": 1075,
+            "y": 86
+          }
+        ]
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "id": "left",
+        "x": 0.15,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "faceCentreX": 0.19,
+        "eyeLineY": 0.27,
+        "facing": 0.3,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.875,
+            "cx": 0.19,
+            "cy": 0.29
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "stack: together exactly half the shot",
+    "layout": {
+      "placement": {
+        "kind": "stack",
+        "panels": [
+          {
+            "width": 728,
+            "height": 646,
+            "x": 34,
+            "y": 78
+          },
+          {
+            "width": 810,
+            "height": 720,
+            "x": 1075,
+            "y": 86
+          }
+        ]
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "id": "left",
+        "x": 0.15,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "faceCentreX": 0.19,
+        "eyeLineY": 0.27,
+        "facing": 0.3,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.875,
+            "cx": 0.19,
+            "cy": 0.29
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "refused: together a third of the shot",
+    "layout": {
+      "placement": {
+        "kind": "crop",
+        "rect": {
+          "width": 432,
+          "height": 768,
+          "x": 1281,
+          "y": 71
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00006,
+        "id": "right",
+        "x": 0.75,
+        "y": 0.22,
+        "width": 0.09,
+        "height": 0.2,
+        "faceCentreX": 0.79,
+        "eyeLineY": 0.3,
+        "facing": -0.3,
+        "coverage": 0.3333,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.875,
+            "cx": 0.79,
+            "cy": 0.32
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": true
+    },
+    "stackAllowed": false,
+    "countedFaces": 2
+  },
+  {
+    "name": "refused: never together",
+    "layout": {
+      "placement": {
+        "kind": "crop",
+        "rect": {
+          "width": 432,
+          "height": 768,
+          "x": 1281,
+          "y": 71
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00006,
+        "id": "right",
+        "x": 0.75,
+        "y": 0.22,
+        "width": 0.09,
+        "height": 0.2,
+        "faceCentreX": 0.79,
+        "eyeLineY": 0.3,
+        "facing": -0.3,
+        "coverage": 0.25,
+        "track": [
+          {
+            "t": 2.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.875,
+            "cx": 0.79,
+            "cy": 0.32
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": true
+    },
+    "stackAllowed": false,
+    "countedFaces": 2
+  },
+  {
+    "name": "stack: no tracks reads as together",
+    "layout": {
+      "placement": {
+        "kind": "stack",
+        "panels": [
+          {
+            "width": 728,
+            "height": 646,
+            "x": 34,
+            "y": 78
+          },
+          {
+            "width": 810,
+            "height": 720,
+            "x": 1075,
+            "y": 86
+          }
+        ]
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "id": "left",
+        "x": 0.15,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "faceCentreX": 0.19,
+        "eyeLineY": 0.27,
+        "facing": 0.3
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "fill: two close together",
+    "layout": {
+      "placement": {
+        "kind": "crop",
+        "rect": {
+          "width": 432,
+          "height": 768,
+          "x": 821,
+          "y": 0
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00004,
+        "id": "near2",
+        "x": 0.5,
+        "y": 0.21,
+        "width": 0.08,
+        "height": 0.18,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 0.375,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 0.625,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 0.875,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 1.125,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 1.375,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 1.625,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 1.875,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 2.125,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 2.375,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 2.625,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 2.875,
+            "cx": 0.54,
+            "cy": 0.3
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "one window: spread just under the widest window",
+    "layout": {
+      "placement": {
+        "kind": "track",
+        "path": {
+          "size": {
+            "width": 432,
+            "height": 768
+          },
+          "x": [
+            {
+              "t": 0.125,
+              "v": 1181
+            },
+            {
+              "t": 0.375,
+              "v": 1231
+            },
+            {
+              "t": 0.625,
+              "v": 1281
+            },
+            {
+              "t": 0.875,
+              "v": 1331
+            },
+            {
+              "t": 1.125,
+              "v": 1381
+            },
+            {
+              "t": 1.375,
+              "v": 1431
+            },
+            {
+              "t": 1.625,
+              "v": 1446
+            }
+          ],
+          "y": [
+            {
+              "t": 0.125,
+              "v": 71
+            }
+          ]
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00006,
+        "id": "right",
+        "x": 0.75,
+        "y": 0.22,
+        "width": 0.09,
+        "height": 0.2,
+        "faceCentreX": 0.652,
+        "eyeLineY": 0.3,
+        "facing": -0.3,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.875,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.875,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.875,
+            "cx": 0.79,
+            "cy": 0.32
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "one window: spread exactly the widest window",
+    "layout": {
+      "placement": {
+        "kind": "track",
+        "path": {
+          "size": {
+            "width": 432,
+            "height": 768
+          },
+          "x": [
+            {
+              "t": 0.125,
+              "v": 1181
+            },
+            {
+              "t": 0.375,
+              "v": 1231
+            },
+            {
+              "t": 0.625,
+              "v": 1281
+            },
+            {
+              "t": 0.875,
+              "v": 1331
+            },
+            {
+              "t": 1.125,
+              "v": 1381
+            },
+            {
+              "t": 1.375,
+              "v": 1431
+            },
+            {
+              "t": 1.625,
+              "v": 1481
+            },
+            {
+              "t": 1.875,
+              "v": 1488
+            }
+          ],
+          "y": [
+            {
+              "t": 0.125,
+              "v": 71
+            }
+          ]
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00006,
+        "id": "right",
+        "x": 0.75,
+        "y": 0.22,
+        "width": 0.09,
+        "height": 0.2,
+        "faceCentreX": 0.56640625,
+        "eyeLineY": 0.3,
+        "facing": -0.3,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.875,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.875,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.875,
+            "cx": 0.79,
+            "cy": 0.32
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "stack: spread just over the widest window",
+    "layout": {
+      "placement": {
+        "kind": "stack",
+        "panels": [
+          {
+            "width": 728,
+            "height": 646,
+            "x": 149,
+            "y": 78
+          },
+          {
+            "width": 810,
+            "height": 720,
+            "x": 803,
+            "y": 86
+          }
+        ]
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "id": "left",
+        "x": 0.15,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "faceCentreX": 0.25,
+        "eyeLineY": 0.27,
+        "facing": 0.3,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.875,
+            "cx": 0.19,
+            "cy": 0.29
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "fill: the drawn pair is close, the outlier is not drawn",
+    "layout": {
+      "placement": {
+        "kind": "crop",
+        "rect": {
+          "width": 432,
+          "height": 768,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "id": "f1a",
+        "x": 0.06,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 0.375,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 0.625,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 0.875,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 1.125,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 1.375,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 1.625,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 1.875,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 2.125,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 2.375,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 2.625,
+            "cx": 0.1,
+            "cy": 0.29
+          },
+          {
+            "t": 2.875,
+            "cx": 0.1,
+            "cy": 0.29
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 3
+  },
+  {
+    "name": "fill: one face plus a dropped bystander",
+    "layout": {
+      "placement": {
+        "kind": "crop",
+        "rect": {
+          "width": 432,
+          "height": 768,
+          "x": 821,
+          "y": 0
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00004,
+        "id": "near2",
+        "x": 0.5,
+        "y": 0.21,
+        "width": 0.08,
+        "height": 0.18,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 0.375,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 0.625,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 0.875,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 1.125,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 1.375,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 1.625,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 1.875,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 2.125,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 2.375,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 2.625,
+            "cx": 0.54,
+            "cy": 0.3
+          },
+          {
+            "t": 2.875,
+            "cx": 0.54,
+            "cy": 0.3
+          }
+        ]
+      },
+      "dropped": 1,
+      "stackRefused": false
+    },
+    "stackAllowed": false,
+    "countedFaces": 1
+  },
+  {
+    "name": "track: one walking face",
+    "layout": {
+      "placement": {
+        "kind": "track",
+        "path": {
+          "size": {
+            "width": 432,
+            "height": 768
+          },
+          "x": [
+            {
+              "t": 0.1667,
+              "v": 347
+            },
+            {
+              "t": 0.5,
+              "v": 347
+            },
+            {
+              "t": 0.8333,
+              "v": 414
+            },
+            {
+              "t": 1.1667,
+              "v": 480
+            },
+            {
+              "t": 1.5,
+              "v": 539
+            },
+            {
+              "t": 1.8333,
+              "v": 539
+            },
+            {
+              "t": 2.1667,
+              "v": 606
+            },
+            {
+              "t": 2.5,
+              "v": 672
+            },
+            {
+              "t": 2.8333,
+              "v": 731
+            },
+            {
+              "t": 3.1667,
+              "v": 731
+            },
+            {
+              "t": 3.5,
+              "v": 798
+            },
+            {
+              "t": 3.8333,
+              "v": 864
+            }
+          ],
+          "y": [
+            {
+              "t": 0.1667,
+              "v": 38
+            }
+          ]
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "x": 0.25,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "faceCentreX": 0.29,
+        "eyeLineY": 0.27,
+        "facing": 0.1,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.1667,
+            "cx": 0.29,
+            "cy": 0.29
+          },
+          {
+            "t": 0.5,
+            "cx": 0.315,
+            "cy": 0.292
+          },
+          {
+            "t": 0.8333,
+            "cx": 0.34,
+            "cy": 0.294
+          },
+          {
+            "t": 1.1667,
+            "cx": 0.365,
+            "cy": 0.296
+          },
+          {
+            "t": 1.5,
+            "cx": 0.39,
+            "cy": 0.298
+          },
+          {
+            "t": 1.8333,
+            "cx": 0.415,
+            "cy": 0.3
+          },
+          {
+            "t": 2.1667,
+            "cx": 0.44,
+            "cy": 0.302
+          },
+          {
+            "t": 2.5,
+            "cx": 0.465,
+            "cy": 0.304
+          },
+          {
+            "t": 2.8333,
+            "cx": 0.49,
+            "cy": 0.306
+          },
+          {
+            "t": 3.1667,
+            "cx": 0.515,
+            "cy": 0.308
+          },
+          {
+            "t": 3.5,
+            "cx": 0.54,
+            "cy": 0.31
+          },
+          {
+            "t": 3.8333,
+            "cx": 0.565,
+            "cy": 0.312
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": false,
+    "countedFaces": 1
+  },
+  {
+    "name": "fit: the series_film pin",
+    "layout": {
+      "placement": {
+        "kind": "fit",
+        "chosen": true
+      },
+      "speaker": null,
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "override fit",
+    "layout": {
+      "placement": {
+        "kind": "fit",
+        "chosen": true
+      },
+      "speaker": null,
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "override stack, two close",
+    "layout": {
+      "placement": {
+        "kind": "stack",
+        "panels": [
+          {
+            "width": 728,
+            "height": 646,
+            "x": 481,
+            "y": 0
+          },
+          {
+            "width": 728,
+            "height": 646,
+            "x": 673,
+            "y": 1
+          }
+        ]
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00001,
+        "id": "near1",
+        "x": 0.4,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 0.375,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 0.625,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 0.875,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 1.125,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 1.375,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 1.625,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 1.875,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 2.125,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 2.375,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 2.625,
+            "cx": 0.44,
+            "cy": 0.29
+          },
+          {
+            "t": 2.875,
+            "cx": 0.44,
+            "cy": 0.29
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "override stack, one face",
+    "layout": {
+      "placement": {
+        "kind": "track",
+        "path": {
+          "size": {
+            "width": 432,
+            "height": 768
+          },
+          "x": [
+            {
+              "t": 0.1667,
+              "v": 347
+            },
+            {
+              "t": 0.5,
+              "v": 347
+            },
+            {
+              "t": 0.8333,
+              "v": 414
+            },
+            {
+              "t": 1.1667,
+              "v": 480
+            },
+            {
+              "t": 1.5,
+              "v": 539
+            },
+            {
+              "t": 1.8333,
+              "v": 539
+            },
+            {
+              "t": 2.1667,
+              "v": 606
+            },
+            {
+              "t": 2.5,
+              "v": 672
+            },
+            {
+              "t": 2.8333,
+              "v": 731
+            },
+            {
+              "t": 3.1667,
+              "v": 731
+            },
+            {
+              "t": 3.5,
+              "v": 798
+            },
+            {
+              "t": 3.8333,
+              "v": 864
+            }
+          ],
+          "y": [
+            {
+              "t": 0.1667,
+              "v": 38
+            }
+          ]
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "x": 0.25,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "faceCentreX": 0.29,
+        "eyeLineY": 0.27,
+        "facing": 0.1,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.1667,
+            "cx": 0.29,
+            "cy": 0.29
+          },
+          {
+            "t": 0.5,
+            "cx": 0.315,
+            "cy": 0.292
+          },
+          {
+            "t": 0.8333,
+            "cx": 0.34,
+            "cy": 0.294
+          },
+          {
+            "t": 1.1667,
+            "cx": 0.365,
+            "cy": 0.296
+          },
+          {
+            "t": 1.5,
+            "cx": 0.39,
+            "cy": 0.298
+          },
+          {
+            "t": 1.8333,
+            "cx": 0.415,
+            "cy": 0.3
+          },
+          {
+            "t": 2.1667,
+            "cx": 0.44,
+            "cy": 0.302
+          },
+          {
+            "t": 2.5,
+            "cx": 0.465,
+            "cy": 0.304
+          },
+          {
+            "t": 2.8333,
+            "cx": 0.49,
+            "cy": 0.306
+          },
+          {
+            "t": 3.1667,
+            "cx": 0.515,
+            "cy": 0.308
+          },
+          {
+            "t": 3.5,
+            "cx": 0.54,
+            "cy": 0.31
+          },
+          {
+            "t": 3.8333,
+            "cx": 0.565,
+            "cy": 0.312
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": false,
+    "countedFaces": 1
+  },
+  {
+    "name": "override fill keeps one window and stops tracking",
+    "layout": {
+      "placement": {
+        "kind": "crop",
+        "rect": {
+          "width": 432,
+          "height": 768,
+          "x": 1281,
+          "y": 71
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00006,
+        "id": "right",
+        "x": 0.75,
+        "y": 0.22,
+        "width": 0.09,
+        "height": 0.2,
+        "faceCentreX": 0.79,
+        "eyeLineY": 0.3,
+        "facing": -0.3,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.875,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.875,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.875,
+            "cx": 0.79,
+            "cy": 0.32
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 3
+  },
+  {
+    "name": "override track",
+    "layout": {
+      "placement": {
+        "kind": "track",
+        "path": {
+          "size": {
+            "width": 432,
+            "height": 768
+          },
+          "x": [
+            {
+              "t": 0.1667,
+              "v": 347
+            },
+            {
+              "t": 0.5,
+              "v": 347
+            },
+            {
+              "t": 0.8333,
+              "v": 414
+            },
+            {
+              "t": 1.1667,
+              "v": 480
+            },
+            {
+              "t": 1.5,
+              "v": 539
+            },
+            {
+              "t": 1.8333,
+              "v": 539
+            },
+            {
+              "t": 2.1667,
+              "v": 606
+            },
+            {
+              "t": 2.5,
+              "v": 672
+            },
+            {
+              "t": 2.8333,
+              "v": 731
+            },
+            {
+              "t": 3.1667,
+              "v": 731
+            },
+            {
+              "t": 3.5,
+              "v": 798
+            },
+            {
+              "t": 3.8333,
+              "v": 864
+            }
+          ],
+          "y": [
+            {
+              "t": 0.1667,
+              "v": 38
+            }
+          ]
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "x": 0.25,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "faceCentreX": 0.29,
+        "eyeLineY": 0.27,
+        "facing": 0.1,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.1667,
+            "cx": 0.29,
+            "cy": 0.29
+          },
+          {
+            "t": 0.5,
+            "cx": 0.315,
+            "cy": 0.292
+          },
+          {
+            "t": 0.8333,
+            "cx": 0.34,
+            "cy": 0.294
+          },
+          {
+            "t": 1.1667,
+            "cx": 0.365,
+            "cy": 0.296
+          },
+          {
+            "t": 1.5,
+            "cx": 0.39,
+            "cy": 0.298
+          },
+          {
+            "t": 1.8333,
+            "cx": 0.415,
+            "cy": 0.3
+          },
+          {
+            "t": 2.1667,
+            "cx": 0.44,
+            "cy": 0.302
+          },
+          {
+            "t": 2.5,
+            "cx": 0.465,
+            "cy": 0.304
+          },
+          {
+            "t": 2.8333,
+            "cx": 0.49,
+            "cy": 0.306
+          },
+          {
+            "t": 3.1667,
+            "cx": 0.515,
+            "cy": 0.308
+          },
+          {
+            "t": 3.5,
+            "cx": 0.54,
+            "cy": 0.31
+          },
+          {
+            "t": 3.8333,
+            "cx": 0.565,
+            "cy": 0.312
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": false,
+    "countedFaces": 1
+  },
+  {
+    "name": "override panels reads as none",
+    "layout": {
+      "placement": {
+        "kind": "stack",
+        "panels": [
+          {
+            "width": 728,
+            "height": 646,
+            "x": 34,
+            "y": 78
+          },
+          {
+            "width": 810,
+            "height": 720,
+            "x": 1075,
+            "y": 86
+          }
+        ]
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "id": "left",
+        "x": 0.15,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "faceCentreX": 0.19,
+        "eyeLineY": 0.27,
+        "facing": 0.3,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.875,
+            "cx": 0.19,
+            "cy": 0.29
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "stack with a looking-room choice",
+    "layout": {
+      "placement": {
+        "kind": "stack",
+        "panels": [
+          {
+            "width": 728,
+            "height": 646,
+            "x": 55,
+            "y": 78
+          },
+          {
+            "width": 810,
+            "height": 720,
+            "x": 1051,
+            "y": 86
+          }
+        ]
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "id": "left",
+        "x": 0.15,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "faceCentreX": 0.19,
+        "eyeLineY": 0.27,
+        "facing": 0.3,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.875,
+            "cx": 0.19,
+            "cy": 0.29
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "presence: no tracks, so the pair stacks",
+    "layout": {
+      "placement": {
+        "kind": "stack",
+        "panels": [
+          {
+            "width": 608,
+            "height": 540,
+            "x": 0,
+            "y": 459
+          },
+          {
+            "width": 446,
+            "height": 396,
+            "x": 891,
+            "y": 185
+          }
+        ]
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.000025,
+        "id": "streamer",
+        "x": 0.05,
+        "y": 0.6,
+        "width": 0.08,
+        "height": 0.15,
+        "coverage": 1
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "presence: streamer and a far TikTok",
+    "layout": {
+      "placement": {
+        "kind": "crop",
+        "rect": {
+          "width": 432,
+          "height": 768,
+          "x": 0,
+          "y": 312
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.000025,
+        "id": "streamer",
+        "x": 0.05,
+        "y": 0.6,
+        "width": 0.08,
+        "height": 0.15,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 0.375,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 0.625,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 0.875,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 1.125,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 1.375,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 1.625,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 1.875,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 2.125,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 2.375,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 2.625,
+            "cx": 0.09,
+            "cy": 0.67
+          },
+          {
+            "t": 2.875,
+            "cx": 0.09,
+            "cy": 0.67
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": true
+    },
+    "stackAllowed": false,
+    "countedFaces": 2
+  },
+  {
+    "name": "speaker: streamer and a far TikTok",
+    "layout": {
+      "placement": {
+        "kind": "crop",
+        "rect": {
+          "width": 432,
+          "height": 768,
+          "x": 898,
+          "y": 0
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00083,
+        "id": "tiktok",
+        "x": 0.55,
+        "y": 0.3,
+        "width": 0.06,
+        "height": 0.11,
+        "coverage": 0.3205,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.58,
+            "cy": 0.35
+          },
+          {
+            "t": 0.375,
+            "cx": 0.58,
+            "cy": 0.35
+          },
+          {
+            "t": 0.625,
+            "cx": 0.58,
+            "cy": 0.35
+          },
+          {
+            "t": 0.875,
+            "cx": 0.58,
+            "cy": 0.35
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": true
+    },
+    "stackAllowed": false,
+    "countedFaces": 2
+  },
+  {
+    "name": "portrait 1080x1920: two apart never stacks",
+    "layout": {
+      "placement": {
+        "kind": "crop",
+        "rect": {
+          "width": 720,
+          "height": 1280,
+          "x": 360,
+          "y": 154
+        }
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00006,
+        "id": "right",
+        "x": 0.75,
+        "y": 0.22,
+        "width": 0.09,
+        "height": 0.2,
+        "faceCentreX": 0.79,
+        "eyeLineY": 0.3,
+        "facing": -0.3,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 0.875,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 1.875,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.125,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.375,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.625,
+            "cx": 0.79,
+            "cy": 0.32
+          },
+          {
+            "t": 2.875,
+            "cx": 0.79,
+            "cy": 0.32
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  },
+  {
+    "name": "square output",
+    "layout": {
+      "placement": {
+        "kind": "stack",
+        "panels": [
+          {
+            "width": 1296,
+            "height": 648,
+            "x": 0,
+            "y": 78
+          },
+          {
+            "width": 1440,
+            "height": 720,
+            "x": 480,
+            "y": 86
+          }
+        ]
+      },
+      "speaker": {
+        "confidence": 0.92,
+        "mouthMotion": 0.00002,
+        "id": "left",
+        "x": 0.15,
+        "y": 0.2,
+        "width": 0.08,
+        "height": 0.18,
+        "faceCentreX": 0.19,
+        "eyeLineY": 0.27,
+        "facing": 0.3,
+        "coverage": 1,
+        "track": [
+          {
+            "t": 0.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 0.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 1.875,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.125,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.375,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.625,
+            "cx": 0.19,
+            "cy": 0.29
+          },
+          {
+            "t": 2.875,
+            "cx": 0.19,
+            "cy": 0.29
+          }
+        ]
+      },
+      "dropped": 0,
+      "stackRefused": false
+    },
+    "stackAllowed": true,
+    "countedFaces": 2
+  }
+]

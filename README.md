@@ -40,7 +40,7 @@ and Linux.
 | --- | --- |
 | Your machine | Captions and transcript, section download, rendering, your brand kits and the finished clips |
 | Your agent | Picking the moments, titles and hooks |
-| boqo | Posting and scheduling, through the boqo MCP connector (`https://mcp.boqo.ai/mcp`). Autoposting comes with the 7-day trial, or with Starter from $12. Without boqo you keep the files |
+| boqo | Posting and scheduling, through the boqo MCP connector (`https://mcp.boqo.ai/mcp`). Autoposting comes with the 3-day trial, or with Starter from $12. Without boqo you keep the files |
 
 Want boqo to do the whole job instead? Hand it over at boqo.ai — that runs on credits.
 

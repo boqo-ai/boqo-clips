@@ -1,0 +1,114 @@
+[
+  {
+    "name": "no heatmap",
+    "regions": []
+  },
+  {
+    "name": "too few bins",
+    "regions": []
+  },
+  {
+    "name": "flat graph",
+    "regions": []
+  },
+  {
+    "name": "full graph",
+    "regions": [
+      {
+        "startSec": 273,
+        "endSec": 327,
+        "value": 0.819
+      },
+      {
+        "startSec": 969,
+        "endSec": 1023,
+        "value": 0.7
+      },
+      {
+        "startSec": 1569,
+        "endSec": 1623,
+        "value": 0.65
+      },
+      {
+        "startSec": 2097,
+        "endSec": 2151,
+        "value": 0.801
+      }
+    ]
+  },
+  {
+    "name": "plateau and a bad bin",
+    "regions": [
+      {
+        "startSec": 5,
+        "endSec": 45,
+        "value": 0.9
+      }
+    ]
+  },
+  {
+    "name": "twelve region cap and clamping",
+    "regions": [
+      {
+        "startSec": 185,
+        "endSec": 315,
+        "value": 0.72
+      },
+      {
+        "startSec": 585,
+        "endSec": 715,
+        "value": 0.76
+      },
+      {
+        "startSec": 985,
+        "endSec": 1115,
+        "value": 0.7999999999999999
+      },
+      {
+        "startSec": 1385,
+        "endSec": 1515,
+        "value": 0.73
+      },
+      {
+        "startSec": 1785,
+        "endSec": 1915,
+        "value": 0.77
+      },
+      {
+        "startSec": 2585,
+        "endSec": 2715,
+        "value": 0.74
+      },
+      {
+        "startSec": 2985,
+        "endSec": 3115,
+        "value": 0.7799999999999999
+      },
+      {
+        "startSec": 3785,
+        "endSec": 3915,
+        "value": 0.75
+      },
+      {
+        "startSec": 4185,
+        "endSec": 4315,
+        "value": 0.7899999999999999
+      },
+      {
+        "startSec": 4985,
+        "endSec": 5115,
+        "value": 0.76
+      },
+      {
+        "startSec": 5385,
+        "endSec": 5515,
+        "value": 0.7999999999999999
+      },
+      {
+        "startSec": 5785,
+        "endSec": 5915,
+        "value": 0.73
+      }
+    ]
+  }
+]

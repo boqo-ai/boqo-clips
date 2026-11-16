@@ -23,6 +23,8 @@ import {
   countCaptionOverrides, defaultCaptionStyle, resolveClipCaptions, resolveProjectCaptions,
 } from '../engine/boqo/caption-overrides.mjs';
 import { buildEmphasisSet, captionDisplayText, captionText, emphasisKey } from '../engine/boqo/caption-words.mjs';
+import { DEFAULT_CAPTION_STYLE, assTime, buildAss, buildCaptions, captionLines, escapeText, scaleCaptionStyle } from '../engine/boqo/captions.mjs';
+import { glowTags, lineEntrance, markerEvent, opacityTags, popTags, shadowTags, wordEntrance } from '../engine/boqo/caption-effects.mjs';
 import { toolEnv } from '../engine/env.mjs';
 import { expectGolden } from './helpers/golden.mjs';
 
@@ -31,6 +33,46 @@ const golden = (name) => JSON.parse(readFileSync(new URL(`./golden/${name}.json`
 const TOL0 = { tol: 0 };
 
 // ---- the copies against boqo's goldens ----------------------------------------------------------------------------
+
+test('buildCaptions matches boqo for the 15 gallery styles, the 5 legacy presets, illustrated and none (golden build-ass)', () => {
+  const i = input('build-ass');
+  const build = (preset) => buildCaptions(i.words, preset, i.output, i.cutSec, i.emphasis);
+  const e = i.effects;
+  const speeds = e.speeds.map((s) => s ?? undefined);
+  expectGolden('build-ass', {
+    gallery: GALLERY_CAPTION_STYLE_KEYS.map((key) => {
+      const { preset, overridesApplied } = resolveProjectCaptions(BRAND_CAPTION_KEY, { style: key });
+      return { key, preset, overridesApplied, result: build(preset) };
+    }),
+    legacy: CAPTION_PRESETS.filter((p) => p.key !== 'none').map((p) => {
+      const preset = resolveCaptionStyle(p.key);
+      return { key: p.key, preset, result: build(preset) };
+    }),
+    extra: ['illustrated', 'none'].map((key) => {
+      const preset = resolveCaptionStyle(key);
+      return { key, preset, result: build(preset) };
+    }),
+    buildAss: i.scaleOutputs.map((output) => buildAss(i.words, scaleCaptionStyle(DEFAULT_CAPTION_STYLE, output), output)),
+    scaleCaptionStyle: i.scaleOutputs.map((output) => scaleCaptionStyle(DEFAULT_CAPTION_STYLE, output)),
+    assTime: i.assTimes.map((t) => assTime(t)),
+    escapeText: i.escape.map((t) => escapeText(t)),
+    captionLines: i.lineWords.map((c) => captionLines(c.words, c.max).map((line) => line.map((w) => w.word))),
+    effects: {
+      glow: e.glows.flatMap((g) => e.capHeights.flatMap((c) => e.boosts.map((b) => glowTags(g, c, b)))),
+      shadow: e.shadows.flatMap((s) => e.capHeights.map((c) => shadowTags(s, c))),
+      opacity: e.opacities.flatMap((o) => [undefined, ...e.shadows].map((s) => opacityTags(o, s))),
+      pop: e.stepMs.flatMap((ms) => speeds.map((s) => popTags(118, s, ms))),
+      marker: e.markers.map((m) => markerEvent(m)),
+      line: ['fade', 'slide'].flatMap((k) => e.stepMs.flatMap((ms) => speeds.map((s) => lineEntrance(k, 540, 1546, 45, ms, s)))),
+      word: ['pop', 'bounce', 'type'].flatMap((k) => e.stepMs.flatMap((ms) => speeds.map((s) => wordEntrance(k, ms, s)))),
+    },
+  }, TOL0);
+  // The case is what the brief names: 15 gallery styles and 5 legacy presets, 12 words, 2 emphasis words.
+  assert.equal(i.words.length, 12);
+  assert.equal(i.emphasis.length, 2);
+  assert.equal(GALLERY_CAPTION_STYLE_KEYS.length, 15);
+  assert.equal(golden('build-ass').legacy.length, 5);
+});
 
 test('captionGroups, keyFlagsFor, the emphasis set, captionText and layoutCaptions match boqo (golden caption-groups)', () => {
   const i = input('caption-groups');

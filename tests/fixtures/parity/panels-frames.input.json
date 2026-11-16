@@ -1,0 +1,339 @@
+{
+ "sampleCases": [
+  {
+   "name": "one 90 s shot, step 3, cap 12",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 90
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "one 20 s shot, step 3, cap 12",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 20
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "one 30 s shot, step 3, cap 12",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 30
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "one 8 s shot, step 3",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 8
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "a 6.5 s shot (the edge margin binds)",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 6.5
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "a 0.8 s shot at step 0.1 (a quarter of the shot is the margin)",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 0.8
+    }
+   ],
+   "stepSec": 0.1,
+   "maxFrames": 12
+  },
+  {
+   "name": "a 6.55 s shot",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 6.55
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "a shot of 0.4 s",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 0.4
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "a shot of 1.5 s",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.5
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "three shots",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 7
+    },
+    {
+     "startSec": 7,
+     "endSec": 8.2
+    },
+    {
+     "startSec": 8.2,
+     "endSec": 25
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "twenty shots, more than the cap",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2
+    },
+    {
+     "startSec": 2,
+     "endSec": 4
+    },
+    {
+     "startSec": 4,
+     "endSec": 6
+    },
+    {
+     "startSec": 6,
+     "endSec": 8
+    },
+    {
+     "startSec": 8,
+     "endSec": 10
+    },
+    {
+     "startSec": 10,
+     "endSec": 12
+    },
+    {
+     "startSec": 12,
+     "endSec": 14
+    },
+    {
+     "startSec": 14,
+     "endSec": 16
+    },
+    {
+     "startSec": 16,
+     "endSec": 18
+    },
+    {
+     "startSec": 18,
+     "endSec": 20
+    },
+    {
+     "startSec": 20,
+     "endSec": 22
+    },
+    {
+     "startSec": 22,
+     "endSec": 24
+    },
+    {
+     "startSec": 24,
+     "endSec": 26
+    },
+    {
+     "startSec": 26,
+     "endSec": 28
+    },
+    {
+     "startSec": 28,
+     "endSec": 30
+    },
+    {
+     "startSec": 30,
+     "endSec": 32
+    },
+    {
+     "startSec": 32,
+     "endSec": 34
+    },
+    {
+     "startSec": 34,
+     "endSec": 36
+    },
+    {
+     "startSec": 36,
+     "endSec": 38
+    },
+    {
+     "startSec": 38,
+     "endSec": 40
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "hosted defaults 1.5 s and 40 frames on 60 s",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 60
+    }
+   ],
+   "stepSec": 1.5,
+   "maxFrames": 40
+  },
+  {
+   "name": "a zero-length shot is skipped",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 0
+    },
+    {
+     "startSec": 0,
+     "endSec": 9
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  },
+  {
+   "name": "a step of zero (midpoints only)",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 9
+    },
+    {
+     "startSec": 9,
+     "endSec": 20
+    }
+   ],
+   "stepSec": 0,
+   "maxFrames": 12
+  },
+  {
+   "name": "a cap of zero",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 9
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 0
+  },
+  {
+   "name": "a fractional cap floors",
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 90
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 5.9
+  },
+  {
+   "name": "shots not starting at zero",
+   "shots": [
+    {
+     "startSec": 100,
+     "endSec": 112
+    }
+   ],
+   "stepSec": 3,
+   "maxFrames": 12
+  }
+ ],
+ "enough": [
+  [
+   0,
+   0
+  ],
+  [
+   0,
+   5
+  ],
+  [
+   1,
+   1
+  ],
+  [
+   1,
+   2
+  ],
+  [
+   2,
+   4
+  ],
+  [
+   3,
+   4
+  ],
+  [
+   5,
+   12
+  ],
+  [
+   6,
+   12
+  ],
+  [
+   7,
+   12
+  ],
+  [
+   12,
+   12
+  ]
+ ],
+ "args": [
+  {
+   "path": "/tmp/w.mp4",
+   "atSec": 12.3456,
+   "width": 640,
+   "outPath": "/tmp/f.jpg"
+  },
+  {
+   "path": "C:\\x\\w.mp4",
+   "atSec": 0,
+   "width": 960,
+   "outPath": "o.jpg"
+  }
+ ]
+}

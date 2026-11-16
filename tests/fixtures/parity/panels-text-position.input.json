@@ -1,0 +1,296 @@
+{
+ "cases": [
+  {
+   "name": "no shots",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.14
+   },
+   "placed": [],
+   "outputHeight": 1920
+  },
+  {
+   "name": "a fill shot only",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "a panels shot holding the centre (moves to the seam)",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "a panels shot whose band does not hold the centre",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.5
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "centre exactly on the seam",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.3125
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "the lowest of two seams",
+   "element": {
+    "startSec": 0,
+    "endSec": 8,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 500
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 620
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "a shot that does not overlap the element",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 3,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "a shot touching the element at its end only",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 3,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 0,
+      "endSec": 3
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "a seam above the headline minimum is clamped",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.05
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 100
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "a seam below the headline maximum is clamped",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.5
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 1900
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "centre exactly on the seam in doubles (0.5 of 1920 is 960)",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.5
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 960
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "mixed panels and track",
+   "element": {
+    "startSec": 1,
+    "endSec": 7,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 3
+     },
+     "placement": {
+      "kind": "track"
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 3,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 560
+     }
+    },
+    {
+     "shotIndex": 2,
+     "shot": {
+      "startSec": 6,
+      "endSec": 9
+     },
+     "placement": {
+      "kind": "fit"
+     }
+    }
+   ],
+   "outputHeight": 1920
+  }
+ ]
+}

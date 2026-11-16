@@ -1,0 +1,1317 @@
+[
+  {
+    "name": "a stream: panels with a face, game, people, then a tie",
+    "shots": [
+      {
+        "startSec": 0,
+        "endSec": 4
+      },
+      {
+        "startSec": 4,
+        "endSec": 8
+      },
+      {
+        "startSec": 8,
+        "endSec": 12
+      },
+      {
+        "startSec": 12,
+        "endSec": 16
+      }
+    ],
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 4
+        },
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "width": 498,
+              "height": 250,
+              "x": 1383,
+              "y": 75
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 846,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0.5,
+                "v": 537
+              }
+            ],
+            "y": [
+              {
+                "t": 0.5,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 540
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.82,
+          "y": 0.1,
+          "width": 0.06,
+          "height": 0.13,
+          "faceCentreX": 0.85,
+          "eyeLineY": 0.1455,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.85,
+              "cy": 0.17
+            },
+            {
+              "t": 0.625,
+              "cx": 0.852,
+              "cy": 0.17
+            },
+            {
+              "t": 1.125,
+              "cx": 0.854,
+              "cy": 0.17
+            },
+            {
+              "t": 1.625,
+              "cx": 0.856,
+              "cy": 0.17
+            },
+            {
+              "t": 2.125,
+              "cx": 0.858,
+              "cy": 0.17
+            },
+            {
+              "t": 2.625,
+              "cx": 0.86,
+              "cy": 0.17
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "panels"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 4,
+          "endSec": 8
+        },
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0.5,
+                "v": 656
+              },
+              {
+                "t": 1.4,
+                "v": 656
+              },
+              {
+                "t": 1.5,
+                "v": 676
+              },
+              {
+                "t": 1.6,
+                "v": 726
+              },
+              {
+                "t": 1.7,
+                "v": 791
+              },
+              {
+                "t": 1.8,
+                "v": 856
+              },
+              {
+                "t": 1.9,
+                "v": 906
+              },
+              {
+                "t": 2,
+                "v": 926
+              }
+            ],
+            "y": [
+              {
+                "t": 0.5,
+                "v": 0
+              }
+            ]
+          }
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "track"
+      },
+      {
+        "shotIndex": 2,
+        "shot": {
+          "startSec": 8,
+          "endSec": 12
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 486,
+            "height": 864,
+            "x": 717,
+            "y": 108
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.45,
+          "y": 0.3,
+          "width": 0.1,
+          "height": 0.2,
+          "faceCentreX": 0.5,
+          "eyeLineY": 0.37,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.5,
+              "cy": 0.4
+            },
+            {
+              "t": 0.625,
+              "cx": 0.502,
+              "cy": 0.4
+            },
+            {
+              "t": 1.125,
+              "cx": 0.504,
+              "cy": 0.4
+            },
+            {
+              "t": 1.625,
+              "cx": 0.506,
+              "cy": 0.4
+            },
+            {
+              "t": 2.125,
+              "cx": 0.508,
+              "cy": 0.4
+            },
+            {
+              "t": 2.625,
+              "cx": 0.51,
+              "cy": 0.4
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "fill"
+      },
+      {
+        "shotIndex": 3,
+        "shot": {
+          "startSec": 12,
+          "endSec": 16
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 432,
+            "height": 768,
+            "x": 251,
+            "y": 23
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.2,
+          "y": 0.2,
+          "width": 0.08,
+          "height": 0.16,
+          "faceCentreX": 0.24,
+          "eyeLineY": 0.256,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.24,
+              "cy": 0.28
+            },
+            {
+              "t": 0.625,
+              "cx": 0.242,
+              "cy": 0.28
+            },
+            {
+              "t": 1.125,
+              "cx": 0.244,
+              "cy": 0.28
+            },
+            {
+              "t": 1.625,
+              "cx": 0.246,
+              "cy": 0.28
+            },
+            {
+              "t": 2.125,
+              "cx": 0.248,
+              "cy": 0.28
+            },
+            {
+              "t": 2.625,
+              "cx": 0.25,
+              "cy": 0.28
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "fill"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "a stream with no face found anywhere",
+    "shots": [
+      {
+        "startSec": 0,
+        "endSec": 5
+      },
+      {
+        "startSec": 5,
+        "endSec": 10
+      }
+    ],
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 5
+        },
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "width": 498,
+              "height": 250,
+              "x": 1383,
+              "y": 91
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 846,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0.5,
+                "v": 537
+              }
+            ],
+            "y": [
+              {
+                "t": 0.5,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 540
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "panels"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 5,
+          "endSec": 10
+        },
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "width": 498,
+              "height": 250,
+              "x": 1383,
+              "y": 91
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 846,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 537
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 540
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "panels"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "a stream through a cut at 100 s",
+    "shots": [
+      {
+        "startSec": 0,
+        "endSec": 2.2
+      },
+      {
+        "startSec": 2.2,
+        "endSec": 5.6
+      },
+      {
+        "startSec": 5.6,
+        "endSec": 8.599999999999998
+      }
+    ],
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 2.2
+        },
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "width": 498,
+              "height": 250,
+              "x": 1383,
+              "y": 75
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 846,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0.5,
+                "v": 537
+              }
+            ],
+            "y": [
+              {
+                "t": 0.5,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 540
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.82,
+          "y": 0.1,
+          "width": 0.06,
+          "height": 0.13,
+          "faceCentreX": 0.85,
+          "eyeLineY": 0.1455,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.85,
+              "cy": 0.17
+            },
+            {
+              "t": 0.625,
+              "cx": 0.852,
+              "cy": 0.17
+            },
+            {
+              "t": 1.125,
+              "cx": 0.854,
+              "cy": 0.17
+            },
+            {
+              "t": 1.625,
+              "cx": 0.856,
+              "cy": 0.17
+            },
+            {
+              "t": 2.125,
+              "cx": 0.858,
+              "cy": 0.17
+            },
+            {
+              "t": 2.625,
+              "cx": 0.86,
+              "cy": 0.17
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "panels"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 2.2,
+          "endSec": 5.6
+        },
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "width": 498,
+              "height": 250,
+              "x": 1383,
+              "y": 75
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 846,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0.2,
+                "v": 537
+              }
+            ],
+            "y": [
+              {
+                "t": 0.2,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 540
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.82,
+          "y": 0.1,
+          "width": 0.06,
+          "height": 0.13,
+          "faceCentreX": 0.85,
+          "eyeLineY": 0.1455,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.85,
+              "cy": 0.17
+            },
+            {
+              "t": 0.625,
+              "cx": 0.852,
+              "cy": 0.17
+            },
+            {
+              "t": 1.125,
+              "cx": 0.854,
+              "cy": 0.17
+            },
+            {
+              "t": 1.625,
+              "cx": 0.856,
+              "cy": 0.17
+            },
+            {
+              "t": 2.125,
+              "cx": 0.858,
+              "cy": 0.17
+            },
+            {
+              "t": 2.625,
+              "cx": 0.86,
+              "cy": 0.17
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "panels"
+      },
+      {
+        "shotIndex": 2,
+        "shot": {
+          "startSec": 5.6,
+          "endSec": 8.599999999999998
+        },
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "width": 498,
+              "height": 250,
+              "x": 1383,
+              "y": 75
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 846,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0.2,
+                "v": 249
+              }
+            ],
+            "y": [
+              {
+                "t": 0.2,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 540
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.82,
+          "y": 0.1,
+          "width": 0.06,
+          "height": 0.13,
+          "faceCentreX": 0.85,
+          "eyeLineY": 0.1455,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.85,
+              "cy": 0.17
+            },
+            {
+              "t": 0.625,
+              "cx": 0.852,
+              "cy": 0.17
+            },
+            {
+              "t": 1.125,
+              "cx": 0.854,
+              "cy": 0.17
+            },
+            {
+              "t": 1.625,
+              "cx": 0.856,
+              "cy": 0.17
+            },
+            {
+              "t": 2.125,
+              "cx": 0.858,
+              "cy": 0.17
+            },
+            {
+              "t": 2.625,
+              "cx": 0.86,
+              "cy": 0.17
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "panels"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "a shot with no sample borrows the nearest",
+    "shots": [
+      {
+        "startSec": 0,
+        "endSec": 2
+      },
+      {
+        "startSec": 2,
+        "endSec": 8
+      },
+      {
+        "startSec": 8,
+        "endSec": 10
+      }
+    ],
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 2
+        },
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0.5,
+                "v": 656
+              }
+            ],
+            "y": [
+              {
+                "t": 0.5,
+                "v": 0
+              }
+            ]
+          }
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "track"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 2,
+          "endSec": 8
+        },
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 1,
+                "v": 656
+              }
+            ],
+            "y": [
+              {
+                "t": 1,
+                "v": 0
+              }
+            ]
+          }
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "track"
+      },
+      {
+        "shotIndex": 2,
+        "shot": {
+          "startSec": 8,
+          "endSec": 10
+        },
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 1.5,
+                "v": 944
+              }
+            ],
+            "y": [
+              {
+                "t": 1.5,
+                "v": 0
+              }
+            ]
+          }
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "track"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "the fit pin ignores the reading",
+    "shots": [
+      {
+        "startSec": 0,
+        "endSec": 4
+      },
+      {
+        "startSec": 4,
+        "endSec": 8
+      }
+    ],
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 4
+        },
+        "placement": {
+          "kind": "fit",
+          "chosen": true
+        },
+        "speaker": null,
+        "faces": 1,
+        "layout": "fit"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 4,
+          "endSec": 8
+        },
+        "placement": {
+          "kind": "fit",
+          "chosen": true
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "fit"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "every reading none: planLayout places it",
+    "shots": [
+      {
+        "startSec": 0,
+        "endSec": 4
+      },
+      {
+        "startSec": 4,
+        "endSec": 8
+      }
+    ],
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 4
+        },
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "width": 432,
+            "height": 768,
+            "x": 251,
+            "y": 23
+          }
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.2,
+          "y": 0.2,
+          "width": 0.08,
+          "height": 0.16,
+          "faceCentreX": 0.24,
+          "eyeLineY": 0.256,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.24,
+              "cy": 0.28
+            },
+            {
+              "t": 0.625,
+              "cx": 0.242,
+              "cy": 0.28
+            },
+            {
+              "t": 1.125,
+              "cx": 0.244,
+              "cy": 0.28
+            },
+            {
+              "t": 1.625,
+              "cx": 0.246,
+              "cy": 0.28
+            },
+            {
+              "t": 2.125,
+              "cx": 0.248,
+              "cy": 0.28
+            },
+            {
+              "t": 2.625,
+              "cx": 0.25,
+              "cy": 0.28
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "fill"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 4,
+          "endSec": 8
+        },
+        "placement": {
+          "kind": "fit"
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "fit"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "a podcast on the presence rule with a panels reading on one shot",
+    "shots": [
+      {
+        "startSec": 0,
+        "endSec": 4
+      },
+      {
+        "startSec": 4,
+        "endSec": 8
+      }
+    ],
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 4
+        },
+        "placement": {
+          "kind": "stack",
+          "panels": [
+            {
+              "width": 648,
+              "height": 576,
+              "x": 147,
+              "y": 86
+            },
+            {
+              "width": 648,
+              "height": 576,
+              "x": 1107,
+              "y": 108
+            }
+          ]
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.2,
+          "y": 0.2,
+          "width": 0.08,
+          "height": 0.16,
+          "faceCentreX": 0.24,
+          "eyeLineY": 0.256,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.24,
+              "cy": 0.28
+            },
+            {
+              "t": 0.625,
+              "cx": 0.242,
+              "cy": 0.28
+            },
+            {
+              "t": 1.125,
+              "cx": 0.244,
+              "cy": 0.28
+            },
+            {
+              "t": 1.625,
+              "cx": 0.246,
+              "cy": 0.28
+            },
+            {
+              "t": 2.125,
+              "cx": 0.248,
+              "cy": 0.28
+            },
+            {
+              "t": 2.625,
+              "cx": 0.25,
+              "cy": 0.28
+            }
+          ]
+        },
+        "faces": 2,
+        "layout": "stack"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 4,
+          "endSec": 8
+        },
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "width": 498,
+              "height": 250,
+              "x": 1383,
+              "y": 75
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 846,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0.5,
+                "v": 537
+              }
+            ],
+            "y": [
+              {
+                "t": 0.5,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 540
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.82,
+          "y": 0.1,
+          "width": 0.06,
+          "height": 0.13,
+          "faceCentreX": 0.85,
+          "eyeLineY": 0.1455,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.85,
+              "cy": 0.17
+            },
+            {
+              "t": 0.625,
+              "cx": 0.852,
+              "cy": 0.17
+            },
+            {
+              "t": 1.125,
+              "cx": 0.854,
+              "cy": 0.17
+            },
+            {
+              "t": 1.625,
+              "cx": 0.856,
+              "cy": 0.17
+            },
+            {
+              "t": 2.125,
+              "cx": 0.858,
+              "cy": 0.17
+            },
+            {
+              "t": 2.625,
+              "cx": 0.86,
+              "cy": 0.17
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "panels"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "1280x720 stream with a game zoom of 1",
+    "shots": [
+      {
+        "startSec": 0,
+        "endSec": 6
+      }
+    ],
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "width": 332,
+              "height": 150,
+              "x": 922,
+              "y": 55
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 544,
+              "height": 720
+            },
+            "x": [
+              {
+                "t": 0.5,
+                "v": 368
+              }
+            ],
+            "y": [
+              {
+                "t": 0.5,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 490
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.82,
+          "y": 0.1,
+          "width": 0.06,
+          "height": 0.13,
+          "faceCentreX": 0.85,
+          "eyeLineY": 0.1455,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.85,
+              "cy": 0.17
+            },
+            {
+              "t": 0.625,
+              "cx": 0.852,
+              "cy": 0.17
+            },
+            {
+              "t": 1.125,
+              "cx": 0.854,
+              "cy": 0.17
+            },
+            {
+              "t": 1.625,
+              "cx": 0.856,
+              "cy": 0.17
+            },
+            {
+              "t": 2.125,
+              "cx": 0.858,
+              "cy": 0.17
+            },
+            {
+              "t": 2.625,
+              "cx": 0.86,
+              "cy": 0.17
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "panels"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  },
+  {
+    "name": "a game zoom of 2 on a game-and-camera stream",
+    "shots": [
+      {
+        "startSec": 0,
+        "endSec": 5
+      },
+      {
+        "startSec": 5,
+        "endSec": 10
+      }
+    ],
+    "placed": [
+      {
+        "shotIndex": 0,
+        "shot": {
+          "startSec": 0,
+          "endSec": 5
+        },
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "width": 498,
+              "height": 250,
+              "x": 1383,
+              "y": 75
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 540,
+              "height": 690
+            },
+            "x": [
+              {
+                "t": 0.5,
+                "v": 690
+              }
+            ],
+            "y": [
+              {
+                "t": 0.5,
+                "v": 195
+              }
+            ]
+          },
+          "topHeight": 540
+        },
+        "speaker": {
+          "confidence": 0.92,
+          "mouthMotion": 0.00002,
+          "x": 0.82,
+          "y": 0.1,
+          "width": 0.06,
+          "height": 0.13,
+          "faceCentreX": 0.85,
+          "eyeLineY": 0.1455,
+          "facing": 0.1,
+          "coverage": 1,
+          "track": [
+            {
+              "t": 0.125,
+              "cx": 0.85,
+              "cy": 0.17
+            },
+            {
+              "t": 0.625,
+              "cx": 0.852,
+              "cy": 0.17
+            },
+            {
+              "t": 1.125,
+              "cx": 0.854,
+              "cy": 0.17
+            },
+            {
+              "t": 1.625,
+              "cx": 0.856,
+              "cy": 0.17
+            },
+            {
+              "t": 2.125,
+              "cx": 0.858,
+              "cy": 0.17
+            },
+            {
+              "t": 2.625,
+              "cx": 0.86,
+              "cy": 0.17
+            }
+          ]
+        },
+        "faces": 1,
+        "layout": "panels"
+      },
+      {
+        "shotIndex": 1,
+        "shot": {
+          "startSec": 5,
+          "endSec": 10
+        },
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "width": 498,
+              "height": 250,
+              "x": 1383,
+              "y": 91
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 540,
+              "height": 690
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 690
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 195
+              }
+            ]
+          },
+          "topHeight": 540
+        },
+        "speaker": null,
+        "faces": 0,
+        "layout": "panels"
+      }
+    ],
+    "coverageDropped": 0,
+    "stacksRefused": 0
+  }
+]

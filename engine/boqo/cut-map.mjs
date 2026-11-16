@@ -1,8 +1,8 @@
 // ported from boqo-ai/boqo packages/core/src/cut-map.ts @ bcc9d99cc; keep in step (scripts/boqo-drift.mjs)
 // Only the part the render stage needs is ported (constants, guardSpans, mergeSpans, capSpans, cutsDurationSec,
-// keptSegments); planCuts, mergeCutLists, clipDurationSec, the time maps, wordsThroughCuts and cutsFromRow are
-// not copied. Cut import: CUT_REASONS is `export const CUT_REASONS = { overLimit: "over-limit" } as const;`
-// in packages/core/src/audio-enhance.ts, a module of schemas and strings this skill has no use for.
+// keptSegments, and the two time maps windowToClipSec and clipToWindowSec, which the stream panels read needs);
+// planCuts, mergeCutLists, clipDurationSec, wordsThroughCuts and cutsFromRow are not copied.
+// Cut import: CUT_REASONS is `export const CUT_REASONS = { overLimit: "over-limit" } as const;` in packages/core/src/audio-enhance.ts, a module of schemas and strings this skill has no use for.
 export const CUT_REASONS = { overLimit: "over-limit" };
 
 /**
@@ -103,4 +103,33 @@ export function keptSegments(windowDurationSec        , cuts                )   
   }
   if (windowDurationSec > from) segments.push({ start: from, end: windowDurationSec });
   return segments;
+}
+
+/**
+ * A window time on the clip's timeline, or `null` strictly inside a cut,
+ * where that moment is not in the file at all. Both edges of a cut map to the
+ * same clip time -- the join -- because the map is continuous there.
+ */
+export function windowToClipSec(t, cuts) {
+  let removed = 0;
+  for (const cut of cuts) {
+    if (t <= cut.start) break;
+    if (t < cut.end) return null;
+    removed += cut.end - cut.start;
+  }
+  return t - removed;
+}
+
+/**
+ * A clip time back on the window's timeline. A join maps to the END of its
+ * cut, because the frame playing at a join is the first one after the cut --
+ * which is what a seek in the source must land on.
+ */
+export function clipToWindowSec(t, cuts) {
+  let windowSec = t;
+  for (const cut of cuts) {
+    if (windowSec < cut.start) break;
+    windowSec += cut.end - cut.start;
+  }
+  return windowSec;
 }

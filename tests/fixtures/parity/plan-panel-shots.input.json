@@ -1,0 +1,10397 @@
+{
+ "cases": [
+  {
+   "name": "one shot of panels",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 8
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4336,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4637,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3754,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3329,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4151,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "three shots of the same mode share one window width (a false cut)",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 4
+    },
+    {
+     "startSec": 4,
+     "endSec": 7
+    },
+    {
+     "startSec": 7,
+     "endSec": 12
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.45,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.45,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.45,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.45,
+      "y": 0.4,
+      "w": 0.4,
+      "h": 0.4
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.45,
+      "y": 0.4,
+      "w": 0.4,
+      "h": 0.4
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 7.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.46,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.46,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 10.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.46,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "shots that continue each other start where the previous window stopped",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3
+    },
+    {
+     "startSec": 3,
+     "endSec": 6
+    },
+    {
+     "startSec": 6,
+     "endSec": 9
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 1,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.8,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.82,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.81,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.83,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 7,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.79,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.8,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "panels then people then none then game",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 4
+    },
+    {
+     "startSec": 4,
+     "endSec": 8
+    },
+    {
+     "startSec": 8,
+     "endSec": 11
+    },
+    {
+     "startSec": 11,
+     "endSec": 15
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3336,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3637,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2754,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.5,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.3,
+       "y": 0.1,
+       "w": 0.4,
+       "h": 0.8
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.5,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.3,
+       "y": 0.1,
+       "w": 0.4,
+       "h": 0.8
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 8.5,
+     "mode": "none",
+     "cameras": [],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.5,
+     "mode": "none",
+     "cameras": [],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 11.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5387,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 13.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6563,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "with faces in the camera",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.798,
+      "y": 0.11,
+      "width": 0.091,
+      "height": 0.1575,
+      "faceCentreX": 0.85,
+      "eyeLineY": 0.17,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.798,
+      "y": 0.11,
+      "width": 0.104,
+      "height": 0.18,
+      "faceCentreX": 0.85,
+      "eyeLineY": 0.17,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5
+    },
+    {
+     "startSec": 5,
+     "endSec": 10
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4336,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4637,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3754,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3329,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4151,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4693,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3947,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a shot with no sample borrows the nearest within 3 s",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2
+    },
+    {
+     "startSec": 2,
+     "endSec": 8
+    },
+    {
+     "startSec": 8,
+     "endSec": 10
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a shot with no sample within 3 s is left to today",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2
+    },
+    {
+     "startSec": 2,
+     "endSec": 14
+    },
+    {
+     "startSec": 14,
+     "endSec": 16
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 15.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a sample on a boundary belongs to the shot that starts there; the last shot keeps one at its end",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3
+    },
+    {
+     "startSec": 3,
+     "endSec": 6
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a window starting at 100 s with a cut inside it",
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 2.2,
+     "end": 3.4
+    },
+    {
+     "start": 7,
+     "end": 7.8
+    }
+   ],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2.2
+    },
+    {
+     "startSec": 2.2,
+     "endSec": 5.6
+    },
+    {
+     "startSec": 5.6,
+     "endSec": 7.6
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 100.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 102.4,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 103.4,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 104.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 107.4,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 108.2,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a join is not a continuation of the shot before it",
+   "startSec": 50,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3
+    },
+    {
+     "startSec": 3,
+     "endSec": 6
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 50.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.8,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 52,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.8,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 54.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.8,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 56,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "keep false on the middle shot (a creator override)",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [
+    1
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3
+    },
+    {
+     "startSec": 3,
+     "endSec": 6
+    },
+    {
+     "startSec": 6,
+     "endSec": 9
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 1,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.4,
+      "h": 0.4
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.05,
+      "h": 0.1
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 7,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a game zoom of 2",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 2,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 6
+    },
+    {
+     "startSec": 6,
+     "endSec": 12
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5336,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5419,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4316,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5151,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5559,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 10.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4384,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "no samples at all",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3
+    },
+    {
+     "startSec": 3,
+     "endSec": 6
+    }
+   ],
+   "samples": []
+  },
+  {
+   "name": "one camera settled across the clip from jittered reads",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5
+    },
+    {
+     "startSec": 5,
+     "endSec": 10
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 1,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.725,
+       "y": 0.052,
+       "w": 0.255,
+       "h": 0.298
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 6,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.718,
+       "y": 0.048,
+       "w": 0.262,
+       "h": 0.304
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 8,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.722,
+       "y": 0.051,
+       "w": 0.258,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "two cameras on a 1280x720 source",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1280,
+   "frameHeight": 720,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 6
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.02,
+       "y": 0.02,
+       "w": 0.2,
+       "h": 0.3
+      },
+      {
+       "x": 0.78,
+       "y": 0.02,
+       "w": 0.2,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0.05,
+      "y": 0.35,
+      "w": 0.9,
+      "h": 0.6
+     },
+     "focus": {
+      "x": 0.5336,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.02,
+       "y": 0.02,
+       "w": 0.2,
+       "h": 0.3
+      },
+      {
+       "x": 0.78,
+       "y": 0.02,
+       "w": 0.2,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0.05,
+      "y": 0.35,
+      "w": 0.9,
+      "h": 0.6
+     },
+     "focus": {
+      "x": 0.5637,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.02,
+       "y": 0.02,
+       "w": 0.2,
+       "h": 0.3
+      },
+      {
+       "x": 0.78,
+       "y": 0.02,
+       "w": 0.2,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0.05,
+      "y": 0.35,
+      "w": 0.9,
+      "h": 0.6
+     },
+     "focus": {
+      "x": 0.4754,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.02,
+       "y": 0.02,
+       "w": 0.2,
+       "h": 0.3
+      },
+      {
+       "x": 0.78,
+       "y": 0.02,
+       "w": 0.2,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0.05,
+      "y": 0.35,
+      "w": 0.9,
+      "h": 0.6
+     },
+     "focus": {
+      "x": 0.4329,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a gap of 0.041 s between shots is one frame at 24 fps: the window continues",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3
+    },
+    {
+     "startSec": 3.041,
+     "endSec": 6
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 1,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.8,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.82,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.81,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.83,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a gap of 0.0405 s between shots",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3
+    },
+    {
+     "startSec": 3.0405,
+     "endSec": 6
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 1,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.8,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.82,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.81,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.83,
+      "y": 0.4,
+      "w": 0.08,
+      "h": 0.15
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a shot 2.95 s from the nearest sample borrows it",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.45
+    },
+    {
+     "startSec": 3.45,
+     "endSec": 9
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a shot 3.05 s from the nearest sample is left to today",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.55
+    },
+    {
+     "startSec": 3.55,
+     "endSec": 9
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "two camera reads that overlap by 0.75 of their union are two cameras",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 6
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 1,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 3,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.225
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "two camera reads that overlap by 0.85 of their union are one camera",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 6
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 1,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 3,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.255
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a game zoom of 2.5 over three shots",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 2.5,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3
+    },
+    {
+     "startSec": 3,
+     "endSec": 6
+    },
+    {
+     "startSec": 6,
+     "endSec": 9
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5336,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5637,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4754,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4329,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5151,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5693,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 1",
+   "startSec": 141.311,
+   "cuts": [],
+   "gameZoom": 2.467,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.713,
+      "y": 0.1032,
+      "width": 0.0609,
+      "height": 0.1486,
+      "faceCentreX": 0.7478,
+      "eyeLineY": 0.1598,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 0.935
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 141.711,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6608,
+       "y": 0.0466,
+       "w": 0.174,
+       "h": 0.283
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.167,
+      "y": 0.5585,
+      "w": 0.1278,
+      "h": 0.0993
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 2",
+   "startSec": 19.531,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.63
+    },
+    {
+     "startSec": 1.63,
+     "endSec": 3.006
+    },
+    {
+     "startSec": 3.006,
+     "endSec": 4.441
+    },
+    {
+     "startSec": 4.441,
+     "endSec": 6.612
+    },
+    {
+     "startSec": 6.612,
+     "endSec": 10.171
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 19.931,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6831,
+       "y": 0.0622,
+       "w": 0.218,
+       "h": 0.3449
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 22.138,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6831,
+       "y": 0.0622,
+       "w": 0.218,
+       "h": 0.3449
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3177,
+      "y": 0.3552,
+      "w": 0.053,
+      "h": 0.072
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 24.244,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6831,
+       "y": 0.0622,
+       "w": 0.218,
+       "h": 0.3449
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4015,
+      "y": 0.6677,
+      "w": 0.1555,
+      "h": 0.2221
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 25.606,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6831,
+       "y": 0.0622,
+       "w": 0.218,
+       "h": 0.3449
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.15,
+      "y": 0.6478,
+      "w": 0.0984,
+      "h": 0.0976
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 27.48,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6831,
+       "y": 0.0622,
+       "w": 0.218,
+       "h": 0.3449
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5632,
+      "y": 0.6528,
+      "w": 0.1322,
+      "h": 0.2566
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 29.394,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4474,
+      "y": 0.4895,
+      "w": 0.1837,
+      "h": 0.2901
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 3",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7567,
+      "y": 0.1322,
+      "width": 0.0867,
+      "height": 0.1489,
+      "faceCentreX": 0.8063,
+      "eyeLineY": 0.1889,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7567,
+      "y": 0.1322,
+      "width": 0.0867,
+      "height": 0.1489,
+      "faceCentreX": 0.8063,
+      "eyeLineY": 0.1889,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    []
+   ],
+   "keepOut": [
+    1
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5.02
+    },
+    {
+     "startSec": 5.02,
+     "endSec": 5.651
+    },
+    {
+     "startSec": 5.651,
+     "endSec": 9.038
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5318,
+      "y": 0.5431,
+      "w": 0.1328,
+      "h": 0.1281
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 1.603,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6824,
+       "y": 0.0755,
+       "w": 0.2477,
+       "h": 0.2836
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7575,
+      "y": 0.6,
+      "w": 0.1446,
+      "h": 0.0536
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.455,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7961,
+      "y": 0.2668,
+      "w": 0.1979,
+      "h": 0.2125
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.623,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6824,
+       "y": 0.0755,
+       "w": 0.2477,
+       "h": 0.2836
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.66,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4752,
+      "y": 0.1965,
+      "w": 0.1094,
+      "h": 0.1027
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8.843,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5438,
+      "y": 0.6941,
+      "w": 0.1414,
+      "h": 0.2341
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 4",
+   "startSec": 0,
+   "cuts": [
+    {
+     "start": 1.009,
+     "end": 1.465
+    }
+   ],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7782,
+      "y": 0.1435,
+      "width": 0.0546,
+      "height": 0.1188,
+      "faceCentreX": 0.8094,
+      "eyeLineY": 0.1888,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7782,
+      "y": 0.1435,
+      "width": 0.0546,
+      "height": 0.1188,
+      "faceCentreX": 0.8094,
+      "eyeLineY": 0.1888,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    []
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.438
+    },
+    {
+     "startSec": 3.438,
+     "endSec": 5.011
+    },
+    {
+     "startSec": 5.011,
+     "endSec": 6.964
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5993,
+      "y": 0.3209,
+      "w": 0.104,
+      "h": 0.2479
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.408,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6487,
+      "y": 0.3473,
+      "w": 0.1344,
+      "h": 0.1232
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.105,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7314,
+       "y": 0.0983,
+       "w": 0.156,
+       "h": 0.2262
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2391,
+      "y": 0.5961,
+      "w": 0.1741,
+      "h": 0.2437
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.635,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7314,
+       "y": 0.0983,
+       "w": 0.156,
+       "h": 0.2262
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.863,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7314,
+       "y": 0.0983,
+       "w": 0.156,
+       "h": 0.2262
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6727,
+      "y": 0.3424,
+      "w": 0.1962,
+      "h": 0.1878
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 5",
+   "startSec": 36.665,
+   "cuts": [],
+   "gameZoom": 1.774,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7293,
+      "y": 0.1125,
+      "width": 0.0825,
+      "height": 0.1352,
+      "faceCentreX": 0.7764,
+      "eyeLineY": 0.164,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7293,
+      "y": 0.1125,
+      "width": 0.0825,
+      "height": 0.1352,
+      "faceCentreX": 0.7764,
+      "eyeLineY": 0.164,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7293,
+      "y": 0.1125,
+      "width": 0.0825,
+      "height": 0.1352,
+      "faceCentreX": 0.7764,
+      "eyeLineY": 0.164,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7293,
+      "y": 0.1125,
+      "width": 0.0825,
+      "height": 0.1352,
+      "faceCentreX": 0.7764,
+      "eyeLineY": 0.164,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.276
+    },
+    {
+     "startSec": 3.276,
+     "endSec": 6.235
+    },
+    {
+     "startSec": 6.235,
+     "endSec": 10.602
+    },
+    {
+     "startSec": 10.602,
+     "endSec": 16.23
+    },
+    {
+     "startSec": 16.23,
+     "endSec": 19.804
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 37.065,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.061,
+       "w": 0.2356,
+       "h": 0.2576
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5626,
+      "y": 0.5393,
+      "w": 0.1947,
+      "h": 0.1294
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 38.306,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.061,
+       "w": 0.2356,
+       "h": 0.2576
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7446,
+      "y": 0.5705,
+      "w": 0.1743,
+      "h": 0.2907
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 39.491,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4538,
+      "y": 0.3347,
+      "w": 0.157,
+      "h": 0.24
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 41.352,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.061,
+       "w": 0.2356,
+       "h": 0.2576
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.4956,
+      "y": 0.2632,
+      "w": 0.1748,
+      "h": 0.1706
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 42.389,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.061,
+       "w": 0.2356,
+       "h": 0.2576
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.4697,
+      "y": 0.4308,
+      "w": 0.1832,
+      "h": 0.2883
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 43.45,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.061,
+       "w": 0.2356,
+       "h": 0.2576
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4429,
+      "y": 0.3357,
+      "w": 0.1865,
+      "h": 0.2643
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 45.151,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4198,
+      "y": 0.6556,
+      "w": 0.1514,
+      "h": 0.2489
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 46.518,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 48.751,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.061,
+       "w": 0.2356,
+       "h": 0.2576
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6145,
+      "y": 0.1627,
+      "w": 0.0624,
+      "h": 0.278
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 50.012,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6454,
+      "y": 0.5317,
+      "w": 0.0586,
+      "h": 0.1617
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 52.477,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.061,
+       "w": 0.2356,
+       "h": 0.2576
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3359,
+      "y": 0.5735,
+      "w": 0.1537,
+      "h": 0.118
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 54.123,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.061,
+       "w": 0.2356,
+       "h": 0.2576
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3779,
+      "y": 0.4266,
+      "w": 0.0752,
+      "h": 0.2431
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 55.439,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.061,
+       "w": 0.2356,
+       "h": 0.2576
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 56.301,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.061,
+       "w": 0.2356,
+       "h": 0.2576
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7197,
+      "y": 0.2691,
+      "w": 0.176,
+      "h": 0.2111
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 6",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.476
+    },
+    {
+     "startSec": 1.476,
+     "endSec": 6.078
+    },
+    {
+     "startSec": 6.078,
+     "endSec": 7.598
+    },
+    {
+     "startSec": 7.598,
+     "endSec": 9.488
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5788,
+      "y": 0.2024,
+      "w": 0.1277,
+      "h": 0.0686
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.212,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6046,
+       "y": 0.0033,
+       "w": 0.244,
+       "h": 0.3382
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.131,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.0918,
+      "y": 0.6523,
+      "w": 0.0909,
+      "h": 0.0888
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.413,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6046,
+       "y": 0.0033,
+       "w": 0.244,
+       "h": 0.3382
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6677,
+      "y": 0.6196,
+      "w": 0.166,
+      "h": 0.2269
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.683,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6046,
+       "y": 0.0033,
+       "w": 0.244,
+       "h": 0.3382
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.566,
+      "y": 0.2852,
+      "w": 0.1105,
+      "h": 0.215
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8.039,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6046,
+       "y": 0.0033,
+       "w": 0.244,
+       "h": 0.3382
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4987,
+      "y": 0.5051,
+      "w": 0.114,
+      "h": 0.2278
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.25,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6046,
+       "y": 0.0033,
+       "w": 0.244,
+       "h": 0.3382
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.3801,
+      "y": 0.335,
+      "w": 0.1723,
+      "h": 0.0812
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 7",
+   "startSec": 143.903,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [
+    0
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2.862
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 144.303,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7043,
+       "y": 0.0316,
+       "w": 0.2476,
+       "h": 0.2095
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2184,
+      "y": 0.3953,
+      "w": 0.0838,
+      "h": 0.2637
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 8",
+   "startSec": 153.688,
+   "cuts": [
+    {
+     "start": 0.501,
+     "end": 1.399
+    }
+   ],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 0.831
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 154.088,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7043,
+       "y": 0.03,
+       "w": 0.1604,
+       "h": 0.2952
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3901,
+      "y": 0.5032,
+      "w": 0.1728,
+      "h": 0.2353
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 9",
+   "startSec": 175.921,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7507,
+      "y": 0.1103,
+      "width": 0.0578,
+      "height": 0.1251,
+      "faceCentreX": 0.7837,
+      "eyeLineY": 0.158,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7507,
+      "y": 0.1103,
+      "width": 0.0578,
+      "height": 0.1251,
+      "faceCentreX": 0.7837,
+      "eyeLineY": 0.158,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7507,
+      "y": 0.1103,
+      "width": 0.0578,
+      "height": 0.1251,
+      "faceCentreX": 0.7837,
+      "eyeLineY": 0.158,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    []
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.921
+    },
+    {
+     "startSec": 3.921,
+     "endSec": 7.757
+    },
+    {
+     "startSec": 7.757,
+     "endSec": 12.003
+    },
+    {
+     "startSec": 12.003,
+     "endSec": 16.727
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 176.321,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7295,
+      "y": 0.1226,
+      "w": 0.1621,
+      "h": 0.1797
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 178.523,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7012,
+       "y": 0.0627,
+       "w": 0.165,
+       "h": 0.2382
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2954,
+      "y": 0.5203,
+      "w": 0.1469,
+      "h": 0.132
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 179.507,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7012,
+       "y": 0.0627,
+       "w": 0.165,
+       "h": 0.2382
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 180.467,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7012,
+       "y": 0.0627,
+       "w": 0.165,
+       "h": 0.2382
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5996,
+      "y": 0.1003,
+      "w": 0.1571,
+      "h": 0.0511
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 182.927,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 184.762,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7012,
+       "y": 0.0627,
+       "w": 0.165,
+       "h": 0.2382
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2562,
+      "y": 0.3203,
+      "w": 0.1492,
+      "h": 0.2413
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 186.48,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7012,
+       "y": 0.0627,
+       "w": 0.165,
+       "h": 0.2382
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.5106,
+      "y": 0.2477,
+      "w": 0.0595,
+      "h": 0.1497
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 187.662,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7012,
+       "y": 0.0627,
+       "w": 0.165,
+       "h": 0.2382
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2931,
+      "y": 0.1586,
+      "w": 0.1002,
+      "h": 0.2836
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 189.972,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6969,
+      "y": 0.1093,
+      "w": 0.0795,
+      "h": 0.1018
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 191.474,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3922,
+      "y": 0.3218,
+      "w": 0.0514,
+      "h": 0.0516
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 10",
+   "startSec": 160.669,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7588,
+      "y": 0.1197,
+      "width": 0.0637,
+      "height": 0.1289,
+      "faceCentreX": 0.7953,
+      "eyeLineY": 0.1688,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7588,
+      "y": 0.1197,
+      "width": 0.0637,
+      "height": 0.1289,
+      "faceCentreX": 0.7953,
+      "eyeLineY": 0.1688,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7588,
+      "y": 0.1197,
+      "width": 0.0637,
+      "height": 0.1289,
+      "faceCentreX": 0.7953,
+      "eyeLineY": 0.1688,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [
+    3
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5.923
+    },
+    {
+     "startSec": 5.923,
+     "endSec": 11.716
+    },
+    {
+     "startSec": 11.716,
+     "endSec": 14.116
+    },
+    {
+     "startSec": 14.116,
+     "endSec": 19.389
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 161.069,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7042,
+       "y": 0.0706,
+       "w": 0.1821,
+       "h": 0.2455
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.6215,
+      "y": 0.137,
+      "w": 0.1363,
+      "h": 0.1945
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 162.277,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7287,
+      "y": 0.2799,
+      "w": 0.0521,
+      "h": 0.1938
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 163.894,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7042,
+       "y": 0.0706,
+       "w": 0.1821,
+       "h": 0.2455
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3517,
+      "y": 0.2098,
+      "w": 0.1516,
+      "h": 0.2333
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 166.051,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7042,
+       "y": 0.0706,
+       "w": 0.1821,
+       "h": 0.2455
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.4276,
+      "y": 0.6575,
+      "w": 0.1866,
+      "h": 0.182
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 168.458,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7323,
+      "y": 0.5772,
+      "w": 0.1243,
+      "h": 0.1499
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 169.736,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 171.782,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7042,
+       "y": 0.0706,
+       "w": 0.1821,
+       "h": 0.2455
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6121,
+      "y": 0.48,
+      "w": 0.1582,
+      "h": 0.2051
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 173.978,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7042,
+       "y": 0.0706,
+       "w": 0.1821,
+       "h": 0.2455
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7385,
+      "y": 0.2073,
+      "w": 0.1108,
+      "h": 0.2348
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 176.099,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7579,
+      "y": 0.6942,
+      "w": 0.0726,
+      "h": 0.2145
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 177.299,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4583,
+      "y": 0.3449,
+      "w": 0.1517,
+      "h": 0.2018
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 179.525,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7042,
+       "y": 0.0706,
+       "w": 0.1821,
+       "h": 0.2455
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6956,
+      "y": 0.1434,
+      "w": 0.1724,
+      "h": 0.1294
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 11",
+   "startSec": 38.663,
+   "cuts": [],
+   "gameZoom": 1.384,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [
+    0
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.975
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 39.063,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2787,
+      "y": 0.3609,
+      "w": 0.0754,
+      "h": 0.0761
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 40.676,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7394,
+       "y": 0.0672,
+       "w": 0.1532,
+       "h": 0.2277
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 42.588,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7394,
+       "y": 0.0672,
+       "w": 0.1532,
+       "h": 0.2277
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.3147,
+      "y": 0.1519,
+      "w": 0.0983,
+      "h": 0.193
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 12",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7721,
+      "y": 0.0937,
+      "width": 0.0544,
+      "height": 0.1241,
+      "faceCentreX": 0.8032,
+      "eyeLineY": 0.141,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7721,
+      "y": 0.0937,
+      "width": 0.0544,
+      "height": 0.1241,
+      "faceCentreX": 0.8032,
+      "eyeLineY": 0.141,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7721,
+      "y": 0.0937,
+      "width": 0.0544,
+      "height": 0.1241,
+      "faceCentreX": 0.8032,
+      "eyeLineY": 0.141,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7721,
+      "y": 0.0937,
+      "width": 0.0544,
+      "height": 0.1241,
+      "faceCentreX": 0.8032,
+      "eyeLineY": 0.141,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [
+    0
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5.64
+    },
+    {
+     "startSec": 5.64,
+     "endSec": 6.684
+    },
+    {
+     "startSec": 6.684,
+     "endSec": 11.44
+    },
+    {
+     "startSec": 11.44,
+     "endSec": 17.19
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3256,
+      "y": 0.575,
+      "w": 0.1517,
+      "h": 0.1527
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.065,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7255,
+       "y": 0.0464,
+       "w": 0.1553,
+       "h": 0.2364
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.5483,
+      "y": 0.2731,
+      "w": 0.0778,
+      "h": 0.2871
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.272,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7255,
+       "y": 0.0464,
+       "w": 0.1553,
+       "h": 0.2364
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5154,
+      "y": 0.6001,
+      "w": 0.0646,
+      "h": 0.0638
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.517,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 7.962,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7255,
+       "y": 0.0464,
+       "w": 0.1553,
+       "h": 0.2364
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2959,
+      "y": 0.3239,
+      "w": 0.0638,
+      "h": 0.1687
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.092,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7255,
+       "y": 0.0464,
+       "w": 0.1553,
+       "h": 0.2364
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4488,
+      "y": 0.256,
+      "w": 0.1451,
+      "h": 0.2864
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 11.589,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7255,
+       "y": 0.0464,
+       "w": 0.1553,
+       "h": 0.2364
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 13.81,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7255,
+       "y": 0.0464,
+       "w": 0.1553,
+       "h": 0.2364
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 15.374,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7255,
+       "y": 0.0464,
+       "w": 0.1553,
+       "h": 0.2364
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 13",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.896
+    },
+    {
+     "startSec": 1.896,
+     "endSec": 7.542
+    },
+    {
+     "startSec": 7.542,
+     "endSec": 11.963
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 1.275,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.431,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6481,
+       "y": 0.0253,
+       "w": 0.2092,
+       "h": 0.2752
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2166,
+      "y": 0.4062,
+      "w": 0.0586,
+      "h": 0.0897
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.649,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6481,
+       "y": 0.0253,
+       "w": 0.2092,
+       "h": 0.2752
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4684,
+      "y": 0.6321,
+      "w": 0.1164,
+      "h": 0.2701
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8.023,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6481,
+       "y": 0.0253,
+       "w": 0.2092,
+       "h": 0.2752
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.0769,
+      "y": 0.3777,
+      "w": 0.1932,
+      "h": 0.2665
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.632,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6253,
+      "y": 0.3382,
+      "w": 0.0608,
+      "h": 0.2177
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 10.708,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6481,
+       "y": 0.0253,
+       "w": 0.2092,
+       "h": 0.2752
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.471,
+      "y": 0.1036,
+      "w": 0.0876,
+      "h": 0.2969
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 14",
+   "startSec": 0,
+   "cuts": [
+    {
+     "start": 5.463,
+     "end": 5.878
+    }
+   ],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [
+    2
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5.189
+    },
+    {
+     "startSec": 5.189,
+     "endSec": 8.272
+    },
+    {
+     "startSec": 8.272,
+     "endSec": 13.02
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1114,
+      "y": 0.1253,
+      "w": 0.1604,
+      "h": 0.1167
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 1.668,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7211,
+       "y": 0.0018,
+       "w": 0.2041,
+       "h": 0.2517
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2569,
+      "y": 0.3808,
+      "w": 0.1086,
+      "h": 0.0937
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.027,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7211,
+       "y": 0.0018,
+       "w": 0.2041,
+       "h": 0.2517
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4026,
+      "y": 0.4969,
+      "w": 0.1802,
+      "h": 0.2685
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.362,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7211,
+       "y": 0.0018,
+       "w": 0.2041,
+       "h": 0.2517
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.547,
+      "y": 0.697,
+      "w": 0.1694,
+      "h": 0.2067
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.798,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7211,
+       "y": 0.0018,
+       "w": 0.2041,
+       "h": 0.2517
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.106,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4946,
+      "y": 0.401,
+      "w": 0.0889,
+      "h": 0.1395
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 10.61,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 12.345,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7211,
+       "y": 0.0018,
+       "w": 0.2041,
+       "h": 0.2517
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.472,
+      "y": 0.1535,
+      "w": 0.0765,
+      "h": 0.2199
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 15",
+   "startSec": 78.469,
+   "cuts": [],
+   "gameZoom": 1.583,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.777,
+      "y": 0.0926,
+      "width": 0.076,
+      "height": 0.1404,
+      "faceCentreX": 0.8205,
+      "eyeLineY": 0.1461,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [
+    0
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5.844
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 78.869,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7119,
+       "y": 0.0391,
+       "w": 0.2171,
+       "h": 0.2674
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3818,
+      "y": 0.1695,
+      "w": 0.0797,
+      "h": 0.1981
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 80.871,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7119,
+       "y": 0.0391,
+       "w": 0.2171,
+       "h": 0.2674
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6281,
+      "y": 0.6651,
+      "w": 0.0718,
+      "h": 0.192
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 81.91,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7119,
+       "y": 0.0391,
+       "w": 0.2171,
+       "h": 0.2674
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.6785,
+      "y": 0.3278,
+      "w": 0.199,
+      "h": 0.1667
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 83.709,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7119,
+       "y": 0.0391,
+       "w": 0.2171,
+       "h": 0.2674
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5305,
+      "y": 0.4298,
+      "w": 0.1831,
+      "h": 0.0825
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 16",
+   "startSec": 148.196,
+   "cuts": [
+    {
+     "start": 1.819,
+     "end": 2.802
+    },
+    {
+     "start": 4.392,
+     "end": 5.077
+    }
+   ],
+   "gameZoom": 1.579,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.89
+    },
+    {
+     "startSec": 3.89,
+     "endSec": 9.802
+    },
+    {
+     "startSec": 9.802,
+     "endSec": 10.685
+    },
+    {
+     "startSec": 10.685,
+     "endSec": 14.825
+    },
+    {
+     "startSec": 14.825,
+     "endSec": 16.97
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 148.596,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6646,
+       "y": 0.0597,
+       "w": 0.224,
+       "h": 0.2964
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 150.88,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.566,
+      "y": 0.6475,
+      "w": 0.1172,
+      "h": 0.1663
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 152.412,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3132,
+      "y": 0.4095,
+      "w": 0.1894,
+      "h": 0.0904
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 154.174,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6646,
+       "y": 0.0597,
+       "w": 0.224,
+       "h": 0.2964
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4514,
+      "y": 0.4299,
+      "w": 0.1964,
+      "h": 0.2433
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 156.28,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6646,
+       "y": 0.0597,
+       "w": 0.224,
+       "h": 0.2964
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.6326,
+      "y": 0.632,
+      "w": 0.1215,
+      "h": 0.0901
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 157.551,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.625,
+      "y": 0.6722,
+      "w": 0.1203,
+      "h": 0.1307
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 159.099,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6646,
+       "y": 0.0597,
+       "w": 0.224,
+       "h": 0.2964
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.4099,
+      "y": 0.474,
+      "w": 0.0757,
+      "h": 0.1245
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 160.856,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6646,
+       "y": 0.0597,
+       "w": 0.224,
+       "h": 0.2964
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4601,
+      "y": 0.1813,
+      "w": 0.0765,
+      "h": 0.2012
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 162.914,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6646,
+       "y": 0.0597,
+       "w": 0.224,
+       "h": 0.2964
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5868,
+      "y": 0.1592,
+      "w": 0.1062,
+      "h": 0.1171
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 164.893,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4349,
+      "y": 0.2097,
+      "w": 0.1315,
+      "h": 0.2501
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 166.225,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2484,
+      "y": 0.4302,
+      "w": 0.1839,
+      "h": 0.2805
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 17",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 2.448,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6739,
+      "y": 0.1431,
+      "width": 0.0634,
+      "height": 0.1515,
+      "faceCentreX": 0.7102,
+      "eyeLineY": 0.2008,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6739,
+      "y": 0.1431,
+      "width": 0.0634,
+      "height": 0.1515,
+      "faceCentreX": 0.7102,
+      "eyeLineY": 0.2008,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    []
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.737
+    },
+    {
+     "startSec": 1.737,
+     "endSec": 2.587
+    },
+    {
+     "startSec": 2.587,
+     "endSec": 7.561
+    },
+    {
+     "startSec": 7.561,
+     "endSec": 9.662
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5996,
+      "y": 0.2367,
+      "w": 0.112,
+      "h": 0.256
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.71,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6196,
+       "y": 0.0854,
+       "w": 0.1811,
+       "h": 0.2885
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5423,
+      "y": 0.1341,
+      "w": 0.1371,
+      "h": 0.2789
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.078,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6184,
+      "y": 0.2577,
+      "w": 0.0779,
+      "h": 0.0897
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.421,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6196,
+       "y": 0.0854,
+       "w": 0.1811,
+       "h": 0.2885
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.4416,
+      "y": 0.2299,
+      "w": 0.162,
+      "h": 0.252
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.978,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6196,
+       "y": 0.0854,
+       "w": 0.1811,
+       "h": 0.2885
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.446,
+      "y": 0.5281,
+      "w": 0.068,
+      "h": 0.1898
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.421,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7507,
+      "y": 0.4627,
+      "w": 0.1839,
+      "h": 0.2412
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 18",
+   "startSec": 99.378,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.398
+    },
+    {
+     "startSec": 1.398,
+     "endSec": 2.487
+    },
+    {
+     "startSec": 2.487,
+     "endSec": 5.436
+    },
+    {
+     "startSec": 5.436,
+     "endSec": 10.095
+    },
+    {
+     "startSec": 10.095,
+     "endSec": 13.515
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 99.778,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2788,
+      "y": 0.6885,
+      "w": 0.1269,
+      "h": 0.0791
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 102.027,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3318,
+      "y": 0.1467,
+      "w": 0.1261,
+      "h": 0.165
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 103.177,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6973,
+       "y": 0.0739,
+       "w": 0.2244,
+       "h": 0.3109
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.7872,
+      "y": 0.3727,
+      "w": 0.1503,
+      "h": 0.2821
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 104.12,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.0879,
+      "y": 0.6406,
+      "w": 0.0616,
+      "h": 0.2268
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 105.229,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6973,
+       "y": 0.0739,
+       "w": 0.2244,
+       "h": 0.3109
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.7592,
+      "y": 0.3404,
+      "w": 0.08,
+      "h": 0.1278
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 107.027,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6973,
+       "y": 0.0739,
+       "w": 0.2244,
+       "h": 0.3109
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.0665,
+      "y": 0.1728,
+      "w": 0.166,
+      "h": 0.2667
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 108.396,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 110.435,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6973,
+       "y": 0.0739,
+       "w": 0.2244,
+       "h": 0.3109
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.0599,
+      "y": 0.1539,
+      "w": 0.1291,
+      "h": 0.1173
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 111.589,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6973,
+       "y": 0.0739,
+       "w": 0.2244,
+       "h": 0.3109
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2189,
+      "y": 0.5593,
+      "w": 0.0791,
+      "h": 0.2007
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 19",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [
+    1
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2.926
+    },
+    {
+     "startSec": 2.926,
+     "endSec": 5.904
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2777,
+      "y": 0.4771,
+      "w": 0.1687,
+      "h": 0.1298
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 1.687,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6965,
+       "y": 0.0746,
+       "w": 0.2045,
+       "h": 0.2042
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7369,
+      "y": 0.6341,
+      "w": 0.082,
+      "h": 0.1897
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.535,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2899,
+      "y": 0.6011,
+      "w": 0.1374,
+      "h": 0.2783
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.552,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1463,
+      "y": 0.5381,
+      "w": 0.1699,
+      "h": 0.2905
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 20",
+   "startSec": 0,
+   "cuts": [
+    {
+     "start": 3.48,
+     "end": 4.38
+    }
+   ],
+   "gameZoom": 2.153,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7204,
+      "y": 0.0463,
+      "width": 0.061,
+      "height": 0.1174,
+      "faceCentreX": 0.7553,
+      "eyeLineY": 0.091,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7204,
+      "y": 0.0463,
+      "width": 0.061,
+      "height": 0.1174,
+      "faceCentreX": 0.7553,
+      "eyeLineY": 0.091,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7204,
+      "y": 0.0463,
+      "width": 0.061,
+      "height": 0.1174,
+      "faceCentreX": 0.7553,
+      "eyeLineY": 0.091,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.229
+    },
+    {
+     "startSec": 3.229,
+     "endSec": 7.867
+    },
+    {
+     "startSec": 7.867,
+     "endSec": 9.291
+    },
+    {
+     "startSec": 9.291,
+     "endSec": 10.897
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6681,
+       "y": 0.0016,
+       "w": 0.1744,
+       "h": 0.2236
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4686,
+      "y": 0.225,
+      "w": 0.0674,
+      "h": 0.1788
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.165,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2626,
+      "y": 0.2092,
+      "w": 0.1695,
+      "h": 0.1333
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.538,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6681,
+       "y": 0.0016,
+       "w": 0.1744,
+       "h": 0.2236
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3654,
+      "y": 0.6183,
+      "w": 0.1817,
+      "h": 0.2823
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.226,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6433,
+      "y": 0.2279,
+      "w": 0.1113,
+      "h": 0.2007
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.126,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6681,
+       "y": 0.0016,
+       "w": 0.1744,
+       "h": 0.2236
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.5192,
+      "y": 0.2293,
+      "w": 0.0521,
+      "h": 0.1066
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 7.736,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6681,
+       "y": 0.0016,
+       "w": 0.1744,
+       "h": 0.2236
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.533,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6681,
+       "y": 0.0016,
+       "w": 0.1744,
+       "h": 0.2236
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1289,
+      "y": 0.1953,
+      "w": 0.0687,
+      "h": 0.2301
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 11.585,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1417,
+      "y": 0.3677,
+      "w": 0.0572,
+      "h": 0.2427
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 21",
+   "startSec": 101.687,
+   "cuts": [
+    {
+     "start": 3.686,
+     "end": 4.136
+    },
+    {
+     "start": 5.499,
+     "end": 5.988
+    }
+   ],
+   "gameZoom": 1.325,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.747,
+      "y": 0.1384,
+      "width": 0.0778,
+      "height": 0.1181,
+      "faceCentreX": 0.7915,
+      "eyeLineY": 0.1834,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.747,
+      "y": 0.1384,
+      "width": 0.0778,
+      "height": 0.1181,
+      "faceCentreX": 0.7915,
+      "eyeLineY": 0.1834,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.747,
+      "y": 0.1384,
+      "width": 0.0778,
+      "height": 0.1181,
+      "faceCentreX": 0.7915,
+      "eyeLineY": 0.1834,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 4.108
+    },
+    {
+     "startSec": 4.108,
+     "endSec": 7.098
+    },
+    {
+     "startSec": 7.098,
+     "endSec": 7.897
+    },
+    {
+     "startSec": 7.897,
+     "endSec": 9.89
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 102.087,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6803,
+       "y": 0.0934,
+       "w": 0.2223,
+       "h": 0.225
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.5916,
+      "y": 0.4786,
+      "w": 0.1173,
+      "h": 0.2108
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 103.005,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1913,
+      "y": 0.422,
+      "w": 0.0776,
+      "h": 0.0538
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 105.416,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6029,
+      "y": 0.548,
+      "w": 0.0724,
+      "h": 0.1193
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 107.147,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6803,
+       "y": 0.0934,
+       "w": 0.2223,
+       "h": 0.225
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 109.529,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6803,
+       "y": 0.0934,
+       "w": 0.2223,
+       "h": 0.225
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3222,
+      "y": 0.2714,
+      "w": 0.1609,
+      "h": 0.0804
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 111.146,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1443,
+      "y": 0.4233,
+      "w": 0.1067,
+      "h": 0.123
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 22",
+   "startSec": 93.298,
+   "cuts": [
+    {
+     "start": 3.661,
+     "end": 4.42
+    }
+   ],
+   "gameZoom": 1.787,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7346,
+      "y": 0.1447,
+      "width": 0.0558,
+      "height": 0.1492,
+      "faceCentreX": 0.7665,
+      "eyeLineY": 0.2016,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7346,
+      "y": 0.1447,
+      "width": 0.0558,
+      "height": 0.1492,
+      "faceCentreX": 0.7665,
+      "eyeLineY": 0.2016,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5.576
+    },
+    {
+     "startSec": 5.576,
+     "endSec": 11.068
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 93.698,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6868,
+       "y": 0.0879,
+       "w": 0.1593,
+       "h": 0.2842
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.481,
+      "y": 0.5979,
+      "w": 0.1115,
+      "h": 0.2169
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 96.168,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5918,
+      "y": 0.3795,
+      "w": 0.1752,
+      "h": 0.2888
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 97.461,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5831,
+      "y": 0.6961,
+      "w": 0.0975,
+      "h": 0.0632
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 99.425,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6868,
+       "y": 0.0879,
+       "w": 0.1593,
+       "h": 0.2842
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.7938,
+      "y": 0.2229,
+      "w": 0.0559,
+      "h": 0.0624
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 100.503,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6868,
+       "y": 0.0879,
+       "w": 0.1593,
+       "h": 0.2842
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.4923,
+      "y": 0.1873,
+      "w": 0.163,
+      "h": 0.2558
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 101.475,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6868,
+       "y": 0.0879,
+       "w": 0.1593,
+       "h": 0.2842
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3958,
+      "y": 0.4701,
+      "w": 0.0762,
+      "h": 0.2813
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 103.703,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6868,
+       "y": 0.0879,
+       "w": 0.1593,
+       "h": 0.2842
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6184,
+      "y": 0.1033,
+      "w": 0.1888,
+      "h": 0.2357
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 23",
+   "startSec": 177.453,
+   "cuts": [
+    {
+     "start": 3.617,
+     "end": 4.064
+    }
+   ],
+   "gameZoom": 1.075,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7772,
+      "y": 0.0881,
+      "width": 0.0525,
+      "height": 0.1313,
+      "faceCentreX": 0.8073,
+      "eyeLineY": 0.1381,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7772,
+      "y": 0.0881,
+      "width": 0.0525,
+      "height": 0.1313,
+      "faceCentreX": 0.8073,
+      "eyeLineY": 0.1381,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    []
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.837
+    },
+    {
+     "startSec": 3.837,
+     "endSec": 6.133
+    },
+    {
+     "startSec": 6.133,
+     "endSec": 9.536
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 177.853,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7322,
+       "y": 0.0381,
+       "w": 0.1501,
+       "h": 0.2501
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.7119,
+      "y": 0.1995,
+      "w": 0.0701,
+      "h": 0.1321
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 179.871,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7533,
+      "y": 0.4243,
+      "w": 0.0728,
+      "h": 0.1301
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 181.38,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4873,
+      "y": 0.3135,
+      "w": 0.1309,
+      "h": 0.2731
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 183.505,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7322,
+       "y": 0.0381,
+       "w": 0.1501,
+       "h": 0.2501
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7956,
+      "y": 0.3646,
+      "w": 0.064,
+      "h": 0.1964
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 185.779,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7322,
+       "y": 0.0381,
+       "w": 0.1501,
+       "h": 0.2501
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6125,
+      "y": 0.1006,
+      "w": 0.1926,
+      "h": 0.0699
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 186.965,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7322,
+       "y": 0.0381,
+       "w": 0.1501,
+       "h": 0.2501
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.0898,
+      "y": 0.4931,
+      "w": 0.0635,
+      "h": 0.0823
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 24",
+   "startSec": 104.441,
+   "cuts": [
+    {
+     "start": 0.573,
+     "end": 1.697
+    }
+   ],
+   "gameZoom": 1.809,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.252
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 104.841,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6229,
+       "y": 0.0026,
+       "w": 0.1964,
+       "h": 0.3079
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.0852,
+      "y": 0.4797,
+      "w": 0.0574,
+      "h": 0.0992
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 25",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.828
+    },
+    {
+     "startSec": 3.828,
+     "endSec": 8.027
+    },
+    {
+     "startSec": 8.027,
+     "endSec": 10.112
+    },
+    {
+     "startSec": 10.112,
+     "endSec": 12.852
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6786,
+       "y": 0.041,
+       "w": 0.1501,
+       "h": 0.2802
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4704,
+      "y": 0.4751,
+      "w": 0.1583,
+      "h": 0.1091
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.359,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6786,
+       "y": 0.041,
+       "w": 0.1501,
+       "h": 0.2802
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4143,
+      "y": 0.6366,
+      "w": 0.0702,
+      "h": 0.1142
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.437,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6786,
+       "y": 0.041,
+       "w": 0.1501,
+       "h": 0.2802
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2718,
+      "y": 0.6054,
+      "w": 0.0821,
+      "h": 0.262
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.896,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6786,
+       "y": 0.041,
+       "w": 0.1501,
+       "h": 0.2802
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5038,
+      "y": 0.1585,
+      "w": 0.192,
+      "h": 0.2693
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.976,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6786,
+       "y": 0.041,
+       "w": 0.1501,
+       "h": 0.2802
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.5927,
+      "y": 0.5129,
+      "w": 0.1211,
+      "h": 0.1856
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8.444,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6786,
+       "y": 0.041,
+       "w": 0.1501,
+       "h": 0.2802
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2933,
+      "y": 0.4631,
+      "w": 0.1942,
+      "h": 0.1562
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.647,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6786,
+       "y": 0.041,
+       "w": 0.1501,
+       "h": 0.2802
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2602,
+      "y": 0.5371,
+      "w": 0.1492,
+      "h": 0.1788
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 11.048,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4226,
+      "y": 0.5853,
+      "w": 0.1526,
+      "h": 0.211
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 12.216,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6786,
+       "y": 0.041,
+       "w": 0.1501,
+       "h": 0.2802
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.681,
+      "y": 0.4855,
+      "w": 0.1089,
+      "h": 0.2394
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 26",
+   "startSec": 89.178,
+   "cuts": [
+    {
+     "start": 0.712,
+     "end": 1.325
+    },
+    {
+     "start": 2.015,
+     "end": 2.862
+    }
+   ],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.204
+    },
+    {
+     "startSec": 1.204,
+     "endSec": 2.194
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 89.578,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6745,
+       "y": 0.0396,
+       "w": 0.2218,
+       "h": 0.2395
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.3596,
+      "y": 0.2455,
+      "w": 0.1953,
+      "h": 0.0521
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 91.82,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6745,
+       "y": 0.0396,
+       "w": 0.2218,
+       "h": 0.2395
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3509,
+      "y": 0.1438,
+      "w": 0.1047,
+      "h": 0.1878
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 27",
+   "startSec": 195.976,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6958,
+      "y": 0.0847,
+      "width": 0.0644,
+      "height": 0.1258,
+      "faceCentreX": 0.7325,
+      "eyeLineY": 0.1327,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6958,
+      "y": 0.0847,
+      "width": 0.0644,
+      "height": 0.1258,
+      "faceCentreX": 0.7325,
+      "eyeLineY": 0.1327,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6958,
+      "y": 0.0847,
+      "width": 0.0644,
+      "height": 0.1258,
+      "faceCentreX": 0.7325,
+      "eyeLineY": 0.1327,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6958,
+      "y": 0.0847,
+      "width": 0.0644,
+      "height": 0.1258,
+      "faceCentreX": 0.7325,
+      "eyeLineY": 0.1327,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2.532
+    },
+    {
+     "startSec": 2.532,
+     "endSec": 7.279
+    },
+    {
+     "startSec": 7.279,
+     "endSec": 12.77
+    },
+    {
+     "startSec": 12.77,
+     "endSec": 16.865
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 196.376,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6406,
+       "y": 0.0368,
+       "w": 0.1839,
+       "h": 0.2397
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3768,
+      "y": 0.4889,
+      "w": 0.1021,
+      "h": 0.2496
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 197.472,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 199.392,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6406,
+       "y": 0.0368,
+       "w": 0.1839,
+       "h": 0.2397
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 200.228,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6406,
+       "y": 0.0368,
+       "w": 0.1839,
+       "h": 0.2397
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 201.939,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1138,
+      "y": 0.3504,
+      "w": 0.1997,
+      "h": 0.2099
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 202.936,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6406,
+       "y": 0.0368,
+       "w": 0.1839,
+       "h": 0.2397
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4573,
+      "y": 0.1182,
+      "w": 0.1758,
+      "h": 0.1527
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 203.887,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6406,
+       "y": 0.0368,
+       "w": 0.1839,
+       "h": 0.2397
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.381,
+      "y": 0.6173,
+      "w": 0.057,
+      "h": 0.2609
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 205.301,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6406,
+       "y": 0.0368,
+       "w": 0.1839,
+       "h": 0.2397
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7086,
+      "y": 0.3055,
+      "w": 0.0564,
+      "h": 0.2146
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 207.686,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 208.572,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6406,
+       "y": 0.0368,
+       "w": 0.1839,
+       "h": 0.2397
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.1895,
+      "y": 0.2445,
+      "w": 0.0597,
+      "h": 0.2243
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 209.561,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5521,
+      "y": 0.1218,
+      "w": 0.1421,
+      "h": 0.1771
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 211.554,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6406,
+       "y": 0.0368,
+       "w": 0.1839,
+       "h": 0.2397
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5465,
+      "y": 0.2553,
+      "w": 0.1087,
+      "h": 0.1906
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 28",
+   "startSec": 120.48,
+   "cuts": [
+    {
+     "start": 0.985,
+     "end": 2.09
+    }
+   ],
+   "gameZoom": 1.23,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7198,
+      "y": 0.0714,
+      "width": 0.055,
+      "height": 0.1536,
+      "faceCentreX": 0.7512,
+      "eyeLineY": 0.1299,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7198,
+      "y": 0.0714,
+      "width": 0.055,
+      "height": 0.1536,
+      "faceCentreX": 0.7512,
+      "eyeLineY": 0.1299,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.628
+    },
+    {
+     "startSec": 1.628,
+     "endSec": 2.604
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 120.88,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.0735,
+      "y": 0.6125,
+      "w": 0.1867,
+      "h": 0.1214
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 122.822,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6727,
+       "y": 0.0129,
+       "w": 0.157,
+       "h": 0.2926
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4596,
+      "y": 0.4313,
+      "w": 0.0686,
+      "h": 0.2002
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 29",
+   "startSec": 55.27,
+   "cuts": [
+    {
+     "start": 0.557,
+     "end": 1.491
+    }
+   ],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    []
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 0.993
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 55.67,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.0044,
+       "w": 0.2262,
+       "h": 0.2631
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 56.826,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6586,
+       "y": 0.0044,
+       "w": 0.2262,
+       "h": 0.2631
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 30",
+   "startSec": 173.546,
+   "cuts": [],
+   "gameZoom": 1.307,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.739,
+      "y": 0.0646,
+      "width": 0.087,
+      "height": 0.1438,
+      "faceCentreX": 0.7887,
+      "eyeLineY": 0.1194,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [
+    1
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5.938
+    },
+    {
+     "startSec": 5.938,
+     "endSec": 7.465
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 173.946,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6644,
+       "y": 0.0098,
+       "w": 0.2486,
+       "h": 0.2739
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.1167,
+      "y": 0.6363,
+      "w": 0.0507,
+      "h": 0.2505
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 175.659,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6644,
+       "y": 0.0098,
+       "w": 0.2486,
+       "h": 0.2739
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3957,
+      "y": 0.6755,
+      "w": 0.181,
+      "h": 0.0932
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 177.978,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6822,
+      "y": 0.4896,
+      "w": 0.1292,
+      "h": 0.1984
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 180.45,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6644,
+       "y": 0.0098,
+       "w": 0.2486,
+       "h": 0.2739
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5726,
+      "y": 0.3604,
+      "w": 0.1369,
+      "h": 0.0546
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 31",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1.368,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7826,
+      "y": 0.1107,
+      "width": 0.0534,
+      "height": 0.1699,
+      "faceCentreX": 0.8132,
+      "eyeLineY": 0.1754,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5.611
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7368,
+       "y": 0.046,
+       "w": 0.1527,
+       "h": 0.3236
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5957,
+      "y": 0.6208,
+      "w": 0.146,
+      "h": 0.2057
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 1.581,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7368,
+       "y": 0.046,
+       "w": 0.1527,
+       "h": 0.3236
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2031,
+      "y": 0.6244,
+      "w": 0.1857,
+      "h": 0.1311
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.33,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7368,
+       "y": 0.046,
+       "w": 0.1527,
+       "h": 0.3236
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.1485,
+      "y": 0.3797,
+      "w": 0.1248,
+      "h": 0.0525
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.675,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3698,
+      "y": 0.353,
+      "w": 0.1372,
+      "h": 0.0557
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.501,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7368,
+       "y": 0.046,
+       "w": 0.1527,
+       "h": 0.3236
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7374,
+      "y": 0.6489,
+      "w": 0.0867,
+      "h": 0.102
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 32",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 2.487,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [
+    1
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2.294
+    },
+    {
+     "startSec": 2.294,
+     "endSec": 7.484
+    },
+    {
+     "startSec": 7.484,
+     "endSec": 13.251
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1228,
+      "y": 0.4016,
+      "w": 0.0879,
+      "h": 0.2165
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 1.221,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6054,
+       "y": 0.0234,
+       "w": 0.2033,
+       "h": 0.2405
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2678,
+      "y": 0.6985,
+      "w": 0.1969,
+      "h": 0.2343
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.461,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5333,
+      "y": 0.3991,
+      "w": 0.0542,
+      "h": 0.1555
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.531,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1485,
+      "y": 0.345,
+      "w": 0.1624,
+      "h": 0.0861
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.751,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6054,
+       "y": 0.0234,
+       "w": 0.2033,
+       "h": 0.2405
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2532,
+      "y": 0.4117,
+      "w": 0.1732,
+      "h": 0.0895
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.071,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7719,
+      "y": 0.1894,
+      "w": 0.1097,
+      "h": 0.0659
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 10.738,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6054,
+       "y": 0.0234,
+       "w": 0.2033,
+       "h": 0.2405
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3857,
+      "y": 0.134,
+      "w": 0.1981,
+      "h": 0.1458
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 12.808,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6054,
+       "y": 0.0234,
+       "w": 0.2033,
+       "h": 0.2405
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3061,
+      "y": 0.6805,
+      "w": 0.1442,
+      "h": 0.0771
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 33",
+   "startSec": 183.036,
+   "cuts": [
+    {
+     "start": 3.978,
+     "end": 4.581
+    }
+   ],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.915
+    },
+    {
+     "startSec": 1.915,
+     "endSec": 6.266
+    },
+    {
+     "startSec": 6.266,
+     "endSec": 10.596
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 183.436,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4558,
+      "y": 0.1763,
+      "w": 0.175,
+      "h": 0.1067
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 184.239,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6091,
+       "y": 0.0168,
+       "w": 0.155,
+       "h": 0.2881
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4763,
+      "y": 0.5174,
+      "w": 0.0847,
+      "h": 0.0694
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 185.752,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6091,
+       "y": 0.0168,
+       "w": 0.155,
+       "h": 0.2881
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3137,
+      "y": 0.6462,
+      "w": 0.1057,
+      "h": 0.1016
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 186.701,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1461,
+      "y": 0.2976,
+      "w": 0.1587,
+      "h": 0.1512
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 188.451,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6091,
+       "y": 0.0168,
+       "w": 0.155,
+       "h": 0.2881
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.389,
+      "y": 0.3717,
+      "w": 0.181,
+      "h": 0.1203
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 190.757,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.7604,
+      "y": 0.4005,
+      "w": 0.13,
+      "h": 0.0809
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 193.024,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6091,
+       "y": 0.0168,
+       "w": 0.155,
+       "h": 0.2881
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2788,
+      "y": 0.4676,
+      "w": 0.1683,
+      "h": 0.1033
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 34",
+   "startSec": 44.246,
+   "cuts": [],
+   "gameZoom": 1.801,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 0.998
+    },
+    {
+     "startSec": 0.998,
+     "endSec": 4.325
+    },
+    {
+     "startSec": 4.325,
+     "endSec": 10.253
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 44.646,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6782,
+       "y": 0.0143,
+       "w": 0.2271,
+       "h": 0.2458
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5164,
+      "y": 0.2326,
+      "w": 0.1917,
+      "h": 0.0834
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 45.686,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1378,
+      "y": 0.6175,
+      "w": 0.1519,
+      "h": 0.1516
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 46.967,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6782,
+       "y": 0.0143,
+       "w": 0.2271,
+       "h": 0.2458
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1962,
+      "y": 0.4659,
+      "w": 0.1353,
+      "h": 0.1963
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 49.462,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4701,
+      "y": 0.58,
+      "w": 0.0974,
+      "h": 0.0996
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 51.289,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6782,
+       "y": 0.0143,
+       "w": 0.2271,
+       "h": 0.2458
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4521,
+      "y": 0.632,
+      "w": 0.1564,
+      "h": 0.1527
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 53.726,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 35",
+   "startSec": 0,
+   "cuts": [
+    {
+     "start": 7.961,
+     "end": 8.328
+    }
+   ],
+   "gameZoom": 1.522,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6861,
+      "y": 0.101,
+      "width": 0.0558,
+      "height": 0.1235,
+      "faceCentreX": 0.7181,
+      "eyeLineY": 0.148,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6861,
+      "y": 0.101,
+      "width": 0.0558,
+      "height": 0.1235,
+      "faceCentreX": 0.7181,
+      "eyeLineY": 0.148,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6861,
+      "y": 0.101,
+      "width": 0.0558,
+      "height": 0.1235,
+      "faceCentreX": 0.7181,
+      "eyeLineY": 0.148,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6861,
+      "y": 0.101,
+      "width": 0.0558,
+      "height": 0.1235,
+      "faceCentreX": 0.7181,
+      "eyeLineY": 0.148,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.6861,
+      "y": 0.101,
+      "width": 0.0558,
+      "height": 0.1235,
+      "faceCentreX": 0.7181,
+      "eyeLineY": 0.148,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ]
+   ],
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2.071
+    },
+    {
+     "startSec": 2.071,
+     "endSec": 5.151
+    },
+    {
+     "startSec": 5.151,
+     "endSec": 10.58
+    },
+    {
+     "startSec": 10.58,
+     "endSec": 15.954
+    },
+    {
+     "startSec": 15.954,
+     "endSec": 21.097
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5193,
+      "y": 0.5281,
+      "w": 0.1037,
+      "h": 0.1331
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 1.892,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6383,
+       "y": 0.0539,
+       "w": 0.1595,
+       "h": 0.2353
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.235,
+      "y": 0.3137,
+      "w": 0.1767,
+      "h": 0.274
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.819,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6383,
+       "y": 0.0539,
+       "w": 0.1595,
+       "h": 0.2353
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.0602,
+      "y": 0.2402,
+      "w": 0.1205,
+      "h": 0.2565
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.692,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.802,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5912,
+      "y": 0.5303,
+      "w": 0.1959,
+      "h": 0.149
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8.342,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6383,
+       "y": 0.0539,
+       "w": 0.1595,
+       "h": 0.2353
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2801,
+      "y": 0.2959,
+      "w": 0.1713,
+      "h": 0.1191
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 10.622,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 11.432,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.352,
+      "y": 0.2884,
+      "w": 0.0798,
+      "h": 0.17
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 13.337,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6383,
+       "y": 0.0539,
+       "w": 0.1595,
+       "h": 0.2353
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.0514,
+      "y": 0.2839,
+      "w": 0.197,
+      "h": 0.186
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 15.452,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5448,
+      "y": 0.6595,
+      "w": 0.0981,
+      "h": 0.1106
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 17.345,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 18.315,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6383,
+       "y": 0.0539,
+       "w": 0.1595,
+       "h": 0.2353
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.6564,
+      "y": 0.4665,
+      "w": 0.1784,
+      "h": 0.2413
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 19.918,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6383,
+       "y": 0.0539,
+       "w": 0.1595,
+       "h": 0.2353
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.194,
+      "y": 0.2656,
+      "w": 0.1309,
+      "h": 0.146
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 21.101,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6383,
+       "y": 0.0539,
+       "w": 0.1595,
+       "h": 0.2353
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6022,
+      "y": 0.1822,
+      "w": 0.1288,
+      "h": 0.26
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 36",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1.288,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.748
+    },
+    {
+     "startSec": 1.748,
+     "endSec": 4.035
+    },
+    {
+     "startSec": 4.035,
+     "endSec": 6.336
+    },
+    {
+     "startSec": 6.336,
+     "endSec": 11.692
+    },
+    {
+     "startSec": 11.692,
+     "endSec": 12.664
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.083,
+      "y": 0.3614,
+      "w": 0.1382,
+      "h": 0.2941
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.086,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6515,
+       "y": 0.0111,
+       "w": 0.1796,
+       "h": 0.2493
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.446,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5217,
+      "y": 0.4081,
+      "w": 0.1576,
+      "h": 0.0665
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.864,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.2645,
+      "y": 0.4489,
+      "w": 0.093,
+      "h": 0.1702
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.009,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6515,
+       "y": 0.0111,
+       "w": 0.1796,
+       "h": 0.2493
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 10.523,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6515,
+       "y": 0.0111,
+       "w": 0.1796,
+       "h": 0.2493
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.337,
+      "y": 0.3518,
+      "w": 0.1083,
+      "h": 0.0715
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 12.263,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6515,
+       "y": 0.0111,
+       "w": 0.1796,
+       "h": 0.2493
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6468,
+      "y": 0.5289,
+      "w": 0.1732,
+      "h": 0.2356
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 37",
+   "startSec": 177.215,
+   "cuts": [],
+   "gameZoom": 1.05,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 1.783
+    },
+    {
+     "startSec": 1.783,
+     "endSec": 7.027
+    },
+    {
+     "startSec": 7.027,
+     "endSec": 8.082
+    },
+    {
+     "startSec": 8.082,
+     "endSec": 9.146
+    },
+    {
+     "startSec": 9.146,
+     "endSec": 14.996
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 177.615,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7135,
+       "y": 0.0682,
+       "w": 0.2496,
+       "h": 0.216
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5368,
+      "y": 0.5941,
+      "w": 0.1921,
+      "h": 0.2468
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 179.02,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7135,
+       "y": 0.0682,
+       "w": 0.2496,
+       "h": 0.216
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.1119,
+      "y": 0.3173,
+      "w": 0.1721,
+      "h": 0.0508
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 179.982,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 182.326,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7135,
+       "y": 0.0682,
+       "w": 0.2496,
+       "h": 0.216
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.6552,
+      "y": 0.6596,
+      "w": 0.1515,
+      "h": 0.0686
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 183.366,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6511,
+      "y": 0.1629,
+      "w": 0.1268,
+      "h": 0.0716
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 184.601,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.7135,
+       "y": 0.0682,
+       "w": 0.2496,
+       "h": 0.216
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.7665,
+      "y": 0.2578,
+      "w": 0.1462,
+      "h": 0.2884
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 185.734,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7135,
+       "y": 0.0682,
+       "w": 0.2496,
+       "h": 0.216
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 186.647,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7135,
+       "y": 0.0682,
+       "w": 0.2496,
+       "h": 0.216
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1357,
+      "y": 0.5911,
+      "w": 0.0622,
+      "h": 0.0718
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 188.894,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7135,
+       "y": 0.0682,
+       "w": 0.2496,
+       "h": 0.216
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6579,
+      "y": 0.6134,
+      "w": 0.1782,
+      "h": 0.1379
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 190.143,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7135,
+       "y": 0.0682,
+       "w": 0.2496,
+       "h": 0.216
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.517,
+      "y": 0.6273,
+      "w": 0.19,
+      "h": 0.1793
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 38",
+   "startSec": 0,
+   "cuts": [
+    {
+     "start": 2.386,
+     "end": 3.083
+    },
+    {
+     "start": 4.629,
+     "end": 5.499
+    }
+   ],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": [
+    [
+     {
+      "confidence": 0.9,
+      "x": 0.7228,
+      "y": 0.1554,
+      "width": 0.0609,
+      "height": 0.1581,
+      "faceCentreX": 0.7576,
+      "eyeLineY": 0.2156,
+      "facing": 0,
+      "coverage": 1,
+      "mouthMotion": 0
+     }
+    ],
+    []
+   ],
+   "keepOut": [
+    1
+   ],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 4.326
+    },
+    {
+     "startSec": 4.326,
+     "endSec": 5.146
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6706,
+       "y": 0.0952,
+       "w": 0.1741,
+       "h": 0.3011
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.2935,
+      "y": 0.1298,
+      "w": 0.1968,
+      "h": 0.1974
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.766,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6706,
+       "y": 0.0952,
+       "w": 0.1741,
+       "h": 0.3011
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.257,
+      "y": 0.1382,
+      "w": 0.1512,
+      "h": 0.1131
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.702,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6706,
+       "y": 0.0952,
+       "w": 0.1741,
+       "h": 0.3011
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.0956,
+      "y": 0.3043,
+      "w": 0.1288,
+      "h": 0.0729
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5.686,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3366,
+      "y": 0.2843,
+      "w": 0.0593,
+      "h": 0.1098
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 39",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 3.996
+    },
+    {
+     "startSec": 3.996,
+     "endSec": 6.724
+    },
+    {
+     "startSec": 6.724,
+     "endSec": 9.321
+    },
+    {
+     "startSec": 9.321,
+     "endSec": 14.609
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6772,
+       "y": 0.0348,
+       "w": 0.164,
+       "h": 0.2793
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6793,
+      "y": 0.1784,
+      "w": 0.1002,
+      "h": 0.2385
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 1.696,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6772,
+       "y": 0.0348,
+       "w": 0.164,
+       "h": 0.2793
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.484,
+      "y": 0.2865,
+      "w": 0.0514,
+      "h": 0.2847
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.91,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6772,
+       "y": 0.0348,
+       "w": 0.164,
+       "h": 0.2793
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.316,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.206,
+      "y": 0.3238,
+      "w": 0.1778,
+      "h": 0.2896
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 7.838,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6772,
+       "y": 0.0348,
+       "w": 0.164,
+       "h": 0.2793
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3114,
+      "y": 0.655,
+      "w": 0.0956,
+      "h": 0.2175
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.371,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.6772,
+       "y": 0.0348,
+       "w": 0.164,
+       "h": 0.2793
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3893,
+      "y": 0.3816,
+      "w": 0.1295,
+      "h": 0.1582
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 11.226,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.1753,
+      "y": 0.1357,
+      "w": 0.0972,
+      "h": 0.2418
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 13.041,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.6772,
+       "y": 0.0348,
+       "w": 0.164,
+       "h": 0.2793
+      }
+     ],
+     "game": null,
+     "focus": {
+      "x": 0.4576,
+      "y": 0.4818,
+      "w": 0.0511,
+      "h": 0.0562
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "random 40",
+   "startSec": 0,
+   "cuts": [],
+   "gameZoom": 1.083,
+   "frameWidth": 1920,
+   "frameHeight": 1080,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "faces": null,
+   "keepOut": [],
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2.931
+    },
+    {
+     "startSec": 2.931,
+     "endSec": 8.532
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.4,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 1.879,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.7357,
+       "y": 0.0066,
+       "w": 0.1713,
+       "h": 0.2011
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3809,
+      "y": 0.2435,
+      "w": 0.0552,
+      "h": 0.2684
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.118,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5075,
+      "y": 0.3768,
+      "w": 0.052,
+      "h": 0.2143
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.923,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6245,
+      "y": 0.1995,
+      "w": 0.0889,
+      "h": 0.2855
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 7.039,
+     "mode": "none",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5942,
+      "y": 0.1194,
+      "w": 0.1318,
+      "h": 0.0877
+     },
+     "why": "x"
+    }
+   ]
+  }
+ ],
+ "readingKept": [
+  {
+   "override": null,
+   "mode": "panels"
+  },
+  {
+   "override": null,
+   "mode": "people"
+  },
+  {
+   "override": null,
+   "mode": "game"
+  },
+  {
+   "override": null,
+   "mode": "none"
+  },
+  {
+   "override": "panels",
+   "mode": "panels"
+  },
+  {
+   "override": "panels",
+   "mode": "people"
+  },
+  {
+   "override": "panels",
+   "mode": "game"
+  },
+  {
+   "override": "panels",
+   "mode": "none"
+  },
+  {
+   "override": "track",
+   "mode": "panels"
+  },
+  {
+   "override": "track",
+   "mode": "people"
+  },
+  {
+   "override": "track",
+   "mode": "game"
+  },
+  {
+   "override": "track",
+   "mode": "none"
+  },
+  {
+   "override": "fill",
+   "mode": "panels"
+  },
+  {
+   "override": "fill",
+   "mode": "people"
+  },
+  {
+   "override": "fill",
+   "mode": "game"
+  },
+  {
+   "override": "fill",
+   "mode": "none"
+  },
+  {
+   "override": "fit",
+   "mode": "panels"
+  },
+  {
+   "override": "fit",
+   "mode": "people"
+  },
+  {
+   "override": "fit",
+   "mode": "game"
+  },
+  {
+   "override": "fit",
+   "mode": "none"
+  },
+  {
+   "override": "stack",
+   "mode": "panels"
+  },
+  {
+   "override": "stack",
+   "mode": "people"
+  },
+  {
+   "override": "stack",
+   "mode": "game"
+  },
+  {
+   "override": "stack",
+   "mode": "none"
+  }
+ ],
+ "sourceToClip": [
+  {
+   "sourceSec": 100,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 101,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 102.9999,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 103,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 103.0005,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 103.5,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 103.9995,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 104,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 104.0004,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 104.5,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 109,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 110,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 110.25,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 110.5,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 111,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 120,
+   "startSec": 100,
+   "cuts": []
+  },
+  {
+   "sourceSec": 100,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 101,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 102.9999,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 103,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 103.0005,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 103.5,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 103.9995,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 104,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 104.0004,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 104.5,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 109,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 110,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 110.25,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 110.5,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 111,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 120,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ]
+  },
+  {
+   "sourceSec": 100,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 101,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 102.9999,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 103,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 103.0005,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 103.5,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 103.9995,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 104,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 104.0004,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 104.5,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 109,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 110,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 110.25,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 110.5,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 111,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  },
+  {
+   "sourceSec": 120,
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 3,
+     "end": 4
+    },
+    {
+     "start": 10,
+     "end": 10.5
+    }
+   ]
+  }
+ ]
+}

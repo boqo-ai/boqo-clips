@@ -1,0 +1,3318 @@
+{
+ "cases": [
+  {
+   "name": "panels with a face in the first camera",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.775,
+     "y": 0.15000000000000002,
+     "width": 0.05,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with no face",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with the larger of two faces in the camera",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.745,
+     "y": 0.12,
+     "width": 0.03,
+     "height": 0.06,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.8099999999999999,
+     "y": 0.14,
+     "width": 0.06,
+     "height": 0.12,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with a face outside the camera",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.27499999999999997,
+     "y": 0.5499999999999999,
+     "width": 0.05,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels faceCentreX decides the side",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.89,
+     "y": 0.15000000000000002,
+     "width": 0.2,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.8
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with two cameras",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 0,
+      "y": 0,
+      "width": 400,
+      "height": 300
+     },
+     {
+      "x": 1500,
+      "y": 0,
+      "width": 400,
+      "height": 300
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.07500000000000001,
+     "y": 0.05,
+     "width": 0.05,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "people with a face in the crop",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 600,
+     "y": 0,
+     "width": 608,
+     "height": 1080
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.375,
+     "y": 0.35000000000000003,
+     "width": 0.05,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "people with no face",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 600,
+     "y": 0,
+     "width": 608,
+     "height": 1080
+    }
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "game",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.375,
+     "y": 0.35000000000000003,
+     "width": 0.05,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "none",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with an odd top band",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 601
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with a zero top band",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 0
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with no cameras",
+   "plan": {
+    "mode": "panels",
+    "cameras": [],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with a camera of odd width",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 501,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with a camera at a fractional position",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382.5,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with a camera past the right edge",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1500,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with a camera at the exact edge",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1420,
+      "y": 760,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with a negative position",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": -2,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with a camera of height 1",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 10,
+      "y": 54,
+      "width": 500,
+      "height": 1
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with a window leaving the frame at its last point",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2,
+       "v": 1400
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with an empty x path",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with an odd window",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 607,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels with a fractional path value",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1382,
+      "y": 54,
+      "width": 500,
+      "height": 320
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0.5
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 600
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "game with y leaving the frame",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 608,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 10
+      }
+     ]
+    }
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "game with a window as large as the frame",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 1920,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    }
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "people with an odd rect",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 10,
+     "y": 10,
+     "width": 301,
+     "height": 400
+    }
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "people with a rect outside the frame",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 1800,
+     "y": 0,
+     "width": 400,
+     "height": 400
+    }
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "panels on a 1280x720 frame",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 900,
+      "y": 40,
+      "width": 332,
+      "height": 220
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 406,
+      "height": 720
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1,
+       "v": 300
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 480
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.775,
+     "y": 0.15000000000000002,
+     "width": 0.05,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 1",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 596,
+      "y": 442,
+      "width": 263,
+      "height": 206
+     },
+     {
+      "x": 596,
+      "y": 250,
+      "width": 354,
+      "height": 234
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 572,
+      "height": 536
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 195
+      },
+      {
+       "t": 1.792,
+       "v": 342
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 107
+      }
+     ]
+    },
+    "topHeight": 438
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.52515,
+     "y": 0.34214999999999995,
+     "width": 0.0875,
+     "height": 0.1689,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 2",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 408.5,
+     "y": 652,
+     "width": 394,
+     "height": 130
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.25405,
+     "y": 0.4747,
+     "width": 0.0787,
+     "height": 0.0542,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 3",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 4",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.52595,
+     "y": 0.44795000000000007,
+     "width": 0.0283,
+     "height": 0.1295,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.8120499999999999,
+     "y": 0.8469,
+     "width": 0.0679,
+     "height": 0.1366,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 5",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 639,
+     "y": 518,
+     "width": 314,
+     "height": 128
+    }
+   },
+   "faces": [],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 6",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.4498,
+     "y": 0.1717,
+     "width": 0.0846,
+     "height": 0.0502,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.9478
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 7",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 408,
+      "height": 592
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 361
+      },
+      {
+       "t": 1.676,
+       "v": 631
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 48
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.2974,
+     "y": 0.3763,
+     "width": 0.0396,
+     "height": 0.1494,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.5461,
+     "y": 0.59865,
+     "width": 0.0202,
+     "height": 0.0609,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.7898
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 8",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 654,
+      "height": 870
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 732
+      },
+      {
+       "t": 2.513,
+       "v": 1036
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 81
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.23845,
+     "y": 0.16385,
+     "width": 0.0311,
+     "height": 0.1401,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.5573
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.8885,
+     "y": 0.7391000000000001,
+     "width": 0.0616,
+     "height": 0.1802,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.5252
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 9",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 544,
+     "y": 245,
+     "width": 242,
+     "height": 298
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.52595,
+     "y": 0.46935000000000004,
+     "width": 0.0385,
+     "height": 0.1895,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.8024
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.26675,
+     "y": 0.0562,
+     "width": 0.0553,
+     "height": 0.101,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.3849
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 10",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 350,
+      "height": 638
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 33
+      },
+      {
+       "t": 1.184,
+       "v": 1312
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 71
+      }
+     ]
+    }
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 11",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.7276499999999999,
+     "y": 0.8813,
+     "width": 0.0555,
+     "height": 0.076,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 12",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 678,
+      "height": 494
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 51
+      },
+      {
+       "t": 1.646,
+       "v": 269
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": -11
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.8844,
+     "y": 0.48315,
+     "width": 0.0846,
+     "height": 0.1277,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 13",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 162,
+     "y": 388,
+     "width": 302,
+     "height": 138
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.40265,
+     "y": 0.8172,
+     "width": 0.0475,
+     "height": 0.0954,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.024100000000000003,
+     "y": 0.29884999999999995,
+     "width": 0.0642,
+     "height": 0.1669,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 14",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 613,
+      "y": 46,
+      "width": 138,
+      "height": 270
+     },
+     {
+      "x": 152,
+      "y": 34,
+      "width": 350,
+      "height": 104
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 448,
+      "height": 502
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 668
+      },
+      {
+       "t": 1.944,
+       "v": 5
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 10
+      }
+     ]
+    },
+    "topHeight": 410
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.4563,
+     "y": -0.02835,
+     "width": 0.0894,
+     "height": 0.1859,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.3641
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 15",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 488,
+      "height": 680
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 935
+      },
+      {
+       "t": 2.327,
+       "v": 643
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 281
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.36585,
+     "y": 0.38480000000000003,
+     "width": 0.0973,
+     "height": 0.089,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 16",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.35375,
+     "y": 0.3427,
+     "width": 0.0277,
+     "height": 0.0446,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.1052
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 17",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 754,
+      "y": 459,
+      "width": 288,
+      "height": 286
+     },
+     {
+      "x": 311,
+      "y": 104,
+      "width": 310,
+      "height": 132
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 556,
+      "height": 650
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 899
+      },
+      {
+       "t": 1.392,
+       "v": 373
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 100
+      }
+     ]
+    },
+    "topHeight": 404
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 18",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.26545,
+     "y": 0.02255,
+     "width": 0.0891,
+     "height": 0.1789,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.0506
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.1722,
+     "y": 0.416,
+     "width": 0.0232,
+     "height": 0.1482,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 19",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 458,
+      "height": 482
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 185
+      },
+      {
+       "t": 1.295,
+       "v": 382
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": -1
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.8118,
+     "y": 0.43574999999999997,
+     "width": 0.096,
+     "height": 0.0631,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.5927
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 20",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 152.5,
+     "y": 95,
+     "width": 350,
+     "height": 158
+    }
+   },
+   "faces": [],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 21",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 6,
+      "y": 64,
+      "width": 102,
+      "height": 238
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 362,
+      "height": 484
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 35
+      },
+      {
+       "t": 1.362,
+       "v": 29
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    },
+    "topHeight": 680
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.7149,
+     "y": 0.5503,
+     "width": 0.068,
+     "height": 0.1634,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.0949
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.37745,
+     "y": 0.10264999999999999,
+     "width": 0.0421,
+     "height": 0.1053,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.1665
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 22",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.91635,
+     "y": 0.18735000000000002,
+     "width": 0.0261,
+     "height": 0.0923,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 23",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 24",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 314.5,
+      "y": 144,
+      "width": 282,
+      "height": 198
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 492,
+      "height": 482
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 265
+      },
+      {
+       "t": 1.84,
+       "v": 422
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": -1
+      }
+     ]
+    },
+    "topHeight": 624
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.65105,
+     "y": 0.007850000000000003,
+     "width": 0.0439,
+     "height": 0.1083,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 25",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 565,
+      "y": 428,
+      "width": 102,
+      "height": 256
+     },
+     {
+      "x": 542,
+      "y": 96,
+      "width": 146,
+      "height": 134
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 476,
+      "height": 590
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 77
+      },
+      {
+       "t": 1.648,
+       "v": 774
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 86
+      }
+     ]
+    },
+    "topHeight": 650
+   },
+   "faces": [],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 26",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.9299499999999999,
+     "y": 0.2705,
+     "width": 0.0333,
+     "height": 0.1884,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 27",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.6063999999999999,
+     "y": 0.1189,
+     "width": 0.0274,
+     "height": 0.0624,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.6413,
+     "y": 0.5975,
+     "width": 0.0508,
+     "height": 0.1298,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 28",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 46,
+     "y": 43,
+     "width": 268,
+     "height": 272
+    }
+   },
+   "faces": [],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 29",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 358,
+      "height": 1080
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 403
+      },
+      {
+       "t": 1.587,
+       "v": 1274
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.33055,
+     "y": 0.31375000000000003,
+     "width": 0.0271,
+     "height": 0.0475,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.1431,
+     "y": 0.67365,
+     "width": 0.0742,
+     "height": 0.1607,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 30",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 1612,
+     "y": 252,
+     "width": 186,
+     "height": 172
+    }
+   },
+   "faces": [],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 31",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 552,
+      "height": 482
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 14
+      },
+      {
+       "t": 2.057,
+       "v": 87
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 0
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.6088499999999999,
+     "y": 0.43805,
+     "width": 0.0333,
+     "height": 0.0411,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 32",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 1261,
+      "y": 73,
+      "width": 297,
+      "height": 148
+     },
+     {
+      "x": 414,
+      "y": 144,
+      "width": 124,
+      "height": 134
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 344,
+      "height": 1026
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 167
+      },
+      {
+       "t": 2.988,
+       "v": 367
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 12
+      }
+     ]
+    },
+    "topHeight": 652
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.6102,
+     "y": 0.6742,
+     "width": 0.0806,
+     "height": 0.1964,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.2278,
+     "y": 0.33025,
+     "width": 0.0474,
+     "height": 0.1761,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.0684
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 33",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 142.5,
+     "y": 135,
+     "width": 297,
+     "height": 278
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.7682,
+     "y": 0.71595,
+     "width": 0.0252,
+     "height": 0.1967,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.427
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 34",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 35",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 364,
+      "height": 726
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 413
+      },
+      {
+       "t": 1.48,
+       "v": 1191
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 238
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.43784999999999996,
+     "y": 0.7181500000000001,
+     "width": 0.0219,
+     "height": 0.1865,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.2602
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.6536500000000001,
+     "y": 0.29764999999999997,
+     "width": 0.0991,
+     "height": 0.1789,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 36",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 837.5,
+      "y": 512,
+      "width": 352,
+      "height": 242
+     },
+     {
+      "x": 695,
+      "y": 163,
+      "width": 322,
+      "height": 228
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 388,
+      "height": 680
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 879
+      },
+      {
+       "t": 1.186,
+       "v": 124
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 20
+      }
+     ]
+    },
+    "topHeight": 440
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.7104,
+     "y": 0.7172,
+     "width": 0.0934,
+     "height": 0.117,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.83685,
+     "y": 0.6312500000000001,
+     "width": 0.0767,
+     "height": 0.1099,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 37",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 663,
+     "y": 100,
+     "width": 186,
+     "height": 182
+    }
+   },
+   "faces": [],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 38",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 654,
+      "height": 488
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 47
+      },
+      {
+       "t": 2.283,
+       "v": 146
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": -1
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.31425000000000003,
+     "y": 0.90935,
+     "width": 0.0629,
+     "height": 0.0789,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 39",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 161,
+     "y": 85,
+     "width": 360,
+     "height": 194
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.8415999999999999,
+     "y": 0.33505,
+     "width": 0.0758,
+     "height": 0.1903,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.32665,
+     "y": 0.0007500000000000007,
+     "width": 0.0701,
+     "height": 0.1261,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 40",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.42969999999999997,
+     "y": 0.20325,
+     "width": 0.0292,
+     "height": 0.0625,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.1117
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 41",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 654,
+      "height": 562
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 342
+      },
+      {
+       "t": 1.707,
+       "v": 440
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 98
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.21939999999999998,
+     "y": 0.8409,
+     "width": 0.0908,
+     "height": 0.1316,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.9356
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.015300000000000001,
+     "y": 0.024300000000000002,
+     "width": 0.089,
+     "height": 0.0742,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 42",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 586,
+      "height": 496
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 105
+      },
+      {
+       "t": 2.639,
+       "v": 74
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": -12
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.8383499999999999,
+     "y": 0.5661999999999999,
+     "width": 0.0477,
+     "height": 0.1666,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.8861,
+     "y": 0.2077,
+     "width": 0.0544,
+     "height": 0.1068,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.493
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 43",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 484,
+     "y": 18,
+     "width": 365,
+     "height": 104
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.85175,
+     "y": 0.1039,
+     "width": 0.0957,
+     "height": 0.1414,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.1982
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.8987499999999999,
+     "y": 0.5838000000000001,
+     "width": 0.0543,
+     "height": 0.1966,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.2144
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 44",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 696,
+      "height": 552
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 575
+      },
+      {
+       "t": 2.35,
+       "v": 857
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 286
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.25195,
+     "y": 0.8845500000000001,
+     "width": 0.0691,
+     "height": 0.0689,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.40835,
+     "y": 0.85375,
+     "width": 0.0507,
+     "height": 0.0549,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.3979
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 45",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 50,
+      "y": 46,
+      "width": 174,
+      "height": 272
+     },
+     {
+      "x": 717,
+      "y": 4,
+      "width": 155,
+      "height": 134
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 604,
+      "height": 518
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 669
+      },
+      {
+       "t": 2.543,
+       "v": 856
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 108
+      }
+     ]
+    },
+    "topHeight": 500
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.81755,
+     "y": 0.6637,
+     "width": 0.0613,
+     "height": 0.099,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 46",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 354,
+     "y": 260,
+     "width": 386,
+     "height": 272
+    }
+   },
+   "faces": [],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 47",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 470,
+      "height": 692
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 38
+      },
+      {
+       "t": 2.804,
+       "v": 461
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 5
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.3823,
+     "y": 0.2718,
+     "width": 0.0342,
+     "height": 0.0654,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.88075,
+     "y": 0.40404999999999996,
+     "width": 0.0621,
+     "height": 0.1439,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 48",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.6659999999999999,
+     "y": 0.2598,
+     "width": 0.066,
+     "height": 0.15,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.8030499999999999,
+     "y": 0.60495,
+     "width": 0.0439,
+     "height": 0.0427,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.7598
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 49",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 604,
+      "height": 582
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 359
+      },
+      {
+       "t": 2.786,
+       "v": 291
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 119
+      }
+     ]
+    }
+   },
+   "faces": [],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 50",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 572,
+      "height": 614
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 521
+      },
+      {
+       "t": 1.304,
+       "v": 313
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 53
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.8365,
+     "y": 0.19605,
+     "width": 0.0888,
+     "height": 0.0843,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 51",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 416,
+      "y": 511,
+      "width": 100,
+      "height": 228
+     },
+     {
+      "x": 32,
+      "y": 243,
+      "width": 154,
+      "height": 214
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 308,
+      "height": 570
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 396
+      },
+      {
+       "t": 2.996,
+       "v": 982
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 138
+      }
+     ]
+    },
+    "topHeight": 604
+   },
+   "faces": [],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 52",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 4.5,
+      "y": 241,
+      "width": 174,
+      "height": 110
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 672,
+      "height": 494
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 114
+      },
+      {
+       "t": 1.535,
+       "v": 370
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": -11
+      }
+     ]
+    },
+    "topHeight": 448
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.4126,
+     "y": 0.66465,
+     "width": 0.0414,
+     "height": 0.1907,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 53",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 845,
+     "y": 534,
+     "width": 308,
+     "height": 112
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.45,
+     "y": 0.18495,
+     "width": 0.0638,
+     "height": 0.0553,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "name": "random 54",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.08565,
+     "y": 0.5398,
+     "width": 0.0393,
+     "height": 0.0778,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 55",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 111,
+     "y": 124,
+     "width": 228,
+     "height": 124
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.7745,
+     "y": 0.10395,
+     "width": 0.0722,
+     "height": 0.0779,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.56725,
+     "y": 0.49305,
+     "width": 0.0643,
+     "height": 0.1451,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 56",
+   "plan": {
+    "mode": "panels",
+    "cameras": [
+     {
+      "x": 95,
+      "y": 250,
+      "width": 150,
+      "height": 116
+     },
+     {
+      "x": 392,
+      "y": 154,
+      "width": 376,
+      "height": 188
+     }
+    ],
+    "game": {
+     "size": {
+      "width": 364,
+      "height": 490
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 132
+      },
+      {
+       "t": 2.174,
+       "v": 170
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": -10
+      }
+     ]
+    },
+    "topHeight": 416
+   },
+   "faces": [],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 57",
+   "plan": {
+    "mode": "people",
+    "rect": {
+     "x": 489,
+     "y": 445,
+     "width": 308,
+     "height": 284
+    }
+   },
+   "faces": [],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 58",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  },
+  {
+   "name": "random 59",
+   "plan": {
+    "mode": "none"
+   },
+   "faces": [],
+   "frameWidth": 854,
+   "frameHeight": 480
+  },
+  {
+   "name": "random 60",
+   "plan": {
+    "mode": "game",
+    "game": {
+     "size": {
+      "width": 662,
+      "height": 546
+     },
+     "x": [
+      {
+       "t": 0,
+       "v": 241
+      },
+      {
+       "t": 1.054,
+       "v": 568
+      }
+     ],
+     "y": [
+      {
+       "t": 0,
+       "v": 14
+      }
+     ]
+    }
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.30945,
+     "y": 0.12605,
+     "width": 0.0641,
+     "height": 0.1987,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.16970000000000002,
+     "y": 0.20989999999999998,
+     "width": 0.0576,
+     "height": 0.1804,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1280,
+   "frameHeight": 720
+  }
+ ],
+ "faceInRect": [
+  {
+   "rect": {
+    "x": 100,
+    "y": 100,
+    "width": 400,
+    "height": 300
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.125,
+     "y": 0.15000000000000002,
+     "width": 0.05,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.875,
+     "y": 0.85,
+     "width": 0.05,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "rect": {
+    "x": 100,
+    "y": 100,
+    "width": 400,
+    "height": 300
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.042083333333333334,
+     "y": 0.08259259259259259,
+     "width": 0.02,
+     "height": 0.02,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "rect": {
+    "x": 100,
+    "y": 100,
+    "width": 400,
+    "height": 300
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.2504166666666667,
+     "y": 0.36037037037037034,
+     "width": 0.02,
+     "height": 0.02,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "rect": {
+    "x": 100,
+    "y": 100,
+    "width": 400,
+    "height": 300
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.2509375,
+     "y": 0.36037037037037034,
+     "width": 0.02,
+     "height": 0.02,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "rect": {
+    "x": 100,
+    "y": 100,
+    "width": 400,
+    "height": 300
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.095,
+     "y": 0.195,
+     "width": 0.01,
+     "height": 0.01,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    },
+    {
+     "confidence": 0.9,
+     "x": 0.125,
+     "y": 0.15000000000000002,
+     "width": 0.05,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  },
+  {
+   "rect": {
+    "x": 100,
+    "y": 100,
+    "width": 400,
+    "height": 300
+   },
+   "faces": [
+    {
+     "confidence": 0.9,
+     "x": 0.875,
+     "y": 0.15000000000000002,
+     "width": 0.05,
+     "height": 0.1,
+     "coverage": 1,
+     "mouthMotion": 0,
+     "facing": 0,
+     "faceCentreX": 0.15
+    }
+   ],
+   "frameWidth": 1920,
+   "frameHeight": 1080
+  }
+ ]
+}

@@ -12,7 +12,9 @@
 // - the extract, `replaceAudio` (Clean Voice), pauses, the cut window and `detectShots`: done before this is called;
 // - `detectFaces`: its answer is the `faces` parameter. When it is `{ unavailable: true, reason }` (engine/faces.mjs:
 //   onnxruntime-node or the model did not load, the detector failed, the disk refused the frames) every shot is
-//   placed with no faces, so every shot is Fit, and `notes` carries one line saying so;
+//   placed with no faces. A shot with a usable stream panels reading keeps its panels layout from the read, planned
+//   with `faces: []` (what pipeline.ts passes for a shot the detector returned no entry for: a camera crop then
+//   centres on the camera, `game` needs no face); every other shot is Fit. `notes` carries one line saying which;
 // - `layoutOverrides` and `reconcileOverrides` (the clip editor's per-shot Layout choices): the skill has no editor,
 //   so no shot has an override (`applied.get(index)` is always undefined) and nothing is orphaned;
 // - `lookingRoom` (the editor's per-clip choice): always null, so LOOKING_ROOM (crop.mjs) applies;
@@ -25,14 +27,19 @@
 // - `trackEnabledFromEnv`, `trackDeadzoneFromEnv`, `trackMaxPanFromEnv`, `minSubjectCoverageFromEnv` and
 //   `minStackCopresenceFromEnv`: unset on the same worker, so each is its code default (TRACK_ENABLED below,
 //   TRACK_DEADZONE and TRACK_MAX_PAN in crop.mjs, MIN_SUBJECT_COVERAGE and MIN_STACK_COPRESENCE below);
-// - the stream panels callback (`input.panels`, `planPanelShots`, `samplesByShot`): the panel reading is Task A11's.
-//   What reaches this file is its result, `panels: { plans, placement }`: one `ShotPanels` plan per shot
-//   (panels-plan.ts `planPanelShots`) and panels-plan.ts's `panelPlacement`, used here exactly as pipeline.ts uses
-//   them. With no `panels`, no shot is placed from a reading, as in pipeline.ts with no callback;
+// - the stream panels callback (`input.panels`): the read itself is the agent's (tools/panels.mjs stores it in
+//   clips.json). What reaches this file is the stored read, `panels: { samples, startSec, cuts, gameZoom? }`
+//   (`samples` in SOURCE seconds as stored, `startSec` where the window starts in the source, `cuts` the window's
+//   snapped cuts), planned here as pipeline.ts plans it: `samplesByShot` through `sourceToClipSec`, then
+//   `planPanelShots` with `readingKept(undefined, mode)` for `keep`, and placed through `panelPlacement` (panels-plan.mjs).
+//   `panels: { plans, placement }` (one `ShotPanels` per shot and a `panelPlacement` stand-in) is accepted too, for
+//   a caller that planned them itself. A planner that throws costs the clip its layout, never the render (spec §6.7):
+//   no shot is placed from the read. With no `panels`, no shot is, as in pipeline.ts with no callback;
 // - `panelsGameZoom`, `onPanelsPlaced`, `clipId`, `projectId` and every log line.
 // Kept: the `layout` pin ("fit" pins every shot, the `series_film` genre's `forceFit`; "auto" otherwise), and
 // `subjectRule`, required as in pipeline.ts.
 import { countedFaces, planLayout, TRACK_DEADZONE, TRACK_MAX_PAN } from "./crop.mjs";
+import { panelPlacement, planPanelShots, readingKept, samplesByShot, sourceToClipSec } from "./panels-plan.mjs";
 
 /**
  * `trackEnabledFromEnv()`, RENDER_TRACK_ENABLED default on (render/config.ts).
@@ -141,12 +148,17 @@ export function layoutNameFor(kind) {
  */
 
 /**
- * The stream panel reading's result for this clip (Task A11): `plans`, one panels-plan.ts `ShotPanels` per shot
- * (`planPanelShots`), and `placement`, panels-plan.ts's `panelPlacement(plan, faces, frameWidth, frameHeight)`.
+ * The stream panel reading of this clip (Task A11), in one of two forms.
+ * - The stored read: `samples` (`PanelSample[]`, source seconds), `startSec` (the window's start in the source),
+ *   `cuts` (the window's snapped cuts, window seconds; default none) and `gameZoom` (default 1,
+ *   RENDER_PANELS_GAME_ZOOM): planned here.
+ * - Planned by the caller: `plans`, one panels-plan.mjs `ShotPanels` per shot (`planPanelShots`), and
+ *   `placement`, panels-plan.mjs's `panelPlacement(plan, faces, frameWidth, frameHeight)`.
  *
- * @typedef {{ plans: ({ mode: 'panels' | 'people' | 'game' | 'none' } & object)[],
- *             placement: (plan: object, faces: object[], frameWidth: number, frameHeight: number)
- *               => ({ placement: object, speaker: object | null } | null) }} PanelsPlan
+ * @typedef {{ samples: object[], startSec: number, cuts?: { start: number, end: number }[], gameZoom?: number | null }
+ *   | { plans: ({ mode: 'panels' | 'people' | 'game' | 'none' } & object)[],
+ *       placement: (plan: object, faces: object[], frameWidth: number, frameHeight: number)
+ *         => ({ placement: object, speaker: object | null } | null) }} PanelsPlan
  */
 
 const oneLine = (text) => String(text ?? "").split("\n")[0].trim();
@@ -157,27 +169,35 @@ const oneLine = (text) => String(text ?? "").split("\n")[0].trim();
  * `shots` are engine/shots.mjs's (`{ startSec, endSec }`, clip seconds). `faces` is engine/faces.mjs's
  * `detectShotFaces` answer: `{ frameWidth, frameHeight, shots: [{ shotIndex, faces }] }`, its `shots` array alone,
  * or `{ unavailable: true, reason }`. `frame` is the source frame the faces are normalised against (the detector's
- * `frameWidth`/`frameHeight`), `output` the frame every shot is scaled into (1080x1920). `subjectRule` is
+ * `frameWidth`/`frameHeight`); it defaults to the detection's own, and when both are given they must agree (a
+ * TypeError otherwise: boxes read against another frame place a crop in the wrong place). With the array form or
+ * `unavailable`, `frame` is required. `output` is the frame every shot is scaled into (1080x1920). `subjectRule` is
  * subject-rule.mjs's `resolveSubjectRule` answer, required as in pipeline.ts.
  *
- * Returns `placed` (one ShotPlan per shot, in order), `notes` (one line when the faces were unavailable, else
- * none), and pipeline.ts's two placement counts: `coverageDropped` (faces under the coverage floor) and
+ * Returns `placed` (one ShotPlan per shot, in order), `notes` (one line when the faces were unavailable, saying
+ * which shots went whole (Fit) and which kept the panels layout; else none), and pipeline.ts's two placement counts: `coverageDropped` (faces under the coverage floor) and
  * `stacksRefused` (pairs far enough apart to stack but not on screen together for MIN_STACK_COPRESENCE of the shot).
  *
- * @param {{ shots: { startSec: number, endSec: number }[], faces: object, frame: { width: number, height: number },
+ * @param {{ shots: { startSec: number, endSec: number }[], faces: object, frame?: { width: number, height: number },
  *           output: { width: number, height: number }, subjectRule: 'speaker' | 'presence',
  *           layout?: 'auto' | 'fit', panels?: PanelsPlan | null }} input
  * @returns {{ placed: ShotPlan[], notes: string[], coverageDropped: number, stacksRefused: number }}
  */
 export function planShots(input) {
-  const { shots, frame, output } = input;
+  const { shots, output } = input;
   if (input.subjectRule !== "speaker" && input.subjectRule !== "presence") {
     throw new TypeError(`planShots: subjectRule must be "speaker" or "presence", got ${input.subjectRule}`);
   }
   const unavailable = input.faces?.unavailable === true;
-  const notes = unavailable
-    ? [oneLine(input.faces.reason) ? `Faces unavailable, every shot is Fit: ${oneLine(input.faces.reason)}` : "Faces unavailable, every shot is Fit."]
-    : [];
+  const detectorFrame = unavailable || Array.isArray(input.faces) ? null : frameOf(input.faces);
+  if (input.frame != null && detectorFrame !== null && (input.frame.width !== detectorFrame.width || input.frame.height !== detectorFrame.height)) {
+    throw new TypeError(
+      `planShots: frame ${input.frame.width}x${input.frame.height} is not the detector's ${detectorFrame.width}x${detectorFrame.height}`,
+    );
+  }
+  const frame = input.frame ?? detectorFrame;
+  if (frame == null) throw new TypeError("planShots: frame is required unless the face detection carries frameWidth and frameHeight");
+  const notes = [];
   const detectedShots = unavailable ? [] : Array.isArray(input.faces) ? input.faces : (input.faces?.shots ?? []);
 
   const trackEnabled = TRACK_ENABLED;
@@ -200,12 +220,44 @@ export function planShots(input) {
   // of it. Whether a shot's override keeps its reading is `readingKept`'s
   // rule, here and in the planner's `keep`.
   //
-  // (Faces unavailable: every shot is Fit, so no reading is placed either.)
+  // (Faces unavailable: the planner still runs, every shot with no faces, as pipeline.ts runs it for a shot the
+  // detector returned no entry for; a shot it places keeps its panels layout, the others are Fit.)
   const forceFit = input.layout === "fit";
-  const panelPlans = input.panels != null && !forceFit && !unavailable ? input.panels.plans : null;
+  let panelPlans = null;
+  let placementOf = panelPlacement;
+  if (input.panels != null && !forceFit) {
+    if (Array.isArray(input.panels.plans)) {
+      panelPlans = input.panels.plans;
+      placementOf = input.panels.placement;
+    } else if (Array.isArray(input.panels.samples)) {
+      const { samples, startSec, gameZoom } = input.panels;
+      const cuts = input.panels.cuts ?? [];
+      if (!Number.isFinite(startSec)) throw new TypeError("planShots: panels.startSec (the window's start in the source) is required");
+      // Final review Important 2: a planner that throws costs the clip its layout, never its render (spec §6.7).
+      try {
+        panelPlans = planPanelShots({
+          samplesByShot: samplesByShot(samples, shots, (sourceSec) => sourceToClipSec(sourceSec, startSec, cuts)),
+          shots,
+          faces: shots.map((_, index) => facesByShot.get(index) ?? []),
+          frameWidth: frame.width,
+          frameHeight: frame.height,
+          output,
+          cuts,
+          gameZoom: gameZoom ?? 1,
+          keep: (_index, plan) => readingKept(undefined, plan.mode),
+        });
+      } catch {
+        panelPlans = null;
+      }
+    } else {
+      throw new TypeError("planShots: panels needs samples (and startSec) or plans and placement");
+    }
+  }
 
   let coverageDropped = 0;
   let stacksRefused = 0;
+  // The shots whose placement came from the panels reading (pipeline.ts counts them as `panelsUsed`).
+  const fromReading = [];
   const placed = shots.map((shot, index) => {
     const faces = facesByShot.get(index);
     const common = {
@@ -244,14 +296,17 @@ export function planShots(input) {
     if (panelPlans !== null) {
       const plan = panelPlans[index];
       try {
-        panelled = input.panels.placement(plan, common.faces, frame.width, frame.height);
+        panelled = placementOf(plan, common.faces, frame.width, frame.height);
       } catch {
         panelled = null;
       }
     }
     let base = first;
     // panels-plan.ts `readingKept(override, mode)` with no override: kept unless the reading is `none`.
-    if (panelled !== null && panelPlans[index]?.mode !== "none") base = panelled;
+    if (panelled !== null && readingKept(undefined, panelPlans[index]?.mode)) {
+      base = panelled;
+      fromReading.push(index);
+    }
     return {
       shotIndex: index,
       shot,
@@ -262,5 +317,31 @@ export function planShots(input) {
     };
   });
 
+  if (unavailable) notes.push(unavailableNote(input.faces.reason, shots.length, fromReading));
+
   return { placed, notes, coverageDropped, stacksRefused };
+}
+
+/** The detector's frame size, or null when the detection carries none. */
+function frameOf(faces) {
+  const width = faces?.frameWidth;
+  const height = faces?.frameHeight;
+  return Number.isFinite(width) && Number.isFinite(height) && width > 0 && height > 0 ? { width, height } : null;
+}
+
+/**
+ * The one note for faces that are unavailable. `fromReading` are the 0-based shot indexes placed from the panels
+ * reading; the note counts shots from 1, as a person does.
+ */
+function unavailableNote(reason, shotCount, fromReading) {
+  const whole = Array.from({ length: shotCount }, (_, i) => i).filter((i) => !fromReading.includes(i));
+  const numbers = (list) => `${list.length === 1 ? "shot" : "shots"} ${list.map((i) => i + 1).join(", ")}`;
+  const lead =
+    fromReading.length === 0
+      ? "Faces unavailable, every shot is Fit"
+      : whole.length === 0
+        ? "Faces unavailable, every shot keeps its panels layout from the read"
+        : `Faces unavailable, ${numbers(whole)} ${whole.length === 1 ? "is" : "are"} Fit and ${numbers(fromReading)} keep${fromReading.length === 1 ? "s" : ""} the panels layout from the read`;
+  const why = oneLine(reason);
+  return why ? `${lead}: ${why}` : `${lead}.`;
 }

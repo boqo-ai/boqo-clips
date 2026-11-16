@@ -1,0 +1,169 @@
+{
+ "cases": [
+  {
+   "name": "ten clips, six wanted",
+   "clips": [
+    {
+     "startSec": 0,
+     "endSec": 30
+    },
+    {
+     "startSec": 100,
+     "endSec": 131
+    },
+    {
+     "startSec": 200,
+     "endSec": 232
+    },
+    {
+     "startSec": 300,
+     "endSec": 333
+    },
+    {
+     "startSec": 400,
+     "endSec": 434
+    },
+    {
+     "startSec": 500,
+     "endSec": 535
+    },
+    {
+     "startSec": 600,
+     "endSec": 636
+    },
+    {
+     "startSec": 700,
+     "endSec": 737
+    },
+    {
+     "startSec": 800,
+     "endSec": 838
+    },
+    {
+     "startSec": 900,
+     "endSec": 939
+    }
+   ],
+   "count": 6
+  },
+  {
+   "name": "three clips",
+   "clips": [
+    {
+     "startSec": 10,
+     "endSec": 40
+    },
+    {
+     "startSec": 100,
+     "endSec": 160
+    },
+    {
+     "startSec": 200,
+     "endSec": 201
+    }
+   ],
+   "count": 6
+  },
+  {
+   "name": "a clip with no length is skipped",
+   "clips": [
+    {
+     "startSec": 10,
+     "endSec": 10
+    },
+    {
+     "startSec": 20,
+     "endSec": 50
+    },
+    {
+     "startSec": 60,
+     "endSec": 50
+    },
+    {
+     "startSec": 70,
+     "endSec": 90
+    }
+   ],
+   "count": 6
+  },
+  {
+   "name": "count zero",
+   "clips": [
+    {
+     "startSec": 10,
+     "endSec": 40
+    }
+   ],
+   "count": 0
+  },
+  {
+   "name": "a negative count",
+   "clips": [
+    {
+     "startSec": 10,
+     "endSec": 40
+    }
+   ],
+   "count": -3
+  },
+  {
+   "name": "no clips",
+   "clips": [],
+   "count": 6
+  },
+  {
+   "name": "a negative count of -1 over four clips takes none",
+   "clips": [
+    {
+     "startSec": 0,
+     "endSec": 10
+    },
+    {
+     "startSec": 20,
+     "endSec": 30
+    },
+    {
+     "startSec": 40,
+     "endSec": 50
+    },
+    {
+     "startSec": 60,
+     "endSec": 70
+    }
+   ],
+   "count": -1
+  },
+  {
+   "name": "fractional edges",
+   "clips": [
+    {
+     "startSec": 12.34,
+     "endSec": 55.67
+    },
+    {
+     "startSec": 0.1,
+     "endSec": 0.3
+    }
+   ],
+   "count": 2
+  },
+  {
+   "name": "the first only counts after the filter",
+   "clips": [
+    {
+     "startSec": 5,
+     "endSec": 5
+    },
+    {
+     "startSec": 8,
+     "endSec": 18
+    },
+    {
+     "startSec": 30,
+     "endSec": 60
+    }
+   ],
+   "count": 1
+  }
+ ]
+}

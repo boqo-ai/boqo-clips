@@ -103,12 +103,11 @@ test('a source narrower than 9:16 (720x1440): Fit with no face; with a face boqo
   assert.deepEqual(withFace.placed.map((p) => p.layout), golden('plan-shots').find((g) => g.name === c.name).placed.map((p) => p.layout));
 });
 
-test('faces unavailable: every shot Fit and one note line', () => {
+test('faces unavailable and no panels reading: every shot Fit and one note line', () => {
   const c = scenario('podcast 1920x1080');
-  const panels = { plans: c.shots.map(() => ({ mode: 'game' })), placement: () => ({ placement: { kind: 'track', path: { size: { width: 2, height: 2 }, x: [], y: [] } }, speaker: null }) };
   for (const reason of ['onnxruntime-node is not installed', 'the face detector failed: boom\n    at stack', '', undefined]) {
     const { placed, notes, coverageDropped, stacksRefused } = planShots({
-      shots: c.shots, faces: { unavailable: true, reason }, frame: c.frame, output: OUTPUT, subjectRule: 'speaker', panels,
+      shots: c.shots, faces: { unavailable: true, reason }, frame: c.frame, output: OUTPUT, subjectRule: 'speaker',
     });
     assert.equal(placed.length, c.shots.length);
     assert.ok(placed.every((p) => p.layout === 'fit' && p.placement.kind === 'fit' && p.speaker === null && p.faces === 0));
@@ -118,6 +117,23 @@ test('faces unavailable: every shot Fit and one note line', () => {
     assert.match(notes[0], /^Faces unavailable, every shot is Fit/);
     assert.equal(coverageDropped + stacksRefused, 0);
   }
+  const named = planShots({ shots: c.shots, faces: { unavailable: true, reason: 'onnxruntime-node is not installed' }, frame: c.frame, output: OUTPUT, subjectRule: 'speaker' });
+  assert.deepEqual(named.notes, ['Faces unavailable, every shot is Fit: onnxruntime-node is not installed']);
+  const bare = planShots({ shots: c.shots, faces: { unavailable: true }, frame: c.frame, output: OUTPUT, subjectRule: 'speaker' });
+  assert.deepEqual(bare.notes, ['Faces unavailable, every shot is Fit.']);
+});
+
+test('the frame defaults to the detection\'s own and must agree with it when both are given', () => {
+  const c = scenario('podcast 1920x1080');
+  const detection = { frameWidth: c.frame.width, frameHeight: c.frame.height, shots: c.faces };
+  const given = planShots({ shots: c.shots, faces: detection, frame: c.frame, output: c.output, subjectRule: c.subjectRule });
+  const defaulted = planShots({ shots: c.shots, faces: detection, output: c.output, subjectRule: c.subjectRule });
+  assert.deepEqual(defaulted, given);
+  assert.throws(() => planShots({ shots: c.shots, faces: detection, frame: { width: 1280, height: 720 }, output: c.output, subjectRule: c.subjectRule }), /not the detector's 1920x1080/);
+  // No frame anywhere: the array form and `unavailable` carry none.
+  assert.throws(() => planShots({ shots: c.shots, faces: c.faces, output: c.output, subjectRule: c.subjectRule }), /frame is required/);
+  assert.throws(() => planShots({ shots: c.shots, faces: { unavailable: true, reason: 'x' }, output: c.output, subjectRule: c.subjectRule }), /frame is required/);
+  assert.equal(planShots({ shots: c.shots, faces: c.faces, frame: c.frame, output: c.output, subjectRule: c.subjectRule }).placed.length, c.shots.length);
 });
 
 test('faces available: no note; the detection object and its shots array place the same', () => {

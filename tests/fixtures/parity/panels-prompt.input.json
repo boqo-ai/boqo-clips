@@ -1,0 +1,1030 @@
+{
+ "reads": [
+  {
+   "name": "three frames, words",
+   "frames": [
+    {
+     "sourceSec": 100.5
+    },
+    {
+     "sourceSec": 103.5
+    },
+    {
+     "sourceSec": 106.504
+    }
+   ],
+   "words": "[100.30 s] alpha beta\n[101.20 s] gamma"
+  },
+  {
+   "name": "one frame, no words",
+   "frames": [
+    {
+     "sourceSec": 0
+    }
+   ],
+   "words": ""
+  },
+  {
+   "name": "words with only whitespace",
+   "frames": [
+    {
+     "sourceSec": 12.345
+    }
+   ],
+   "words": "  \n "
+  },
+  {
+   "name": "twelve frames",
+   "frames": [
+    {
+     "sourceSec": 1000
+    },
+    {
+     "sourceSec": 1003.001
+    },
+    {
+     "sourceSec": 1006.002
+    },
+    {
+     "sourceSec": 1009.003
+    },
+    {
+     "sourceSec": 1012.004
+    },
+    {
+     "sourceSec": 1015.005
+    },
+    {
+     "sourceSec": 1018.006
+    },
+    {
+     "sourceSec": 1021.007
+    },
+    {
+     "sourceSec": 1024.008
+    },
+    {
+     "sourceSec": 1027.009
+    },
+    {
+     "sourceSec": 1030.01
+    },
+    {
+     "sourceSec": 1033.011
+    }
+   ],
+   "words": "x"
+  }
+ ],
+ "probes": [
+  {
+   "frames": 6
+  },
+  {
+   "frames": 1
+  },
+  {
+   "frames": 0
+  }
+ ],
+ "words": [
+  {
+   "name": "a single clip with pauses and a 14-word wrap",
+   "words": [
+    {
+     "word": "alpha",
+     "start": 100,
+     "end": 100.25
+    },
+    {
+     "word": "beta",
+     "start": 100.3,
+     "end": 100.55
+    },
+    {
+     "word": "gamma",
+     "start": 100.6,
+     "end": 100.85
+    },
+    {
+     "word": "delta",
+     "start": 100.9,
+     "end": 101.15
+    },
+    {
+     "word": "epsilon",
+     "start": 101.2,
+     "end": 101.45
+    },
+    {
+     "word": "alpha",
+     "start": 101.5,
+     "end": 101.75
+    },
+    {
+     "word": "beta",
+     "start": 101.8,
+     "end": 102.05
+    },
+    {
+     "word": "gamma",
+     "start": 102.1,
+     "end": 102.35
+    },
+    {
+     "word": "delta",
+     "start": 102.4,
+     "end": 102.65
+    },
+    {
+     "word": "epsilon",
+     "start": 102.7,
+     "end": 102.95
+    },
+    {
+     "word": "alpha",
+     "start": 103,
+     "end": 103.25
+    },
+    {
+     "word": "beta",
+     "start": 103.3,
+     "end": 103.55
+    },
+    {
+     "word": "gamma",
+     "start": 103.6,
+     "end": 103.85
+    },
+    {
+     "word": "delta",
+     "start": 103.9,
+     "end": 104.15
+    },
+    {
+     "word": "epsilon",
+     "start": 104.2,
+     "end": 104.45
+    },
+    {
+     "word": "alpha",
+     "start": 104.5,
+     "end": 104.75
+    },
+    {
+     "word": "beta",
+     "start": 104.8,
+     "end": 105.05
+    },
+    {
+     "word": "gamma",
+     "start": 105.1,
+     "end": 105.35
+    },
+    {
+     "word": "delta",
+     "start": 105.4,
+     "end": 105.65
+    },
+    {
+     "word": "epsilon",
+     "start": 105.7,
+     "end": 105.95
+    },
+    {
+     "word": "alpha",
+     "start": 107,
+     "end": 107.25
+    },
+    {
+     "word": "beta",
+     "start": 106.3,
+     "end": 106.55
+    },
+    {
+     "word": "gamma",
+     "start": 106.6,
+     "end": 106.85
+    },
+    {
+     "word": "delta",
+     "start": 106.9,
+     "end": 107.15
+    },
+    {
+     "word": "epsilon",
+     "start": 107.2,
+     "end": 107.45
+    },
+    {
+     "word": "alpha",
+     "start": 107.5,
+     "end": 107.75
+    },
+    {
+     "word": "beta",
+     "start": 107.8,
+     "end": 108.05
+    },
+    {
+     "word": "gamma",
+     "start": 108.1,
+     "end": 108.35
+    },
+    {
+     "word": "delta",
+     "start": 108.4,
+     "end": 108.65
+    },
+    {
+     "word": "epsilon",
+     "start": 108.7,
+     "end": 108.95
+    },
+    {
+     "word": "alpha",
+     "start": 109,
+     "end": 109.25
+    },
+    {
+     "word": "beta",
+     "start": 109.3,
+     "end": 109.55
+    },
+    {
+     "word": "gamma",
+     "start": 109.6,
+     "end": 109.85
+    },
+    {
+     "word": "delta",
+     "start": 109.9,
+     "end": 110.15
+    },
+    {
+     "word": "epsilon",
+     "start": 110.2,
+     "end": 110.45
+    },
+    {
+     "word": "alpha",
+     "start": 110.5,
+     "end": 110.75
+    },
+    {
+     "word": "beta",
+     "start": 110.8,
+     "end": 111.05
+    },
+    {
+     "word": "gamma",
+     "start": 111.1,
+     "end": 111.35
+    },
+    {
+     "word": "delta",
+     "start": 111.4,
+     "end": 111.65
+    },
+    {
+     "word": "epsilon",
+     "start": 111.7,
+     "end": 111.95
+    }
+   ],
+   "ctx": {
+    "startSec": 100,
+    "cuts": [],
+    "shots": [
+     {
+      "startSec": 0,
+      "endSec": 12
+     }
+    ]
+   }
+  },
+  {
+   "name": "a cut in the window moves the end",
+   "words": [
+    {
+     "word": "alpha",
+     "start": 100,
+     "end": 100.25
+    },
+    {
+     "word": "beta",
+     "start": 100.3,
+     "end": 100.55
+    },
+    {
+     "word": "gamma",
+     "start": 100.6,
+     "end": 100.85
+    },
+    {
+     "word": "delta",
+     "start": 100.9,
+     "end": 101.15
+    },
+    {
+     "word": "epsilon",
+     "start": 101.2,
+     "end": 101.45
+    },
+    {
+     "word": "alpha",
+     "start": 101.5,
+     "end": 101.75
+    },
+    {
+     "word": "beta",
+     "start": 101.8,
+     "end": 102.05
+    },
+    {
+     "word": "gamma",
+     "start": 102.1,
+     "end": 102.35
+    },
+    {
+     "word": "delta",
+     "start": 102.4,
+     "end": 102.65
+    },
+    {
+     "word": "epsilon",
+     "start": 102.7,
+     "end": 102.95
+    },
+    {
+     "word": "alpha",
+     "start": 103,
+     "end": 103.25
+    },
+    {
+     "word": "beta",
+     "start": 103.3,
+     "end": 103.55
+    },
+    {
+     "word": "gamma",
+     "start": 103.6,
+     "end": 103.85
+    },
+    {
+     "word": "delta",
+     "start": 103.9,
+     "end": 104.15
+    },
+    {
+     "word": "epsilon",
+     "start": 104.2,
+     "end": 104.45
+    },
+    {
+     "word": "alpha",
+     "start": 104.5,
+     "end": 104.75
+    },
+    {
+     "word": "beta",
+     "start": 104.8,
+     "end": 105.05
+    },
+    {
+     "word": "gamma",
+     "start": 105.1,
+     "end": 105.35
+    },
+    {
+     "word": "delta",
+     "start": 105.4,
+     "end": 105.65
+    },
+    {
+     "word": "epsilon",
+     "start": 105.7,
+     "end": 105.95
+    },
+    {
+     "word": "alpha",
+     "start": 107,
+     "end": 107.25
+    },
+    {
+     "word": "beta",
+     "start": 106.3,
+     "end": 106.55
+    },
+    {
+     "word": "gamma",
+     "start": 106.6,
+     "end": 106.85
+    },
+    {
+     "word": "delta",
+     "start": 106.9,
+     "end": 107.15
+    },
+    {
+     "word": "epsilon",
+     "start": 107.2,
+     "end": 107.45
+    },
+    {
+     "word": "alpha",
+     "start": 107.5,
+     "end": 107.75
+    },
+    {
+     "word": "beta",
+     "start": 107.8,
+     "end": 108.05
+    },
+    {
+     "word": "gamma",
+     "start": 108.1,
+     "end": 108.35
+    },
+    {
+     "word": "delta",
+     "start": 108.4,
+     "end": 108.65
+    },
+    {
+     "word": "epsilon",
+     "start": 108.7,
+     "end": 108.95
+    },
+    {
+     "word": "alpha",
+     "start": 109,
+     "end": 109.25
+    },
+    {
+     "word": "beta",
+     "start": 109.3,
+     "end": 109.55
+    },
+    {
+     "word": "gamma",
+     "start": 109.6,
+     "end": 109.85
+    },
+    {
+     "word": "delta",
+     "start": 109.9,
+     "end": 110.15
+    },
+    {
+     "word": "epsilon",
+     "start": 110.2,
+     "end": 110.45
+    },
+    {
+     "word": "alpha",
+     "start": 110.5,
+     "end": 110.75
+    },
+    {
+     "word": "beta",
+     "start": 110.8,
+     "end": 111.05
+    },
+    {
+     "word": "gamma",
+     "start": 111.1,
+     "end": 111.35
+    },
+    {
+     "word": "delta",
+     "start": 111.4,
+     "end": 111.65
+    },
+    {
+     "word": "epsilon",
+     "start": 111.7,
+     "end": 111.95
+    }
+   ],
+   "ctx": {
+    "startSec": 100,
+    "cuts": [
+     {
+      "start": 2,
+      "end": 4
+     }
+    ],
+    "shots": [
+     {
+      "startSec": 0,
+      "endSec": 8
+     }
+    ]
+   }
+  },
+  {
+   "name": "a span",
+   "words": [
+    {
+     "word": "alpha",
+     "start": 100,
+     "end": 100.25
+    },
+    {
+     "word": "beta",
+     "start": 100.3,
+     "end": 100.55
+    },
+    {
+     "word": "gamma",
+     "start": 100.6,
+     "end": 100.85
+    },
+    {
+     "word": "delta",
+     "start": 100.9,
+     "end": 101.15
+    },
+    {
+     "word": "epsilon",
+     "start": 101.2,
+     "end": 101.45
+    },
+    {
+     "word": "alpha",
+     "start": 101.5,
+     "end": 101.75
+    },
+    {
+     "word": "beta",
+     "start": 101.8,
+     "end": 102.05
+    },
+    {
+     "word": "gamma",
+     "start": 102.1,
+     "end": 102.35
+    },
+    {
+     "word": "delta",
+     "start": 102.4,
+     "end": 102.65
+    },
+    {
+     "word": "epsilon",
+     "start": 102.7,
+     "end": 102.95
+    },
+    {
+     "word": "alpha",
+     "start": 103,
+     "end": 103.25
+    },
+    {
+     "word": "beta",
+     "start": 103.3,
+     "end": 103.55
+    },
+    {
+     "word": "gamma",
+     "start": 103.6,
+     "end": 103.85
+    },
+    {
+     "word": "delta",
+     "start": 103.9,
+     "end": 104.15
+    },
+    {
+     "word": "epsilon",
+     "start": 104.2,
+     "end": 104.45
+    },
+    {
+     "word": "alpha",
+     "start": 104.5,
+     "end": 104.75
+    },
+    {
+     "word": "beta",
+     "start": 104.8,
+     "end": 105.05
+    },
+    {
+     "word": "gamma",
+     "start": 105.1,
+     "end": 105.35
+    },
+    {
+     "word": "delta",
+     "start": 105.4,
+     "end": 105.65
+    },
+    {
+     "word": "epsilon",
+     "start": 105.7,
+     "end": 105.95
+    },
+    {
+     "word": "alpha",
+     "start": 107,
+     "end": 107.25
+    },
+    {
+     "word": "beta",
+     "start": 106.3,
+     "end": 106.55
+    },
+    {
+     "word": "gamma",
+     "start": 106.6,
+     "end": 106.85
+    },
+    {
+     "word": "delta",
+     "start": 106.9,
+     "end": 107.15
+    },
+    {
+     "word": "epsilon",
+     "start": 107.2,
+     "end": 107.45
+    },
+    {
+     "word": "alpha",
+     "start": 107.5,
+     "end": 107.75
+    },
+    {
+     "word": "beta",
+     "start": 107.8,
+     "end": 108.05
+    },
+    {
+     "word": "gamma",
+     "start": 108.1,
+     "end": 108.35
+    },
+    {
+     "word": "delta",
+     "start": 108.4,
+     "end": 108.65
+    },
+    {
+     "word": "epsilon",
+     "start": 108.7,
+     "end": 108.95
+    },
+    {
+     "word": "alpha",
+     "start": 109,
+     "end": 109.25
+    },
+    {
+     "word": "beta",
+     "start": 109.3,
+     "end": 109.55
+    },
+    {
+     "word": "gamma",
+     "start": 109.6,
+     "end": 109.85
+    },
+    {
+     "word": "delta",
+     "start": 109.9,
+     "end": 110.15
+    },
+    {
+     "word": "epsilon",
+     "start": 110.2,
+     "end": 110.45
+    },
+    {
+     "word": "alpha",
+     "start": 110.5,
+     "end": 110.75
+    },
+    {
+     "word": "beta",
+     "start": 110.8,
+     "end": 111.05
+    },
+    {
+     "word": "gamma",
+     "start": 111.1,
+     "end": 111.35
+    },
+    {
+     "word": "delta",
+     "start": 111.4,
+     "end": 111.65
+    },
+    {
+     "word": "epsilon",
+     "start": 111.7,
+     "end": 111.95
+    }
+   ],
+   "ctx": {
+    "startSec": 100,
+    "cuts": [],
+    "shots": [
+     {
+      "startSec": 0,
+      "endSec": 12
+     }
+    ]
+   },
+   "span": {
+    "fromSec": 103,
+    "toSec": 106
+   }
+  },
+  {
+   "name": "a gap of 0.65 s starts a line",
+   "words": [
+    {
+     "word": "one",
+     "start": 100,
+     "end": 100.2
+    },
+    {
+     "word": "two",
+     "start": 100.85,
+     "end": 101
+    },
+    {
+     "word": "three",
+     "start": 101.2,
+     "end": 101.4
+    },
+    {
+     "word": "four",
+     "start": 101.95,
+     "end": 102.1
+    }
+   ],
+   "ctx": {
+    "startSec": 100,
+    "cuts": [],
+    "shots": [
+     {
+      "startSec": 0,
+      "endSec": 5
+     }
+    ]
+   }
+  },
+  {
+   "name": "a gap of exactly 0.6 s does not",
+   "words": [
+    {
+     "word": "one",
+     "start": 100,
+     "end": 100.5
+    },
+    {
+     "word": "two",
+     "start": 101.1,
+     "end": 101.5
+    }
+   ],
+   "ctx": {
+    "startSec": 100,
+    "cuts": [],
+    "shots": [
+     {
+      "startSec": 0,
+      "endSec": 5
+     }
+    ]
+   }
+  },
+  {
+   "name": "no words",
+   "words": [],
+   "ctx": {
+    "startSec": 0,
+    "cuts": [],
+    "shots": [
+     {
+      "startSec": 0,
+      "endSec": 5
+     }
+    ]
+   }
+  },
+  {
+   "name": "no shots",
+   "words": [
+    {
+     "word": "alpha",
+     "start": 100,
+     "end": 100.25
+    },
+    {
+     "word": "beta",
+     "start": 100.3,
+     "end": 100.55
+    },
+    {
+     "word": "gamma",
+     "start": 100.6,
+     "end": 100.85
+    },
+    {
+     "word": "delta",
+     "start": 100.9,
+     "end": 101.15
+    },
+    {
+     "word": "epsilon",
+     "start": 101.2,
+     "end": 101.45
+    },
+    {
+     "word": "alpha",
+     "start": 101.5,
+     "end": 101.75
+    },
+    {
+     "word": "beta",
+     "start": 101.8,
+     "end": 102.05
+    },
+    {
+     "word": "gamma",
+     "start": 102.1,
+     "end": 102.35
+    },
+    {
+     "word": "delta",
+     "start": 102.4,
+     "end": 102.65
+    },
+    {
+     "word": "epsilon",
+     "start": 102.7,
+     "end": 102.95
+    },
+    {
+     "word": "alpha",
+     "start": 103,
+     "end": 103.25
+    },
+    {
+     "word": "beta",
+     "start": 103.3,
+     "end": 103.55
+    },
+    {
+     "word": "gamma",
+     "start": 103.6,
+     "end": 103.85
+    },
+    {
+     "word": "delta",
+     "start": 103.9,
+     "end": 104.15
+    },
+    {
+     "word": "epsilon",
+     "start": 104.2,
+     "end": 104.45
+    },
+    {
+     "word": "alpha",
+     "start": 104.5,
+     "end": 104.75
+    },
+    {
+     "word": "beta",
+     "start": 104.8,
+     "end": 105.05
+    },
+    {
+     "word": "gamma",
+     "start": 105.1,
+     "end": 105.35
+    },
+    {
+     "word": "delta",
+     "start": 105.4,
+     "end": 105.65
+    },
+    {
+     "word": "epsilon",
+     "start": 105.7,
+     "end": 105.95
+    },
+    {
+     "word": "alpha",
+     "start": 107,
+     "end": 107.25
+    },
+    {
+     "word": "beta",
+     "start": 106.3,
+     "end": 106.55
+    },
+    {
+     "word": "gamma",
+     "start": 106.6,
+     "end": 106.85
+    },
+    {
+     "word": "delta",
+     "start": 106.9,
+     "end": 107.15
+    },
+    {
+     "word": "epsilon",
+     "start": 107.2,
+     "end": 107.45
+    },
+    {
+     "word": "alpha",
+     "start": 107.5,
+     "end": 107.75
+    },
+    {
+     "word": "beta",
+     "start": 107.8,
+     "end": 108.05
+    },
+    {
+     "word": "gamma",
+     "start": 108.1,
+     "end": 108.35
+    },
+    {
+     "word": "delta",
+     "start": 108.4,
+     "end": 108.65
+    },
+    {
+     "word": "epsilon",
+     "start": 108.7,
+     "end": 108.95
+    },
+    {
+     "word": "alpha",
+     "start": 109,
+     "end": 109.25
+    },
+    {
+     "word": "beta",
+     "start": 109.3,
+     "end": 109.55
+    },
+    {
+     "word": "gamma",
+     "start": 109.6,
+     "end": 109.85
+    },
+    {
+     "word": "delta",
+     "start": 109.9,
+     "end": 110.15
+    },
+    {
+     "word": "epsilon",
+     "start": 110.2,
+     "end": 110.45
+    },
+    {
+     "word": "alpha",
+     "start": 110.5,
+     "end": 110.75
+    },
+    {
+     "word": "beta",
+     "start": 110.8,
+     "end": 111.05
+    },
+    {
+     "word": "gamma",
+     "start": 111.1,
+     "end": 111.35
+    },
+    {
+     "word": "delta",
+     "start": 111.4,
+     "end": 111.65
+    },
+    {
+     "word": "epsilon",
+     "start": 111.7,
+     "end": 111.95
+    }
+   ],
+   "ctx": {
+    "startSec": 100,
+    "cuts": [],
+    "shots": []
+   }
+  }
+ ]
+}

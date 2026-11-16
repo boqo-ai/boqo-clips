@@ -80,14 +80,18 @@ local file, below.
       ```
       `the words file has no words`: whisper heard no speech. Tell the person, and stop.
 4. **Pick.** Read `select.md`, then `<run>/transcript.md` one part at a time (`grep -n '^## Part'
-   "<run>/transcript.md"` gives each part's first line), and write `<run>/picks.json`. For a pick's edges, the words
-   near a time:
+   "<run>/transcript.md"` gives each part's first line), and write `<run>/picks.json`. Every edge is set on a quoted
+   phrase (`select.md` → How to read):
+   ```sh
+   node "$HOME/.boqo-clips/tools/transcript.mjs" --words "<run>/words.json" --find "<3 to 6 words>" --near <seconds>
+   ```
+   gives `{"s", "e", "match", "score"}`: the seconds of the phrase's first word's start and last word's end on the
+   video's timeline, found within 60 s of `--near` (its line's stamp, `[12:34]` is 754), and the words it matched.
+   `{"error": "phrase not found near …"}`: read the words near that time,
    ```sh
    node "$HOME/.boqo-clips/tools/transcript.mjs" --words "<run>/words.json" --around <seconds>
    ```
-   gives `{"lines": ["[m:ss] text (s-e)", …]}` for 30 s either side; each line's `(s-e)` are the seconds of its
-   first word's start and its last word's end on the video's timeline, the numbers to set edges from
-   (`select.md` → How to read).
+   (`{"lines": ["[m:ss] text (s-e)", …]}` for 30 s either side), and quote again from them.
 5. **Check.**
    ```sh
    node "$HOME/.boqo-clips/tools/picks-check.mjs" "<run>/picks.json" --duration <duration> --words "<run>/words.json" \
@@ -96,8 +100,8 @@ local file, below.
    `<duration>` is step 2's. Read `<run>/checked.json`.
    - `"ok": false`: fix each pick its `errors` name in `picks.json`, and check again.
    - `"ok": true`: every pick is snapped to whole words and carries `moved: {s, e}`, how far each edge moved. An edge
-     that moved 1 s or more landed somewhere you did not choose: read the words there (step 4's `--around`), set
-     that edge in `picks.json` yourself, and check again, once.
+     set from `--find` moves 0.05 s. One that moved more than 0.1 s landed somewhere you did not choose: find its
+     phrase again (step 4), set that edge in `picks.json`, and check again, once.
    - Other lengths only on the person's ask ("30-second clips": `--min 25 --max 35`), within 15 to 90 s. A video
      under 3 minutes: `--count-min 1` (`select.md` → How many).
 6. **Sections**, in the background (Rules):
@@ -143,13 +147,13 @@ The cleanup deletes only what the run made. Never move, change or delete the per
 
 ## Redo one clip
 
-"Clip 2 should start earlier", "another title": change only that pick in `picks.json` and check the whole set again
-(step 5). Write that one checked pick, as a one-item array, to `<run>/redo-picks.json`. Run step 6 with
-`--picks "<run>/redo-picks.json"` and its line going to `<run>/redo-sections.json`, then step 7 with
+"Clip 2 should start earlier", "another title": change only that pick in `picks.json` (a new edge by step 4's `--find`)
+and check the whole set again (step 5). Write that one checked pick, as a one-item array, to `<run>/redo-picks.json`.
+Run step 6 with `--picks "<run>/redo-picks.json"` and its line going to `<run>/redo-sections.json`, then step 7 with
 `--sections "<run>/redo-sections.json" --picks "<run>/redo-picks.json" --out "<run>/redo"`. Move
-`<run>/redo/clip-01.mp4` over `<run>/out/clip-<k>.mp4` (`k` with two digits: `02`). Then delete
-`<run>/redo-picks.json`, `<run>/redo-sections.json` and the `<run>/redo` folder, and run step 8's cleanup. A local
-file skips step 6 and renders with `--src`.
+`<run>/redo/clip-01.mp4` over `<run>/out/clip-<k>.mp4` (`k` with two digits: `02`). Then delete `<run>/redo-picks.json`,
+`<run>/redo-sections.json` and the `<run>/redo` folder, and run step 8's cleanup. A local file skips step 6 and renders
+with `--src`.
 
 ## Red flags
 
@@ -158,7 +162,8 @@ file skips step 6 and renders with `--src`.
 | "No captions: I'll download the video and run whisper" | Ask first, with the time it takes (Rules) |
 | "The person said 'nice', so I'll post them" | Only the rule posts. With `ask`, a post needs a yes to posting |
 | "I'll download the whole video, it's simpler" | Sections first. `fetch.mjs` falls back to the whole video by itself |
-| "picks-check moved an edge 1.4 s, close enough" | 1 s or more: look at the words there and set it yourself |
+| "The opening is mid-line, I'll estimate where it falls" | Quote its first words and `--find` them |
+| "picks-check moved an edge 0.4 s, close enough" | More than 0.1 s: find its phrase again and set it |
 | "A ▲ line, so it's a clip" | ▲ is evidence, not an order (`select.md`) |
 | "Ten clips look generous" | One per ~6 minutes, 3 to 10, and fewer when fewer pass `select.md` |
 | "The tool failed, I'll write my own ffmpeg line" | Say the error and stop that step |

@@ -38,13 +38,14 @@ fill the count with weak ones. Picks never overlap.
    line; then read the next part. Several candidates in a part is normal.
 2. **Rank,** after the last part: the strongest opening line and the clearest payoff win. Keep `n`. Spread them over
    the video only to break a tie.
-3. **Set the edges** from the words near each one (SKILL.md → The run, step 4, `--around`): `s` a little inside the
-   opening word (its start + 0.05), `e` a little inside the payoff's last word (its end − 0.05). A line's `(s-e)` are
-   its first word's start and its last word's end, so a pick that opens at a line's start takes that line's `s`
-   + 0.05, and one that ends at a line's end takes its `e` − 0.05. An opening in the middle of a line: estimate its
-   time from where its words fall in the line's span. `picks-check.mjs` then moves each edge out to that word's
-   boundary, and says how far (`moved`). An edge set exactly on a boundary can take in the neighbouring word ("and",
-   "but") instead.
+3. **Set the edges on found words** (SKILL.md → The run, step 4, `--find`). Quote the first 3 to 6 words of the
+   opening and the last 3 to 6 words of the payoff, as the transcript writes them, and find each near its stamp. The
+   pick's `s` is the opening's `s` + 0.05 and its `e` the payoff's `e` − 0.05: a little inside the word, so
+   `picks-check.mjs` moves each edge out to that word's boundary (an edge set exactly on a boundary can take in the
+   neighbouring word, "and" or "but", instead). `match` must start on your first word and end on your last. When it
+   does not, or the phrase is not found, read the words there (`--around`) and quote again. Never set an edge from a
+   line's `(s-e)` or from where a word seems to fall in a line: words do not spread evenly over a line, and an
+   estimate lands a word or two off.
 
 ## Titles and hooks
 

@@ -20,6 +20,8 @@ export const SHARED = [
   'tools/select-request.mjs',
   // The selection check and record; engine/clips-record.mjs is under engine/ already.
   'tools/select-check.mjs',
+  // The order of the clips and the chat summary; engine/order.mjs is under engine/ already.
+  'tools/clips.mjs',
   // The parity harness (engine/boqo/ is already under engine/). Files, not
   // scripts/parity/: boqo-sniper keeps its own cases in scripts/parity/cases/.
   'scripts/parity/golden.mjs',

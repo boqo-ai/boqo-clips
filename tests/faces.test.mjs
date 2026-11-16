@@ -4,6 +4,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -77,13 +78,13 @@ function patternFrame(height, width) {
 
 /**
  * A fake ffmpeg for shot_frames: the one-pass stream is `total` frames (frame i filled with byte i % 256, or
- * `fill(i)`) then `extraBytes` of a partial frame; a call writes the part its `select='gte(n,A)'` and `-frames:v K`
+ * `fill(i)`) then `extraBytes` of a partial frame; a call writes the part its `select='gte(pts,A)'` and `-frames:v K`
  * ask for, to its output path (the last argument). Returns whether the call reached the stream's end, where a
  * failing ffmpeg fails: a call cut by -frames:v before that point exits cleanly.
  */
 function chunkedFfmpeg({ frameSize, total, extraBytes = 0, fill = (i) => i % 256 }) {
   return async (args) => {
-    const first = Number(/select='gte\(n,(\d+)\)'/.exec(args[args.indexOf('-vf') + 1])?.[1] ?? 0);
+    const first = Number(/select='gte\(pts,(\d+)\)'/.exec(args[args.indexOf('-vf') + 1])?.[1] ?? 0);
     const cap = args.includes('-frames:v') ? Number(args[args.indexOf('-frames:v') + 1]) : Infinity;
     const last = Math.min(total, first + cap);
     const n = Math.max(0, last - first);
@@ -152,10 +153,17 @@ test('shot_frames: the same ffmpeg argv, whole frames only, the failure message 
       const base = df.shot_frames_command(c.video, c.start, c.end, c.width, c.height, c.count).argv;
       const ffmpeg = chunkedFfmpeg({ frameSize: scaledSize(c.width, c.height), total: c.stdoutFrames, extraBytes: c.extraBytes ?? 0 });
       const exec = async (command, args) => {
-        // each call is the one-pass argv with only the chunk's select and -frames:v added, writing to a file
+        // each call is the one-pass argv with only -frames:v added, writing to a file; a later chunk (and only a
+        // later one) also adds its select and -fps_mode passthrough
         const vf = args[args.indexOf('-vf') + 1];
-        const plain = args.filter((a, i) => a !== '-frames:v' && args[i - 1] !== '-frames:v').slice(0, -1);
-        plain[plain.indexOf(vf)] = vf.replace(/select='gte\(n,\d+\)',/, '');
+        const later = /select='gte\(pts,[1-9]\d*\)',/.test(vf);
+        assert.equal(args.includes('-fps_mode'), later);
+        if (later) assert.equal(args[args.indexOf('-fps_mode') + 1], 'passthrough');
+        assert.ok(!/select=/.test(vf) || later, vf);
+        const flags = ['-frames:v', '-fps_mode'];
+        const plain = args.filter((a, i) => !flags.includes(a) && !flags.includes(args[i - 1])).slice(0, -1);
+        if (later) assert.ok(vf.includes(`,trim=duration=${base[base.indexOf('-t') + 1]},select=`), vf);
+        plain[plain.indexOf(vf)] = vf.replace(/trim=duration=[^,]+,select='gte\(pts,\d+\)',/, '');
         assert.deepEqual(['ffmpeg', ...plain, '-'], base);
         const reachedEnd = await ffmpeg(args);
         if (c.returncode && reachedEnd) throw Object.assign(new Error(`ffmpeg exited with ${c.returncode}`), { stderr: '' });
@@ -383,31 +391,74 @@ const run = (command, args) =>
   );
 const ffmpegPresent = await run('ffmpeg', ['-version']).then(() => true, () => false);
 
-test('real ffmpeg: a shot sampled in chunks is byte for byte the one-pass sampling', { skip: !ffmpegPresent && 'no ffmpeg' }, async () => {
+/** md5 of each `frameSize` frame in `buf`, in order. */
+const frameHashes = (buf, frameSize) => {
+  const out = [];
+  for (let k = 0; k + frameSize <= buf.length; k += frameSize) out.push(createHash('md5').update(buf.subarray(k, k + frameSize)).digest('hex'));
+  return out;
+};
+
+test('real ffmpeg: a shot sampled in chunks is frame for frame the one-pass sampling, with audio, below zero, video late', { skip: !ffmpegPresent && 'no ffmpeg' }, async () => {
   const dir = mkdtempSync(join(tmpdir(), 'boqo-faces-chunks-'));
   try {
-    const video = join(dir, 'b frames.mp4');
-    await run('ffmpeg', ['-v', 'error', '-y', '-f', 'lavfi', '-i', 'testsrc2=size=160x90:rate=30000/1001', '-t', '12',
-      '-c:v', 'libx264', '-bf', '3', '-g', '48', '-pix_fmt', 'yuv420p', video]);
-    for (const [start, end, count, chunk_frames] of [[0.73, 11.1, 23, 2], [3, 9, 12, 5], [0, 12, 30, 1]]) {
+    const plain = join(dir, 'b frames.mp4');
+    const withAudio = join(dir, 'with audio.mp4');
+    const cut = join(dir, 'cut.mp4');
+    const late = join(dir, 'late.mp4');
+    const src = ['-f', 'lavfi', '-i', 'testsrc2=size=160x90:rate=30000/1001', '-t', '24'];
+    const h264 = ['-c:v', 'libx264', '-bf', '3', '-g', '48', '-pix_fmt', 'yuv420p'];
+    await run('ffmpeg', ['-v', 'error', '-y', ...src, ...h264, plain]);
+    // A second stream is what made ffmpeg's default output mode constant-rate (a chunk then came out as copies of
+    // its first frame); hosted's windows all carry the source's audio.
+    await run('ffmpeg', ['-v', 'error', '-y', ...src, '-f', 'lavfi', '-i', 'sine=frequency=440:duration=24', ...h264, '-c:a', 'aac', '-shortest', withAudio]);
+    // Cut the way hosted's extractArgs cuts a window (`-ss -to -i -c copy`): the cut opens on the keyframe before
+    // 5.3 s, so its first packets are stamped below zero, as the E2 gate's real windows were (-3.52 s).
+    await run('ffmpeg', ['-v', 'error', '-y', '-ss', '5.3', '-to', '21.9', '-i', withAudio, '-c', 'copy', cut]);
+    // Video starting 1.5 s after the audio: the one-pass output opens with copies of its first frame.
+    await run('ffmpeg', ['-v', 'error', '-y', '-itsoffset', '1.5', '-i', plain, '-f', 'lavfi', '-i', 'sine=duration=24', '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', late]);
+
+    const firstPts = async (file) =>
+      Number((await run('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'packet=pts_time', '-of', 'csv=p=0', '-read_intervals', '%+#1', file])).stdout.trim().split(/\s+/)[0]);
+    const streams = async (file) =>
+      (await run('ffprobe', ['-v', 'error', '-show_entries', 'stream=codec_type', '-of', 'csv=p=0', file])).stdout.trim().split(/\s+/).sort();
+    assert.ok((await firstPts(cut)) < 0, 'the stream-copied cut starts below zero');
+    for (const f of [withAudio, cut, late]) assert.deepEqual(await streams(f), ['audio', 'video'], f);
+
+    const frameSize = 160 * 90 * 3;
+    const cases = [
+      // [video, start, end, count, chunk_frames]
+      [plain, 0.73, 11.1, 23, 2], [plain, 3, 9, 12, 5], [plain, 0, 12, 30, 1],
+      [withAudio, 0, 16.4, 33, 5], [withAudio, 2.37, 21.5, 38, 4],
+      [cut, 0, 16.6, 33, 5], [cut, 0, 16.6, 33, 23], [cut, 4.21, 16.6, 25, 3],
+      [late, 0, 12.2, 24, 5], [late, 6.1, 20, 28, 6],
+      // The E2 gate's shot whose 34th stamp (16.349665 s) falls 2 microseconds inside -t: the one pass ends at 33
+      // (its -t trim counts from the shot's first frame) and a chunk must too. The stamps depend only on the rate.
+      [plain, 0, 16.349667, 33, 5], [withAudio, 0, 16.349667, 33, 23], [cut, 0, 16.349667, 33, 10],
+    ];
+    for (const [video, start, end, count, chunk_frames] of cases) {
+      const what = `${video.split(/[\\/]/).at(-1)} ${start}-${end} @${count}, ${chunk_frames} a chunk`;
       const one = join(dir, 'one.rgb');
       const { argv } = df.shot_frames_command(video, start, end, 160, 90, count, one);
       await run(argv[0], argv.slice(1));
-      const want = await readFile(one);
+      const want = frameHashes(await readFile(one), frameSize);
       rmSync(one);
-      const frameSize = 160 * 90 * 3;
-      const parts = [];
+      const got = [];
       const work = join(dir, 'work');
       mkdirSync(work);
-      for await (const [index, frame] of df.shot_frames({ exec: run, dir: work, chunk_bytes: frameSize * (chunk_frames + 1) }, video, start, end, 160, 90, count)) {
-        assert.equal(index, parts.length);
-        parts.push(frame.data);
+      let calls = 0;
+      const counted = (command, args) => {
+        calls++;
+        return run(command, args);
+      };
+      for await (const [index, frame] of df.shot_frames({ exec: counted, dir: work, chunk_bytes: frameSize * (chunk_frames + 1) }, video, start, end, 160, 90, count)) {
+        assert.equal(index, got.length);
+        got.push(createHash('md5').update(frame.data).digest('hex'));
       }
       assert.deepEqual(readdirSync(work), []);
       rmSync(work, { recursive: true });
-      const got = Buffer.concat(parts);
-      assert.equal(got.length / frameSize, want.length / frameSize, `${start}-${end} @${count}: frame count`);
-      assert.ok(got.equals(want), `${start}-${end} @${count}, ${chunk_frames} a chunk: frames differ`);
+      assert.ok(calls > 1, `${what}: sampled in more than one chunk`);
+      assert.equal(want.length, count, `${what}: the one pass yields the shot's sample count`);
+      assert.deepEqual(got, want, `${what}: frames differ`);
     }
   } finally {
     rmSync(dir, { recursive: true, force: true });

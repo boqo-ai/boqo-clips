@@ -1,0 +1,91 @@
+[
+  [
+    {
+      "word": "b",
+      "start": 0,
+      "end": 0.5,
+      "confidence": 1,
+      "speaker": 0
+    },
+    {
+      "word": "c",
+      "start": 1,
+      "end": 2,
+      "confidence": 1,
+      "speaker": 0
+    },
+    {
+      "word": "d",
+      "start": 3.8000000000000007,
+      "end": 4.4,
+      "confidence": 1,
+      "speaker": 0
+    }
+  ],
+  [
+    {
+      "word": "x",
+      "start": 0,
+      "end": 0.5,
+      "confidence": 1,
+      "speaker": 0
+    },
+    {
+      "word": "y",
+      "start": 1,
+      "end": 2,
+      "confidence": 1,
+      "speaker": 0
+    }
+  ],
+  [
+    {
+      "word": "p",
+      "start": 1,
+      "end": 2,
+      "confidence": 1,
+      "speaker": 0
+    },
+    {
+      "word": "q",
+      "start": 2,
+      "end": 2.5,
+      "confidence": 1,
+      "speaker": 0
+    },
+    {
+      "word": "r",
+      "start": 2.5,
+      "end": 4,
+      "confidence": 1,
+      "speaker": 0
+    }
+  ],
+  [
+    {
+      "word": "p",
+      "start": 1,
+      "end": 3,
+      "confidence": 1,
+      "speaker": 0
+    },
+    {
+      "word": "q",
+      "start": 1,
+      "end": 2,
+      "confidence": 1,
+      "speaker": 0
+    }
+  ],
+  [
+    {
+      "word": "hi",
+      "start": 0.20000000000000284,
+      "end": 0.5999999999999943,
+      "confidence": 0.5,
+      "speaker": 2
+    }
+  ],
+  [],
+  []
+]

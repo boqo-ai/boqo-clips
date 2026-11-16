@@ -365,6 +365,31 @@ test('constants: 1 frame every 3 s, at most 12 a clip, 640 px', () => {
   assert.equal(PANELS_FRAME_WIDTH, 640);
 });
 
+test('the read cap holds on many short shots: 40 shots of 1.5 s give 12 frames, one per shot, inside each', () => {
+  // More shots than the cap: hosted thins the midpoints themselves (a shot left without a frame borrows the nearest
+  // sample at placement), so the cap is never exceeded however the clip is cut.
+  const shots = Array.from({ length: 40 }, (_, i) => ({ startSec: i * 1.5, endSec: (i + 1) * 1.5 }));
+  const times = sampleTimes(shots, PANELS_READ_EVERY_SEC, PANELS_READ_MAX);
+  assert.equal(times.length, 12);
+  assert.deepEqual([...times].sort((a, b) => a - b), times, 'sorted');
+  const owners = times.map((t) => shots.findIndex((s) => t > s.startSec && t < s.endSec));
+  assert.ok(owners.every((i) => i >= 0), 'every frame inside a shot, none on a cut');
+  assert.equal(new Set(owners).size, 12, 'one frame per shot: only midpoints when the shots outnumber the cap');
+  for (const [k, t] of times.entries()) assert.equal(t, shots[owners[k]].startSec + 0.75, 'the midpoint');
+  // The same holds with no step at all, and on 400 shots.
+  assert.equal(sampleTimes(shots, null, PANELS_READ_MAX).length, 12);
+  assert.equal(sampleTimes(Array.from({ length: 400 }, (_, i) => ({ startSec: i * 0.2, endSec: (i + 1) * 0.2 })), PANELS_READ_EVERY_SEC, PANELS_READ_MAX).length, 12);
+});
+
+test('the skill docs check out with LF on every OS (skills/** text eol=lf, outside the managed block)', () => {
+  const r = spawnSync('git', ['check-attr', 'text', 'eol', '--', 'skills/boqo-clips/panels.md'], { cwd: join(here, '..'), encoding: 'utf8' });
+  assert.equal(r.status, 0, r.stderr);
+  assert.match(r.stdout, /: eol: lf$/m);
+  assert.match(r.stdout, /: text: set$/m);
+  const attrs = readFileSync(join(here, '..', '.gitattributes'), 'utf8').replace(/\r\n/g, '\n');
+  assert.ok(attrs.indexOf('skills/** text eol=lf') > attrs.indexOf('# boqo-engine:end'), 'after the managed block');
+});
+
 // A source: a flat colour (no scene cut), a tone, `w`x`h` at 5 fps with a keyframe every 5 frames.
 async function makeSource(path, w, h, seconds) {
   await real('ffmpeg', [

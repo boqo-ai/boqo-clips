@@ -14,3 +14,7 @@ scripts/parity/strip.mjs -text
 scripts/boqo-drift.mjs -text
 tests/helpers/golden.mjs -text
 # boqo-engine:end
+
+# The skill docs: LF on every checkout (a Windows checkout would write CRLF), so byte compares against them hold.
+# Outside the managed block on purpose: skills/ is per repo, not shared engine.
+skills/** text eol=lf

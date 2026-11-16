@@ -293,6 +293,9 @@ test('captionsTrack refuses a malformed call with the cause, and a brand block t
   assert.throws(() => captionsTrack({ words: 'x', ...WIN }), /words must be an array/);
   assert.throws(() => captionsTrack({ words: [{ w: 'a', s: 'x', e: 1 }], ...WIN }), /words\[0\]/);
   assert.throws(() => captionsTrack({ words: EN, ...WIN, cuts: [{ start: 2, end: 1 }] }), /cuts must be/);
+  assert.throws(() => captionsTrack({ words: EN, ...WIN, cuts: [{ start: 3, end: 4 }, { start: 1, end: 2 }] }), /sorted and disjoint: cuts\[1\]/);
+  assert.throws(() => captionsTrack({ words: EN, ...WIN, cuts: [{ start: 1, end: 3 }, { start: 2, end: 4 }] }), /sorted and disjoint/);
+  assert.doesNotThrow(() => captionsTrack({ words: EN, ...WIN, cuts: [{ start: 1, end: 2 }, { start: 2, end: 3 }] }));
   assert.throws(() => captionsTrack({ words: EN, ...WIN, emphasis: 'rockets' }), /emphasis must be/);
   assert.throws(() => captionsTrack({ words: EN, ...WIN, output: { width: 1080.5, height: 1920 } }), /whole pixels/);
   assert.throws(() => captionsTrack({ words: EN, ...WIN, brandCaptions: { positionFraction: 0.95 } }), /positionFraction/);

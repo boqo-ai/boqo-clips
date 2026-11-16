@@ -125,6 +125,9 @@ export function captionsTrack(o) {
   if (!finite(clipStart) || !finite(clipEnd) || !(clipEnd > clipStart)) fail(`a clip needs clipStart < clipEnd, got ${clipStart}..${clipEnd}`);
   const cuts = o.cuts ?? [];
   if (!Array.isArray(cuts) || cuts.some((c) => !finite(c?.start) || !finite(c?.end) || !(c.end > c.start))) fail('cuts must be [{ start, end }] with start < end');
+  // Sorted and disjoint, as planCuts returns them: the cut map (windowToClipSec) walks them in order, and an unsorted or
+  // overlapping list moves every word after it to the wrong second without an error.
+  for (let i = 1; i < cuts.length; i++) if (cuts[i].start < cuts[i - 1].end) fail(`cuts must be sorted and disjoint: cuts[${i}] (${cuts[i].start}..${cuts[i].end}) starts before cuts[${i - 1}] ends (${cuts[i - 1].end})`);
   const sceneCuts = o.sceneCuts ?? [];
   if (!Array.isArray(sceneCuts) || !sceneCuts.every(finite)) fail('sceneCuts must be an array of seconds');
   const emphasis = o.emphasis ?? null;

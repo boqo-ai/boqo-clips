@@ -9,6 +9,7 @@ import { pickReactions } from '../engine/boqo/viewer-reactions.mjs';
 import {
   FORMAT,
   captionArgs,
+  captionGaps,
   captionPlan,
   captionTrackOf,
   commentArgs,
@@ -244,7 +245,7 @@ const outOf = (args) => args[args.indexOf('-o') + 1].replace('.%(ext)s', '');
 test('fetchInfo writes info, words, transcript and reports the counts', async () => {
   const dir = tmp();
   const info = {
-    id: 'abc123', title: 'Talk', duration: 1800, language: 'en-US',
+    id: 'abc123', title: 'Talk', duration: 4, language: 'en-US',
     subtitles: {}, automatic_captions: { 'en-orig': [{ ext: 'json3' }] },
     heatmap: [{ start_time: 0, end_time: 10, value: 0.8 }],
   };
@@ -259,7 +260,7 @@ test('fetchInfo writes info, words, transcript and reports the counts', async ()
     },
   });
   const out = await fetchInfo({ url: URL1, dir, run });
-  assert.deepEqual(out, { id: 'abc123', title: 'Talk', duration: 1800, captions: 'auto', chunks: 1 });
+  assert.deepEqual(out, { id: 'abc123', title: 'Talk', duration: 4, captions: 'auto', chunks: 1 });
   assert.equal(calls.length, 2, 'info call, then exactly one caption call');
   assert.equal(JSON.parse(readFileSync(join(dir, 'info.json'), 'utf8')).id, 'abc123');
   const words = JSON.parse(readFileSync(join(dir, 'words.json'), 'utf8'));
@@ -274,7 +275,7 @@ test('fetchInfo writes info, words, transcript and reports the counts', async ()
 test('fetchInfo: a video with manual and en-orig captions asks for en-orig only, once', async () => {
   const dir = tmp();
   const info = {
-    id: 'ted', title: 'Talk', duration: 1200, language: 'en',
+    id: 'ted', title: 'Talk', duration: 4, language: 'en',
     subtitles: { en: [{ ext: 'json3' }] }, automatic_captions: { 'en-orig': [{ ext: 'json3' }], en: [{ ext: 'json3' }] },
   };
   const json3 = { events: [{ tStartMs: 1000, dDurationMs: 2000, segs: [{ utf8: 'good' }, { utf8: ' morning', tOffsetMs: 400 }] }] };
@@ -312,7 +313,7 @@ test('fetchInfo with no captions: captions none, chunks 0, no words or transcrip
 
 const picks2 = [{ s: 600, e: 630, title: 'a' }, { s: 1000, e: 1030, title: 'b' }];
 
-test('fetchSections: all ok gives sec files with offsets, no fallback, concurrency capped at 3', async () => {
+test('fetchSections: all ok gives sec files with offsets, no fallback, one download at a time', async () => {
   const dir = tmp();
   let live = 0;
   let peak = 0;
@@ -332,7 +333,7 @@ test('fetchSections: all ok gives sec files with offsets, no fallback, concurren
   const many = Array.from({ length: 7 }, (_, i) => ({ s: 100 * (i + 1), e: 100 * (i + 1) + 30, title: String(i) }));
   const out = await fetchSections({ url: URL1, picks: many, dir, duration: 3600, run });
   assert.equal(out.files.length, 7);
-  assert.equal(peak, 3);
+  assert.equal(peak, 1, 'serial: YouTube rate-limits parallel requests, and the skill runs one yt-dlp call at a time');
   assert.deepEqual(out.files[0], { pick: 0, file: join(dir, 'sec-0.mp4'), offset: 1, s: 99, e: 131 });
   assert.ok(wrote.every((a) => a.includes('--download-sections')));
   rmSync(dir, { recursive: true });
@@ -355,7 +356,7 @@ test('fetchSections: a short section triggers one whole download and a local cut
       writeFileSync(join(cwd, args.at(-1)), 'x');
     },
   });
-  const out = await fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run });
+  const out = await fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run, sectionRetryMs: 0 });
   const wholeCalls = calls.filter((a) => !a.includes('--download-sections'));
   assert.equal(wholeCalls.length, 1);
   assert.equal(cuts.length, 1, 'only the short section is cut');
@@ -370,24 +371,87 @@ test('fetchSections: a short section triggers one whole download and a local cut
   rmSync(dir, { recursive: true });
 });
 
-test('fetchSections: a failed section also falls back', async () => {
+test('fetchSections: a failed section is tried once more, alone', async () => {
   const dir = tmp();
   let sections = 0;
+  let wholes = 0;
   const run = fakeRun({
     ytdlp: async (args) => {
       if (args.includes('--download-sections')) {
         sections++;
         if (sections === 2) throw new Error('HTTP 403');
-      }
+      } else wholes++;
+      writeFileSync(outOf(args) + '.mp4', 'x');
+      return { stdout: '', stderr: '' };
+    },
+    probe: async () => 40,
+    ffmpeg: async (args, cwd) => writeFileSync(join(cwd, args.at(-1)), 'x'),
+  });
+  const out = await fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run, sectionRetryMs: 0 });
+  assert.equal(out.files.length, 2);
+  assert.equal(out.files.filter((f) => f.offset === 3).length, 1, 'the retried section carries 3 s of padding');
+  assert.equal(wholes, 0, 'no whole-video download');
+  rmSync(dir, { recursive: true });
+});
+
+test('fetchSections: a section a hair short is ok, no retry and no fallback', async () => {
+  const dir = tmp();
+  const calls = [];
+  const run = fakeRun({
+    ytdlp: async (args) => {
+      calls.push(args);
+      writeFileSync(outOf(args) + '.mp4', 'x');
+      return { stdout: '', stderr: '' };
+    },
+    probe: async () => 31.7, // of 32 s asked
+  });
+  await fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run, sectionRetryMs: 0 });
+  assert.equal(calls.length, 2);
+  rmSync(dir, { recursive: true });
+});
+
+test('fetchSections: a short section is tried again with 3 s of padding, and the whole video is not fetched', async () => {
+  const dir = tmp();
+  const calls = [];
+  const run = fakeRun({
+    ytdlp: async (args) => {
+      calls.push(args);
+      writeFileSync(outOf(args) + '.mp4', 'x');
+      return { stdout: '', stderr: '' };
+    },
+    // the first try of section 0 comes back at 17 of 32 s; its second, wider try (asked 36 s) is whole
+    probe: async (file) => (file.endsWith('sec-0.mp4') && calls.filter((a) => outOf(a).endsWith('sec-0')).length === 1 ? 17 : 40),
+  });
+  const out = await fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run, sectionRetryMs: 0 });
+  const ranges = calls.map((a) => a[a.indexOf('--download-sections') + 1]);
+  assert.deepEqual(ranges, ['*599-631', '*999-1031', '*597-633'], 'serial: every section once, then the short one again alone with 3 s of padding');
+  assert.ok(calls.every((a) => a.includes('--download-sections')), 'no whole-video download');
+  assert.deepEqual(out.files[0], { pick: 0, file: join(dir, 'sec-0.mp4'), offset: 3, s: 597, e: 633 });
+  assert.deepEqual(out.files[1], { pick: 1, file: join(dir, 'sec-1.mp4'), offset: 1, s: 999, e: 1031 });
+  rmSync(dir, { recursive: true });
+});
+
+test('fetchSections: stderr names the section and what came back', async () => {
+  const dir = tmp();
+  const run = fakeRun({
+    ytdlp: async (args) => {
+      if (args.includes('--download-sections') && outOf(args).endsWith('sec-1')) throw new Error('yt-dlp failed: HTTP 403');
       writeFileSync(outOf(args) + '.mp4', 'x');
       return { stdout: '', stderr: '' };
     },
     probe: async () => 32,
     ffmpeg: async (args, cwd) => writeFileSync(join(cwd, args.at(-1)), 'x'),
   });
-  const out = await fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run });
-  assert.equal(out.files.length, 2);
-  assert.equal(out.files.filter((f) => f.offset === 3).length, 1);
+  const lines = [];
+  const orig = process.stderr.write;
+  process.stderr.write = (c) => (lines.push(String(c)), true);
+  try {
+    await fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run, sectionRetryMs: 0, retryMs: 0 });
+  } finally {
+    process.stderr.write = orig;
+  }
+  assert.match(lines.join(''), /section 2 failed \(yt-dlp failed: HTTP 403\); trying it once more/);
+  assert.match(lines.join(''), /1 section\(s\) came back short or failed, downloading the whole video once/);
   rmSync(dir, { recursive: true });
 });
 
@@ -404,7 +468,7 @@ test('fetchSections: the whole download gets one retry', async () => {
     probe: async () => 40,
     ffmpeg: async (args, cwd) => writeFileSync(join(cwd, args.at(-1)), 'x'),
   });
-  const out = await fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run, retryMs: 0 });
+  const out = await fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run, retryMs: 0, sectionRetryMs: 0 });
   assert.equal(wholeTries, 2);
   assert.equal(out.files.length, 2);
   rmSync(dir, { recursive: true });
@@ -419,7 +483,7 @@ test('fetchSections: fallback failing too names both failures', async () => {
     },
   });
   await assert.rejects(
-    () => fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run, retryMs: 0 }),
+    () => fetchSections({ url: URL1, picks: picks2, dir, duration: 3600, run, retryMs: 0, sectionRetryMs: 0 }),
     (err) => /section/.test(err.message) && /HTTP 403 on range/.test(err.message) && /whole/.test(err.message) && /HTTP 429 on whole/.test(err.message),
   );
   rmSync(dir, { recursive: true });
@@ -565,7 +629,7 @@ test('live: info then two sections', { skip: !LIVE, timeout: 900_000 }, () => {
 test('fetchInfo on the Urdu case asks for hi-orig and records the transcript language hi', async () => {
   const dir = tmp();
   writeFileSync(join(dir, 'transcript-language.txt'), 'xx\n');
-  const info = { id: 'u', title: 'Urdu', duration: 600, ...URDU() };
+  const info = { id: 'u', title: 'Urdu', duration: 4, ...URDU() };
   const json3 = { events: [{ tStartMs: 1000, dDurationMs: 2000, segs: [{ utf8: 'ek' }, { utf8: ' do', tOffsetMs: 500 }] }] };
   const calls = [];
   const run = fakeRun({
@@ -601,5 +665,52 @@ test('fetchInfo with only a translation: captions none with a one-line note, no 
   assert.match(out.note, /translation/);
   assert.equal(out.note.includes('\n'), false);
   assert.equal(existsSync(join(dir, 'transcript-language.txt')), false);
+  rmSync(dir, { recursive: true });
+});
+
+// ---- partial captions
+
+// Words half a second apart over [0, duration], except inside the `holes` ([from, to) seconds).
+const wordsOver = (duration, holes = []) => {
+  const out = [];
+  for (let t = 0; t < duration; t += 0.5) if (!holes.some(([a, b]) => t >= a && t < b)) out.push({ w: 'w', s: t, e: t + 0.4 });
+  return out;
+};
+
+test('captionGaps: the Rothenburg shape (a 41-minute video whose track has three English-speech holes) lists the three, and normal pauses are not gaps', () => {
+  // Measured 2026-11-16 on the real fil-orig words.json of CYHCq4Qe61A: holes after 186 s (66 s), 501 s (74 s) and 1167 s (42 s).
+  const gaps = captionGaps(wordsOver(2469, [[186, 252], [501, 575], [1167, 1209]]), 2469);
+  assert.deepEqual(gaps.map((g) => [Math.round(g.start), Math.round(g.end)]), [[186, 252], [501, 575], [1167, 1209]]);
+  // the largest pauses of the four other real runs were 20, 15 and 31 s, and a 39 s one is still a pause
+  assert.deepEqual(captionGaps(wordsOver(1437, [[300, 320], [648, 668]]), 1437), []);
+  assert.deepEqual(captionGaps(wordsOver(1812, [[332, 363]]), 1812), []);
+  assert.deepEqual(captionGaps(wordsOver(600, [[100, 139]]), 600), []);
+  assert.equal(captionGaps(wordsOver(600, [[100, 141]]), 600).length, 1);
+});
+
+test('captionGaps: a stretch before the first word or after the last counts, and an unknown duration skips the end', () => {
+  assert.equal(captionGaps(wordsOver(1000, [[0, 90]]), 1000).length, 1);
+  assert.equal(captionGaps(wordsOver(900), 1000).length, 1, 'the last 100 s have no words');
+  assert.deepEqual(captionGaps(wordsOver(900), undefined), []);
+  assert.deepEqual(captionGaps([], 100), []);
+});
+
+test('fetchInfo: a track with a long hole is "partial", with the gap list; its files are written as usual', async () => {
+  const dir = tmp();
+  const info = { id: 'r', title: 'Travel', duration: 600, language: 'fil', subtitles: {}, automatic_captions: { 'fil-orig': [{ ext: 'json3' }] } };
+  const events = wordsOver(600, [[100, 190]]).filter((_, i) => i % 4 === 0).map((w) => ({ tStartMs: Math.round(w.s * 1000), dDurationMs: 400, segs: [{ utf8: 'ang' }] }));
+  const run = fakeRun({
+    ytdlp: async (args) => {
+      if (args.includes('-J')) return { stdout: JSON.stringify(info), stderr: '' };
+      writeFileSync(join(dir, 'captions.fil-orig.json3'), JSON.stringify({ events }));
+      return { stdout: '', stderr: '' };
+    },
+  });
+  const out = await fetchInfo({ url: URL1, dir, run });
+  assert.equal(out.captions, 'partial');
+  assert.equal(out.source, 'auto');
+  assert.equal(out.gaps.length, 1);
+  assert.ok(out.gaps[0].start >= 98 && out.gaps[0].start <= 102 && out.gaps[0].end >= 188 && out.gaps[0].end <= 192, JSON.stringify(out.gaps));
+  assert.ok(existsSync(join(dir, 'words.json')) && existsSync(join(dir, 'segments.json')) && existsSync(join(dir, 'transcript.md')));
   rmSync(dir, { recursive: true });
 });

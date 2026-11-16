@@ -94,33 +94,25 @@ local file, below.
       ```
       `the words file has no words`: whisper heard no speech. Tell the person, and stop. Known limit: whisper can
       hear a word that is not there ("Oh") in silence at a multiple of 30 s, its window edge; never set an edge on one.
-4. **Pick.** Read `select.md`, then `<run>/transcript.md` one part at a time (`grep -n '^## Part'
-   "<run>/transcript.md"` gives each part's first line), and write `<run>/picks.json`. Every edge is set on a quoted
-   phrase (`select.md` → How to read):
+4. **Select.** Viewer comments, for a link; best effort:
    ```sh
-   node "$HOME/.boqo-clips/tools/transcript.mjs" --words "<run>/words.json" --find "<3 to 6 words>" --near <seconds>
+   node "$HOME/.boqo-clips/tools/fetch.mjs" comments "<url>" --dir "<run>"
    ```
-   gives `{"s", "e", "match", "score"}`: the seconds of the phrase's first word's start and last word's end on the
-   video's timeline, found within 60 s of `--near` (its line's stamp, `[12:34]` is 754), and the words it matched.
-   `{"error": "phrase not found near …"}`: read the words near that time,
+   Then the request, with the person's choices when they made any (`--genre podcast|talk|gaming|vlog|entertainment`,
+   `--length under_30|30_60|60_90|90_120|120_180`, `--prompt "<their words>"`, `--lang <code>`):
    ```sh
-   node "$HOME/.boqo-clips/tools/transcript.mjs" --words "<run>/words.json" --around <seconds>
+   node "$HOME/.boqo-clips/tools/select-request.mjs" --run "<run>"
    ```
-   (`{"lines": ["[m:ss] text (s-e)", …]}` for 30 s either side), and quote again from them. Then check the returned
-   `s` or `e` lies within a few seconds of the line's `[m:ss]` stamp you meant: a far exact repeat of the phrase can
-   beat a near mis-captioned one, and then the edge is on the wrong line.
+   It writes `<run>/select-request.md` and prints `{"target", "segments", "chars"}`. Read `select.md`, then the whole of
+   `<run>/select-request.md` (in pages when it is long), and write `<run>/selection.json` once.
 5. **Check.**
    ```sh
-   node "$HOME/.boqo-clips/tools/picks-check.mjs" "<run>/picks.json" --duration <duration> --words "<run>/words.json" \
-     --min 20 --max 60 --count-min 1 --count-max 10 > "<run>/checked.json"
+   node "$HOME/.boqo-clips/tools/select-check.mjs" --run "<run>"
    ```
-   `<duration>` is step 2's. Read `<run>/checked.json`.
-   - `"ok": false`: fix each pick its `errors` name in `picks.json`, and check again.
-   - `"ok": true`: every pick is snapped to whole words and carries `moved: {s, e}`, how far each edge moved. An edge
-     set from `--find` moves 0.05 s. One that moved more than 0.1 s either way (`|moved.s|` or `|moved.e|`) landed
-     somewhere you did not choose: find its phrase again (step 4), set that edge in `picks.json`, and check again, once.
-   - Other lengths only on the person's ask ("30-second clips": `--min 25 --max 35`), within 15 to 90 s. Fewer
-     picks than `select.md` → How many is fine when fewer pass its rules.
+   - `{"ok": false, "errors": [...]}`: each error is `clips[i].field: what is wrong`, `clips[0]` being the first clip.
+     Fix them in `<run>/selection.json` and run the check again.
+   - `{"ok": true, "kept": n, "dropped": {...}}`: `<run>/clips.json` is the run's record, one row for each clip kept,
+     with its edges set on sentence edges. `dropped` counts what was left out, by reason.
 6. **Sections**, in the background (Rules):
    ```sh
    node "$HOME/.boqo-clips/tools/fetch.mjs" sections "<url>" --picks "<run>/checked.json" --dir "<run>" \

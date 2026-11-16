@@ -1,0 +1,167 @@
+[
+  {
+    "name": "title only",
+    "copy": {
+      "tiktok": {
+        "text": "The eight hour stream"
+      },
+      "instagram": {
+        "text": "The eight hour stream"
+      },
+      "youtube": {
+        "title": "The eight hour stream",
+        "text": ""
+      }
+    }
+  },
+  {
+    "name": "title and hook",
+    "copy": {
+      "tiktok": {
+        "text": "He did not see this coming\n\nThe eight hour stream"
+      },
+      "instagram": {
+        "text": "He did not see this coming\n\nThe eight hour stream"
+      },
+      "youtube": {
+        "title": "The eight hour stream",
+        "text": "He did not see this coming"
+      }
+    }
+  },
+  {
+    "name": "title, hook, tags",
+    "copy": {
+      "tiktok": {
+        "text": "He did not see this coming\n\nThe eight hour stream\n\n#clips #gaming"
+      },
+      "instagram": {
+        "text": "He did not see this coming\n\nThe eight hour stream\n\n#clips #gaming"
+      },
+      "youtube": {
+        "title": "The eight hour stream",
+        "text": "He did not see this coming\n\n#clips #gaming"
+      }
+    }
+  },
+  {
+    "name": "title and tags, no hook",
+    "copy": {
+      "tiktok": {
+        "text": "Padded title\n\n#fyp"
+      },
+      "instagram": {
+        "text": "Padded title\n\n#fyp"
+      },
+      "youtube": {
+        "title": "Padded title",
+        "text": "#fyp"
+      }
+    }
+  },
+  {
+    "name": "empty hook string",
+    "copy": {
+      "tiktok": {
+        "text": "Quiet one"
+      },
+      "instagram": {
+        "text": "Quiet one"
+      },
+      "youtube": {
+        "title": "Quiet one",
+        "text": ""
+      }
+    }
+  },
+  {
+    "name": "quotes and apostrophes",
+    "copy": {
+      "tiktok": {
+        "text": "She said: \"it's over\" — and it was\n\n\"Don't\" say 'that' again\n\n#quotes"
+      },
+      "instagram": {
+        "text": "She said: \"it's over\" — and it was\n\n\"Don't\" say 'that' again\n\n#quotes"
+      },
+      "youtube": {
+        "title": "\"Don't\" say 'that' again",
+        "text": "She said: \"it's over\" — and it was\n\n#quotes"
+      }
+    }
+  },
+  {
+    "name": "emoji",
+    "copy": {
+      "tiktok": {
+        "text": "👀 wait for the end 😂\n\nChat went wild 🔥\n\n#wild"
+      },
+      "instagram": {
+        "text": "👀 wait for the end 😂\n\nChat went wild 🔥\n\n#wild"
+      },
+      "youtube": {
+        "title": "Chat went wild 🔥",
+        "text": "👀 wait for the end 😂\n\n#wild"
+      }
+    }
+  },
+  {
+    "name": "long hook",
+    "copy": {
+      "tiktok": {
+        "text": "This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is"
+      },
+      "instagram": {
+        "text": "This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a v"
+      },
+      "youtube": {
+        "title": "Long one",
+        "text": "This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going\n\n#a #b"
+      }
+    }
+  },
+  {
+    "name": "long title",
+    "copy": {
+      "tiktok": {
+        "text": "Short hook\n\nTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+      },
+      "instagram": {
+        "text": "Short hook\n\nTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+      },
+      "youtube": {
+        "title": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+        "text": "Short hook"
+      }
+    }
+  },
+  {
+    "name": "emoji at the cut",
+    "copy": {
+      "tiktok": {
+        "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀tail\n\nEdge"
+      },
+      "instagram": {
+        "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\ud83d"
+      },
+      "youtube": {
+        "title": "Edge",
+        "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀tail"
+      }
+    }
+  },
+  {
+    "name": "non-latin",
+    "copy": {
+      "tiktok": {
+        "text": "Смотри до конца\n\nОн не ожидал этого\n\n#клипы"
+      },
+      "instagram": {
+        "text": "Смотри до конца\n\nОн не ожидал этого\n\n#клипы"
+      },
+      "youtube": {
+        "title": "Он не ожидал этого",
+        "text": "Смотри до конца\n\n#клипы"
+      }
+    }
+  }
+]

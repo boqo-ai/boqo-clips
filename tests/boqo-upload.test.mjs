@@ -251,3 +251,24 @@ test("probeVerdict names Instagram's 300 MB cap", () => {
   assert.ok(over.reasons.includes("over 300 MB (Instagram)"), over.reasons.join("; "));
   assert.ok(probeVerdict(FEED, 2_147_483_649).reasons.includes("over 2 GiB"));
 });
+
+test("run caption gives the words for each platform, as hosted writes them from a title and a hook", async () => {
+  const { code, line } = await run(["caption", "--title", "The eight hour stream", "--hook", "He did not see this coming", "--tags", "#clips, gaming"], {});
+  assert.equal(code, 0);
+  assert.deepEqual(JSON.parse(line), {
+    tiktok: { text: "He did not see this coming\n\nThe eight hour stream\n\n#clips #gaming" },
+    instagram: { text: "He did not see this coming\n\nThe eight hour stream\n\n#clips #gaming" },
+    youtube: { title: "The eight hour stream", text: "He did not see this coming\n\n#clips #gaming" },
+  });
+  const bare = JSON.parse((await run(["caption", "--title", "Only a title"], {})).line);
+  assert.deepEqual(bare.tiktok, { text: "Only a title" });
+  assert.deepEqual(bare.youtube, { title: "Only a title", text: "" });
+});
+
+test("run caption refuses a missing title, a stray argument and a tag with a space", async () => {
+  for (const args of [["caption"], ["caption", "--hook", "h"], ["caption", "--title", "t", "extra"], ["caption", "--title", "t", "--tags", "two words"]]) {
+    const { code, line } = await run(args, {});
+    assert.equal(code, 1, args.join(" "));
+    assert.ok(JSON.parse(line).error);
+  }
+});

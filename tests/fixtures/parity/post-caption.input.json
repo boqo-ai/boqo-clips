@@ -1,0 +1,84 @@
+{
+ "cases": [
+  {
+   "name": "title only",
+   "title": "The eight hour stream",
+   "hook": null,
+   "tags": []
+  },
+  {
+   "name": "title and hook",
+   "title": "The eight hour stream",
+   "hook": "He did not see this coming",
+   "tags": []
+  },
+  {
+   "name": "title, hook, tags",
+   "title": "The eight hour stream",
+   "hook": "He did not see this coming",
+   "tags": [
+    "clips",
+    "gaming"
+   ]
+  },
+  {
+   "name": "title and tags, no hook",
+   "title": "  Padded title  ",
+   "hook": "   ",
+   "tags": [
+    "fyp"
+   ]
+  },
+  {
+   "name": "empty hook string",
+   "title": "Quiet one",
+   "hook": "",
+   "tags": []
+  },
+  {
+   "name": "quotes and apostrophes",
+   "title": "\"Don't\" say 'that' again",
+   "hook": "She said: \"it's over\" — and it was",
+   "tags": [
+    "quotes"
+   ]
+  },
+  {
+   "name": "emoji",
+   "title": "Chat went wild 🔥",
+   "hook": "👀 wait for the end 😂",
+   "tags": [
+    "wild"
+   ]
+  },
+  {
+   "name": "long hook",
+   "title": "Long one",
+   "hook": "This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going This is a very long hook sentence that keeps going",
+   "tags": [
+    "a",
+    "b"
+   ]
+  },
+  {
+   "name": "long title",
+   "title": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+   "hook": "Short hook",
+   "tags": []
+  },
+  {
+   "name": "emoji at the cut",
+   "title": "Edge",
+   "hook": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀tail",
+   "tags": []
+  },
+  {
+   "name": "non-latin",
+   "title": "Он не ожидал этого",
+   "hook": "Смотри до конца",
+   "tags": [
+    "клипы"
+   ]
+  }
+ ]
+}

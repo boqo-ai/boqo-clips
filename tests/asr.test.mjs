@@ -90,6 +90,42 @@ test('findModel: prefers small, then base, then any; ignores other files', async
   }
 });
 
+test('findModel: a non-English language prefers a multilingual model of any size', async () => {
+  const root = tmp();
+  try {
+    const home = join(root, 'home');
+    const dir = join(root, 'models');
+    await withEnv({ BOQO_HOME: root, BOQO_WHISPER_MODEL: undefined }, () => {
+      touch(dir, 'ggml-small.en.bin');
+      touch(dir, 'ggml-base.bin');
+      assert.equal(basename(findModel(home)), 'ggml-small.en.bin', 'English or auto: small first, as before');
+      assert.equal(basename(findModel(home, 'auto')), 'ggml-small.en.bin');
+      assert.equal(basename(findModel(home, 'en')), 'ggml-small.en.bin');
+      assert.equal(basename(findModel(home, 'ru')), 'ggml-base.bin');
+      assert.equal(basename(findModel(home, 'pt-BR')), 'ggml-base.bin');
+    });
+    // across folders: an .en model in $BOQO_HOME/models, a multilingual one in the cache
+    const root2 = tmp();
+    const home2 = join(root2, 'home');
+    touch(join(root2, 'models'), 'ggml-small.en.bin');
+    const cached = touch(join(home2, '.cache', 'whisper'), 'ggml-tiny.bin');
+    await withEnv({ BOQO_HOME: root2, BOQO_WHISPER_MODEL: undefined }, () => {
+      assert.equal(findModel(home2, 'de'), cached);
+      assert.equal(basename(findModel(home2, 'auto')), 'ggml-small.en.bin');
+    });
+    // only .en models: the .en one, and asr says englishOnly
+    const root3 = tmp();
+    touch(join(root3, 'models'), 'ggml-small.en.bin');
+    await withEnv({ BOQO_HOME: root3, BOQO_WHISPER_MODEL: undefined }, () => {
+      assert.equal(basename(findModel(join(root3, 'h'), 'de')), 'ggml-small.en.bin');
+    });
+    rmSync(root2, { recursive: true, force: true });
+    rmSync(root3, { recursive: true, force: true });
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('transcribe: no model gives the download line', async () => {
   const root = tmp();
   try {
@@ -217,6 +253,18 @@ test('tools/asr.mjs says the language it ran in, and englishOnly for an .en mode
     const m = JSON.parse((await runCli([audio, '--out', out], { ...env, BOQO_WHISPER_MODEL: multi })).stdout);
     assert.equal(m.lang, 'de');
     assert.equal(m.englishOnly, false);
+
+    // SKILL's remedy: the multilingual model beside the .en one, and --lang on the rerun
+    const home = join(root, 'boqo home');
+    touch(join(home, 'models'), 'ggml-small.en.bin');
+    touch(join(home, 'models'), 'ggml-base.bin');
+    const base = { ...env, BOQO_HOME: home, BOQO_WHISPER_MODEL: '', HOME: root, USERPROFILE: root };
+    const auto = JSON.parse((await runCli([audio, '--out', out], base)).stdout);
+    assert.equal(auto.model, 'ggml-small.en.bin');
+    assert.equal(auto.englishOnly, true);
+    const de = JSON.parse((await runCli([audio, '--lang', 'de', '--out', out], base)).stdout);
+    assert.equal(de.model, 'ggml-base.bin');
+    assert.equal(de.englishOnly, false);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

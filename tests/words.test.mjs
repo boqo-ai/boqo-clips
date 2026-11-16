@@ -233,6 +233,51 @@ test('wordsFromJson3: TED-style manual track gives one word per spoken word, non
   assert.equal(byLine[0].s, 33.408)
 })
 
+const inOrder = (words) => {
+  for (let i = 1; i < words.length; i++) {
+    assert.ok(words[i].s >= words[i - 1].s, `start order at ${i}: ${JSON.stringify(words.slice(i - 1, i + 1))}`)
+    assert.ok(words[i].s >= words[i - 1].e, `overlap at ${i}: ${JSON.stringify(words.slice(i - 1, i + 1))}`)
+  }
+  for (const x of words) assert.ok(x.s < x.e, JSON.stringify(x))
+}
+
+test('wordsFromJson3: a manual line never spreads past the next line\'s start', () => {
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 4000, segs: [{ utf8: 'one two three four five six' }] },
+      { tStartMs: 2000, dDurationMs: 1000, segs: [{ utf8: 'seven eight' }] },
+    ],
+  }
+  const words = wordsFromJson3(j)
+  assert.deepEqual(words.map((x) => x.w), ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'])
+  inOrder(words)
+  assert.ok(words[5].e <= 2, `six ends at ${words[5].e}`)
+  assert.equal(words[6].s, 2)
+})
+
+test('wordsFromJson3: a manual line split into styled segs is one line, in order', () => {
+  const plain = { events: [{ tStartMs: 1000, dDurationMs: 2000, segs: [{ utf8: 'I said ' }, { utf8: 'no' }, { utf8: ' to him' }] }] }
+  const zero = { events: [{ tStartMs: 1000, dDurationMs: 2000, segs: [{ utf8: 'I said ' }, { utf8: 'no', tOffsetMs: 0 }, { utf8: ' to him', tOffsetMs: 0 }] }] }
+  for (const j of [plain, zero]) {
+    const words = wordsFromJson3(j)
+    assert.deepEqual(words.map((x) => x.w), ['I', 'said', 'no', 'to', 'him'])
+    inOrder(words)
+    assert.equal(words[0].s, 1)
+    assert.ok(words.at(-1).e <= 3)
+  }
+})
+
+test('wordsFromJson3: a one-word manual line drops a trailing speaker mark', () => {
+  const j = {
+    events: [
+      { tStartMs: 0, dDurationMs: 500, segs: [{ utf8: 'Okay >>' }] },
+      { tStartMs: 500, dDurationMs: 500, segs: [{ utf8: 'Right. -' }] },
+      { tStartMs: 1000, dDurationMs: 500, segs: [{ utf8: 'Yes &gt;&gt;' }] },
+    ],
+  }
+  assert.deepEqual(wordsFromJson3(j).map((x) => x.w), ['Okay', 'Right.', 'Yes'])
+})
+
 test('wordsFromJson3: an auto seg with an offset stays one word, its newline gone', () => {
   const j = { events: [{ tStartMs: 0, dDurationMs: 1000, segs: [{ utf8: 'a' }, { utf8: ' b\nc', tOffsetMs: 400 }] }] }
   assert.deepEqual(wordsFromJson3(j).map((x) => x.w), ['a', 'b c'])
@@ -482,13 +527,12 @@ test('wordsFromWhisper: a stacked run never passes the next word, even when its 
     transcription: [
       { offsets: { from: 1000, to: 1010 }, text: ' a' },
       { offsets: { from: 1000, to: 1010 }, text: ' b' },
-      // four characters may last 0.61 s, so the start clamp leaves this one be
-      { offsets: { from: 1000, to: 1400 }, text: ' cccc' },
+      { offsets: { from: 1000, to: 1400 }, text: ' c' },
       { offsets: { from: 1100, to: 1200 }, text: ' d' },
     ],
   }
   const out = wordsFromWhisper(j)
-  assert.deepEqual(out.map((x) => x.w), ['a', 'b', 'cccc', 'd'])
+  assert.deepEqual(out.map((x) => x.w), ['a', 'b', 'c', 'd'])
   assert.deepEqual(out.map((x) => x.s), [1, 1.033, 1.067, 1.1])
   assert.deepEqual(out.slice(0, 3).map((x) => x.e), [1.033, 1.067, 1.1])
   for (let i = 0; i < out.length; i++) {
@@ -498,6 +542,29 @@ test('wordsFromWhisper: a stacked run never passes the next word, even when its 
       assert.ok(out[i].s >= out[i - 1].e, `overlap at ${i}`)
     }
   }
+})
+
+test('wordsFromWhisper: a stack of words with different ends is spread as one run, the clamp notwithstanding', () => {
+  // whisper put I, am and here all on 5.0 s; "here" alone would be clamped to start at 5.19
+  const j = {
+    transcription: [
+      { offsets: { from: 5000, to: 5100 }, text: ' I' },
+      { offsets: { from: 5000, to: 5300 }, text: ' am' },
+      { offsets: { from: 5000, to: 5800 }, text: ' here' },
+    ],
+  }
+  const out = wordsFromWhisper(j)
+  assert.deepEqual(out.map((x) => x.w), ['I', 'am', 'here'])
+  assert.equal(out[0].s, 5)
+  for (let i = 0; i < out.length; i++) {
+    assert.ok(out[i].s < out[i].e, JSON.stringify(out[i]))
+    assert.ok(out[i].e <= 5.8 + 1e-9)
+    if (i) {
+      assert.ok(out[i].s > out[i - 1].s)
+      assert.ok(out[i].s >= out[i - 1].e, `overlap at ${i}`)
+    }
+  }
+  assert.ok(out[2].s - out[0].s > 0.3, 'spread, not left in a 30 ms pile')
 })
 
 test('wordsFromWhisper: a tight gap keeps starts strictly increasing and below the next word', () => {

@@ -80,11 +80,13 @@ local file, below.
       ```
       `{"words": N, …}` in `<run>/asr.json` is done; `{"error": …}` stops the run. `"englishOnly": true` is a
       model that hears every video as English: when this one is not in English (`info.json`'s `language`, the title,
-      the person), say so, and offer the multilingual model (about 150 MB). On a yes, then run whisper again:
+      the person), say so, and offer the multilingual model (about 150 MB). On a yes:
       ```sh
       mkdir -p "<home>/models" && curl -L -o "<home>/models/ggml-base.bin" \
         "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin"
       ```
+      then run whisper again with the video's language, `--lang <code>` (`--lang ru`) before `--out`: with a
+      language other than English it takes a multilingual model.
    3. The transcript, with the most-replayed marks when `info.json` has them:
       ```sh
       node "$HOME/.boqo-clips/tools/transcript.mjs" --words "<run>/words.json" --out "<run>/transcript.md" \
@@ -155,8 +157,7 @@ local file, below.
 
 The same run, with three changes:
 - **No info step.** The length: `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" probe "<file>"` gives `durationSec`
-  (it finds macOS ffmpeg-full's ffprobe, which a plain shell may not have). On `unsupported container`:
-  `ffprobe -v error -show_entries format=duration -of csv=p=0 "<file>"`.
+  (it finds macOS ffmpeg-full's ffprobe, which a plain shell may not have).
 - **Whisper on the whole file**, after asking (Rules): step 3's doctor check, whisper and transcript, with
   `"<file>"` itself in place of the audio, and no `--heat`.
 - **No sections step.** Render from the file: `--src "<file>"` in place of `--sections "<run>/sections.json"`.

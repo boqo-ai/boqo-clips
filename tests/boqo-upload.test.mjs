@@ -226,6 +226,21 @@ test("run probe reads ffprobe's JSON", async () => {
   assert.equal(out.file, "/clips/today.mp4");
 });
 
+test("run probe reads any container, and names one boqo does not take", async () => {
+  const deps = {
+    exec: async () => ({ stdout: JSON.stringify(FEED) }),
+    stat: async () => ({ size: MB15 }),
+    now: () => new Date(),
+  };
+  const { code, line } = await run(["probe", "/clips/old.avi"], deps);
+  assert.equal(code, 0, line);
+  const out = JSON.parse(line);
+  assert.equal(out.contentType, null);
+  assert.equal(out.passthrough, false);
+  assert.equal(out.reasons[0], "unsupported container: .avi");
+  assert.equal(out.durationSec, 12.5);
+});
+
 test("probeVerdict names Instagram's 300 MB cap", () => {
   // boqo's Instagram file-size limit is in decimal bytes, and exactly 300 MB passes.
   const at = probeVerdict(FEED, 300_000_000);

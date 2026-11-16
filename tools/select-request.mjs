@@ -9,6 +9,8 @@
 //   --length  auto (default), under_30, 30_60, 60_90, 90_120 or 120_180
 //   --prompt  the person's own words about what they want, quoted into the request
 //   --lang    the transcript's language code when info.json does not say
+//             (<run>/transcript-language.txt, written by tools/transcript-boqo.mjs, stands in for it and
+//             goes before info.json's: Deepgram heard the audio)
 //   Also writes <run>/select-options.json ({genre, length, language}), the choices
 //   tools/select-check.mjs reads so the check uses the same length band.
 //   Prints {"target":n,"segments":n,"chars":n}. Exit 1 with {"error":"..."} on failure.
@@ -35,6 +37,15 @@ function readJson(path, what, required) {
     return JSON.parse(text);
   } catch {
     return fail(`${what} ${path} is not valid JSON`);
+  }
+}
+
+// boqo's transcript names the language it heard; a skill-made one has no such file (null: info.json, then English).
+function readLanguage(run) {
+  try {
+    return readFileSync(join(run, 'transcript-language.txt'), 'utf8').trim() || null;
+  } catch {
+    return null;
   }
 }
 
@@ -68,7 +79,7 @@ function main(argv) {
       genre: opt.genre ?? 'auto',
       length: opt.length ?? 'auto',
       prompt: opt.prompt ?? null,
-      language: opt.lang ?? null,
+      language: opt.lang ?? readLanguage(run),
     });
   } catch (err) {
     return fail(err.message);

@@ -50,7 +50,7 @@ const sync = (source, target) =>
 test('SHARED is the agreed list', () => {
   assert.deepEqual(SHARED, [
     'engine/', 'tools/doctor.mjs', 'tools/fetch.mjs', 'tools/render.mjs',
-    'tools/picks-check.mjs', 'tools/brand.mjs', 'tools/asr.mjs', 'tools/boqo-upload.mjs', 'tools/transcript.mjs', 'tools/select-request.mjs', 'tools/select-check.mjs', 'tools/clips.mjs', 'tools/stranger.mjs',
+    'tools/picks-check.mjs', 'tools/brand.mjs', 'tools/asr.mjs', 'tools/boqo-upload.mjs', 'tools/transcript.mjs', 'tools/select-request.mjs', 'tools/select-check.mjs', 'tools/clips.mjs', 'tools/stranger.mjs', 'tools/transcript-boqo.mjs',
     'scripts/parity/golden.mjs', 'scripts/parity/strip.mjs', 'scripts/boqo-drift.mjs', 'tests/helpers/golden.mjs',
   ]);
 });

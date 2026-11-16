@@ -24,6 +24,8 @@ export const SHARED = [
   'tools/clips.mjs',
   // The stranger judgment's frames and record; engine/boqo/stranger*.mjs are under engine/ already.
   'tools/stranger.mjs',
+  // The boqo transcript option: get_transcript's JSON as words.json and segments.json (engine/transcript-boqo.mjs is under engine/ already).
+  'tools/transcript-boqo.mjs',
   // The parity harness (engine/boqo/ is already under engine/). Files, not
   // scripts/parity/: boqo-sniper keeps its own cases in scripts/parity/cases/.
   'scripts/parity/golden.mjs',

@@ -1,0 +1,1001 @@
+[
+  {
+    "name": "valid, one clip",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "valid, no clips",
+    "ok": true,
+    "issues": [],
+    "candidates": []
+  },
+  {
+    "name": "title empty",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "title"
+        ],
+        "code": "too_small",
+        "message": "Too small: expected string to have >=1 characters"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "title 200 chars",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "title 201 chars",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "title"
+        ],
+        "code": "too_big",
+        "message": "Too big: expected string to have <=200 characters"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "hook empty",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "hook"
+        ],
+        "code": "too_small",
+        "message": "Too small: expected string to have >=1 characters"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "hook 500 chars",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "hook 501 chars",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "hook"
+        ],
+        "code": "too_big",
+        "message": "Too big: expected string to have <=500 characters"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "score 100",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 100,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "score 101",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "score"
+        ],
+        "code": "too_big",
+        "message": "Too big: expected number to be <=100"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "score -1",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "score"
+        ],
+        "code": "too_small",
+        "message": "Too small: expected number to be >=0"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "score fractional",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 87.5,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "score a string",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "score"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected number, received string"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "hook_score 101",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "hook_score"
+        ],
+        "code": "too_big",
+        "message": "Too big: expected number to be <=100"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "flow_score -3",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "flow_score"
+        ],
+        "code": "too_small",
+        "message": "Too small: expected number to be >=0"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "standalone_score 120",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "standalone_score"
+        ],
+        "code": "too_big",
+        "message": "Too big: expected number to be <=100"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "value_score missing",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "value_score"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected number, received undefined"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "12 emphasis words",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "word0",
+          "word1",
+          "word2",
+          "word3",
+          "word4",
+          "word5",
+          "word6",
+          "word7",
+          "word8",
+          "word9",
+          "word10",
+          "word11"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "13 emphasis words",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "emphasis_words"
+        ],
+        "code": "too_big",
+        "message": "Too big: expected array to have <=12 items"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "emphasis word empty",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "emphasis_words",
+          1
+        ],
+        "code": "too_small",
+        "message": "Too small: expected string to have >=1 characters"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "emphasis word 60 chars",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "emphasis word 61 chars",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "emphasis_words",
+          0
+        ],
+        "code": "too_big",
+        "message": "Too big: expected string to have <=60 characters"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "emphasis words missing",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "emphasis_words"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected array, received undefined"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "emphasis words empty list",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "stands_alone missing",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "stands_alone"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected boolean, received undefined"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "stands_alone a string",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "stands_alone"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected boolean, received string"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "claim missing",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "claim"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected string, received undefined"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "bridge_from_sec missing",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "bridge_from_sec"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected number, received undefined"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "bridge_from_sec a number",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": 20,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "context_line missing",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "context_line"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected string, received undefined"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "context_line a long string",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": false,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "title_alternatives missing",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "title_alternatives"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected array, received undefined"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "title_alternatives three",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "one",
+          "two"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "title_alternatives one",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "only one"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "title_alternatives empty",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": []
+      }
+    ]
+  },
+  {
+    "name": "title_alternatives clean-up",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "Same Title",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "Fresh angle",
+          "Third angle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "title_alternatives blanks and long",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "title_alternatives not strings",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "title_alternatives",
+          1
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected string, received number"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "start_sec a string",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          0,
+          "start_sec"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected number, received string"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "end_sec before start_sec",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 50,
+        "endSec": 20,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "unknown key ignored",
+    "ok": true,
+    "issues": [],
+    "candidates": [
+      {
+        "startSec": 10,
+        "endSec": 45,
+        "title": "The hive at thirty-five degrees",
+        "hook": "Bees run a thermostat",
+        "score": 82,
+        "hookScore": 80,
+        "flowScore": 78,
+        "standaloneScore": 85,
+        "valueScore": 70,
+        "emphasisWords": [
+          "thermostat",
+          "degrees"
+        ],
+        "standalone": {
+          "standsAlone": true,
+          "claim": "Bees keep the hive warm.",
+          "bridgeFromSec": null,
+          "contextLine": null
+        },
+        "titleAlternatives": [
+          "How bees heat a hive",
+          "Why the hive never freezes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "second clip bad",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips",
+          1,
+          "title"
+        ],
+        "code": "too_small",
+        "message": "Too small: expected string to have >=1 characters"
+      },
+      {
+        "path": [
+          "clips",
+          1,
+          "score"
+        ],
+        "code": "too_big",
+        "message": "Too big: expected number to be <=100"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "clips missing",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected array, received undefined"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "clips not an array",
+    "ok": false,
+    "issues": [
+      {
+        "path": [
+          "clips"
+        ],
+        "code": "invalid_type",
+        "message": "Invalid input: expected array, received string"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "raw is an array",
+    "ok": false,
+    "issues": [
+      {
+        "path": [],
+        "code": "invalid_type",
+        "message": "Invalid input: expected object, received array"
+      }
+    ],
+    "candidates": null
+  },
+  {
+    "name": "raw is null",
+    "ok": false,
+    "issues": [
+      {
+        "path": [],
+        "code": "invalid_type",
+        "message": "Invalid input: expected object, received null"
+      }
+    ],
+    "candidates": null
+  }
+]

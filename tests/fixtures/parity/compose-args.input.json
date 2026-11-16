@@ -1,0 +1,76 @@
+{
+  "frames": [
+    {
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "width": 2160,
+      "height": 3840
+    },
+    {
+      "width": 3840,
+      "height": 2160
+    },
+    {
+      "width": 1081,
+      "height": 1921
+    },
+    {
+      "width": 4000,
+      "height": 9000
+    }
+  ],
+  "compose": [
+    {
+      "videoPath": "/run/render/clip-01/window-cut.mp4",
+      "filterGraph": "[0:v]null[vout]",
+      "outPath": "clip.mp4",
+      "filterThreads": 2,
+      "encodeThreads": 4
+    },
+    {
+      "videoPath": "window.mp4",
+      "filterGraph": "[0:v]null[vout]",
+      "outPath": "clip.mp4",
+      "filterThreads": 2,
+      "encodeThreads": 4,
+      "brandingMark": {
+        "path": "logo.png",
+        "durationSec": 23.456
+      }
+    },
+    {
+      "videoPath": "window.mp4",
+      "filterGraph": "[0:v]null[vout]",
+      "outPath": "clip.mp4",
+      "filterThreads": 1,
+      "encodeThreads": 8,
+      "brandingMark": null,
+      "progress": true
+    },
+    {
+      "videoPath": "window.mp4",
+      "filterGraph": "[0:v]null[vout]",
+      "outPath": "clip.mp4",
+      "filterThreads": 2,
+      "encodeThreads": 4,
+      "brandingMark": {
+        "path": "logo.jpg",
+        "durationSec": 9.8
+      },
+      "progress": false
+    }
+  ],
+  "durations": [
+    0.4,
+    1,
+    1.99,
+    2,
+    2.5,
+    20,
+    61.25
+  ],
+  "videoPath": "clip.mp4",
+  "thumbPath": "clip.jpg"
+}

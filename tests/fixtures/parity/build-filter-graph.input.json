@@ -1,0 +1,323 @@
+{
+  "output": {
+    "width": 1080,
+    "height": 1920
+  },
+  "blurSigma": 40,
+  "shots": [
+    {
+      "startSec": 0,
+      "endSec": 2.5
+    },
+    {
+      "startSec": 2.5,
+      "endSec": 6.25
+    },
+    {
+      "startSec": 6.25,
+      "endSec": 9.8
+    }
+  ],
+  "placements": {
+    "crop": {
+      "kind": "crop",
+      "rect": {
+        "x": 656,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      }
+    },
+    "crop2": {
+      "kind": "crop",
+      "rect": {
+        "x": 120,
+        "y": 40,
+        "width": 540,
+        "height": 960
+      }
+    },
+    "track": {
+      "kind": "track",
+      "path": {
+        "size": {
+          "width": 608,
+          "height": 1080
+        },
+        "x": [
+          {
+            "t": 0,
+            "v": 600
+          },
+          {
+            "t": 1.5,
+            "v": 640
+          },
+          {
+            "t": 3,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": 0
+          }
+        ]
+      }
+    },
+    "trackStill": {
+      "kind": "track",
+      "path": {
+        "size": {
+          "width": 540,
+          "height": 960
+        },
+        "x": [
+          {
+            "t": 0,
+            "v": 410
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": 60
+          }
+        ]
+      }
+    },
+    "fit": {
+      "kind": "fit"
+    },
+    "fitChosen": {
+      "kind": "fit",
+      "chosen": true
+    },
+    "stack": {
+      "kind": "stack",
+      "panels": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 1214,
+          "height": 1080
+        },
+        {
+          "x": 706,
+          "y": 0,
+          "width": 1214,
+          "height": 1080
+        }
+      ]
+    },
+    "panels1": {
+      "kind": "panels",
+      "cameras": [
+        {
+          "x": 1500,
+          "y": 20,
+          "width": 400,
+          "height": 236
+        }
+      ],
+      "game": {
+        "size": {
+          "width": 1080,
+          "height": 1210
+        },
+        "x": [
+          {
+            "t": 0,
+            "v": 420
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": 0
+          }
+        ]
+      },
+      "topHeight": 640
+    },
+    "panels2": {
+      "kind": "panels",
+      "cameras": [
+        {
+          "x": 1500,
+          "y": 20,
+          "width": 400,
+          "height": 474
+        },
+        {
+          "x": 40,
+          "y": 600,
+          "width": 400,
+          "height": 474
+        }
+      ],
+      "game": {
+        "size": {
+          "width": 960,
+          "height": 1080
+        },
+        "x": [
+          {
+            "t": 0,
+            "v": 300
+          },
+          {
+            "t": 2,
+            "v": 480
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": 0
+          }
+        ]
+      },
+      "topHeight": 760
+    }
+  },
+  "plans": {
+    "fill": [
+      "crop",
+      "crop2",
+      "fit"
+    ],
+    "track": [
+      "track",
+      "crop",
+      "trackStill"
+    ],
+    "fit-blur": [
+      "fit",
+      "fitChosen",
+      "fit"
+    ],
+    "stack": [
+      "stack",
+      "crop",
+      "stack"
+    ],
+    "panels": [
+      "panels1",
+      "panels2",
+      "fit"
+    ]
+  },
+  "variants": [
+    {
+      "name": "captions-headline-logo",
+      "assPath": "captions.ass",
+      "headlineAssPath": "headline.ass",
+      "logo": {
+        "key": "logo",
+        "width": 0.1,
+        "anchor": "bottom-left",
+        "marginX": 0.0854,
+        "marginY": 0.06,
+        "opacity": 0.35,
+        "timing": {
+          "kind": "whole"
+        }
+      }
+    },
+    {
+      "name": "captions-only",
+      "assPath": "captions.ass"
+    },
+    {
+      "name": "headline-only",
+      "headlineAssPath": "headline.ass"
+    },
+    {
+      "name": "nothing"
+    },
+    {
+      "name": "logo-only",
+      "logo": {
+        "key": "logo",
+        "width": 0.16,
+        "anchor": "top-right",
+        "marginX": 0.04,
+        "marginY": 0.025,
+        "opacity": 1,
+        "timing": {
+          "kind": "window",
+          "startSec": 1,
+          "holdSec": 4
+        }
+      }
+    },
+    {
+      "name": "text-below-captions-headline-logo",
+      "assPath": "captions.ass",
+      "headlineAssPath": "headline.ass",
+      "textBelowAssPath": "text-below.ass",
+      "logo": {
+        "key": "logo",
+        "width": 0.16,
+        "anchor": "top-right",
+        "marginX": 0.04,
+        "marginY": 0.025,
+        "opacity": 1,
+        "timing": {
+          "kind": "window",
+          "startSec": 1,
+          "holdSec": 4
+        }
+      }
+    },
+    {
+      "name": "paths-escaped",
+      "assPath": "C:\\run dir\\render\\captions.ass",
+      "headlineAssPath": "/run dir/a:b/headline.ass",
+      "logo": {
+        "key": "logo",
+        "width": 0.1,
+        "anchor": "bottom-left",
+        "marginX": 0.0854,
+        "marginY": 0.06,
+        "opacity": 0.35,
+        "timing": {
+          "kind": "whole"
+        }
+      }
+    },
+    {
+      "name": "logo-enable",
+      "assPath": "captions.ass",
+      "logo": {
+        "key": "logo",
+        "width": 0.1,
+        "anchor": "bottom-left",
+        "marginX": 0.0854,
+        "marginY": 0.06,
+        "opacity": 0.35,
+        "timing": {
+          "kind": "whole"
+        },
+        "enableFromSec": 3.5
+      }
+    }
+  ],
+  "backdrops": [
+    {
+      "kind": "blur"
+    },
+    {
+      "kind": "black"
+    },
+    {
+      "kind": "colour",
+      "hex": "#12ab34"
+    },
+    {
+      "kind": "crop"
+    }
+  ]
+}

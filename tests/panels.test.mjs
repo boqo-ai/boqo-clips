@@ -11,9 +11,12 @@ import { faceInRect, focusPath, panelPlacement, panelsEligible, panelsOutputElig
 import { enoughFrames, frameArgs, sampleTimes } from '../engine/boqo/panels-frames.mjs';
 import { PANELS_PROBE_SYSTEM, PANELS_PROMPT_VERSION, PANELS_SYSTEM, probeContent, probeTurn, readContent, readTurn, wordsText } from '../engine/boqo/panels-prompt.mjs';
 import {
-  CAPTION_POSITION_MAX, HEADLINE_POSITION_MAX, HEADLINE_POSITION_MIN, MIN_PART_SEC, PANELS_TEXT_GAP_FRACTION, captionFloor, panelsCaptionFloor,
-  panelsCaptionStyle, panelsTextElements, panelsTextPosition, panelsTextRuns,
+  MIN_PART_SEC, PANELS_TEXT_GAP_FRACTION, captionFloor, panelsCaptionFloor, panelsCaptionStyle, panelsTextElements, panelsTextPosition,
+  panelsTextRuns,
 } from '../engine/boqo/panels-text.mjs';
+import { CAPTION_POSITION_MAX, scalePreset } from '../engine/boqo/caption-presets.mjs';
+import { DEFAULT_HEADLINE, HEADLINE_POSITION_MAX, HEADLINE_POSITION_MIN } from '../engine/boqo/headline.mjs';
+import { textElementExtent } from '../engine/boqo/headline-ass.mjs';
 import { PANEL_PROBE_FRAMES, PANEL_PROBE_FRAME_WIDTH, parseProbeSize, probeSizeArgs, probeTimes } from '../engine/boqo/probe.mjs';
 import { planShots } from '../engine/boqo/plan-shots.mjs';
 import { expectGolden } from './helpers/golden.mjs';
@@ -95,25 +98,31 @@ test('panelsTextRuns matches boqo (golden panels-text-runs)', () => {
   assert.equal(MIN_PART_SEC, 0.8);
 });
 
-// The golden prints each text element's extent (boqo's own `textElementExtent`, keyed by the element's text): the copy
-// takes that function as a parameter, and the test hands it those numbers.
-const asElement = (t) => ({ text: t.text, settings: { positionFraction: t.positionFraction }, style: undefined, span: t.span });
+// Each text element is the default headline (core's DEFAULT_HEADLINE) with the case's text and position, as the cases
+// build them; the golden prints each element's extent (boqo's own `textElementExtent`, keyed by the element's text).
+// Since A13 the copy calls its own `textElementExtent`, `scalePreset` and `headlineWindow` (they were parameters
+// before), and the goldens hold that to hosted's.
+const asElement = (t) => ({ text: t.text, settings: { ...DEFAULT_HEADLINE, positionFraction: t.positionFraction }, style: undefined, span: t.span });
 
 test('captionFloor and panelsCaptionFloor match boqo (golden panels-caption-floor)', () => {
   const want = golden('panels-caption-floor');
   const actual = input('panels-caption-floor').cases.map((c, k) => {
-    const extents = want[k].extents;
     const text = c.text.map(asElement);
-    return { name: c.name, seam: captionFloor(c.placed, c.output.height), floor: panelsCaptionFloor(c.placed, c.output, text, (el) => extents[el.text]), extents };
+    const extents = Object.fromEntries(text.map((el) => [el.text, textElementExtent(el, c.output)]));
+    return { name: c.name, seam: captionFloor(c.placed, c.output.height), floor: panelsCaptionFloor(c.placed, c.output, text), extents };
   });
   expectGolden('panels-caption-floor', actual, TOL0);
   assert.equal(PANELS_TEXT_GAP_FRACTION, 0.01);
 });
 
-test('a text element on a seam needs the extent function: no silent skip', () => {
-  const c = input('panels-caption-floor').cases.find((x) => x.text.length > 0);
-  assert.throws(() => panelsCaptionFloor(c.placed, c.output, c.text.map(asElement)), /textElementExtent/);
-  // No text, or no panels shot: nothing to measure, so no parameter is needed.
+test('a text element on a seam pushes the caption floor to its drawn bottom, measured by the copy\'s own textElementExtent', () => {
+  const cases = input('panels-caption-floor').cases;
+  const c = cases.find((x) => x.name === 'a headline on the seam over the shot pushes the floor down');
+  const text = c.text.map(asElement);
+  const extent = textElementExtent(text[0], c.output);
+  assert.equal(panelsCaptionFloor(c.placed, c.output, text), (extent.bottom + PANELS_TEXT_GAP_FRACTION * c.output.height) / c.output.height);
+  assert.ok(panelsCaptionFloor(c.placed, c.output, text) > captionFloor(c.placed, c.output.height));
+  // No text, or no panels shot: nothing to measure.
   assert.equal(panelsCaptionFloor(c.placed, c.output, []), captionFloor(c.placed, c.output.height));
 });
 
@@ -123,24 +132,25 @@ test('panelsCaptionStyle matches boqo for every gallery style (golden panels-cap
   const actual = want.map((w) => {
     const scenario = i.scenarios.find((s) => s.name === w.scenario);
     const text = scenario.text.map(asElement);
-    const result = panelsCaptionStyle(w.style, scenario.placed, i.output, text, { scalePreset: () => w.scaled, textElementExtent: (el) => w.extents[el.text] });
-    return { scenario: w.scenario, style: w.style, scaled: w.scaled, extents: w.extents, result };
+    const result = panelsCaptionStyle(w.style, scenario.placed, i.output, text);
+    const scaled = w.style.emission === 'positioned' ? scalePreset(w.style, i.output) : null;
+    return {
+      scenario: w.scenario,
+      style: w.style,
+      scaled: scaled && { maxLines: scaled.maxLines, lineSpacingRatio: scaled.lineSpacingRatio, capHeightPx: scaled.capHeightPx, outlineWidth: scaled.outlineWidth },
+      extents: Object.fromEntries(text.map((el) => [el.text, textElementExtent(el, i.output)])),
+      result,
+    };
   });
   expectGolden('panels-caption-style', actual, TOL0);
   assert.ok(actual.some((a) => a.result.centreFraction !== a.style.centreFraction), 'some scenario must move the block');
 });
 
 test('panelsTextElements matches boqo (golden panels-text-elements)', () => {
-  // core's headlineWindow at the pin (packages/core/src/headline.ts:399), the function A13 ports; the golden holds this
-  // stand-in to hosted's own through the elements whose span is null.
-  const headlineWindow = (headline, clipDurationSec) => {
-    if (headline.timing.kind === 'whole') return { startSec: 0, endSec: clipDurationSec };
-    const startSec = Math.min(headline.timing.startSec, clipDurationSec);
-    return { startSec, endSec: Math.min(startSec + headline.timing.holdSec, clipDurationSec) };
-  };
+  // The elements whose span is null take the copy's own `headlineWindow` (the one `buildTextAss` draws).
   const actual = input('panels-text-elements').scenarios.map((s) => {
-    const elements = s.elements.map((e) => ({ text: e.text, settings: { positionFraction: e.positionFraction, timing: e.timing }, style: undefined, span: e.span }));
-    const placed = panelsTextElements(elements, s.placed, s.output, s.clipDurationSec, headlineWindow);
+    const elements = s.elements.map((e) => ({ text: e.text, settings: { ...DEFAULT_HEADLINE, positionFraction: e.positionFraction, timing: e.timing }, style: undefined, span: e.span }));
+    const placed = panelsTextElements(elements, s.placed, s.output, s.clipDurationSec);
     return {
       name: s.name,
       sameArray: placed === elements,
@@ -148,8 +158,6 @@ test('panelsTextElements matches boqo (golden panels-text-elements)', () => {
     };
   });
   expectGolden('panels-text-elements', actual, TOL0);
-  const noSpan = input('panels-text-elements').scenarios[1];
-  assert.throws(() => panelsTextElements(noSpan.elements.map((e) => ({ ...e, settings: { positionFraction: e.positionFraction, timing: e.timing } })), noSpan.placed, noSpan.output, 12), /headlineWindow/);
 });
 
 test('probeTimes matches boqo (golden probe-times)', () => {

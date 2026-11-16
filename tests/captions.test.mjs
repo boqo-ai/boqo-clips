@@ -442,11 +442,9 @@ test('every bundled face burns from fontsdir at its Bold flag, and a Cyrillic cl
 
 // ---- A11's parameters, against this task's copies ------------------------------------------------------------------
 
-test('the stream panels text module\'s copied caption bound and its scalePreset numbers are this copy\'s', async () => {
-  const { CAPTION_POSITION_MAX: PANELS_CAPTION_POSITION_MAX } = await import('../engine/boqo/panels-text.mjs');
-  assert.equal(PANELS_CAPTION_POSITION_MAX, CAPTION_POSITION_MAX);
-  // panels-caption-style's golden printed boqo's styles and the scalePreset numbers A11's copy takes as a parameter:
-  // the styles are this copy's table entries, and this copy's scalePreset gives the same numbers.
+test('the stream panels golden\'s styles are this copy\'s table entries, and this copy\'s scalePreset gives the numbers it printed', () => {
+  // panels-caption-style's golden printed boqo's styles and the scalePreset numbers (panels-text.mjs calls scalePreset
+  // itself since A13, as hosted does; tests/panels.test.mjs holds that call to the golden).
   const output = input('panels-caption-style').output;
   for (const entry of golden('panels-caption-style')) {
     assert.deepEqual(entry.style, JSON.parse(JSON.stringify(resolveCaptionStyle(entry.style.key))), entry.style.key);

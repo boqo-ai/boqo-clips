@@ -1,16 +1,12 @@
 // ported from boqo-ai/boqo apps/worker/src/render/panels-text.ts @ bcc9d99cc; keep in step (scripts/boqo-drift.mjs)
-// Cut imports, each to a constant or a parameter (this lane has no A12 caption or A13 headline modules yet, and
-// their later copies are the real ones):
-// - HEADLINE_POSITION_MIN and HEADLINE_POSITION_MAX (packages/core/src/headline.ts:203-204) and CAPTION_POSITION_MAX
-//   (packages/core/src/caption-presets.ts:477) are the constants below, at their values at the pin;
-// - `scalePreset` (caption-presets.ts), `textElementExtent` (render/headline.ts) and `headlineWindow` (core's
-//   headline.ts) are parameters of the three functions that call them: `panelsCaptionFloor(placed, output, text,
-//   textElementExtent)`, `panelsCaptionStyle(style, placed, output, text, { scalePreset, textElementExtent })` and
-//   `panelsTextElements(elements, placed, output, clipDurationSec, headlineWindow)`. The renderer passes the copies
-//   of A12 and A13. `ShotPlan` is a type only (pipeline.ts, engine/boqo/plan-shots.mjs).
-export const HEADLINE_POSITION_MIN = 0.08;
-export const HEADLINE_POSITION_MAX = 0.92;
-export const CAPTION_POSITION_MAX = 0.9;
+// Cut imports: `@boqo/core` and `./headline` become the sibling copies (caption-presets, headline,
+// headline-ass: A12's and A13's modules). `ShotPlan` is a type only (pipeline.ts, engine/boqo/plan-shots.mjs).
+// A11 first copied HEADLINE_POSITION_MIN/MAX, CAPTION_POSITION_MAX as constants and took `scalePreset`,
+// `textElementExtent` and `headlineWindow` as parameters of the three functions that call them; those are the real
+// imports now (A13), and the parameters are gone, as in boqo's own signatures.
+import { CAPTION_POSITION_MAX, scalePreset } from "./caption-presets.mjs";
+import { HEADLINE_POSITION_MAX, HEADLINE_POSITION_MIN } from "./headline.mjs";
+import { headlineWindow, textElementExtent } from "./headline-ass.mjs";
 
 /**
  * Text on a stream panel clip (#293, spec §6.4): nothing covers a face. The
@@ -85,7 +81,6 @@ export function panelsCaptionFloor(
   placed                     ,
   output            ,
   text                                                                          = [],
-  textElementExtent,
 )                {
   const seam = captionFloor(placed, output.height);
   if (seam === null) return null;
@@ -101,7 +96,6 @@ export function panelsCaptionFloor(
         entry.placement.kind === "panels" && overlaps(span, entry.shot) && centrePx <= entry.placement.topHeight + SEAM_TOLERANCE_PX,
     );
     if (!onSeam) continue;
-    if (typeof textElementExtent !== "function") throw new TypeError("panelsCaptionFloor: text elements need the textElementExtent parameter");
     const extent = textElementExtent(element, output);
     if (extent === null) continue;
     floorPx = Math.max(floorPx, extent.bottom + PANELS_TEXT_GAP_FRACTION * output.height);
@@ -124,12 +118,10 @@ export function panelsCaptionStyle(
   placed                     ,
   output            ,
   text                                                                          = [],
-  { scalePreset, textElementExtent } = {},
 )                {
   if (style.emission !== "positioned") return style;
-  const floor = panelsCaptionFloor(placed, output, text, textElementExtent);
+  const floor = panelsCaptionFloor(placed, output, text);
   if (floor === null) return style;
-  if (typeof scalePreset !== "function") throw new TypeError("panelsCaptionStyle: a positioned style needs the scalePreset parameter");
   const scaled = scalePreset(style, output);
   const halfPx = (((scaled.maxLines - 1) * scaled.lineSpacingRatio + 1) / 2) * scaled.capHeightPx + scaled.outlineWidth;
   const floorPx = floor * output.height;
@@ -242,12 +234,10 @@ export function panelsTextElements(
   placed                     ,
   output            ,
   clipDurationSec        ,
-  headlineWindow,
 )                            {
   if (!placed.some((entry) => entry.placement.kind === "panels")) return elements;
   let moved = false;
   const out = elements.flatMap((element) => {
-    if (element.span == null && typeof headlineWindow !== "function") throw new TypeError("panelsTextElements: an element with no span needs the headlineWindow parameter");
     const window = element.span ?? headlineWindow(element.settings, clipDurationSec);
     const runs = panelsTextRuns({
       element: { ...window, positionFraction: element.settings.positionFraction },

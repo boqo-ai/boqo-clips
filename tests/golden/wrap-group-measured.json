@@ -1,0 +1,8616 @@
+{
+  "plain": [
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Oswald",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Inter",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "DejaVu Sans",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Anton",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bangers",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Archivo Black",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Luckiest Guy",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Permanent Marker",
+      "cap": 45,
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    }
+  ],
+  "measured": [
+    {
+      "face": "Poppins Black",
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Poppins Black",
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Poppins Black",
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2 3|4",
+      "overflow": true
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Bebas Neue",
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 0,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 0,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 0,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2 3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 0,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1 2|3",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 0,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 1,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 1,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 1,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 1,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 1,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 2,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 2,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 2,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 2,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 2,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 3,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 3,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 3,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 3,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 3,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 4,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 4,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1|2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 4,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 4,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 4,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0|1 2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 5,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 5,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "0 1 2 3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 5,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "0 1 2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 5,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "0 1 2 3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 5,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "0 1|2|3 4",
+      "overflow": true
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 6,
+      "maxWidth": 960,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 6,
+      "maxWidth": 700,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 6,
+      "maxWidth": 500,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 6,
+      "maxWidth": 300,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 1,
+      "lines": "",
+      "overflow": false
+    },
+    {
+      "face": "Montserrat ExtraBold",
+      "g": 6,
+      "maxWidth": 120,
+      "maxLines": 3,
+      "lines": "",
+      "overflow": false
+    }
+  ]
+}

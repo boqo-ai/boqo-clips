@@ -1,0 +1,106 @@
+{
+ "texts": [
+  {
+   "name": "latin",
+   "texts": [
+    "So",
+    "the",
+    "3",
+    "rockets",
+    "launched,",
+    "didn't",
+    "coming."
+   ]
+  },
+  {
+   "name": "cyrillic upper",
+   "texts": [
+    "ПРИВЕТ",
+    "МИР"
+   ]
+  },
+  {
+   "name": "cyrillic lower",
+   "texts": [
+    "привет",
+    "мир",
+    "это",
+    "жёлтый"
+   ]
+  },
+  {
+   "name": "one cyrillic word in latin",
+   "texts": [
+    "the",
+    "word",
+    "Москва",
+    "is"
+   ]
+  },
+  {
+   "name": "one lower cyrillic letter",
+   "texts": [
+    "abc",
+    "дx"
+   ]
+  },
+  {
+   "name": "ukrainian",
+   "texts": [
+    "їжак",
+    "ґанок",
+    "є"
+   ]
+  },
+  {
+   "name": "greek",
+   "texts": [
+    "Αθήνα",
+    "λόγος"
+   ]
+  },
+  {
+   "name": "accented latin",
+   "texts": [
+    "café",
+    "naïve",
+    "Ångström",
+    "Øresund",
+    "ß"
+   ]
+  },
+  {
+   "name": "digits and punctuation",
+   "texts": [
+    "100%",
+    "$5,000",
+    "#1",
+    "...",
+    "—"
+   ]
+  },
+  {
+   "name": "emoji",
+   "texts": [
+    "wow",
+    "🔥"
+   ]
+  },
+  {
+   "name": "empty",
+   "texts": []
+  },
+  {
+   "name": "empty strings",
+   "texts": [
+    "",
+    ""
+   ]
+  }
+ ],
+ "unknownFaces": [
+  "Comic Sans",
+  "montserrat extrabold",
+  ""
+ ]
+}

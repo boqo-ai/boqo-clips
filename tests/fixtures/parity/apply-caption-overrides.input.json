@@ -1,0 +1,234 @@
+{
+ "captions": [
+  {
+   "style": "punch",
+   "accentColours": [
+    "#E900FA"
+   ],
+   "positionFraction": 0.7
+  },
+  {
+   "font": {
+    "kind": "builtin",
+    "name": "Inter"
+   },
+   "baseColour": "#FAFAFA",
+   "accentColours": [
+    "#112233",
+    "#445566"
+   ],
+   "outlineColour": "#010203",
+   "textCase": "lower",
+   "positionFraction": 0.35,
+   "wordsTarget": 2,
+   "sizeScale": 1.2,
+   "style": "boldkeys",
+   "keyFont": "Bangers",
+   "glowColour": "#00FF00",
+   "glowStrength": 0.3,
+   "shadowColour": "#0000FF",
+   "cycle": false,
+   "speed": 1.5
+  },
+  {},
+  {
+   "style": "marker",
+   "accentColours": [
+    "#00FF00"
+   ],
+   "speed": 0.5
+  },
+  {
+   "style": "neon",
+   "glowStrength": 1,
+   "keyFont": "Anton"
+  },
+  {
+   "style": "stack",
+   "shadowColour": "#123456",
+   "sizeScale": 0.7,
+   "wordsTarget": 5
+  },
+  {
+   "style": "comic",
+   "cycle": false,
+   "keyFont": "Luckiest Guy",
+   "wordsTarget": 1
+  },
+  {
+   "style": "karaoke",
+   "speed": 2,
+   "cycle": true,
+   "sizeScale": 1.4,
+   "positionFraction": 0.1
+  },
+  {
+   "style": "classic",
+   "sizeScale": 0.7,
+   "font": {
+    "kind": "builtin",
+    "name": "Anton"
+   }
+  },
+  {
+   "accentColours": [
+    "#ABCDEF"
+   ],
+   "textCase": "preserve",
+   "positionFraction": 0.9
+  }
+ ],
+ "invalid": [
+  {
+   "style": "unknown-style",
+   "baseColour": "#FFFFFF"
+  },
+  {
+   "style": "illustrated"
+  },
+  {
+   "style": "none"
+  },
+  {
+   "positionFraction": 0.95
+  },
+  {
+   "positionFraction": 0.05
+  },
+  {
+   "accentColours": [
+    "#1",
+    "#2"
+   ]
+  },
+  {
+   "accentColours": []
+  },
+  {
+   "accentColours": [
+    "#111111",
+    "#222222",
+    "#333333"
+   ]
+  },
+  {
+   "font": {
+    "kind": "builtin",
+    "name": "Comic Sans"
+   }
+  },
+  {
+   "font": {
+    "kind": "upload",
+    "name": "Inter"
+   }
+  },
+  {
+   "wordsTarget": 0
+  },
+  {
+   "wordsTarget": 2.5
+  },
+  {
+   "wordsTarget": 6
+  },
+  {
+   "sizeScale": 1.5
+  },
+  {
+   "speed": 3
+  },
+  {
+   "glowStrength": -0.1
+  },
+  {
+   "keyFont": "Comic Sans"
+  },
+  {
+   "extra": "x",
+   "baseColour": "#000000"
+  },
+  {
+   "textCase": "title"
+  },
+  null,
+  "punch",
+  []
+ ],
+ "keys": [
+  "default",
+  "karaoke",
+  "punch",
+  "classic",
+  "none",
+  "boldkeys",
+  "illustrated",
+  "bogus",
+  null
+ ],
+ "outputs": [
+  {
+   "width": 1080,
+   "height": 1920
+  },
+  {
+   "width": 1080,
+   "height": 1080
+  },
+  {
+   "width": 1920,
+   "height": 1080
+  }
+ ],
+ "clip": [
+  {
+   "clipStyle": null,
+   "projectStyle": "default",
+   "clipOverrides": null,
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  },
+  {
+   "clipStyle": "comic",
+   "projectStyle": "default",
+   "clipOverrides": {
+    "accentColours": [
+     "#000001"
+    ]
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  },
+  {
+   "clipStyle": null,
+   "projectStyle": "default",
+   "clipOverrides": {
+    "sizeScale": 1.1
+   }
+  },
+  {
+   "clipStyle": "classic",
+   "projectStyle": "karaoke",
+   "clipOverrides": {
+    "sizeScale": 1.1
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  }
+ ]
+}

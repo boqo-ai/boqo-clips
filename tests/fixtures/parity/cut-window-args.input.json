@@ -1,0 +1,44 @@
+{
+ "cases": [
+  {
+   "name": "two segments with audio",
+   "args": {
+    "inPath": "/w/window.mp4",
+    "outPath": "/w/cut.mp4",
+    "keep": [
+     {
+      "start": 0,
+      "end": 2.12
+     },
+     {
+      "start": 4.2,
+      "end": 9.84
+     }
+    ],
+    "hasAudio": true,
+    "filterThreads": 1,
+    "encodeThreads": 2
+   }
+  },
+  {
+   "name": "video only",
+   "args": {
+    "inPath": "in.mp4",
+    "outPath": "out.mp4",
+    "keep": [
+     {
+      "start": 0,
+      "end": 5
+     }
+    ],
+    "hasAudio": false,
+    "filterThreads": 2,
+    "encodeThreads": 4
+   }
+  }
+ ],
+ "frameTimes": {
+  "path": "/w/window.mp4",
+  "stdout": "-0.080000\n-0.040000\nN/A\n0.000000\n0.040000\n\r\n0.080000\n  0.120000  \n0.100000\nabc\n"
+ }
+}

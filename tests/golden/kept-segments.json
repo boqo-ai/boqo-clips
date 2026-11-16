@@ -1,0 +1,41 @@
+[
+  {
+    "kept": [
+      {
+        "start": 0,
+        "end": 10
+      }
+    ],
+    "cutSec": 0
+  },
+  {
+    "kept": [
+      {
+        "start": 0,
+        "end": 2
+      },
+      {
+        "start": 3,
+        "end": 5
+      },
+      {
+        "start": 6.5,
+        "end": 10
+      }
+    ],
+    "cutSec": 2.5
+  },
+  {
+    "kept": [
+      {
+        "start": 1,
+        "end": 9
+      }
+    ],
+    "cutSec": 2
+  },
+  {
+    "kept": [],
+    "cutSec": 10
+  }
+]

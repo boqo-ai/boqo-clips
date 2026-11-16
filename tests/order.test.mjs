@@ -8,7 +8,8 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, 
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { finalOrder, preRenderOrder, renderSet, summaryLines } from '../engine/order.mjs';
+import { renameSync } from 'node:fs';
+import { finalOrder, preRenderOrder, renderSet, reorderRun, summaryLines } from '../engine/order.mjs';
 
 const TOOL = join(dirname(fileURLToPath(import.meta.url)), '..', 'tools', 'clips.mjs');
 
@@ -286,6 +287,78 @@ test('summary prints the lines, one each', () => {
     const r = spawnSync(process.execPath, [TOOL, 'summary', '--run', dir], { encoding: 'utf8' });
     assert.equal(r.status, 0);
     assert.equal(r.stdout, '1 · 87 exceptional · A B C D · Replayed · top 3% · The bees · 0:42\n+1 not rendered\n');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+// ---- a crash in the middle of the renames
+
+// Two clips that swap, each with a thumbnail: 4 moves, 8 renames (out, then in).
+const swapRun = () =>
+  runDir(
+    [
+      row(1, { score: 50, rendered: true, file: 'clip-01.mp4', judgment: judged(1) }),
+      row(2, { score: 50, rendered: true, file: 'clip-02.mp4', judgment: judged(5) }),
+    ],
+    { 'clip-01.mp4': 'one', 'clip-02.mp4': 'two', 'clip-01.jpg': 'one thumb', 'clip-02.jpg': 'two thumb' },
+  );
+// A rename that throws on its k-th call, as a crash would stop the process there.
+const crashAt = (k) => {
+  let calls = 0;
+  return (from, to) => {
+    if (++calls === k) throw new Error('simulated crash');
+    renameSync(from, to);
+  };
+};
+
+test('order: a crash after any number of renames is put back and completed by the next run, every file present', () => {
+  for (let k = 1; k <= 8; k++) {
+    const dir = swapRun();
+    try {
+      assert.throws(() => reorderRun(dir, { rename: crashAt(k) }), /simulated crash/, `crash at rename ${k}`);
+      // the clips.json was not rewritten, and a file that is mid-move waits under its own name
+      assert.deepEqual(nums(record(dir).clips), [1, 2]);
+      for (const f of files(dir)) if (f.startsWith('.order-tmp.') && f !== '.order-tmp.journal.json') assert.match(f, /^\.order-tmp\.clip-0[12]\.(mp4|jpg)$/);
+
+      const r = order(dir);
+      assert.equal(r.code, 0, `rerun after a crash at rename ${k}: ${JSON.stringify(r.out)}`);
+      assert.deepEqual(r.out, { ok: true, clips: 2, rendered: 2, renamed: 4 });
+      assert.deepEqual(files(dir), ['clip-01.jpg', 'clip-01.mp4', 'clip-02.jpg', 'clip-02.mp4']); // no temp file, no journal left
+      assert.equal(readFileSync(join(dir, 'clip-01.mp4'), 'utf8'), 'two');
+      assert.equal(readFileSync(join(dir, 'clip-02.mp4'), 'utf8'), 'one');
+      assert.equal(readFileSync(join(dir, 'clip-01.jpg'), 'utf8'), 'two thumb');
+      assert.equal(readFileSync(join(dir, 'clip-02.jpg'), 'utf8'), 'one thumb');
+      assert.deepEqual(record(dir).clips.map((c) => [c.n, c.title, c.file]), [[1, 'Clip 2', 'clip-01.mp4'], [2, 'Clip 1', 'clip-02.mp4']]);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  }
+});
+
+test('order: a crash restores to the original names even when the journal is gone and nothing is in the way', () => {
+  const dir = swapRun();
+  try {
+    assert.throws(() => reorderRun(dir, { rename: crashAt(2) }), /simulated crash/); // one video is out, nothing placed yet
+    rmSync(join(dir, '.order-tmp.journal.json'));
+    assert.ok(files(dir).includes('.order-tmp.clip-02.mp4'));
+    const r = order(dir);
+    assert.equal(r.code, 0);
+    assert.equal(readFileSync(join(dir, 'clip-01.mp4'), 'utf8'), 'two');
+    assert.equal(readFileSync(join(dir, 'clip-02.mp4'), 'utf8'), 'one');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('order: a leftover temp file whose original name is held by a different file is refused, touching nothing', () => {
+  const dir = runDir([row(1, { score: 50, rendered: true, file: 'clip-01.mp4' })], { 'clip-01.mp4': 'current', '.order-tmp.clip-01.mp4': 'stranded' });
+  try {
+    const r = order(dir);
+    assert.equal(r.code, 1);
+    assert.match(r.out.errors[0], /clip-01\.mp4 is already there/);
+    assert.equal(readFileSync(join(dir, 'clip-01.mp4'), 'utf8'), 'current');
+    assert.equal(readFileSync(join(dir, '.order-tmp.clip-01.mp4'), 'utf8'), 'stranded');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

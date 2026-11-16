@@ -1,0 +1,205 @@
+[
+  {
+    "name": "stands",
+    "test": {
+      "v": 1,
+      "outcome": "stands",
+      "claim": "Bees keep the hive at 35 degrees.",
+      "bridgeFromSec": null,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": false,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "bridged-snapped-to-a-start",
+    "test": {
+      "v": 1,
+      "outcome": "bridged",
+      "claim": "The queen lays eggs.",
+      "bridgeFromSec": 30,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": false,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "bridged-tie-goes-to-the-lower-start",
+    "test": {
+      "v": 1,
+      "outcome": "bridged",
+      "claim": "tie",
+      "bridgeFromSec": 30,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": false,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "context-line-kept-trimmed",
+    "test": {
+      "v": 1,
+      "outcome": "context",
+      "claim": "The speaker means the second hive.",
+      "bridgeFromSec": null,
+      "contextLine": "Earlier: the second hive failed.",
+      "sha": "abc123"
+    },
+    "inconsistent": false,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "fails-no-line",
+    "test": {
+      "v": 1,
+      "outcome": "fails",
+      "claim": "",
+      "bridgeFromSec": null,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": false,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "fails-blank-line",
+    "test": {
+      "v": 1,
+      "outcome": "fails",
+      "claim": "unclear",
+      "bridgeFromSec": null,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": false,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "fails-line-too-long-dropped",
+    "test": {
+      "v": 1,
+      "outcome": "fails",
+      "claim": "unclear",
+      "bridgeFromSec": null,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": false,
+    "lineDropped": true,
+    "schemaOk": true
+  },
+  {
+    "name": "context-line-60-chars-kept",
+    "test": {
+      "v": 1,
+      "outcome": "context",
+      "claim": "ok",
+      "bridgeFromSec": null,
+      "contextLine": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+      "sha": null
+    },
+    "inconsistent": false,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "inconsistent-line-on-standing-clip",
+    "test": {
+      "v": 1,
+      "outcome": "stands",
+      "claim": "ok",
+      "bridgeFromSec": null,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": true,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "inconsistent-bridge-on-failing-clip",
+    "test": {
+      "v": 1,
+      "outcome": "context",
+      "claim": "ok",
+      "bridgeFromSec": null,
+      "contextLine": "A line",
+      "sha": null
+    },
+    "inconsistent": true,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "reversed-bridge-before-start",
+    "test": {
+      "v": 1,
+      "outcome": "stands",
+      "claim": "ok",
+      "bridgeFromSec": null,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": true,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "reversed-bridge-at-start",
+    "test": {
+      "v": 1,
+      "outcome": "stands",
+      "claim": "ok",
+      "bridgeFromSec": null,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": true,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "claim-clamped-to-200",
+    "test": {
+      "v": 1,
+      "outcome": "stands",
+      "claim": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "bridgeFromSec": null,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": false,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "bridge-with-no-segment-starts",
+    "test": {
+      "v": 1,
+      "outcome": "bridged",
+      "claim": "ok",
+      "bridgeFromSec": 31.9,
+      "contextLine": null,
+      "sha": null
+    },
+    "inconsistent": false,
+    "lineDropped": false,
+    "schemaOk": true
+  },
+  {
+    "name": "no-answer",
+    "test": null,
+    "inconsistent": false,
+    "lineDropped": false,
+    "schemaOk": null
+  }
+]

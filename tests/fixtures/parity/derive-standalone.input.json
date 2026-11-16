@@ -1,0 +1,375 @@
+{
+ "cases": [
+  {
+   "name": "stands",
+   "answer": {
+    "standsAlone": true,
+    "claim": "  Bees keep the hive at 35 degrees.  ",
+    "bridgeFromSec": null,
+    "contextLine": null
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "bridged-snapped-to-a-start",
+   "answer": {
+    "standsAlone": true,
+    "claim": "The queen lays eggs.",
+    "bridgeFromSec": 31.9,
+    "contextLine": null
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "bridged-tie-goes-to-the-lower-start",
+   "answer": {
+    "standsAlone": true,
+    "claim": "tie",
+    "bridgeFromSec": 32.5,
+    "contextLine": null
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "context-line-kept-trimmed",
+   "answer": {
+    "standsAlone": false,
+    "claim": "The speaker means the second hive.",
+    "bridgeFromSec": null,
+    "contextLine": "  Earlier: the second hive failed.  "
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": "abc123",
+   "startSec": 20
+  },
+  {
+   "name": "fails-no-line",
+   "answer": {
+    "standsAlone": false,
+    "claim": "",
+    "bridgeFromSec": null,
+    "contextLine": null
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "fails-blank-line",
+   "answer": {
+    "standsAlone": false,
+    "claim": "unclear",
+    "bridgeFromSec": null,
+    "contextLine": "   "
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "fails-line-too-long-dropped",
+   "answer": {
+    "standsAlone": false,
+    "claim": "unclear",
+    "bridgeFromSec": null,
+    "contextLine": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "context-line-60-chars-kept",
+   "answer": {
+    "standsAlone": false,
+    "claim": "ok",
+    "bridgeFromSec": null,
+    "contextLine": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "inconsistent-line-on-standing-clip",
+   "answer": {
+    "standsAlone": true,
+    "claim": "ok",
+    "bridgeFromSec": null,
+    "contextLine": "A line that should not be there"
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "inconsistent-bridge-on-failing-clip",
+   "answer": {
+    "standsAlone": false,
+    "claim": "ok",
+    "bridgeFromSec": 30,
+    "contextLine": "A line"
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "reversed-bridge-before-start",
+   "answer": {
+    "standsAlone": true,
+    "claim": "ok",
+    "bridgeFromSec": 5,
+    "contextLine": null
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "reversed-bridge-at-start",
+   "answer": {
+    "standsAlone": true,
+    "claim": "ok",
+    "bridgeFromSec": 20,
+    "contextLine": null
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "claim-clamped-to-200",
+   "answer": {
+    "standsAlone": true,
+    "claim": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+    "bridgeFromSec": null,
+    "contextLine": null
+   },
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "bridge-with-no-segment-starts",
+   "answer": {
+    "standsAlone": true,
+    "claim": "ok",
+    "bridgeFromSec": 31.9,
+    "contextLine": null
+   },
+   "segmentStarts": [],
+   "sha": null,
+   "startSec": 20
+  },
+  {
+   "name": "no-answer",
+   "answer": null,
+   "segmentStarts": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "sha": null,
+   "startSec": 20
+  }
+ ]
+}

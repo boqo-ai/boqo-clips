@@ -1,0 +1,489 @@
+[
+  {
+    "argv": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-ss",
+      "12.5",
+      "-i",
+      "clip.mp4",
+      "-t",
+      "2.5",
+      "-vf",
+      "fps=4.8,scale=320:180",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "-"
+    ],
+    "frames": [
+      {
+        "index": 0,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 0
+      },
+      {
+        "index": 1,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 1
+      },
+      {
+        "index": 2,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 2
+      },
+      {
+        "index": 3,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 3
+      },
+      {
+        "index": 4,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 4
+      },
+      {
+        "index": 5,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 5
+      },
+      {
+        "index": 6,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 6
+      },
+      {
+        "index": 7,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 7
+      },
+      {
+        "index": 8,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 8
+      },
+      {
+        "index": 9,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 9
+      },
+      {
+        "index": 10,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 10
+      },
+      {
+        "index": 11,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 11
+      }
+    ],
+    "raised": null
+  },
+  {
+    "argv": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-ss",
+      "0.0",
+      "-i",
+      "clip.mp4",
+      "-t",
+      "6.0",
+      "-vf",
+      "fps=2.0,scale=320:180",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "-"
+    ],
+    "frames": [
+      {
+        "index": 0,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 0
+      },
+      {
+        "index": 1,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 1
+      },
+      {
+        "index": 2,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 2
+      },
+      {
+        "index": 3,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 3
+      },
+      {
+        "index": 4,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 4
+      },
+      {
+        "index": 5,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 5
+      },
+      {
+        "index": 6,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 6
+      },
+      {
+        "index": 7,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 7
+      },
+      {
+        "index": 8,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 8
+      },
+      {
+        "index": 9,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 9
+      },
+      {
+        "index": 10,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 10
+      }
+    ],
+    "raised": null
+  },
+  {
+    "argv": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-ss",
+      "3.0",
+      "-i",
+      "clip.mp4",
+      "-t",
+      "0.001",
+      "-vf",
+      "fps=12000.0,scale=320:180",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "-"
+    ],
+    "frames": [
+      {
+        "index": 0,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 0
+      },
+      {
+        "index": 1,
+        "shape": [
+          180,
+          320,
+          3
+        ],
+        "first": 1
+      }
+    ],
+    "raised": null
+  },
+  {
+    "argv": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-ss",
+      "1.1",
+      "-i",
+      "clip.mp4",
+      "-t",
+      "1.6",
+      "-vf",
+      "fps=7.5,scale=1280:720",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "-"
+    ],
+    "frames": [
+      {
+        "index": 0,
+        "shape": [
+          720,
+          1280,
+          3
+        ],
+        "first": 0
+      }
+    ],
+    "raised": null
+  },
+  {
+    "argv": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-ss",
+      "7.25",
+      "-i",
+      "clip.mp4",
+      "-t",
+      "12.5",
+      "-vf",
+      "fps=2.0,scale=1280:544",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "-"
+    ],
+    "frames": [
+      {
+        "index": 0,
+        "shape": [
+          544,
+          1280,
+          3
+        ],
+        "first": 0
+      }
+    ],
+    "raised": null
+  },
+  {
+    "argv": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-ss",
+      "0.5",
+      "-i",
+      "clip.mp4",
+      "-t",
+      "30.0",
+      "-vf",
+      "fps=2.0,scale=1280:540",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "-"
+    ],
+    "frames": [
+      {
+        "index": 0,
+        "shape": [
+          540,
+          1280,
+          3
+        ],
+        "first": 0
+      }
+    ],
+    "raised": null
+  },
+  {
+    "argv": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-ss",
+      "2.0",
+      "-i",
+      "clip.mp4",
+      "-t",
+      "2.0",
+      "-vf",
+      "fps=6.0,scale=640:480",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "-"
+    ],
+    "frames": [],
+    "raised": null
+  },
+  {
+    "argv": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-ss",
+      "0.123456789",
+      "-i",
+      "clip.mp4",
+      "-t",
+      "0.876543311",
+      "-vf",
+      "fps=13.690139265691116,scale=300:170",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "-"
+    ],
+    "frames": [
+      {
+        "index": 0,
+        "shape": [
+          170,
+          300,
+          3
+        ],
+        "first": 0
+      },
+      {
+        "index": 1,
+        "shape": [
+          170,
+          300,
+          3
+        ],
+        "first": 1
+      },
+      {
+        "index": 2,
+        "shape": [
+          170,
+          300,
+          3
+        ],
+        "first": 2
+      }
+    ],
+    "raised": {
+      "error": "RuntimeError",
+      "message": "ffmpeg failed sampling clip.mp4 [0.123456789,1.0000001]: "
+    }
+  },
+  {
+    "argv": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-ss",
+      "4e-05",
+      "-i",
+      "clip.mp4",
+      "-t",
+      "12345678.49996",
+      "-vf",
+      "fps=9.720000403411509e-07,scale=100:100",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "-"
+    ],
+    "frames": [],
+    "raised": null
+  }
+]

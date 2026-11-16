@@ -1,0 +1,48 @@
+[
+  {
+    "faceCentreX": 0.5,
+    "eyeLineY": 0.4,
+    "facing": 0.0,
+    "mouthDrop": 0.42857142857142866
+  },
+  {
+    "faceCentreX": 0.46749999999999997,
+    "eyeLineY": 0.405,
+    "facing": -0.5681818181818179,
+    "mouthDrop": 0.43939393939393945
+  },
+  {
+    "faceCentreX": 0.5325,
+    "eyeLineY": 0.405,
+    "facing": 0.5681818181818185,
+    "mouthDrop": 0.43939393939393945
+  },
+  {
+    "faceCentreX": 0.5240885416666667,
+    "eyeLineY": 0.3716049382716049,
+    "facing": -0.6736334405144695,
+    "mouthDrop": 0.36060606060606065
+  },
+  null,
+  null,
+  null,
+  null,
+  {
+    "faceCentreX": 0.5,
+    "eyeLineY": 0.4,
+    "facing": 0.0,
+    "mouthDrop": 0.42857142857142866
+  },
+  {
+    "faceCentreX": 0.5046989399999999,
+    "eyeLineY": 0.455691085,
+    "facing": 0.021100764194579257,
+    "mouthDrop": 0.4488375236852503
+  },
+  {
+    "faceCentreX": 0.0,
+    "eyeLineY": 0.0,
+    "facing": 0.0,
+    "mouthDrop": 0.0
+  }
+]

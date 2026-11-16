@@ -1,0 +1,61 @@
+{
+  "paired": [
+    {
+      "timeSec": 0,
+      "score": 0
+    },
+    {
+      "timeSec": 0.04,
+      "score": 0.012345
+    },
+    {
+      "timeSec": 0.08,
+      "score": 0.5
+    }
+  ],
+  "negativeLeadIn": [
+    {
+      "timeSec": 0,
+      "score": 0.003
+    },
+    {
+      "timeSec": 0.04,
+      "score": 0.25
+    }
+  ],
+  "unpaired": [
+    {
+      "timeSec": 0.04,
+      "score": 0.1
+    }
+  ],
+  "progressLine": [
+    {
+      "timeSec": 1.5,
+      "score": 0.7
+    }
+  ],
+  "empty": [],
+  "exponent": [
+    {
+      "timeSec": 2,
+      "score": 1
+    }
+  ],
+  "crlf": [
+    {
+      "timeSec": 0.5,
+      "score": 0.3
+    }
+  ],
+  "bareTime": [
+    {
+      "timeSec": 10,
+      "score": 0.4
+    },
+    {
+      "timeSec": 11.25,
+      "score": 0.45
+    }
+  ]
+}

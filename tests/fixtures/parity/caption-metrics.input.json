@@ -1,0 +1,95 @@
+{
+ "sizes": [
+  [
+   45,
+   "Montserrat ExtraBold"
+  ],
+  [
+   52,
+   "Oswald"
+  ],
+  [
+   40,
+   "Inter"
+  ],
+  [
+   43,
+   "Montserrat ExtraBold"
+  ],
+  [
+   0,
+   "Anton"
+  ],
+  [
+   0.1,
+   "Anton"
+  ],
+  [
+   25.3125,
+   "Oswald"
+  ],
+  [
+   52,
+   "Bebas Neue"
+  ],
+  [
+   42,
+   "Poppins Black"
+  ],
+  [
+   38,
+   "Archivo Black"
+  ],
+  [
+   50,
+   "Bangers"
+  ],
+  [
+   44,
+   "Permanent Marker"
+  ],
+  [
+   30,
+   "Inter"
+  ],
+  [
+   62,
+   "Luckiest Guy"
+  ]
+ ],
+ "widths": [
+  [
+   "Montserrat ExtraBold",
+   "SO THE 3 ROCKETS",
+   98
+  ],
+  [
+   "Oswald",
+   "ПРИВЕТ МИР",
+   64
+  ],
+  [
+   "Anton",
+   "ПРИВЕТ",
+   61
+  ],
+  [
+   "Inter",
+   "didn't 🔥",
+   55
+  ],
+  [
+   "DejaVu Sans",
+   "",
+   84
+  ],
+  [
+   "Bangers",
+   " ",
+   69
+  ]
+ ],
+ "unknown": [
+  "Comic Sans"
+ ]
+}

@@ -1,0 +1,197 @@
+{
+ "faces": [
+  "Montserrat ExtraBold",
+  "Oswald",
+  "Inter",
+  "DejaVu Sans",
+  "Anton",
+  "Bebas Neue",
+  "Bangers",
+  "Poppins Black",
+  "Archivo Black",
+  "Luckiest Guy",
+  "Permanent Marker"
+ ],
+ "capHeights": [
+  45
+ ],
+ "maxWidths": [
+  960,
+  700,
+  500,
+  300,
+  120
+ ],
+ "maxLines": [
+  1,
+  3
+ ],
+ "groups": [
+  [
+   "SO",
+   "THE",
+   "3",
+   "ROCKETS"
+  ],
+  [
+   "LAUNCHED",
+   "AND",
+   "NOBODY",
+   "DIDN'T",
+   "SEE"
+  ],
+  [
+   "INTERNATIONALIZATIONAL"
+  ],
+  [
+   "A",
+   "B"
+  ],
+  [
+   "ПРИВЕТ",
+   "МИР",
+   "ЭТО",
+   "ЖЁЛТЫЙ",
+   "ЩУКА"
+  ],
+  [
+   "the",
+   "quick",
+   "brown",
+   "fox",
+   "jumps"
+  ],
+  []
+ ],
+ "measured": [
+  {
+   "face": "Poppins Black",
+   "keyFace": "Anton",
+   "cap": 42,
+   "keyPct": 118,
+   "keys": [
+    [
+     false,
+     false,
+     true,
+     true
+    ],
+    [
+     true,
+     false,
+     false,
+     true,
+     false
+    ],
+    [
+     true
+    ],
+    [
+     false,
+     true
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    []
+   ]
+  },
+  {
+   "face": "Bebas Neue",
+   "keyFace": "Luckiest Guy",
+   "cap": 52,
+   "keyPct": 120,
+   "keys": [
+    [
+     true,
+     false,
+     false,
+     false
+    ],
+    [
+     false,
+     false,
+     true,
+     false,
+     false
+    ],
+    [
+     false
+    ],
+    [
+     true,
+     true
+    ],
+    [
+     false,
+     true,
+     false,
+     false,
+     true
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    []
+   ]
+  },
+  {
+   "face": "Montserrat ExtraBold",
+   "keyFace": "Anton",
+   "cap": 34,
+   "keyPct": 165,
+   "keys": [
+    [
+     false,
+     false,
+     true,
+     true
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    [
+     true
+    ],
+    [
+     false,
+     false
+    ],
+    [
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    [
+     false,
+     true,
+     false,
+     true,
+     false
+    ],
+    []
+   ]
+  }
+ ]
+}

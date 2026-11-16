@@ -171,7 +171,7 @@ test('runChecks on an empty PATH: tools fail with where-to-look details, node st
       runChecks({ nodeMin: 20, whisper: 'required', streamlink: true, env: process.env }),
     );
     const c = byName(checks);
-    assert.deepEqual(checks.map((x) => x.name), ['node', 'ffmpeg', 'ffprobe', 'ffmpeg-filters', 'ffmpeg-https', 'yt-dlp', 'whisper', 'whisper-model', 'streamlink']);
+    assert.deepEqual(checks.map((x) => x.name), ['node', 'ffmpeg', 'ffprobe', 'ffmpeg-filters', 'ffmpeg-https', 'yt-dlp', 'whisper', 'whisper-model', 'onnxruntime', 'streamlink']);
     assert.equal(c.node.ok, true);
     assert.match(c.node.detail, /^node \d+\.\d+\.\d+/);
     for (const n of ['ffmpeg', 'ffprobe', 'ffmpeg-filters', 'yt-dlp', 'whisper', 'whisper-model']) assert.equal(c[n].ok, false, n);
@@ -361,7 +361,7 @@ test('tools/doctor.mjs prints one JSON line, exits 0 even when checks fail, and 
     assert.equal(lines.length, 1);
     const out = JSON.parse(lines[0]);
     assert.equal(out.ok, false);
-    assert.equal(out.checks.length, 9);
+    assert.equal(out.checks.length, 10);
     assert.ok(out.hints.length >= 4);
     const bad = spawnSync(process.execPath, [script, '--node', '18'], { encoding: 'utf8' });
     assert.equal(bad.status, 1);
@@ -369,4 +369,75 @@ test('tools/doctor.mjs prints one JSON line, exits 0 even when checks fail, and 
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
+});
+
+// ---- onnxruntime-node and the face model
+
+test('runChecks: onnxruntime-node runs the face model here (the real binary), a required check', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'boqo-doctor-'));
+  try {
+    const checks = await withEnv({ PATH: dir, Path: dir, BOQO_HOME: dir, BOQO_WHISPER_MODEL: undefined }, () =>
+      runChecks({ nodeMin: 20, whisper: 'optional', env: process.env }),
+    );
+    const c = byName(checks);
+    assert.equal(c.onnxruntime.ok, true, c.onnxruntime.detail);
+    assert.equal(c.onnxruntime.required, true);
+    assert.equal(c.onnxruntime.detail, 'onnxruntime-node runs the face model');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('runChecks: onnxruntime-node that does not load fails the check with the cause, classified on loadBlazeFace codes', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'boqo-doctor-'));
+  try {
+    const run = async (loadOnnx) =>
+      byName(await withEnv({ PATH: dir, Path: dir, BOQO_HOME: dir, BOQO_WHISPER_MODEL: undefined }, () => runChecks({ nodeMin: 20, whisper: 'optional', env: process.env, loadOnnx }))).onnxruntime;
+    const dll = await run(async () => { throw new Error('The specified module could not be found.\r\n\\\\?\\C:\\x\\onnxruntime_binding.node'); });
+    assert.equal(dll.ok, false);
+    assert.equal(dll.required, true);
+    assert.equal(dll.detail, 'onnxruntime-node did not load: The specified module could not be found.');
+    assert.equal(dll.cause, 'runtime');
+    assert.equal(isOk([dll]), false);
+    // Node's own error for a package that is not there
+    const absent = await run(() => import('onnxruntime-node-is-not-a-package'));
+    assert.equal(absent.detail, 'onnxruntime-node is not installed');
+    assert.equal(absent.cause, 'not-installed');
+    // onnxruntime's wording never decides the class: "face model" and "missing" from a session error stay runtime
+    const session = await run(async () => ({ Tensor: class {}, InferenceSession: { create: async () => { throw new Error('the face model is missing a required input'); } } }));
+    assert.equal(session.detail, 'onnxruntime-node could not open the face model: the face model is missing a required input');
+    assert.equal(session.cause, 'runtime');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('hintsFor onnxruntime: VC++ runtime on Windows, the packages reinstalled elsewhere, npm ci when not installed', () => {
+  const runtime = (detail) => ({ ...fail('onnxruntime', detail), cause: 'runtime' });
+  const win = hintsFor([runtime('onnxruntime-node did not load: The specified module could not be found.')], 'win32');
+  assert.equal(win.length, 1, 'no restart line: a runtime install changes no PATH');
+  assert.ok(all(win, 'Visual C++ 2019 or newer redistributable'));
+  assert.ok(all(win, 'https://aka.ms/vs/17/release/vc_redist.x64.exe'));
+  assert.ok(all(win, 'The specified module could not be found.'));
+  for (const p of ['darwin', 'linux']) {
+    const h = hintsFor([runtime('onnxruntime-node did not load: dlopen failed')], p);
+    assert.equal(h.length, 1, p);
+    assert.ok(all(h, '`cd "$HOME/.boqo-clips" && npm ci --omit=dev --ignore-scripts`'), p);
+    assert.ok(all(h, 'dlopen failed'), p);
+    assert.ok(!all(h, 'Visual C++'), p);
+  }
+  const absent = { ...fail('onnxruntime', 'onnxruntime-node is not installed'), cause: 'not-installed' };
+  for (const p of ['darwin', 'linux']) {
+    assert.deepEqual(hintsFor([absent], p), ["onnxruntime: the skill's packages are not installed: `cd \"$HOME/.boqo-clips\" && npm ci --omit=dev --ignore-scripts`"], p);
+  }
+  // Windows PowerShell 5.1 has no &&
+  const winAbsent = hintsFor([absent], 'win32');
+  assert.deepEqual(winAbsent, ["onnxruntime: the skill's packages are not installed: `cd \"$HOME/.boqo-clips\"; npm ci --omit=dev --ignore-scripts`"]);
+  assert.ok(!all(winAbsent, '&&'));
+  const model = hintsFor([{ ...fail('onnxruntime', "the face model's checksum does not match (x: a, expected b)"), cause: 'model' }], 'linux');
+  assert.ok(all(model, 'reinstall the skill (https://github.com/boqo-ai/boqo-clips)'));
+  // the class comes from `cause`, not from the words: a runtime error mentioning a missing face model is not a damaged copy
+  const words = hintsFor([runtime('onnxruntime-node could not open the face model: the face model is missing a required input')], 'linux');
+  assert.ok(!all(words, 'reinstall the skill (https'));
+  assert.ok(all(words, 'npm ci'));
 });

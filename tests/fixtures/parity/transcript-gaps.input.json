@@ -1,0 +1,135 @@
+{
+ "cases": [
+  {
+   "name": "two gaps, the lead and the tail are not gaps",
+   "minSec": 1.2,
+   "words": [
+    {
+     "start": 2,
+     "end": 2.4
+    },
+    {
+     "start": 2.4,
+     "end": 3
+    },
+    {
+     "start": 5,
+     "end": 5.4
+    },
+    {
+     "start": 5.4,
+     "end": 5.9
+    },
+    {
+     "start": 9,
+     "end": 9.5
+    },
+    {
+     "start": 12,
+     "end": 13
+    }
+   ]
+  },
+  {
+   "name": "words out of order",
+   "minSec": 1.2,
+   "words": [
+    {
+     "start": 9,
+     "end": 9.5
+    },
+    {
+     "start": 2,
+     "end": 2.4
+    },
+    {
+     "start": 5,
+     "end": 5.4
+    }
+   ]
+  },
+  {
+   "name": "a short word inside a longer one does not open a gap",
+   "minSec": 1.2,
+   "words": [
+    {
+     "start": 0,
+     "end": 5
+    },
+    {
+     "start": 1,
+     "end": 1.2
+    },
+    {
+     "start": 6.1,
+     "end": 6.5
+    }
+   ]
+  },
+  {
+   "name": "a gap of exactly the minimum counts",
+   "minSec": 1.2,
+   "words": [
+    {
+     "start": 0,
+     "end": 1
+    },
+    {
+     "start": 2.2,
+     "end": 3
+    }
+   ]
+  },
+  {
+   "name": "just under the minimum does not",
+   "minSec": 1.2,
+   "words": [
+    {
+     "start": 0,
+     "end": 1
+    },
+    {
+     "start": 2.19,
+     "end": 3
+    }
+   ]
+  },
+  {
+   "name": "empty list",
+   "minSec": 1.2,
+   "words": []
+  },
+  {
+   "name": "one word",
+   "minSec": 1.2,
+   "words": [
+    {
+     "start": 5,
+     "end": 6
+    }
+   ]
+  },
+  {
+   "name": "a different minimum",
+   "minSec": 0.5,
+   "words": [
+    {
+     "start": 0,
+     "end": 1
+    },
+    {
+     "start": 1.6,
+     "end": 2
+    },
+    {
+     "start": 2.3,
+     "end": 3
+    },
+    {
+     "start": 4,
+     "end": 5
+    }
+   ]
+  }
+ ]
+}

@@ -15,7 +15,9 @@ import { PRESETS } from './brand.mjs';
  * The render copies exactly these files, and their licences, into its fonts dir.
  */
 export const FONT_FILES = {
-  Inter: { family: 'Inter', file: 'Inter-Bold.ttf', bold: -1, license: 'OFL-Inter.txt' },
+  // Inter-Bold.otf is boqo's image's own file (Debian fonts-inter, engine/fonts/SOURCES.md), one face per family
+  // in the fonts dir; this module reads its metrics from the OS/2, hhea, hmtx and cmap tables, which an OTF has too.
+  Inter: { family: 'Inter', file: 'Inter-Bold.otf', bold: -1, license: 'OFL-Inter.txt' },
   Anton: { family: 'Anton', file: 'Anton-Regular.ttf', bold: 0, license: 'OFL-Anton.txt' },
 };
 

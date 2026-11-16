@@ -1,0 +1,56 @@
+[
+  {
+    "x": 0.3,
+    "y": 0.3,
+    "width": 0.2,
+    "height": 0.35,
+    "confidence": 0.95
+  },
+  {
+    "x": 0.60625,
+    "y": 0.3,
+    "width": 0.1125,
+    "height": 0.35,
+    "confidence": 0.95
+  },
+  {
+    "x": 0.5175,
+    "y": 0.31,
+    "width": 0.118125,
+    "height": 0.4,
+    "confidence": 0.93,
+    "faceCentreX": 0.57065625,
+    "eyeLineY": 0.42,
+    "facing": -0.12,
+    "mouthDrop": 0.31
+  },
+  {
+    "x": 0.8875,
+    "y": 0.31,
+    "width": 0.106875,
+    "height": 0.4,
+    "confidence": 0.93,
+    "faceCentreX": 0.9355937500000001,
+    "eyeLineY": 0.42,
+    "facing": -0.12,
+    "mouthDrop": 0.31
+  },
+  {
+    "x": 0.55,
+    "y": 0.31,
+    "width": 0.15,
+    "height": 0.4,
+    "confidence": 0.93,
+    "faceCentreX": 0.6174999999999999,
+    "eyeLineY": 0.42,
+    "facing": -0.12,
+    "mouthDrop": 0.31
+  },
+  {
+    "x": -0.028125,
+    "y": 0.2,
+    "width": 0.16875,
+    "height": 0.35,
+    "confidence": 0.95
+  }
+]

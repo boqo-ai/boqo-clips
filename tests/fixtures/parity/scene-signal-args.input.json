@@ -1,0 +1,12 @@
+{
+ "cases": [
+  {
+   "path": "/w/window.mp4",
+   "grayPath": "/w/frames.gray"
+  },
+  {
+   "path": "C:\\w space\\w.mp4",
+   "grayPath": "C:\\w space\\g.gray"
+  }
+ ]
+}

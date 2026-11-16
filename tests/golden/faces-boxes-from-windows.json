@@ -1,0 +1,65 @@
+[
+  [
+    {
+      "x": 0.28125,
+      "y": 0.31,
+      "width": 0.1125,
+      "height": 0.4,
+      "confidence": 0.92,
+      "faceCentreX": 0.331875,
+      "eyeLineY": 0.42,
+      "facing": -0.12,
+      "mouthDrop": 0.31
+    }
+  ],
+  [
+    {
+      "x": 0.859375,
+      "y": 0.31,
+      "width": 0.1125,
+      "height": 0.4,
+      "confidence": 0.93,
+      "faceCentreX": 0.9099999999999999,
+      "eyeLineY": 0.42,
+      "facing": -0.12,
+      "mouthDrop": 0.31
+    }
+  ],
+  [
+    {
+      "x": 0.1125,
+      "y": 0.3,
+      "width": 0.1125,
+      "height": 0.35,
+      "confidence": 0.95
+    },
+    {
+      "x": 0.775,
+      "y": 0.3,
+      "width": 0.1125,
+      "height": 0.35,
+      "confidence": 0.95
+    }
+  ],
+  [],
+  {
+    "error": "ValueError",
+    "message": "results/windows length mismatch: 2 results for 3 windows"
+  },
+  [
+    {
+      "x": 0.2,
+      "y": 0.3,
+      "width": 0.2,
+      "height": 0.35,
+      "confidence": 0.95
+    },
+    {
+      "x": 0.6,
+      "y": 0.3,
+      "width": 0.2,
+      "height": 0.35,
+      "confidence": 0.95
+    }
+  ]
+]

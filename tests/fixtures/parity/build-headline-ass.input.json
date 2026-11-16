@@ -1,0 +1,1624 @@
+{
+ "scenarios": [
+  {
+   "name": "default template one",
+   "text": "Why this clip works",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template two",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template three",
+   "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template shrink",
+   "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online, and then I found out what the algorithm really wanted from every creator who posts three times a day",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template cyrillic",
+   "text": "Почему этот ролик набрал миллион просмотров за одну ночь",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template mixed",
+   "text": "Москва is not Moscow",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template braces",
+   "text": "Use {\\b1}bold{\\b0} \\N and a back\\slash",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template overflow",
+   "text": "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template two 1:1",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1080
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template two 16:9",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1920,
+    "height": 1080
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template two 720x1280",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 720,
+    "height": 1280
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template two, clip 30 s",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template two, clip 12 s",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 12,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template two, clip 8 s",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 8,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template two, clip 3 s",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 3,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template two, clip 0.5 s",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 0.5,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template three, lead 0",
+   "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template three, lead 1.7",
+   "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 1.7,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template three, lead 0.004",
+   "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0.004,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template, whole timing",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "whole"
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 17.25,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template, window after the clip",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 40,
+     "holdSec": 5
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template, short hold",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 2.5,
+     "holdSec": 0.5
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0.333,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "default template, translucent",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 0.8,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "headlineStyleFor"
+  },
+  {
+   "name": "bare plate one",
+   "text": "Why this clip works",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "none"
+  },
+  {
+   "name": "bare plate two",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "none"
+  },
+  {
+   "name": "bare plate three",
+   "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "none"
+  },
+  {
+   "name": "bare plate shrink",
+   "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online, and then I found out what the algorithm really wanted from every creator who posts three times a day",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "none"
+  },
+  {
+   "name": "bare plate lead",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 20,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 2.3,
+   "style": "none"
+  },
+  {
+   "name": "bare plate, plate style given",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "plate"
+  },
+  {
+   "name": "bare plate, 1:1",
+   "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1080
+   },
+   "offsetSec": 0,
+   "style": "none"
+  },
+  {
+   "name": "bare plate, radius 0",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "none"
+  },
+  {
+   "name": "bare plate, dark plate",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#07060B",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "none"
+  },
+  {
+   "name": "bare plate, mid plate",
+   "text": "The one habit that doubled my reach",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#9B7BFF",
+    "plateOpacity": 0.9,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "none"
+  },
+  {
+   "name": "bare plate, empty",
+   "text": "   ",
+   "headline": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "style": "none"
+  }
+ ],
+ "elements": [
+  {
+   "name": "two elements",
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "list": [
+    {
+     "text": "The one habit that doubled my reach",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.14,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      },
+      "style": "plate",
+      "textCase": "upper",
+      "entrance": "pop"
+     },
+     "style": "headlineStyleFor",
+     "span": null
+    },
+    {
+     "text": "Second line of text",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.5,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      },
+      "style": "outline",
+      "textCase": "upper",
+      "entrance": "pop"
+     },
+     "style": "headlineStyleFor",
+     "span": {
+      "startSec": 1,
+      "endSec": 6
+     }
+    }
+   ]
+  },
+  {
+   "name": "three elements, lead",
+   "clipDurationSec": 20,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 1.7,
+   "list": [
+    {
+     "text": "Why this clip works",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.14,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      },
+      "style": "neon",
+      "textCase": "upper",
+      "entrance": "pop"
+     },
+     "style": "headlineStyleFor",
+     "span": {
+      "startSec": 0,
+      "endSec": 5
+     }
+    },
+    {
+     "text": "The one habit that doubled my reach",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.3,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      },
+      "style": "marker",
+      "textCase": "upper",
+      "entrance": "pop"
+     },
+     "style": "headlineStyleFor",
+     "span": {
+      "startSec": 2,
+      "endSec": 9
+     }
+    },
+    {
+     "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.6,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      },
+      "style": "stack",
+      "textCase": "upper",
+      "entrance": "pop"
+     },
+     "style": "headlineStyleFor",
+     "span": null
+    }
+   ]
+  },
+  {
+   "name": "parts of one element",
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "list": [
+    {
+     "text": "The one habit that doubled my reach",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.14,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      },
+      "style": "tag",
+      "textCase": "upper",
+      "entrance": "pop"
+     },
+     "style": "headlineStyleFor",
+     "span": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "part": {
+      "index": 0,
+      "window": {
+       "startSec": 0,
+       "endSec": 10
+      }
+     }
+    },
+    {
+     "text": "The one habit that doubled my reach",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.5,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      },
+      "style": "tag",
+      "textCase": "upper",
+      "entrance": "pop"
+     },
+     "style": "headlineStyleFor",
+     "span": {
+      "startSec": 4,
+      "endSec": 10
+     },
+     "part": {
+      "index": 1,
+      "window": {
+       "startSec": 0,
+       "endSec": 10
+      }
+     }
+    },
+    {
+     "text": "Another one",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.14,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      },
+      "style": "stack",
+      "textCase": "upper",
+      "entrance": "pop"
+     },
+     "style": "headlineStyleFor",
+     "span": {
+      "startSec": 0,
+      "endSec": 10
+     },
+     "part": {
+      "index": 0,
+      "window": {
+       "startSec": 0,
+       "endSec": 10
+      }
+     }
+    },
+    {
+     "text": "Another one",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.6,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      },
+      "style": "stack",
+      "textCase": "upper",
+      "entrance": "pop"
+     },
+     "style": "headlineStyleFor",
+     "span": {
+      "startSec": 5,
+      "endSec": 10
+     },
+     "part": {
+      "index": 1,
+      "window": {
+       "startSec": 0,
+       "endSec": 10
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "bare and styled",
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1080
+   },
+   "offsetSec": 0,
+   "list": [
+    {
+     "text": "The one habit that doubled my reach",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.14,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      }
+     },
+     "style": "none",
+     "span": null
+    },
+    {
+     "text": "Why this clip works",
+     "settings": {
+      "source": "title",
+      "font": {
+       "kind": "builtin",
+       "name": "Montserrat ExtraBold"
+      },
+      "capHeightFraction": 0.022,
+      "plateColour": "#C8FF4D",
+      "plateOpacity": 1,
+      "cornerRadiusFraction": 0.01,
+      "boxWidthFraction": 0.84,
+      "positionFraction": 0.4,
+      "timing": {
+       "kind": "window",
+       "startSec": 0,
+       "holdSec": 12
+      },
+      "style": "outline",
+      "textCase": "upper",
+      "entrance": "pop"
+     },
+     "style": "headlineStyleFor",
+     "span": null
+    }
+   ]
+  },
+  {
+   "name": "none",
+   "clipDurationSec": 30,
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   },
+   "offsetSec": 0,
+   "list": []
+  }
+ ],
+ "extents": [
+  {
+   "text": "The one habit that doubled my reach",
+   "settings": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "plate",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "style": "headlineStyleFor",
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online",
+   "settings": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "tag",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "style": "headlineStyleFor",
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "text": "Nobody told me that the one habit that quietly doubled my reach in thirty days would also cost me every single friend I had ever made online, and then I found out what the algorithm really wanted from every creator who posts three times a day",
+   "settings": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.9,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "tag",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "style": "headlineStyleFor",
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "text": "The one habit that doubled my reach",
+   "settings": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "style": "none",
+   "frame": {
+    "width": 1080,
+    "height": 1080
+   }
+  },
+  {
+   "text": "   ",
+   "settings": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    }
+   },
+   "style": "none",
+   "frame": {
+    "width": 1080,
+    "height": 1920
+   }
+  },
+  {
+   "text": "Почему этот ролик набрал миллион просмотров за одну ночь",
+   "settings": {
+    "source": "title",
+    "font": {
+     "kind": "builtin",
+     "name": "Montserrat ExtraBold"
+    },
+    "capHeightFraction": 0.022,
+    "plateColour": "#C8FF4D",
+    "plateOpacity": 1,
+    "cornerRadiusFraction": 0.01,
+    "boxWidthFraction": 0.84,
+    "positionFraction": 0.14,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 12
+    },
+    "style": "outline",
+    "textCase": "upper",
+    "entrance": "pop"
+   },
+   "style": "headlineStyleFor",
+   "frame": {
+    "width": 1920,
+    "height": 1080
+   }
+  }
+ ],
+ "stacked": {
+  "k": [
+   0,
+   1,
+   2,
+   5
+  ],
+  "text": "The one habit that doubled my reach"
+ }
+}

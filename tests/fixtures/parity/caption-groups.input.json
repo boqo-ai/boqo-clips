@@ -1,0 +1,1506 @@
+{
+ "scenarios": [
+  {
+   "name": "twelve words, karaoke bounds",
+   "words": [
+    {
+     "word": "So",
+     "start": 0,
+     "end": 0.18,
+     "index": 0
+    },
+    {
+     "word": "the",
+     "start": 0.2,
+     "end": 0.32,
+     "index": 1
+    },
+    {
+     "word": "3",
+     "start": 0.34,
+     "end": 0.6,
+     "index": 2
+    },
+    {
+     "word": "rockets",
+     "start": 0.62,
+     "end": 1.05,
+     "index": 3
+    },
+    {
+     "word": "launched,",
+     "start": 1.08,
+     "end": 1.55,
+     "index": 4
+    },
+    {
+     "word": "and",
+     "start": 1.7,
+     "end": 1.82,
+     "index": 5
+    },
+    {
+     "word": "nobody",
+     "start": 1.84,
+     "end": 2.2,
+     "index": 6
+    },
+    {
+     "word": "didn't",
+     "start": 2.22,
+     "end": 2.5,
+     "index": 7
+    },
+    {
+     "word": "see",
+     "start": 2.52,
+     "end": 2.7,
+     "index": 8
+    },
+    {
+     "word": "it",
+     "start": 2.72,
+     "end": 2.8,
+     "index": 9
+    },
+    {
+     "word": "coming.",
+     "start": 2.82,
+     "end": 3.3,
+     "index": 10
+    },
+    {
+     "word": "Really?",
+     "start": 4.4,
+     "end": 4.9,
+     "index": 11
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 4,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "twelve words with the scene cut",
+   "words": [
+    {
+     "word": "So",
+     "start": 0,
+     "end": 0.18,
+     "index": 0
+    },
+    {
+     "word": "the",
+     "start": 0.2,
+     "end": 0.32,
+     "index": 1
+    },
+    {
+     "word": "3",
+     "start": 0.34,
+     "end": 0.6,
+     "index": 2
+    },
+    {
+     "word": "rockets",
+     "start": 0.62,
+     "end": 1.05,
+     "index": 3
+    },
+    {
+     "word": "launched,",
+     "start": 1.08,
+     "end": 1.55,
+     "index": 4
+    },
+    {
+     "word": "and",
+     "start": 1.7,
+     "end": 1.82,
+     "index": 5
+    },
+    {
+     "word": "nobody",
+     "start": 1.84,
+     "end": 2.2,
+     "index": 6
+    },
+    {
+     "word": "didn't",
+     "start": 2.22,
+     "end": 2.5,
+     "index": 7
+    },
+    {
+     "word": "see",
+     "start": 2.52,
+     "end": 2.7,
+     "index": 8
+    },
+    {
+     "word": "it",
+     "start": 2.72,
+     "end": 2.8,
+     "index": 9
+    },
+    {
+     "word": "coming.",
+     "start": 2.82,
+     "end": 3.3,
+     "index": 10
+    },
+    {
+     "word": "Really?",
+     "start": 4.4,
+     "end": 4.9,
+     "index": 11
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 4,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": [
+    1.62
+   ]
+  },
+  {
+   "name": "target 1",
+   "words": [
+    {
+     "word": "So",
+     "start": 0,
+     "end": 0.18,
+     "index": 0
+    },
+    {
+     "word": "the",
+     "start": 0.2,
+     "end": 0.32,
+     "index": 1
+    },
+    {
+     "word": "3",
+     "start": 0.34,
+     "end": 0.6,
+     "index": 2
+    },
+    {
+     "word": "rockets",
+     "start": 0.62,
+     "end": 1.05,
+     "index": 3
+    },
+    {
+     "word": "launched,",
+     "start": 1.08,
+     "end": 1.55,
+     "index": 4
+    },
+    {
+     "word": "and",
+     "start": 1.7,
+     "end": 1.82,
+     "index": 5
+    },
+    {
+     "word": "nobody",
+     "start": 1.84,
+     "end": 2.2,
+     "index": 6
+    },
+    {
+     "word": "didn't",
+     "start": 2.22,
+     "end": 2.5,
+     "index": 7
+    },
+    {
+     "word": "see",
+     "start": 2.52,
+     "end": 2.7,
+     "index": 8
+    },
+    {
+     "word": "it",
+     "start": 2.72,
+     "end": 2.8,
+     "index": 9
+    },
+    {
+     "word": "coming.",
+     "start": 2.82,
+     "end": 3.3,
+     "index": 10
+    },
+    {
+     "word": "Really?",
+     "start": 4.4,
+     "end": 4.9,
+     "index": 11
+    }
+   ],
+   "bounds": {
+    "min": 1,
+    "target": 1,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "minimal 5/5",
+   "words": [
+    {
+     "word": "w0",
+     "start": 0,
+     "end": 0.25,
+     "index": 0
+    },
+    {
+     "word": "w1",
+     "start": 0.3,
+     "end": 0.55,
+     "index": 1
+    },
+    {
+     "word": "w2",
+     "start": 0.6,
+     "end": 0.85,
+     "index": 2
+    },
+    {
+     "word": "w3",
+     "start": 0.9,
+     "end": 1.15,
+     "index": 3
+    },
+    {
+     "word": "w4",
+     "start": 1.2,
+     "end": 1.45,
+     "index": 4
+    },
+    {
+     "word": "w5",
+     "start": 1.5,
+     "end": 1.75,
+     "index": 5
+    },
+    {
+     "word": "w6",
+     "start": 1.8,
+     "end": 2.05,
+     "index": 6
+    },
+    {
+     "word": "w7",
+     "start": 2.1,
+     "end": 2.35,
+     "index": 7
+    },
+    {
+     "word": "w8",
+     "start": 2.4,
+     "end": 2.65,
+     "index": 8
+    },
+    {
+     "word": "w9",
+     "start": 2.7,
+     "end": 2.95,
+     "index": 9
+    },
+    {
+     "word": "w10",
+     "start": 3,
+     "end": 3.25,
+     "index": 10
+    },
+    {
+     "word": "w11",
+     "start": 3.3,
+     "end": 3.55,
+     "index": 11
+    },
+    {
+     "word": "w12",
+     "start": 3.6,
+     "end": 3.85,
+     "index": 12
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 5,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "illustrated 3/5/6",
+   "words": [
+    {
+     "word": "w0",
+     "start": 0,
+     "end": 0.25,
+     "index": 0
+    },
+    {
+     "word": "w1",
+     "start": 0.3,
+     "end": 0.55,
+     "index": 1
+    },
+    {
+     "word": "w2",
+     "start": 0.6,
+     "end": 0.85,
+     "index": 2
+    },
+    {
+     "word": "w3",
+     "start": 0.9,
+     "end": 1.15,
+     "index": 3
+    },
+    {
+     "word": "w4",
+     "start": 1.2,
+     "end": 1.45,
+     "index": 4
+    },
+    {
+     "word": "w5",
+     "start": 1.5,
+     "end": 1.75,
+     "index": 5
+    },
+    {
+     "word": "w6",
+     "start": 1.8,
+     "end": 2.05,
+     "index": 6
+    },
+    {
+     "word": "w7",
+     "start": 2.1,
+     "end": 2.35,
+     "index": 7
+    },
+    {
+     "word": "w8",
+     "start": 2.4,
+     "end": 2.65,
+     "index": 8
+    },
+    {
+     "word": "w9",
+     "start": 2.7,
+     "end": 2.95,
+     "index": 9
+    },
+    {
+     "word": "w10",
+     "start": 3,
+     "end": 3.25,
+     "index": 10
+    },
+    {
+     "word": "w11",
+     "start": 3.3,
+     "end": 3.55,
+     "index": 11
+    },
+    {
+     "word": "w12",
+     "start": 3.6,
+     "end": 3.85,
+     "index": 12
+    },
+    {
+     "word": "w13",
+     "start": 3.9,
+     "end": 4.15,
+     "index": 13
+    },
+    {
+     "word": "w14",
+     "start": 4.2,
+     "end": 4.45,
+     "index": 14
+    },
+    {
+     "word": "w15",
+     "start": 4.5,
+     "end": 4.75,
+     "index": 15
+    },
+    {
+     "word": "w16",
+     "start": 4.8,
+     "end": 5.05,
+     "index": 16
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 5,
+    "max": 6
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "thirteen words, no orphan",
+   "words": [
+    {
+     "word": "w0",
+     "start": 0,
+     "end": 0.25,
+     "index": 0
+    },
+    {
+     "word": "w1",
+     "start": 0.3,
+     "end": 0.55,
+     "index": 1
+    },
+    {
+     "word": "w2",
+     "start": 0.6,
+     "end": 0.85,
+     "index": 2
+    },
+    {
+     "word": "w3",
+     "start": 0.9,
+     "end": 1.15,
+     "index": 3
+    },
+    {
+     "word": "w4",
+     "start": 1.2,
+     "end": 1.45,
+     "index": 4
+    },
+    {
+     "word": "w5",
+     "start": 1.5,
+     "end": 1.75,
+     "index": 5
+    },
+    {
+     "word": "w6",
+     "start": 1.8,
+     "end": 2.05,
+     "index": 6
+    },
+    {
+     "word": "w7",
+     "start": 2.1,
+     "end": 2.35,
+     "index": 7
+    },
+    {
+     "word": "w8",
+     "start": 2.4,
+     "end": 2.65,
+     "index": 8
+    },
+    {
+     "word": "w9",
+     "start": 2.7,
+     "end": 2.95,
+     "index": 9
+    },
+    {
+     "word": "w10",
+     "start": 3,
+     "end": 3.25,
+     "index": 10
+    },
+    {
+     "word": "w11",
+     "start": 3.3,
+     "end": 3.55,
+     "index": 11
+    },
+    {
+     "word": "w12",
+     "start": 3.6,
+     "end": 3.85,
+     "index": 12
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 4,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "eleven words",
+   "words": [
+    {
+     "word": "w0",
+     "start": 0,
+     "end": 0.25,
+     "index": 0
+    },
+    {
+     "word": "w1",
+     "start": 0.3,
+     "end": 0.55,
+     "index": 1
+    },
+    {
+     "word": "w2",
+     "start": 0.6,
+     "end": 0.85,
+     "index": 2
+    },
+    {
+     "word": "w3",
+     "start": 0.9,
+     "end": 1.15,
+     "index": 3
+    },
+    {
+     "word": "w4",
+     "start": 1.2,
+     "end": 1.45,
+     "index": 4
+    },
+    {
+     "word": "w5",
+     "start": 1.5,
+     "end": 1.75,
+     "index": 5
+    },
+    {
+     "word": "w6",
+     "start": 1.8,
+     "end": 2.05,
+     "index": 6
+    },
+    {
+     "word": "w7",
+     "start": 2.1,
+     "end": 2.35,
+     "index": 7
+    },
+    {
+     "word": "w8",
+     "start": 2.4,
+     "end": 2.65,
+     "index": 8
+    },
+    {
+     "word": "w9",
+     "start": 2.7,
+     "end": 2.95,
+     "index": 9
+    },
+    {
+     "word": "w10",
+     "start": 3,
+     "end": 3.25,
+     "index": 10
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 4,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "rounding down over max",
+   "words": [
+    {
+     "word": "w0",
+     "start": 0,
+     "end": 0.25,
+     "index": 0
+    },
+    {
+     "word": "w1",
+     "start": 0.3,
+     "end": 0.55,
+     "index": 1
+    },
+    {
+     "word": "w2",
+     "start": 0.6,
+     "end": 0.85,
+     "index": 2
+    },
+    {
+     "word": "w3",
+     "start": 0.9,
+     "end": 1.15,
+     "index": 3
+    },
+    {
+     "word": "w4",
+     "start": 1.2,
+     "end": 1.45,
+     "index": 4
+    },
+    {
+     "word": "w5",
+     "start": 1.5,
+     "end": 1.75,
+     "index": 5
+    },
+    {
+     "word": "w6",
+     "start": 1.8,
+     "end": 2.05,
+     "index": 6
+    },
+    {
+     "word": "w7",
+     "start": 2.1,
+     "end": 2.35,
+     "index": 7
+    },
+    {
+     "word": "w8",
+     "start": 2.4,
+     "end": 2.65,
+     "index": 8
+    },
+    {
+     "word": "w9",
+     "start": 2.7,
+     "end": 2.95,
+     "index": 9
+    },
+    {
+     "word": "w10",
+     "start": 3,
+     "end": 3.25,
+     "index": 10
+    },
+    {
+     "word": "w11",
+     "start": 3.3,
+     "end": 3.55,
+     "index": 11
+    },
+    {
+     "word": "w12",
+     "start": 3.6,
+     "end": 3.85,
+     "index": 12
+    },
+    {
+     "word": "w13",
+     "start": 3.9,
+     "end": 4.15,
+     "index": 13
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 5,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "gaps at and past the threshold",
+   "words": [
+    {
+     "word": "a",
+     "start": 0,
+     "end": 0.2,
+     "index": 0
+    },
+    {
+     "word": "b",
+     "start": 1,
+     "end": 1.2,
+     "index": 1
+    },
+    {
+     "word": "c",
+     "start": 2.0001,
+     "end": 2.2,
+     "index": 2
+    },
+    {
+     "word": "d",
+     "start": 2.3,
+     "end": 2.5,
+     "index": 3
+    },
+    {
+     "word": "e",
+     "start": 3.3,
+     "end": 3.5,
+     "index": 4
+    },
+    {
+     "word": "f",
+     "start": 3.6,
+     "end": 3.8,
+     "index": 5
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 4,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "speakers, null and absent",
+   "words": [
+    {
+     "word": "yes",
+     "start": 0,
+     "end": 0.2,
+     "index": 0,
+     "speaker": 0
+    },
+    {
+     "word": "so",
+     "start": 0.2,
+     "end": 0.4,
+     "index": 1,
+     "speaker": 0
+    },
+    {
+     "word": "then",
+     "start": 0.4,
+     "end": 0.6,
+     "index": 2,
+     "speaker": 1
+    },
+    {
+     "word": "we",
+     "start": 0.6,
+     "end": 0.8,
+     "index": 3,
+     "speaker": 1
+    },
+    {
+     "word": "went",
+     "start": 0.8,
+     "end": 1,
+     "index": 4,
+     "speaker": null
+    },
+    {
+     "word": "home",
+     "start": 1,
+     "end": 1.2,
+     "index": 5,
+     "speaker": null
+    },
+    {
+     "word": "now",
+     "start": 1.2,
+     "end": 1.4,
+     "index": 6,
+     "speaker": 1
+    },
+    {
+     "word": "ok",
+     "start": 1.4,
+     "end": 1.6,
+     "index": 7
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 4,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "sentence ends and abbreviations",
+   "words": [
+    {
+     "word": "Mr.",
+     "start": 0,
+     "end": 0.2,
+     "index": 0
+    },
+    {
+     "word": "Smith",
+     "start": 0.2,
+     "end": 0.4,
+     "index": 1
+    },
+    {
+     "word": "met",
+     "start": 0.4,
+     "end": 0.6,
+     "index": 2
+    },
+    {
+     "word": "J.",
+     "start": 0.6,
+     "end": 0.7,
+     "index": 3
+    },
+    {
+     "word": "Doe",
+     "start": 0.7,
+     "end": 0.9,
+     "index": 4
+    },
+    {
+     "word": "in",
+     "start": 0.9,
+     "end": 1,
+     "index": 5
+    },
+    {
+     "word": "the",
+     "start": 1,
+     "end": 1.1,
+     "index": 6
+    },
+    {
+     "word": "U.S.",
+     "start": 1.1,
+     "end": 1.4,
+     "index": 7
+    },
+    {
+     "word": "at",
+     "start": 1.4,
+     "end": 1.5,
+     "index": 8
+    },
+    {
+     "word": "5",
+     "start": 1.5,
+     "end": 1.6,
+     "index": 9
+    },
+    {
+     "word": "a.m.",
+     "start": 1.6,
+     "end": 1.9,
+     "index": 10
+    },
+    {
+     "word": "etc.",
+     "start": 1.9,
+     "end": 2.1,
+     "index": 11
+    },
+    {
+     "word": "No.",
+     "start": 2.1,
+     "end": 2.3,
+     "index": 12
+    },
+    {
+     "word": "Yes!",
+     "start": 2.3,
+     "end": 2.5,
+     "index": 13
+    },
+    {
+     "word": "\"Go",
+     "start": 2.5,
+     "end": 2.6,
+     "index": 14
+    },
+    {
+     "word": "home.\"",
+     "start": 2.6,
+     "end": 2.9,
+     "index": 15
+    },
+    {
+     "word": "(now!)",
+     "start": 2.9,
+     "end": 3.1,
+     "index": 16
+    },
+    {
+     "word": "wait…",
+     "start": 3.1,
+     "end": 3.3,
+     "index": 17
+    },
+    {
+     "word": "really?»",
+     "start": 3.3,
+     "end": 3.5,
+     "index": 18
+    },
+    {
+     "word": "vs.",
+     "start": 3.5,
+     "end": 3.6,
+     "index": 19
+    },
+    {
+     "word": "them",
+     "start": 3.6,
+     "end": 3.8,
+     "index": 20
+    },
+    {
+     "word": "Dr.",
+     "start": 3.8,
+     "end": 3.9,
+     "index": 21
+    },
+    {
+     "word": "Who",
+     "start": 3.9,
+     "end": 4.1,
+     "index": 22
+    },
+    {
+     "word": "Сказал.",
+     "start": 4.1,
+     "end": 4.3,
+     "index": 23
+    },
+    {
+     "word": "Да",
+     "start": 4.3,
+     "end": 4.5,
+     "index": 24
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 4,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "cuts at, near and inside joins",
+   "words": [
+    {
+     "word": "w0",
+     "start": 0,
+     "end": 0.4,
+     "index": 0
+    },
+    {
+     "word": "w1",
+     "start": 0.5,
+     "end": 0.9,
+     "index": 1
+    },
+    {
+     "word": "w2",
+     "start": 1,
+     "end": 1.4,
+     "index": 2
+    },
+    {
+     "word": "w3",
+     "start": 1.5,
+     "end": 1.9,
+     "index": 3
+    },
+    {
+     "word": "w4",
+     "start": 2,
+     "end": 2.4,
+     "index": 4
+    },
+    {
+     "word": "w5",
+     "start": 2.5,
+     "end": 2.9,
+     "index": 5
+    },
+    {
+     "word": "w6",
+     "start": 3,
+     "end": 3.4,
+     "index": 6
+    },
+    {
+     "word": "w7",
+     "start": 3.5,
+     "end": 3.9,
+     "index": 7
+    },
+    {
+     "word": "w8",
+     "start": 4,
+     "end": 4.4,
+     "index": 8
+    },
+    {
+     "word": "w9",
+     "start": 4.5,
+     "end": 4.9,
+     "index": 9
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 4,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": [
+    0.42,
+    0.95,
+    1.36,
+    1.551,
+    2.15,
+    2.4501,
+    3,
+    3.449,
+    4.1
+   ]
+  },
+  {
+   "name": "one word",
+   "words": [
+    {
+     "word": "alone",
+     "start": 1,
+     "end": 1.5,
+     "index": 0
+    }
+   ],
+   "bounds": {
+    "min": 3,
+    "target": 4,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  },
+  {
+   "name": "none",
+   "words": [],
+   "bounds": {
+    "min": 3,
+    "target": 4,
+    "max": 5
+   },
+   "gap": 0.8,
+   "cuts": []
+  }
+ ],
+ "distribute": [
+  [
+   0,
+   4
+  ],
+  [
+   1,
+   4
+  ],
+  [
+   5,
+   2
+  ],
+  [
+   13,
+   4
+  ],
+  [
+   4,
+   0
+  ],
+  [
+   7,
+   3
+  ],
+  [
+   3,
+   5
+  ]
+ ],
+ "endsSentence": [
+  "spot.",
+  "there?",
+  "\"go home.\"",
+  "(now!)",
+  "Mr.",
+  "mrs.",
+  "J.",
+  "U.S.",
+  "a.m.",
+  "etc.",
+  "No.",
+  "wait…",
+  "end.»",
+  "end.”",
+  "it's",
+  "plain",
+  ".",
+  "...",
+  "Сказал.",
+  "вопрос?"
+ ],
+ "keyFlags": [
+  {
+   "group": [
+    {
+     "word": "Rockets,"
+    },
+    {
+     "word": "the"
+    },
+    {
+     "word": "3"
+    },
+    {
+     "word": "million"
+    },
+    {
+     "word": "coming.",
+     "key": false
+    },
+    {
+     "word": "and",
+     "key": true
+    }
+   ],
+   "emphasis": [
+    "rockets",
+    "coming",
+    "the"
+   ],
+   "presets": [
+    {},
+    {
+     "numbersKey": true
+    },
+    {
+     "numbersKey": true,
+     "keyMax": 2
+    },
+    {
+     "keyMax": 1
+    },
+    {
+     "keyMax": 0
+    },
+    {
+     "numbersKey": true,
+     "keyMax": -1
+    }
+   ]
+  },
+  {
+   "group": [
+    {
+     "word": "12"
+    },
+    {
+     "word": "Half"
+    },
+    {
+     "word": "percent!"
+    },
+    {
+     "word": "triple-x"
+    },
+    {
+     "word": "Ракета"
+    },
+    {
+     "word": "Hundreds,"
+    },
+    {
+     "word": "thousand"
+    },
+    {
+     "word": "thousands"
+    },
+    {
+     "word": "Millions"
+    },
+    {
+     "word": "billion"
+    },
+    {
+     "word": "billions"
+    },
+    {
+     "word": "double"
+    },
+    {
+     "word": "TRIPLE"
+    },
+    {
+     "word": "hundred"
+    },
+    {
+     "word": "million"
+    }
+   ],
+   "emphasis": [
+    "ракета",
+    "half"
+   ],
+   "presets": [
+    {},
+    {
+     "numbersKey": true
+    },
+    {
+     "numbersKey": true,
+     "keyMax": 2
+    }
+   ]
+  }
+ ],
+ "emphasisSets": [
+  [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "but",
+   "by",
+   "for",
+   "from",
+   "he",
+   "i",
+   "in",
+   "is",
+   "it",
+   "its",
+   "of",
+   "on",
+   "or",
+   "she",
+   "that",
+   "the",
+   "they",
+   "this",
+   "to",
+   "was",
+   "we",
+   "were",
+   "with",
+   "you",
+   "rocket"
+  ],
+  [
+   "а",
+   "в",
+   "во",
+   "все",
+   "вы",
+   "да",
+   "для",
+   "до",
+   "его",
+   "если",
+   "есть",
+   "еще",
+   "же",
+   "за",
+   "и",
+   "из",
+   "как",
+   "к",
+   "меня",
+   "мы",
+   "на",
+   "не",
+   "но",
+   "о",
+   "он",
+   "она",
+   "они",
+   "от",
+   "по",
+   "с",
+   "со",
+   "так",
+   "то",
+   "ты",
+   "у",
+   "что",
+   "это",
+   "я",
+   "ракета"
+  ],
+  [
+   "The",
+   "IT,",
+   "\"You\"",
+   "...",
+   "   ",
+   "",
+   "ещё",
+   "Ёлка",
+   "rock'n'roll",
+   "-dash-"
+  ],
+  null,
+  []
+ ],
+ "texts": [
+  "spot.",
+  "YOU'VE",
+  "brand-new",
+  "\"quote\"",
+  "‘single’",
+  "—",
+  "...",
+  "(now!)",
+  "f@ck,",
+  "Привет!",
+  "ÉCOLE",
+  "don’t",
+  "'tis",
+  "end-",
+  "йод",
+  "Fuck,",
+  "ДВА"
+ ],
+ "masks": [
+  null,
+  "stars",
+  "hash",
+  "at"
+ ],
+ "layout": {
+  "words": [
+   {
+    "word": "So",
+    "start": 0,
+    "end": 0.18,
+    "index": 0
+   },
+   {
+    "word": "the",
+    "start": 0.2,
+    "end": 0.32,
+    "index": 1
+   },
+   {
+    "word": "3",
+    "start": 0.34,
+    "end": 0.6,
+    "index": 2
+   },
+   {
+    "word": "rockets",
+    "start": 0.62,
+    "end": 1.05,
+    "index": 3
+   },
+   {
+    "word": "launched,",
+    "start": 1.08,
+    "end": 1.55,
+    "index": 4
+   },
+   {
+    "word": "and",
+    "start": 1.7,
+    "end": 1.82,
+    "index": 5
+   },
+   {
+    "word": "nobody",
+    "start": 1.84,
+    "end": 2.2,
+    "index": 6
+   },
+   {
+    "word": "didn't",
+    "start": 2.22,
+    "end": 2.5,
+    "index": 7
+   },
+   {
+    "word": "see",
+    "start": 2.52,
+    "end": 2.7,
+    "index": 8
+   },
+   {
+    "word": "it",
+    "start": 2.72,
+    "end": 2.8,
+    "index": 9
+   },
+   {
+    "word": "coming.",
+    "start": 2.82,
+    "end": 3.3,
+    "index": 10
+   },
+   {
+    "word": "Really?",
+    "start": 4.4,
+    "end": 4.9,
+    "index": 11
+   }
+  ],
+  "cutSec": [
+   1.62
+  ],
+  "emphasis": [
+   "rockets",
+   "coming"
+  ],
+  "timeSpans": {
+   "0": [
+    0.1,
+    0.9
+   ],
+   "4": [
+    1.6,
+    2.4
+   ],
+   "9": [
+    5,
+    5
+   ]
+  },
+  "coverTexts": [
+   "ПРИВЕТ"
+  ],
+  "output": {
+   "width": 1080,
+   "height": 1920
+  },
+  "presets": [
+   "karaoke",
+   "boldkeys",
+   "illustrated",
+   "comic"
+  ]
+ }
+}

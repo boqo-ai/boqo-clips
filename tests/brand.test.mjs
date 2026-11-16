@@ -2,19 +2,27 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFile, spawnSync } from 'node:child_process';
 import { createServer } from 'node:http';
-import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   brandsDir,
   defaultBrand,
+  defaultBrandV1,
   listBrands,
+  legacyView,
   loadBrand,
+  migrateV1,
   saveBrand,
   setDefaultBrand,
   validateBrand,
 } from '../engine/brand.mjs';
+import { DEFAULT_TEMPLATE_CAPTIONS } from '../engine/captions.mjs';
+import { DEFAULT_TEMPLATE_HEADLINE, DEFAULT_TEMPLATE_LOGO } from '../engine/headline.mjs';
+import { HEADLINE_STYLE_KEYS } from '../engine/boqo/headline-styles.mjs';
+import { DEFAULT_HEADLINE } from '../engine/boqo/headline.mjs';
+import { GALLERY_CAPTION_STYLES, GALLERY_CAPTION_STYLE_KEYS } from '../engine/boqo/caption-styles.mjs';
 
 const CLI = fileURLToPath(new URL('../tools/brand.mjs', import.meta.url));
 
@@ -32,15 +40,38 @@ function tempHome() {
 }
 const mk = (over = {}) => ({ ...defaultBrand('mine'), ...over });
 
-test('defaultBrand is boqo lime, Inter, karaoke, no logo', () => {
+test("defaultBrand('x').captions is boqo's Default template's captions", () => {
+  assert.deepEqual(defaultBrand('x').captions, DEFAULT_TEMPLATE_CAPTIONS);
+  assert.deepEqual(defaultBrand('x').captions, { style: 'punch', accentColours: ['#E900FA'], positionFraction: 0.7 });
+});
+
+test("defaultBrand is the Default template: lime title plate for 12 s, logo bottom-left, no file", () => {
+  const { key, ...logo } = DEFAULT_TEMPLATE_LOGO;
   assert.deepEqual(defaultBrand('x'), {
+    version: 2,
     name: 'x',
-    colors: { text: '#FFFFFF', accent: '#C8FF4D' },
-    font: 'Inter',
-    captions: { preset: 'karaoke', position: 0.72, size: 1.0 },
-    logo: { file: null, corner: 'tr', scale: 0.16 },
-    hook: true,
+    ratio: '9:16',
+    captions: DEFAULT_TEMPLATE_CAPTIONS,
+    headline: DEFAULT_TEMPLATE_HEADLINE,
+    logo: { file: null, ...logo },
   });
+  assert.equal(defaultBrand('x').headline.timing.holdSec, 12);
+  assert.deepEqual(
+    { ...defaultBrand('x').logo },
+    { file: null, anchor: 'bottom-left', width: 0.1, marginX: 0.0854, marginY: 0.06, opacity: 0.35, timing: { kind: 'whole' } },
+  );
+  assert.equal(key, 'logo');
+});
+
+test('defaultBrand hands out copies: editing one does not change the next', () => {
+  const a = defaultBrand('a');
+  a.captions.accentColours.push('#000000');
+  a.headline.timing.holdSec = 1;
+  a.logo.timing.kind = 'window';
+  const b = defaultBrand('b');
+  assert.deepEqual(b.captions, DEFAULT_TEMPLATE_CAPTIONS);
+  assert.equal(b.headline.timing.holdSec, 12);
+  assert.equal(b.logo.timing.kind, 'whole');
 });
 
 test('brandsDir follows BOQO_HOME', () => {
@@ -48,47 +79,108 @@ test('brandsDir follows BOQO_HOME', () => {
   assert.equal(brandsDir(), join(home, 'brands'));
 });
 
-test('validateBrand accepts the default and upper-cases hex', () => {
-  const r = validateBrand(mk({ colors: { text: '#ffffff', accent: '#c8ff4d' } }));
+test('validateBrand accepts the default and upper-cases nothing it does not own', () => {
+  const r = validateBrand(mk());
   assert.equal(r.ok, true);
-  assert.deepEqual(r.brand.colors, { text: '#FFFFFF', accent: '#C8FF4D' });
+  assert.deepEqual(r.brand, defaultBrand('mine'));
+  assert.equal(r.brand.version, 2);
+});
+
+test('validateBrand takes a kit with no version as v2 when it has no v1 keys', () => {
+  const r = validateBrand({ name: 'tiny', captions: { style: 'neon' } });
+  assert.equal(r.ok, true, r.errors?.join(' | '));
+  assert.equal(r.brand.version, 2);
+  assert.deepEqual(r.brand.captions, { style: 'neon' });
+  assert.deepEqual(r.brand.headline, DEFAULT_TEMPLATE_HEADLINE);
+  assert.deepEqual(validateBrand({ name: 'tiny' }).brand, defaultBrand('tiny'));
 });
 
 test('validateBrand collects every error', () => {
   const r = validateBrand({
+    version: 2,
     name: 'mine',
-    colors: { text: 'white', accent: '#12345' },
-    font: 'Comic Sans',
-    captions: { preset: 'disco', position: 0.95, size: 1.5 },
-    logo: { file: null, corner: 'middle', scale: 0.5 },
-    hook: 'yes',
+    ratio: '4:3',
+    captions: { style: 'disco', accentColours: ['red'], positionFraction: 0.95 },
+    headline: { ...DEFAULT_TEMPLATE_HEADLINE, style: 'wavy', plateColour: 'lime' },
+    logo: { file: null, anchor: 'middle', width: 0.9, marginX: 2, marginY: -1, opacity: 0, timing: { kind: 'sometimes' } },
   });
   assert.equal(r.ok, false);
-  assert.equal(r.errors.length, 9);
-  for (const word of ['colors.text', 'colors.accent', 'font', 'preset', 'position', 'size', 'corner', 'scale', 'hook']) {
+  for (const word of [
+    'ratio',
+    'captions.style',
+    'captions.accentColours',
+    'captions.positionFraction',
+    'headline.style',
+    'headline.plateColour',
+    'logo.anchor',
+    'logo.width',
+    'logo.marginX',
+    'logo.marginY',
+    'logo.opacity',
+    'logo.timing',
+  ]) {
     assert.ok(r.errors.some((e) => e.includes(word)), `no error about ${word}: ${r.errors.join(' | ')}`);
   }
 });
 
 test('validateBrand rejects each out-of-range value on its own', () => {
   const bad = [
-    ['bad hex', mk({ colors: { text: '#GGGGGG', accent: '#C8FF4D' } })],
-    ['position low', mk({ captions: { preset: 'karaoke', position: 0.05, size: 1 } })],
-    ['position high', mk({ captions: { preset: 'karaoke', position: 0.91, size: 1 } })],
-    ['size low', mk({ captions: { preset: 'karaoke', position: 0.7, size: 0.6 } })],
-    ['size high', mk({ captions: { preset: 'karaoke', position: 0.7, size: 1.41 } })],
-    ['preset', mk({ captions: { preset: 'bold', position: 0.7, size: 1 } })],
-    ['corner', mk({ logo: { file: null, corner: 'top', scale: 0.16 } })],
-    ['scale low', mk({ logo: { file: null, corner: 'tr', scale: 0.07 } })],
-    ['scale high', mk({ logo: { file: null, corner: 'tr', scale: 0.31 } })],
-    ['NaN', mk({ captions: { preset: 'karaoke', position: NaN, size: 1 } })],
+    ['ratio', mk({ ratio: '16:9' })],
+    ['bad hex', mk({ captions: { style: 'punch', accentColours: ['#GGGGGG'] } })],
+    ['three accents', mk({ captions: { style: 'punch', accentColours: ['#111111', '#222222', '#333333'] } })],
+    ['position low', mk({ captions: { positionFraction: 0.05 } })],
+    ['position high', mk({ captions: { positionFraction: 0.91 } })],
+    ['size low', mk({ captions: { sizeScale: 0.6 } })],
+    ['size high', mk({ captions: { sizeScale: 1.41 } })],
+    ['style', mk({ captions: { style: 'bold' } })],
+    ['style illustrated (not in the gallery)', mk({ captions: { style: 'illustrated' } })],
+    ['caption font', mk({ captions: { font: { kind: 'builtin', name: 'Comic Sans' } } })],
+    ['speed', mk({ captions: { speed: 3 } })],
+    ['headline source', mk({ headline: { ...DEFAULT_TEMPLATE_HEADLINE, source: 'caption' } })],
+    ['headline style', mk({ headline: { ...DEFAULT_TEMPLATE_HEADLINE, style: 'wavy' } })],
+    ['headline position', mk({ headline: { ...DEFAULT_TEMPLATE_HEADLINE, positionFraction: 0.99 } })],
+    ['headline plate opacity', mk({ headline: { ...DEFAULT_TEMPLATE_HEADLINE, plateOpacity: 0.5 } })],
+    ['headline font', mk({ headline: { ...DEFAULT_TEMPLATE_HEADLINE, font: { kind: 'builtin', name: 'Comic Sans' } } })],
+    ['anchor', mk({ logo: { ...defaultBrand('x').logo, anchor: 'top' } })],
+    ['width zero', mk({ logo: { ...defaultBrand('x').logo, width: 0 } })],
+    ['width high', mk({ logo: { ...defaultBrand('x').logo, width: 0.51 } })],
+    ['opacity low', mk({ logo: { ...defaultBrand('x').logo, opacity: 0.04 } })],
+    ['margin', mk({ logo: { ...defaultBrand('x').logo, marginX: 0.46 } })],
+    ['timing window hold', mk({ logo: { ...defaultBrand('x').logo, timing: { kind: 'window', startSec: 0, holdSec: 0.1 } } })],
+    ['logo file empty', mk({ logo: { ...defaultBrand('x').logo, file: '' } })],
+    ['NaN', mk({ captions: { positionFraction: NaN } })],
+    ['version', mk({ version: 3 })],
   ];
   for (const [label, b] of bad) {
     const r = validateBrand(b);
     assert.equal(r.ok, false, label);
     assert.equal(r.errors.length, 1, `${label}: ${r.errors.join(' | ')}`);
   }
-  for (const v of [0.1, 0.9]) assert.equal(validateBrand(mk({ captions: { preset: 'punch', position: v, size: 0.7 } })).ok, true);
+  for (const v of [0.1, 0.9]) assert.equal(validateBrand(mk({ captions: { style: 'punch', positionFraction: v } })).ok, true);
+  for (const style of GALLERY_CAPTION_STYLE_KEYS) assert.equal(validateBrand(mk({ captions: { style } })).ok, true, style);
+});
+
+test('validateBrand: headline null and logo null are kept as null', () => {
+  const r = validateBrand(mk({ headline: null, logo: null }));
+  assert.equal(r.ok, true);
+  assert.equal(r.brand.headline, null);
+  assert.equal(r.brand.logo, null);
+});
+
+test("validateBrand fills a partly given headline's required fields from the Default template, never its optional ones", () => {
+  const r = validateBrand({ name: 'h', headline: { plateColour: '#E63946' } });
+  assert.equal(r.ok, true, r.errors?.join(' | '));
+  const { style, textCase, entrance, ...required } = DEFAULT_TEMPLATE_HEADLINE;
+  assert.deepEqual(r.brand.headline, { ...required, plateColour: '#E63946' });
+  const o = validateBrand({ name: 'h', headline: { style: 'outline' } });
+  assert.equal(o.brand.headline.style, 'outline');
+  assert.equal(o.brand.headline.timing.holdSec, 12);
+});
+
+test('validateBrand fills a partly given logo from the Default template', () => {
+  const r = validateBrand({ name: 'p', logo: { anchor: 'top-right', width: 0.16 } });
+  assert.equal(r.ok, true, r.errors?.join(' | '));
+  assert.deepEqual(r.brand.logo, { ...defaultBrand('p').logo, anchor: 'top-right', width: 0.16 });
 });
 
 test('validateBrand rejects non-objects and unsafe names', () => {
@@ -103,28 +195,21 @@ test('validateBrand rejects non-objects and unsafe names', () => {
   assert.equal(ok.brand.name, 'My Brand_2-b');
 });
 
-test('validateBrand fills missing sections from the defaults', () => {
-  const r = validateBrand({ name: 'tiny', colors: { accent: '#ff0000' } });
-  assert.equal(r.ok, true);
-  assert.deepEqual(r.brand, { ...defaultBrand('tiny'), colors: { text: '#FFFFFF', accent: '#FF0000' } });
-});
-
 test('validateBrand rejects unknown keys at every level and names them', () => {
   const r = validateBrand({
+    version: 2,
     name: 't',
-    color: { accent: '#ff0000' },
-    fonts: 'Anton',
-    colors: { accnt: '#ff0000' },
-    captions: { preset: 'punch', sise: 1 },
-    logo: { corner: 'tl', cornr: 'tl' },
+    captons: {},
+    captions: { stile: 'punch' },
+    headline: { ...DEFAULT_TEMPLATE_HEADLINE, plateColor: '#ffffff' },
+    logo: { anchor: 'top-left', anchr: 'top-left' },
   });
   assert.equal(r.ok, false);
-  assert.equal(r.errors.length, 5, r.errors.join(' | '));
-  assert.ok(r.errors.some((e) => e.includes('unknown key "color"') && e.includes('"colors"')));
-  assert.ok(r.errors.some((e) => e.includes('unknown key "fonts"') && e.includes('"font"')));
-  assert.ok(r.errors.some((e) => e.includes('unknown key "accnt"') && e.includes('colors')));
-  assert.ok(r.errors.some((e) => e.includes('unknown key "sise"') && e.includes('captions')));
-  assert.ok(r.errors.some((e) => e.includes('unknown key "cornr"') && e.includes('logo')));
+  assert.equal(r.errors.length, 4, r.errors.join(' | '));
+  assert.ok(r.errors.some((e) => e.includes('unknown key "captons"') && e.includes('"captions"')));
+  assert.ok(r.errors.some((e) => e.includes('unknown key "stile"') && e.includes('"style"') && e.includes('captions')));
+  assert.ok(r.errors.some((e) => e.includes('unknown key "plateColor"') && e.includes('"plateColour"') && e.includes('headline')));
+  assert.ok(r.errors.some((e) => e.includes('unknown key "anchr"') && e.includes('"anchor"') && e.includes('logo')));
 });
 
 test('a kit that is not a plain object on disk is damaged, not the default', async () => {
@@ -152,14 +237,14 @@ test('a save that fails on its logo leaves the saved kit as it was', async () =>
   writeFileSync(join(d, 'a.png'), PNG);
   const dir = await saveBrand(mk(), join(d, 'a.png'));
   const before = readFileSync(join(dir, 'brand.json'), 'utf8');
-  await assert.rejects(saveBrand(mk({ font: 'Anton' }), join(d, 'gone.png')), /logo/);
+  await assert.rejects(saveBrand(mk({ captions: { style: 'neon' } }), join(d, 'gone.png')), /logo/);
   assert.equal(readFileSync(join(dir, 'brand.json'), 'utf8'), before);
   assert.deepEqual(readdirSync(dir).sort(), ['brand.json', 'logo.png']);
 });
 
 test('save then load round-trips under BOQO_HOME', async () => {
   const home = tempHome();
-  const b = mk({ colors: { text: '#101010', accent: '#FF5500' }, font: 'Anton', hook: false });
+  const b = mk({ captions: { style: 'boldkeys', accentColours: ['#FF5500'], positionFraction: 0.6, baseColour: '#101010' }, headline: null });
   const dir = await saveBrand(b);
   assert.equal(dir, join(home, 'brands', 'mine'));
   assert.ok(existsSync(join(dir, 'brand.json')));
@@ -170,8 +255,8 @@ test('save then load round-trips under BOQO_HOME', async () => {
 test('save refuses an invalid brand with every error in the message', async () => {
   tempHome();
   await assert.rejects(
-    saveBrand(mk({ colors: { text: 'x', accent: 'y' } })),
-    (e) => /colors\.text/.test(e.message) && /colors\.accent/.test(e.message),
+    saveBrand(mk({ captions: { baseColour: 'x', accentColours: ['y'] } })),
+    (e) => /captions\.baseColour/.test(e.message) && /captions\.accentColours/.test(e.message),
   );
   assert.deepEqual(await listBrands(), []);
 });
@@ -179,11 +264,11 @@ test('save refuses an invalid brand with every error in the message', async () =
 test('default sets what loadBrand() returns', async () => {
   tempHome();
   await saveBrand(mk({ name: 'one' }));
-  await saveBrand(mk({ name: 'two', font: 'Anton' }));
+  await saveBrand(mk({ name: 'two', captions: { style: 'neon' } }));
   assert.equal((await loadBrand()).name, 'one', 'the first saved kit becomes the default');
   await setDefaultBrand('two');
   assert.equal((await loadBrand()).name, 'two');
-  assert.equal((await loadBrand()).font, 'Anton');
+  assert.equal((await loadBrand()).captions.style, 'neon');
   assert.deepEqual(await listBrands(), ['one', 'two']);
 });
 
@@ -227,9 +312,9 @@ test('re-saving a loaded brand keeps its logo; saving with no logo drops it', as
   writeFileSync(join(d, 'l.png'), PNG);
   const dir = await saveBrand(mk(), join(d, 'l.png'));
   const loaded = await loadBrand('mine');
-  await saveBrand({ ...loaded, font: 'Anton' });
+  await saveBrand({ ...loaded, captions: { style: 'neon' } });
   const again = await loadBrand('mine');
-  assert.equal(again.font, 'Anton');
+  assert.equal(again.captions.style, 'neon');
   assert.equal(again.logo.file, join(dir, 'logo.png'));
   await saveBrand({ ...again, logo: { ...again.logo, file: null } });
   assert.deepEqual(readdirSync(dir), ['brand.json']);
@@ -242,6 +327,252 @@ test('a logo that is not PNG/JPG or does not exist is rejected', async () => {
   await assert.rejects(saveBrand(mk(), join(d, 'l.svg')), /PNG or JPG/);
   await assert.rejects(saveBrand(mk(), join(d, 'nope.png')), /logo/);
   assert.deepEqual(await listBrands(), [], 'a failed save leaves no kit behind');
+});
+
+// ---- v1 kits ----
+
+const v1 = (over = {}) => ({ ...defaultBrandV1('old'), ...over });
+const writeKit = (home, name, kit) => {
+  mkdirSync(join(home, 'brands', name), { recursive: true });
+  const file = join(home, 'brands', name, 'brand.json');
+  writeFileSync(file, JSON.stringify(kit, null, 2) + '\n');
+  return file;
+};
+
+test('migrateV1 on the v1 default: karaoke, the lime accent, 0.72, boqo lime Default headline for 3 s, no logo', () => {
+  const m = migrateV1(defaultBrandV1('old'));
+  assert.equal(m.version, 2);
+  assert.equal(m.name, 'old');
+  assert.equal(m.ratio, '9:16');
+  assert.equal(m.captions.style, 'karaoke');
+  assert.deepEqual(m.captions.accentColours, ['#C8FF4D']);
+  assert.equal(m.captions.positionFraction, 0.72);
+  assert.equal('baseColour' in m.captions, false, 'white text is the preset own');
+  assert.equal('sizeScale' in m.captions, false, 'size 1 is the preset own');
+  assert.equal(m.logo.file, null);
+  assert.equal(validateBrand(m).ok, true);
+});
+
+test('migrateV1: corner and scale become anchor and width, and the v1 render margin carries over', () => {
+  const corners = { tl: 'top-left', tr: 'top-right', bl: 'bottom-left', br: 'bottom-right' };
+  for (const [corner, anchor] of Object.entries(corners)) {
+    const m = migrateV1(v1({ logo: { file: null, corner, scale: 0.16 } }));
+    assert.equal(m.logo.anchor, anchor);
+    assert.equal(m.logo.width, 0.16);
+    assert.equal(m.logo.opacity, 1);
+    assert.deepEqual(m.logo.timing, { kind: 'whole' });
+    // v1 drew the logo 48 px from the edge on the 1080x1920 frame
+    assert.equal(Math.round(m.logo.marginX * 1080), 48);
+    assert.equal(Math.round(m.logo.marginY * 1920), 48);
+  }
+});
+
+test('migrateV1: hook true is the Default headline block with source title, hook false is no headline', () => {
+  assert.deepEqual(migrateV1(v1({ hook: true })).headline, { ...DEFAULT_HEADLINE, source: 'title' });
+  assert.equal(migrateV1(v1({ hook: true })).headline.timing.holdSec, 3, 'v1 held its hook for 3 s');
+  assert.equal(migrateV1(v1({ hook: false })).headline, null);
+});
+
+test('migrateV1: font Anton maps to the hosted style that uses Anton, named from caption-styles', () => {
+  const anton = GALLERY_CAPTION_STYLES.filter((s) => s.fontName === 'Anton' || s.keyFont === 'Anton').map((s) => s.key);
+  assert.deepEqual(anton, ['boldkeys']);
+  const m = migrateV1(v1({ font: 'Anton', captions: { preset: 'punch', position: 0.6, size: 1 } }));
+  assert.equal(m.captions.style, anton[0]);
+  assert.equal(m.captions.positionFraction, 0.6);
+  assert.equal(migrateV1(v1({ font: 'Inter', captions: { preset: 'punch', position: 0.6, size: 1 } })).captions.style, 'punch');
+});
+
+test('migrateV1: text colour and size are kept when they are not the preset own', () => {
+  const m = migrateV1(v1({ colors: { text: '#101010', accent: '#e63946' }, captions: { preset: 'highlight', position: 0.5, size: 1.2 } }));
+  assert.equal(m.captions.baseColour, '#101010');
+  assert.deepEqual(m.captions.accentColours, ['#E63946']);
+  assert.equal(m.captions.sizeScale, 1.2);
+  assert.equal(validateBrand(m).ok, true);
+});
+
+test('migrateV1 of every v1 value that v1 accepted gives a v2 kit that validates', () => {
+  for (const preset of ['karaoke', 'punch', 'clean', 'highlight']) {
+    for (const font of ['Inter', 'Anton']) {
+      for (const corner of ['tl', 'tr', 'bl', 'br']) {
+        for (const hook of [true, false]) {
+          const m = migrateV1(v1({ font, hook, captions: { preset, position: 0.1, size: 0.7 }, logo: { file: null, corner, scale: 0.3 } }));
+          const r = validateBrand(m);
+          assert.equal(r.ok, true, `${preset} ${font} ${corner} ${hook}: ${r.errors?.join(' | ')}`);
+        }
+      }
+    }
+  }
+});
+
+test('validateBrand takes a v1 kit (version 1, or none with v1 keys) and answers v2; v1 errors keep their wording', () => {
+  assert.deepEqual(validateBrand(defaultBrandV1('old')).brand, migrateV1(defaultBrandV1('old')));
+  assert.deepEqual(validateBrand({ ...defaultBrandV1('old'), version: 1 }).brand, migrateV1(defaultBrandV1('old')));
+  const r = validateBrand({ ...defaultBrandV1('old'), captions: { preset: 'disco', position: 2, size: 1 } });
+  assert.equal(r.ok, false);
+  assert.ok(r.errors.some((e) => e.includes('captions.preset')));
+  assert.ok(r.errors.some((e) => e.includes('captions.position')));
+});
+
+test('loadBrand of a v1 file answers v2 and does not rewrite the file', async () => {
+  const home = tempHome();
+  const file = writeKit(home, 'old', { ...defaultBrandV1('old'), name: undefined });
+  const before = readFileSync(file);
+  const b = await loadBrand('old');
+  assert.equal(b.version, 2);
+  assert.equal(b.captions.style, 'karaoke');
+  assert.deepEqual(b, { ...migrateV1(defaultBrandV1('old')), migratedFrom: 1, notes: ['hook → 3 s title plate'] });
+  assert.deepEqual(readFileSync(file), before, 'the file on disk is byte for byte the v1 kit');
+  assert.equal(JSON.parse(readFileSync(file, 'utf8')).version, undefined);
+  await loadBrand('old');
+  assert.deepEqual(readFileSync(file), before);
+});
+
+test('a v1 kit with a logo loads its logo as an absolute path and still is not rewritten', async () => {
+  const home = tempHome();
+  const file = writeKit(home, 'old', { ...defaultBrandV1('old'), logo: { file: 'logo.png', corner: 'bl', scale: 0.2 } });
+  writeFileSync(join(home, 'brands', 'old', 'logo.png'), PNG);
+  const before = readFileSync(file);
+  const b = await loadBrand('old');
+  assert.equal(b.logo.file, join(home, 'brands', 'old', 'logo.png'));
+  assert.equal(b.logo.anchor, 'bottom-left');
+  assert.equal(b.logo.width, 0.2);
+  assert.deepEqual(readFileSync(file), before);
+});
+
+test('saveBrand writes version 2, and the next edit of a v1 kit writes it as v2', async () => {
+  const home = tempHome();
+  const dir = await saveBrand(mk());
+  const saved = JSON.parse(readFileSync(join(dir, 'brand.json'), 'utf8'));
+  assert.equal(saved.version, 2);
+  assert.deepEqual(Object.keys(saved), ['version', 'name', 'ratio', 'captions', 'headline', 'logo']);
+
+  const file = writeKit(home, 'old', { ...defaultBrandV1('old'), logo: { file: 'logo.png', corner: 'tr', scale: 0.16 } });
+  writeFileSync(join(home, 'brands', 'old', 'logo.png'), PNG);
+  const loaded = await loadBrand('old');
+  await saveBrand({ ...loaded, captions: { ...loaded.captions, positionFraction: 0.6 } });
+  const after = JSON.parse(readFileSync(file, 'utf8'));
+  assert.equal(after.version, 2);
+  assert.equal(after.captions.style, 'karaoke');
+  assert.equal(after.captions.positionFraction, 0.6);
+  assert.equal(after.logo.file, 'logo.png', 'the logo file is the bare name on disk');
+  assert.deepEqual(readdirSync(join(home, 'brands', 'old')).sort(), ['brand.json', 'logo.png']);
+  const { migratedFrom, notes, ...kit } = loaded;
+  assert.deepEqual(await loadBrand('old'), { ...kit, captions: { ...kit.captions, positionFraction: 0.6 } });
+  assert.equal(JSON.stringify(after).includes('migratedFrom'), false);
+});
+
+test('saveBrand of a v1 object writes v2; brand.json is replaced atomically (no temp file left)', async () => {
+  const home = tempHome();
+  const dir = await saveBrand(defaultBrandV1('viaold'));
+  assert.equal(JSON.parse(readFileSync(join(dir, 'brand.json'), 'utf8')).version, 2);
+  assert.deepEqual(readdirSync(dir), ['brand.json']);
+  assert.ok(home);
+});
+
+test('a v2 kit with a null logo and a null headline round-trips', async () => {
+  tempHome();
+  await saveBrand(mk({ logo: null, headline: null }));
+  const b = await loadBrand('mine');
+  assert.equal(b.logo, null);
+  assert.equal(b.headline, null);
+});
+
+test('onboarding.md names every gallery caption style and headline style, in order, and the Anton move; its kits validate', () => {
+  const doc = readFileSync(fileURLToPath(new URL('../skills/boqo-clips/onboarding.md', import.meta.url)), 'utf8');
+  const flat = doc.replace(/\s+/g, ' ');
+  const keys = (list) => list.map((k) => `\`${k}\``).join(', ');
+  assert.ok(flat.includes(keys(GALLERY_CAPTION_STYLE_KEYS)), 'the 15 caption styles, in the gallery order');
+  assert.ok(flat.includes(keys(HEADLINE_STYLE_KEYS)), 'the 6 headline styles');
+  assert.match(doc, /`migratedFrom: 1`/);
+  assert.match(doc, /font Anton → boldkeys/);
+  assert.match(doc, /hook → 3 s title plate/);
+  assert.match(doc, /styles\.jpg/);
+  assert.match(doc, /tile=5x3/);
+  assert.equal(GALLERY_CAPTION_STYLE_KEYS.length, 15);
+  for (const [, json] of doc.matchAll(/```json\n(\{\n[\s\S]*?\n\})\n```/g)) {
+    const kit = JSON.parse(json.replaceAll('<name>', 'mine'));
+    const r = validateBrand(kit);
+    assert.equal(r.ok, true, `${json}: ${r.errors?.join(' | ')}`);
+    assert.equal(r.brand.version, 2);
+  }
+  const sample = validateBrand({ name: 'neon', captions: { style: 'neon', accentColours: ['#E63946'], baseColour: '#101010' } });
+  assert.equal(sample.ok, true);
+});
+
+test('a logo given with the kit logo null turns the logo on at the Default values', async () => {
+  tempHome();
+  const src = join(mkdtempSync(join(tmpdir(), 'boqo-logo-')), 'l.png');
+  writeFileSync(src, PNG);
+  await saveBrand(mk({ logo: null }), src);
+  const b = await loadBrand('mine');
+  assert.equal(b.logo.anchor, 'bottom-left');
+  assert.equal(b.logo.opacity, 0.35);
+  assert.ok(isAbsolute(b.logo.file));
+});
+
+test('legacyView (until the render reads v2): the v1 fields the render reads, from a v2 kit', () => {
+  const v = legacyView({ ...defaultBrand('x'), logo: { ...defaultBrand('x').logo, anchor: 'top-right', width: 0.6 } });
+  assert.deepEqual(v, {
+    name: 'x',
+    colors: { text: '#FFFFFF', accent: '#E900FA' },
+    font: 'Inter',
+    captions: { preset: 'punch', position: 0.7, size: 1 },
+    logo: { file: null, corner: 'tr', scale: 0.3 },
+    hook: true,
+  });
+  assert.equal(legacyView(defaultBrand('x')).logo.corner, 'bl');
+  assert.equal(legacyView({ ...defaultBrand('x'), captions: { style: 'neon' }, logo: null, headline: null }).captions.preset, 'karaoke');
+  assert.equal(legacyView({ ...defaultBrand('x'), logo: null, headline: null }).hook, false);
+  const round = legacyView(migrateV1(defaultBrandV1('x')));
+  assert.deepEqual(round, defaultBrandV1('x'));
+});
+
+test('a converted v1 kit loads with migratedFrom 1 and notes saying what changed; nothing is written', async () => {
+  const home = tempHome();
+  const anton = writeKit(home, 'anton', { ...defaultBrandV1('anton'), font: 'Anton' });
+  const plain = writeKit(home, 'plain', { ...defaultBrandV1('plain'), hook: false });
+  const both = [readFileSync(anton), readFileSync(plain)];
+  const a = await loadBrand('anton');
+  assert.equal(a.migratedFrom, 1);
+  assert.deepEqual(a.notes, ['font Anton → boldkeys', 'hook → 3 s title plate']);
+  const p = await loadBrand('plain');
+  assert.equal(p.migratedFrom, 1);
+  assert.deepEqual(p.notes, []);
+  assert.deepEqual([readFileSync(anton), readFileSync(plain)], both);
+  assert.equal(JSON.parse(readFileSync(anton, 'utf8')).migratedFrom, undefined);
+});
+
+test('a native v2 kit has no marker, and a native boldkeys kit looks different from a migrated Anton one', async () => {
+  const home = tempHome();
+  await saveBrand(mk({ captions: { style: 'boldkeys' } }));
+  const native = await loadBrand('mine');
+  assert.equal('migratedFrom' in native, false);
+  assert.equal('notes' in native, false);
+  writeKit(home, 'anton', { ...defaultBrandV1('anton'), font: 'Anton' });
+  assert.equal((await loadBrand('anton')).captions.style, 'boldkeys');
+  assert.equal((await loadBrand('anton')).migratedFrom, 1);
+});
+
+test('after saveBrand of a loaded v1 kit the marker is gone, on disk and on the next load', async () => {
+  const home = tempHome();
+  writeKit(home, 'anton', { ...defaultBrandV1('anton'), font: 'Anton' });
+  const loaded = await loadBrand('anton');
+  assert.equal(loaded.migratedFrom, 1);
+  await saveBrand(loaded);
+  const disk = JSON.parse(readFileSync(join(home, 'brands', 'anton', 'brand.json'), 'utf8'));
+  assert.deepEqual(Object.keys(disk), ['version', 'name', 'ratio', 'captions', 'headline', 'logo']);
+  const again = await loadBrand('anton');
+  assert.equal('migratedFrom' in again, false);
+  assert.equal('notes' in again, false);
+  assert.equal(again.captions.style, 'boldkeys');
+});
+
+test('a kit file from a newer skill (version 3) says so instead of "damaged"', async () => {
+  const home = tempHome();
+  writeKit(home, 'future', { ...defaultBrand('future'), version: 3 });
+  await assert.rejects(loadBrand('future'), (e) => /newer boqo skill/.test(e.message) && /version 3/.test(e.message) && !/damaged/.test(e.message));
+  writeKit(home, 'odd', { ...defaultBrand('odd'), version: 'x' });
+  await assert.rejects(loadBrand('odd'), /is damaged/);
 });
 
 // ---- CLI ----
@@ -269,7 +600,7 @@ test('CLI: save, list, show, default', () => {
   assert.equal(r.json.brand.name, 'alpha');
   assert.ok(isAbsolute(r.json.brand.logo.file));
 
-  writeFileSync(json, JSON.stringify(mk({ name: 'beta', font: 'Anton' })));
+  writeFileSync(json, JSON.stringify(mk({ name: 'beta', captions: { style: 'neon' } })));
   assert.equal(run(home, ['save', json]).status, 0);
 
   r = run(home, ['list']);
@@ -278,18 +609,47 @@ test('CLI: save, list, show, default', () => {
   r = run(home, ['show']);
   assert.equal(r.json.brand.name, 'alpha');
   assert.ok(isAbsolute(r.json.brand.logo.file));
-  assert.equal(run(home, ['show', 'beta']).json.brand.font, 'Anton');
+  assert.equal(run(home, ['show', 'beta']).json.brand.captions.style, 'neon');
 
   assert.equal(run(home, ['default', 'beta']).status, 0);
   assert.equal(run(home, ['show']).json.brand.name, 'beta');
   assert.equal(run(home, ['list']).json.default, 'beta');
 });
 
+test('CLI: save of a v1 kit file writes v2, and show of an untouched v1 kit answers v2 without rewriting it', () => {
+  const home = tempHome();
+  const d = mkdtempSync(join(tmpdir(), 'boqo-cli-'));
+  const json = join(d, 'v1.json');
+  writeFileSync(json, JSON.stringify({ ...defaultBrandV1('legacy'), font: 'Anton', hook: false }));
+  let r = run(home, ['save', json]);
+  assert.equal(r.status, 0, JSON.stringify(r.json));
+  assert.equal(r.json.brand.version, 2);
+  assert.equal(r.json.brand.captions.style, 'boldkeys');
+  assert.equal(r.json.brand.headline, null);
+  assert.equal(JSON.parse(readFileSync(join(home, 'brands', 'legacy', 'brand.json'), 'utf8')).version, 2);
+
+  const file = writeKit(home, 'untouched', defaultBrandV1('untouched'));
+  const before = readFileSync(file);
+  r = run(home, ['show', 'untouched']);
+  assert.equal(r.json.brand.version, 2);
+  assert.equal(r.json.brand.captions.style, 'karaoke');
+  assert.equal(r.json.brand.migratedFrom, 1);
+  assert.deepEqual(r.json.brand.notes, ['hook → 3 s title plate']);
+  assert.deepEqual(readFileSync(file), before);
+  // saving what show printed (marker and all) writes a clean v2 kit
+  const shown = join(d, 'shown.json');
+  writeFileSync(shown, JSON.stringify(r.json.brand));
+  r = run(home, ['save', shown]);
+  assert.equal(r.status, 0, JSON.stringify(r.json));
+  assert.equal('migratedFrom' in r.json.brand, false);
+  assert.equal('migratedFrom' in JSON.parse(readFileSync(file, 'utf8')), false);
+});
+
 test('CLI: failures exit 1 with {"error"}', () => {
   const home = tempHome();
   const d = mkdtempSync(join(tmpdir(), 'boqo-cli-'));
   const bad = join(d, 'bad.json');
-  writeFileSync(bad, JSON.stringify(mk({ captions: { preset: 'disco', position: 2, size: 1 } })));
+  writeFileSync(bad, JSON.stringify(mk({ captions: { style: 'disco', positionFraction: 2 } })));
   const notJson = join(d, 'nj.json');
   writeFileSync(notJson, '{oops');
 
@@ -316,8 +676,8 @@ test('CLI: failures exit 1 with {"error"}', () => {
   assert.match(t.json.error, /unknown key "color"/);
   assert.match(t.json.error, /unknown key "fonts"/);
   const r = run(home, ['save', bad]);
-  assert.match(r.json.error, /preset/);
-  assert.match(r.json.error, /position/);
+  assert.match(r.json.error, /captions\.style/);
+  assert.match(r.json.error, /captions\.positionFraction/);
 });
 
 function serve(routes) {

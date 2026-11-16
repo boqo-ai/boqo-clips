@@ -1,0 +1,150 @@
+{
+ "cases": [
+  {
+   "name": "narrows to the window and rebases to zero",
+   "startSec": 10,
+   "endSec": 14,
+   "words": [
+    {
+     "word": "a",
+     "start": 8,
+     "end": 9,
+     "confidence": 1,
+     "speaker": 0
+    },
+    {
+     "word": "b",
+     "start": 9.5,
+     "end": 10.5,
+     "confidence": 1,
+     "speaker": 0
+    },
+    {
+     "word": "c",
+     "start": 11,
+     "end": 12,
+     "confidence": 1,
+     "speaker": 0
+    },
+    {
+     "word": "d",
+     "start": 13.8,
+     "end": 14.4,
+     "confidence": 1,
+     "speaker": 0
+    },
+    {
+     "word": "e",
+     "start": 14,
+     "end": 15,
+     "confidence": 1,
+     "speaker": 0
+    }
+   ]
+  },
+  {
+   "name": "a word straddling the start is kept and clamped at zero",
+   "startSec": 5,
+   "endSec": 8,
+   "words": [
+    {
+     "word": "x",
+     "start": 4.5,
+     "end": 5.5,
+     "confidence": 1,
+     "speaker": 0
+    },
+    {
+     "word": "y",
+     "start": 6,
+     "end": 7,
+     "confidence": 1,
+     "speaker": 0
+    }
+   ]
+  },
+  {
+   "name": "an overrunning end is clamped to the next start",
+   "startSec": 0,
+   "endSec": 10,
+   "words": [
+    {
+     "word": "p",
+     "start": 1,
+     "end": 3,
+     "confidence": 1,
+     "speaker": 0
+    },
+    {
+     "word": "q",
+     "start": 2,
+     "end": 2.5,
+     "confidence": 1,
+     "speaker": 0
+    },
+    {
+     "word": "r",
+     "start": 2.5,
+     "end": 4,
+     "confidence": 1,
+     "speaker": 0
+    }
+   ]
+  },
+  {
+   "name": "a later word that starts earlier is not clamped",
+   "startSec": 0,
+   "endSec": 10,
+   "words": [
+    {
+     "word": "p",
+     "start": 1,
+     "end": 3,
+     "confidence": 1,
+     "speaker": 0
+    },
+    {
+     "word": "q",
+     "start": 1,
+     "end": 2,
+     "confidence": 1,
+     "speaker": 0
+    }
+   ]
+  },
+  {
+   "name": "extra fields are carried over",
+   "startSec": 100,
+   "endSec": 102,
+   "words": [
+    {
+     "word": "hi",
+     "start": 100.2,
+     "end": 100.6,
+     "confidence": 0.5,
+     "speaker": 2
+    }
+   ]
+  },
+  {
+   "name": "no words in the window",
+   "startSec": 50,
+   "endSec": 60,
+   "words": [
+    {
+     "word": "a",
+     "start": 1,
+     "end": 2,
+     "confidence": 1,
+     "speaker": 0
+    }
+   ]
+  },
+  {
+   "name": "empty",
+   "startSec": 0,
+   "endSec": 5,
+   "words": []
+  }
+ ]
+}

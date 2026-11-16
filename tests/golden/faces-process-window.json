@@ -1,0 +1,187 @@
+[
+  {
+    "found": [
+      {
+        "x": 0.1,
+        "y": 0.1,
+        "width": 0.2,
+        "height": 0.2,
+        "confidence": 0.9
+      },
+      {
+        "x": 0.1,
+        "y": 0.1,
+        "width": 0.2,
+        "height": 0.2,
+        "confidence": 0.85
+      }
+    ],
+    "image": {
+      "height": 81,
+      "width": 81,
+      "contiguous": true,
+      "first": [
+        0,
+        0,
+        0
+      ],
+      "last": [
+        80,
+        80,
+        128
+      ]
+    }
+  },
+  {
+    "found": [],
+    "image": {
+      "height": 81,
+      "width": 81,
+      "contiguous": true,
+      "first": [
+        0,
+        0,
+        0
+      ],
+      "last": [
+        80,
+        80,
+        128
+      ]
+    }
+  },
+  {
+    "found": [
+      {
+        "x": 0.27,
+        "y": 0.33,
+        "width": 0.45,
+        "height": 0.45,
+        "confidence": 0.93,
+        "faceCentreX": 0.5,
+        "eyeLineY": 0.455,
+        "facing": 0.01111111111111112,
+        "mouthDrop": 0.4555555555555556
+      }
+    ],
+    "image": {
+      "height": 720,
+      "width": 720,
+      "contiguous": true,
+      "first": [
+        104,
+        0,
+        216
+      ],
+      "last": [
+        55,
+        207,
+        80
+      ]
+    }
+  },
+  {
+    "found": [
+      {
+        "x": 0.6,
+        "y": 0.2,
+        "width": 0.3,
+        "height": 0.3,
+        "confidence": 0.8,
+        "faceCentreX": 0.5,
+        "eyeLineY": 0.455,
+        "facing": 0.016666666666666684,
+        "mouthDrop": 0.6833333333333335
+      }
+    ],
+    "image": {
+      "height": 720,
+      "width": 720,
+      "contiguous": true,
+      "first": [
+        48,
+        0,
+        80
+      ],
+      "last": [
+        255,
+        207,
+        200
+      ]
+    }
+  },
+  {
+    "found": [
+      {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 1.0,
+        "confidence": 0.95
+      }
+    ],
+    "image": {
+      "height": 16,
+      "width": 6,
+      "contiguous": true,
+      "first": [
+        2,
+        0,
+        14
+      ],
+      "last": [
+        7,
+        15,
+        64
+      ]
+    }
+  },
+  {
+    "found": [],
+    "image": {
+      "height": 64,
+      "width": 120,
+      "contiguous": true,
+      "first": [
+        8,
+        0,
+        56
+      ],
+      "last": [
+        127,
+        63,
+        184
+      ]
+    }
+  },
+  {
+    "found": [
+      {
+        "x": -0.05,
+        "y": 0.1,
+        "width": 0.3,
+        "height": 0.4,
+        "confidence": 0.99,
+        "faceCentreX": 0.5,
+        "eyeLineY": 0.455,
+        "facing": 0.016666666666666684,
+        "mouthDrop": 0.5125
+      }
+    ],
+    "image": {
+      "height": 544,
+      "width": 371,
+      "contiguous": true,
+      "first": [
+        141,
+        0,
+        219
+      ],
+      "last": [
+        255,
+        31,
+        24
+      ]
+    }
+  }
+]

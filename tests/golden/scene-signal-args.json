@@ -1,0 +1,52 @@
+{
+  "gray": [
+    64,
+    36
+  ],
+  "args": [
+    [
+      "-nostats",
+      "-hide_banner",
+      "-y",
+      "-i",
+      "/w/window.mp4",
+      "-an",
+      "-filter_complex",
+      "[0:v]split[a][b];[a]select='gte(scene,0)',metadata=print:file=-[m];[b]scale=64:36,format=gray[g]",
+      "-map",
+      "[m]",
+      "-f",
+      "null",
+      "-",
+      "-map",
+      "[g]",
+      "-fps_mode",
+      "passthrough",
+      "-f",
+      "rawvideo",
+      "/w/frames.gray"
+    ],
+    [
+      "-nostats",
+      "-hide_banner",
+      "-y",
+      "-i",
+      "C:\\w space\\w.mp4",
+      "-an",
+      "-filter_complex",
+      "[0:v]split[a][b];[a]select='gte(scene,0)',metadata=print:file=-[m];[b]scale=64:36,format=gray[g]",
+      "-map",
+      "[m]",
+      "-f",
+      "null",
+      "-",
+      "-map",
+      "[g]",
+      "-fps_mode",
+      "passthrough",
+      "-f",
+      "rawvideo",
+      "C:\\w space\\g.gray"
+    ]
+  ]
+}

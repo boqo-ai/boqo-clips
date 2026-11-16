@@ -1,0 +1,803 @@
+{
+  "faces": {
+    "Montserrat ExtraBold": {
+      "name": "Montserrat ExtraBold",
+      "bold": -1,
+      "css": "Montserrat",
+      "cssWeight": 800,
+      "cssCapPerEm": 0.7,
+      "fallback": null
+    },
+    "Oswald": {
+      "name": "Oswald",
+      "bold": -1,
+      "css": "Oswald",
+      "cssWeight": 700,
+      "cssCapPerEm": 0.81,
+      "fallback": null
+    },
+    "Inter": {
+      "name": "Inter",
+      "bold": -1,
+      "css": "Inter",
+      "cssWeight": 700,
+      "cssCapPerEm": 0.7273,
+      "fallback": null
+    },
+    "DejaVu Sans": {
+      "name": "DejaVu Sans",
+      "bold": -1,
+      "css": "DejaVu Sans",
+      "cssWeight": 700,
+      "cssCapPerEm": 0.729,
+      "fallback": null
+    },
+    "Anton": {
+      "name": "Anton",
+      "bold": 0,
+      "css": "Anton",
+      "cssWeight": 400,
+      "cssCapPerEm": 0.8594,
+      "fallback": "Oswald"
+    },
+    "Bebas Neue": {
+      "name": "Bebas Neue",
+      "bold": 0,
+      "css": "Bebas Neue",
+      "cssWeight": 400,
+      "cssCapPerEm": 0.7,
+      "fallback": "Oswald"
+    },
+    "Bangers": {
+      "name": "Bangers",
+      "bold": 0,
+      "css": "Bangers",
+      "cssWeight": 400,
+      "cssCapPerEm": 0.721,
+      "fallback": "Montserrat ExtraBold"
+    },
+    "Poppins Black": {
+      "name": "Poppins Black",
+      "bold": -1,
+      "css": "Poppins",
+      "cssWeight": 900,
+      "cssCapPerEm": 0.713,
+      "fallback": "Montserrat ExtraBold"
+    },
+    "Archivo Black": {
+      "name": "Archivo Black",
+      "bold": 0,
+      "css": "Archivo Black",
+      "cssWeight": 400,
+      "cssCapPerEm": 0.688,
+      "fallback": "Montserrat ExtraBold"
+    },
+    "Luckiest Guy": {
+      "name": "Luckiest Guy",
+      "bold": 0,
+      "css": "Luckiest Guy",
+      "cssWeight": 400,
+      "cssCapPerEm": 0.6953,
+      "fallback": "Montserrat ExtraBold"
+    },
+    "Permanent Marker": {
+      "name": "Permanent Marker",
+      "bold": 0,
+      "css": "Permanent Marker",
+      "cssWeight": 400,
+      "cssCapPerEm": 0.7402,
+      "fallback": "Montserrat ExtraBold"
+    }
+  },
+  "newFaces": [
+    "Anton",
+    "Bebas Neue",
+    "Bangers",
+    "Poppins Black",
+    "Archivo Black",
+    "Luckiest Guy",
+    "Permanent Marker"
+  ],
+  "cover": [
+    {
+      "name": "Montserrat ExtraBold",
+      "faceFor": {
+        "name": "Montserrat ExtraBold",
+        "bold": -1,
+        "css": "Montserrat",
+        "cssWeight": 800,
+        "cssCapPerEm": 0.7,
+        "fallback": null
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "greek",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "accented latin",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "emoji",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "empty",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "empty strings",
+          "face": "Montserrat ExtraBold"
+        }
+      ]
+    },
+    {
+      "name": "Oswald",
+      "faceFor": {
+        "name": "Oswald",
+        "bold": -1,
+        "css": "Oswald",
+        "cssWeight": 700,
+        "cssCapPerEm": 0.81,
+        "fallback": null
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "Oswald"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "Oswald"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "Oswald"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "Oswald"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "Oswald"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "Oswald"
+        },
+        {
+          "texts": "greek",
+          "face": "Oswald"
+        },
+        {
+          "texts": "accented latin",
+          "face": "Oswald"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "Oswald"
+        },
+        {
+          "texts": "emoji",
+          "face": "Oswald"
+        },
+        {
+          "texts": "empty",
+          "face": "Oswald"
+        },
+        {
+          "texts": "empty strings",
+          "face": "Oswald"
+        }
+      ]
+    },
+    {
+      "name": "Inter",
+      "faceFor": {
+        "name": "Inter",
+        "bold": -1,
+        "css": "Inter",
+        "cssWeight": 700,
+        "cssCapPerEm": 0.7273,
+        "fallback": null
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "Inter"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "Inter"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "Inter"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "Inter"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "Inter"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "Inter"
+        },
+        {
+          "texts": "greek",
+          "face": "Inter"
+        },
+        {
+          "texts": "accented latin",
+          "face": "Inter"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "Inter"
+        },
+        {
+          "texts": "emoji",
+          "face": "Inter"
+        },
+        {
+          "texts": "empty",
+          "face": "Inter"
+        },
+        {
+          "texts": "empty strings",
+          "face": "Inter"
+        }
+      ]
+    },
+    {
+      "name": "DejaVu Sans",
+      "faceFor": {
+        "name": "DejaVu Sans",
+        "bold": -1,
+        "css": "DejaVu Sans",
+        "cssWeight": 700,
+        "cssCapPerEm": 0.729,
+        "fallback": null
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "greek",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "accented latin",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "emoji",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "empty",
+          "face": "DejaVu Sans"
+        },
+        {
+          "texts": "empty strings",
+          "face": "DejaVu Sans"
+        }
+      ]
+    },
+    {
+      "name": "Anton",
+      "faceFor": {
+        "name": "Anton",
+        "bold": 0,
+        "css": "Anton",
+        "cssWeight": 400,
+        "cssCapPerEm": 0.8594,
+        "fallback": "Oswald"
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "Anton"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "Oswald"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "Oswald"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "Oswald"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "Oswald"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "Oswald"
+        },
+        {
+          "texts": "greek",
+          "face": "Anton"
+        },
+        {
+          "texts": "accented latin",
+          "face": "Anton"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "Anton"
+        },
+        {
+          "texts": "emoji",
+          "face": "Anton"
+        },
+        {
+          "texts": "empty",
+          "face": "Anton"
+        },
+        {
+          "texts": "empty strings",
+          "face": "Anton"
+        }
+      ]
+    },
+    {
+      "name": "Bebas Neue",
+      "faceFor": {
+        "name": "Bebas Neue",
+        "bold": 0,
+        "css": "Bebas Neue",
+        "cssWeight": 400,
+        "cssCapPerEm": 0.7,
+        "fallback": "Oswald"
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "Bebas Neue"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "Oswald"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "Oswald"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "Oswald"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "Oswald"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "Oswald"
+        },
+        {
+          "texts": "greek",
+          "face": "Bebas Neue"
+        },
+        {
+          "texts": "accented latin",
+          "face": "Bebas Neue"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "Bebas Neue"
+        },
+        {
+          "texts": "emoji",
+          "face": "Bebas Neue"
+        },
+        {
+          "texts": "empty",
+          "face": "Bebas Neue"
+        },
+        {
+          "texts": "empty strings",
+          "face": "Bebas Neue"
+        }
+      ]
+    },
+    {
+      "name": "Bangers",
+      "faceFor": {
+        "name": "Bangers",
+        "bold": 0,
+        "css": "Bangers",
+        "cssWeight": 400,
+        "cssCapPerEm": 0.721,
+        "fallback": "Montserrat ExtraBold"
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "Bangers"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "greek",
+          "face": "Bangers"
+        },
+        {
+          "texts": "accented latin",
+          "face": "Bangers"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "Bangers"
+        },
+        {
+          "texts": "emoji",
+          "face": "Bangers"
+        },
+        {
+          "texts": "empty",
+          "face": "Bangers"
+        },
+        {
+          "texts": "empty strings",
+          "face": "Bangers"
+        }
+      ]
+    },
+    {
+      "name": "Poppins Black",
+      "faceFor": {
+        "name": "Poppins Black",
+        "bold": -1,
+        "css": "Poppins",
+        "cssWeight": 900,
+        "cssCapPerEm": 0.713,
+        "fallback": "Montserrat ExtraBold"
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "Poppins Black"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "greek",
+          "face": "Poppins Black"
+        },
+        {
+          "texts": "accented latin",
+          "face": "Poppins Black"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "Poppins Black"
+        },
+        {
+          "texts": "emoji",
+          "face": "Poppins Black"
+        },
+        {
+          "texts": "empty",
+          "face": "Poppins Black"
+        },
+        {
+          "texts": "empty strings",
+          "face": "Poppins Black"
+        }
+      ]
+    },
+    {
+      "name": "Archivo Black",
+      "faceFor": {
+        "name": "Archivo Black",
+        "bold": 0,
+        "css": "Archivo Black",
+        "cssWeight": 400,
+        "cssCapPerEm": 0.688,
+        "fallback": "Montserrat ExtraBold"
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "Archivo Black"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "greek",
+          "face": "Archivo Black"
+        },
+        {
+          "texts": "accented latin",
+          "face": "Archivo Black"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "Archivo Black"
+        },
+        {
+          "texts": "emoji",
+          "face": "Archivo Black"
+        },
+        {
+          "texts": "empty",
+          "face": "Archivo Black"
+        },
+        {
+          "texts": "empty strings",
+          "face": "Archivo Black"
+        }
+      ]
+    },
+    {
+      "name": "Luckiest Guy",
+      "faceFor": {
+        "name": "Luckiest Guy",
+        "bold": 0,
+        "css": "Luckiest Guy",
+        "cssWeight": 400,
+        "cssCapPerEm": 0.6953,
+        "fallback": "Montserrat ExtraBold"
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "Luckiest Guy"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "greek",
+          "face": "Luckiest Guy"
+        },
+        {
+          "texts": "accented latin",
+          "face": "Luckiest Guy"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "Luckiest Guy"
+        },
+        {
+          "texts": "emoji",
+          "face": "Luckiest Guy"
+        },
+        {
+          "texts": "empty",
+          "face": "Luckiest Guy"
+        },
+        {
+          "texts": "empty strings",
+          "face": "Luckiest Guy"
+        }
+      ]
+    },
+    {
+      "name": "Permanent Marker",
+      "faceFor": {
+        "name": "Permanent Marker",
+        "bold": 0,
+        "css": "Permanent Marker",
+        "cssWeight": 400,
+        "cssCapPerEm": 0.7402,
+        "fallback": "Montserrat ExtraBold"
+      },
+      "covering": [
+        {
+          "texts": "latin",
+          "face": "Permanent Marker"
+        },
+        {
+          "texts": "cyrillic upper",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "cyrillic lower",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one cyrillic word in latin",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "one lower cyrillic letter",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "ukrainian",
+          "face": "Montserrat ExtraBold"
+        },
+        {
+          "texts": "greek",
+          "face": "Permanent Marker"
+        },
+        {
+          "texts": "accented latin",
+          "face": "Permanent Marker"
+        },
+        {
+          "texts": "digits and punctuation",
+          "face": "Permanent Marker"
+        },
+        {
+          "texts": "emoji",
+          "face": "Permanent Marker"
+        },
+        {
+          "texts": "empty",
+          "face": "Permanent Marker"
+        },
+        {
+          "texts": "empty strings",
+          "face": "Permanent Marker"
+        }
+      ]
+    }
+  ],
+  "unknown": [
+    {
+      "name": "Comic Sans",
+      "faceFor": {
+        "error": "no caption face \"Comic Sans\""
+      },
+      "covering": {
+        "error": "no caption face \"Comic Sans\""
+      }
+    },
+    {
+      "name": "montserrat extrabold",
+      "faceFor": {
+        "error": "no caption face \"montserrat extrabold\""
+      },
+      "covering": {
+        "error": "no caption face \"montserrat extrabold\""
+      }
+    },
+    {
+      "name": "",
+      "faceFor": {
+        "error": "no caption face \"\""
+      },
+      "covering": {
+        "error": "no caption face \"\""
+      }
+    }
+  ]
+}

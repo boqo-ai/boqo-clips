@@ -1,0 +1,1105 @@
+{
+  "scenarios": [
+    {
+      "name": "default template one",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 765 0 b 771 0 776 5 776 11 l 776 84 b 776 90 771 95 765 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}WHY THIS CLIP WORKS\n",
+        "layout": {
+          "lines": [
+            "WHY THIS CLIP WORKS"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template two",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template three",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,50,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 1003 0 b 1009 0 1014 5 1014 11 l 1014 103 b 1014 109 1009 114 1003 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,238,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,269,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH IN THIRTY DAYS WOULD ALSO COST\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,300,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE\n",
+        "layout": {
+          "lines": [
+            "NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY",
+            "DOUBLED MY REACH IN THIRTY DAYS WOULD ALSO COST",
+            "ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE"
+          ],
+          "capHeightPx": 23,
+          "fontSize": 50,
+          "shrunk": true,
+          "overflow": true
+        }
+      }
+    },
+    {
+      "name": "default template shrink",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,50,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(224,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 1702 0 b 1708 0 1713 5 1713 11 l 1713 103 b 1713 109 1708 114 1702 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(224,269,224,238,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY DOUBLED MY REACH IN THIRTY DAYS\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(224,269,224,269,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}WOULD ALSO COST ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE, AND THEN I FOUND OUT\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(224,269,224,300,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}WHAT THE ALGORITHM REALLY WANTED FROM EVERY CREATOR WHO POSTS THREE TIMES A DAY\n",
+        "layout": {
+          "lines": [
+            "NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY DOUBLED MY REACH IN THIRTY DAYS",
+            "WOULD ALSO COST ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE, AND THEN I FOUND OUT",
+            "WHAT THE ALGORITHM REALLY WANTED FROM EVERY CREATOR WHO POSTS THREE TIMES A DAY"
+          ],
+          "capHeightPx": 23,
+          "fontSize": 50,
+          "shrunk": true,
+          "overflow": true
+        }
+      }
+    },
+    {
+      "name": "default template cyrillic",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,85,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 932 0 b 938 0 943 5 943 11 l 943 182 b 943 188 938 193 932 193 l 11 193 b 5 193 0 188 0 182 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(541,269,541,216,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}ПОЧЕМУ ЭТОТ\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(541,269,541,269,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}РОЛИК НАБРАЛ МИЛЛИОН\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(541,269,541,321,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}ПРОСМОТРОВ ЗА ОДНУ НОЧЬ\n",
+        "layout": {
+          "lines": [
+            "ПОЧЕМУ ЭТОТ",
+            "РОЛИК НАБРАЛ МИЛЛИОН",
+            "ПРОСМОТРОВ ЗА ОДНУ НОЧЬ"
+          ],
+          "capHeightPx": 39,
+          "fontSize": 85,
+          "shrunk": true,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template mixed",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 860 0 b 866 0 871 5 871 11 l 871 84 b 871 90 866 95 860 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,269)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}МОСКВА IS NOT MOSCOW\n",
+        "layout": {
+          "lines": [
+            "МОСКВА IS NOT MOSCOW"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template braces",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 635 0 b 641 0 646 5 646 11 l 646 140 b 646 146 641 151 635 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}USE B1BOLDB0 N\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}AND A BACKSLASH\n",
+        "layout": {
+          "lines": [
+            "USE B1BOLDB0 N",
+            "AND A BACKSLASH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template overflow",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,50,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(-1408,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 4966 0 b 4972 0 4977 5 4977 11 l 4977 103 b 4977 109 4972 114 4966 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(-1408,269,-1408,238,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(-1408,269,-1408,269,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(-1408,269,-1408,300,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD\n",
+        "layout": {
+          "lines": [
+            "WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD",
+            "WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD",
+            "WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD WORD"
+          ],
+          "capHeightPx": 23,
+          "fontSize": 50,
+          "shrunk": true,
+          "overflow": true
+        }
+      }
+    },
+    {
+      "name": "default template two 1:1",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1080\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,52,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,151)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 781 0 b 787 0 792 5 792 11 l 792 43 b 792 49 787 54 781 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,151)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT DOUBLED MY REACH"
+          ],
+          "capHeightPx": 24,
+          "fontSize": 52,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template two 16:9",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1920\nPlayResY: 1080\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,52,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(960,151)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 19 0 l 773 0 b 783 0 792 9 792 19 l 792 35 b 792 45 783 54 773 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(960,151)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT DOUBLED MY REACH"
+          ],
+          "capHeightPx": 24,
+          "fontSize": 52,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template two 720x1280",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 720\nPlayResY: 1280\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,61,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(360,180)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 7 0 l 471 0 b 475 0 478 3 478 7 l 478 94 b 478 98 475 101 471 101 l 7 101 b 3 101 0 98 0 94 l 0 7 b 0 3 3 0 7 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(360,180,360,161,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(360,180,360,198,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 28,
+          "fontSize": 61,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template two, clip 30 s",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template two, clip 12 s",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template two, clip 8 s",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:08.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:08.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:08.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template two, clip 3 s",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:03.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:03.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:03.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template two, clip 0.5 s",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.50,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:00.50,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:00.50,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template three, lead 0",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,50,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 1003 0 b 1009 0 1014 5 1014 11 l 1014 103 b 1014 109 1009 114 1003 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,238,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,269,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH IN THIRTY DAYS WOULD ALSO COST\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,300,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE\n",
+        "layout": {
+          "lines": [
+            "NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY",
+            "DOUBLED MY REACH IN THIRTY DAYS WOULD ALSO COST",
+            "ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE"
+          ],
+          "capHeightPx": 23,
+          "fontSize": 50,
+          "shrunk": true,
+          "overflow": true
+        }
+      }
+    },
+    {
+      "name": "default template three, lead 1.7",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,50,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:01.70,0:00:13.70,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 1003 0 b 1009 0 1014 5 1014 11 l 1014 103 b 1014 109 1009 114 1003 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:01.70,0:00:13.70,headline,,0,0,0,,{\\an5\\move(540,269,540,238,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY\nDialogue: 1,0:00:01.70,0:00:13.70,headline,,0,0,0,,{\\an5\\move(540,269,540,269,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH IN THIRTY DAYS WOULD ALSO COST\nDialogue: 1,0:00:01.70,0:00:13.70,headline,,0,0,0,,{\\an5\\move(540,269,540,300,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE\n",
+        "layout": {
+          "lines": [
+            "NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY",
+            "DOUBLED MY REACH IN THIRTY DAYS WOULD ALSO COST",
+            "ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE"
+          ],
+          "capHeightPx": 23,
+          "fontSize": 50,
+          "shrunk": true,
+          "overflow": true
+        }
+      }
+    },
+    {
+      "name": "default template three, lead 0.004",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,50,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 1003 0 b 1009 0 1014 5 1014 11 l 1014 103 b 1014 109 1009 114 1003 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,238,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,269,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH IN THIRTY DAYS WOULD ALSO COST\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,300,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE\n",
+        "layout": {
+          "lines": [
+            "NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY",
+            "DOUBLED MY REACH IN THIRTY DAYS WOULD ALSO COST",
+            "ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE"
+          ],
+          "capHeightPx": 23,
+          "fontSize": 50,
+          "shrunk": true,
+          "overflow": true
+        }
+      }
+    },
+    {
+      "name": "default template, whole timing",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:17.25,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:17.25,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:17.25,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template, window after the clip",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:30.00,0:00:30.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,1,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:30.00,0:00:30.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,1)\\fscx0\\fscy0\\t(0,1,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:30.00,0:00:30.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,1)\\fscx0\\fscy0\\t(0,1,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template, short hold",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:02.83,0:00:03.33,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:02.83,0:00:03.33,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:02.83,0:00:03.33,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "default template, translucent",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "pop",
+        "speed": 1,
+        "textCase": "upper"
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H33&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\n",
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "bare plate one",
+      "style": null,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an7\\pos(210,221)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 650 0 b 656 0 661 5 661 11 l 661 84 b 661 90 656 95 650 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,269)}Why this clip works\n",
+        "layout": {
+          "lines": [
+            "Why this clip works"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "bare plate two",
+      "style": null,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an7\\pos(232,193)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,240)}The one habit that\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,297)}doubled my reach\n",
+        "layout": {
+          "lines": [
+            "The one habit that",
+            "doubled my reach"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "bare plate three",
+      "style": null,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,54,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an7\\pos(85,207)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 899 0 b 905 0 910 5 910 11 l 910 113 b 910 119 905 124 899 124 l 11 124 b 5 124 0 119 0 113 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,235)}Nobody told me that the one habit that quietly\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)}doubled my reach in thirty days would also cost\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,303)}me every single friend I had ever made online\n",
+        "layout": {
+          "lines": [
+            "Nobody told me that the one habit that quietly",
+            "doubled my reach in thirty days would also cost",
+            "me every single friend I had ever made online"
+          ],
+          "capHeightPx": 25,
+          "fontSize": 54,
+          "shrunk": true,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "bare plate shrink",
+      "style": null,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,50,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an7\\pos(-367,212)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(357,238)}Nobody told me that the one habit that quietly doubled my reach in thirty days\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(357,269)}would also cost me every single friend I had ever made online, and then I found out\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(357,300)}what the algorithm really wanted from every creator who posts three times a day\n",
+        "layout": {
+          "lines": [
+            "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+            "would also cost me every single friend I had ever made online, and then I found out",
+            "what the algorithm really wanted from every creator who posts three times a day"
+          ],
+          "capHeightPx": 23,
+          "fontSize": 50,
+          "shrunk": true,
+          "overflow": true
+        }
+      }
+    },
+    {
+      "name": "bare plate lead",
+      "style": null,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:02.30,0:00:14.30,headline,,0,0,0,,{\\an7\\pos(232,193)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:02.30,0:00:14.30,headline,,0,0,0,,{\\an5\\pos(541,240)}The one habit that\nDialogue: 1,0:00:02.30,0:00:14.30,headline,,0,0,0,,{\\an5\\pos(541,297)}doubled my reach\n",
+        "layout": {
+          "lines": [
+            "The one habit that",
+            "doubled my reach"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "bare plate, plate style given",
+      "style": {
+        "key": "plate",
+        "label": "Plate",
+        "tier": "free",
+        "look": "plate",
+        "font": null,
+        "textColour": "#FFFFFF",
+        "rot": 0,
+        "entrance": "none",
+        "speed": 1
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an7\\pos(232,193)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,240)}The one habit that\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,297)}doubled my reach\n",
+        "layout": {
+          "lines": [
+            "The one habit that",
+            "doubled my reach"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "bare plate, 1:1",
+      "style": null,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1080\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,52,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an7\\pos(102,92)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 865 0 b 871 0 876 5 876 11 l 876 108 b 876 114 871 119 865 119 l 11 119 b 5 119 0 114 0 108 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,119)}Nobody told me that the one habit that quietly\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,152)}doubled my reach in thirty days would also cost\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,184)}me every single friend I had ever made online\n",
+        "layout": {
+          "lines": [
+            "Nobody told me that the one habit that quietly",
+            "doubled my reach in thirty days would also cost",
+            "me every single friend I had ever made online"
+          ],
+          "capHeightPx": 24,
+          "fontSize": 52,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "bare plate, radius 0",
+      "style": null,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an7\\pos(232,193)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\p1}m 0 0 l 617 0 l 617 151 l 0 151 l 0 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,240)}The one habit that\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,297)}doubled my reach\n",
+        "layout": {
+          "lines": [
+            "The one habit that",
+            "doubled my reach"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "bare plate, dark plate",
+      "style": null,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an7\\pos(232,193)\\bord0\\shad0\\1c&H0B0607&\\1a&H00&\\p1}m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,240)}The one habit that\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,297)}doubled my reach\n",
+        "layout": {
+          "lines": [
+            "The one habit that",
+            "doubled my reach"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "bare plate, mid plate",
+      "style": null,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an7\\pos(232,193)\\bord0\\shad0\\1c&HFF7B9B&\\1a&H19&\\p1}m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,240)}The one habit that\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,297)}doubled my reach\n",
+        "layout": {
+          "lines": [
+            "The one habit that",
+            "doubled my reach"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "name": "bare plate, empty",
+      "style": null,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,1,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n",
+        "layout": {
+          "lines": [],
+          "capHeightPx": 42,
+          "fontSize": 1,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    }
+  ],
+  "elements": [
+    {
+      "name": "two elements",
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\nStyle: headline2,Montserrat ExtraBold,91,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\nDialogue: 3,0:00:01.00,0:00:06.00,headline2,,0,0,0,,{\\an5\\pos(540,961)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord5\\3c&H000000&\\shad0}SECOND LINE OF TEXT\n",
+        "layouts": [
+          {
+            "lines": [
+              "THE ONE HABIT THAT",
+              "DOUBLED MY REACH"
+            ],
+            "capHeightPx": 42,
+            "fontSize": 91,
+            "shrunk": false,
+            "overflow": false
+          },
+          {
+            "lines": [
+              "SECOND LINE OF TEXT"
+            ],
+            "capHeightPx": 42,
+            "fontSize": 91,
+            "shrunk": false,
+            "overflow": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "three elements, lead",
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\nStyle: headline2,Montserrat ExtraBold,91,&H001C1316,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\nStyle: headline3,Montserrat ExtraBold,50,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:01.70,0:00:06.70,headline,,0,0,0,,{\\an5\\pos(540,269)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1a&HFF&\\bord6\\blur13\\3c&HFFE729&\\3a&H30&\\shad0}WHY THIS CLIP WORKS\nDialogue: 1,0:00:01.70,0:00:06.70,headline,,0,0,0,,{\\an5\\pos(540,269)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}WHY THIS CLIP WORKS\nDialogue: 2,0:00:03.70,0:00:10.70,headline2,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\clip(200,520,200,575)\\t(0,400,\\clip(200,520,881,575))\\p1}m 200 520 l 881 520 l 881 575 l 200 575{\\p0}\nDialogue: 3,0:00:03.70,0:00:10.70,headline2,,0,0,0,,{\\an5\\move(540,577,540,548,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 2,0:00:03.70,0:00:10.70,headline2,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\clip(206,577,206,632)\\t(0,400,\\clip(206,577,874,632))\\p1}m 206 577 l 874 577 l 874 632 l 206 632{\\p0}\nDialogue: 3,0:00:03.70,0:00:10.70,headline2,,0,0,0,,{\\an5\\move(540,577,540,605,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\nDialogue: 5,0:00:01.70,0:00:13.70,headline3,,0,0,0,,{\\an5\\move(540,1152,540,1121,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad2\\4c&HFF4D7C&\\4a&H00&}NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY\nDialogue: 5,0:00:01.70,0:00:13.70,headline3,,0,0,0,,{\\an5\\move(540,1152,540,1152,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad2\\4c&HFF4D7C&\\4a&H00&}DOUBLED MY REACH IN THIRTY DAYS WOULD ALSO COST\nDialogue: 5,0:00:01.70,0:00:13.70,headline3,,0,0,0,,{\\an5\\move(540,1152,540,1183,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad2\\4c&HFF4D7C&\\4a&H00&}ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE\n",
+        "layouts": [
+          {
+            "lines": [
+              "WHY THIS CLIP WORKS"
+            ],
+            "capHeightPx": 42,
+            "fontSize": 91,
+            "shrunk": false,
+            "overflow": false
+          },
+          {
+            "lines": [
+              "THE ONE HABIT THAT",
+              "DOUBLED MY REACH"
+            ],
+            "capHeightPx": 42,
+            "fontSize": 91,
+            "shrunk": false,
+            "overflow": false
+          },
+          {
+            "lines": [
+              "NOBODY TOLD ME THAT THE ONE HABIT THAT QUIETLY",
+              "DOUBLED MY REACH IN THIRTY DAYS WOULD ALSO COST",
+              "ME EVERY SINGLE FRIEND I HAD EVER MADE ONLINE"
+            ],
+            "capHeightPx": 23,
+            "fontSize": 50,
+            "shrunk": true,
+            "overflow": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "parts of one element",
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\nStyle: headline2,Montserrat ExtraBold,91,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:04.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\org(540,269)\\frz3\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:04.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\org(540,269)\\frz3\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:00.00,0:00:04.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\org(540,269)\\frz3\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH\nDialogue: 0,0:00:04.00,0:00:10.00,headline,,0,0,0,,{\\an5\\pos(540,961)\\bord0\\shad0\\org(540,961)\\frz3\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:04.00,0:00:10.00,headline,,0,0,0,,{\\an5\\pos(540,932)\\org(540,961)\\frz3\\bord0\\shad0}THE ONE HABIT THAT\nDialogue: 1,0:00:04.00,0:00:10.00,headline,,0,0,0,,{\\an5\\pos(540,989)\\org(540,961)\\frz3\\bord0\\shad0}DOUBLED MY REACH\nDialogue: 3,0:00:00.00,0:00:10.00,headline2,,0,0,0,,{\\an5\\pos(541,269)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad4\\4c&HFF4D7C&\\4a&H00&}ANOTHER ONE\nDialogue: 3,0:00:05.00,0:00:10.00,headline2,,0,0,0,,{\\an5\\pos(541,1153)\\bord0\\shad4\\4c&HFF4D7C&\\4a&H00&}ANOTHER ONE\n",
+        "layouts": [
+          {
+            "lines": [
+              "THE ONE HABIT THAT",
+              "DOUBLED MY REACH"
+            ],
+            "capHeightPx": 42,
+            "fontSize": 91,
+            "shrunk": false,
+            "overflow": false
+          },
+          {
+            "lines": [
+              "THE ONE HABIT THAT",
+              "DOUBLED MY REACH"
+            ],
+            "capHeightPx": 42,
+            "fontSize": 91,
+            "shrunk": false,
+            "overflow": false
+          },
+          {
+            "lines": [
+              "ANOTHER ONE"
+            ],
+            "capHeightPx": 42,
+            "fontSize": 91,
+            "shrunk": false,
+            "overflow": false
+          },
+          {
+            "lines": [
+              "ANOTHER ONE"
+            ],
+            "capHeightPx": 42,
+            "fontSize": 91,
+            "shrunk": false,
+            "overflow": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "bare and styled",
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1080\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: headline,Montserrat ExtraBold,52,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\nStyle: headline2,Montserrat ExtraBold,52,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an7\\pos(199,124)\\bord0\\shad0\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 672 0 b 678 0 683 5 683 11 l 683 43 b 683 49 678 54 672 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0{\\p0}\nDialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(541,151)}The one habit that doubled my reach\nDialogue: 3,0:00:00.00,0:00:12.00,headline2,,0,0,0,,{\\an5\\pos(541,432)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord3\\3c&H000000&\\shad0}WHY THIS CLIP WORKS\n",
+        "layouts": [
+          {
+            "lines": [
+              "The one habit that doubled my reach"
+            ],
+            "capHeightPx": 24,
+            "fontSize": 52,
+            "shrunk": false,
+            "overflow": false
+          },
+          {
+            "lines": [
+              "WHY THIS CLIP WORKS"
+            ],
+            "capHeightPx": 24,
+            "fontSize": 52,
+            "shrunk": false,
+            "overflow": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "none",
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n",
+        "layouts": []
+      }
+    }
+  ],
+  "extents": [
+    {
+      "top": 193,
+      "bottom": 344
+    },
+    {
+      "top": 185.54378670381678,
+      "bottom": 352.45621329618325
+    },
+    {
+      "top": 1626.2523699969079,
+      "bottom": 1829.7476300030921
+    },
+    {
+      "top": 124,
+      "bottom": 178
+    },
+    null,
+    {
+      "top": 124,
+      "bottom": 178
+    }
+  ],
+  "stacked": [
+    {
+      "k": 0,
+      "result": {
+        "styleLine": "Style: headline,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1",
+        "events": [
+          "Dialogue: 0,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}",
+          "Dialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT",
+          "Dialogue: 1,0:00:00.00,0:00:12.00,headline,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH"
+        ],
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "k": 1,
+      "result": {
+        "styleLine": "Style: headline2,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1",
+        "events": [
+          "Dialogue: 2,0:00:00.00,0:00:12.00,headline2,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}",
+          "Dialogue: 3,0:00:00.00,0:00:12.00,headline2,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT",
+          "Dialogue: 3,0:00:00.00,0:00:12.00,headline2,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH"
+        ],
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "k": 2,
+      "result": {
+        "styleLine": "Style: headline3,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1",
+        "events": [
+          "Dialogue: 4,0:00:00.00,0:00:12.00,headline3,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}",
+          "Dialogue: 5,0:00:00.00,0:00:12.00,headline3,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT",
+          "Dialogue: 5,0:00:00.00,0:00:12.00,headline3,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH"
+        ],
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "k": 5,
+      "result": {
+        "styleLine": "Style: headline6,Montserrat ExtraBold,91,&H00000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1",
+        "events": [
+          "Dialogue: 10,0:00:00.00,0:00:12.00,headline6,,0,0,0,,{\\an5\\pos(540,269)\\bord0\\shad0\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\1c&H4DFFC8&\\1a&H00&\\p1}m 11 0 l 703 0 b 709 0 714 5 714 11 l 714 140 b 714 146 709 151 703 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0{\\p0}",
+          "Dialogue: 11,0:00:00.00,0:00:12.00,headline6,,0,0,0,,{\\an5\\move(540,269,540,240,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}THE ONE HABIT THAT",
+          "Dialogue: 11,0:00:00.00,0:00:12.00,headline6,,0,0,0,,{\\an5\\move(540,269,540,297,0,380)\\fscx0\\fscy0\\t(0,380,\\fscx100\\fscy100)\\bord0\\shad0}DOUBLED MY REACH"
+        ],
+        "layout": {
+          "lines": [
+            "THE ONE HABIT THAT",
+            "DOUBLED MY REACH"
+          ],
+          "capHeightPx": 42,
+          "fontSize": 91,
+          "shrunk": false,
+          "overflow": false
+        }
+      }
+    }
+  ],
+  "stackedBroken": {
+    "error": "text element 1: event cannot be restacked: Comment: 0,0:00:00.00,0:00:01.00,headline,,x"
+  }
+}

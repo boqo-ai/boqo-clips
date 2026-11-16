@@ -1,0 +1,192 @@
+[
+  [
+    {
+      "startSec": 0,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 2
+    },
+    {
+      "startSec": 2,
+      "endSec": 5
+    },
+    {
+      "startSec": 5,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 2
+    },
+    {
+      "startSec": 2,
+      "endSec": 5
+    },
+    {
+      "startSec": 5,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 4
+    },
+    {
+      "startSec": 4,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 2
+    },
+    {
+      "startSec": 2,
+      "endSec": 2.5
+    },
+    {
+      "startSec": 2.5,
+      "endSec": 3
+    },
+    {
+      "startSec": 3,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 2
+    },
+    {
+      "startSec": 2,
+      "endSec": 2.5
+    },
+    {
+      "startSec": 2.5,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 2
+    },
+    {
+      "startSec": 2,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 0.5
+    },
+    {
+      "startSec": 0.5,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 4
+    },
+    {
+      "startSec": 4,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 4
+    },
+    {
+      "startSec": 4,
+      "endSec": 9.5
+    },
+    {
+      "startSec": 9.5,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 10
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 1
+    },
+    {
+      "startSec": 1,
+      "endSec": 2
+    },
+    {
+      "startSec": 2,
+      "endSec": 3
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 0
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 2
+    },
+    {
+      "startSec": 2,
+      "endSec": 6
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 1
+    },
+    {
+      "startSec": 1,
+      "endSec": 2
+    },
+    {
+      "startSec": 2,
+      "endSec": 3.2
+    },
+    {
+      "startSec": 3.2,
+      "endSec": 6
+    }
+  ],
+  [
+    {
+      "startSec": 0,
+      "endSec": 0.9
+    },
+    {
+      "startSec": 0.9,
+      "endSec": 3.5
+    }
+  ]
+]

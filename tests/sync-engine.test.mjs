@@ -50,7 +50,7 @@ const sync = (source, target) =>
 test('SHARED is the agreed list', () => {
   assert.deepEqual(SHARED, [
     'engine/', 'tools/doctor.mjs', 'tools/fetch.mjs', 'tools/render.mjs',
-    'tools/picks-check.mjs', 'tools/brand.mjs', 'tools/asr.mjs', 'tools/boqo-upload.mjs', 'tools/transcript.mjs', 'tools/select-request.mjs', 'tools/select-check.mjs', 'tools/clips.mjs', 'tools/stranger.mjs', 'tools/transcript-boqo.mjs',
+    'tools/picks-check.mjs', 'tools/brand.mjs', 'tools/asr.mjs', 'tools/boqo-upload.mjs', 'tools/transcript.mjs', 'tools/select-request.mjs', 'tools/select-check.mjs', 'tools/clips.mjs', 'tools/stranger.mjs', 'tools/transcript-boqo.mjs', 'tools/panels.mjs',
     'scripts/parity/golden.mjs', 'scripts/parity/strip.mjs', 'scripts/boqo-drift.mjs', 'tests/helpers/golden.mjs',
   ]);
 });
@@ -71,7 +71,7 @@ test('engineHash changes when a byte under engine/ changes', () => {
 test('engineHash changes when a byte in a binary under engine/ changes', () => {
   const src = makeSource();
   const before = engineHash(src);
-  const f = join(src, 'engine/fonts/Inter-Bold.ttf');
+  const f = join(src, 'engine/fonts/Inter-Bold.otf');
   const b = readFileSync(f);
   b[b.length - 1] ^= 0xff;
   writeFileSync(f, b);

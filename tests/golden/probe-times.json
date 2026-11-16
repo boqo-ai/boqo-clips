@@ -1,0 +1,57 @@
+[
+  {
+    "name": "ten clips, six wanted",
+    "times": [
+      15,
+      115.5,
+      216,
+      316.5,
+      417,
+      517.5
+    ]
+  },
+  {
+    "name": "three clips",
+    "times": [
+      25,
+      130,
+      200.5
+    ]
+  },
+  {
+    "name": "a clip with no length is skipped",
+    "times": [
+      35,
+      80
+    ]
+  },
+  {
+    "name": "count zero",
+    "times": []
+  },
+  {
+    "name": "a negative count",
+    "times": []
+  },
+  {
+    "name": "no clips",
+    "times": []
+  },
+  {
+    "name": "a negative count of -1 over four clips takes none",
+    "times": []
+  },
+  {
+    "name": "fractional edges",
+    "times": [
+      34.004999999999995,
+      0.2
+    ]
+  },
+  {
+    "name": "the first only counts after the filter",
+    "times": [
+      13
+    ]
+  }
+]

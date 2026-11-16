@@ -1,0 +1,486 @@
+{
+  "rects": [
+    {
+      "ok": true,
+      "data": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      }
+    },
+    {
+      "ok": true,
+      "data": {
+        "x": 0.1,
+        "y": 0.2,
+        "w": 0.3,
+        "h": 0.4
+      }
+    },
+    {
+      "ok": false,
+      "paths": [
+        "x"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "w"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "h"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "x"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        ""
+      ]
+    },
+    {
+      "ok": true,
+      "data": {
+        "x": 0.5,
+        "y": 0.5,
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "ok": false,
+      "paths": [
+        "h"
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "ok": true,
+      "data": {
+        "sourceSec": 3.5,
+        "mode": "panels",
+        "cameras": [
+          {
+            "x": 0.7,
+            "y": 0.05,
+            "w": 0.25,
+            "h": 0.3
+          }
+        ],
+        "game": {
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 1
+        },
+        "focus": {
+          "x": 0.4,
+          "y": 0.4,
+          "w": 0.1,
+          "h": 0.1
+        },
+        "why": "the hero"
+      }
+    },
+    {
+      "ok": false,
+      "paths": [
+        "mode"
+      ]
+    },
+    {
+      "ok": true,
+      "data": {
+        "sourceSec": 3.5,
+        "mode": "panels",
+        "cameras": [],
+        "game": {
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 1
+        },
+        "focus": {
+          "x": 0.4,
+          "y": 0.4,
+          "w": 0.1,
+          "h": 0.1
+        },
+        "why": "the hero"
+      }
+    },
+    {
+      "ok": true,
+      "data": {
+        "sourceSec": 3.5,
+        "mode": "panels",
+        "cameras": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0.1,
+            "h": 0.1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0.1,
+            "h": 0.1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0.1,
+            "h": 0.1
+          }
+        ],
+        "game": {
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 1
+        },
+        "focus": {
+          "x": 0.4,
+          "y": 0.4,
+          "w": 0.1,
+          "h": 0.1
+        },
+        "why": "the hero"
+      }
+    },
+    {
+      "ok": false,
+      "paths": [
+        "cameras"
+      ]
+    },
+    {
+      "ok": true,
+      "data": {
+        "sourceSec": 3.5,
+        "mode": "panels",
+        "cameras": [
+          {
+            "x": 0.7,
+            "y": 0.05,
+            "w": 0.25,
+            "h": 0.3
+          }
+        ],
+        "game": null,
+        "focus": null,
+        "why": "the hero"
+      }
+    },
+    {
+      "ok": false,
+      "paths": [
+        "game"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "why"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "sourceSec"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "mode",
+        "cameras",
+        "game",
+        "focus",
+        "why"
+      ]
+    },
+    {
+      "ok": true,
+      "data": {
+        "sourceSec": 3.5,
+        "mode": "panels",
+        "cameras": [
+          {
+            "x": 0.7,
+            "y": 0.05,
+            "w": 0.25,
+            "h": 0.3
+          }
+        ],
+        "game": {
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 1
+        },
+        "focus": {
+          "x": 0.4,
+          "y": 0.4,
+          "w": 0.1,
+          "h": 0.1
+        },
+        "why": "the hero"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "ok": true,
+      "data": {
+        "version": 1,
+        "status": "ok",
+        "promptVersion": "panels-2026-11-09d",
+        "model": "m",
+        "content": "stream_with_game",
+        "gameTitle": "Dota 2",
+        "samples": [
+          {
+            "sourceSec": 3.5,
+            "mode": "panels",
+            "cameras": [
+              {
+                "x": 0.7,
+                "y": 0.05,
+                "w": 0.25,
+                "h": 0.3
+              }
+            ],
+            "game": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 1
+            },
+            "focus": {
+              "x": 0.4,
+              "y": 0.4,
+              "w": 0.1,
+              "h": 0.1
+            },
+            "why": "the hero"
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "data": {
+        "version": 1,
+        "status": "ok",
+        "promptVersion": "panels-2026-11-09d",
+        "model": "m",
+        "content": "stream_with_game",
+        "gameTitle": "Dota 2",
+        "samples": [
+          {
+            "sourceSec": 3.5,
+            "mode": "panels",
+            "cameras": [
+              {
+                "x": 0.7,
+                "y": 0.05,
+                "w": 0.25,
+                "h": 0.3
+              }
+            ],
+            "game": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 1
+            },
+            "focus": {
+              "x": 0.4,
+              "y": 0.4,
+              "w": 0.1,
+              "h": 0.1
+            },
+            "why": "the hero"
+          }
+        ],
+        "trigger": "creator"
+      }
+    },
+    {
+      "ok": false,
+      "paths": [
+        "trigger"
+      ]
+    },
+    {
+      "ok": true,
+      "data": {
+        "version": 1,
+        "status": "ok",
+        "promptVersion": "panels-2026-11-09d",
+        "model": "m",
+        "content": "other",
+        "gameTitle": null,
+        "samples": []
+      }
+    },
+    {
+      "ok": false,
+      "paths": [
+        "content"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "version"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "samples.0.mode"
+      ]
+    },
+    {
+      "ok": true,
+      "data": {
+        "version": 1,
+        "status": "failed",
+        "reason": "timeout"
+      }
+    },
+    {
+      "ok": true,
+      "data": {
+        "version": 1,
+        "status": "failed",
+        "reason": "x",
+        "trigger": "first",
+        "failure": "render-failed"
+      }
+    },
+    {
+      "ok": false,
+      "paths": [
+        "failure"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "reason"
+      ]
+    },
+    {
+      "ok": true,
+      "data": {
+        "version": 1,
+        "status": "pending"
+      }
+    },
+    {
+      "ok": false,
+      "paths": [
+        "promptVersion",
+        "model",
+        "content",
+        "gameTitle",
+        "samples"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "status"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "status"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        ""
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        ""
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "ok": true,
+      "data": {
+        "version": 1,
+        "isStream": true,
+        "gameTitle": "League of Legends"
+      }
+    },
+    {
+      "ok": true,
+      "data": {
+        "version": 1,
+        "isStream": false,
+        "gameTitle": null
+      }
+    },
+    {
+      "ok": false,
+      "paths": [
+        "isStream"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "gameTitle"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "version"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "version"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        "version",
+        "isStream",
+        "gameTitle"
+      ]
+    },
+    {
+      "ok": false,
+      "paths": [
+        ""
+      ]
+    }
+  ]
+}

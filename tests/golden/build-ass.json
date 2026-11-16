@@ -1,0 +1,1320 @@
+{
+  "gallery": [
+    {
+      "key": "karaoke",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Montserrat ExtraBold",
+        "capHeightPx": 45,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#F8F800",
+          "#00F020"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 7,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "scale",
+          "scalePct": 128
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,98,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1508)}{\\c&H00F8F8&\\fscx128\\fscy128}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO {\\c&H00F8F8&\\fscx128\\fscy128}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO THE {\\c&H00F8F8&\\fscx128\\fscy128}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO THE 3 {\\c&H20F000&\\fscx128\\fscy128}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO THE 3 ROCKETS\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1585)}{\\c&H00F8F8&\\fscx128\\fscy128}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx128\\fscy128}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND {\\c&H00F8F8&\\fscx128\\fscy128}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY {\\c&H00F8F8&\\fscx128\\fscy128}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx128\\fscy128}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE {\\c&H00F8F8&\\fscx128\\fscy128}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE IT {\\c&H20F000&\\fscx128\\fscy128}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx128\\fscy128}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "punch",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Oswald",
+        "capHeightPx": 52,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#F8F800"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 7,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "scale",
+          "scalePct": 130
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO {\\c&H00F8F8&\\fscx130\\fscy130}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE {\\c&H00F8F8&\\fscx130\\fscy130}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 {\\c&H00F8F8&\\fscx130\\fscy130}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100} LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 ROCKETS {\\c&H00F8F8&\\fscx130\\fscy130}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND {\\c&H00F8F8&\\fscx130\\fscy130}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY {\\c&H00F8F8&\\fscx130\\fscy130}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE {\\c&H00F8F8&\\fscx130\\fscy130}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE IT {\\c&H00F8F8&\\fscx130\\fscy130}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "clean",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Inter",
+        "capHeightPx": 40,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#00E5FF"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 4,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "scale",
+          "scalePct": 110
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Inter,67,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,4,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&HFFE500&\\fscx110\\fscy110}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO {\\c&HFFE500&\\fscx110\\fscy110}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE {\\c&HFFE500&\\fscx110\\fscy110}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 {\\c&HFFE500&\\fscx110\\fscy110}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100} LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 ROCKETS {\\c&HFFE500&\\fscx110\\fscy110}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&HFFE500&\\fscx110\\fscy110}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND {\\c&HFFE500&\\fscx110\\fscy110}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY {\\c&HFFE500&\\fscx110\\fscy110}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&HFFE500&\\fscx110\\fscy110}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE {\\c&HFFE500&\\fscx110\\fscy110}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE IT {\\c&HFFE500&\\fscx110\\fscy110}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&HFFE500&\\fscx110\\fscy110}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "highlight",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Montserrat ExtraBold",
+        "capHeightPx": 43,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFFFFF"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 8,
+        "borderStyle": 3,
+        "emphasis": {
+          "kind": "box",
+          "boxColour": "#00F020",
+          "textColour": "#000000",
+          "inactiveBoxColour": "#000000",
+          "inactiveBoxOpacity": 0.6
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,93,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,8,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1509)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}SO{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} THE 3 ROCKETS\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1583)\\3a&H66&\\3c&H000000&}LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1509)\\3a&H66&\\3c&H000000&}SO {\\3a&H00&\\3c&H20F000&\\c&H000000&}THE{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} 3 ROCKETS\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1583)\\3a&H66&\\3c&H000000&}LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1509)\\3a&H66&\\3c&H000000&}SO THE {\\3a&H00&\\3c&H20F000&\\c&H000000&}3{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} ROCKETS\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1583)\\3a&H66&\\3c&H000000&}LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1509)\\3a&H66&\\3c&H000000&}SO THE 3 {\\3a&H00&\\3c&H20F000&\\c&H000000&}ROCKETS{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1583)\\3a&H66&\\3c&H000000&}LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1509)\\3a&H66&\\3c&H000000&}SO THE 3 ROCKETS\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1583)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}LAUNCHED{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}AND{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}AND {\\3a&H00&\\3c&H20F000&\\c&H000000&}NOBODY{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}AND NOBODY {\\3a&H00&\\3c&H20F000&\\c&H000000&}DIDN'T{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}SEE{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} IT COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}SEE {\\3a&H00&\\3c&H20F000&\\c&H000000&}IT{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} COMING\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}SEE IT {\\3a&H00&\\3c&H20F000&\\c&H000000&}COMING{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}REALLY{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "classic",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "legacy",
+        "fontName": "DejaVu Sans",
+        "fontSize": 84,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFE500"
+        ],
+        "outlineColour": "#000000",
+        "marginVertical": 420,
+        "maxWordsPerLine": 4
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,DejaVu Sans,84,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,60,60,420,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\c&H00E5FF&}So{\\c&HFFFFFF&} the 3 rockets\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,So {\\c&H00E5FF&}the{\\c&HFFFFFF&} 3 rockets\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,So the {\\c&H00E5FF&}3{\\c&HFFFFFF&} rockets\nDialogue: 0,0:00:00.62,0:00:01.05,boqo,,0,0,0,,So the 3 {\\c&H00E5FF&}rockets{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.08,0:00:01.70,boqo,,0,0,0,,{\\c&H00E5FF&}launched,{\\c&HFFFFFF&} and nobody didn't\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,launched, {\\c&H00E5FF&}and{\\c&HFFFFFF&} nobody didn't\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,launched, and {\\c&H00E5FF&}nobody{\\c&HFFFFFF&} didn't\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,launched, and nobody {\\c&H00E5FF&}didn't{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\c&H00E5FF&}see{\\c&HFFFFFF&} it coming.\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,see {\\c&H00E5FF&}it{\\c&HFFFFFF&} coming.\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,see it {\\c&H00E5FF&}coming.{\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\c&H00E5FF&}Really?{\\c&HFFFFFF&}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 0,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "bounce",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Montserrat ExtraBold",
+        "capHeightPx": 45,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFD400"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 7,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "colour"
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "free",
+        "entrance": "bounce",
+        "reveal": true
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,98,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\1a&HFF&}{\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}SO{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ROCKETS{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,200,\\fscx100\\fscy100)\\c&H00D4FF&}SO{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\bord0\\shad0}{\\c&H00D4FF&\\alpha&HFF&}SO{\\c&HFFFFFF&\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\alpha&HFF&}ROCKETS{\\alpha&H00&}\nDialogue: 1,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,200,\\fscx100\\fscy100)\\c&H00D4FF&}SO{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}THE{\\alpha&H00&\\alpha&H00&} {\\alpha&HFF&\\alpha&HFF&}3{\\alpha&H00&\\alpha&H00&} {\\alpha&HFF&\\alpha&HFF&}ROCKETS{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1585)}{\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\1a&HFF&}SO {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}THE{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ROCKETS{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,140,\\fscx115\\fscy115)\\t(140,140,\\fscx100\\fscy100)\\c&H00D4FF&}THE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\bord0\\shad0}SO {\\c&H00D4FF&\\alpha&HFF&}THE{\\c&HFFFFFF&\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\alpha&HFF&}ROCKETS{\\alpha&H00&}\nDialogue: 1,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,140,\\fscx115\\fscy115)\\t(140,140,\\fscx100\\fscy100)\\c&H00D4FF&}THE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}3{\\alpha&H00&\\alpha&H00&} {\\alpha&HFF&\\alpha&HFF&}ROCKETS{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1585)}{\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\1a&HFF&}SO THE {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}3{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ROCKETS{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,279,\\fscx100\\fscy100)\\c&H00D4FF&}3{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\bord0\\shad0}SO THE {\\c&H00D4FF&\\alpha&HFF&}3{\\c&HFFFFFF&\\alpha&H00&} {\\alpha&HFF&}ROCKETS{\\alpha&H00&}\nDialogue: 1,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,279,\\fscx100\\fscy100)\\c&H00D4FF&}3{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}ROCKETS{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1585)}{\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\1a&HFF&}SO THE 3 {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)\\c&H00D4FF&}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\bord0\\shad0}SO THE 3 {\\c&H00D4FF&\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1508)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)\\c&H00D4FF&}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1585)}{\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO THE 3 ROCKETS\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1585)\\1a&HFF&}{\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1585)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)\\c&H00D4FF&}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1585)\\bord0\\shad0}{\\c&H00D4FF&\\alpha&HFF&}LAUNCHED{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1585)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)\\c&H00D4FF&}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}AND{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}NOBODY{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}DIDN'T{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,140,\\fscx115\\fscy115)\\t(140,140,\\fscx100\\fscy100)\\c&H00D4FF&}AND{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}NOBODY{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}DIDN'T{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&H00D4FF&\\alpha&HFF&}AND{\\c&HFFFFFF&\\alpha&H00&} {\\alpha&HFF&}NOBODY{\\alpha&H00&} {\\alpha&HFF&}DIDN'T{\\alpha&H00&}\nDialogue: 1,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,140,\\fscx115\\fscy115)\\t(140,140,\\fscx100\\fscy100)\\c&H00D4FF&}AND{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}NOBODY{\\alpha&H00&\\alpha&H00&} {\\alpha&HFF&\\alpha&HFF&}DIDN'T{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}AND {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}NOBODY{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}DIDN'T{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}AND{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)\\c&H00D4FF&}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}DIDN'T{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}AND {\\c&H00D4FF&\\alpha&HFF&}NOBODY{\\c&HFFFFFF&\\alpha&H00&} {\\alpha&HFF&}DIDN'T{\\alpha&H00&}\nDialogue: 1,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}AND{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)\\c&H00D4FF&}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}DIDN'T{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}AND NOBODY {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}DIDN'T{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}AND{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}NOBODY{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,279,\\fscx100\\fscy100)\\c&H00D4FF&}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}AND NOBODY {\\c&H00D4FF&\\alpha&HFF&}DIDN'T{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}AND{\\alpha&H00&} {\\alpha&HFF&}NOBODY{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,279,\\fscx100\\fscy100)\\c&H00D4FF&}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}SEE{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}IT{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}COMING{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,200,\\fscx100\\fscy100)\\c&H00D4FF&}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}IT{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}COMING{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&H00D4FF&\\alpha&HFF&}SEE{\\c&HFFFFFF&\\alpha&H00&} {\\alpha&HFF&}IT{\\alpha&H00&} {\\alpha&HFF&}COMING{\\alpha&H00&}\nDialogue: 1,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,200,\\fscx100\\fscy100)\\c&H00D4FF&}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}IT{\\alpha&H00&\\alpha&H00&} {\\alpha&HFF&\\alpha&HFF&}COMING{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SEE {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}IT{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}COMING{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SEE{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,99,\\fscx115\\fscy115)\\t(99,99,\\fscx100\\fscy100)\\c&H00D4FF&}IT{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}COMING{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SEE {\\c&H00D4FF&\\alpha&HFF&}IT{\\c&HFFFFFF&\\alpha&H00&} {\\alpha&HFF&}COMING{\\alpha&H00&}\nDialogue: 1,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SEE{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,99,\\fscx115\\fscy115)\\t(99,99,\\fscx100\\fscy100)\\c&H00D4FF&}IT{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}COMING{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SEE IT {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}COMING{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SEE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}IT{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)\\c&H00D4FF&}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SEE IT {\\c&H00D4FF&\\alpha&HFF&}COMING{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SEE{\\alpha&H00&} {\\alpha&HFF&}IT{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)\\c&H00D4FF&}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}REALLY{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)\\c&H00D4FF&}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&H00D4FF&\\alpha&HFF&}REALLY{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)\\c&H00D4FF&}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "neon",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Bebas Neue",
+        "capHeightPx": 52,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFFFFF"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 0,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "glow",
+          "boost": 0.35
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "plus",
+        "glow": {
+          "colour": "#FF2BD6",
+          "strength": 0.8
+        },
+        "entrance": "fade"
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Bebas Neue,96,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 1,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(200,0)}{\\c&HFFFFFF&}SO{\\c&HFFFFFF&} THE 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(200,0)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}SO{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} THE 3 ROCKETS LAUNCHED\nDialogue: 1,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO {\\c&HFFFFFF&}THE{\\c&HFFFFFF&} 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}SO {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}THE{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} 3 ROCKETS LAUNCHED\nDialogue: 1,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE {\\c&HFFFFFF&}3{\\c&HFFFFFF&} ROCKETS LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}SO THE {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}3{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} ROCKETS LAUNCHED\nDialogue: 1,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 {\\c&HFFFFFF&}ROCKETS{\\c&HFFFFFF&} LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}SO THE 3 {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}ROCKETS{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} LAUNCHED\nDialogue: 1,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 ROCKETS {\\c&HFFFFFF&}LAUNCHED{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}SO THE 3 ROCKETS {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}LAUNCHED{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}\nDialogue: 1,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(140,0)}{\\c&HFFFFFF&}AND{\\c&HFFFFFF&} NOBODY DIDN'T\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(140,0)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}AND{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} NOBODY DIDN'T\nDialogue: 1,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND {\\c&HFFFFFF&}NOBODY{\\c&HFFFFFF&} DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}AND {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}NOBODY{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} DIDN'T\nDialogue: 1,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY {\\c&HFFFFFF&}DIDN'T{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}AND NOBODY {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}DIDN'T{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}\nDialogue: 1,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(200,0)}{\\c&HFFFFFF&}SEE{\\c&HFFFFFF&} IT COMING\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(200,0)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}SEE{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} IT COMING\nDialogue: 1,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE {\\c&HFFFFFF&}IT{\\c&HFFFFFF&} COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}SEE {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}IT{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} COMING\nDialogue: 1,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE IT {\\c&HFFFFFF&}COMING{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}SEE IT {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}COMING{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}\nDialogue: 1,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)}{\\c&HFFFFFF&}REALLY{\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}REALLY{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "boldkeys",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Poppins Black",
+        "capHeightPx": 42,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFFFFF",
+          "#39FF14"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 6,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "scale",
+          "scalePct": 118
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "plus",
+        "cycleColours": [
+          "#FFD400",
+          "#FF3B3B"
+        ],
+        "keyFont": "Anton",
+        "keyScalePct": 118,
+        "keyAlways": true,
+        "animatePop": true
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Poppins Black,105,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}SO{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} THE 3 {\\c&H14FF39&\\fnAnton\\fs102\\b0}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1} LAUNCHED\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}SO{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fnAnton\\fs102\\b0\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}SO{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} THE 3 {\\c&H14FF39&\\fnAnton\\fs102\\b0}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1} LAUNCHED\nDialogue: 1,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}SO{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}THE{\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H14FF39&\\fnAnton\\fs102\\b0\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SO {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}THE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} 3 {\\c&H14FF39&\\fnAnton\\fs102\\b0}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1} LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}THE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fnAnton\\fs102\\b0\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SO {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}THE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} 3 {\\c&H14FF39&\\fnAnton\\fs102\\b0}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1} LAUNCHED\nDialogue: 1,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}THE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H14FF39&\\fnAnton\\fs102\\b0\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SO THE {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}3{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fnAnton\\fs102\\b0}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1} LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}3{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H14FF39&\\fnAnton\\fs102\\b0\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SO THE {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}3{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H14FF39&\\fnAnton\\fs102\\b0}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1} LAUNCHED\nDialogue: 1,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}3{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H14FF39&\\fnAnton\\fs102\\b0\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SO THE 3 {\\c&H14FF39&\\fscx118\\fnAnton\\fs102\\b0\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100\\fnPoppins Black\\fs105\\b1\\alpha&H00&\\1a&HFF&} LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnAnton\\fs102\\b0}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100\\fnPoppins Black\\fs105\\b1} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SO THE 3 {\\c&H14FF39&\\fscx118\\fnAnton\\fs102\\b0\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100\\fnPoppins Black\\fs105\\b1\\alpha&H00&} LAUNCHED\nDialogue: 1,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H14FF39&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnAnton\\fs102\\b0}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100\\fnPoppins Black\\fs105\\b1} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SO THE 3 {\\c&H14FF39&\\fnAnton\\fs102\\b0}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1} {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fnAnton\\fs102\\b0\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SO THE 3 {\\c&H14FF39&\\fnAnton\\fs102\\b0}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1} {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H14FF39&\\fnAnton\\fs102\\b0\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}AND{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} NOBODY DIDN'T\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}AND{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}NOBODY{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}DIDN'T{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}AND{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} NOBODY DIDN'T\nDialogue: 1,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}AND{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}NOBODY{\\alpha&H00&} {\\alpha&HFF&}DIDN'T{\\alpha&H00&}\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}AND {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}AND{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}DIDN'T{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}AND {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} DIDN'T\nDialogue: 1,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}AND{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}DIDN'T{\\alpha&H00&}\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}AND NOBODY {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}AND{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}NOBODY{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}AND NOBODY {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}AND{\\alpha&H00&} {\\alpha&HFF&}NOBODY{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}SEE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} IT {\\c&H00D4FF&\\fnAnton\\fs102\\b0}COMING{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}IT{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\fnAnton\\fs102\\b0\\alpha&HFF&\\1a&HFF&}COMING{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}SEE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} IT {\\c&H00D4FF&\\fnAnton\\fs102\\b0}COMING{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1}\nDialogue: 1,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}IT{\\alpha&H00&} {\\c&H00D4FF&\\fnAnton\\fs102\\b0\\alpha&HFF&}COMING{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&}\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SEE {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}IT{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\fnAnton\\fs102\\b0}COMING{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1}\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SEE{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}IT{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H00D4FF&\\fnAnton\\fs102\\b0\\alpha&HFF&\\1a&HFF&}COMING{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SEE {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}IT{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H00D4FF&\\fnAnton\\fs102\\b0}COMING{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1}\nDialogue: 1,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SEE{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}IT{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H00D4FF&\\fnAnton\\fs102\\b0\\alpha&HFF&}COMING{\\c&HFFFFFF&\\fnPoppins Black\\fs105\\b1\\alpha&H00&}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SEE IT {\\c&H00D4FF&\\fscx118\\fnAnton\\fs102\\b0\\alpha&HFF&\\1a&HFF&}COMING{\\c&HFFFFFF&\\fscx100\\fscy100\\fnPoppins Black\\fs105\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SEE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}IT{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnAnton\\fs102\\b0}COMING{\\c&HFFFFFF&\\fscx100\\fscy100\\fnPoppins Black\\fs105\\b1}\nDialogue: 1,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SEE IT {\\c&H00D4FF&\\fscx118\\fnAnton\\fs102\\b0\\alpha&HFF&}COMING{\\c&HFFFFFF&\\fscx100\\fscy100\\fnPoppins Black\\fs105\\b1\\alpha&H00&}\nDialogue: 1,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SEE{\\alpha&H00&} {\\alpha&HFF&}IT{\\alpha&H00&} {\\c&H00D4FF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnAnton\\fs102\\b0}COMING{\\c&HFFFFFF&\\fscx100\\fscy100\\fnPoppins Black\\fs105\\b1}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "typewriter",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Archivo Black",
+        "capHeightPx": 38,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#F8F800"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 0,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "none"
+        },
+        "textCase": "preserve",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "plus",
+        "shadow": {
+          "kind": "soft"
+        },
+        "entrance": "type",
+        "reveal": true
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Archivo Black,75,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}So {\\alpha&HFF&}the{\\alpha&H00&\\4a&H60&} {\\alpha&HFF&}3{\\alpha&H00&\\4a&H60&} {\\alpha&HFF&}rockets{\\alpha&H00&\\4a&H60&} {\\alpha&HFF&}launched{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}So the {\\alpha&HFF&}3{\\alpha&H00&\\4a&H60&} {\\alpha&HFF&}rockets{\\alpha&H00&\\4a&H60&} {\\alpha&HFF&}launched{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}So the 3 {\\alpha&HFF&}rockets{\\alpha&H00&\\4a&H60&} {\\alpha&HFF&}launched{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}So the 3 rockets {\\alpha&HFF&}launched{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}So the 3 rockets launched\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}and {\\alpha&HFF&}nobody{\\alpha&H00&\\4a&H60&} {\\alpha&HFF&}didn't{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}and nobody {\\alpha&HFF&}didn't{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}and nobody didn't\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}see {\\alpha&HFF&}it{\\alpha&H00&\\4a&H60&} {\\alpha&HFF&}coming{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}see it {\\alpha&HFF&}coming{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}see it coming\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&}Really\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "slide",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Montserrat ExtraBold",
+        "capHeightPx": 45,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#00E5FF"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 7,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "colour"
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "plus",
+        "entrance": "slide"
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,98,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\move(540,1533,540,1508,0,200)\\fad(200,0)}{\\c&HFFE500&}SO{\\c&HFFFFFF&} THE 3 ROCKETS\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\move(540,1610,540,1585,0,200)\\fad(200,0)}LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO {\\c&HFFE500&}THE{\\c&HFFFFFF&} 3 ROCKETS\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO THE {\\c&HFFE500&}3{\\c&HFFFFFF&} ROCKETS\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO THE 3 {\\c&HFFE500&}ROCKETS{\\c&HFFFFFF&}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO THE 3 ROCKETS\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1585)}{\\c&HFFE500&}LAUNCHED{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\move(540,1571,540,1546,0,140)\\fad(140,0)}{\\c&HFFE500&}AND{\\c&HFFFFFF&} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND {\\c&HFFE500&}NOBODY{\\c&HFFFFFF&} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY {\\c&HFFE500&}DIDN'T{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\move(540,1571,540,1546,0,200)\\fad(200,0)}{\\c&HFFE500&}SEE{\\c&HFFFFFF&} IT COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE {\\c&HFFE500&}IT{\\c&HFFFFFF&} COMING\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE IT {\\c&HFFE500&}COMING{\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\move(540,1571,540,1546,0,280)\\fad(280,0)}{\\c&HFFE500&}REALLY{\\c&HFFFFFF&}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "comic",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Bangers",
+        "capHeightPx": 50,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFFFFF",
+          "#FFD400"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 11,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "scale",
+          "scalePct": 114
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "plus",
+        "cycleColours": [
+          "#FF5A1F",
+          "#3AE0FF"
+        ],
+        "keyAlways": true,
+        "tilt": "keywords",
+        "animatePop": true
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Bangers,119,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,11,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}SO{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} THE 3 {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} LAUNCHED\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}SO{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(533,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}SO{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\frz3}ROCKETS{\\c&HFFFFFF&\\frz0} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}SO{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} THE 3 {\\c&H00D4FF&\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&} LAUNCHED\nDialogue: 1,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}SO{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}THE{\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H00D4FF&\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 1,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(533,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}SO{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H00D4FF&\\frz3}ROCKETS{\\c&HFFFFFF&\\frz0} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SO {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}THE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} 3 {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}THE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(534,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}THE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\frz3}ROCKETS{\\c&HFFFFFF&\\frz0} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SO {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}THE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} 3 {\\c&H00D4FF&\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&} LAUNCHED\nDialogue: 1,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}THE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H00D4FF&\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 1,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(534,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}THE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H00D4FF&\\frz3}ROCKETS{\\c&HFFFFFF&\\frz0} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SO THE {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}3{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}3{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(531,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}3{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\frz3}ROCKETS{\\c&HFFFFFF&\\frz0} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SO THE {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}3{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H00D4FF&\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&} LAUNCHED\nDialogue: 1,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}3{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H00D4FF&\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 1,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(531,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}3{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H00D4FF&\\frz3}ROCKETS{\\c&HFFFFFF&\\frz0} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SO THE 3 {\\c&H00D4FF&\\fscx114\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(528,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz3}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100\\frz0} {\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SO THE 3 {\\c&H00D4FF&\\fscx114\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} LAUNCHED\nDialogue: 1,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(528,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H00D4FF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz3}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100\\frz0} {\\alpha&HFF&}LAUNCHED{\\alpha&H00&}\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SO THE 3 {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(513,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\frz3}ROCKETS{\\c&HFFFFFF&\\frz0} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SO{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}THE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SO THE 3 {\\c&H00D4FF&\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(513,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H00D4FF&\\frz3}ROCKETS{\\c&HFFFFFF&\\frz0} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SO{\\alpha&H00&} {\\alpha&HFF&}THE{\\alpha&H00&} {\\alpha&HFF&}3{\\alpha&H00&} {\\c&H00D4FF&\\alpha&HFF&}ROCKETS{\\c&HFFFFFF&\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}AND{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} NOBODY DIDN'T\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}AND{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}NOBODY{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}DIDN'T{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}AND{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} NOBODY DIDN'T\nDialogue: 1,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}AND{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}NOBODY{\\alpha&H00&} {\\alpha&HFF&}DIDN'T{\\alpha&H00&}\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}AND {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}AND{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}DIDN'T{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}AND {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} DIDN'T\nDialogue: 1,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}AND{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}DIDN'T{\\alpha&H00&}\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}AND NOBODY {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}AND{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}NOBODY{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}AND NOBODY {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}AND{\\alpha&H00&} {\\alpha&HFF&}NOBODY{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}SEE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} IT {\\c&H1F5AFF&\\alpha&HFF&\\1a&HFF&}COMING{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}IT{\\alpha&H00&\\1a&HFF&} {\\c&H1F5AFF&\\alpha&HFF&\\1a&HFF&}COMING{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(616,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}SEE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}IT{\\alpha&H00&\\1a&HFF&} {\\c&H1F5AFF&\\frz-3}COMING{\\c&HFFFFFF&\\frz0}\nDialogue: 1,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}SEE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} IT {\\c&H1F5AFF&\\alpha&HFF&}COMING{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}IT{\\alpha&H00&} {\\c&H1F5AFF&\\alpha&HFF&}COMING{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(616,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}SEE{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\alpha&HFF&}IT{\\alpha&H00&} {\\c&H1F5AFF&\\frz-3}COMING{\\c&HFFFFFF&\\frz0}\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SEE {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}IT{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H1F5AFF&\\alpha&HFF&\\1a&HFF&}COMING{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SEE{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}IT{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H1F5AFF&\\alpha&HFF&\\1a&HFF&}COMING{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(613,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SEE{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}IT{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H1F5AFF&\\frz-3}COMING{\\c&HFFFFFF&\\frz0}\nDialogue: 1,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SEE {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}IT{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H1F5AFF&\\alpha&HFF&}COMING{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}SEE{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}IT{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H1F5AFF&\\alpha&HFF&}COMING{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(613,1546)\\bord0\\shad0}{\\alpha&HFF&}SEE{\\alpha&H00&} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}IT{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H1F5AFF&\\frz-3}COMING{\\c&HFFFFFF&\\frz0}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}SEE IT {\\c&H1F5AFF&\\fscx114\\alpha&HFF&\\1a&HFF&}COMING{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(610,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}SEE{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}IT{\\alpha&H00&\\1a&HFF&} {\\c&H1F5AFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz-3}COMING{\\c&HFFFFFF&\\fscx100\\fscy100\\frz0}\nDialogue: 1,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}SEE IT {\\c&H1F5AFF&\\fscx114\\alpha&HFF&}COMING{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\org(610,1546)\\bord0\\shad0}{\\alpha&HFF&}SEE{\\alpha&H00&} {\\alpha&HFF&}IT{\\alpha&H00&} {\\c&H1F5AFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz-3}COMING{\\c&HFFFFFF&\\fscx100\\fscy100\\frz0}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "marker",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Permanent Marker",
+        "capHeightPx": 44,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFE14D"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 5,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "marker",
+          "colour": "#FFE14D",
+          "textColour": "#16131C"
+        },
+        "textCase": "preserve",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "plus"
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Permanent Marker,83,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,5,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 1,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H1C1316&\\bord0}So{\\c&HFFFFFF&\\bord5} the 3 rockets launched\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(156,1518,156,1573)\\t(0,200,\\clip(156,1518,237,1573))\\p1}m 156 1518 l 237 1518 l 237 1573 l 156 1573{\\p0}\nDialogue: 1,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)}So {\\c&H1C1316&\\bord0}the{\\c&HFFFFFF&\\bord5} 3 rockets launched\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(248,1518,248,1573)\\t(0,140,\\clip(248,1518,352,1573))\\p1}m 248 1518 l 352 1518 l 352 1573 l 248 1573{\\p0}\nDialogue: 1,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)}So the {\\c&H1C1316&\\bord0}3{\\c&HFFFFFF&\\bord5} rockets launched\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(362,1518,362,1573)\\t(0,220,\\clip(362,1518,406,1573))\\p1}m 362 1518 l 406 1518 l 406 1573 l 362 1573{\\p0}\nDialogue: 1,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)}So the 3 {\\c&H1C1316&\\bord0}rockets{\\c&HFFFFFF&\\bord5} launched\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(416,1518,416,1573)\\t(0,220,\\clip(416,1518,648,1573))\\p1}m 416 1518 l 648 1518 l 648 1573 l 416 1573{\\p0}\nDialogue: 1,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)}So the 3 rockets {\\c&H1C1316&\\bord0}launched{\\c&HFFFFFF&\\bord5}\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(659,1518,659,1573)\\t(0,220,\\clip(659,1518,925,1573))\\p1}m 659 1518 l 925 1518 l 925 1573 l 659 1573{\\p0}\nDialogue: 1,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H1C1316&\\bord0}and{\\c&HFFFFFF&\\bord5} nobody didn't\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(294,1518,294,1573)\\t(0,140,\\clip(294,1518,401,1573))\\p1}m 294 1518 l 401 1518 l 401 1573 l 294 1573{\\p0}\nDialogue: 1,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}and {\\c&H1C1316&\\bord0}nobody{\\c&HFFFFFF&\\bord5} didn't\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(411,1518,411,1573)\\t(0,220,\\clip(411,1518,613,1573))\\p1}m 411 1518 l 613 1518 l 613 1573 l 411 1573{\\p0}\nDialogue: 1,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)}and nobody {\\c&H1C1316&\\bord0}didn't{\\c&HFFFFFF&\\bord5}\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(624,1518,624,1573)\\t(0,220,\\clip(624,1518,788,1573))\\p1}m 624 1518 l 788 1518 l 788 1573 l 624 1573{\\p0}\nDialogue: 1,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H1C1316&\\bord0}see{\\c&HFFFFFF&\\bord5} it coming\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(345,1518,345,1573)\\t(0,200,\\clip(345,1518,444,1573))\\p1}m 345 1518 l 444 1518 l 444 1573 l 345 1573{\\p0}\nDialogue: 1,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}see {\\c&H1C1316&\\bord0}it{\\c&HFFFFFF&\\bord5} coming\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(454,1518,454,1573)\\t(0,99,\\clip(454,1518,512,1573))\\p1}m 454 1518 l 512 1518 l 512 1573 l 454 1573{\\p0}\nDialogue: 1,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}see it {\\c&H1C1316&\\bord0}coming{\\c&HFFFFFF&\\bord5}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(522,1518,522,1573)\\t(0,220,\\clip(522,1518,736,1573))\\p1}m 522 1518 l 736 1518 l 736 1573 l 522 1573{\\p0}\nDialogue: 1,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H1C1316&\\bord0}Really{\\c&HFFFFFF&\\bord5}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(441,1518,441,1573)\\t(0,220,\\clip(441,1518,639,1573))\\p1}m 441 1518 l 639 1518 l 639 1573 l 441 1573{\\p0}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "stack",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Archivo Black",
+        "capHeightPx": 41,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFD400"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 0,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "colour"
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "plus",
+        "shadow": {
+          "kind": "hard",
+          "colour": "#FF2E63"
+        }
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Archivo Black,80,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1511)\\shad4\\4c&H632EFF&\\4a&H00&}{\\c&H00D4FF&}SO{\\c&HFFFFFF&} THE 3 ROCKETS\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1581)\\shad4\\4c&H632EFF&\\4a&H00&}LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1511)\\shad4\\4c&H632EFF&\\4a&H00&}SO {\\c&H00D4FF&}THE{\\c&HFFFFFF&} 3 ROCKETS\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1581)\\shad4\\4c&H632EFF&\\4a&H00&}LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1511)\\shad4\\4c&H632EFF&\\4a&H00&}SO THE {\\c&H00D4FF&}3{\\c&HFFFFFF&} ROCKETS\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1581)\\shad4\\4c&H632EFF&\\4a&H00&}LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1511)\\shad4\\4c&H632EFF&\\4a&H00&}SO THE 3 {\\c&H00D4FF&}ROCKETS{\\c&HFFFFFF&}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1581)\\shad4\\4c&H632EFF&\\4a&H00&}LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1511)\\shad4\\4c&H632EFF&\\4a&H00&}SO THE 3 ROCKETS\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1581)\\shad4\\4c&H632EFF&\\4a&H00&}{\\c&H00D4FF&}LAUNCHED{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad4\\4c&H632EFF&\\4a&H00&}{\\c&H00D4FF&}AND{\\c&HFFFFFF&} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad4\\4c&H632EFF&\\4a&H00&}AND {\\c&H00D4FF&}NOBODY{\\c&HFFFFFF&} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad4\\4c&H632EFF&\\4a&H00&}AND NOBODY {\\c&H00D4FF&}DIDN'T{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad4\\4c&H632EFF&\\4a&H00&}{\\c&H00D4FF&}SEE{\\c&HFFFFFF&} IT COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad4\\4c&H632EFF&\\4a&H00&}SEE {\\c&H00D4FF&}IT{\\c&HFFFFFF&} COMING\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad4\\4c&H632EFF&\\4a&H00&}SEE IT {\\c&H00D4FF&}COMING{\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad4\\4c&H632EFF&\\4a&H00&}{\\c&H00D4FF&}REALLY{\\c&HFFFFFF&}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "minimal",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Inter",
+        "capHeightPx": 30,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#F8F800"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 0,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "dim",
+          "restOpacity": 0.6
+        },
+        "textCase": "lower",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 5,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "plus",
+        "shadow": {
+          "kind": "soft"
+        },
+        "entrance": "fade"
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Inter,50,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(200,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}so{\\alpha&H66&\\4a&HA0&} the 3 rockets launched\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}so {\\alpha&H00&\\4a&H60&}the{\\alpha&H66&\\4a&HA0&} 3 rockets launched\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}so the {\\alpha&H00&\\4a&H60&}3{\\alpha&H66&\\4a&HA0&} rockets launched\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}so the 3 {\\alpha&H00&\\4a&H60&}rockets{\\alpha&H66&\\4a&HA0&} launched\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}so the 3 rockets {\\alpha&H00&\\4a&H60&}launched{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(140,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}and{\\alpha&H66&\\4a&HA0&} nobody didn't\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}and {\\alpha&H00&\\4a&H60&}nobody{\\alpha&H66&\\4a&HA0&} didn't\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}and nobody {\\alpha&H00&\\4a&H60&}didn't{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(200,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}see{\\alpha&H66&\\4a&HA0&} it coming\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}see {\\alpha&H00&\\4a&H60&}it{\\alpha&H66&\\4a&HA0&} coming\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}see it {\\alpha&H00&\\4a&H60&}coming{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}really{\\alpha&H66&\\4a&HA0&}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "editorial",
+      "preset": {
+        "key": "default",
+        "label": "Default",
+        "emission": "positioned",
+        "fontName": "Bebas Neue",
+        "capHeightPx": 52,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFE14D",
+          "#FF6B35"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 6,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "colour"
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "plus",
+        "keyFont": "Luckiest Guy",
+        "keyScalePct": 120,
+        "keyAlways": true
+      },
+      "overridesApplied": 1,
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Bebas Neue,96,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,6,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H4DE1FF&}SO{\\c&HFFFFFF&} THE 3 {\\c&H356BFF&\\fnLuckiest Guy\\fs107\\b0}ROCKETS{\\c&HFFFFFF&\\fnBebas Neue\\fs96\\b0} LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO {\\c&H4DE1FF&}THE{\\c&HFFFFFF&} 3 {\\c&H356BFF&\\fnLuckiest Guy\\fs107\\b0}ROCKETS{\\c&HFFFFFF&\\fnBebas Neue\\fs96\\b0} LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE {\\c&H4DE1FF&}3{\\c&HFFFFFF&} {\\c&H356BFF&\\fnLuckiest Guy\\fs107\\b0}ROCKETS{\\c&HFFFFFF&\\fnBebas Neue\\fs96\\b0} LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 {\\c&H356BFF&\\fnLuckiest Guy\\fs107\\b0}ROCKETS{\\c&HFFFFFF&\\fnBebas Neue\\fs96\\b0} LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 {\\c&H356BFF&\\fnLuckiest Guy\\fs107\\b0}ROCKETS{\\c&HFFFFFF&\\fnBebas Neue\\fs96\\b0} {\\c&H4DE1FF&}LAUNCHED{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H4DE1FF&}AND{\\c&HFFFFFF&} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND {\\c&H4DE1FF&}NOBODY{\\c&HFFFFFF&} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY {\\c&H4DE1FF&}DIDN'T{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H4DE1FF&}SEE{\\c&HFFFFFF&} IT {\\c&H356BFF&\\fnLuckiest Guy\\fs107\\b0}COMING{\\c&HFFFFFF&\\fnBebas Neue\\fs96\\b0}\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE {\\c&H4DE1FF&}IT{\\c&HFFFFFF&} {\\c&H356BFF&\\fnLuckiest Guy\\fs107\\b0}COMING{\\c&HFFFFFF&\\fnBebas Neue\\fs96\\b0}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE IT {\\c&H356BFF&\\fnLuckiest Guy\\fs107\\b0}COMING{\\c&HFFFFFF&\\fnBebas Neue\\fs96\\b0}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H4DE1FF&}REALLY{\\c&HFFFFFF&}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    }
+  ],
+  "legacy": [
+    {
+      "key": "karaoke",
+      "preset": {
+        "key": "karaoke",
+        "label": "Karaoke",
+        "emission": "positioned",
+        "fontName": "Montserrat ExtraBold",
+        "capHeightPx": 45,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#F8F800",
+          "#00F020"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 7,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "scale",
+          "scalePct": 128
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,98,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1508)}{\\c&H00F8F8&\\fscx128\\fscy128}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO {\\c&H00F8F8&\\fscx128\\fscy128}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO THE {\\c&H00F8F8&\\fscx128\\fscy128}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO THE 3 {\\c&H20F000&\\fscx128\\fscy128}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1585)}LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1508)}SO THE 3 ROCKETS\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1585)}{\\c&H00F8F8&\\fscx128\\fscy128}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx128\\fscy128}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND {\\c&H00F8F8&\\fscx128\\fscy128}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY {\\c&H00F8F8&\\fscx128\\fscy128}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx128\\fscy128}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE {\\c&H00F8F8&\\fscx128\\fscy128}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE IT {\\c&H20F000&\\fscx128\\fscy128}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx128\\fscy128}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "punch",
+      "preset": {
+        "key": "punch",
+        "label": "Punch",
+        "emission": "positioned",
+        "fontName": "Oswald",
+        "capHeightPx": 52,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#F8F800"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 7,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "scale",
+          "scalePct": 130
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO {\\c&H00F8F8&\\fscx130\\fscy130}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE {\\c&H00F8F8&\\fscx130\\fscy130}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 {\\c&H00F8F8&\\fscx130\\fscy130}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100} LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 ROCKETS {\\c&H00F8F8&\\fscx130\\fscy130}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND {\\c&H00F8F8&\\fscx130\\fscy130}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY {\\c&H00F8F8&\\fscx130\\fscy130}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE {\\c&H00F8F8&\\fscx130\\fscy130}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE IT {\\c&H00F8F8&\\fscx130\\fscy130}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "clean",
+      "preset": {
+        "key": "clean",
+        "label": "Clean",
+        "emission": "positioned",
+        "fontName": "Inter",
+        "capHeightPx": 40,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#00E5FF"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 4,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "scale",
+          "scalePct": 110
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Inter,67,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,4,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&HFFE500&\\fscx110\\fscy110}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO {\\c&HFFE500&\\fscx110\\fscy110}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE {\\c&HFFE500&\\fscx110\\fscy110}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 {\\c&HFFE500&\\fscx110\\fscy110}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100} LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE 3 ROCKETS {\\c&HFFE500&\\fscx110\\fscy110}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&HFFE500&\\fscx110\\fscy110}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND {\\c&HFFE500&\\fscx110\\fscy110}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY {\\c&HFFE500&\\fscx110\\fscy110}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&HFFE500&\\fscx110\\fscy110}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE {\\c&HFFE500&\\fscx110\\fscy110}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SEE IT {\\c&HFFE500&\\fscx110\\fscy110}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&HFFE500&\\fscx110\\fscy110}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "highlight",
+      "preset": {
+        "key": "highlight",
+        "label": "Highlight",
+        "emission": "positioned",
+        "fontName": "Montserrat ExtraBold",
+        "capHeightPx": 43,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFFFFF"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 8,
+        "borderStyle": 3,
+        "emphasis": {
+          "kind": "box",
+          "boxColour": "#00F020",
+          "textColour": "#000000",
+          "inactiveBoxColour": "#000000",
+          "inactiveBoxOpacity": 0.6
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 4,
+        "wordsMax": 5,
+        "maxLines": 3,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,93,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,8,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1509)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}SO{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} THE 3 ROCKETS\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1583)\\3a&H66&\\3c&H000000&}LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1509)\\3a&H66&\\3c&H000000&}SO {\\3a&H00&\\3c&H20F000&\\c&H000000&}THE{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} 3 ROCKETS\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1583)\\3a&H66&\\3c&H000000&}LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1509)\\3a&H66&\\3c&H000000&}SO THE {\\3a&H00&\\3c&H20F000&\\c&H000000&}3{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} ROCKETS\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1583)\\3a&H66&\\3c&H000000&}LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1509)\\3a&H66&\\3c&H000000&}SO THE 3 {\\3a&H00&\\3c&H20F000&\\c&H000000&}ROCKETS{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&}\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1583)\\3a&H66&\\3c&H000000&}LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1509)\\3a&H66&\\3c&H000000&}SO THE 3 ROCKETS\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1583)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}LAUNCHED{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}AND{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} NOBODY DIDN'T\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}AND {\\3a&H00&\\3c&H20F000&\\c&H000000&}NOBODY{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} DIDN'T\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}AND NOBODY {\\3a&H00&\\3c&H20F000&\\c&H000000&}DIDN'T{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}SEE{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} IT COMING\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}SEE {\\3a&H00&\\3c&H20F000&\\c&H000000&}IT{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&} COMING\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}SEE IT {\\3a&H00&\\3c&H20F000&\\c&H000000&}COMING{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}REALLY{\\3a&H66&\\3c&H000000&\\c&HFFFFFF&}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "classic",
+      "preset": {
+        "key": "classic",
+        "label": "Classic",
+        "emission": "legacy",
+        "fontName": "DejaVu Sans",
+        "fontSize": 84,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#FFE500"
+        ],
+        "outlineColour": "#000000",
+        "marginVertical": 420,
+        "maxWordsPerLine": 4
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,DejaVu Sans,84,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,60,60,420,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\c&H00E5FF&}So{\\c&HFFFFFF&} the 3 rockets\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,So {\\c&H00E5FF&}the{\\c&HFFFFFF&} 3 rockets\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,So the {\\c&H00E5FF&}3{\\c&HFFFFFF&} rockets\nDialogue: 0,0:00:00.62,0:00:01.05,boqo,,0,0,0,,So the 3 {\\c&H00E5FF&}rockets{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.08,0:00:01.70,boqo,,0,0,0,,{\\c&H00E5FF&}launched,{\\c&HFFFFFF&} and nobody didn't\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,launched, {\\c&H00E5FF&}and{\\c&HFFFFFF&} nobody didn't\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,launched, and {\\c&H00E5FF&}nobody{\\c&HFFFFFF&} didn't\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,launched, and nobody {\\c&H00E5FF&}didn't{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\c&H00E5FF&}see{\\c&HFFFFFF&} it coming.\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,see {\\c&H00E5FF&}it{\\c&HFFFFFF&} coming.\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,see it {\\c&H00E5FF&}coming.{\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\c&H00E5FF&}Really?{\\c&HFFFFFF&}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 0,
+        "fallbackUsed": false
+      }
+    }
+  ],
+  "extra": [
+    {
+      "key": "illustrated",
+      "preset": {
+        "key": "illustrated",
+        "label": "Illustrated",
+        "emission": "positioned",
+        "fontName": "Montserrat ExtraBold",
+        "capHeightPx": 34,
+        "baseColour": "#FFFFFF",
+        "accentColours": [
+          "#F8F800"
+        ],
+        "outlineColour": "#000000",
+        "outlineWidth": 7,
+        "borderStyle": 1,
+        "emphasis": {
+          "kind": "scale",
+          "scalePct": 112
+        },
+        "textCase": "upper",
+        "stripPunctuation": true,
+        "wordsMin": 3,
+        "wordsTarget": 5,
+        "wordsMax": 6,
+        "maxLines": 2,
+        "centreFraction": 0.805,
+        "lineSpacingRatio": 1.711,
+        "sideMarginPx": 60,
+        "gapSplitSec": 0.8,
+        "tier": "free",
+        "keyFont": "Anton",
+        "keyScalePct": 165,
+        "keyAlways": true,
+        "numbersKey": true,
+        "keyMax": 2
+      },
+      "result": {
+        "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,74,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx112\\fscy112}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE {\\c&H00F8F8&\\fnAnton\\fs114\\b0}3{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1} {\\c&H00F8F8&\\fnAnton\\fs114\\b0}ROCKETS{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1} LAUNCHED\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO {\\c&H00F8F8&\\fscx112\\fscy112}THE{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H00F8F8&\\fnAnton\\fs114\\b0}3{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1} {\\c&H00F8F8&\\fnAnton\\fs114\\b0}ROCKETS{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1} LAUNCHED\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE {\\c&H00F8F8&\\fscx112\\fscy112\\fnAnton\\fs114\\b0}3{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs74\\b1} {\\c&H00F8F8&\\fnAnton\\fs114\\b0}ROCKETS{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1} LAUNCHED\nDialogue: 0,0:00:00.62,0:00:01.08,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE {\\c&H00F8F8&\\fnAnton\\fs114\\b0}3{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1} {\\c&H00F8F8&\\fscx112\\fscy112\\fnAnton\\fs114\\b0}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs74\\b1} LAUNCHED\nDialogue: 0,0:00:01.08,0:00:01.55,boqo,,0,0,0,,{\\an5\\pos(540,1546)}SO THE {\\c&H00F8F8&\\fnAnton\\fs114\\b0}3{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1} {\\c&H00F8F8&\\fnAnton\\fs114\\b0}ROCKETS{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1} {\\c&H00F8F8&\\fscx112\\fscy112}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx112\\fscy112}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T SEE IT {\\c&H00F8F8&\\fnAnton\\fs114\\b0}COMING{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1}\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND {\\c&H00F8F8&\\fscx112\\fscy112}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T SEE IT {\\c&H00F8F8&\\fnAnton\\fs114\\b0}COMING{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1}\nDialogue: 0,0:00:02.22,0:00:02.52,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY {\\c&H00F8F8&\\fscx112\\fscy112}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100} SEE IT {\\c&H00F8F8&\\fnAnton\\fs114\\b0}COMING{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY DIDN'T {\\c&H00F8F8&\\fscx112\\fscy112}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT {\\c&H00F8F8&\\fnAnton\\fs114\\b0}COMING{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1}\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY DIDN'T SEE {\\c&H00F8F8&\\fscx112\\fscy112}IT{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H00F8F8&\\fnAnton\\fs114\\b0}COMING{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs74\\b1}\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,{\\an5\\pos(540,1546)}AND NOBODY DIDN'T SEE IT {\\c&H00F8F8&\\fscx112\\fscy112\\fnAnton\\fs114\\b0}COMING{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs74\\b1}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx112\\fscy112}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+        "overflowGroups": 0,
+        "emphasisMatched": 3,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "none",
+      "preset": {
+        "key": "none",
+        "label": "No captions",
+        "emission": "none"
+      },
+      "result": {
+        "ass": "",
+        "overflowGroups": 0,
+        "emphasisMatched": 0,
+        "fallbackUsed": false
+      }
+    }
+  ],
+  "buildAss": [
+    "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,DejaVu Sans,84,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,60,60,420,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\c&H00E5FF&}So{\\c&HFFFFFF&} the 3 rockets\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,So {\\c&H00E5FF&}the{\\c&HFFFFFF&} 3 rockets\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,So the {\\c&H00E5FF&}3{\\c&HFFFFFF&} rockets\nDialogue: 0,0:00:00.62,0:00:01.05,boqo,,0,0,0,,So the 3 {\\c&H00E5FF&}rockets{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.08,0:00:01.70,boqo,,0,0,0,,{\\c&H00E5FF&}launched,{\\c&HFFFFFF&} and nobody didn't\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,launched, {\\c&H00E5FF&}and{\\c&HFFFFFF&} nobody didn't\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,launched, and {\\c&H00E5FF&}nobody{\\c&HFFFFFF&} didn't\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,launched, and nobody {\\c&H00E5FF&}didn't{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\c&H00E5FF&}see{\\c&HFFFFFF&} it coming.\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,see {\\c&H00E5FF&}it{\\c&HFFFFFF&} coming.\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,see it {\\c&H00E5FF&}coming.{\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\c&H00E5FF&}Really?{\\c&HFFFFFF&}\n",
+    "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1080\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,DejaVu Sans,47,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,2,60,60,236,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\c&H00E5FF&}So{\\c&HFFFFFF&} the 3 rockets\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,So {\\c&H00E5FF&}the{\\c&HFFFFFF&} 3 rockets\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,So the {\\c&H00E5FF&}3{\\c&HFFFFFF&} rockets\nDialogue: 0,0:00:00.62,0:00:01.05,boqo,,0,0,0,,So the 3 {\\c&H00E5FF&}rockets{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.08,0:00:01.70,boqo,,0,0,0,,{\\c&H00E5FF&}launched,{\\c&HFFFFFF&} and nobody didn't\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,launched, {\\c&H00E5FF&}and{\\c&HFFFFFF&} nobody didn't\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,launched, and {\\c&H00E5FF&}nobody{\\c&HFFFFFF&} didn't\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,launched, and nobody {\\c&H00E5FF&}didn't{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\c&H00E5FF&}see{\\c&HFFFFFF&} it coming.\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,see {\\c&H00E5FF&}it{\\c&HFFFFFF&} coming.\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,see it {\\c&H00E5FF&}coming.{\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\c&H00E5FF&}Really?{\\c&HFFFFFF&}\n",
+    "[Script Info]\nScriptType: v4.00+\nPlayResX: 1920\nPlayResY: 1080\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,DejaVu Sans,47,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,2,107,107,236,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\c&H00E5FF&}So{\\c&HFFFFFF&} the 3 rockets\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,So {\\c&H00E5FF&}the{\\c&HFFFFFF&} 3 rockets\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,So the {\\c&H00E5FF&}3{\\c&HFFFFFF&} rockets\nDialogue: 0,0:00:00.62,0:00:01.05,boqo,,0,0,0,,So the 3 {\\c&H00E5FF&}rockets{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.08,0:00:01.70,boqo,,0,0,0,,{\\c&H00E5FF&}launched,{\\c&HFFFFFF&} and nobody didn't\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,launched, {\\c&H00E5FF&}and{\\c&HFFFFFF&} nobody didn't\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,launched, and {\\c&H00E5FF&}nobody{\\c&HFFFFFF&} didn't\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,launched, and nobody {\\c&H00E5FF&}didn't{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\c&H00E5FF&}see{\\c&HFFFFFF&} it coming.\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,see {\\c&H00E5FF&}it{\\c&HFFFFFF&} coming.\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,see it {\\c&H00E5FF&}coming.{\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\c&H00E5FF&}Really?{\\c&HFFFFFF&}\n",
+    "[Script Info]\nScriptType: v4.00+\nPlayResX: 720\nPlayResY: 1280\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,DejaVu Sans,56,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,4,0,2,40,40,280,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.00,0:00:00.20,boqo,,0,0,0,,{\\c&H00E5FF&}So{\\c&HFFFFFF&} the 3 rockets\nDialogue: 0,0:00:00.20,0:00:00.34,boqo,,0,0,0,,So {\\c&H00E5FF&}the{\\c&HFFFFFF&} 3 rockets\nDialogue: 0,0:00:00.34,0:00:00.62,boqo,,0,0,0,,So the {\\c&H00E5FF&}3{\\c&HFFFFFF&} rockets\nDialogue: 0,0:00:00.62,0:00:01.05,boqo,,0,0,0,,So the 3 {\\c&H00E5FF&}rockets{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.08,0:00:01.70,boqo,,0,0,0,,{\\c&H00E5FF&}launched,{\\c&HFFFFFF&} and nobody didn't\nDialogue: 0,0:00:01.70,0:00:01.84,boqo,,0,0,0,,launched, {\\c&H00E5FF&}and{\\c&HFFFFFF&} nobody didn't\nDialogue: 0,0:00:01.84,0:00:02.22,boqo,,0,0,0,,launched, and {\\c&H00E5FF&}nobody{\\c&HFFFFFF&} didn't\nDialogue: 0,0:00:02.22,0:00:02.50,boqo,,0,0,0,,launched, and nobody {\\c&H00E5FF&}didn't{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.52,0:00:02.72,boqo,,0,0,0,,{\\c&H00E5FF&}see{\\c&HFFFFFF&} it coming.\nDialogue: 0,0:00:02.72,0:00:02.82,boqo,,0,0,0,,see {\\c&H00E5FF&}it{\\c&HFFFFFF&} coming.\nDialogue: 0,0:00:02.82,0:00:03.30,boqo,,0,0,0,,see it {\\c&H00E5FF&}coming.{\\c&HFFFFFF&}\nDialogue: 0,0:00:04.40,0:00:04.90,boqo,,0,0,0,,{\\c&H00E5FF&}Really?{\\c&HFFFFFF&}\n"
+  ],
+  "scaleCaptionStyle": [
+    {
+      "fontName": "DejaVu Sans",
+      "fontSize": 84,
+      "baseColour": "FFFFFF",
+      "highlightColour": "00E5FF",
+      "outlineColour": "000000",
+      "marginVertical": 420,
+      "maxWordsPerLine": 4
+    },
+    {
+      "fontName": "DejaVu Sans",
+      "fontSize": 47,
+      "baseColour": "FFFFFF",
+      "highlightColour": "00E5FF",
+      "outlineColour": "000000",
+      "marginVertical": 236,
+      "maxWordsPerLine": 4
+    },
+    {
+      "fontName": "DejaVu Sans",
+      "fontSize": 47,
+      "baseColour": "FFFFFF",
+      "highlightColour": "00E5FF",
+      "outlineColour": "000000",
+      "marginVertical": 236,
+      "maxWordsPerLine": 4
+    },
+    {
+      "fontName": "DejaVu Sans",
+      "fontSize": 56,
+      "baseColour": "FFFFFF",
+      "highlightColour": "00E5FF",
+      "outlineColour": "000000",
+      "marginVertical": 280,
+      "maxWordsPerLine": 4
+    }
+  ],
+  "assTime": [
+    "0:00:00.00",
+    "0:00:00.00",
+    "0:00:00.01",
+    "0:00:00.99",
+    "0:00:00.99",
+    "0:00:00.99",
+    "0:00:01.23",
+    "0:00:59.99",
+    "0:01:01.50",
+    "0:59:59.99",
+    "1:02:05.25",
+    "0:00:00.00"
+  ],
+  "escapeText": [
+    "plain",
+    "a brace",
+    "backslash",
+    "b1tag",
+    "кириллица x",
+    ""
+  ],
+  "captionLines": [
+    [
+      [
+        "So",
+        "the",
+        "3",
+        "rockets"
+      ],
+      [
+        "launched,",
+        "and",
+        "nobody",
+        "didn't"
+      ],
+      [
+        "see",
+        "it",
+        "coming."
+      ],
+      [
+        "Really?"
+      ]
+    ],
+    [
+      [
+        "Mr.",
+        "Smith"
+      ],
+      [
+        "said",
+        "no."
+      ],
+      [
+        "U.S.",
+        "go"
+      ],
+      [
+        "\"Home.\""
+      ],
+      [
+        "Wait…"
+      ],
+      [
+        "what"
+      ]
+    ]
+  ],
+  "effects": {
+    "glow": [
+      "\\1a&HFF&\\bord6\\blur14\\3c&HD62BFF&\\3a&H38&\\shad0",
+      "\\1a&HFF&\\bord6\\blur14\\3c&HD62BFF&\\3a&H00&\\shad0",
+      "\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0",
+      "\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0",
+      "\\1a&HFF&\\bord4\\blur8\\3c&HD62BFF&\\3a&H38&\\shad0",
+      "\\1a&HFF&\\bord4\\blur8\\3c&HD62BFF&\\3a&H00&\\shad0",
+      "\\1a&HFF&\\bord4\\blur10\\3c&HD62BFF&\\3a&H38&\\shad0",
+      "\\1a&HFF&\\bord4\\blur10\\3c&HD62BFF&\\3a&H00&\\shad0",
+      "\\1a&HFF&\\bord6\\blur14\\3c&H00FF00&\\3a&HB3&\\shad0",
+      "\\1a&HFF&\\bord6\\blur14\\3c&H00FF00&\\3a&H59&\\shad0",
+      "\\1a&HFF&\\bord7\\blur17\\3c&H00FF00&\\3a&HB3&\\shad0",
+      "\\1a&HFF&\\bord7\\blur17\\3c&H00FF00&\\3a&H59&\\shad0",
+      "\\1a&HFF&\\bord4\\blur8\\3c&H00FF00&\\3a&HB3&\\shad0",
+      "\\1a&HFF&\\bord4\\blur8\\3c&H00FF00&\\3a&H59&\\shad0",
+      "\\1a&HFF&\\bord4\\blur10\\3c&H00FF00&\\3a&HB3&\\shad0",
+      "\\1a&HFF&\\bord4\\blur10\\3c&H00FF00&\\3a&H59&\\shad0",
+      "\\1a&HFF&\\bord6\\blur14\\3c&H563412&\\3a&H1A&\\shad0",
+      "\\1a&HFF&\\bord6\\blur14\\3c&H563412&\\3a&H00&\\shad0",
+      "\\1a&HFF&\\bord7\\blur17\\3c&H563412&\\3a&H1A&\\shad0",
+      "\\1a&HFF&\\bord7\\blur17\\3c&H563412&\\3a&H00&\\shad0",
+      "\\1a&HFF&\\bord4\\blur8\\3c&H563412&\\3a&H1A&\\shad0",
+      "\\1a&HFF&\\bord4\\blur8\\3c&H563412&\\3a&H00&\\shad0",
+      "\\1a&HFF&\\bord4\\blur10\\3c&H563412&\\3a&H1A&\\shad0",
+      "\\1a&HFF&\\bord4\\blur10\\3c&H563412&\\3a&H00&\\shad0"
+    ],
+    "shadow": [
+      "\\shad2\\4c&H000000&\\4a&H60&",
+      "\\shad3\\4c&H000000&\\4a&H60&",
+      "\\shad1\\4c&H000000&\\4a&H60&",
+      "\\shad2\\4c&H000000&\\4a&H60&",
+      "\\shad5\\4c&H632EFF&\\4a&H00&",
+      "\\shad5\\4c&H632EFF&\\4a&H00&",
+      "\\shad3\\4c&H632EFF&\\4a&H00&",
+      "\\shad3\\4c&H632EFF&\\4a&H00&"
+    ],
+    "opacity": [
+      "\\alpha&HFF&",
+      "\\alpha&HFF&\\4a&HFF&",
+      "\\alpha&HFF&",
+      "\\alpha&H66&",
+      "\\alpha&H66&\\4a&HA0&",
+      "\\alpha&H66&",
+      "\\alpha&H00&",
+      "\\alpha&H00&\\4a&H60&",
+      "\\alpha&H00&"
+    ],
+    "pop": [
+      "\\fscx100\\fscy100\\t(0,1,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,1,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,1,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,1,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,1,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,40,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,40,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,40,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,40,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,40,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,100,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,53,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,40,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,160,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,53,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,40,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,160,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,53,\\fscx118\\fscy118)",
+      "\\fscx100\\fscy100\\t(0,40,\\fscx118\\fscy118)"
+    ],
+    "marker": [
+      "Dialogue: 0,0:00:01.00,0:00:01.50,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H4DE1FF&\\1a&H00&\\clip(100,1500,100,1565)\\t(0,220,\\clip(100,1500,400,1565))\\p1}m 100 1500 l 400 1500 l 400 1565 l 100 1565{\\p0}",
+      "Dialogue: 0,0:00:00.00,0:00:00.05,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H000000&\\1a&H00&\\clip(-3,0,-3,1)\\t(0,50,\\clip(-3,0,-2,1))\\p1}m -3 0 l -2 0 l -2 1 l -3 1{\\p0}"
+    ],
+    "line": [
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(1,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(1,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(1,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(1,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(1,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(40,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(40,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(40,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(40,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(40,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(100,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(100,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(100,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(100,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(100,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(279,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(279,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(279,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(187,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(140,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(280,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(560,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(280,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(187,0)"
+      },
+      {
+        "pos": "\\pos(540,1546)",
+        "fad": "\\fad(140,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,1)",
+        "fad": "\\fad(1,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,1)",
+        "fad": "\\fad(1,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,1)",
+        "fad": "\\fad(1,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,1)",
+        "fad": "\\fad(1,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,1)",
+        "fad": "\\fad(1,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,40)",
+        "fad": "\\fad(40,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,40)",
+        "fad": "\\fad(40,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,40)",
+        "fad": "\\fad(40,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,40)",
+        "fad": "\\fad(40,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,40)",
+        "fad": "\\fad(40,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,100)",
+        "fad": "\\fad(100,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,100)",
+        "fad": "\\fad(100,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,100)",
+        "fad": "\\fad(100,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,100)",
+        "fad": "\\fad(100,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,100)",
+        "fad": "\\fad(100,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,279)",
+        "fad": "\\fad(279,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,279)",
+        "fad": "\\fad(279,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,279)",
+        "fad": "\\fad(279,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,187)",
+        "fad": "\\fad(187,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,140)",
+        "fad": "\\fad(140,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,280)",
+        "fad": "\\fad(280,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,560)",
+        "fad": "\\fad(560,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,280)",
+        "fad": "\\fad(280,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,187)",
+        "fad": "\\fad(187,0)"
+      },
+      {
+        "pos": "\\move(540,1571,540,1546,0,140)",
+        "fad": "\\fad(140,0)"
+      }
+    ],
+    "word": [
+      "\\fscx60\\fscy60\\t(0,1,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,1,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,1,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,1,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,1,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,40,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,40,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,40,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,40,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,40,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,100,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,100,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,100,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,80,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,60,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,120,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,240,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,120,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,80,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,60,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,120,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,240,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,120,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,80,\\fscx100\\fscy100)",
+      "\\fscx60\\fscy60\\t(0,60,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,1,\\fscx115\\fscy115)\\t(1,1,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,1,\\fscx115\\fscy115)\\t(1,1,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,1,\\fscx115\\fscy115)\\t(1,1,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,1,\\fscx115\\fscy115)\\t(1,1,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,1,\\fscx115\\fscy115)\\t(1,1,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,40,\\fscx115\\fscy115)\\t(40,40,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,40,\\fscx115\\fscy115)\\t(40,40,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,40,\\fscx115\\fscy115)\\t(40,40,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,40,\\fscx115\\fscy115)\\t(40,40,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,40,\\fscx115\\fscy115)\\t(40,40,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,100,\\fscx115\\fscy115)\\t(100,100,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,100,\\fscx115\\fscy115)\\t(100,100,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,100,\\fscx115\\fscy115)\\t(100,100,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,100,\\fscx115\\fscy115)\\t(100,100,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,90,\\fscx115\\fscy115)\\t(90,100,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,279,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,279,\\fscx115\\fscy115)\\t(279,279,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,279,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,90,\\fscx115\\fscy115)\\t(90,150,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,360,\\fscx115\\fscy115)\\t(360,600,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,180,\\fscx115\\fscy115)\\t(180,300,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)",
+      "\\fscx0\\fscy0\\t(0,90,\\fscx115\\fscy115)\\t(90,150,\\fscx100\\fscy100)",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
+}

@@ -1,0 +1,431 @@
+{
+ "cases": [
+  {
+   "name": "one gap fully quiet: default keeps 0.15 and 0.25",
+   "words": [
+    {
+     "start": 0.5,
+     "end": 1
+    },
+    {
+     "start": 4,
+     "end": 5
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 1,
+     "end": 4
+    }
+   ],
+   "windowDurationSec": 10,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "explicit 0.15 after and 0.25 before on a longer gap",
+   "words": [
+    {
+     "start": 0,
+     "end": 2
+    },
+    {
+     "start": 8,
+     "end": 9
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 2,
+     "end": 8
+    }
+   ],
+   "windowDurationSec": 20,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "a quiet run only part of the gap",
+   "words": [
+    {
+     "start": 0,
+     "end": 2
+    },
+    {
+     "start": 8,
+     "end": 9
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 3,
+     "end": 6.5
+    }
+   ],
+   "windowDurationSec": 20,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "a quiet run shorter than the minimum is not a pause",
+   "words": [
+    {
+     "start": 0,
+     "end": 2
+    },
+    {
+     "start": 8,
+     "end": 9
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 3,
+     "end": 4
+    }
+   ],
+   "windowDurationSec": 20,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "quiet inside a word (no gap) cuts nothing",
+   "words": [
+    {
+     "start": 0,
+     "end": 5
+    },
+    {
+     "start": 5.1,
+     "end": 6
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 1,
+     "end": 4
+    }
+   ],
+   "windowDurationSec": 10,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "50% cap: pauses over half the window cut nothing",
+   "words": [
+    {
+     "start": 0,
+     "end": 0.5
+    },
+    {
+     "start": 7,
+     "end": 8
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 0.5,
+     "end": 7
+    }
+   ],
+   "windowDurationSec": 8,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "50% cap boundary: exactly half is kept",
+   "words": [
+    {
+     "start": 0,
+     "end": 1
+    },
+    {
+     "start": 5.4,
+     "end": 8
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 1,
+     "end": 5.4
+    }
+   ],
+   "windowDurationSec": 8.8,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "a tighter cap of 0.2",
+   "words": [
+    {
+     "start": 0,
+     "end": 2
+    },
+    {
+     "start": 8,
+     "end": 9
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 2,
+     "end": 8
+    }
+   ],
+   "windowDurationSec": 20,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.2
+   }
+  },
+  {
+   "name": "two gaps, two cuts",
+   "words": [
+    {
+     "start": 0,
+     "end": 2
+    },
+    {
+     "start": 5,
+     "end": 6
+    },
+    {
+     "start": 10,
+     "end": 11
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 2,
+     "end": 5
+    },
+    {
+     "start": 6,
+     "end": 10
+    }
+   ],
+   "windowDurationSec": 20,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "two quiet runs in one gap close together merge",
+   "words": [
+    {
+     "start": 0,
+     "end": 1
+    },
+    {
+     "start": 9,
+     "end": 10
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 1,
+     "end": 4
+    },
+    {
+     "start": 4.05,
+     "end": 9
+    }
+   ],
+   "windowDurationSec": 30,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "keeps that meet the minimum leave every cut empty",
+   "words": [
+    {
+     "start": 0,
+     "end": 1
+    },
+    {
+     "start": 5,
+     "end": 6
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 1,
+     "end": 5
+    }
+   ],
+   "windowDurationSec": 10,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 2,
+    "keepBeforeWordSec": 2,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "a cut near the window end is guarded",
+   "words": [
+    {
+     "start": 0,
+     "end": 1
+    },
+    {
+     "start": 5,
+     "end": 6
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 1,
+     "end": 5
+    }
+   ],
+   "windowDurationSec": 4.5,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "overlapping speakers: a short word inside a longer one",
+   "words": [
+    {
+     "start": 0,
+     "end": 6
+    },
+    {
+     "start": 1,
+     "end": 1.3
+    },
+    {
+     "start": 8,
+     "end": 9
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 1.3,
+     "end": 8
+    }
+   ],
+   "windowDurationSec": 20,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "zero window duration",
+   "words": [
+    {
+     "start": 0,
+     "end": 1
+    },
+    {
+     "start": 5,
+     "end": 6
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 1,
+     "end": 5
+    }
+   ],
+   "windowDurationSec": 0,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "NaN-free negative window duration",
+   "words": [
+    {
+     "start": 0,
+     "end": 1
+    },
+    {
+     "start": 5,
+     "end": 6
+    }
+   ],
+   "quietRuns": [
+    {
+     "start": 1,
+     "end": 5
+    }
+   ],
+   "windowDurationSec": -3,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  },
+  {
+   "name": "no quiet runs: gaps counted, nothing cut",
+   "words": [
+    {
+     "start": 0,
+     "end": 1
+    },
+    {
+     "start": 5,
+     "end": 6
+    }
+   ],
+   "quietRuns": [],
+   "windowDurationSec": 10,
+   "config": {
+    "minSec": 1.2,
+    "keepAfterWordSec": 0.15,
+    "keepBeforeWordSec": 0.25,
+    "maxFraction": 0.5
+   }
+  }
+ ]
+}

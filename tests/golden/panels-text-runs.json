@@ -1,0 +1,177 @@
+[
+  {
+    "name": "no shots",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 3,
+        "positionFraction": 0.14
+      }
+    ]
+  },
+  {
+    "name": "one panels shot",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 3,
+        "positionFraction": 0.3125
+      }
+    ]
+  },
+  {
+    "name": "one fill shot",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 3,
+        "positionFraction": 0.14
+      }
+    ]
+  },
+  {
+    "name": "panels then fill (a seam run then an own run)",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 4,
+        "positionFraction": 0.3125
+      },
+      {
+        "startSec": 4,
+        "endSec": 8,
+        "positionFraction": 0.14
+      }
+    ]
+  },
+  {
+    "name": "fill, panels, fill",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 4,
+        "positionFraction": 0.14
+      },
+      {
+        "startSec": 4,
+        "endSec": 8,
+        "positionFraction": 0.3125
+      },
+      {
+        "startSec": 8,
+        "endSec": 12,
+        "positionFraction": 0.14
+      }
+    ]
+  },
+  {
+    "name": "a run under 0.8 s folds into the one before",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 8,
+        "positionFraction": 0.3125
+      }
+    ]
+  },
+  {
+    "name": "a first run under 0.8 s folds into the one after",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 8,
+        "positionFraction": 0.3125
+      }
+    ]
+  },
+  {
+    "name": "two panels shots with different bands join when the seams agree",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 8,
+        "positionFraction": 0.3125
+      }
+    ]
+  },
+  {
+    "name": "two panels shots with different seams are one seam run at the lowest",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 8,
+        "positionFraction": 0.3229166666666667
+      }
+    ]
+  },
+  {
+    "name": "an element starting inside the second shot",
+    "runs": [
+      {
+        "startSec": 5,
+        "endSec": 8,
+        "positionFraction": 0.3125
+      },
+      {
+        "startSec": 8,
+        "endSec": 11,
+        "positionFraction": 0.14
+      }
+    ]
+  },
+  {
+    "name": "a shot on screen for under a microsecond makes no run",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 4,
+        "positionFraction": 0.3125
+      }
+    ]
+  },
+  {
+    "name": "shots listed out of order",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 4,
+        "positionFraction": 0.3125
+      },
+      {
+        "startSec": 4,
+        "endSec": 8,
+        "positionFraction": 0.14
+      }
+    ]
+  },
+  {
+    "name": "the centre below the band: no seam run at all",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 8,
+        "positionFraction": 0.5
+      }
+    ]
+  },
+  {
+    "name": "centre exactly on the seam in doubles",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 8,
+        "positionFraction": 0.5
+      }
+    ]
+  },
+  {
+    "name": "alternating short runs fold until none is short",
+    "runs": [
+      {
+        "startSec": 0,
+        "endSec": 6,
+        "positionFraction": 0.3125
+      }
+    ]
+  }
+]

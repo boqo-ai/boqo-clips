@@ -1,0 +1,1460 @@
+{
+  "cases": [
+    {
+      "name": "panels with a face in the first camera",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 1382,
+              "y": 54,
+              "width": 500,
+              "height": 320
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 0
+              },
+              {
+                "t": 2,
+                "v": 400
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 600
+        },
+        "speaker": {
+          "confidence": 0.9,
+          "x": 0.775,
+          "y": 0.15000000000000002,
+          "width": 0.05,
+          "height": 0.1,
+          "coverage": 1,
+          "mouthMotion": 0,
+          "facing": 0
+        }
+      }
+    },
+    {
+      "name": "panels with no face",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 1382,
+              "y": 54,
+              "width": 500,
+              "height": 320
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 0
+              },
+              {
+                "t": 2,
+                "v": 400
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 600
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "panels with the larger of two faces in the camera",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 1382,
+              "y": 54,
+              "width": 500,
+              "height": 320
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 0
+              },
+              {
+                "t": 2,
+                "v": 400
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 600
+        },
+        "speaker": {
+          "confidence": 0.9,
+          "x": 0.8099999999999999,
+          "y": 0.14,
+          "width": 0.06,
+          "height": 0.12,
+          "coverage": 1,
+          "mouthMotion": 0,
+          "facing": 0
+        }
+      }
+    },
+    {
+      "name": "panels with a face outside the camera",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 1382,
+              "y": 54,
+              "width": 500,
+              "height": 320
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 0
+              },
+              {
+                "t": 2,
+                "v": 400
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 600
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "panels faceCentreX decides the side",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 1382,
+              "y": 54,
+              "width": 500,
+              "height": 320
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 0
+              },
+              {
+                "t": 2,
+                "v": 400
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 600
+        },
+        "speaker": {
+          "confidence": 0.9,
+          "x": 0.89,
+          "y": 0.15000000000000002,
+          "width": 0.2,
+          "height": 0.1,
+          "coverage": 1,
+          "mouthMotion": 0,
+          "facing": 0,
+          "faceCentreX": 0.8
+        }
+      }
+    },
+    {
+      "name": "panels with two cameras",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 400,
+              "height": 300
+            },
+            {
+              "x": 1500,
+              "y": 0,
+              "width": 400,
+              "height": 300
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 0
+              },
+              {
+                "t": 2,
+                "v": 400
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 600
+        },
+        "speaker": {
+          "confidence": 0.9,
+          "x": 0.07500000000000001,
+          "y": 0.05,
+          "width": 0.05,
+          "height": 0.1,
+          "coverage": 1,
+          "mouthMotion": 0,
+          "facing": 0
+        }
+      }
+    },
+    {
+      "name": "people with a face in the crop",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "x": 600,
+            "y": 0,
+            "width": 608,
+            "height": 1080
+          }
+        },
+        "speaker": {
+          "confidence": 0.9,
+          "x": 0.375,
+          "y": 0.35000000000000003,
+          "width": 0.05,
+          "height": 0.1,
+          "coverage": 1,
+          "mouthMotion": 0,
+          "facing": 0
+        }
+      }
+    },
+    {
+      "name": "people with no face",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "x": 600,
+            "y": 0,
+            "width": 608,
+            "height": 1080
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "game",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 0
+              },
+              {
+                "t": 2,
+                "v": 400
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "none",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "panels with an odd top band",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with a zero top band",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with no cameras",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with a camera of odd width",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with a camera at a fractional position",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with a camera past the right edge",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with a camera at the exact edge",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 1420,
+              "y": 760,
+              "width": 500,
+              "height": 320
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 608,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 0
+              },
+              {
+                "t": 2,
+                "v": 400
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 600
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "panels with a negative position",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with a camera of height 1",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with a window leaving the frame at its last point",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with an empty x path",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with an odd window",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels with a fractional path value",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "game with y leaving the frame",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "game with a window as large as the frame",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 1920,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "people with an odd rect",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "people with a rect outside the frame",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "panels on a 1280x720 frame",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 900,
+              "y": 40,
+              "width": 332,
+              "height": 220
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 406,
+              "height": 720
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 0
+              },
+              {
+                "t": 1,
+                "v": 300
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          },
+          "topHeight": 480
+        },
+        "speaker": {
+          "confidence": 0.9,
+          "x": 0.775,
+          "y": 0.15000000000000002,
+          "width": 0.05,
+          "height": 0.1,
+          "coverage": 1,
+          "mouthMotion": 0,
+          "facing": 0
+        }
+      }
+    },
+    {
+      "name": "random 1",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 2",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 3",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 4",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 5",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "x": 639,
+            "y": 518,
+            "width": 314,
+            "height": 128
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 6",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 7",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 408,
+              "height": 592
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 361
+              },
+              {
+                "t": 1.676,
+                "v": 631
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 48
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 8",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 654,
+              "height": 870
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 732
+              },
+              {
+                "t": 2.513,
+                "v": 1036
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 81
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 9",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 10",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 350,
+              "height": 638
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 33
+              },
+              {
+                "t": 1.184,
+                "v": 1312
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 71
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 11",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 12",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 13",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "x": 162,
+            "y": 388,
+            "width": 302,
+            "height": 138
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 14",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 613,
+              "y": 46,
+              "width": 138,
+              "height": 270
+            },
+            {
+              "x": 152,
+              "y": 34,
+              "width": 350,
+              "height": 104
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 448,
+              "height": 502
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 668
+              },
+              {
+                "t": 1.944,
+                "v": 5
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 10
+              }
+            ]
+          },
+          "topHeight": 410
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 15",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 488,
+              "height": 680
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 935
+              },
+              {
+                "t": 2.327,
+                "v": 643
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 281
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 16",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 17",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 754,
+              "y": 459,
+              "width": 288,
+              "height": 286
+            },
+            {
+              "x": 311,
+              "y": 104,
+              "width": 310,
+              "height": 132
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 556,
+              "height": 650
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 899
+              },
+              {
+                "t": 1.392,
+                "v": 373
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 100
+              }
+            ]
+          },
+          "topHeight": 404
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 18",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 19",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 20",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 21",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 22",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 23",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 24",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 25",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "panels",
+          "cameras": [
+            {
+              "x": 565,
+              "y": 428,
+              "width": 102,
+              "height": 256
+            },
+            {
+              "x": 542,
+              "y": 96,
+              "width": 146,
+              "height": 134
+            }
+          ],
+          "game": {
+            "size": {
+              "width": 476,
+              "height": 590
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 77
+              },
+              {
+                "t": 1.648,
+                "v": 774
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 86
+              }
+            ]
+          },
+          "topHeight": 650
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 26",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 27",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 28",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "x": 46,
+            "y": 43,
+            "width": 268,
+            "height": 272
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 29",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 358,
+              "height": 1080
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 403
+              },
+              {
+                "t": 1.587,
+                "v": 1274
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 0
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 30",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "x": 1612,
+            "y": 252,
+            "width": 186,
+            "height": 172
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 31",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 32",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 33",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 34",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 35",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 364,
+              "height": 726
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 413
+              },
+              {
+                "t": 1.48,
+                "v": 1191
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 238
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 36",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 37",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "x": 663,
+            "y": 100,
+            "width": 186,
+            "height": 182
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 38",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 39",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "x": 161,
+            "y": 85,
+            "width": 360,
+            "height": 194
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 40",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 41",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 654,
+              "height": 562
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 342
+              },
+              {
+                "t": 1.707,
+                "v": 440
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 98
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 42",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 43",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 44",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 696,
+              "height": 552
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 575
+              },
+              {
+                "t": 2.35,
+                "v": 857
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 286
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 45",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 46",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 47",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 470,
+              "height": 692
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 38
+              },
+              {
+                "t": 2.804,
+                "v": 461
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 5
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 48",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 49",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 604,
+              "height": 582
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 359
+              },
+              {
+                "t": 2.786,
+                "v": 291
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 119
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 50",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 572,
+              "height": 614
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 521
+              },
+              {
+                "t": 1.304,
+                "v": 313
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 53
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 51",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 52",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 53",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "x": 845,
+            "y": 534,
+            "width": 308,
+            "height": 112
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 54",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 55",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "crop",
+          "rect": {
+            "x": 111,
+            "y": 124,
+            "width": 228,
+            "height": 124
+          }
+        },
+        "speaker": null
+      }
+    },
+    {
+      "name": "random 56",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 57",
+      "geometryOk": false,
+      "placed": null
+    },
+    {
+      "name": "random 58",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 59",
+      "geometryOk": true,
+      "placed": null
+    },
+    {
+      "name": "random 60",
+      "geometryOk": true,
+      "placed": {
+        "placement": {
+          "kind": "track",
+          "path": {
+            "size": {
+              "width": 662,
+              "height": 546
+            },
+            "x": [
+              {
+                "t": 0,
+                "v": 241
+              },
+              {
+                "t": 1.054,
+                "v": 568
+              }
+            ],
+            "y": [
+              {
+                "t": 0,
+                "v": 14
+              }
+            ]
+          }
+        },
+        "speaker": null
+      }
+    }
+  ],
+  "faceInRect": [
+    {
+      "face": {
+        "confidence": 0.9,
+        "x": 0.125,
+        "y": 0.15000000000000002,
+        "width": 0.05,
+        "height": 0.1,
+        "coverage": 1,
+        "mouthMotion": 0,
+        "facing": 0
+      }
+    },
+    {
+      "face": {
+        "confidence": 0.9,
+        "x": 0.042083333333333334,
+        "y": 0.08259259259259259,
+        "width": 0.02,
+        "height": 0.02,
+        "coverage": 1,
+        "mouthMotion": 0,
+        "facing": 0
+      }
+    },
+    {
+      "face": null
+    },
+    {
+      "face": null
+    },
+    {
+      "face": {
+        "confidence": 0.9,
+        "x": 0.125,
+        "y": 0.15000000000000002,
+        "width": 0.05,
+        "height": 0.1,
+        "coverage": 1,
+        "mouthMotion": 0,
+        "facing": 0
+      }
+    },
+    {
+      "face": {
+        "confidence": 0.9,
+        "x": 0.875,
+        "y": 0.15000000000000002,
+        "width": 0.05,
+        "height": 0.1,
+        "coverage": 1,
+        "mouthMotion": 0,
+        "facing": 0,
+        "faceCentreX": 0.15
+      }
+    }
+  ]
+}

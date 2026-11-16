@@ -1,0 +1,47 @@
+[
+  {
+    "chains": [
+      "[0:v]trim=start=0:end=12.5,setpts=PTS-0/TB[cv0]",
+      "[0:a]atrim=start=0:end=12.5,asetpts=PTS-0/TB[ca0]",
+      "[cv0][ca0]concat=n=1:v=1:a=1[cvout][caout]"
+    ],
+    "video": "[cvout]",
+    "audio": "[caout]"
+  },
+  {
+    "chains": [
+      "[0:v]trim=start=0:end=2.12,setpts=PTS-0/TB[cv0]",
+      "[0:a]atrim=start=0:end=2.12,asetpts=PTS-0/TB,afade=t=out:st=2.11:d=0.01[ca0]",
+      "[0:v]trim=start=4.2:end=9.84,setpts=PTS-4.2/TB[cv1]",
+      "[0:a]atrim=start=4.2:end=9.84,asetpts=PTS-4.2/TB,afade=t=in:d=0.01,afade=t=out:st=5.63:d=0.01[ca1]",
+      "[0:v]trim=start=11.5:end=20,setpts=PTS-11.5/TB[cv2]",
+      "[0:a]atrim=start=11.5:end=20,asetpts=PTS-11.5/TB,afade=t=in:d=0.01[ca2]",
+      "[cv0][ca0][cv1][ca1][cv2][ca2]concat=n=3:v=1:a=1[cvout][caout]"
+    ],
+    "video": "[cvout]",
+    "audio": "[caout]"
+  },
+  {
+    "chains": [
+      "[0:v]trim=start=0:end=2.12,setpts=PTS-0/TB[cv0]",
+      "[0:v]trim=start=4.2:end=9.84,setpts=PTS-4.2/TB[cv1]",
+      "[cv0][cv1]concat=n=2:v=1:a=0[cvout]"
+    ],
+    "video": "[cvout]",
+    "audio": null
+  },
+  {
+    "chains": [
+      "[0:v]trim=start=0.012346:end=3,setpts=PTS-0.012346/TB[cv0]",
+      "[0:a]atrim=start=0.012346:end=3,asetpts=PTS-0.012346/TB,afade=t=out:st=2.977654:d=0.01[ca0]",
+      "[0:v]trim=start=5.5:end=6,setpts=PTS-5.5/TB[cv1]",
+      "[0:a]atrim=start=5.5:end=6,asetpts=PTS-5.5/TB,afade=t=in:d=0.01[ca1]",
+      "[cv0][ca0][cv1][ca1]concat=n=2:v=1:a=1[cvout][caout]"
+    ],
+    "video": "[cvout]",
+    "audio": "[caout]"
+  },
+  {
+    "error": "a cut window needs at least one kept segment"
+  }
+]

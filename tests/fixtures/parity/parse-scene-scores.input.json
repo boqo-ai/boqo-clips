@@ -1,0 +1,12 @@
+{
+ "cases": {
+  "paired": "frame:0   pts:0   pts_time:0\nlavfi.scene_score=0.000000\nframe:1   pts:40   pts_time:0.04\nlavfi.scene_score=0.012345\nframe:2   pts:80   pts_time:0.08\nlavfi.scene_score=0.5\n",
+  "negativeLeadIn": "frame:0   pts:-1160   pts_time:-1.16\nlavfi.scene_score=0.001\nframe:1   pts:-1120   pts_time:-1.12\nlavfi.scene_score=0.002\nframe:2   pts:0   pts_time:0\nlavfi.scene_score=0.003\nframe:3   pts:40   pts_time:0.04\nlavfi.scene_score=0.25\n",
+  "unpaired": "lavfi.scene_score=0.9\nframe:0   pts:0   pts_time:0\nframe:1   pts:40   pts_time:0.04\nlavfi.scene_score=0.1\nlavfi.scene_score=0.2\nframe:2   pts:80   pts_time:0.08\n",
+  "progressLine": "frame=  100 fps= 50 q=-0.0 size=N/A time=00:00:04.00 bitrate=N/A speed=2x\nframe:0   pts:1500   pts_time:1.5\nlavfi.scene_score=0.7",
+  "empty": "",
+  "exponent": "frame:0   pts:2000   pts_time:2\nlavfi.scene_score=1e-05\nframe:1   pts:2040   pts_time:2.04\nlavfi.scene_score=nan\n",
+  "crlf": "frame:0   pts:500   pts_time:0.5\r\nlavfi.scene_score=0.3\r\n",
+  "bareTime": "pts_time:10\nlavfi.scene_score=0.4\npts_time:11.25\nlavfi.scene_score=0.45"
+ }
+}

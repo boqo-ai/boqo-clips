@@ -1,0 +1,63 @@
+[
+  [
+    {
+      "index": 0,
+      "boxes": [
+        {
+          "x": 0.1,
+          "y": 0.3,
+          "width": 0.2,
+          "height": 0.35,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "boxes": [
+        {
+          "x": 0.2,
+          "y": 0.3,
+          "width": 0.2,
+          "height": 0.35,
+          "confidence": 0.95
+        }
+      ]
+    }
+  ],
+  [],
+  [],
+  [
+    {
+      "index": 0,
+      "boxes": [
+        {
+          "x": 0.1,
+          "y": 0.3,
+          "width": 0.2,
+          "height": 0.35,
+          "confidence": 0.95
+        },
+        {
+          "x": 0.5,
+          "y": 0.3,
+          "width": 0.2,
+          "height": 0.35,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "boxes": [
+        {
+          "x": 0.2,
+          "y": 0.3,
+          "width": 0.2,
+          "height": 0.35,
+          "confidence": 0.95
+        }
+      ]
+    }
+  ]
+]

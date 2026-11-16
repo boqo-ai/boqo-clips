@@ -1,0 +1,65 @@
+{
+ "cases": [
+  {
+   "name": "one kept segment with audio",
+   "keep": [
+    {
+     "start": 0,
+     "end": 12.5
+    }
+   ],
+   "hasAudio": true
+  },
+  {
+   "name": "three kept segments with audio: fades on each join",
+   "keep": [
+    {
+     "start": 0,
+     "end": 2.12
+    },
+    {
+     "start": 4.2,
+     "end": 9.84
+    },
+    {
+     "start": 11.5,
+     "end": 20
+    }
+   ],
+   "hasAudio": true
+  },
+  {
+   "name": "video only",
+   "keep": [
+    {
+     "start": 0,
+     "end": 2.12
+    },
+    {
+     "start": 4.2,
+     "end": 9.84
+    }
+   ],
+   "hasAudio": false
+  },
+  {
+   "name": "a first segment that starts between frames",
+   "keep": [
+    {
+     "start": 0.0123456789,
+     "end": 3
+    },
+    {
+     "start": 5.5,
+     "end": 6
+    }
+   ],
+   "hasAudio": true
+  },
+  {
+   "name": "no segment is an error",
+   "keep": [],
+   "hasAudio": true
+  }
+ ]
+}

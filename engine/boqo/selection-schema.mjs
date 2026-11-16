@@ -2,12 +2,10 @@
 // Only the wire schema and what normalises its output are taken from that file (lines 46-201 at the pin:
 // STANDALONE_DESCRIPTIONS, TITLE_ALTERNATIVES_DESCRIPTION, SelectionResponse, TITLE_ALTERNATIVES,
 // clampUtf16, normaliseAlternatives), with the bounds verbatim. The Anthropic call, the retries and the
-// scene path are not part of the skill: the person's agent is the model. Cut: the import of
-// packages/core/src/selection.ts, whose one used value is the constant below.
+// scene path are not part of the skill: the person's agent is the model. The `@boqo/core` import
+// of CLIP_TITLE_MAX_CHARS is the sibling ./selection.mjs.
 import { z } from "zod";
-
-/** Most characters a clip title may hold (packages/core/src/selection.ts at the pin). */
-const CLIP_TITLE_MAX_CHARS = 200;
+import { CLIP_TITLE_MAX_CHARS } from "./selection.mjs";
 
 /**
  * The wire shape, as the model returns it. snake_case on purpose: this is

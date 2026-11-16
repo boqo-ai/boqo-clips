@@ -344,7 +344,7 @@ test('panels.md carries both prompts verbatim, the frame labels, the port header
 
 // ---- the tools: frames and the store -------------------------------------------------------------------------------
 
-const { PANELS_READ_EVERY_SEC, PANELS_READ_MAX, PANELS_FRAME_WIDTH, probeFrames, readFrames, recordProbe, recordRead, framesIn } = await import('../engine/panels-read.mjs');
+const { PANELS_READ_EVERY_SEC, PANELS_READ_MAX, PANELS_FRAME_WIDTH, PanelsError, probeFrames, readFrames, recordProbe, recordRead, framesIn, sourceOf } = await import('../engine/panels-read.mjs');
 const { execFile, spawnSync } = await import('node:child_process');
 const { existsSync, mkdirSync, mkdtempSync, readdirSync, rmSync, writeFileSync } = await import('node:fs');
 const { tmpdir } = await import('node:os');
@@ -546,7 +546,7 @@ test('probe-frames takes its frames at the midpoints of the first six clips, eac
     // Clip i (0-based) is 100*(i+1) to 100*(i+1)+30 in the video; its section file starts the pick 1 s in.
     const clips = Array.from({ length: 8 }, (_, i) => row(i + 1, 100 * (i + 1), 100 * (i + 1) + 30));
     writeRun(dir, clips);
-    writeFileSync(join(dir, 'sections.json'), JSON.stringify({ files: clips.map((_, i) => ({ pick: i, file: `sec-${i}.mp4`, offset: 1 })) }));
+    writeFileSync(join(dir, 'sections.json'), JSON.stringify({ files: clips.map((c, i) => ({ pick: i, file: `sec-${i}.mp4`, offset: 1, s: c.start - 1, e: c.end + 1 })) }));
     const { fn, calls } = fakeMedia({ width: 1920, height: 1080 });
     const r = await probeFrames({ run: dir, exec: fn });
     assert.equal(r.frames, 6);
@@ -557,6 +557,39 @@ test('probe-frames takes its frames at the midpoints of the first six clips, eac
       assert.equal(c.args[c.args.indexOf('-i') + 1], join(dir, `sec-${i}.mp4`));
       assert.ok(c.args.includes('scale=640:-2'));
     });
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test("sourceOf finds a clip's section by the seconds it holds, not by its place: after a re-order, in a subset, or refused", () => {
+  const dir = tmp('src');
+  try {
+    // Fetched in the first order (A, B, C as picks 0, 1, 2); clips.json then re-ranked to C, A, B.
+    const A = row(2, 100, 130);
+    const B = row(3, 200, 230);
+    const C = row(1, 300, 330);
+    const record = { clips: [C, A, B] };
+    const entry = (pick, r) => ({ pick, file: `sec-${pick}.mp4`, offset: 1, s: r.start - 1, e: r.end + 1 });
+    writeFileSync(join(dir, 'sections.json'), JSON.stringify({ files: [entry(0, A), entry(1, B), entry(2, C)] }));
+    assert.deepEqual(sourceOf(dir, record, C), { file: join(dir, 'sec-2.mp4'), offset: 1 });
+    assert.deepEqual(sourceOf(dir, record, A), { file: join(dir, 'sec-0.mp4'), offset: 1 });
+    assert.deepEqual(sourceOf(dir, record, B), { file: join(dir, 'sec-1.mp4'), offset: 1 });
+    // A local cut that starts 3 s before the clip: the offset is the clip's start on that file's clock.
+    writeFileSync(join(dir, 'sections.json'), JSON.stringify({ files: [{ pick: 0, file: 'sec-0.mp4', offset: 3, s: 97, e: 131 }] }));
+    assert.deepEqual(sourceOf(dir, record, A), { file: join(dir, 'sec-0.mp4'), offset: 3 });
+    // A subset fetch (only B): B renders, A and C are refused by name.
+    writeFileSync(join(dir, 'sections.json'), JSON.stringify({ files: [{ ...entry(0, B) }] }));
+    assert.deepEqual(sourceOf(dir, record, B), { file: join(dir, 'sec-0.mp4'), offset: 1 });
+    assert.throws(() => sourceOf(dir, record, A), (e) => e instanceof PanelsError && /no section in sections\.json holds clip 2 \(100-130 s\)/.test(e.message));
+    // A section that holds the start but not the end is not the clip's.
+    writeFileSync(join(dir, 'sections.json'), JSON.stringify({ files: [{ pick: 0, file: 'sec-0.mp4', offset: 1, s: 99, e: 120 }] }));
+    assert.throws(() => sourceOf(dir, record, A), /no section in sections\.json holds clip 2/);
+    // A sections.json from before the bounds were written: re-fetch.
+    writeFileSync(join(dir, 'sections.json'), JSON.stringify({ files: [{ pick: 0, file: 'sec-0.mp4', offset: 1 }] }));
+    assert.throws(() => sourceOf(dir, record, A), /re-fetch sections/);
+    // --src: the whole file, the clip at its own start.
+    assert.deepEqual(sourceOf(dir, record, A, join(dir, 'v.mp4')), { file: join(dir, 'v.mp4'), offset: 100 });
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

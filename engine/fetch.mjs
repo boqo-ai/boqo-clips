@@ -336,9 +336,11 @@ async function pool(n, items, fn) {
  * Download only the picked sections (1 s padding each side, 3 at a time).
  * If any comes back short or missing, download the whole video once and cut
  * the bad ones locally (the whole download gets one retry). Throws, naming both failures, when that fails too.
- * `offset` is where the pick starts inside its file.
+ * `offset` is where the pick starts inside its file; `s` and `e` are the video seconds the file holds (its 0 is
+ * video second `s`), by which the render and the panels read find a clip's section (engine/panels-read.mjs
+ * `sourceOf`): by time, never by the pick's place, which `clips order` changes.
  * @param {{ url: string, picks: Pick[], dir: string, duration?: number, run?: typeof realRun, retryMs?: number }} o
- * @returns {Promise<{ files: {pick: number, file: string, offset: number}[] }>}
+ * @returns {Promise<{ files: {pick: number, file: string, offset: number, s: number, e: number}[] }>}
  */
 export async function fetchSections({ url, picks, dir, duration, run = realRun, retryMs = WHOLE_RETRY_MS }) {
   mkdirSync(dir, { recursive: true });
@@ -359,7 +361,7 @@ export async function fetchSections({ url, picks, dir, duration, run = realRun, 
     return { state: sectionResult({ asked, got }), asked, got, error };
   });
 
-  const files = picks.map((p, i) => ({ pick: i, file: secFile(dir, i), offset: round3(p.s - bounds[i].s) }));
+  const files = picks.map((p, i) => ({ pick: i, file: secFile(dir, i), offset: round3(p.s - bounds[i].s), s: bounds[i].s, e: bounds[i].e }));
   const bad = first.map((r, i) => ({ r, i })).filter(({ r }) => r.state !== 'ok');
   if (bad.length === 0) return { files };
 
@@ -385,6 +387,7 @@ export async function fetchSections({ url, picks, dir, duration, run = realRun, 
       const got = await run.probe(cut.file);
       if (sectionResult({ asked: cut.asked, got }) !== 'ok') throw new Error(`the local cut for pick ${i + 1} came out ${got === null ? 'missing' : 'short'}`);
       files[i].offset = cut.offset;
+      files[i].s = round3(picks[i].s - cut.offset);
     }
   } catch (err) {
     throw new Error(`section download failed (${sectionWhy}); the whole-video fallback failed too (${msg(err)})`);

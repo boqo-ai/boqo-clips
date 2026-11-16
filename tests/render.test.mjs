@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url';
 import { defaultBrand, saveBrand } from '../engine/brand.mjs';
 import { toolEnv } from '../engine/env.mjs';
 import { reorderRun } from '../engine/order.mjs';
-import { renderClip } from '../engine/render.mjs';
+import { logoFailure, realExec, renderClip } from '../engine/render.mjs';
 import { CLIP_LOUDNESS, measureArgs, parseLoudnormJson } from '../engine/boqo/loudness.mjs';
 
 const CLI = fileURLToPath(new URL('../tools/render.mjs', import.meta.url));
@@ -63,7 +63,20 @@ before(() => {
   const word = (t, i) => ({ w: `word${i}`, s: Math.round(t * 100) / 100, e: Math.round((t + 0.3) * 100) / 100 });
   const words = Array.from({ length: 50 }, (_, i) => word(i * 0.4, i));
   const gapWords = words.filter((x) => x.e <= 8 || x.s >= 10.5);
-  fx = { dir, src, gap, section, words, gapWords };
+  // Silent picture-and-audio, for telling which file a clip came from: digital silence leaves loudnorm nothing to
+  // measure, so a clip rendered from it carries the loudness note and one from the tone does not.
+  const silent = join(dir, 'silent.mp4');
+  ff([
+    '-f', 'lavfi', '-i', 'testsrc2=size=1280x720:rate=30:duration=20',
+    '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=mono', '-t', '20',
+    '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-c:a', 'aac', silent,
+  ]);
+  // Two downloaded sections: video 1..6 of the tone (clip 2..5 s) and 9..14 of the silence (clip 10..13 s).
+  const secTone = join(dir, 'sec tone.mp4');
+  ff(['-ss', '1', '-i', src, '-t', '5', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-c:a', 'aac', secTone]);
+  const secSilent = join(dir, 'sec silent.mp4');
+  ff(['-ss', '9', '-i', silent, '-t', '5', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-c:a', 'aac', secSilent]);
+  fx = { dir, src, gap, section, words, gapWords, secTone, secSilent };
 });
 
 const row = (over = {}) => ({ n: 1, start: 2, end: 5, title: 'A synthetic clip', hook: 'Its hook', emphasis_words: ['word10'], panels: null, ...over });
@@ -198,8 +211,8 @@ test('CLI --first and --n render rows by number into clips.json; clips order the
 
 test('CLI with sections.json: each clip renders from its own section; a section too short for its clip fails that clip only', { skip }, () => {
   const run = runFolder([clipRow(1, 6, 9), clipRow(2, 14, 17)]);
-  // clip 1 from the section (video 5..13, offset 1); clip 2 is given the same file at an offset it does not reach.
-  writeFileSync(join(run, 'sections.json'), JSON.stringify({ files: [{ pick: 0, file: fx.section, offset: 1 }, { pick: 1, file: fx.section, offset: 9 }] }));
+  // clip 1 from the section (video 5..13); clip 2 is claimed by an entry that says 5..20 for the same 8 s file.
+  writeFileSync(join(run, 'sections.json'), JSON.stringify({ files: [{ pick: 0, file: fx.section, offset: 1, s: 5, e: 13 }, { pick: 1, file: fx.section, offset: 9, s: 5, e: 20 }] }));
   const r = cli(['--run', run, '--all'], { BOQO_HOME: emptyHome() });
   assert.equal(r.status, 1, r.stdout + r.stderr);
   const out = last(r);
@@ -246,4 +259,114 @@ test('CLI refusals: no --run, a pending order, an unknown clip, two selections, 
   const pending = cli(['--run', run]);
   assert.equal(pending.status, 1);
   assert.match(last(pending).error, /interrupted order/);
+});
+
+test('CLI after clips order re-ranks the rows: --n renders each clip from the section that holds its seconds, not the one at its place', { skip }, () => {
+  // Fetched as picks 0 = the clip at 2..5 (tone), 1 = the clip at 10..13 (silence); then ranked: 10..13 is n 1, first.
+  const run = runFolder([clipRow(1, 10, 13), clipRow(2, 2, 5)]);
+  writeFileSync(join(run, 'sections.json'), JSON.stringify({ files: [
+    { pick: 0, file: fx.secTone, offset: 1, s: 1, e: 6 },
+    { pick: 1, file: fx.secSilent, offset: 1, s: 9, e: 14 },
+  ] }));
+  const home = emptyHome();
+  const first = cli(['--run', run, '--n', '1'], { BOQO_HOME: home });
+  assert.equal(first.status, 0, first.stdout + first.stderr);
+  const second = cli(['--run', run, '--n', '2'], { BOQO_HOME: home });
+  assert.equal(second.status, 0, second.stdout + second.stderr);
+  const rec = readRecord(run);
+  const loudness = (r) => r.notes.filter((n) => /^Loudness not normalised/.test(n));
+  assert.equal(loudness(rec.clips[0]).length, 1, 'clip 1 (10..13 s) came from the silent section');
+  assert.equal(loudness(rec.clips[1]).length, 0, 'clip 2 (2..5 s) came from the tone section');
+  assert.deepEqual(rec.clips.map((c) => c.window), [{ start: 10, end: 13 }, { start: 2, end: 5 }]);
+});
+
+test('CLI with a subset of sections: a covered clip renders, an uncovered one is refused by name; an older sections.json is refused', { skip }, () => {
+  const run = runFolder([clipRow(1, 10, 13), clipRow(2, 2, 5)]);
+  writeFileSync(join(run, 'sections.json'), JSON.stringify({ files: [{ pick: 0, file: fx.secSilent, offset: 1, s: 9, e: 14 }] }));
+  const home = emptyHome();
+  const refused = cli(['--run', run, '--n', '2'], { BOQO_HOME: home });
+  assert.equal(refused.status, 1);
+  assert.match(last(refused).error, /^no section in sections\.json holds clip 2 \(2-5 s\): fetch its section$/);
+  assert.equal(readRecord(run).clips[1].rendered, false);
+  const ok = cli(['--run', run, '--n', '1'], { BOQO_HOME: home });
+  assert.equal(ok.status, 0, ok.stdout + ok.stderr);
+  assert.equal(readRecord(run).clips[0].rendered, true);
+  writeFileSync(join(run, 'sections.json'), JSON.stringify({ files: [{ pick: 0, file: fx.secSilent, offset: 1 }] }));
+  assert.match(last(cli(['--run', run, '--n', '1'], { BOQO_HOME: home })).error, /re-fetch sections/);
+});
+
+// The encode's filter graph and argv, as the render hands them to ffmpeg.
+function spying() {
+  const encodes = [];
+  const exec = (command, args, options) => {
+    if (command === 'ffmpeg' && args.includes('-filter_complex')) encodes.push(args);
+    return realExec(command, args, options);
+  };
+  return { exec, encodes, graph: () => encodes.at(-1)[encodes.at(-1).indexOf('-filter_complex') + 1] };
+}
+
+test('renderClip: the stream panels read is used only when its status is ok and its content is not other; the Default kit draws headline.ass', { skip }, async () => {
+  const sample = (t) => ({ sourceSec: t, mode: 'panels', cameras: [{ x: 0.72, y: 0.05, w: 0.26, h: 0.3 }], game: { x: 0, y: 0, w: 1, h: 1 }, focus: null, why: 'x' });
+  const read = (over = {}) => ({ version: 1, status: 'ok', promptVersion: 'v', model: 'agent', content: 'stream_with_game', gameTitle: null, samples: [sample(2.5), sample(3.5), sample(4.5)], trigger: 'first', ...over });
+  const go = async (name, panels) => {
+    const spy = spying();
+    const r = await renderClip({ run: join(fx.dir, name), row: row({ panels }), brand: defaultBrand('t'), sourceFile: fx.src, words: fx.words, exec: spy.exec, load: noRuntime });
+    return { r, graph: spy.graph() };
+  };
+  const used = await go('run panels ok', read());
+  assert.deepEqual(used.r.layouts, ['panels']);
+  assert.match(used.graph, /vstack=inputs=2/);
+  // The Default kit's title plate: its own pass, after the captions.
+  assert.match(used.graph, /subtitles=filename=[^;]*captions\.ass[^;]*\[vcapped\];\[vcapped\]subtitles=filename=[^;]*headline\.ass/);
+  const other = await go('run panels other', read({ content: 'other' }));
+  assert.deepEqual(other.r.layouts, ['fit']);
+  assert.doesNotMatch(other.graph, /vstack/);
+  const failed = await go('run panels failed', { version: 1, status: 'failed', reason: 'the read failed' });
+  assert.deepEqual(failed.r.layouts, ['fit']);
+  assert.match(failed.graph, /headline\.ass/);
+});
+
+test('renderClip: an encode failure on the logo costs the logo; any other encode failure fails the clip as itself', { skip }, async () => {
+  const good = join(fx.dir, 'retry logo.png');
+  writeFileSync(good, PNG);
+  const kit = { ...defaultBrand('t'), logo: { ...defaultBrand('t').logo, file: good } };
+  const failingOnce = (stderr) => {
+    let failed = false;
+    return (command, args, options) => {
+      if (!failed && command === 'ffmpeg' && args.includes('-filter_complex') && args.includes('-loop')) {
+        failed = true;
+        return Promise.reject(Object.assign(new Error('ffmpeg failed (exit 1)'), { stderr }));
+      }
+      return realExec(command, args, options);
+    };
+  };
+  const listing = `Input #1, png_pipe, from '${good}':\n  Duration: N/A\n  Stream #1:0: Video: png, rgba, 1x1\n`;
+  const logoBroke = await renderClip({ run: join(fx.dir, 'run retry logo'), row: row(), brand: kit, sourceFile: fx.src, words: fx.words, exec: failingOnce(listing + '[png @ 0x1] chunk too big\n'), load: noRuntime });
+  assert.ok(existsSync(logoBroke.file));
+  assert.equal(logoBroke.notes.filter((n) => /^No logo: ffmpeg could not draw it/.test(n)).length, 1);
+  await assert.rejects(
+    renderClip({ run: join(fx.dir, 'run retry other'), row: row(), brand: kit, sourceFile: fx.src, words: fx.words, exec: failingOnce(listing + '[libx264 @ 0x2] Error initializing output stream\n'), load: noRuntime }),
+    /ffmpeg failed \(exit 1\)/,
+  );
+});
+
+test('logoFailure reads the message lines, not the input listing that names the logo on every run', () => {
+  const listing = "Input #0, mov,mp4, from 'window.mp4':\nInput #1, png_pipe, from '/k/logo.png':\n  Stream #1:0: Video: png\n";
+  assert.equal(logoFailure(listing + '[libx264 @ 0x1] broken\n', '/k/logo.png'), false);
+  assert.equal(logoFailure(listing + '[png @ 0x1] chunk too big\n', '/k/logo.png'), true);
+  assert.equal(logoFailure(listing + 'Error opening input file /k/logo.png.\n', '/k/logo.png'), true);
+  assert.equal(logoFailure(listing + 'Error while decoding stream #1:0: Invalid data found\n', '/k/logo.png'), true);
+  assert.equal(logoFailure(listing + '[Parsed_colorchannelmixer_2 @ 0x1] Failed to configure input pad\n', '/k/logo.png'), true);
+  assert.equal(logoFailure('C:\\k\\logo.png: Invalid data found when processing input', 'C:\\k\\logo.png'), true);
+});
+
+test('renderClip: a PNG that is damaged after its signature is caught before the encode (which it would keep from ending): no logo, one note', { skip }, async () => {
+  const bad = join(fx.dir, 'damaged logo.png');
+  writeFileSync(bad, Buffer.concat([PNG.subarray(0, 8), Buffer.from('garbagegarbagegarbage')]));
+  const kit = { ...defaultBrand('t'), logo: { ...defaultBrand('t').logo, file: bad } };
+  const r = await renderClip({ run: join(fx.dir, 'run damaged logo'), row: row(), brand: kit, sourceFile: fx.src, words: fx.words, load: noRuntime });
+  assert.ok(existsSync(r.file));
+  const notes = r.notes.filter((n) => /logo/i.test(n));
+  assert.equal(notes.length, 1);
+  assert.match(notes[0], /^No logo: ffmpeg cannot read it/);
 });

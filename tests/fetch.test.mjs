@@ -267,7 +267,7 @@ test('fetchSections: all ok gives sec files with offsets, no fallback, concurren
   const out = await fetchSections({ url: URL1, picks: many, dir, duration: 3600, run });
   assert.equal(out.files.length, 7);
   assert.equal(peak, 3);
-  assert.deepEqual(out.files[0], { pick: 0, file: join(dir, 'sec-0.mp4'), offset: 1 });
+  assert.deepEqual(out.files[0], { pick: 0, file: join(dir, 'sec-0.mp4'), offset: 1, s: 99, e: 131 });
   assert.ok(wrote.every((a) => a.includes('--download-sections')));
   rmSync(dir, { recursive: true });
 });
@@ -296,8 +296,9 @@ test('fetchSections: a short section triggers one whole download and a local cut
   assert.equal(cuts[0].cwd, dir);
   assert.deepEqual(cuts[0].args.slice(0, 7), ['-y', '-v', 'error', '-ss', '597', '-i', 'whole.mp4']);
   assert.deepEqual(out.files, [
-    { pick: 0, file: join(dir, 'sec-0.mp4'), offset: 3 },
-    { pick: 1, file: join(dir, 'sec-1.mp4'), offset: 1 },
+    // s..e: the video seconds each file holds (the local cut starts 2 s before the padded start)
+    { pick: 0, file: join(dir, 'sec-0.mp4'), offset: 3, s: 597, e: 631 },
+    { pick: 1, file: join(dir, 'sec-1.mp4'), offset: 1, s: 999, e: 1031 },
   ]);
   assert.equal(existsSync(join(dir, 'whole.mp4')), false, 'whole download removed after cutting');
   rmSync(dir, { recursive: true });

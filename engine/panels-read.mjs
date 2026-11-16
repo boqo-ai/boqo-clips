@@ -50,10 +50,13 @@ const GRAB_TIMEOUT_MS = 60_000;
 
 const defaultExec = (command, args, options = {}) =>
   new Promise((resolvePromise, reject) => {
-    execFile(command, args, { env: toolEnv(), maxBuffer: 64 << 20, windowsHide: true, timeout: options.timeoutMs }, (err, stdout, stderr) => {
+    const child = execFile(command, args, { env: toolEnv(), maxBuffer: 64 << 20, windowsHide: true, timeout: options.timeoutMs }, (err, stdout, stderr) => {
       if (err) reject(Object.assign(err, { stderr }));
       else resolvePromise({ stdout, stderr });
     });
+    // stdin closed, as every other ffmpeg call of the skill: a prompt (an output that exists, without -y) ends at EOF
+    // instead of waiting.
+    child.stdin?.end();
   });
 
 /** A message for the person, thrown by this file and printed by tools/panels.mjs. */
@@ -89,20 +92,32 @@ export function renderRows(record) {
   return record.clips.filter((r) => Number.isInteger(r.n) && r.n >= 1 && r.n <= RENDER_FIRST).sort((a, b) => a.n - b.n);
 }
 
+/** Seconds a section's recorded bounds may miss a clip's edges by: `fetch.mjs` rounds them to the millisecond. */
+export const SECTION_TOLERANCE_SEC = 0.01;
+
 /**
  * Where a clip lives on disk: the file holding it and where the clip starts inside that file. A downloaded section
- * (`<run>/sections.json`, `{files:[{pick, file, offset}]}` from `fetch.mjs sections`) is the file of the pick whose
- * number is the row's place in clips.json (after `clips order`, `n - 1`), and the clip starts `offset` seconds in; a
- * whole file given as `src` starts the clip at its own start.
+ * (`<run>/sections.json`, `{files:[{pick, file, offset, s, e}]}` from `fetch.mjs sections`, `s`..`e` the video
+ * seconds the file holds, its 0 at `s`) is found by TIME: the first entry whose `s`..`e` covers the row's
+ * `start`..`end`, the clip starting `start - s` seconds into it. Never by the pick's number: `clips order`
+ * re-sorts clips.json, and a fetch may hold any subset of the rows, so a place would name another clip's video.
+ * The render reads nothing past `end` (settle-end only looks back from it, `SETTLE_LOOK_SEC` before; the extract
+ * stops at the settled end), so covering `start`..`end` is enough. A whole file given as `src` starts the clip at
+ * its own start. `record` is unused and kept for the callers' shape.
  */
 export function sourceOf(run, record, row, src) {
   if (src !== undefined) return { file: resolve(src), offset: row.start };
   const sectionsPath = join(run, 'sections.json');
   if (!existsSync(sectionsPath)) throw new PanelsError('the run has no sections.json and no --src was given: there is no video to read frames from');
   const sections = readJson(sectionsPath, 'sections.json');
-  const entry = (Array.isArray(sections?.files) ? sections.files : []).find((f) => f?.pick === record.clips.indexOf(row));
-  if (!entry || typeof entry.file !== 'string' || !Number.isFinite(entry.offset)) throw new PanelsError(`sections.json has no entry for clip ${row.n}`);
-  return { file: resolve(run, entry.file), offset: entry.offset };
+  const entries = (Array.isArray(sections?.files) ? sections.files : []).filter((f) => f && typeof f.file === 'string');
+  const timed = entries.filter((f) => Number.isFinite(f.s) && Number.isFinite(f.e));
+  if (timed.length === 0) {
+    throw new PanelsError('sections.json does not say which seconds each file holds (an older fetch): re-fetch sections');
+  }
+  const entry = timed.find((f) => f.s <= row.start + SECTION_TOLERANCE_SEC && f.e >= row.end - SECTION_TOLERANCE_SEC);
+  if (!entry) throw new PanelsError(`no section in sections.json holds clip ${row.n} (${row.start}-${row.end} s): fetch its section`);
+  return { file: resolve(run, entry.file), offset: Math.max(0, Math.round((row.start - entry.s) * 1000) / 1000) };
 }
 
 /** The source's frame size as displayed, by ffprobe, or throws. */

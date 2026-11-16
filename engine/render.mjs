@@ -51,6 +51,9 @@ export const OUTPUT = DEFAULT_OUTPUT;
 export const OUT_DIR = 'out';
 export const WORK_DIR = 'render';
 
+/** How long decoding the logo's one frame may take before the clip renders without it. */
+const LOGO_CHECK_TIMEOUT_MS = 30_000;
+
 const nn = (n) => String(n).padStart(2, '0');
 const oneLine = (e) => String(e?.message ?? e).split('\n')[0].trim();
 
@@ -113,6 +116,26 @@ async function logoKind(file) {
   } finally {
     await handle?.close();
   }
+}
+
+/**
+ * Whether an encode's stderr points at the logo. Only its message lines are read (a `[component @ …]` line, or one
+ * saying error, invalid, failed or no such file), never the input listing ffmpeg prints on every run, which names the
+ * logo's file and `Input #1` whether or not anything went wrong. A message line points at the logo when it names the
+ * logo's file, ffmpeg's stream #1 (the looped still), an image decoder or demuxer (`[png @`, `[mjpeg @`, `[image2 @`;
+ * the window is never an image), or the logo stage's own label or filter (`blogo`, `colorchannelmixer`, which only the
+ * logo chain uses).
+ */
+export function logoFailure(stderr, logoPath) {
+  const messages = String(stderr)
+    .split(/\r?\n/)
+    .filter((l) => /^\s*\[[^\]]+ @ /.test(l) || /error|invalid|failed|no such file/i.test(l));
+  const paths = logoPath ? [logoPath, logoPath.replace(/\\/g, '/')] : [];
+  return messages.some(
+    (l) =>
+      paths.some((p) => l.includes(p)) ||
+      /[Ss]tream #1:|\[(?:png|mjpeg|jpeg|image2|png_pipe|jpeg_pipe) @|blogo|colorchannelmixer/.test(l),
+  );
 }
 
 async function moveFile(from, to) {
@@ -239,6 +262,16 @@ export async function renderClip({
     let logo = null;
     if (brand.logo && brand.logo.file) {
       const kind = await logoKind(brand.logo.file);
+      // A file that starts like a PNG and is damaged after: decoded once here, because looped as input #1 of the
+      // encode (`-loop 1`) it kept the encode from ending (measured 2026-11-16, BtbN ffmpeg 8.1, a PNG signature then
+      // junk: the encode still ran minutes later and ignored SIGTERM; one decode of the same file exits 69 in 28 ms).
+      if (!kind.why) {
+        try {
+          await exec('ffmpeg', ['-nostdin', '-v', 'error', '-i', brand.logo.file, '-frames:v', '1', '-f', 'null', '-'], { timeoutMs: LOGO_CHECK_TIMEOUT_MS });
+        } catch (e) {
+          kind.why = `ffmpeg cannot read it: ${oneLine(String(e?.stderr ?? '').trim().split('\n').at(-1) || e?.message)}`;
+        }
+      }
       if (kind.why) notes.push(`No logo: ${kind.why} (${brand.logo.file}).`);
       else {
         const stage = logoStage({ logo: brand.logo, durationSec, output: OUTPUT });
@@ -279,6 +312,9 @@ export async function renderClip({
       try {
         await encode(true);
       } catch (e) {
+        // Only a failure ffmpeg puts on the logo (its file, input #1, the image decoder, the `[blogo]` stage) costs
+        // the logo; any other encode failure is the clip's and fails as itself.
+        if (!logoFailure(String(e?.stderr ?? e?.message ?? ''), logo.path)) throw e;
         await encode(false);
         notes.push(`No logo: ffmpeg could not draw it (${oneLine(e)}).`);
       }

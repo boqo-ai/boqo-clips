@@ -16,6 +16,8 @@ export const SHARED = [
   'tools/asr.mjs',
   'tools/boqo-upload.mjs',
   'tools/transcript.mjs',
+  // The selection request; engine/select-input.mjs is under engine/ already.
+  'tools/select-request.mjs',
   // The parity harness (engine/boqo/ is already under engine/). Files, not
   // scripts/parity/: boqo-sniper keeps its own cases in scripts/parity/cases/.
   'scripts/parity/golden.mjs',

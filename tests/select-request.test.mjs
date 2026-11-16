@@ -3,7 +3,7 @@
 // fails by value.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, rmSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { expectGolden } from './helpers/golden.mjs';
 import { clipTargetFor, keepCeilingFor } from '../engine/boqo/clip-target.mjs';
@@ -153,4 +153,86 @@ test('videoContextOf: only a youtube source has a context, and malformed entries
 test('a speaker number leads a line, a null speaker does not', () => {
   assert.equal(renderSegment({ start: 3.14159, end: 5, text: 'hi', speaker: 2 }), '[3.1] S2: hi');
   assert.equal(renderSegment({ start: 3.14159, end: 5, text: 'hi', speaker: null }), '[3.1] hi');
+});
+
+// ---- the CLI
+
+import { spawnSync } from 'node:child_process';
+import { existsSync, mkdtempSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+
+const CLI = fileURLToPath(new URL('../tools/select-request.mjs', import.meta.url));
+const runCli = (args) => spawnSync(process.execPath, [CLI, ...args], { encoding: 'utf8' });
+const lastJson = (r) => JSON.parse(r.stdout.trim().split('\n').at(-1));
+// A run directory the way the fetch and transcript tools leave one.
+const runDir = (name) => {
+  const raw = input(name);
+  const dir = mkdtempSync(join(tmpdir(), 'boqo-select-request-'));
+  writeFileSync(join(dir, 'segments.json'), JSON.stringify(raw.segments));
+  writeFileSync(join(dir, 'info.json'), JSON.stringify(raw.info));
+  if (raw.comments) writeFileSync(join(dir, 'comments.json'), JSON.stringify(raw.comments));
+  return { dir, raw };
+};
+
+test('CLI on the bare fixture: target 40 for a 2400 s video, one JSON line, select-request.md written', () => {
+  const { dir, raw } = runDir('build-user-message-bare');
+  const r = runCli(['--run', dir]);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  assert.equal(r.stdout.trim().split('\n').length, 1);
+  const out = lastJson(r);
+  assert.equal(out.target, 40);
+  assert.equal(out.segments, raw.segments.length);
+  const text = readFileSync(join(dir, 'select-request.md'), 'utf8');
+  assert.equal(out.chars, text.length);
+});
+
+test('the request text is the rubric, a --- line, then the user message; with no heatmap it has no most-replayed marker', () => {
+  const { dir } = runDir('build-user-message-bare');
+  assert.equal(runCli(['--run', dir]).status, 0);
+  const text = readFileSync(join(dir, 'select-request.md'), 'utf8');
+  const golden = JSON.parse(readFileSync(fileURLToPath(new URL('./golden/build-user-message-bare.json', import.meta.url)), 'utf8'));
+  assert.equal(text, `${golden.rubric}\n---\n${golden.message}\n`);
+  assert.ok(!text.includes('<<< most-replayed'), 'no most-replayed marker');
+  assert.ok(!/most-replayed region (begins|ends)/.test(text));
+});
+
+test('CLI with the full fixture and the person\'s own words: genre, request block, all three markers', () => {
+  const { dir, raw } = runDir('build-user-message-full');
+  const r = runCli(['--run', dir, '--genre', raw.genre, '--length', raw.length, '--prompt', raw.prompt]);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  const text = readFileSync(join(dir, 'select-request.md'), 'utf8');
+  const golden = JSON.parse(readFileSync(fileURLToPath(new URL('./golden/build-user-message-full.json', import.meta.url)), 'utf8'));
+  assert.equal(text, `${golden.rubric}\n---\n${golden.message}\n`);
+  assert.match(text, /<<< most-replayed region begins >>>/);
+  assert.match(text, /This video is a podcast or interview\./);
+});
+
+test('CLI: a run with no info.json and no comments still builds a request (a local file)', () => {
+  const { dir } = runDir('build-user-message-bare');
+  rmSync(join(dir, 'info.json'));
+  const r = runCli(['--run', dir, '--lang', 'ru']);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  const text = readFileSync(join(dir, 'select-request.md'), 'utf8');
+  assert.match(text, /Transcript language: ru\./);
+  assert.doesNotMatch(text, /About the video/);
+  assert.equal(lastJson(r).target, Math.round(input('build-user-message-bare').segments.at(-1).end / 60));
+});
+
+test('CLI: usage errors, an unknown genre or length, and a missing segments.json are one JSON line, exit 1, nothing written', () => {
+  const { dir } = runDir('build-user-message-bare');
+  const empty = mkdtempSync(join(tmpdir(), 'boqo-select-request-'));
+  for (const args of [[], ['--run'], ['--run', dir, '--genre', 'series_film'], ['--run', dir, '--length', '5_min'], ['--run', dir, '--nope'], ['--run', empty], ['--run', join(empty, 'missing')]]) {
+    const r = runCli(args);
+    assert.equal(r.status, 1, args.join(' '));
+    assert.equal(r.stdout.trim().split('\n').length, 1);
+    assert.equal(typeof lastJson(r).error, 'string');
+  }
+  assert.equal(existsSync(join(dir, 'select-request.md')), false);
+  assert.equal(existsSync(join(empty, 'select-request.md')), false);
+});
+
+test('select-request.mjs is part of the shared engine', async () => {
+  const { SHARED } = await import('../engine/hash.mjs');
+  assert.ok(SHARED.includes('tools/select-request.mjs'));
 });

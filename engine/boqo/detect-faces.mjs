@@ -6,10 +6,16 @@
 //     shape: engine/blazeface.mjs). Images are `{ width, height, data }`, packed RGB24, where Python has numpy
 //     (height, width, 3) arrays.
 //   - ffprobe and ffmpeg run through an injected `exec(command, args, { timeoutMs }) -> Promise<{ stdout, stderr }>`
-//     (rejecting with `stderr` on the error), not subprocess. shot_frames' ffmpeg writes its raw frames to a file
-//     instead of a pipe, because `exec` resolves once the command exits; the file is read one frame at a time and
-//     deleted, so memory still holds one frame. Disk holds the shot's frames meanwhile (2 Hz, ~2.8 MB a frame at
-//     1280x720).
+//     (rejecting with `stderr` on the error), not subprocess. Because `exec` resolves only once ffmpeg exits,
+//     shot_frames cannot stream a pipe as Python does: it samples a shot in chunks, each ffmpeg call writing at most
+//     64 MiB of raw frames to one temporary file that is read a frame at a time and removed before the next call.
+//     The bound, in numbers: a call writes floor(64 MiB / frame) frames (chunk_frames + 1 look-ahead), and the
+//     scaler caps a frame at 1280 wide, so a frame is 1280 x height x 3 bytes at most: 1280x720 is 2,764,800 B,
+//     24 a call (63.3 MiB); a 1080x1920 portrait (not scaled) 6,220,800 B, 10 a call (59.3 MiB); 2160x3840 scaled
+//     to 1280x2276, 8,739,840 B, 7 a call (58.3 MiB). Above 32 MiB a frame (taller than 8,738 rows at 1280 wide,
+//     which no video source is) a call writes 2 frames. Memory holds one frame. The chunks join into exactly the
+//     one-pass frames (shot_frames_command); the price is re-decoding the shot's start for each chunk. A disk
+//     failure there is a DiskError, which engine/faces.mjs turns into Fit rather than a failed render.
 //   - analyse_shot takes shot_frames as a dependency (`deps.shot_frames`), where Python reads the module global.
 //   - main() is `detect_faces`, returning the object main() prints.
 //   - Python's arithmetic is kept where JavaScript's differs: round() is half to even on the exact binary value
@@ -425,21 +431,69 @@ export async function probe_dimensions({ exec, timeoutMs }, video) {
 }
 
 /**
+ * Port addition: the most raw-frame bytes one ffmpeg call of shot_frames writes to disk, 64 MiB. See the module
+ * header and shot_frames.
+ */
+export const SHOT_FRAMES_CHUNK_BYTES = 64 * 1024 * 1024;
+
+/**
+ * Port addition: how many frames one chunk of shot_frames yields. Each ffmpeg call writes one frame more, the
+ * look-ahead that says whether another chunk follows, so a call writes floor(chunk_bytes / frame_size) frames,
+ * at most `chunk_bytes`, for any frame up to half of it; a larger frame gets one frame (and its look-ahead) a call.
+ */
+export function chunk_frames(frame_size, chunk_bytes = SHOT_FRAMES_CHUNK_BYTES) {
+  return Math.max(1, Math.floor(chunk_bytes / frame_size) - 1);
+}
+
+/**
  * shot_frames' ffmpeg command and the frame size it produces, `out` being where the raw frames go (Python: "-",
  * stdout). Split out of shot_frames so the argv is held by a golden.
+ *
+ * (Port: with `chunk` = `{ first, frames }`, the command for one chunk: the same command, with
+ * `select='gte(n,first)'` after `fps` and `-frames:v frames` before the output. `n` counts the fps filter's output,
+ * so the chunk is that same stream from sample `first` on, cut after `frames`, pixels and timestamps untouched:
+ * the chunks of a shot, laid end to end, are byte for byte the one-pass output (measured 2026-11-16 on ffmpeg 7.0.2
+ * and 8.1.3, B-frame sources at 29.97 fps, rates of 2 to 7.5 Hz, chunks of 1 to 23 frames; tests/faces.test.mjs
+ * checks it against the ffmpeg on the PATH). A `setpts` there would NOT be: the output `-t` would then cut each
+ * chunk at a different frame.)
  */
-export function shot_frames_command(video, start, end, width, height, count, out = '-') {
+export function shot_frames_command(video, start, end, width, height, count, out = '-', chunk = null) {
   const duration = Math.max(end - start, 1e-3);
   const scale_width = Math.min(width, DETECT_MAX_WIDTH);
   let scale_height = width ? py_round((height * scale_width) / width) : 0;
   scale_height -= scale_height % 2;
+  const select = chunk ? `select='gte(n,${chunk.first})',` : '';
   const argv = [
     'ffmpeg', '-v', 'error',
     '-ss', py_repr(start), '-i', video, '-t', py_repr(duration),
-    '-vf', `fps=${py_repr(count / duration)},scale=${scale_width}:${scale_height}`,
-    '-pix_fmt', 'rgb24', '-f', 'rawvideo', out,
+    '-vf', `fps=${py_repr(count / duration)},${select}scale=${scale_width}:${scale_height}`,
+    '-pix_fmt', 'rgb24', '-f', 'rawvideo', ...(chunk ? ['-frames:v', String(chunk.frames)] : []), out,
   ];
   return { argv, scale_width, scale_height };
+}
+
+/**
+ * Port addition: the face step could not use the disk it needs for its sampled frames (no space, a quota, a
+ * read-only or unwritable temporary directory). engine/faces.mjs answers it with `{ unavailable: true, reason }`,
+ * so the render frames the clip Fit rather than failing; any other ffmpeg failure stays a RuntimeError, as in
+ * Python.
+ */
+export class DiskError extends Error {
+  name = 'DiskError';
+}
+
+/** ffmpeg's words for a write the disk refused (libavutil's strerror of ENOSPC, EDQUOT, EROFS). */
+const DISK_FULL = /No space left on device|Disk quota exceeded|Read-only file system/i;
+
+const disk_error = (what, e) => new DiskError(`the face frames could not be ${what}: ${e?.code ? `${e.code} ` : ''}${String(e?.message ?? e).split('\n')[0]}`);
+
+/** A Node fs call, its failure a DiskError. */
+async function on_disk(what, fn) {
+  try {
+    return await fn();
+  } catch (e) {
+    throw disk_error(what, e);
+  }
 }
 
 /**
@@ -475,55 +529,84 @@ export function shot_frames_command(video, start, end, width, height, count, out
  * detection are dropped downstream, and a positional index would silently
  * close those gaps.
  *
- * (Port: ffmpeg writes to `<dir>/faces.rgb` through the injected `exec`, which resolves when ffmpeg exits; the
- * file is then read one frame at a time and removed. As in Python, the frames ffmpeg wrote are yielded before its
- * failure is raised. A missing file reads as no frames, as an empty pipe does. `dir` defaults to a fresh temporary
- * directory, removed with it. Yields `[index, frame]`. A zero frame size, which would loop forever in Python,
- * yields nothing.)
+ * (Port: shot_frames runs ffmpeg through the injected `exec`, which resolves only when ffmpeg exits, so the frames
+ * pass through a file, `<dir>/faces.rgb`, and the shot is sampled in chunks to bound it: each call writes at most
+ * SHOT_FRAMES_CHUNK_BYTES (chunk_frames), the file is read one frame at a time, then removed before the next call.
+ * The frames, their order and their indexes are the one-pass ones (shot_frames_command). The cost is decoding:
+ * each chunk decodes the shot from its start up to its own last sample, about chunks/2 single passes in all. A
+ * shot of up to 23 samples at 1280x720 (11.5 s at 2 Hz), or 9 at 1080x1920, is one call. Measured 2026-11-16
+ * (24 cores, ffmpeg 8.1.3, H.264 30 fps), a 90-second single shot at 2 Hz: 1280x720 in 8 calls, 11.5 s against
+ * 2.9 s for one pass, the file peaking at 63.3 MiB against 475 MiB; 1080x1920 in 20 calls, 32.4 s against 2.8 s,
+ * 59.3 MiB against 1,068 MiB.
+ *
+ * As in Python, the frames ffmpeg wrote are yielded before its failure is raised. A missing file reads as no
+ * frames, as an empty pipe does. A disk failure (ffmpeg's or Node's) raises DiskError, not RuntimeError. `dir`
+ * defaults to a fresh temporary directory; the file, and that directory, are removed however the generator ends.
+ * Yields `[index, frame]`. A zero frame size, which would loop forever in Python, yields nothing.)
  */
-export async function* shot_frames({ exec, timeoutMs, dir }, video, start, end, width, height, count) {
-  const own = dir ? null : await mkdtemp(join(tmpdir(), 'boqo-faces-'));
+export async function* shot_frames({ exec, timeoutMs, dir, chunk_bytes = SHOT_FRAMES_CHUNK_BYTES }, video, start, end, width, height, count) {
+  const own = dir ? null : await on_disk('given a temporary directory', () => mkdtemp(join(tmpdir(), 'boqo-faces-')));
   const file = join(dir ?? own, 'faces.rgb');
-  const { argv, scale_width, scale_height } = shot_frames_command(video, start, end, width, height, count, file);
+  const { scale_width, scale_height } = shot_frames_command(video, start, end, width, height, count);
   const frame_size = scale_width * scale_height * 3;
   try {
-    let failure = null;
-    try {
-      await exec(argv[0], argv.slice(1), { timeoutMs });
-    } catch (e) {
-      failure = e;
-    }
-    let fh = null;
-    try {
-      fh = await open(file, 'r');
-    } catch (e) {
-      if (e?.code !== 'ENOENT') throw e;
-    }
-    if (fh) {
+    if (!frame_size) return;
+    const per_chunk = chunk_frames(frame_size, chunk_bytes);
+    let index = 0;
+    for (;;) {
+      const { argv } = shot_frames_command(video, start, end, width, height, count, file, { first: index, frames: per_chunk + 1 });
+      let failure = null;
       try {
-        let index = 0;
-        while (frame_size) {
-          const data = new Uint8Array(frame_size);
-          const { bytesRead } = await fh.read(data, 0, frame_size, index * frame_size);
-          // A short read is the end of the stream, not a frame: a partial
-          // buffer reshaped would raise, and silently padding it would hand
-          // the detector garbage pixels.
-          if (bytesRead < frame_size) break;
-          yield [index, { width: scale_width, height: scale_height, data }];
-          index += 1;
-        }
-      } finally {
-        await fh.close();
+        await exec(argv[0], argv.slice(1), { timeoutMs });
+      } catch (e) {
+        failure = e;
       }
-    }
 
-    if (failure) {
-      throw new RuntimeError(
-        `ffmpeg failed sampling ${video} [${py_repr(start)},${py_repr(end)}]: ${String(failure?.stderr ?? failure?.message ?? '').trim()}`,
-      );
+      let more = false;
+      let fh = null;
+      try {
+        fh = await open(file, 'r');
+      } catch (e) {
+        if (e?.code !== 'ENOENT') throw disk_error('read', e);
+      }
+      if (fh) {
+        try {
+          const written = Math.floor((await on_disk('read', () => fh.stat())).size / frame_size);
+          // A failed call yields everything it wrote, as Python yields what came through the pipe before the exit.
+          const take = failure ? written : Math.min(written, per_chunk);
+          more = !failure && written > per_chunk;
+          for (let k = 0; k < take; k++) {
+            const data = new Uint8Array(frame_size);
+            const { bytesRead } = await on_disk('read', () => fh.read(data, 0, frame_size, k * frame_size));
+            // A short read is the end of the stream, not a frame: a partial
+            // buffer reshaped would raise, and silently padding it would hand
+            // the detector garbage pixels.
+            if (bytesRead < frame_size) {
+              more = false;
+              break;
+            }
+            yield [index, { width: scale_width, height: scale_height, data }];
+            index += 1;
+          }
+        } finally {
+          await fh.close().catch(() => {});
+        }
+        await on_disk('removed', () => rm(file, { force: true }));
+      }
+
+      if (failure) {
+        const stderr = String(failure?.stderr ?? '').trim();
+        if (DISK_FULL.test(stderr) || stderr.includes(file) || DISK_FULL.test(String(failure?.message ?? '')) || ['ENOSPC', 'EDQUOT', 'EROFS'].includes(failure?.code)) {
+          throw disk_error('written', { code: failure?.code, message: stderr.split('\n').find((l) => DISK_FULL.test(l)) ?? (stderr || failure?.message) });
+        }
+        throw new RuntimeError(`ffmpeg failed sampling ${video} [${py_repr(start)},${py_repr(end)}]: ${String(failure?.stderr ?? failure?.message ?? '').trim()}`);
+      }
+      if (!more) return;
     }
   } finally {
-    await rm(own ?? file, { recursive: true, force: true });
+    // However the generator ends (exhausted, a raise, the caller stopping early): the frames file, and the
+    // directory when it is our own, are removed; a failure here must not hide the one already raised.
+    await rm(own ?? file, { recursive: true, force: true }).catch(() => {});
   }
 }
 

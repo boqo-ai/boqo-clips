@@ -3,11 +3,14 @@
 // detector and a fake ffmpeg.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
-import { writeFile } from 'node:fs/promises';
+import { execFile } from 'node:child_process';
+import { mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync } from 'node:fs';
+import { readFile, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as df from '../engine/boqo/detect-faces.mjs';
+import { toolEnv } from '../engine/env.mjs';
 import { FACE_MIN_CONFIDENCE, TILE_MAX_ASPECT, TILE_OVERLAP, TRACK_SAMPLE_HZ, detectShotFaces } from '../engine/faces.mjs';
 import { expectGolden } from './helpers/golden.mjs';
 
@@ -72,6 +75,32 @@ function patternFrame(height, width) {
   return { width, height, data };
 }
 
+/**
+ * A fake ffmpeg for shot_frames: the one-pass stream is `total` frames (frame i filled with byte i % 256, or
+ * `fill(i)`) then `extraBytes` of a partial frame; a call writes the part its `select='gte(n,A)'` and `-frames:v K`
+ * ask for, to its output path (the last argument). Returns whether the call reached the stream's end, where a
+ * failing ffmpeg fails: a call cut by -frames:v before that point exits cleanly.
+ */
+function chunkedFfmpeg({ frameSize, total, extraBytes = 0, fill = (i) => i % 256 }) {
+  return async (args) => {
+    const first = Number(/select='gte\(n,(\d+)\)'/.exec(args[args.indexOf('-vf') + 1])?.[1] ?? 0);
+    const cap = args.includes('-frames:v') ? Number(args[args.indexOf('-frames:v') + 1]) : Infinity;
+    const last = Math.min(total, first + cap);
+    const n = Math.max(0, last - first);
+    const bytes = Buffer.alloc(n * frameSize + (first + cap > total ? extraBytes : 0), 7);
+    for (let i = 0; i < n; i++) bytes.fill(fill(first + i), i * frameSize, (i + 1) * frameSize);
+    await writeFile(args.at(-1), bytes);
+    return first + cap > total;
+  };
+}
+
+const scaledSize = (width, height) => {
+  const w = Math.min(width, df.DETECT_MAX_WIDTH);
+  let h = df.py_round((height * w) / width);
+  h -= h % 2;
+  return w * h * 3;
+};
+
 // ---- the pure helpers
 
 test('face_geometry: facing, eye line, mouth drop and face centre from the six keypoints', () =>
@@ -117,32 +146,70 @@ test('summarise_faces: roster, median box, mouth motion, track, coverage and the
 
 // ---- the frame source, the window and the shot, with fakes where detect_faces.py's runner has them
 
-test('shot_frames: the same ffmpeg argv (the output a file, not stdout), whole frames only, the failure message', () =>
-  golden('faces-shot-frames', async (c) => {
-    let argv;
-    const exec = async (command, args) => {
-      argv = [command, ...args];
-      const width = Math.min(c.width, df.DETECT_MAX_WIDTH);
-      let height = df.py_round(c.height * width / c.width);
-      height -= height % 2;
-      const size = width * height * 3;
-      const bytes = Buffer.alloc(size * c.stdoutFrames + (c.extraBytes ?? 0), 7);
-      for (let i = 0; i < c.stdoutFrames; i++) bytes.fill(i % 256, i * size, (i + 1) * size);
-      await writeFile(args.at(-1), bytes);
-      if (c.returncode) throw Object.assign(new Error(`ffmpeg exited with ${c.returncode}`), { stderr: '' });
-      return { stdout: '', stderr: '' };
-    };
-    const frames = [];
-    let raised = null;
-    try {
-      for await (const [index, frame] of df.shot_frames({ exec }, c.video, c.start, c.end, c.width, c.height, c.count)) {
-        frames.push({ index, shape: [frame.height, frame.width, 3], first: frame.data[0] });
+test('shot_frames: the same ffmpeg argv, whole frames only, the failure message (one chunk and many)', async () => {
+  for (const chunk_bytes of [undefined, 1]) {
+    await golden('faces-shot-frames', async (c) => {
+      const base = df.shot_frames_command(c.video, c.start, c.end, c.width, c.height, c.count).argv;
+      const ffmpeg = chunkedFfmpeg({ frameSize: scaledSize(c.width, c.height), total: c.stdoutFrames, extraBytes: c.extraBytes ?? 0 });
+      const exec = async (command, args) => {
+        // each call is the one-pass argv with only the chunk's select and -frames:v added, writing to a file
+        const vf = args[args.indexOf('-vf') + 1];
+        const plain = args.filter((a, i) => a !== '-frames:v' && args[i - 1] !== '-frames:v').slice(0, -1);
+        plain[plain.indexOf(vf)] = vf.replace(/select='gte\(n,\d+\)',/, '');
+        assert.deepEqual(['ffmpeg', ...plain, '-'], base);
+        const reachedEnd = await ffmpeg(args);
+        if (c.returncode && reachedEnd) throw Object.assign(new Error(`ffmpeg exited with ${c.returncode}`), { stderr: '' });
+        return { stdout: '', stderr: '' };
+      };
+      const frames = [];
+      let raised = null;
+      try {
+        for await (const [index, frame] of df.shot_frames({ exec, chunk_bytes }, c.video, c.start, c.end, c.width, c.height, c.count)) {
+          frames.push({ index, shape: [frame.height, frame.width, 3], first: frame.data[0] });
+        }
+      } catch (e) {
+        raised = { error: e.name, message: e.message };
       }
-    } catch (e) {
-      raised = { error: e.name, message: e.message };
+      return { argv: base, frames, raised };
+    });
+  }
+});
+
+test('shot_frames chunks: at most chunk_frames + 1 frames a call, the file gone before the next call, no empty last call', async () => {
+  for (const [w, h, perChunk] of [[1280, 720, 23], [1080, 1920, 9], [2160, 3840, 6]]) {
+    assert.equal(df.chunk_frames(scaledSize(w, h)), perChunk, `${w}x${h}`);
+    assert.ok((perChunk + 1) * scaledSize(w, h) <= df.SHOT_FRAMES_CHUNK_BYTES, `${w}x${h} stays within 64 MiB`);
+  }
+  assert.equal(df.SHOT_FRAMES_CHUNK_BYTES, 64 * 1024 * 1024);
+  assert.equal(df.chunk_frames(40 * 1024 * 1024), 1);
+
+  const dir = mkdtempSync(join(tmpdir(), 'boqo-faces-test-'));
+  try {
+    const frameSize = scaledSize(64, 36);
+    for (const total of [0, 1, 6, 7, 12, 13, 20]) {
+      const ffmpeg = chunkedFfmpeg({ frameSize, total });
+      const calls = [];
+      const exec = async (command, args) => {
+        assert.deepEqual(readdirSync(dir), [], 'the previous chunk was removed before this call');
+        calls.push(Number(args[args.indexOf('-frames:v') + 1]));
+        await ffmpeg(args);
+        return { stdout: '', stderr: '' };
+      };
+      const got = [];
+      for await (const [index, frame] of df.shot_frames({ exec, dir, chunk_bytes: frameSize * 7 }, 'v.mp4', 0, 6, 64, 36, 12)) {
+        assert.equal(frame.data[0], index % 256);
+        got.push(index);
+      }
+      assert.deepEqual(got, [...Array(total).keys()], `total ${total}`);
+      // 6 yielded a call, each call asking for 7: a call returning 6 or fewer is the last
+      assert.equal(calls.length, Math.max(1, Math.ceil(total / 6)), `total ${total}: ${calls.length} calls`);
+      assert.ok(calls.every((k) => k === 7));
+      assert.deepEqual(readdirSync(dir), []);
     }
-    return { argv: [...argv.slice(0, -1), '-'], frames, raised };
-  }));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
 
 test('_process_window: the window cut from the scaled frame, the confidence re-check, keypoint geometry', () =>
   golden('faces-process-window', async (c) => {
@@ -201,15 +268,13 @@ test('the production constants are the ones render/config.ts and detect_faces.py
   assert.equal(df.DETECT_MAX_WIDTH, 1280);
 });
 
-/** A fake ffprobe/ffmpeg pair: ffprobe answers `width`x`height`; ffmpeg writes `frames` frames to its output file. */
+/** A fake ffprobe/ffmpeg pair: ffprobe answers `width`x`height`; ffmpeg's stream is `frames` frames of 128. */
 function fakeTools({ width, height, frames, calls }) {
+  const ffmpeg = chunkedFfmpeg({ frameSize: scaledSize(width, height), total: frames, fill: () => 128 });
   return async (command, args) => {
     calls.push([command, ...args]);
     if (command === 'ffprobe') return { stdout: JSON.stringify({ streams: [{ width, height }] }), stderr: '' };
-    const w = Math.min(width, 1280);
-    let h = Math.round((height * w) / width);
-    h -= h % 2;
-    await writeFile(args.at(-1), Buffer.alloc(w * h * 3 * frames, 128));
+    await ffmpeg(args);
     return { stdout: '', stderr: '' };
   };
 }
@@ -273,4 +338,139 @@ test('detectShotFaces: no shots, no detector call', async () => {
   const exec = fakeTools({ width: 640, height: 480, frames: 0, calls });
   const out = await detectShotFaces({ file: join('a dir', 'clip.mp4'), shots: [], exec, detector: scriptedDetector([]) });
   assert.deepEqual(out, { frameWidth: 640, frameHeight: 480, shots: [] });
+});
+
+// ---- bounded disk: chunks, disk errors, cleanup
+
+/** A detector that sees each frame's first byte (its sample index here) and puts a face where that says. */
+function indexReadingDetector() {
+  return {
+    async process(image) {
+      const k = image.data[0];
+      return { detections: [{ score: [0.95], location_data: { relative_bounding_box: { xmin: 0.2 + 0.01 * (k % 40), ymin: 0.3, width: 0.3, height: 0.4 }, relative_keypoints: null } }] };
+    },
+  };
+}
+
+test('analyse_shot over many chunks equals one pass: same faces, same track, same coverage', async () => {
+  // 1920x1080 at 2 Hz for 37 s: 74 samples; chunk_bytes for 3 frames a call -> 2 yielded a call, 37 calls
+  const frameSize = scaledSize(1920, 1080);
+  const run = async (chunk_bytes) => {
+    const ffmpeg = chunkedFfmpeg({ frameSize, total: 74 });
+    let calls = 0;
+    const exec = async (command, args) => {
+      calls++;
+      await ffmpeg(args);
+      return { stdout: '', stderr: '' };
+    };
+    const faces = await df.analyse_shot('v.mp4', indexReadingDetector(), 3, 40, 0.8, 1920, 1080, 1.5, 0.5, 2, {
+      shot_frames: (...a) => df.shot_frames({ exec, chunk_bytes }, ...a),
+    });
+    return { faces, calls };
+  };
+  const one = await run(frameSize * 1000);
+  const many = await run(frameSize * 3);
+  assert.equal(one.calls, 1);
+  assert.equal(many.calls, 37);
+  assert.deepEqual(many.faces, one.faces);
+  assert.equal(one.faces[0].track.length, 74);
+  assert.deepEqual(one.faces[0].track.map((p) => p.t).slice(0, 3), [0, 0.5, 1]);
+});
+
+const run = (command, args) =>
+  new Promise((ok, fail) =>
+    execFile(command, args, { env: toolEnv(), maxBuffer: 64 << 20, windowsHide: true }, (e, stdout, stderr) => (e ? fail(Object.assign(e, { stderr })) : ok({ stdout, stderr }))),
+  );
+const ffmpegPresent = await run('ffmpeg', ['-version']).then(() => true, () => false);
+
+test('real ffmpeg: a shot sampled in chunks is byte for byte the one-pass sampling', { skip: !ffmpegPresent && 'no ffmpeg' }, async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'boqo-faces-chunks-'));
+  try {
+    const video = join(dir, 'b frames.mp4');
+    await run('ffmpeg', ['-v', 'error', '-y', '-f', 'lavfi', '-i', 'testsrc2=size=160x90:rate=30000/1001', '-t', '12',
+      '-c:v', 'libx264', '-bf', '3', '-g', '48', '-pix_fmt', 'yuv420p', video]);
+    for (const [start, end, count, chunk_frames] of [[0.73, 11.1, 23, 2], [3, 9, 12, 5], [0, 12, 30, 1]]) {
+      const one = join(dir, 'one.rgb');
+      const { argv } = df.shot_frames_command(video, start, end, 160, 90, count, one);
+      await run(argv[0], argv.slice(1));
+      const want = await readFile(one);
+      rmSync(one);
+      const frameSize = 160 * 90 * 3;
+      const parts = [];
+      const work = join(dir, 'work');
+      mkdirSync(work);
+      for await (const [index, frame] of df.shot_frames({ exec: run, dir: work, chunk_bytes: frameSize * (chunk_frames + 1) }, video, start, end, 160, 90, count)) {
+        assert.equal(index, parts.length);
+        parts.push(frame.data);
+      }
+      assert.deepEqual(readdirSync(work), []);
+      rmSync(work, { recursive: true });
+      const got = Buffer.concat(parts);
+      assert.equal(got.length / frameSize, want.length / frameSize, `${start}-${end} @${count}: frame count`);
+      assert.ok(got.equals(want), `${start}-${end} @${count}, ${chunk_frames} a chunk: frames differ`);
+    }
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('detectShotFaces: no space for the frames (ffmpeg says so, or ENOSPC) gives {unavailable}, and the frames dir is empty', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'boqo-faces-test-'));
+  try {
+    const answer = [{ score: 0.95, box: [0.4, 0.3, 0.2, 0.36], keypoints: null }];
+    for (const fail of [
+      async (args) => {
+        await writeFile(args.at(-1), Buffer.alloc(scaledSize(1280, 720) * 2, 9));
+        throw Object.assign(new Error('Command failed: ffmpeg'), { stderr: '[out#0/rawvideo @ 0x1] Error muxing a packet\nav_interleaved_write_frame(): No space left on device\n' });
+      },
+      async () => {
+        throw Object.assign(new Error('write ENOSPC'), { code: 'ENOSPC' });
+      },
+    ]) {
+      const exec = async (command, args) => {
+        if (command === 'ffprobe') return { stdout: JSON.stringify({ streams: [{ width: 1280, height: 720 }] }), stderr: '' };
+        return fail(args);
+      };
+      const out = await detectShotFaces({ file: 'clip.mp4', shots: [{ startSec: 0, endSec: 6 }], exec, dir, detector: scriptedDetector(Array(12).fill(answer)) });
+      assert.equal(out.unavailable, true);
+      assert.match(out.reason, /^the face frames could not be written: (ENOSPC )?.*(No space left on device|write ENOSPC)/);
+      assert.deepEqual(readdirSync(dir), []);
+    }
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('the frames dir is empty after success, an ffmpeg failure and a detector failure; an own temp dir is removed', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'boqo-faces-test-'));
+  const own = () => readdirSync(tmpdir()).filter((n) => n.startsWith('boqo-faces-') && !n.startsWith('boqo-faces-test-')).sort();
+  try {
+    const before = own();
+    const shots = [{ startSec: 0, endSec: 6 }, { startSec: 6, endSec: 9 }];
+    const calls = [];
+    const ok = await detectShotFaces({ file: 'clip.mp4', shots, exec: fakeTools({ width: 640, height: 360, frames: 12, calls }), dir, detector: indexReadingDetector() });
+    assert.equal(ok.shots.length, 2);
+    assert.deepEqual(readdirSync(dir), []);
+
+    const broken = async (command, args) => {
+      if (command === 'ffprobe') return { stdout: JSON.stringify({ streams: [{ width: 640, height: 360 }] }), stderr: '' };
+      await writeFile(args.at(-1), Buffer.alloc(scaledSize(640, 360) * 3, 1));
+      throw Object.assign(new Error('Command failed: ffmpeg'), { stderr: 'clip.mp4: Invalid data found when processing input' });
+    };
+    await assert.rejects(() => detectShotFaces({ file: 'clip.mp4', shots, exec: broken, dir, detector: indexReadingDetector() }), /ffmpeg failed sampling clip\.mp4 \[0\.0,6\.0\]: clip\.mp4: Invalid data/);
+    assert.deepEqual(readdirSync(dir), []);
+
+    let n = 0;
+    const flaky = { process: async (image) => { if (++n === 5) throw new Error('ORT run failed'); return indexReadingDetector().process(image); } };
+    const unavailable = await detectShotFaces({ file: 'clip.mp4', shots, exec: fakeTools({ width: 640, height: 360, frames: 12, calls }), dir, detector: flaky });
+    assert.equal(unavailable.unavailable, true);
+    assert.deepEqual(readdirSync(dir), []);
+
+    // without `dir`, each shot's own temporary directory goes too
+    await detectShotFaces({ file: 'clip.mp4', shots, exec: fakeTools({ width: 640, height: 360, frames: 12, calls }), detector: indexReadingDetector() });
+    await assert.rejects(() => detectShotFaces({ file: 'clip.mp4', shots, exec: broken, detector: indexReadingDetector() }));
+    assert.deepEqual(own(), before);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });

@@ -8,13 +8,14 @@ import { accessSync, constants, readFileSync, statSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { delimiter, join } from 'node:path';
 import { MODEL_URL, findModel } from './asr.mjs';
-import { loadBlazeFace } from './blazeface.mjs';
+import { FaceModelError, loadBlazeFace } from './blazeface.mjs';
 import { boqoHome } from './brand.mjs';
 import { toolEnv } from './env.mjs';
 
 /**
  * @typedef {{ name: 'node'|'ffmpeg'|'ffprobe'|'ffmpeg-filters'|'ffmpeg-https'|'yt-dlp'|'whisper'|'whisper-model'|'onnxruntime'|'streamlink',
- *             ok: boolean, detail: string, required: boolean }} Check
+ *             ok: boolean, detail: string, required: boolean, cause?: 'not-installed'|'model'|'runtime' }} Check
+ * (`cause` only on a failed onnxruntime check.)
  */
 
 export const MIN_YTDLP = '2026.10.26';
@@ -193,12 +194,13 @@ const SKILL = (() => {
   }
 })();
 
-const ORT_NOT_INSTALLED = 'onnxruntime-node is not installed';
-
 /**
  * onnxruntime-node loads, the face model's checksum matches, and one blank image runs through it (engine/blazeface.mjs
  * `loadBlazeFace`). Without it the render still runs and frames every shot Fit; required all the same, because the
  * framing is the point of a vertical clip. `load` is injectable for tests.
+ *
+ * A failed check carries `cause`, from loadBlazeFace's own error code (never from onnxruntime's wording), for the
+ * hint: 'not-installed' (ORT_NOT_INSTALLED), 'model' (MODEL_MISSING, MODEL_CHECKSUM), else 'runtime'.
  */
 async function checkOnnx(load) {
   const name = 'onnxruntime';
@@ -207,9 +209,9 @@ async function checkOnnx(load) {
     await detector.release();
     return { name, ok: true, detail: 'onnxruntime-node runs the face model', required: true };
   } catch (e) {
-    const detail = String(e?.message ?? e).split('\n')[0];
-    const absent = /Cannot find (package|module) 'onnxruntime-node'/.test(detail);
-    return { name, ok: false, detail: absent ? ORT_NOT_INSTALLED : detail, required: true };
+    const code = e instanceof FaceModelError ? e.code : null;
+    const cause = code === 'ORT_NOT_INSTALLED' ? 'not-installed' : code === 'MODEL_MISSING' || code === 'MODEL_CHECKSUM' ? 'model' : 'runtime';
+    return { name, ok: false, detail: String(e?.message ?? e).split('\n')[0], required: true, cause };
   }
 }
 
@@ -337,9 +339,10 @@ export function hintsFor(failed, platform) {
         lines.push(`whisper-model: download ${MODEL_URL} into ${modelDir()}`);
         break;
       case 'onnxruntime': {
-        const npm = `\`cd "$HOME/.${SKILL}" && npm ci --omit=dev --ignore-scripts\``;
-        if (c.detail === ORT_NOT_INSTALLED) lines.push(`onnxruntime: the skill's packages are not installed: ${npm}`);
-        else if (/face model/.test(c.detail) && /missing|checksum/.test(c.detail)) {
+        // Windows PowerShell 5.1 has no `&&`; `;` separates two commands in PowerShell and in Git Bash alike.
+        const npm = `\`cd "$HOME/.${SKILL}"${p === 'win32' ? ';' : ' &&'} npm ci --omit=dev --ignore-scripts\``;
+        if (c.cause === 'not-installed') lines.push(`onnxruntime: the skill's packages are not installed: ${npm}`);
+        else if (c.cause === 'model') {
           lines.push(`onnxruntime: ${c.detail}; reinstall the skill (https://github.com/boqo-ai/${SKILL}), its copy of the model is damaged`);
         } else if (p === 'win32') {
           lines.push(

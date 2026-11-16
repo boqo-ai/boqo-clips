@@ -135,16 +135,26 @@ test('loadBlazeFace: onnxruntime-node failing to load names it', async () => {
     throw new Error('libonnxruntime.so.1: cannot open shared object file: No such file or directory\n    at Module._extensions');
   };
   await assert.rejects(() => loadBlazeFace({ load }), {
+    code: 'ORT_LOAD',
     message: 'onnxruntime-node did not load: libonnxruntime.so.1: cannot open shared object file: No such file or directory',
+  });
+  await assert.rejects(() => loadBlazeFace({ load: () => import('onnxruntime-node-is-not-a-package') }), {
+    code: 'ORT_NOT_INSTALLED',
+    message: 'onnxruntime-node is not installed',
   });
 });
 
 test('loadBlazeFace: a module without InferenceSession, a session that cannot open, a model that is missing or altered', async () => {
-  await assert.rejects(() => loadBlazeFace({ load: async () => ({}) }), /onnxruntime-node did not load: the module has no InferenceSession/);
+  await assert.rejects(() => loadBlazeFace({ load: async () => ({}) }), { code: 'ORT_LOAD', message: /onnxruntime-node did not load: the module has no InferenceSession/ });
   const broken = { Tensor: class {}, InferenceSession: { create: async () => { throw new Error('bad model'); } } };
-  await assert.rejects(() => loadBlazeFace({ load: async () => broken }), /onnxruntime-node could not open the face model: bad model/);
-  await assert.rejects(() => loadBlazeFace({ modelFile: join(tmpdir(), 'no-such-dir', 'blazeface-short.onnx') }), /the face model is missing/);
-  await assert.rejects(() => loadBlazeFace({ sha256: '0'.repeat(64) }), /the face model's checksum does not match/);
+  await assert.rejects(() => loadBlazeFace({ load: async () => broken }), { code: 'ORT_SESSION', message: /onnxruntime-node could not open the face model: bad model/ });
+  const noRun = {
+    Tensor: class {},
+    InferenceSession: { create: async () => ({ inputNames: ['input'], run: async () => { throw new Error('kernel failed'); } }) },
+  };
+  await assert.rejects(() => loadBlazeFace({ load: async () => noRun }), { code: 'ORT_RUN', message: /onnxruntime-node could not run the face model: kernel failed/ });
+  await assert.rejects(() => loadBlazeFace({ modelFile: join(tmpdir(), 'no-such-dir', 'blazeface-short.onnx') }), { code: 'MODEL_MISSING', message: /the face model is missing/ });
+  await assert.rejects(() => loadBlazeFace({ sha256: '0'.repeat(64) }), { code: 'MODEL_CHECKSUM', message: /the face model's checksum does not match/ });
 });
 
 test('loadBlazeFace: a model under a home path with spaces and non-ASCII loads (bytes, never a path)', async () => {

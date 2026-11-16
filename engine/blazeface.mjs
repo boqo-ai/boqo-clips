@@ -442,9 +442,27 @@ export async function loadOnnxRuntime() {
 const firstLine = (e) => String(e?.message ?? e).split('\n')[0].trim();
 
 /**
+ * What `loadBlazeFace` throws: a one-line message, and a `code` of this module's own that callers (tools/doctor's
+ * hints) classify on, never onnxruntime's wording:
+ *   ORT_NOT_INSTALLED  the onnxruntime-node package is not there (the skill's packages were never installed);
+ *   ORT_LOAD           the package is there but its native binary does not load (no VC++ runtime, another arch);
+ *   ORT_SESSION        the runtime loads but cannot open the model;
+ *   ORT_RUN            the session opens but cannot run a blank image;
+ *   MODEL_MISSING      the model file cannot be read;
+ *   MODEL_CHECKSUM     the model file is not the one SOURCE.md records.
+ */
+export class FaceModelError extends Error {
+  constructor(code, message) {
+    super(message);
+    this.name = 'FaceModelError';
+    this.code = code;
+  }
+}
+
+/**
  * Loads onnxruntime-node and the model, checks the model's sha256, and runs one blank image through it so a
- * native binary that loads but cannot run fails here rather than mid-render. Throws an Error whose message is the
- * one-line cause; `load` is injectable for tests.
+ * native binary that loads but cannot run fails here rather than mid-render. Throws a FaceModelError whose message
+ * is the one-line cause; `load` is injectable for tests.
  *
  * Returns `{ process(image) -> Promise<{ detections }>, release() }`. `image` is `{ width, height, data }`, packed
  * RGB24. The model is passed to onnxruntime as bytes, never as a path, so a home directory with spaces or
@@ -456,24 +474,29 @@ export async function loadBlazeFace({ load = loadOnnxRuntime, modelFile = MODEL_
   try {
     bytes = await readFile(modelFile);
   } catch (e) {
-    throw new Error(`the face model is missing (${modelFile}): ${firstLine(e)}`);
+    throw new FaceModelError('MODEL_MISSING', `the face model is missing (${modelFile}): ${firstLine(e)}`);
   }
   const got = createHash('sha256').update(bytes).digest('hex');
-  if (got !== sha256) throw new Error(`the face model's checksum does not match (${modelFile}: ${got}, expected ${sha256})`);
+  if (got !== sha256) {
+    throw new FaceModelError('MODEL_CHECKSUM', `the face model's checksum does not match (${modelFile}: ${got}, expected ${sha256})`);
+  }
 
   let ort;
   try {
     ort = await load();
     if (!ort?.InferenceSession || !ort?.Tensor) throw new Error('the module has no InferenceSession');
   } catch (e) {
-    throw new Error(`onnxruntime-node did not load: ${firstLine(e)}`);
+    // ERR_MODULE_NOT_FOUND is Node's code for an import specifier that does not resolve: the package itself is
+    // absent. A missing native binary inside a present package is a CommonJS require failing (MODULE_NOT_FOUND).
+    if (e?.code === 'ERR_MODULE_NOT_FOUND') throw new FaceModelError('ORT_NOT_INSTALLED', 'onnxruntime-node is not installed');
+    throw new FaceModelError('ORT_LOAD', `onnxruntime-node did not load: ${firstLine(e)}`);
   }
 
   let session;
   try {
     session = await ort.InferenceSession.create(bytes, { executionProviders: ['cpu'] });
   } catch (e) {
-    throw new Error(`onnxruntime-node could not open the face model: ${firstLine(e)}`);
+    throw new FaceModelError('ORT_SESSION', `onnxruntime-node could not open the face model: ${firstLine(e)}`);
   }
   const input = session.inputNames[0];
   const o = OPTIONS;
@@ -496,7 +519,7 @@ export async function loadBlazeFace({ load = loadOnnxRuntime, modelFile = MODEL_
   try {
     await process({ width: 8, height: 8, data: new Uint8Array(8 * 8 * 3) });
   } catch (e) {
-    throw new Error(`onnxruntime-node could not run the face model: ${firstLine(e)}`);
+    throw new FaceModelError('ORT_RUN', `onnxruntime-node could not run the face model: ${firstLine(e)}`);
   }
 
   return {

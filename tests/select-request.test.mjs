@@ -13,6 +13,9 @@ import { findPeakRegions } from '../engine/boqo/peaks.mjs';
 import { DEFAULT_REPLAY_TUNABLES as TUNABLES_FROM_REPLAY, curveBins, discountHeatmap, replayOf, parseReplay } from '../engine/boqo/replay.mjs';
 import { DEFAULT_BRIDGE_MAX_SEC, DEFAULT_REPLAY_TUNABLES } from '../engine/boqo/replay-config.mjs';
 
+import { sanitiseQuote } from '../engine/boqo/quote-text.mjs';
+import { REACTION_MAX, REACTION_TEXT_MAX, parseTimestamps, pickReactions } from '../engine/boqo/viewer-reactions.mjs';
+
 const input = (name) => JSON.parse(readFileSync(fileURLToPath(new URL(`./fixtures/parity/${name}.input.json`, import.meta.url)), 'utf8'));
 
 test('clipTargetFor matches the golden, and 2400 s is 40', () => {
@@ -66,4 +69,26 @@ test('a Replay blob parses back, and junk is null', () => {
   const r = replayOf(curve, { startSec: 290, endSec: 345 }, DEFAULT_REPLAY_TUNABLES, null);
   assert.deepEqual(parseReplay(JSON.parse(JSON.stringify(r))), r);
   assert.equal(parseReplay({ v: 2 }), null);
+});
+
+test('pick-reactions matches the golden (timestamp grammar and the pick)', () => {
+  const { cases, stamps } = input('pick-reactions');
+  expectGolden('pick-reactions', {
+    stamps: stamps.map((text) => ({ text, seconds: parseTimestamps(text) })),
+    cases: cases.map((c) => ({ name: c.name, reactions: pickReactions(c.comments, c.durationSec) })),
+  });
+});
+
+test('reactions: at most 12, each cut to 120 characters', () => {
+  assert.equal(REACTION_MAX, 12);
+  assert.equal(REACTION_TEXT_MAX, 120);
+});
+
+test('sanitiseQuote is idempotent and removes links, quotes, markers and breaks', () => {
+  const dirty = 'a\nb "q" <<<<< x >>>>> see https://example.com/p and www.example.org\u0007';
+  const once = sanitiseQuote(dirty, 200);
+  assert.equal(once, "a b 'q' < x > see and");
+  assert.equal(sanitiseQuote(once, 200), once);
+  assert.equal(sanitiseQuote('0123456789', 5), '0123…');
+  assert.equal(sanitiseQuote('x', 0), '');
 });

@@ -1,0 +1,352 @@
+{
+  "cases": [
+    {
+      "n": 0,
+      "max": 12,
+      "indexes": [],
+      "labels": []
+    },
+    {
+      "n": 1,
+      "max": 12,
+      "indexes": [
+        0
+      ],
+      "labels": [
+        "keyframe 1 at ~0s"
+      ]
+    },
+    {
+      "n": 2,
+      "max": 12,
+      "indexes": [
+        0,
+        1
+      ],
+      "labels": [
+        "keyframe 1 at ~0s",
+        "keyframe 2 at ~5s"
+      ]
+    },
+    {
+      "n": 7,
+      "max": 12,
+      "indexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "labels": [
+        "keyframe 1 at ~0s",
+        "keyframe 2 at ~5s",
+        "keyframe 3 at ~10s",
+        "keyframe 4 at ~15s",
+        "keyframe 5 at ~20s",
+        "keyframe 6 at ~25s",
+        "keyframe 7 at ~30s"
+      ]
+    },
+    {
+      "n": 12,
+      "max": 12,
+      "indexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "labels": [
+        "keyframe 1 at ~0s",
+        "keyframe 2 at ~5s",
+        "keyframe 3 at ~10s",
+        "keyframe 4 at ~15s",
+        "keyframe 5 at ~20s",
+        "keyframe 6 at ~25s",
+        "keyframe 7 at ~30s",
+        "keyframe 8 at ~35s",
+        "keyframe 9 at ~40s",
+        "keyframe 10 at ~45s",
+        "keyframe 11 at ~50s",
+        "keyframe 12 at ~55s"
+      ]
+    },
+    {
+      "n": 13,
+      "max": 12,
+      "indexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "labels": [
+        "keyframe 1 at ~0s",
+        "keyframe 2 at ~5s",
+        "keyframe 3 at ~11s",
+        "keyframe 4 at ~16s",
+        "keyframe 5 at ~22s",
+        "keyframe 6 at ~27s",
+        "keyframe 7 at ~32s",
+        "keyframe 8 at ~38s",
+        "keyframe 9 at ~43s",
+        "keyframe 10 at ~49s",
+        "keyframe 11 at ~54s",
+        "keyframe 12 at ~60s"
+      ]
+    },
+    {
+      "n": 14,
+      "max": 12,
+      "indexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "labels": [
+        "keyframe 1 at ~0s",
+        "keyframe 2 at ~6s",
+        "keyframe 3 at ~12s",
+        "keyframe 4 at ~18s",
+        "keyframe 5 at ~23s",
+        "keyframe 6 at ~29s",
+        "keyframe 7 at ~35s",
+        "keyframe 8 at ~41s",
+        "keyframe 9 at ~47s",
+        "keyframe 10 at ~52s",
+        "keyframe 11 at ~58s",
+        "keyframe 12 at ~64s"
+      ]
+    },
+    {
+      "n": 25,
+      "max": 12,
+      "indexes": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22
+      ],
+      "labels": [
+        "keyframe 1 at ~0s",
+        "keyframe 2 at ~10s",
+        "keyframe 3 at ~21s",
+        "keyframe 4 at ~31s",
+        "keyframe 5 at ~42s",
+        "keyframe 6 at ~52s",
+        "keyframe 7 at ~63s",
+        "keyframe 8 at ~73s",
+        "keyframe 9 at ~83s",
+        "keyframe 10 at ~94s",
+        "keyframe 11 at ~104s",
+        "keyframe 12 at ~115s"
+      ]
+    },
+    {
+      "n": 31,
+      "max": 12,
+      "indexes": [
+        0,
+        2,
+        5,
+        7,
+        10,
+        12,
+        15,
+        18,
+        20,
+        23,
+        25,
+        28
+      ],
+      "labels": [
+        "keyframe 1 at ~0s",
+        "keyframe 2 at ~13s",
+        "keyframe 3 at ~26s",
+        "keyframe 4 at ~39s",
+        "keyframe 5 at ~52s",
+        "keyframe 6 at ~65s",
+        "keyframe 7 at ~78s",
+        "keyframe 8 at ~90s",
+        "keyframe 9 at ~103s",
+        "keyframe 10 at ~116s",
+        "keyframe 11 at ~129s",
+        "keyframe 12 at ~142s"
+      ]
+    },
+    {
+      "n": 60,
+      "max": 12,
+      "indexes": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50,
+        55
+      ],
+      "labels": [
+        "keyframe 1 at ~0s",
+        "keyframe 2 at ~25s",
+        "keyframe 3 at ~50s",
+        "keyframe 4 at ~75s",
+        "keyframe 5 at ~100s",
+        "keyframe 6 at ~125s",
+        "keyframe 7 at ~150s",
+        "keyframe 8 at ~175s",
+        "keyframe 9 at ~200s",
+        "keyframe 10 at ~225s",
+        "keyframe 11 at ~250s",
+        "keyframe 12 at ~275s"
+      ]
+    },
+    {
+      "n": 100,
+      "max": 12,
+      "indexes": [
+        0,
+        8,
+        16,
+        25,
+        33,
+        41,
+        50,
+        58,
+        66,
+        75,
+        83,
+        91
+      ],
+      "labels": [
+        "keyframe 1 at ~0s",
+        "keyframe 2 at ~42s",
+        "keyframe 3 at ~83s",
+        "keyframe 4 at ~125s",
+        "keyframe 5 at ~167s",
+        "keyframe 6 at ~208s",
+        "keyframe 7 at ~250s",
+        "keyframe 8 at ~292s",
+        "keyframe 9 at ~333s",
+        "keyframe 10 at ~375s",
+        "keyframe 11 at ~417s",
+        "keyframe 12 at ~458s"
+      ]
+    },
+    {
+      "n": 999,
+      "max": 12,
+      "indexes": [
+        0,
+        83,
+        166,
+        249,
+        333,
+        416,
+        499,
+        582,
+        666,
+        749,
+        832,
+        915
+      ],
+      "labels": [
+        "keyframe 1 at ~0s",
+        "keyframe 2 at ~416s",
+        "keyframe 3 at ~832s",
+        "keyframe 4 at ~1249s",
+        "keyframe 5 at ~1665s",
+        "keyframe 6 at ~2081s",
+        "keyframe 7 at ~2498s",
+        "keyframe 8 at ~2914s",
+        "keyframe 9 at ~3330s",
+        "keyframe 10 at ~3746s",
+        "keyframe 11 at ~4162s",
+        "keyframe 12 at ~4579s"
+      ]
+    }
+  ],
+  "rounds": [
+    {
+      "x": 0,
+      "r": 0
+    },
+    {
+      "x": 0.5,
+      "r": 0
+    },
+    {
+      "x": 1.5,
+      "r": 2
+    },
+    {
+      "x": 2.5,
+      "r": 2
+    },
+    {
+      "x": 32.5,
+      "r": 32
+    },
+    {
+      "x": 33.5,
+      "r": 34
+    },
+    {
+      "x": 32.4999,
+      "r": 32
+    },
+    {
+      "x": 32.5001,
+      "r": 33
+    },
+    {
+      "x": 37.5,
+      "r": 38
+    },
+    {
+      "x": 100,
+      "r": 100
+    }
+  ]
+}

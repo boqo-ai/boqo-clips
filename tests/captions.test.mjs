@@ -556,7 +556,7 @@ test('a Hindi clip burns with every glyph from the bundled faces: Devanagari in 
 });
 
 // The shaping proof. With HarfBuzz shaping (what the skill now burns a Devanagari file with) the vowel sign ि is drawn
-// BEFORE its consonant and क्र is one conjunct glyph; libass's simple shaper (boqo's `subtitles` filter) draws ि after
+// BEFORE its consonant and क्र is one conjunct glyph; libass's simple shaper (boqo's `subtitles` filter on some builds) draws ि after
 // क and क्र as क, a bare virama and र, side by side. Measured here as pixels: where क sits inside कि, and how wide क्र is.
 test('Devanagari is shaped: ि is drawn before its consonant and क्र is one conjunct (pixels; the simple shaper is the control)', () => {
   const root = mkdtempSync(join(tmpdir(), 'boqo shaping '));
@@ -599,7 +599,10 @@ test('Devanagari is shaped: ि is drawn before its consonant and क्र is o
       return best.dx;
     };
     const shaped = (assPath, ass) => textPassFilter(assPath, ass, FONTS_DIR);
-    const simple = (assPath) => subtitlesFilter(assPath, FONTS_DIR);
+    // The control is libass's simple shaper asked for by name: what boqo's `subtitles` filter gives depends on the
+    // ffmpeg build (simple in BtbN 8.1 and Ubuntu's apt ffmpeg; already complex in the macOS and Windows CI builds,
+    // measured on CI 2026-11-16), so it cannot be the control on every OS.
+    const simple = (assPath) => `ass=filename=${filterPath(assPath)}:fontsdir=${filterPath(FONTS_DIR)}:shaping=simple`;
     const measure = (filterOf) => {
       const ka = gray('क', filterOf);
       return { shift: shiftOf(ka, gray('कि', filterOf)), ka: bbox(ka).w, kra: bbox(gray('क्र', filterOf)).w };

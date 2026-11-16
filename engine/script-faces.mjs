@@ -9,7 +9,10 @@
 //      filter's at `shaping=simple` and differs from `shaping=auto` and `shaping=complex` (which agree), so no
 //      Indic reordering and no conjuncts: the vowel sign ि drew after its consonant and every conjunct came apart
 //      with a bare virama ("सिर्फ", "दिल्ली", "क्रू" read as "सरिफ", "दलिली", "करू"). The `subtitles` filter has no
-//      `shaping` option; the `ass` filter has.
+//      `shaping` option; the `ass` filter has. Which shaper `subtitles` gets depends on the build: on CI
+//      (2026-11-16) Ubuntu's apt ffmpeg drew Devanagari unshaped as this one does, while the macOS (Homebrew
+//      ffmpeg-full) and Windows (choco ffmpeg-full) builds already shaped it. Asking the `ass` filter for complex
+//      shaping by name makes it the same on every build.
 //   2. No bundled face draws Devanagari, so libass's glyph fallback took whatever the machine had
 //      (`Glyph 0x938 not found, selecting one more font for (Oswald, 700, 0)` ->
 //      /usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf here; tofu or nothing on a machine without one).

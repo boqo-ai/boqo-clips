@@ -1,0 +1,36 @@
+[
+  [
+    "-nostats",
+    "-hide_banner",
+    "-y",
+    "-ss",
+    "12.5",
+    "-to",
+    "47.25",
+    "-i",
+    "/tmp/sec-0.mp4",
+    "-c",
+    "copy",
+    "/w/window.mp4"
+  ],
+  [
+    "-nostats",
+    "-hide_banner",
+    "-y",
+    "-ss",
+    "0",
+    "-to",
+    "30",
+    "-i",
+    "https://example.test/source.mp4",
+    "-c",
+    "copy",
+    "window.mp4"
+  ],
+  {
+    "error": "invalid render window: 5 to 5"
+  },
+  {
+    "error": "invalid render window: 9 to 5"
+  }
+]

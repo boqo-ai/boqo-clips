@@ -1,0 +1,32 @@
+{
+ "cases": [
+  {
+   "name": "a section of a local file",
+   "url": "/tmp/sec-0.mp4",
+   "startSec": 12.5,
+   "endSec": 47.25,
+   "outPath": "/w/window.mp4"
+  },
+  {
+   "name": "a url source",
+   "url": "https://example.test/source.mp4",
+   "startSec": 0,
+   "endSec": 30,
+   "outPath": "window.mp4"
+  },
+  {
+   "name": "an empty window is an error",
+   "url": "u",
+   "startSec": 5,
+   "endSec": 5,
+   "outPath": "o"
+  },
+  {
+   "name": "an inverted window is an error",
+   "url": "u",
+   "startSec": 9,
+   "endSec": 5,
+   "outPath": "o"
+  }
+ ]
+}

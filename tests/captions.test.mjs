@@ -28,8 +28,9 @@ import { glowTags, lineEntrance, markerEvent, opacityTags, popTags, shadowTags, 
 import { cutSecFromShots } from '../engine/boqo/caption-cuts.mjs';
 import {
   BUNDLED_FACES, DEFAULT_OUTPUT, DEFAULT_TEMPLATE_CAPTIONS, FONTS_DIR, captionsAss, captionsTrack, emphasisForWords, filterPath,
-  fontFallbacks, subtitlesFilter, tolerantKey,
+  fontFallbacks, holdNumberMarks, releaseNumberMarks, subtitlesFilter, textPassFilter, tolerantKey,
 } from '../engine/captions.mjs';
+import { DEVANAGARI_FACE, SCRIPT_FACES, needsComplexShaping, routeScriptFaces } from '../engine/script-faces.mjs';
 import { toolEnv } from '../engine/env.mjs';
 import { expectGolden } from './helpers/golden.mjs';
 
@@ -307,6 +308,93 @@ test('captionsTrack refuses a malformed call with the cause, and a brand block t
   assert.deepEqual(cutSecFromShots([{ startSec: 0 }, { startSec: 1.62 }, { startSec: 4 }]), [1.62, 4]);
 });
 
+// ---- the skill's deviations from hosted: number marks, Devanagari (E2-fix3) ----------------------------------------
+
+const textOf = (ass) => ass.split('\n').filter((l) => l.startsWith('Dialogue:')).map((l) => l.split(',').slice(9).join(',').replace(/\{[^}]*\}/g, '')).join('\n');
+
+test('holdNumberMarks holds only a `.`, `,` or `:` between two digits, and releaseNumberMarks gives it back', () => {
+  for (const w of ['3.1', '4:30', '12,000', '55.5', '1,2:3.4', '१.५']) {
+    const held = holdNumberMarks(w);
+    assert.doesNotMatch(held, /[.,:]/, w);
+    assert.equal(captionText(held, { textCase: 'upper', stripPunctuation: true }), held, `${w}: the stripper keeps a held mark`);
+    assert.equal(releaseNumberMarks(held), w);
+  }
+  for (const w of ['3.', '.5', 'a.b', 'U.S.', 'rockets,', 'wait:', '12,000.', '4:30,']) {
+    assert.equal(releaseNumberMarks(holdNumberMarks(w)), w, w);
+    assert.match(holdNumberMarks(w).replace(/[\uE000-\uE002]/g, ''), /[.,:]/, `${w}: a mark not between digits is not held`);
+  }
+});
+
+test('a number keeps its `.`, `,` and `:` in every caption style ("3.1", "4:30", "12,000"); every other mark a style strips stays stripped', () => {
+  const said = ['It', 'cost', '3.1', 'million', 'at', '4:30,', 'for', '12,000.', 'Really?!', 'Done.'];
+  const words = said.map((w, k) => ({ w, s: 100 + k * 0.4, e: 100 + k * 0.4 + 0.35 }));
+  const win = { clipStart: 99.9, clipEnd: 104.5 };
+  const keys = [...GALLERY_CAPTION_STYLE_KEYS, ...CAPTION_PRESETS.map((p) => p.key), 'illustrated'];
+  let checked = 0;
+  for (const key of new Set(keys)) {
+    const preset = resolveCaptionStyle(key);
+    const t = captionsTrack({ words, ...win, preset, emphasis: ['3.1', '12000'] });
+    if (t.ass === '') continue;
+    checked++;
+    const text = textOf(t.ass);
+    for (const n of ['3.1', '4:30', '12,000']) assert.ok(text.includes(n), `${key}: ${n} in\n${text}`);
+    assert.doesNotMatch(t.ass, /[\uE000-\uE002]/, `${key}: no held mark left in the file`);
+    if (preset.stripPunctuation) {
+      assert.doesNotMatch(text, /[?!]|4:30,|12,000\.|DONE\.|Done\./i, `${key}: stripped as before\n${text}`);
+    }
+    // The returned words are the clip's own, marks and all.
+    assert.deepEqual(t.words.map((w) => w.word), said);
+  }
+  assert.ok(checked >= 15, `styles that draw captions: ${checked}`);
+  // The Default template (Punch): "12000" asked as an emphasis word still highlights "12,000", "3.1" highlights "3.1".
+  const punch = captionsTrack({ words, ...win, emphasis: ['3.1', '12000'] });
+  assert.equal(punch.emphasisMatched, 2);
+  assert.match(punch.ass, /\{\\c&HFA00E9&[^}]*\}3\.1\{/);
+  assert.match(punch.ass, /\{\\c&HFA00E9&[^}]*\}12,000\{/);
+  // Hosted's own behaviour, for the record: its copies, unwrapped, strip the marks.
+  const hosted = textOf(buildCaptions(punch.words, punch.preset, DEFAULT_OUTPUT, [], null).ass);
+  assert.ok(/\b31\b/.test(hosted) && /\b430\b/.test(hosted) && /\b12000\b/.test(hosted) && !hosted.includes('3.1'), hosted);
+});
+
+const HI = ['सिर्फ', 'दिल्ली', 'क्रू', 'Vivo', 'V80', 'का', 'वेट'].map((w, k) => ({ w, s: 100 + k * 0.4, e: 100 + k * 0.4 + 0.35 }));
+
+test('routeScriptFaces draws each Devanagari run in the bundled face and returns to the face in force; anything else is untouched', () => {
+  const latin = captionsAss({ words: EN, ...WIN });
+  assert.equal(routeScriptFaces(latin), latin);
+  assert.equal(routeScriptFaces(captionsAss({ words: RU, ...WIN })), captionsAss({ words: RU, ...WIN }));
+  const head = ['[Script Info]', 'ScriptType: v4.00+', '', '[V4+ Styles]',
+    'Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding',
+    'Style: a,Oswald,80,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,4,0,5,0,0,0,1',
+    'Style: b,Anton,80,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,4,0,5,0,0,0,1', '', '[Events]',
+    'Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text'];
+  const route = (style, text) => routeScriptFaces([...head, `Dialogue: 0,0:00:00.00,0:00:01.00,${style},,0,0,0,,${text}`, ''].join('\n')).split('\n').at(-2).split(',').slice(9).join(',');
+  const D = `{\\b1\\fn${DEVANAGARI_FACE}}`;
+  assert.equal(route('a', 'VIVO, का वेट'), `VIVO, ${D}का{\\fnOswald\\b1} ${D}वेट{\\fnOswald\\b1}`);
+  // A Bold-0 style comes back at Bold 0; an `\fn` or `\b` in the line is the face returned to; `\r` resets to a style.
+  assert.equal(route('b', 'का'), `${D}का{\\fnAnton\\b0}`);
+  assert.equal(route('a', '{\\fnBangers\\b0}का{\\rb}वेट{\\r}सिर्फ'),
+    `{\\fnBangers\\b0}${D}का{\\fnBangers\\b0}{\\rb}${D}वेट{\\fnAnton\\b0}{\\r}${D}सिर्फ{\\fnOswald\\b1}`);
+  // A shape (`\p1`) is not text; a ZWJ joins a run only inside it, so an emoji sequence stays whole.
+  assert.equal(route('a', '{\\p1}m 0 0 l 1 1{\\p0}का'), `{\\p1}m 0 0 l 1 1{\\p0}${D}का{\\fnOswald\\b1}`);
+  assert.equal(route('a', 'क्\u200Dष 👨\u200D👩'), `${D}क्\u200Dष{\\fnOswald\\b1} 👨\u200D👩`);
+  // On a clip: every face the file names is bundled, and only Devanagari is switched.
+  for (const key of GALLERY_CAPTION_STYLE_KEYS) {
+    const ass = captionsAss({ words: HI, ...WIN, brandCaptions: { style: key } });
+    const faces = [styleLine(ass)[1], ...[...ass.matchAll(/\\fn([^\\}]+)/g)].map((m) => m[1])];
+    for (const f of faces) assert.ok(BUNDLED_FACES[f] || SCRIPT_FACES[f], `${key}: ${f} is bundled`);
+    assert.doesNotMatch(ass.replace(/\{\\b1\\fnNoto Sans Devanagari\}[\u0900-\u097F]+\{/g, ''), /[\u0900-\u097F]/, `${key}: every Devanagari run is switched`);
+  }
+});
+
+test('a file holding Devanagari (or another script that needs shaping) is burned with complex shaping; Latin and Cyrillic keep `subtitles`', () => {
+  for (const t of ['सिर्फ', 'مرحبا', 'שלום', 'สวัสดี', 'বাংলা']) assert.equal(needsComplexShaping(t), true, t);
+  for (const t of ['HAMBURG 0123', 'ПРИВЕТ', 'Ünïcödé “quotes” — 3.1', '👨\u200D👩 ✨']) assert.equal(needsComplexShaping(t), false, t);
+  const hi = captionsAss({ words: HI, ...WIN });
+  assert.equal(textPassFilter('/a/c.ass', hi, '/f d'), 'ass=filename=/a/c.ass:fontsdir=/f d:shaping=complex');
+  assert.equal(textPassFilter('/a/c.ass', captionsAss({ words: EN, ...WIN }), '/f d'), subtitlesFilter('/a/c.ass', '/f d'));
+  assert.equal(textPassFilter('/a/c.ass', captionsAss({ words: RU, ...WIN }), '/f d'), subtitlesFilter('/a/c.ass', '/f d'));
+});
+
 // ---- the bundled fonts ------------------------------------------------------------------------------------------
 
 function fontNames(buf) {
@@ -327,9 +415,12 @@ function fontNames(buf) {
 test('every caption face is bundled once, by its family, with its licence, and each file is the one SOURCES.md lists', () => {
   assert.deepEqual(Object.keys(BUNDLED_FACES).sort(), Object.keys(CAPTION_FACES).sort());
   assert.deepEqual([...CAPTION_FONTS].sort(), Object.keys(CAPTION_FACES).sort());
+  // The script faces (engine/script-faces.mjs) are bundled beside them, under families no style names.
+  assert.deepEqual(Object.keys(SCRIPT_FACES), [DEVANAGARI_FACE]);
+  for (const family of Object.keys(SCRIPT_FACES)) assert.equal(BUNDLED_FACES[family], undefined, family);
   const sources = readFileSync(join(FONTS_DIR, 'SOURCES.md'), 'utf8');
   const shaOf = (file) => new RegExp(`^- \`${file.replace(/[.[\]]/g, '\\$&')}\` ([0-9a-f]{64})$`, 'm').exec(sources)?.[1];
-  for (const [family, f] of Object.entries(BUNDLED_FACES)) {
+  for (const [family, f] of [...Object.entries(BUNDLED_FACES), ...Object.entries(SCRIPT_FACES)]) {
     const buf = readFileSync(join(FONTS_DIR, f.file));
     const n = fontNames(buf);
     assert.equal(n.family === family || `${n.family}` === family, true, `${f.file}: family ${n.family}, not ${family}`);
@@ -341,7 +432,7 @@ test('every caption face is bundled once, by its family, with its licence, and e
   }
   // One face per family in the folder: a second file of a family would make libass's choice depend on load order.
   const fontFiles = readdirSync(FONTS_DIR).filter((f) => /\.(ttf|otf)$/i.test(f)).sort();
-  assert.deepEqual(fontFiles, Object.values(BUNDLED_FACES).map((f) => f.file).sort());
+  assert.deepEqual(fontFiles, [...Object.values(BUNDLED_FACES), ...Object.values(SCRIPT_FACES)].map((f) => f.file).sort());
   // The two static copies carry the variable font's default-instance weight, which makes libass embolden them as it
   // emboldens the named instances in boqo's image (scripts/fonts/static_instance.py).
   assert.equal(fontNames(readFileSync(join(FONTS_DIR, 'Montserrat-ExtraBold.ttf'))).weight, 100);
@@ -377,6 +468,9 @@ const ffmpeg = (args) => spawnSync('ffmpeg', args, { encoding: 'utf8', env: tool
 const burn = (assPath, fontsDir) => ffmpeg([
   '-hide_banner', '-nostdin', '-loglevel', 'verbose', '-f', 'lavfi', '-i', 'color=c=0x336699:s=1080x1920:r=5:d=3',
   '-vf', subtitlesFilter(assPath, fontsDir), '-f', 'null', '-',
+]);
+const burnWith = (filter) => ffmpeg([
+  '-hide_banner', '-nostdin', '-loglevel', 'verbose', '-f', 'lavfi', '-i', 'color=c=0x336699:s=1080x1920:r=5:d=3', '-vf', filter, '-f', 'null', '-',
 ]);
 const selected = (log) => log.split(/\r?\n/).filter((l) => /fontselect:/.test(l)).map((l) => l.replace(/^.*fontselect: /, ''));
 
@@ -435,6 +529,89 @@ test('every bundled face burns from fontsdir at its Bold flag, and a Cyrillic cl
       assert.deepEqual(fontFallbacks(c.stderr), [], `${style}:\n${selected(c.stderr).join('\n')}`);
       assert.ok(selected(c.stderr).some((l) => l.startsWith('(Montserrat ExtraBold, 700, 0) -> Montserrat-ExtraBold')), style);
     }
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('a Hindi clip burns with every glyph from the bundled faces: Devanagari in Noto Sans Devanagari, the rest in the style\'s face', () => {
+  const root = mkdtempSync(join(tmpdir(), 'boqo hindi '));
+  try {
+    const fonts = join(root, 'bundled fonts');
+    cpSync(FONTS_DIR, fonts, { recursive: true });
+    // Punch (Oswald, Bold -1) and Comic (Bangers, Bold 0): the switch asks for the Bold either way.
+    for (const style of ['punch', 'comic']) {
+      const ass = captionsAss({ words: HI, ...WIN, emphasis: ['दिल्ली'], brandCaptions: { style } });
+      const assPath = join(root, `hindi ${style}.ass`);
+      writeFileSync(assPath, ass);
+      const r = burnWith(textPassFilter(assPath, ass, fonts));
+      assert.equal(r.status, 0, r.stderr.slice(-3000));
+      assert.deepEqual(fontFallbacks(r.stderr), [], `${style}:\n${selected(r.stderr).join('\n')}`);
+      assert.ok(selected(r.stderr).some((l) => l.startsWith('(Noto Sans Devanagari, 700, 0) -> NotoSansDevanagari-Bold,')), `${style}:\n${selected(r.stderr).join('\n')}`);
+      assert.match(r.stderr, /Loading font file '[^']*bundled fonts[\\/]NotoSansDevanagari-Bold\.ttf'/);
+    }
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+// The shaping proof. With HarfBuzz shaping (what the skill now burns a Devanagari file with) the vowel sign ि is drawn
+// BEFORE its consonant and क्र is one conjunct glyph; libass's simple shaper (boqo's `subtitles` filter) draws ि after
+// क and क्र as क, a bare virama and र, side by side. Measured here as pixels: where क sits inside कि, and how wide क्र is.
+test('Devanagari is shaped: ि is drawn before its consonant and क्र is one conjunct (pixels; the simple shaper is the control)', () => {
+  const root = mkdtempSync(join(tmpdir(), 'boqo shaping '));
+  const W = 600;
+  const H = 240;
+  try {
+    const assOf = (text) => routeScriptFaces(['[Script Info]', 'ScriptType: v4.00+', `PlayResX: ${W}`, `PlayResY: ${H}`, 'WrapStyle: 2', '', '[V4+ Styles]',
+      'Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding',
+      'Style: t,Oswald,120,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1', '', '[Events]',
+      'Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text', `Dialogue: 0,0:00:00.00,0:00:01.00,t,,0,0,0,,{\\pos(60,40)}${text}`, ''].join('\n'));
+    let n = 0;
+    const gray = (text, filterOf) => {
+      const ass = assOf(text);
+      const assPath = join(root, `line ${n++}.ass`);
+      writeFileSync(assPath, ass);
+      const r = spawnSync('ffmpeg', ['-hide_banner', '-nostdin', '-loglevel', 'error', '-f', 'lavfi', '-i', `color=c=black:s=${W}x${H}:r=1:d=1`,
+        '-vf', filterOf(assPath, ass), '-frames:v', '1', '-f', 'rawvideo', '-pix_fmt', 'gray', '-'], { env: toolEnv(), maxBuffer: 16 << 20 });
+      assert.equal(r.status, 0, String(r.stderr).slice(-2000));
+      assert.equal(r.stdout.length, W * H);
+      return r.stdout;
+    };
+    const bbox = (img) => {
+      let x0 = W, x1 = -1, y0 = H, y1 = -1;
+      for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) if (img[y * W + x] > 128) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); }
+      assert.ok(x1 >= x0, 'ink drawn');
+      return { x0, x1, y0, y1, w: x1 - x0 + 1 };
+    };
+    // The horizontal shift at which the lone consonant best matches the same consonant inside the syllable.
+    const shiftOf = (alone, inside) => {
+      const b = bbox(alone);
+      let best = null;
+      for (let dx = -60; dx <= 160; dx++) {
+        let d = 0;
+        for (let y = b.y0; y <= b.y1; y++) for (let x = b.x0; x <= b.x1; x++) {
+          const xb = x + dx;
+          d += Math.abs(alone[y * W + x] - (xb >= 0 && xb < W ? inside[y * W + xb] : 0));
+        }
+        if (best === null || d < best.d) best = { dx, d };
+      }
+      return best.dx;
+    };
+    const shaped = (assPath, ass) => textPassFilter(assPath, ass, FONTS_DIR);
+    const simple = (assPath) => subtitlesFilter(assPath, FONTS_DIR);
+    const measure = (filterOf) => {
+      const ka = gray('क', filterOf);
+      return { shift: shiftOf(ka, gray('कि', filterOf)), ka: bbox(ka).w, kra: bbox(gray('क्र', filterOf)).w };
+    };
+    const s = measure(shaped);
+    const c = measure(simple);
+    // Measured 2026-11-16 (BtbN ffmpeg 8.1, the bundled face at 120): shaped, क moves 18 px right inside कि and क्र is
+    // as wide as क (53 px each); simple, क stays at 0 and क्र is 81 px. The bounds leave room for another libass build.
+    assert.ok(s.shift >= 8, `shaped: ि before क moves क right, got ${JSON.stringify(s)}`);
+    assert.ok(s.kra <= s.ka * 1.2, `shaped: क्र is one conjunct, not three glyphs: ${JSON.stringify(s)}`);
+    assert.ok(Math.abs(c.shift) <= 2, `control, simple shaper: क not moved, got ${JSON.stringify(c)}`);
+    assert.ok(c.kra >= c.ka * 1.35, `control, simple shaper: क्र drawn as three glyphs: ${JSON.stringify(c)}`);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

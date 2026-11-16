@@ -28,10 +28,11 @@
 import { spawn } from 'node:child_process';
 import { copyFile, mkdir, open, rename, rmdir, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { FONTS_DIR, DEFAULT_OUTPUT, brandCaptionPreset, captionsTrack, subtitlesFilter } from './captions.mjs';
+import { DEFAULT_OUTPUT, brandCaptionPreset, captionsTrack, textPassFilter } from './captions.mjs';
 import { toolEnv } from './env.mjs';
 import { detectShotFaces } from './faces.mjs';
 import { headlineElement, logoStage } from './headline.mjs';
+import { routeScriptFaces } from './script-faces.mjs';
 import { detectShots } from './shots.mjs';
 import { ENCODE_THREADS, FILTER_THREADS, STEP_TIMEOUT_MS, prepareWindow } from './window.mjs';
 import { cutSecFromShots } from './boqo/caption-cuts.mjs';
@@ -248,15 +249,21 @@ export async function renderClip({
       output: OUTPUT,
       preset: captionStyle,
     });
+    // Each text pass's filter, by its path: complex shaping for a file in a script that needs it (engine/script-faces.mjs).
+    const passFilters = new Map();
     let assPath = null;
     if (captions.ass !== '') {
       assPath = join(work, 'captions.ass');
       await writeFile(assPath, captions.ass);
+      passFilters.set(assPath, textPassFilter(assPath, captions.ass));
     }
     let headlineAssPath = null;
     if (textAbove.length > 0) {
       headlineAssPath = join(work, 'headline.ass');
-      await writeFile(headlineAssPath, buildTextAss(textAbove, durationSec, OUTPUT, 0).ass);
+      // A Devanagari run in the headline is drawn in the bundled Devanagari face, as the captions' are.
+      const headlineAss = routeScriptFaces(buildTextAss(textAbove, durationSec, OUTPUT, 0).ass);
+      await writeFile(headlineAssPath, headlineAss);
+      passFilters.set(headlineAssPath, textPassFilter(headlineAssPath, headlineAss));
     }
 
     let logo = null;
@@ -299,7 +306,7 @@ export async function renderClip({
             headlineAssPath,
             blurSigma: FALLBACK_BLUR_SIGMA,
             brandLogo: withLogo ? logo.stage : null,
-            subtitles: (p) => subtitlesFilter(p, FONTS_DIR),
+            subtitles: (p) => passFilters.get(p),
           }),
           outPath: clipPath,
           filterThreads: FILTER_THREADS,

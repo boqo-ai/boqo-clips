@@ -20,7 +20,7 @@ import { HEADLINE_STYLES, HEADLINE_STYLE_KEYS, headlineKnobsFor, headlineStyleFi
 import { buildHeadlineAss, buildTextAss, headlinePlate, layoutHeadline, roundedRectPath, stacked, textElementExtent } from '../engine/boqo/headline-ass.mjs';
 import { LOGO_FADE_SEC, logoChain, logoFits, logoOverlayPosition, shiftLogoTiming } from '../engine/boqo/brand-logo.mjs';
 import { DEFAULT_TEMPLATE_HEADLINE, DEFAULT_TEMPLATE_LOGO, headlineTrack, logoStage } from '../engine/headline.mjs';
-import { FONTS_DIR, fontFallbacks, subtitlesFilter } from '../engine/captions.mjs';
+import { FONTS_DIR, fontFallbacks, subtitlesFilter, textPassFilter } from '../engine/captions.mjs';
 import { toolEnv } from '../engine/env.mjs';
 import { expectGolden } from './helpers/golden.mjs';
 
@@ -305,19 +305,30 @@ test('the Default template headline burns through libass from the bundled fonts:
   }
 });
 
-test('every headline style burns from the bundled fonts with nothing falling back, Latin and Cyrillic', () => {
+test('every headline style burns from the bundled fonts with nothing falling back, Latin, Cyrillic and Hindi', () => {
   const root = mkdtempSync(join(tmpdir(), 'boqo headline styles '));
   try {
     const fonts = join(root, 'bundled fonts');
     cpSync(FONTS_DIR, fonts, { recursive: true });
     for (const style of HEADLINE_STYLE_KEYS) {
-      for (const [label, title] of [['latin', 'Why this clip works and why it matters'], ['cyrillic', 'Почему этот ролик набрал миллион']]) {
+      for (const [label, title] of [
+        ['latin', 'Why this clip works and why it matters'], ['cyrillic', 'Почему этот ролик набрал миллион'],
+        // An evaluation clip's title (E2-fix3): Latin and Devanagari on one plate.
+        ['hindi', '7200 mAh बैटरी और वेट सिर्फ 205 ग्राम'],
+      ]) {
         const track = headlineTrack({ title, durationSec: 3, headline: { ...DEFAULT_TEMPLATE_HEADLINE, style } });
         const assPath = join(root, `${style} ${label}.ass`);
         writeFileSync(assPath, track.ass);
-        const r = ffmpeg(['-hide_banner', '-nostdin', '-loglevel', 'verbose', '-f', 'lavfi', '-i', `color=c=0x336699:s=${W}x${H}:r=5:d=3`, '-vf', subtitlesFilter(assPath, fonts), '-f', 'null', '-']);
+        const filter = textPassFilter(assPath, track.ass, fonts);
+        // Hindi alone is burned with complex shaping; Latin and Cyrillic keep boqo's `subtitles` filter.
+        assert.equal(filter, label === 'hindi' ? subtitlesFilter(assPath, fonts, { complex: true }) : subtitlesFilter(assPath, fonts), `${style} ${label}`);
+        const r = ffmpeg(['-hide_banner', '-nostdin', '-loglevel', 'verbose', '-f', 'lavfi', '-i', `color=c=0x336699:s=${W}x${H}:r=5:d=3`, '-vf', filter, '-f', 'null', '-']);
         assert.equal(r.status, 0, `${style} ${label}: ${r.stderr.slice(-2000)}`);
         assert.deepEqual(fontFallbacks(r.stderr), [], `${style} ${label}:\n${selected(r.stderr).join('\n')}`);
+        if (label === 'hindi') {
+          assert.match(track.ass, /\{\\b1\\fnNoto Sans Devanagari\}बैटरी\{\\fn[^\\}]+\\b\d+\}/, style);
+          assert.ok(selected(r.stderr).some((l) => l.startsWith('(Noto Sans Devanagari, 700, 0) -> NotoSansDevanagari-Bold,')), `${style}:\n${selected(r.stderr).join('\n')}`);
+        }
       }
     }
   } finally {

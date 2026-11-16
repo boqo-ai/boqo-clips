@@ -21,9 +21,19 @@ import { JOURNAL, RENDER_FIRST, writeAtomic } from '../engine/order.mjs';
 import { PanelsError, sourceOf } from '../engine/panels-read.mjs';
 import { realExec, renderClip } from '../engine/render.mjs';
 
+// The one JSON line and the exit code, carried to the end of main rather than printed with process.exit: once
+// onnxruntime-node is loaded, process.exit() aborts the process on macOS (`libc++abi: ... mutex lock failed: Invalid
+// argument`, seen 2026-11-16 on CI's macos-latest runner: the clip rendered and its line printed, the exit status was
+// lost). Ending by itself, as tools/doctor.mjs does after loading it, is the intended way out.
+class Stop extends Error {
+  constructor(obj, code) {
+    super(obj.error ?? 'stop');
+    this.obj = obj;
+    this.code = code;
+  }
+}
 const say = (obj, code) => {
-  process.stdout.write(JSON.stringify(obj) + '\n');
-  process.exit(code);
+  throw new Stop(obj, code);
 };
 const fail = (msg) => say({ error: msg }, 1);
 
@@ -146,7 +156,7 @@ async function main(argv) {
       writeAtomic(recordPath, JSON.stringify(now, null, 2) + '\n');
       rendered.push({ n: row.n, file: r.file, thumb: r.thumb, seconds: r.seconds, notes: r.notes });
     } catch (err) {
-      failed.push({ n: row.n, error: err.message });
+      failed.push({ n: row.n, error: err instanceof Stop ? err.obj.error : err.message });
     }
   }
   await detector?.release?.();
@@ -163,4 +173,13 @@ async function coversClip(at, row) {
   }
 }
 
-main(process.argv.slice(2)).catch((err) => fail(err.message));
+main(process.argv.slice(2))
+  .then(
+    () => null,
+    (err) => (err instanceof Stop ? err : new Stop({ error: err.message }, 1)),
+  )
+  .then((stop) => {
+    if (stop === null) return;
+    process.stdout.write(JSON.stringify(stop.obj) + '\n');
+    process.exitCode = stop.code;
+  });

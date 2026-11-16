@@ -74,7 +74,7 @@ const hostedWords = (words) => words.map((x) => ({ word: x.w, start: x.s, end: x
  * clamps each word's end against the next one in ARRAY order, so an unsorted list gets wrong ends.
  *
  * `startSec`, `endSec` and `words` share ONE timeline, the one of `source`'s own clock. For a downloaded section
- * that is the section's, so the caller subtracts the section's offset first (as `renderClip`'s `seek` does).
+ * that is the section's, so the caller subtracts the section's offset first (as `renderClip` does with its `offset`).
  * `words` are `{ w, s, e }`, the whole transcript or any superset of the window.
  *
  * Returns `file` (the window, cut when there were cuts), `startSec` and `endSec` (the window as extracted: the

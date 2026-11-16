@@ -6,6 +6,10 @@
 //   2. extract      pipeline.ts: `extractArgs`, stream copy;
 //   3. pauses       pipeline.ts: probe for audio, `detectPauses` (silencedetect at mean - 25 dB for 1.2 s,
 //                   overlapped with transcript gaps), merge (no filler cuts here), snap to packet times;
+//                   hosted runs `mergeCutLists` over the pause cuts and the filler cuts; it is omitted here
+//                   because with no filler cuts, joining the pause cuts alone is a no-op at the production
+//                   keeps: the gap between two pause cuts around a word is at least 0.4 s (0.15 s kept after
+//                   the word plus 0.25 s kept before the next), over the 0.15 s merge gap;
 //   4. cut          pipeline.ts: `cutWindowArgs`, the x264 veryfast CRF 16 / AAC 192k intermediate.
 //
 // This file is the skill's own and is not held by a golden of its own: every rule it calls is. It imports no
@@ -64,6 +68,10 @@ const hostedWords = (words) => words.map((x) => ({ word: x.w, start: x.s, end: x
 
 /**
  * Extracts a clip's window from `source` and tightens its pauses.
+ *
+ * Each call needs its OWN `dir`: the files in it have fixed names (`window.mp4`, `window-cut.mp4`), so two calls on
+ * one `dir` overwrite each other's window. `words` must be ascending by `s`, as a transcript is: `wordsWithin`
+ * clamps each word's end against the next one in ARRAY order, so an unsorted list gets wrong ends.
  *
  * `startSec`, `endSec` and `words` share ONE timeline, the one of `source`'s own clock. For a downloaded section
  * that is the section's, so the caller subtracts the section's offset first (as `renderClip`'s `seek` does).

@@ -1,0 +1,2762 @@
+{
+  "scenarios": [
+    {
+      "name": "one 9:16 default",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 210,
+        "top": 221,
+        "width": 661,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 650 0 b 656 0 661 5 661 11 l 661 84 b 661 90 656 95 650 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "one 1:1 default",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 351,
+        "top": 124,
+        "width": 378,
+        "height": 54,
+        "radius": 11
+      },
+      "path": "m 11 0 l 367 0 b 373 0 378 5 378 11 l 378 43 b 378 49 373 54 367 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "one 16:9 default",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 771,
+        "top": 124,
+        "width": 378,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 359 0 b 369 0 378 9 378 19 l 378 35 b 378 45 369 54 359 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "two 9:16 default",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 232,
+        "top": 193,
+        "width": 617,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two 1:1 default",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 199,
+        "top": 124,
+        "width": 683,
+        "height": 54,
+        "radius": 11
+      },
+      "path": "m 11 0 l 672 0 b 678 0 683 5 683 11 l 683 43 b 683 49 678 54 672 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two 16:9 default",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 619,
+        "top": 124,
+        "width": 683,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 664 0 b 674 0 683 9 683 19 l 683 35 b 683 45 674 54 664 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "three 9:16 default",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 54,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 85,
+        "top": 207,
+        "width": 910,
+        "height": 124,
+        "radius": 11
+      },
+      "path": "m 11 0 l 899 0 b 905 0 910 5 910 11 l 910 113 b 910 119 905 124 899 124 l 11 124 b 5 124 0 119 0 113 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three 1:1 default",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 102,
+        "top": 92,
+        "width": 876,
+        "height": 119,
+        "radius": 11
+      },
+      "path": "m 11 0 l 865 0 b 871 0 876 5 876 11 l 876 108 b 876 114 871 119 865 119 l 11 119 b 5 119 0 114 0 108 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three 16:9 default",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in",
+          "thirty days would also cost me every single friend I had ever made online"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 299,
+        "top": 108,
+        "width": 1323,
+        "height": 86,
+        "radius": 19
+      },
+      "path": "m 19 0 l 1304 0 b 1314 0 1323 9 1323 19 l 1323 67 b 1323 77 1314 86 1304 86 l 19 86 b 9 86 0 77 0 67 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "shrink 9:16 default",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 212,
+        "width": 1447,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink 1:1 default",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 14,
+        "fontSize": 30,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 106,
+        "top": 117,
+        "width": 868,
+        "height": 69,
+        "radius": 11
+      },
+      "path": "m 11 0 l 857 0 b 863 0 868 5 868 11 l 868 58 b 868 64 863 69 857 69 l 11 69 b 5 69 0 64 0 58 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink 16:9 default",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 208,
+        "top": 92,
+        "width": 1505,
+        "height": 119,
+        "radius": 19
+      },
+      "path": "m 19 0 l 1486 0 b 1496 0 1505 9 1505 19 l 1505 100 b 1505 110 1496 119 1486 119 l 19 119 b 9 119 0 110 0 100 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "overflow 9:16 default",
+      "layout": {
+        "lines": [
+          "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word",
+          "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word",
+          "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -2837,
+        "top": 212,
+        "width": 3917,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 3906 0 b 3912 0 3917 5 3917 11 l 3917 103 b 3917 109 3912 114 3906 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "overflow 1:1 default",
+      "layout": {
+        "lines": [
+          "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word",
+          "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word",
+          "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word"
+        ],
+        "capHeightPx": 13,
+        "fontSize": 28,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -1113,
+        "top": 119,
+        "width": 2193,
+        "height": 64,
+        "radius": 11
+      },
+      "path": "m 11 0 l 2182 0 b 2188 0 2193 5 2193 11 l 2193 53 b 2193 59 2188 64 2182 64 l 11 64 b 5 64 0 59 0 53 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "overflow 16:9 default",
+      "layout": {
+        "lines": [
+          "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word",
+          "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word",
+          "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word"
+        ],
+        "capHeightPx": 13,
+        "fontSize": 28,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -273,
+        "top": 119,
+        "width": 2193,
+        "height": 64,
+        "radius": 19
+      },
+      "path": "m 19 0 l 2174 0 b 2184 0 2193 9 2193 19 l 2193 45 b 2193 55 2184 64 2174 64 l 19 64 b 9 64 0 55 0 45 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "cyrillic 9:16 default",
+      "layout": {
+        "lines": [
+          "Почему этот",
+          "ролик набрал миллион",
+          "просмотров за одну ночь"
+        ],
+        "capHeightPx": 26,
+        "fontSize": 57,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 78,
+        "top": 204,
+        "width": 924,
+        "height": 129,
+        "radius": 11
+      },
+      "path": "m 11 0 l 913 0 b 919 0 924 5 924 11 l 924 118 b 924 124 919 129 913 129 l 11 129 b 5 129 0 124 0 118 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cyrillic 1:1 default",
+      "layout": {
+        "lines": [
+          "Почему этот",
+          "ролик набрал миллион",
+          "просмотров за одну ночь"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 119,
+        "top": 92,
+        "width": 843,
+        "height": 119,
+        "radius": 11
+      },
+      "path": "m 11 0 l 832 0 b 838 0 843 5 843 11 l 843 108 b 843 114 838 119 832 119 l 11 119 b 5 119 0 114 0 108 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cyrillic 16:9 default",
+      "layout": {
+        "lines": [
+          "Почему этот ролик набрал",
+          "миллион просмотров за одну ночь"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 396,
+        "top": 108,
+        "width": 1129,
+        "height": 86,
+        "radius": 19
+      },
+      "path": "m 19 0 l 1110 0 b 1120 0 1129 9 1129 19 l 1129 67 b 1129 77 1120 86 1110 86 l 19 86 b 9 86 0 77 0 67 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "mixed 9:16 default",
+      "layout": {
+        "lines": [
+          "Москва is not Moscow"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 86,
+        "top": 221,
+        "width": 908,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 897 0 b 903 0 908 5 908 11 l 908 84 b 908 90 903 95 897 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "mixed 1:1 default",
+      "layout": {
+        "lines": [
+          "Москва is not Moscow"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 281,
+        "top": 124,
+        "width": 519,
+        "height": 54,
+        "radius": 11
+      },
+      "path": "m 11 0 l 508 0 b 514 0 519 5 519 11 l 519 43 b 519 49 514 54 508 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "mixed 16:9 default",
+      "layout": {
+        "lines": [
+          "Москва is not Moscow"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 701,
+        "top": 124,
+        "width": 519,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 500 0 b 510 0 519 9 519 19 l 519 35 b 519 45 510 54 500 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "braces 9:16 default",
+      "layout": {
+        "lines": [
+          "Use b1boldb0 N",
+          "and a backslash"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 269,
+        "top": 193,
+        "width": 543,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 532 0 b 538 0 543 5 543 11 l 543 140 b 543 146 538 151 532 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "braces 1:1 default",
+      "layout": {
+        "lines": [
+          "Use b1boldb0 N and a backslash"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 244,
+        "top": 124,
+        "width": 592,
+        "height": 54,
+        "radius": 11
+      },
+      "path": "m 11 0 l 581 0 b 587 0 592 5 592 11 l 592 43 b 592 49 587 54 581 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "braces 16:9 default",
+      "layout": {
+        "lines": [
+          "Use b1boldb0 N and a backslash"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 664,
+        "top": 124,
+        "width": 592,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 573 0 b 583 0 592 9 592 19 l 592 35 b 592 45 583 54 573 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "spaces 9:16 default",
+      "layout": {
+        "lines": [
+          "Lots of space and a newline"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 87,
+        "top": 221,
+        "width": 906,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 895 0 b 901 0 906 5 906 11 l 906 84 b 906 90 901 95 895 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "spaces 1:1 default",
+      "layout": {
+        "lines": [
+          "Lots of space and a newline"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 281,
+        "top": 124,
+        "width": 518,
+        "height": 54,
+        "radius": 11
+      },
+      "path": "m 11 0 l 507 0 b 513 0 518 5 518 11 l 518 43 b 518 49 513 54 507 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "spaces 16:9 default",
+      "layout": {
+        "lines": [
+          "Lots of space and a newline"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 701,
+        "top": 124,
+        "width": 518,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 499 0 b 509 0 518 9 518 19 l 518 35 b 518 45 509 54 499 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "accents 9:16 default",
+      "layout": {
+        "lines": [
+          "Crème brûlée, naïve",
+          "café, Ünïcode ñ"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 136,
+        "top": 193,
+        "width": 809,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 798 0 b 804 0 809 5 809 11 l 809 140 b 809 146 804 151 798 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "accents 1:1 default",
+      "layout": {
+        "lines": [
+          "Crème brûlée, naïve café, Ünïcode ñ"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 129,
+        "top": 124,
+        "width": 822,
+        "height": 54,
+        "radius": 11
+      },
+      "path": "m 11 0 l 811 0 b 817 0 822 5 822 11 l 822 43 b 822 49 817 54 811 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "accents 16:9 default",
+      "layout": {
+        "lines": [
+          "Crème brûlée, naïve café, Ünïcode ñ"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 549,
+        "top": 124,
+        "width": 822,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 803 0 b 813 0 822 9 822 19 l 822 35 b 822 45 813 54 803 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "emoji 9:16 default",
+      "layout": {
+        "lines": [
+          "Rocket 🚀 launch day 🔥"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 143,
+        "top": 221,
+        "width": 794,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 783 0 b 789 0 794 5 794 11 l 794 84 b 794 90 789 95 783 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "emoji 1:1 default",
+      "layout": {
+        "lines": [
+          "Rocket 🚀 launch day 🔥"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 313,
+        "top": 124,
+        "width": 454,
+        "height": 54,
+        "radius": 11
+      },
+      "path": "m 11 0 l 443 0 b 449 0 454 5 454 11 l 454 43 b 454 49 449 54 443 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "emoji 16:9 default",
+      "layout": {
+        "lines": [
+          "Rocket 🚀 launch day 🔥"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 733,
+        "top": 124,
+        "width": 454,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 435 0 b 445 0 454 9 454 19 l 454 35 b 454 45 445 54 435 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "digits 9:16 default",
+      "layout": {
+        "lines": [
+          "3 rockets, 10 000",
+          "views, 99.9% sure"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 244,
+        "top": 193,
+        "width": 592,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 581 0 b 587 0 592 5 592 11 l 592 140 b 592 146 587 151 581 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "digits 1:1 default",
+      "layout": {
+        "lines": [
+          "3 rockets, 10 000 views, 99.9% sure"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 218,
+        "top": 124,
+        "width": 644,
+        "height": 54,
+        "radius": 11
+      },
+      "path": "m 11 0 l 633 0 b 639 0 644 5 644 11 l 644 43 b 644 49 639 54 633 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "digits 16:9 default",
+      "layout": {
+        "lines": [
+          "3 rockets, 10 000 views, 99.9% sure"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 638,
+        "top": 124,
+        "width": 644,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 625 0 b 635 0 644 9 644 19 l 644 35 b 644 45 635 54 625 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "single 9:16 default",
+      "layout": {
+        "lines": [
+          "Supercalifragilisticexpialidocious"
+        ],
+        "capHeightPx": 37,
+        "fontSize": 80,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 69,
+        "top": 227,
+        "width": 943,
+        "height": 83,
+        "radius": 11
+      },
+      "path": "m 11 0 l 932 0 b 938 0 943 5 943 11 l 943 72 b 943 78 938 83 932 83 l 11 83 b 5 83 0 78 0 72 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "single 1:1 default",
+      "layout": {
+        "lines": [
+          "Supercalifragilisticexpialidocious"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 234,
+        "top": 124,
+        "width": 613,
+        "height": 54,
+        "radius": 11
+      },
+      "path": "m 11 0 l 602 0 b 608 0 613 5 613 11 l 613 43 b 613 49 608 54 602 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "single 16:9 default",
+      "layout": {
+        "lines": [
+          "Supercalifragilisticexpialidocious"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 654,
+        "top": 124,
+        "width": 613,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 594 0 b 604 0 613 9 613 19 l 613 35 b 613 45 604 54 594 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "empty 9:16 default",
+      "layout": {
+        "lines": [],
+        "capHeightPx": 42,
+        "fontSize": 1,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 517,
+        "top": 221,
+        "width": 46,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 35 0 b 41 0 46 5 46 11 l 46 84 b 46 90 41 95 35 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "empty 1:1 default",
+      "layout": {
+        "lines": [],
+        "capHeightPx": 24,
+        "fontSize": 1,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 527,
+        "top": 124,
+        "width": 26,
+        "height": 54,
+        "radius": 11
+      },
+      "path": "m 11 0 l 15 0 b 21 0 26 5 26 11 l 26 43 b 26 49 21 54 15 54 l 11 54 b 5 54 0 49 0 43 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "empty 16:9 default",
+      "layout": {
+        "lines": [],
+        "capHeightPx": 24,
+        "fontSize": 1,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 947,
+        "top": 124,
+        "width": 26,
+        "height": 54,
+        "radius": 13
+      },
+      "path": "m 13 0 l 13 0 b 20 0 26 6 26 13 l 26 41 b 26 48 20 54 13 54 l 13 54 b 6 54 0 48 0 41 l 0 13 b 0 6 6 0 13 0"
+    },
+    {
+      "name": "two Montserrat ExtraBold",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 232,
+        "top": 193,
+        "width": 617,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three Montserrat ExtraBold",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 54,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 85,
+        "top": 207,
+        "width": 910,
+        "height": 124,
+        "radius": 11
+      },
+      "path": "m 11 0 l 899 0 b 905 0 910 5 910 11 l 910 113 b 910 119 905 124 899 124 l 11 124 b 5 124 0 119 0 113 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink Montserrat ExtraBold",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 212,
+        "width": 1447,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two Oswald",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 86,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 143,
+        "top": 221,
+        "width": 795,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 784 0 b 790 0 795 5 795 11 l 795 84 b 795 90 790 95 784 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three Oswald",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 38,
+        "fontSize": 78,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 77,
+        "top": 175,
+        "width": 927,
+        "height": 188,
+        "radius": 11
+      },
+      "path": "m 11 0 l 916 0 b 922 0 927 5 927 11 l 927 177 b 927 183 922 188 916 188 l 11 188 b 5 188 0 183 0 177 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink Oswald",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 47,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": 63,
+        "top": 212,
+        "width": 954,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 943 0 b 949 0 954 5 954 11 l 954 103 b 954 109 949 114 943 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two Inter",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 70,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 262,
+        "top": 193,
+        "width": 557,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 546 0 b 552 0 557 5 557 11 l 557 140 b 557 146 552 151 546 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three Inter",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 28,
+        "fontSize": 47,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 76,
+        "top": 199,
+        "width": 928,
+        "height": 139,
+        "radius": 11
+      },
+      "path": "m 11 0 l 917 0 b 923 0 928 5 928 11 l 928 128 b 928 134 923 139 917 139 l 11 139 b 5 139 0 134 0 128 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink Inter",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 38,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -200,
+        "top": 212,
+        "width": 1280,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1269 0 b 1275 0 1280 5 1280 11 l 1280 103 b 1280 109 1275 114 1269 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two DejaVu Sans",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 67,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 218,
+        "top": 193,
+        "width": 644,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 633 0 b 639 0 644 5 644 11 l 644 140 b 644 146 639 151 633 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three DejaVu Sans",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 38,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 89,
+        "top": 209,
+        "width": 903,
+        "height": 119,
+        "radius": 11
+      },
+      "path": "m 11 0 l 892 0 b 898 0 903 5 903 11 l 903 108 b 903 114 898 119 892 119 l 11 119 b 5 119 0 114 0 108 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink DejaVu Sans",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 37,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -438,
+        "top": 212,
+        "width": 1518,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1507 0 b 1513 0 1518 5 1518 11 l 1518 103 b 1518 109 1513 114 1507 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two Anton",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 86,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 155,
+        "top": 221,
+        "width": 770,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 759 0 b 765 0 770 5 770 11 l 770 84 b 770 90 765 95 759 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three Anton",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 39,
+        "fontSize": 80,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 74,
+        "top": 172,
+        "width": 932,
+        "height": 193,
+        "radius": 11
+      },
+      "path": "m 11 0 l 921 0 b 927 0 932 5 932 11 l 932 182 b 932 188 927 193 921 193 l 11 193 b 5 193 0 188 0 182 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink Anton",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 47,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 76,
+        "top": 212,
+        "width": 928,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 917 0 b 923 0 928 5 928 11 l 928 103 b 928 109 923 114 917 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two Bebas Neue",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 78,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 152,
+        "top": 221,
+        "width": 776,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 765 0 b 771 0 776 5 776 11 l 776 84 b 776 90 771 95 765 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three Bebas Neue",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 39,
+        "fontSize": 72,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 68,
+        "top": 172,
+        "width": 944,
+        "height": 193,
+        "radius": 11
+      },
+      "path": "m 11 0 l 933 0 b 939 0 944 5 944 11 l 944 182 b 944 188 939 193 933 193 l 11 193 b 5 193 0 188 0 182 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink Bebas Neue",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 43,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": 66,
+        "top": 212,
+        "width": 949,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 938 0 b 944 0 949 5 949 11 l 949 103 b 949 109 944 114 938 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two Bangers",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 100,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 145,
+        "top": 221,
+        "width": 791,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 780 0 b 786 0 791 5 791 11 l 791 84 b 791 90 786 95 780 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three Bangers",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 37,
+        "fontSize": 88,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 75,
+        "top": 177,
+        "width": 930,
+        "height": 183,
+        "radius": 11
+      },
+      "path": "m 11 0 l 919 0 b 925 0 930 5 930 11 l 930 172 b 930 178 925 183 919 183 l 11 183 b 5 183 0 178 0 172 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink Bangers",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 55,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": 54,
+        "top": 212,
+        "width": 972,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 961 0 b 967 0 972 5 972 11 l 972 103 b 972 109 967 114 961 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two Poppins Black",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 105,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 236,
+        "top": 193,
+        "width": 608,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 597 0 b 603 0 608 5 608 11 l 608 140 b 608 146 603 151 597 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three Poppins Black",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 63,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 84,
+        "top": 207,
+        "width": 912,
+        "height": 124,
+        "radius": 11
+      },
+      "path": "m 11 0 l 901 0 b 907 0 912 5 912 11 l 912 113 b 912 119 907 124 901 124 l 11 124 b 5 124 0 119 0 113 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink Poppins Black",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 58,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -343,
+        "top": 212,
+        "width": 1423,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1412 0 b 1418 0 1423 5 1423 11 l 1423 103 b 1423 109 1418 114 1412 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two Archivo Black",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 82,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 213,
+        "top": 193,
+        "width": 655,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 644 0 b 650 0 655 5 655 11 l 655 140 b 655 146 650 151 644 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three Archivo Black",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 45,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 93,
+        "top": 212,
+        "width": 894,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 883 0 b 889 0 894 5 894 11 l 894 103 b 894 109 889 114 883 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink Archivo Black",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 45,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -455,
+        "top": 212,
+        "width": 1535,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1524 0 b 1530 0 1535 5 1535 11 l 1535 103 b 1535 109 1530 114 1524 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two Luckiest Guy",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 72,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 247,
+        "top": 193,
+        "width": 587,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 576 0 b 582 0 587 5 587 11 l 587 140 b 587 146 582 151 576 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three Luckiest Guy",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 26,
+        "fontSize": 45,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 82,
+        "top": 204,
+        "width": 917,
+        "height": 129,
+        "radius": 11
+      },
+      "path": "m 11 0 l 906 0 b 912 0 917 5 917 11 l 917 118 b 917 124 912 129 906 129 l 11 129 b 5 129 0 124 0 118 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink Luckiest Guy",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 40,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -330,
+        "top": 212,
+        "width": 1410,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1399 0 b 1405 0 1410 5 1410 11 l 1410 103 b 1410 109 1405 114 1399 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "two Permanent Marker",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 79,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 262,
+        "top": 193,
+        "width": 557,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 546 0 b 552 0 557 5 557 11 l 557 140 b 557 146 552 151 546 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "three Permanent Marker",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 28,
+        "fontSize": 53,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 84,
+        "top": 199,
+        "width": 913,
+        "height": 139,
+        "radius": 11
+      },
+      "path": "m 11 0 l 902 0 b 908 0 913 5 913 11 l 913 128 b 913 134 908 139 902 139 l 11 139 b 5 139 0 134 0 128 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "shrink Permanent Marker",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 43,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -205,
+        "top": 212,
+        "width": 1285,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1274 0 b 1280 0 1285 5 1285 11 l 1285 103 b 1285 109 1280 114 1274 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cap min one",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 359,
+        "top": 243,
+        "width": 363,
+        "height": 52,
+        "radius": 11
+      },
+      "path": "m 11 0 l 352 0 b 358 0 363 5 363 11 l 363 41 b 363 47 358 52 352 52 l 11 52 b 5 52 0 47 0 41 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cap min two",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 212,
+        "top": 243,
+        "width": 656,
+        "height": 52,
+        "radius": 11
+      },
+      "path": "m 11 0 l 645 0 b 651 0 656 5 656 11 l 656 41 b 656 47 651 52 645 52 l 11 52 b 5 52 0 47 0 41 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cap min three",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 119,
+        "top": 212,
+        "width": 842,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 831 0 b 837 0 842 5 842 11 l 842 103 b 842 109 837 114 831 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cap min shrink",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": false,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 212,
+        "width": 1447,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cap min two 16:9",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 13,
+        "fontSize": 28,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 776,
+        "top": 137,
+        "width": 368,
+        "height": 29,
+        "radius": 15
+      },
+      "path": "m 14.5 0 l 353.5 0 b 361.5 0 368 6.5 368 14.5 l 368 14.5 b 368 22.5 361.5 29 353.5 29 l 14.5 29 b 6.5 29 0 22.5 0 14.5 l 0 14.5 b 0 6.5 6.5 0 14.5 0"
+    },
+    {
+      "name": "cap max one",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 58,
+        "fontSize": 126,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 83,
+        "top": 203,
+        "width": 915,
+        "height": 131,
+        "radius": 11
+      },
+      "path": "m 11 0 l 904 0 b 910 0 915 5 915 11 l 915 120 b 915 126 910 131 904 131 l 11 131 b 5 131 0 126 0 120 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cap max two",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 58,
+        "fontSize": 126,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 113,
+        "top": 164,
+        "width": 855,
+        "height": 209,
+        "radius": 11
+      },
+      "path": "m 11 0 l 844 0 b 850 0 855 5 855 11 l 855 198 b 855 204 850 209 844 209 l 11 209 b 5 209 0 204 0 198 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cap max three",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 54,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 85,
+        "top": 207,
+        "width": 910,
+        "height": 124,
+        "radius": 11
+      },
+      "path": "m 11 0 l 899 0 b 905 0 910 5 910 11 l 910 113 b 910 119 905 124 899 124 l 11 124 b 5 124 0 119 0 113 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cap max shrink",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 212,
+        "width": 1447,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "cap max two 16:9",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 32,
+        "fontSize": 70,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 501,
+        "top": 115,
+        "width": 919,
+        "height": 72,
+        "radius": 19
+      },
+      "path": "m 19 0 l 900 0 b 910 0 919 9 919 19 l 919 53 b 919 63 910 72 900 72 l 19 72 b 9 72 0 63 0 53 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "box min one",
+      "layout": {
+        "lines": [
+          "Why this",
+          "clip works"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 357,
+        "top": 193,
+        "width": 366,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 355 0 b 361 0 366 5 366 11 l 366 140 b 366 146 361 151 355 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "box min two",
+      "layout": {
+        "lines": [
+          "The one habit",
+          "that doubled",
+          "my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 304,
+        "top": 165,
+        "width": 472,
+        "height": 208,
+        "radius": 11
+      },
+      "path": "m 11 0 l 461 0 b 467 0 472 5 472 11 l 472 197 b 472 203 467 208 461 208 l 11 208 b 5 208 0 203 0 197 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "box min three",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": 119,
+        "top": 212,
+        "width": 842,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 831 0 b 837 0 842 5 842 11 l 842 103 b 842 109 837 114 831 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "box min shrink",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 212,
+        "width": 1447,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "box min two 16:9",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 619,
+        "top": 124,
+        "width": 683,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 664 0 b 674 0 683 9 683 19 l 683 35 b 683 45 674 54 664 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "box max one",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 210,
+        "top": 221,
+        "width": 661,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 650 0 b 656 0 661 5 661 11 l 661 84 b 661 90 656 95 650 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "box max two",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 232,
+        "top": 193,
+        "width": 617,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "box max three",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 27,
+        "fontSize": 59,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 43,
+        "top": 202,
+        "width": 994,
+        "height": 134,
+        "radius": 11
+      },
+      "path": "m 11 0 l 983 0 b 989 0 994 5 994 11 l 994 123 b 994 129 989 134 983 134 l 11 134 b 5 134 0 129 0 123 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "box max shrink",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 212,
+        "width": 1447,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "box max two 16:9",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 619,
+        "top": 124,
+        "width": 683,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 664 0 b 674 0 683 9 683 19 l 683 35 b 683 45 674 54 664 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "top one",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 210,
+        "top": 106,
+        "width": 661,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 650 0 b 656 0 661 5 661 11 l 661 84 b 661 90 656 95 650 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "top two",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 232,
+        "top": 78,
+        "width": 617,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "top three",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 54,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 85,
+        "top": 92,
+        "width": 910,
+        "height": 124,
+        "radius": 11
+      },
+      "path": "m 11 0 l 899 0 b 905 0 910 5 910 11 l 910 113 b 910 119 905 124 899 124 l 11 124 b 5 124 0 119 0 113 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "top shrink",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 97,
+        "width": 1447,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "top two 16:9",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 619,
+        "top": 59,
+        "width": 683,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 664 0 b 674 0 683 9 683 19 l 683 35 b 683 45 674 54 664 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "bottom one",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 210,
+        "top": 1719,
+        "width": 661,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 650 0 b 656 0 661 5 661 11 l 661 84 b 661 90 656 95 650 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "bottom two",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 232,
+        "top": 1691,
+        "width": 617,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "bottom three",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 54,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 85,
+        "top": 1704,
+        "width": 910,
+        "height": 124,
+        "radius": 11
+      },
+      "path": "m 11 0 l 899 0 b 905 0 910 5 910 11 l 910 113 b 910 119 905 124 899 124 l 11 124 b 5 124 0 119 0 113 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "bottom shrink",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 1709,
+        "width": 1447,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "bottom two 16:9",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 619,
+        "top": 967,
+        "width": 683,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 664 0 b 674 0 683 9 683 19 l 683 35 b 683 45 674 54 664 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "radius 0 one",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 210,
+        "top": 221,
+        "width": 661,
+        "height": 95,
+        "radius": 0
+      },
+      "path": "m 0 0 l 661 0 l 661 95 l 0 95 l 0 0"
+    },
+    {
+      "name": "radius 0 two",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 232,
+        "top": 193,
+        "width": 617,
+        "height": 151,
+        "radius": 0
+      },
+      "path": "m 0 0 l 617 0 l 617 151 l 0 151 l 0 0"
+    },
+    {
+      "name": "radius 0 three",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 54,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 85,
+        "top": 207,
+        "width": 910,
+        "height": 124,
+        "radius": 0
+      },
+      "path": "m 0 0 l 910 0 l 910 124 l 0 124 l 0 0"
+    },
+    {
+      "name": "radius 0 shrink",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 212,
+        "width": 1447,
+        "height": 114,
+        "radius": 0
+      },
+      "path": "m 0 0 l 1447 0 l 1447 114 l 0 114 l 0 0"
+    },
+    {
+      "name": "radius 0 two 16:9",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 619,
+        "top": 124,
+        "width": 683,
+        "height": 54,
+        "radius": 0
+      },
+      "path": "m 0 0 l 683 0 l 683 54 l 0 54 l 0 0"
+    },
+    {
+      "name": "radius max one",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 210,
+        "top": 221,
+        "width": 661,
+        "height": 95,
+        "radius": 48
+      },
+      "path": "m 47.5 0 l 613.5 0 b 639.5 0 661 21.5 661 47.5 l 661 47.5 b 661 73.5 639.5 95 613.5 95 l 47.5 95 b 21.5 95 0 73.5 0 47.5 l 0 47.5 b 0 21.5 21.5 0 47.5 0"
+    },
+    {
+      "name": "radius max two",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 232,
+        "top": 193,
+        "width": 617,
+        "height": 151,
+        "radius": 65
+      },
+      "path": "m 65 0 l 552 0 b 588 0 617 29 617 65 l 617 86 b 617 122 588 151 552 151 l 65 151 b 29 151 0 122 0 86 l 0 65 b 0 29 29 0 65 0"
+    },
+    {
+      "name": "radius max three",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 54,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 85,
+        "top": 207,
+        "width": 910,
+        "height": 124,
+        "radius": 62
+      },
+      "path": "m 62 0 l 848 0 b 882 0 910 28 910 62 l 910 62 b 910 96 882 124 848 124 l 62 124 b 28 124 0 96 0 62 l 0 62 b 0 28 28 0 62 0"
+    },
+    {
+      "name": "radius max shrink",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 212,
+        "width": 1447,
+        "height": 114,
+        "radius": 57
+      },
+      "path": "m 57 0 l 1390 0 b 1421 0 1447 26 1447 57 l 1447 57 b 1447 88 1421 114 1390 114 l 57 114 b 26 114 0 88 0 57 l 0 57 b 0 26 26 0 57 0"
+    },
+    {
+      "name": "radius max two 16:9",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 619,
+        "top": 124,
+        "width": 683,
+        "height": 54,
+        "radius": 27
+      },
+      "path": "m 27 0 l 656 0 b 671 0 683 12 683 27 l 683 27 b 683 42 671 54 656 54 l 27 54 b 12 54 0 42 0 27 l 0 27 b 0 12 12 0 27 0"
+    },
+    {
+      "name": "centre one",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 210,
+        "top": 913,
+        "width": 661,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 650 0 b 656 0 661 5 661 11 l 661 84 b 661 90 656 95 650 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "centre two",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 232,
+        "top": 885,
+        "width": 617,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "centre three",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 54,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 85,
+        "top": 898,
+        "width": 910,
+        "height": 124,
+        "radius": 11
+      },
+      "path": "m 11 0 l 899 0 b 905 0 910 5 910 11 l 910 113 b 910 119 905 124 899 124 l 11 124 b 5 124 0 119 0 113 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "centre shrink",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 903,
+        "width": 1447,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "centre two 16:9",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 619,
+        "top": 513,
+        "width": 683,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 664 0 b 674 0 683 9 683 19 l 683 35 b 683 45 674 54 664 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "pale plate one",
+      "layout": {
+        "lines": [
+          "Why this clip works"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 210,
+        "top": 221,
+        "width": 661,
+        "height": 95,
+        "radius": 11
+      },
+      "path": "m 11 0 l 650 0 b 656 0 661 5 661 11 l 661 84 b 661 90 656 95 650 95 l 11 95 b 5 95 0 90 0 84 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "pale plate two",
+      "layout": {
+        "lines": [
+          "The one habit that",
+          "doubled my reach"
+        ],
+        "capHeightPx": 42,
+        "fontSize": 91,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 232,
+        "top": 193,
+        "width": 617,
+        "height": 151,
+        "radius": 11
+      },
+      "path": "m 11 0 l 606 0 b 612 0 617 5 617 11 l 617 140 b 617 146 612 151 606 151 l 11 151 b 5 151 0 146 0 140 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "pale plate three",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 54,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 85,
+        "top": 207,
+        "width": 910,
+        "height": 124,
+        "radius": 11
+      },
+      "path": "m 11 0 l 899 0 b 905 0 910 5 910 11 l 910 113 b 910 119 905 124 899 124 l 11 124 b 5 124 0 119 0 113 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "pale plate shrink",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly doubled my reach in thirty days",
+          "would also cost me every single friend I had ever made online, and then I found out",
+          "what the algorithm really wanted from every creator who posts three times a day"
+        ],
+        "capHeightPx": 23,
+        "fontSize": 50,
+        "shrunk": true,
+        "overflow": true
+      },
+      "plate": {
+        "left": -367,
+        "top": 212,
+        "width": 1447,
+        "height": 114,
+        "radius": 11
+      },
+      "path": "m 11 0 l 1436 0 b 1442 0 1447 5 1447 11 l 1447 103 b 1447 109 1442 114 1436 114 l 11 114 b 5 114 0 109 0 103 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "pale plate two 16:9",
+      "layout": {
+        "lines": [
+          "The one habit that doubled my reach"
+        ],
+        "capHeightPx": 24,
+        "fontSize": 52,
+        "shrunk": false,
+        "overflow": false
+      },
+      "plate": {
+        "left": 619,
+        "top": 124,
+        "width": 683,
+        "height": 54,
+        "radius": 19
+      },
+      "path": "m 19 0 l 664 0 b 674 0 683 9 683 19 l 683 35 b 683 45 674 54 664 54 l 19 54 b 9 54 0 45 0 35 l 0 19 b 0 9 9 0 19 0"
+    },
+    {
+      "name": "odd frame",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 25,
+        "fontSize": 54,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 86,
+        "top": 207,
+        "width": 910,
+        "height": 124,
+        "radius": 11
+      },
+      "path": "m 11 0 l 899 0 b 905 0 910 5 910 11 l 910 113 b 910 119 905 124 899 124 l 11 124 b 5 124 0 119 0 113 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "name": "720x1280",
+      "layout": {
+        "lines": [
+          "Nobody told me that the one habit that quietly",
+          "doubled my reach in thirty days would also cost",
+          "me every single friend I had ever made online"
+        ],
+        "capHeightPx": 17,
+        "fontSize": 37,
+        "shrunk": true,
+        "overflow": false
+      },
+      "plate": {
+        "left": 49,
+        "top": 137,
+        "width": 623,
+        "height": 84,
+        "radius": 7
+      },
+      "path": "m 7 0 l 616 0 b 620 0 623 3 623 7 l 623 77 b 623 81 620 84 616 84 l 7 84 b 3 84 0 81 0 77 l 0 7 b 0 3 3 0 7 0"
+    }
+  ],
+  "paths": [
+    {
+      "w": 100,
+      "h": 50,
+      "r": 10,
+      "path": "m 10 0 l 90 0 b 96 0 100 4 100 10 l 100 40 b 100 46 96 50 90 50 l 10 50 b 4 50 0 46 0 40 l 0 10 b 0 4 4 0 10 0"
+    },
+    {
+      "w": 100,
+      "h": 50,
+      "r": 0,
+      "path": "m 0 0 l 100 0 l 100 50 l 0 50 l 0 0"
+    },
+    {
+      "w": 100,
+      "h": 50,
+      "r": 25,
+      "path": "m 25 0 l 75 0 b 89 0 100 11 100 25 l 100 25 b 100 39 89 50 75 50 l 25 50 b 11 50 0 39 0 25 l 0 25 b 0 11 11 0 25 0"
+    },
+    {
+      "w": 100,
+      "h": 50,
+      "r": 80,
+      "path": "m 25 0 l 75 0 b 89 0 100 11 100 25 l 100 25 b 100 39 89 50 75 50 l 25 50 b 11 50 0 39 0 25 l 0 25 b 0 11 11 0 25 0"
+    },
+    {
+      "w": 100,
+      "h": 50,
+      "r": -5,
+      "path": "m 0 0 l 100 0 l 100 50 l 0 50 l 0 0"
+    },
+    {
+      "w": 1080,
+      "h": 91,
+      "r": 11,
+      "path": "m 11 0 l 1069 0 b 1075 0 1080 5 1080 11 l 1080 80 b 1080 86 1075 91 1069 91 l 11 91 b 5 91 0 86 0 80 l 0 11 b 0 5 5 0 11 0"
+    },
+    {
+      "w": 64,
+      "h": 64,
+      "r": 32,
+      "path": "m 32 0 l 32 0 b 50 0 64 14 64 32 l 64 32 b 64 50 50 64 32 64 l 32 64 b 14 64 0 50 0 32 l 0 32 b 0 14 14 0 32 0"
+    },
+    {
+      "w": 3,
+      "h": 3,
+      "r": 1,
+      "path": "m 1 0 l 2 0 b 3 0 3 0 3 1 l 3 2 b 3 3 3 3 2 3 l 1 3 b 0 3 0 3 0 2 l 0 1 b 0 0 0 0 1 0"
+    },
+    {
+      "w": 200,
+      "h": 40,
+      "r": 20.5,
+      "path": "m 20 0 l 180 0 b 191 0 200 9 200 20 l 200 20 b 200 31 191 40 180 40 l 20 40 b 9 40 0 31 0 20 l 0 20 b 0 9 9 0 20 0"
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "r": 0,
+      "path": "m 0 0 l 0 0 l 0 0 l 0 0 l 0 0"
+    },
+    {
+      "w": 1000,
+      "h": 600,
+      "r": 153,
+      "path": "m 153 0 l 847 0 b 932 0 1000 68 1000 153 l 1000 447 b 1000 532 932 600 847 600 l 153 600 b 68 600 0 532 0 447 l 0 153 b 0 68 68 0 153 0"
+    },
+    {
+      "w": 1000,
+      "h": 600,
+      "r": 220,
+      "path": "m 220 0 l 780 0 b 902 0 1000 98 1000 220 l 1000 380 b 1000 502 902 600 780 600 l 220 600 b 98 600 0 502 0 380 l 0 220 b 0 98 98 0 220 0"
+    },
+    {
+      "w": 1000,
+      "h": 600,
+      "r": 249,
+      "path": "m 249 0 l 751 0 b 889 0 1000 111 1000 249 l 1000 351 b 1000 489 889 600 751 600 l 249 600 b 111 600 0 489 0 351 l 0 249 b 0 111 111 0 249 0"
+    },
+    {
+      "w": 2000,
+      "h": 900,
+      "r": 287,
+      "path": "m 287 0 l 1713 0 b 1872 0 2000 128 2000 287 l 2000 613 b 2000 772 1872 900 1713 900 l 287 900 b 128 900 0 772 0 613 l 0 287 b 0 128 128 0 287 0"
+    },
+    {
+      "w": 2000,
+      "h": 900,
+      "r": 316,
+      "path": "m 316 0 l 1684 0 b 1859 0 2000 141 2000 316 l 2000 584 b 2000 759 1859 900 1684 900 l 316 900 b 141 900 0 759 0 584 l 0 316 b 0 141 141 0 316 0"
+    }
+  ]
+}

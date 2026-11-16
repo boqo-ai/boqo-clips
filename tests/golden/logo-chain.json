@@ -1,0 +1,3776 @@
+{
+  "LOGO_FADE_SEC": 0.32,
+  "logos": [
+    {
+      "name": "default logo (boqo Default template values)",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "anchor top-left",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "top-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "top-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "top-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "anchor top-centre",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "top-centre",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "top-centre",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "top-centre",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "anchor top-right",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-92",
+            "y": "115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-92",
+            "y": "65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-164",
+            "y": "65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-61",
+            "y": "77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-92",
+            "y": "115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-0",
+            "y": "0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "top-right",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "top-right",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "top-right",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "anchor bottom-left",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "anchor bottom-centre",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "(W-w)/2",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-centre",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-centre",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-centre",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "anchor bottom-right",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "W-w-0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-right",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-right",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-right",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "opacity 1",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 1,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 1,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 1,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "opacity 0.99",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.99[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.99[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.99[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.99[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.99[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.99[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.99,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.99[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.99,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.99[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.99,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.99[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "opacity 0.5",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.5[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.5[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.5[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.5[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.5[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.5[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.5,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.5[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.5,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.5[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.5,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.5[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "opacity 0.05",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.05[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.05[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.05[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.05[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.05[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.05[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.05,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.05[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.05,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.05[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.05,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.05[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "width 0.05",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=54:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=54:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=96:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=36:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=54:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.05,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=54:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.05,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=54:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.05,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=54:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "width 0.1",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "width 0.1234",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=134:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=134:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=236:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=88:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=134:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1234,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=134:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1234,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=134:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1234,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=134:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "width 0.25",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=270:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=270:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=480:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=180:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=270:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.25,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=270:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.25,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=270:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.25,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=270:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "width 0.5",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=540:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=540:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=960:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=360:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=540:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.5,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=540:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.5,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=540:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.5,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=540:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "width 0.001",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.001,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.001,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.001,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "margins 0/0",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0,
+            "marginY": 0,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0,
+            "marginY": 0,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0,
+            "marginY": 0,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "margins 0.45/0.45",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "486",
+            "y": "H-h-864"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "486",
+            "y": "H-h-486"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "864",
+            "y": "H-h-486"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "324",
+            "y": "H-h-576"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "486",
+            "y": "H-h-864"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "1",
+            "y": "H-h-1"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.45,
+            "marginY": 0.45,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.45,
+            "marginY": 0.45,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.45,
+            "marginY": 0.45,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "margins 0.0854/0.06",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "margins 0.1/0.0333",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "108",
+            "y": "H-h-64"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "108",
+            "y": "H-h-36"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "192",
+            "y": "H-h-36"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "72",
+            "y": "H-h-43"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "108",
+            "y": "H-h-64"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.1,
+            "marginY": 0.0333,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.1,
+            "marginY": 0.0333,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.1,
+            "marginY": 0.0333,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "window opacity 1",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": false
+        },
+        {
+          "d": 1,
+          "fits": false
+        },
+        {
+          "d": 7.28,
+          "fits": false
+        },
+        {
+          "d": 7.64,
+          "fits": false
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 1,
+            "timing": {
+              "kind": "window",
+              "startSec": 3,
+              "holdSec": 4
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 1,
+            "timing": {
+              "kind": "window",
+              "startSec": 4.7,
+              "holdSec": 4
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=4.7:d=0.32:alpha=1,fade=t=out:st=9.02:d=0.32:alpha=1[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 1,
+            "timing": {
+              "kind": "window",
+              "startSec": 3.333,
+              "holdSec": 4
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=3.333:d=0.32:alpha=1,fade=t=out:st=7.6530000000000005:d=0.32:alpha=1[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "window at 0 opacity 1",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": false
+        },
+        {
+          "d": 1,
+          "fits": false
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 1,
+            "timing": {
+              "kind": "window",
+              "startSec": 0,
+              "holdSec": 0.5
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 1,
+            "timing": {
+              "kind": "window",
+              "startSec": 1.7,
+              "holdSec": 0.5
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=1.7:d=0.32:alpha=1,fade=t=out:st=2.52:d=0.32:alpha=1[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 1,
+            "timing": {
+              "kind": "window",
+              "startSec": 0.333,
+              "holdSec": 0.5
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,fade=t=in:st=0.333:d=0.32:alpha=1,fade=t=out:st=1.153:d=0.32:alpha=1[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "window opacity 0.35",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": false
+        },
+        {
+          "d": 1,
+          "fits": false
+        },
+        {
+          "d": 7.28,
+          "fits": false
+        },
+        {
+          "d": 7.64,
+          "fits": false
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "window",
+              "startSec": 3,
+              "holdSec": 4
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=3:d=0.32:alpha=1,fade=t=out:st=7.32:d=0.32:alpha=1[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "window",
+              "startSec": 4.7,
+              "holdSec": 4
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=4.7:d=0.32:alpha=1,fade=t=out:st=9.02:d=0.32:alpha=1[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "window",
+              "startSec": 3.333,
+              "holdSec": 4
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=3.333:d=0.32:alpha=1,fade=t=out:st=7.6530000000000005:d=0.32:alpha=1[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "window at 0 opacity 0.35",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": false
+        },
+        {
+          "d": 1,
+          "fits": false
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "window",
+              "startSec": 0,
+              "holdSec": 0.5
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=0:d=0.32:alpha=1,fade=t=out:st=0.8200000000000001:d=0.32:alpha=1[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "window",
+              "startSec": 1.7,
+              "holdSec": 0.5
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=1.7:d=0.32:alpha=1,fade=t=out:st=2.52:d=0.32:alpha=1[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "window",
+              "startSec": 0.333,
+              "holdSec": 0.5
+            }
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35,fade=t=in:st=0.333:d=0.32:alpha=1,fade=t=out:st=1.153:d=0.32:alpha=1[blogo]"
+        }
+      ]
+    },
+    {
+      "name": "with uploadedAt",
+      "frames": [
+        {
+          "f": {
+            "width": 1080,
+            "height": 1920
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 1080,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 1920,
+            "height": 1080
+          },
+          "chain": "[1:v]scale=192:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "164",
+            "y": "H-h-65"
+          }
+        },
+        {
+          "f": {
+            "width": 720,
+            "height": 1280
+          },
+          "chain": "[1:v]scale=72:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "61",
+            "y": "H-h-77"
+          }
+        },
+        {
+          "f": {
+            "width": 1081,
+            "height": 1919
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "92",
+            "y": "H-h-115"
+          }
+        },
+        {
+          "f": {
+            "width": 3,
+            "height": 3
+          },
+          "chain": "[1:v]scale=2:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]",
+          "position": {
+            "x": "0",
+            "y": "H-h-0"
+          }
+        }
+      ],
+      "fits": [
+        {
+          "d": 0,
+          "fits": true
+        },
+        {
+          "d": 1,
+          "fits": true
+        },
+        {
+          "d": 7.28,
+          "fits": true
+        },
+        {
+          "d": 7.64,
+          "fits": true
+        },
+        {
+          "d": 8,
+          "fits": true
+        },
+        {
+          "d": 30,
+          "fits": true
+        }
+      ],
+      "shifted": [
+        {
+          "o": 0,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            },
+            "uploadedAt": "2026-11-16T00:00:00.000Z"
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 1.7,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            },
+            "uploadedAt": "2026-11-16T00:00:00.000Z"
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        },
+        {
+          "o": 0.333,
+          "logo": {
+            "key": "logo.png",
+            "width": 0.1,
+            "anchor": "bottom-left",
+            "marginX": 0.0854,
+            "marginY": 0.06,
+            "opacity": 0.35,
+            "timing": {
+              "kind": "whole"
+            },
+            "uploadedAt": "2026-11-16T00:00:00.000Z"
+          },
+          "chain": "[1:v]scale=108:-2,format=rgba,colorchannelmixer=aa=0.35[blogo]"
+        }
+      ]
+    }
+  ]
+}

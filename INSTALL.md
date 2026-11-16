@@ -56,7 +56,7 @@ hold a space); `~` does not expand inside quotes, so the commands use `"$HOME/..
       A copy works the same: the skill calls its tools in `~/.boqo-clips/tools/`.
 
 4. **Check the tools the skill uses.** Run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`. It only looks,
-   and prints one JSON line: `ok` is true when every required tool works (Node 20+, ffmpeg with libass, yt-dlp), and
+   and prints one JSON line: `ok` is true when every required tool works (Node 20+, ffmpeg with libass and its ffprobe, yt-dlp), and
    `hints` says how to install each one that is missing or too old, the optional whisper.cpp included (it transcribes
    videos that have no captions). When it cannot run, `node --version` (it must be 20 or newer). Name what is missing
    and how the person installs it, in the words of `hints`. Install nothing yourself. A missing tool does not stop the

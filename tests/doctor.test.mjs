@@ -96,6 +96,27 @@ test('hintsFor: a too-old yt-dlp says upgrade, a missing one says install', () =
   assert.ok(all(hintsFor([fail('yt-dlp', 'not found on PATH')], 'darwin'), 'brew install yt-dlp'));
 });
 
+test('hintsFor linux yt-dlp: the release binary or pipx with its extras, never a bare pip install', () => {
+  for (const detail of ['not found on PATH', `yt-dlp 2025.1.1 is older than ${MIN_YTDLP}`]) {
+    const h = hintsFor([fail('yt-dlp', detail)], 'linux');
+    assert.equal(h.length, 1);
+    assert.ok(all(h, 'curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp'), h[0]);
+    assert.ok(all(h, 'chmod +x ~/.local/bin/yt-dlp'));
+    assert.ok(all(h, 'pipx install "yt-dlp[default]"'));
+    assert.ok(!all(h, 'pip install -U yt-dlp'));
+  }
+});
+
+test('hintsFor: a missing ffprobe gets the ffmpeg install line; with ffmpeg missing too, only one', () => {
+  for (const p of ['darwin', 'win32', 'linux']) {
+    const one = hintsFor([fail('ffprobe', 'not found on PATH')], p);
+    const ff = hintsFor([fail('ffmpeg', 'not found on PATH')], p);
+    assert.equal(one[0], ff[0].replace(/^ffmpeg:/, 'ffprobe:'), p);
+    const both = hintsFor([fail('ffmpeg', 'not found on PATH'), fail('ffprobe', 'not found on PATH')], p);
+    assert.equal(both.filter((l) => /^ff/.test(l)).length, 1, p);
+  }
+});
+
 test('hintsFor: with ffmpeg missing, its dependents add no second ffmpeg line', () => {
   const h = hintsFor([fail('ffmpeg', 'not found on PATH'), fail('ffmpeg-filters', 'needs ffmpeg'), fail('ffmpeg-https', 'needs ffmpeg', false)], 'linux');
   assert.equal(h.length, 1);
@@ -150,10 +171,11 @@ test('runChecks on an empty PATH: tools fail with where-to-look details, node st
       runChecks({ nodeMin: 20, whisper: 'required', streamlink: true, env: process.env }),
     );
     const c = byName(checks);
-    assert.deepEqual(checks.map((x) => x.name), ['node', 'ffmpeg', 'ffmpeg-filters', 'ffmpeg-https', 'yt-dlp', 'whisper', 'whisper-model', 'streamlink']);
+    assert.deepEqual(checks.map((x) => x.name), ['node', 'ffmpeg', 'ffprobe', 'ffmpeg-filters', 'ffmpeg-https', 'yt-dlp', 'whisper', 'whisper-model', 'streamlink']);
     assert.equal(c.node.ok, true);
     assert.match(c.node.detail, /^node \d+\.\d+\.\d+/);
-    for (const n of ['ffmpeg', 'ffmpeg-filters', 'yt-dlp', 'whisper', 'whisper-model']) assert.equal(c[n].ok, false, n);
+    for (const n of ['ffmpeg', 'ffprobe', 'ffmpeg-filters', 'yt-dlp', 'whisper', 'whisper-model']) assert.equal(c[n].ok, false, n);
+    assert.equal(c.ffprobe.required, true);
     assert.equal(c['ffmpeg-https'].ok, false);
     assert.equal(c.whisper.required, true);
     assert.equal(c['whisper-model'].required, true);
@@ -200,9 +222,34 @@ const FFMPEG_OK = `case "$*" in
   *https://*) exit 0;;
 esac`;
 
+const FFPROBE_OK = 'echo "ffprobe version 7.1.1 Copyright (c) the FFmpeg developers"';
+
+test('runChecks: ffmpeg without its ffprobe fails the required ffprobe check', posix, async () => {
+  const bin = fakeBin({ ffmpeg: FFMPEG_OK, 'yt-dlp': 'echo 2026.10.26' });
+  const broken = fakeBin({ ffmpeg: FFMPEG_OK, ffprobe: 'exit 3', 'yt-dlp': 'echo 2026.10.26' });
+  try {
+    const opts = { nodeMin: 20, whisper: 'optional', env: process.env };
+    const checks = await withEnv({ PATH: bin, BOQO_HOME: bin, BOQO_WHISPER_MODEL: undefined }, () => runChecks(opts));
+    const c = byName(checks);
+    assert.equal(c.ffmpeg.ok, true);
+    assert.equal(c.ffprobe.ok, false);
+    assert.equal(c.ffprobe.required, true);
+    assert.equal(c.ffprobe.detail, 'not found on PATH');
+    assert.equal(isOk(checks), false);
+    assert.ok(all(hintsFor(checks.filter((x) => !x.ok), 'linux'), 'ffprobe: install a full ffmpeg'));
+    const b = byName(await withEnv({ PATH: broken, BOQO_HOME: broken, BOQO_WHISPER_MODEL: undefined }, () => runChecks(opts)));
+    assert.equal(b.ffprobe.ok, false);
+    assert.match(b.ffprobe.detail, /did not run \(exit 3\)/);
+  } finally {
+    rmSync(bin, { recursive: true, force: true });
+    rmSync(broken, { recursive: true, force: true });
+  }
+});
+
 test('runChecks with fake tools: everything present is ok, details carry versions and paths', posix, async () => {
   const bin = fakeBin({
     ffmpeg: FFMPEG_OK,
+    ffprobe: FFPROBE_OK,
     'yt-dlp': 'echo 2026.10.26',
     'whisper-cli': 'echo usage',
     streamlink: 'echo "streamlink 7.1.2"',
@@ -216,6 +263,7 @@ test('runChecks with fake tools: everything present is ok, details carry version
     for (const x of checks) assert.equal(x.ok, true, `${x.name}: ${x.detail}`);
     const c = byName(checks);
     assert.equal(c.ffmpeg.detail, `ffmpeg 7.1.1 at ${join(bin, 'ffmpeg')}`);
+    assert.equal(c.ffprobe.detail, `ffprobe 7.1.1 at ${join(bin, 'ffprobe')}`);
     assert.equal(c['yt-dlp'].detail, `yt-dlp 2026.10.26 at ${join(bin, 'yt-dlp')}`);
     assert.ok(c.whisper.detail.includes(join(bin, 'whisper-cli')));
     assert.ok(c['whisper-model'].detail.includes('ggml-base.bin'));
@@ -313,7 +361,7 @@ test('tools/doctor.mjs prints one JSON line, exits 0 even when checks fail, and 
     assert.equal(lines.length, 1);
     const out = JSON.parse(lines[0]);
     assert.equal(out.ok, false);
-    assert.equal(out.checks.length, 8);
+    assert.equal(out.checks.length, 9);
     assert.ok(out.hints.length >= 4);
     const bad = spawnSync(process.execPath, [script, '--node', '18'], { encoding: 'utf8' });
     assert.equal(bad.status, 1);

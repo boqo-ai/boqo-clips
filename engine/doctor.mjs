@@ -1,5 +1,5 @@
 // Doctor: looks at what this machine has (Node, ffmpeg with libass/ebur128 and
-// working HTTPS, yt-dlp, whisper.cpp and a model, optionally streamlink) and
+// working HTTPS, its ffprobe, yt-dlp, whisper.cpp and a model, optionally streamlink) and
 // says exactly how to install what is missing, per OS. It only looks; it never
 // installs anything.
 import { spawn } from 'node:child_process';
@@ -11,7 +11,7 @@ import { boqoHome } from './brand.mjs';
 import { toolEnv } from './env.mjs';
 
 /**
- * @typedef {{ name: 'node'|'ffmpeg'|'ffmpeg-filters'|'ffmpeg-https'|'yt-dlp'|'whisper'|'whisper-model'|'streamlink',
+ * @typedef {{ name: 'node'|'ffmpeg'|'ffprobe'|'ffmpeg-filters'|'ffmpeg-https'|'yt-dlp'|'whisper'|'whisper-model'|'streamlink',
  *             ok: boolean, detail: string, required: boolean }} Check
  */
 
@@ -117,6 +117,17 @@ async function checkFfmpeg(env) {
   return { name: 'ffmpeg', ok: true, detail: `ffmpeg ${ver} at ${path}`, required: true };
 }
 
+async function checkFfprobe(env) {
+  const path = locate(env, 'ffprobe');
+  if (!path) return { name: 'ffprobe', ok: false, detail: 'not found on PATH', required: true };
+  const r = await run(env, 'ffprobe', ['-hide_banner', '-version']);
+  const m = /ffprobe version (?:n(?=\d))?(\S+)/i.exec(r.stdout);
+  if (r.code !== 0 || !m) {
+    return { name: 'ffprobe', ok: false, detail: `ffprobe at ${path} did not run (${r.signal ?? `exit ${r.code}`})`, required: true };
+  }
+  return { name: 'ffprobe', ok: true, detail: `ffprobe ${m[1].replace(/-static$/, '')} at ${path}`, required: true };
+}
+
 async function checkFilters(env, ffmpegOk) {
   if (!ffmpegOk) return { name: 'ffmpeg-filters', ok: false, detail: 'needs ffmpeg', required: true };
   const r = await run(env, 'ffmpeg', ['-hide_banner', '-filters']);
@@ -188,7 +199,7 @@ async function checkStreamlink(env) {
 export async function runChecks(o) {
   const env = o.env ?? toolEnv();
   const wr = o.whisper === 'required';
-  const ffmpeg = await checkFfmpeg(env);
+  const [ffmpeg, ffprobe] = await Promise.all([checkFfmpeg(env), checkFfprobe(env)]);
   const [filters, https, ytdlp, whisper, streamlink] = await Promise.all([
     checkFilters(env, ffmpeg.ok),
     checkHttps(env, ffmpeg.ok),
@@ -196,7 +207,7 @@ export async function runChecks(o) {
     checkWhisper(env, wr),
     o.streamlink ? checkStreamlink(env) : null,
   ]);
-  return [checkNode(o.nodeMin), ffmpeg, filters, https, ytdlp, whisper, checkModel(wr), ...(streamlink ? [streamlink] : [])];
+  return [checkNode(o.nodeMin), ffmpeg, ffprobe, filters, https, ytdlp, whisper, checkModel(wr), ...(streamlink ? [streamlink] : [])];
 }
 
 /** True when every required check passed. */
@@ -205,6 +216,9 @@ export const isOk = (checks) => checks.every((c) => c.ok || !c.required);
 // ---- hints
 
 const BTBN = 'https://github.com/BtbN/FFmpeg-Builds/releases';
+// The release binary carries yt-dlp-ejs; a bare `pip install` lacks it and hits PEP 668.
+const YTDLP_BINARY =
+  'mkdir -p ~/.local/bin && curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp && chmod +x ~/.local/bin/yt-dlp';
 const RESTART = 'After installing, restart the agent so it sees the new PATH.';
 
 function modelDir() {
@@ -214,7 +228,7 @@ function modelDir() {
 const FFMPEG = {
   darwin: '`brew install ffmpeg-full` (the engine finds it by itself; plain `brew install ffmpeg` has no libass)',
   win32: '`winget install Gyan.FFmpeg`',
-  linux: `a full ffmpeg: your distro package (\`sudo apt install ffmpeg\`, \`sudo dnf install ffmpeg\`) or the BtbN build ${BTBN}`,
+  linux: `install a full ffmpeg: your distro package (\`sudo apt install ffmpeg\`, \`sudo dnf install ffmpeg\`) or the BtbN build ${BTBN}`,
 };
 
 /**
@@ -242,12 +256,17 @@ export function hintsFor(failed, platform) {
         break;
       }
       case 'ffmpeg':
-        lines.push(`ffmpeg: install ${FFMPEG[p]}`);
+        lines.push(`ffmpeg: ${FFMPEG[p]}`);
+        installs = true;
+        break;
+      case 'ffprobe':
+        if (noFfmpeg) break;
+        lines.push(`ffprobe: ${FFMPEG[p]}`);
         installs = true;
         break;
       case 'ffmpeg-filters':
         if (noFfmpeg) break;
-        lines.push(`ffmpeg-filters: this ffmpeg lacks libass or ebur128 (${c.detail}); install ${FFMPEG[p]}`);
+        lines.push(`ffmpeg-filters: this ffmpeg lacks libass or ebur128 (${c.detail}); ${FFMPEG[p]}`);
         installs = true;
         break;
       case 'ffmpeg-https':
@@ -258,7 +277,7 @@ export function hintsFor(failed, platform) {
           );
         } else {
           const what = c.detail.includes(NO_HTTPS_BUILD) ? 'was built without HTTPS support' : 'crashes on HTTPS input (exit 139 / -11, typical of static builds)';
-          lines.push(`ffmpeg-https: this ffmpeg ${what}; install ${FFMPEG[p]}`);
+          lines.push(`ffmpeg-https: this ffmpeg ${what}; ${FFMPEG[p]}`);
           installs = true;
         }
         break;
@@ -269,7 +288,7 @@ export function hintsFor(failed, platform) {
         else if (p === 'win32') lines.push(`yt-dlp: ${old ? '`winget upgrade yt-dlp.yt-dlp`' : '`winget install yt-dlp.yt-dlp`'} (needs ${MIN_YTDLP}+)`);
         else
           lines.push(
-            `yt-dlp: ${old ? '`yt-dlp -U` or ' : ''}\`python3 -m pip install -U yt-dlp\`, or the binary from https://github.com/yt-dlp/yt-dlp/releases/latest (needs ${MIN_YTDLP}+; distro packages are often older)`,
+            `yt-dlp: ${old ? '`yt-dlp -U`, or ' : ''}the release binary, \`${YTDLP_BINARY}\`, or \`pipx install "yt-dlp[default]"\` (needs ${MIN_YTDLP}+; distro packages are often older)`,
           );
         break;
       }

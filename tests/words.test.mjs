@@ -286,6 +286,38 @@ test('wordsFromWhisper: sorted, s < e, tolerates junk', () => {
   assert.deepEqual(wordsFromWhisper(null), [])
 })
 
+test('wordsFromWhisper: a word start stretched into the silence before it is pulled to its end', () => {
+  // longest a word may last: min(1.2, 0.25 + 0.09 x its characters)
+  const j = {
+    transcription: [
+      { offsets: { from: 2000, to: 10000 }, text: ' Hello' },
+      { offsets: { from: 10000, to: 10300 }, text: ' a' },
+      { offsets: { from: 11000, to: 19000 }, text: ' internationalization' },
+    ],
+  }
+  assert.deepEqual(wordsFromWhisper(j), [
+    { w: 'Hello', s: 9.3, e: 10 },
+    { w: 'a', s: 10, e: 10.3 },
+    { w: 'internationalization', s: 17.8, e: 19 },
+  ])
+  assert.deepEqual(wordsFromWhisper({ transcription: [{ offsets: { from: 0, to: 8000 }, text: ' So' }] }, 600), [
+    { w: 'So', s: 607.57, e: 608 },
+  ])
+})
+
+test('wordsFromWhisper: the clamp keeps words sorted and s < e', () => {
+  const j = {
+    transcription: [
+      { offsets: { from: 0, to: 5000 }, text: ' long' },
+      { offsets: { from: 1000, to: 1200 }, text: ' b' },
+    ],
+  }
+  assert.deepEqual(wordsFromWhisper(j), [
+    { w: 'b', s: 1, e: 1.2 },
+    { w: 'long', s: 4.39, e: 5 },
+  ])
+})
+
 test('wordsInRange keeps overlapping words and rebases to 0', () => {
   const words = [
     { w: 'a', s: 1, e: 2 },
@@ -450,12 +482,13 @@ test('wordsFromWhisper: a stacked run never passes the next word, even when its 
     transcription: [
       { offsets: { from: 1000, to: 1010 }, text: ' a' },
       { offsets: { from: 1000, to: 1010 }, text: ' b' },
-      { offsets: { from: 1000, to: 1400 }, text: ' c' },
+      // four characters may last 0.61 s, so the start clamp leaves this one be
+      { offsets: { from: 1000, to: 1400 }, text: ' cccc' },
       { offsets: { from: 1100, to: 1200 }, text: ' d' },
     ],
   }
   const out = wordsFromWhisper(j)
-  assert.deepEqual(out.map((x) => x.w), ['a', 'b', 'c', 'd'])
+  assert.deepEqual(out.map((x) => x.w), ['a', 'b', 'cccc', 'd'])
   assert.deepEqual(out.map((x) => x.s), [1, 1.033, 1.067, 1.1])
   assert.deepEqual(out.slice(0, 3).map((x) => x.e), [1.033, 1.067, 1.1])
   for (let i = 0; i < out.length; i++) {

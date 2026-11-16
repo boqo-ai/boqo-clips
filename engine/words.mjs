@@ -200,11 +200,16 @@ function spreadStacked(words) {
   return words;
 }
 
+// The longest a whisper word may last, by its characters: whisper stretches
+// a word's start back into the silence before it (captions came ~8 s early).
+const longestWordSec = (text) => Math.min(1.2, 0.25 + 0.09 * [...text].length);
+
 /**
  * Words from whisper.cpp `-oj` JSON (`offsets` are milliseconds). Non-speech
  * items (`[BLANK_AUDIO]`, `(music)`, `♪`) and sound tags split across items
- * (`(upbeat` + `music)`) are dropped; words stacked on one timestamp are
- * spread out.
+ * (`(upbeat` + `music)`) are dropped. A word's start is pulled to at most
+ * min(1.2, 0.25 + 0.09 x its characters) seconds before its end. Words stacked
+ * on one timestamp are spread out.
  * @param {object} j parsed whisper JSON
  * @param {number} [offsetSec] added to every time, for a cut that starts later
  * @returns {Word[]}
@@ -220,8 +225,9 @@ export function wordsFromWhisper(j, offsetSec = 0) {
     kept.push({ text, from, to });
   }
   const out = dropNonSpeech(kept, (x) => x.text).map(({ text, from, to }) => {
-    const s = round3(offsetSec + from / 1000);
-    let e = round3(offsetSec + to / 1000);
+    const end = offsetSec + to / 1000;
+    const s = round3(Math.max(offsetSec + from / 1000, end - longestWordSec(text)));
+    let e = round3(end);
     if (e <= s) e = round3(s + MIN_WORD_SEC);
     return { w: text, s, e };
   });

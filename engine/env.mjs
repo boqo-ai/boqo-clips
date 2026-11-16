@@ -7,13 +7,10 @@ import { posix } from 'node:path';
 
 /** ffmpeg-full's bin folder, Apple silicon first, then Intel. */
 export const MAC_FFMPEG_DIRS = ['/opt/homebrew/opt/ffmpeg-full/bin', '/usr/local/opt/ffmpeg-full/bin'];
-/** Homebrew's own bin folders, which a non-login shell may not have. */
-export const MAC_BREW_BINS = ['/opt/homebrew/bin', '/usr/local/bin'];
 
 /**
  * `baseEnv` with, on macOS only, every ffmpeg-full bin folder that exists put
- * first on PATH, and every Homebrew bin folder that exists and is missing
- * added last. Any other OS gets `baseEnv` as it is. Never changes `baseEnv`.
+ * first on PATH. Any other OS gets `baseEnv` as it is. Never changes `baseEnv`.
  * @param {NodeJS.ProcessEnv} [baseEnv]
  * @param {string} [platform]
  * @param {(path: string) => boolean} [exists]
@@ -21,10 +18,9 @@ export const MAC_BREW_BINS = ['/opt/homebrew/bin', '/usr/local/bin'];
  */
 export function toolEnv(baseEnv = process.env, platform = process.platform, exists = existsSync) {
   if (platform !== 'darwin') return baseEnv;
-  const sep = posix.delimiter;
-  const parts = String(baseEnv.PATH ?? '').split(sep).filter(Boolean);
   const front = MAC_FFMPEG_DIRS.filter((d) => exists(d));
-  const back = MAC_BREW_BINS.filter((d) => !parts.includes(d) && exists(d));
-  if (front.length === 0 && back.length === 0) return baseEnv;
-  return { ...baseEnv, PATH: [...front, ...parts.filter((p) => !front.includes(p)), ...back].join(sep) };
+  if (front.length === 0) return baseEnv;
+  const sep = posix.delimiter;
+  const rest = String(baseEnv.PATH ?? '').split(sep).filter((p) => p && !front.includes(p));
+  return { ...baseEnv, PATH: [...front, ...rest].join(sep) };
 }

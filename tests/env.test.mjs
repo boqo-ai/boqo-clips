@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { MAC_BREW_BINS, MAC_FFMPEG_DIRS, toolEnv } from '../engine/env.mjs';
+import { MAC_FFMPEG_DIRS, toolEnv } from '../engine/env.mjs';
 
 const ARM = '/opt/homebrew/opt/ffmpeg-full/bin';
 const INTEL = '/usr/local/opt/ffmpeg-full/bin';
@@ -10,7 +10,6 @@ const only = (...dirs) => (p) => dirs.includes(p);
 
 test('toolEnv: the ffmpeg-full folders, Apple silicon first', () => {
   assert.deepEqual(MAC_FFMPEG_DIRS, [ARM, INTEL]);
-  assert.deepEqual(MAC_BREW_BINS, ['/opt/homebrew/bin', '/usr/local/bin']);
 });
 
 test('toolEnv on macOS puts an existing ffmpeg-full first on PATH, keeping the rest in order', () => {
@@ -31,9 +30,9 @@ test('toolEnv on macOS moves ffmpeg-full to the front once, never twice', () => 
   assert.equal(env.PATH, `${ARM}:/usr/bin:/bin`);
 });
 
-test('toolEnv on macOS adds a missing Homebrew bin folder at the end, when it exists', () => {
-  const env = toolEnv({ PATH: '/usr/bin:/bin' }, 'darwin', only('/opt/homebrew/bin', '/usr/local/bin'));
-  assert.equal(env.PATH, '/usr/bin:/bin:/opt/homebrew/bin:/usr/local/bin');
+test('toolEnv on macOS adds nothing else: a test or a person can still leave a tool off PATH', () => {
+  const base = { PATH: '/usr/bin:/bin' };
+  assert.equal(toolEnv(base, 'darwin', only('/opt/homebrew/bin', '/usr/local/bin')), base);
   assert.equal(toolEnv({}, 'darwin', only(ARM)).PATH, ARM);
 });
 

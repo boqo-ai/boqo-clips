@@ -8,8 +8,8 @@
 // Prints one JSON line and exits 0, or exits 1 with {"error": …} / {"ok": false, …}. No signed URL is ever printed.
 // The logic and why a PUT carries no content-type: engine/boqo-upload-lib.mjs.
 //
-// One line differs from boqount: ffprobe runs with toolEnv() (engine/env.mjs), not with
-// ":/opt/homebrew/bin:/usr/local/bin" appended to PATH on every OS.
+// One line differs from boqount: ffprobe runs with toolEnv() (engine/env.mjs, macOS
+// ffmpeg-full first), not with ":/opt/homebrew/bin:/usr/local/bin" appended to PATH on every OS.
 import { execFile } from "node:child_process";
 import { readFile, stat } from "node:fs/promises";
 import { promisify } from "node:util";
@@ -17,7 +17,7 @@ import { run } from "../engine/boqo-upload-lib.mjs";
 import { toolEnv } from "../engine/env.mjs";
 
 const execFileAsync = promisify(execFile);
-// On a Mac, ffprobe often lives in Homebrew's prefix (keg-only ffmpeg-full included), which an agent shell may not have on PATH.
+// On a Mac, ffprobe often lives in keg-only ffmpeg-full, which an agent shell does not have on PATH.
 const env = toolEnv();
 const exec = (file, args) => execFileAsync(file, args, { timeout: 60_000, maxBuffer: 16 * 1024 * 1024, env });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

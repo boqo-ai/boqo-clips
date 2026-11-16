@@ -14,7 +14,7 @@
 //   rejects (enum, namespace, parameter properties); esbuild drops ordinary
 //   comments, so the fallback warns and the comments must be restored by hand.
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import { stripTypeScriptTypes } from 'node:module';
 import { basename, dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -28,12 +28,14 @@ const die = (msg) => {
 
 const { values, positionals } = parseArgs({ allowPositionals: true, options: { pin: { type: 'string' } } });
 if (positionals.length !== 2) die('usage: node scripts/parity/strip.mjs <boqo .ts file> <out .mjs> [--pin <sha>]');
-const src = resolve(positionals[0]);
+// Real paths, so git's toplevel and the file agree under symlinks (/var -> /private/var
+// on macOS) and Windows 8.3 short names.
+const src = realpathSync.native(resolve(positionals[0]));
 const out = resolve(positionals[1]);
 
 const top = spawnSync('git', ['-C', dirname(src), 'rev-parse', '--show-toplevel'], { encoding: 'utf8' });
 if (top.status !== 0) die(`${src} is not inside a git checkout, so its boqo path is unknown`);
-const path = relative(top.stdout.trim(), src).split('\\').join('/');
+const path = relative(realpathSync.native(top.stdout.trim()), src).split('\\').join('/');
 const pin = values.pin ?? readFileSync(join(root, 'engine/boqo/PIN'), 'utf8').split('\n')[0].trim();
 
 const text = readFileSync(src, 'utf8');

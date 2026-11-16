@@ -1,5 +1,5 @@
 // The SelectionInput of one selection request, built from what the skill has:
-// a yt-dlp info dict (or null for a local file), the run's sentence segments,
+// a yt-dlp info dict (null for a local file; only an `extractor_key` of Youtube gives the video context), the run's sentence segments,
 // the viewer comments (or null), and the person's choices. It derives every
 // field the way hosted `loadSelectionInput` (apps/worker/src/select/handler.ts)
 // and `parseSourceMetadata` (apps/worker/src/ingest/metadata.ts) do, at the
@@ -7,11 +7,13 @@
 //   - the replay tunables and the bridge span are the defaults;
 //   - `feedback` and `seed` are always empty (they come from boqo's database);
 //   - the opener and the context line are off, so no field for them exists.
+// Untrusted text is cleaned here (see cleanSegment); the ported modules are not touched.
 // tests/select-request.test.mjs compares the message built from this input
 // with the one boqo's own chain builds (tests/golden/build-user-message-*.json).
 import { clipTargetFor } from './boqo/clip-target.mjs';
 import { normalizePrompt } from './boqo/normalize-prompt.mjs';
 import { GENRE_PRESETS, CLIP_LENGTH_PRESETS, resolveClipLength, resolveGenre } from './boqo/selection-presets.mjs';
+import { sanitiseQuote } from './boqo/quote-text.mjs';
 import { pickReactions } from './boqo/viewer-reactions.mjs';
 import { videoContextOf } from './boqo/video-context.mjs';
 import { DEFAULT_BRIDGE_MAX_SEC, DEFAULT_REPLAY_TUNABLES } from './boqo/replay-config.mjs';
@@ -29,6 +31,29 @@ const stripUnstorable = (text) => text.replace(NUL, '').replace(LONE_SURROGATE, 
 const cut = (text, max) => Array.from(text).slice(0, max).join('');
 const str = (v) => (typeof v === 'string' && v.length > 0 ? v : null);
 const isRecord = (v) => typeof v === 'object' && v !== null;
+
+// The agent that reads the request has a shell on the person's machine, and
+// captions, titles, descriptions and comments are other people's text.
+// Hosted's `buildUserMessage` already passes the title, channel, description,
+// chapter titles, reactions and the creator's request through `sanitiseQuote`
+// or `neutraliseFences`; it writes a transcript line as it is, so the segment
+// text is cleaned here, upstream, with the same ported `sanitiseQuote` (control
+// characters and line breaks become one space, links go, quotes become ',
+// runs of three or more angle brackets are cut down) and no length cap. The
+// ported functions stay byte-identical to boqo's.
+const NO_CAP = Number.MAX_SAFE_INTEGER;
+const cleanSegment = (s) => {
+  if (!isRecord(s) || typeof s.text !== 'string') throw new Error('a transcript segment has no text');
+  return { ...s, text: sanitiseQuote(s.text, NO_CAP) };
+};
+
+// A BCP-47-shaped tag (the transcript language is printed in the request), else English.
+const LANGUAGE_TAG = /^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$/;
+const languageOf = (v) => (typeof v === 'string' && LANGUAGE_TAG.test(v) ? v : null);
+
+// yt-dlp names the extractor that read the page. Only YouTube's own are a
+// YouTube video's title and description (hosted: `sourceKind === "youtube"`).
+const isYoutube = (info) => isRecord(info) && info.extractor_key === 'Youtube';
 
 /** yt-dlp heatmap `{start_time, end_time, value}` as hosted's `HeatmapEntry`, or null. */
 function heatmapOf(value) {
@@ -73,6 +98,7 @@ function chaptersOf(value) {
  */
 export function buildSelectionInput({ info = null, segments, comments = null, genre = 'auto', length = 'auto', prompt = null, language = null }) {
   if (!Array.isArray(segments) || segments.length === 0) throw new Error('there are no transcript segments to select from');
+  const clean = segments.map(cleanSegment);
   const known = (list, key, what) => {
     if (!list.some((p) => p.key === key)) throw new Error(`unknown ${what} "${key}": use ${list.map((p) => p.key).join(', ')}`);
   };
@@ -81,7 +107,7 @@ export function buildSelectionInput({ info = null, segments, comments = null, ge
 
   const meta = isRecord(info) ? info : {};
   // Hosted: `project.durationSec ?? segments.at(-1).end`, the duration being yt-dlp's, rounded.
-  const durationSec = typeof meta.duration === 'number' && Number.isFinite(meta.duration) && meta.duration > 0 ? Math.round(meta.duration) : segments.at(-1).end;
+  const durationSec = typeof meta.duration === 'number' && Number.isFinite(meta.duration) && meta.duration > 0 ? Math.round(meta.duration) : clean.at(-1).end;
   const heatmap = heatmapOf(meta.heatmap);
   const chapters = chaptersOf(meta.chapters);
   const reactions = comments === null ? null : pickReactions(comments, durationSec);
@@ -89,16 +115,16 @@ export function buildSelectionInput({ info = null, segments, comments = null, ge
   const replay = discountHeatmap(heatmap, (chapters ?? []).map((c) => c.startSec), DEFAULT_REPLAY_TUNABLES);
 
   return {
-    language: str(language) ?? str(meta.language) ?? 'en',
+    language: languageOf(language) ?? languageOf(meta.language) ?? 'en',
     durationSec,
-    segments,
+    segments: clean,
     peaks: findPeakRegions(replay === null ? null : curveBins(replay), durationSec),
     bridgeMaxSec: DEFAULT_BRIDGE_MAX_SEC,
     maxClips: clipTargetFor(durationSec),
     genre: resolveGenre(genre),
     clipLength: resolveClipLength(length),
     source: videoContextOf({
-      sourceKind: isRecord(info) ? 'youtube' : 'upload',
+      sourceKind: isYoutube(info) ? 'youtube' : 'upload',
       title: str(meta.title),
       channelName: str(meta.channel) ?? str(meta.uploader),
       description: descriptionOf(meta.description),

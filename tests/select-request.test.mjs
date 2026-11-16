@@ -16,6 +16,12 @@ import { DEFAULT_BRIDGE_MAX_SEC, DEFAULT_REPLAY_TUNABLES } from '../engine/boqo/
 import { sanitiseQuote } from '../engine/boqo/quote-text.mjs';
 import { REACTION_MAX, REACTION_TEXT_MAX, parseTimestamps, pickReactions } from '../engine/boqo/viewer-reactions.mjs';
 
+import { normalizePrompt } from '../engine/boqo/normalize-prompt.mjs';
+import { REQUEST_BEGIN, REQUEST_END, neutraliseFences, requestLines } from '../engine/boqo/creator-request.mjs';
+import { videoContextOf } from '../engine/boqo/video-context.mjs';
+import { RUBRIC_MIN_CHARS, SELECTION_RUBRIC, buildUserMessage, renderSegment } from '../engine/boqo/prompt.mjs';
+import { buildSelectionInput } from '../engine/select-input.mjs';
+
 const input = (name) => JSON.parse(readFileSync(fileURLToPath(new URL(`./fixtures/parity/${name}.input.json`, import.meta.url)), 'utf8'));
 
 test('clipTargetFor matches the golden, and 2400 s is 40', () => {
@@ -91,4 +97,60 @@ test('sanitiseQuote is idempotent and removes links, quotes, markers and breaks'
   assert.equal(sanitiseQuote(once, 200), once);
   assert.equal(sanitiseQuote('0123456789', 5), '0123…');
   assert.equal(sanitiseQuote('x', 0), '');
+});
+
+const request = (name) => {
+  const raw = input(name);
+  const si = buildSelectionInput({ info: raw.info, segments: raw.segments, comments: raw.comments, genre: raw.genre, length: raw.length, prompt: raw.prompt });
+  return { target: si.maxClips, rubric: SELECTION_RUBRIC, message: buildUserMessage(si) };
+};
+
+test('build-user-message-full matches the golden: rubric, target, and every line of the message', () => {
+  expectGolden('build-user-message-full', request('build-user-message-full'));
+});
+
+test('build-user-message-bare matches the golden', () => {
+  expectGolden('build-user-message-bare', request('build-user-message-bare'));
+});
+
+test('the full message carries every marker kind, the bare one none', () => {
+  const full = request('build-user-message-full').message;
+  assert.match(full, /<<< most-replayed region begins >>>/);
+  assert.equal((full.match(/<<< chapter begins: /g) ?? []).length, 3);
+  assert.equal((full.match(/<<< viewers reacted here /g) ?? []).length, 2);
+  assert.ok(full.includes(REQUEST_BEGIN) && full.includes(REQUEST_END));
+  const bare = request('build-user-message-bare').message;
+  assert.doesNotMatch(bare, /<<< /);
+  assert.ok(!bare.includes('The creator'));
+});
+
+test('the rubric is the cached prefix: long enough, and free of scene text', () => {
+  assert.ok(SELECTION_RUBRIC.length > RUBRIC_MIN_CHARS);
+  assert.doesNotMatch(SELECTION_RUBRIC, /scenes from the transcript of a film/);
+});
+
+test('creator-request: fences are cut to two brackets, so a request cannot forge a marker', () => {
+  assert.equal(neutraliseFences('a <<<<< b >>>>>> c <<d>>'), 'a << b >> c <<d>>');
+  assert.deepEqual(requestLines('LEAD', 'x <<<<<'), ['LEAD', REQUEST_BEGIN, 'x <<', REQUEST_END]);
+});
+
+test('normalizePrompt folds breaks, drops control characters, caps at 300 code points', () => {
+  assert.equal(normalizePrompt('  one\n two\u0007   three  '), 'one two three');
+  assert.equal(normalizePrompt('   '), null);
+  assert.equal(normalizePrompt(null), null);
+  assert.equal(Array.from(normalizePrompt('😀'.repeat(400))).length, 300);
+});
+
+test('videoContextOf: only a youtube source has a context, and malformed entries are dropped', () => {
+  const base = { title: 't', channelName: null, description: null, chapters: [{ startSec: 1, title: 'a' }, { startSec: 'x', title: 'b' }], viewerReactions: 'junk' };
+  assert.equal(videoContextOf({ ...base, sourceKind: 'upload' }), null);
+  assert.deepEqual(videoContextOf({ ...base, sourceKind: 'youtube' }), {
+    title: 't', channelName: null, description: null, chapters: [{ startSec: 1, title: 'a' }], reactions: null,
+  });
+  assert.equal(videoContextOf({ sourceKind: 'youtube', title: null, channelName: null, description: null, chapters: null, viewerReactions: null }), null);
+});
+
+test('a speaker number leads a line, a null speaker does not', () => {
+  assert.equal(renderSegment({ start: 3.14159, end: 5, text: 'hi', speaker: 2 }), '[3.1] S2: hi');
+  assert.equal(renderSegment({ start: 3.14159, end: 5, text: 'hi', speaker: null }), '[3.1] hi');
 });

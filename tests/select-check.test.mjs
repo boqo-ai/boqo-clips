@@ -167,7 +167,7 @@ test('CLI: writes clips.json that parses, with rendered false everywhere, and pr
   try {
     const r = cli(dir);
     assert.equal(r.status, 0);
-    assert.deepEqual(r.out, { ok: true, kept: 2, dropped: { too_short: 1 } });
+    assert.deepEqual(r.out, { ok: true, kept: 2, dropped: { too_short: 1 }, dropped_clips: [{ clip: 3, start: 100, end: 108, reason: 'too_short' }] });
     const record = JSON.parse(readFileSync(join(dir, 'clips.json'), 'utf8'));
     assert.equal(record.clips.length, 2);
     assert.ok(record.clips.every((c) => c.rendered === false));
@@ -208,7 +208,7 @@ test('CLI: the length band is the one select-request chose (select-options.json)
   const clips = [wire(0, 60)]; // 60 s: inside auto's 15-90, outside 30_60's? no: 25-70 holds it; under_30's 10-35 does not
   const dir = runDir({ clips }, { options: { genre: 'auto', length: 'under_30', language: 'en' } });
   try {
-    assert.deepEqual(cli(dir).out, { ok: true, kept: 0, dropped: { too_long: 1 } });
+    assert.deepEqual(cli(dir).out, { ok: true, kept: 0, dropped: { too_long: 1 }, dropped_clips: [{ clip: 1, start: 0, end: 60, reason: 'too_long' }] });
     assert.deepEqual(cli(dir, '--length', 'auto').out, { ok: true, kept: 1, dropped: {} });
     const bad = cli(dir, '--length', 'huge');
     assert.equal(bad.status, 1);
@@ -237,7 +237,7 @@ test('select-request.mjs then select-check.mjs: the length chosen for the reques
     const request = spawnSync(process.execPath, [join(HERE, '..', 'tools', 'select-request.mjs'), '--run', dir, '--length', 'under_30'], { encoding: 'utf8' });
     assert.equal(request.status, 0, request.stdout + request.stderr);
     writeFileSync(join(dir, 'selection.json'), JSON.stringify({ clips: [wire(0, 60), wire(100, 125)] }));
-    assert.deepEqual(cli(dir).out, { ok: true, kept: 1, dropped: { too_long: 1 } });
+    assert.deepEqual(cli(dir).out, { ok: true, kept: 1, dropped: { too_long: 1 }, dropped_clips: [{ clip: 1, start: 0, end: 60, reason: 'too_long' }] });
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -266,4 +266,32 @@ test('SKILL.md steps 5 to 7 are the request, the selection.json and the check; p
   assert.ok(steps.includes('tools/select-check.mjs'));
   assert.ok(steps.includes('selection.json') && steps.includes('clips.json'));
   assert.ok(!steps.includes('picks-check') && !steps.includes('--find'));
+});
+
+test('dropped_clips names each dropped clip by its place in selection.json (1 is the first), its own start-end, and why', () => {
+  // clip 1 (score 90) and clip 3 (score 50) overlap: the lower-scored 3 is the one dropped; clip 2 is too short
+  const sel = [wire(0, 30, { score: 90 }), wire(100, 104), wire(10, 40, { score: 50 }), wire(200, 230)];
+  const r = check(sel);
+  assert.equal(r.ok, true);
+  assert.deepEqual(r.dropped, { too_short: 1, overlaps: 1 });
+  assert.deepEqual(
+    [...r.droppedClips].sort((a, b) => a.clip - b.clip),
+    [
+      { clip: 2, start: 100, end: 104, reason: 'too_short' },
+      { clip: 3, start: 10, end: 40, reason: 'overlaps' },
+    ],
+  );
+});
+
+test('dropped_clips names the clips over the cap, and is absent from the CLI summary when nothing was dropped', () => {
+  const clips = Array.from({ length: 60 }, (_, i) => wire(40 * i, 40 * i + 30, { score: 50 + (i % 40) }));
+  const r = check(clips, 2400);
+  assert.equal(r.droppedClips.length, 10);
+  assert.ok(r.droppedClips.every((d) => d.reason === 'over_cap' && d.clip >= 1 && d.clip <= 60 && d.end - d.start === 30));
+  const dir = runDir({ clips: [wire(0, 30)] });
+  try {
+    assert.deepEqual(cli(dir).out, { ok: true, kept: 1, dropped: {} });
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });

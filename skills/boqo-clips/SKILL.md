@@ -124,7 +124,8 @@ local file, below. `/boqo-clips render …`: Render more, below.
    4. `complete_upload {upload_id}`, then `transcribe {upload_id}`: `{id, credits, minutes}`. A link in either reply
       (the connection's daily cap): give it to the person and go to item 6.
    5. `get_transcript {id}`, about every 20 seconds (a background `sleep 20`, post.md), until `status` is `done`
-      (with a `url`) or `failed` (with an `error`). Then, with the `url` exactly as it came and never shown:
+      (with a `url`) or `failed` (with an `error`); an answer of `{not_found: true}` is final, so stop polling and go
+      to item 6. Then, with the `url` exactly as it came and never shown:
       ```sh
       node "$HOME/.boqo-clips/tools/transcript-boqo.mjs" --url "<url>" --run "<run>"
       ```

@@ -130,3 +130,9 @@ test('the commands in the skill docs name tools and flags that exist', () => {
   }
   assert.ok(checked > 40, `only ${checked} flags checked`);
 });
+
+// A16b's review: get_transcript answering {not_found: true} is final; the run stops polling and falls back in one line.
+test('SKILL.md stops polling get_transcript on not_found', () => {
+  const skill = readFileSync(join(SKILL_DIR, 'SKILL.md'), 'utf8').replace(/\r\n/g, '\n');
+  assert.match(skill, /\{not_found: true\}` is final, so stop polling/);
+});

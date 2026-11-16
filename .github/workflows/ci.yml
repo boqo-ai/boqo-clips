@@ -29,6 +29,8 @@ jobs:
         if: runner.os == 'macOS'
         run: |
           brew install ffmpeg-full
+          # the runner's own ffmpeg has libass; unlink it so only toolEnv can reach one
+          brew unlink ffmpeg 2>/dev/null || true
           if ! command -v ffmpeg; then echo "no ffmpeg on PATH: the tests find ffmpeg-full only through toolEnv"
           elif ffmpeg -hide_banner -filters | grep -qE '^ *[^ ]+ +ass '; then echo "::warning::the ffmpeg on PATH has libass; the toolEnv check proves less"
           else echo "the ffmpeg on PATH has no libass: the libass tests pass only through toolEnv"; fi

@@ -64,8 +64,9 @@ const frameOf = (output) => {
 // core's `BrandLogo` (packages/core/src/brand.ts) bounds, which that module's zod schema states and this skill does not
 // carry (brand.ts also holds the whole brand-settings schema): the anchors, the margin, width and opacity bands, and
 // `BrandTiming`'s window bounds.
-const LOGO_ANCHORS = ['top-left', 'top-centre', 'top-right', 'bottom-left', 'bottom-centre', 'bottom-right'];
-function checkLogo(logo) {
+export const LOGO_ANCHORS = ['top-left', 'top-centre', 'top-right', 'bottom-left', 'bottom-centre', 'bottom-right'];
+/** What is wrong with a logo's values, one message each (empty when none): the brand kit's validation and `logoStage` share it. */
+export function logoProblems(logo) {
   const within = (x, lo, hi) => finite(x) && x >= lo && x <= hi;
   const bad = [];
   if (!LOGO_ANCHORS.includes(logo?.anchor)) bad.push(`anchor must be one of ${LOGO_ANCHORS.join(', ')}`);
@@ -78,6 +79,10 @@ function checkLogo(logo) {
     if (!within(t.startSec, 0, 60)) bad.push('timing.startSec must be 0 to 60');
     if (!within(t.holdSec, 0.5, 60)) bad.push('timing.holdSec must be 0.5 to 60');
   } else if (t?.kind !== 'whole') bad.push("timing.kind must be 'whole' or 'window'");
+  return bad;
+}
+function checkLogo(logo) {
+  const bad = logoProblems(logo);
   if (bad.length > 0) fail(`the logo does not parse: ${bad.join('; ')}`);
 }
 

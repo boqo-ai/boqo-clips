@@ -10,7 +10,7 @@
 // the clips rendered before it (already in <dir>).
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { loadBrand } from '../engine/brand.mjs';
+import { legacyView, loadBrand } from '../engine/brand.mjs';
 import { renderClip } from '../engine/render.mjs';
 
 const fail = (msg) => {
@@ -80,7 +80,7 @@ async function main(argv) {
     });
   }
 
-  const brand = await loadBrand(opt.brand);
+  const brand = legacyView(await loadBrand(opt.brand)); // until the render reads the v2 kit
   const outDir = resolve(opt.out);
   const clips = [];
   for (const [i, p] of picks.entries()) {

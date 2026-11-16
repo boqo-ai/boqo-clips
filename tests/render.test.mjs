@@ -6,7 +6,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { clipAss, ffmpegArgs, renderClip } from '../engine/render.mjs';
-import { defaultBrand, saveBrand } from '../engine/brand.mjs';
+import { defaultBrandV1 as defaultBrand, saveBrand } from '../engine/brand.mjs';
 import { toolEnv } from '../engine/env.mjs';
 
 const CLI = fileURLToPath(new URL('../tools/render.mjs', import.meta.url));

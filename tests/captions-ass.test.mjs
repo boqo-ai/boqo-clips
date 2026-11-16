@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { join } from 'node:path'
 import { assFor, assColor, assEscape, groupWords, textWidth, FONT_FILES } from '../engine/captions-ass.mjs'
-import { defaultBrand, FONTS } from '../engine/brand.mjs'
+import { defaultBrandV1 as defaultBrand, FONTS } from '../engine/brand.mjs'
 
 const FONTS_DIR = fileURLToPath(new URL('../engine/fonts/', import.meta.url))
 

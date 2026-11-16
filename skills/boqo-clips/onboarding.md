@@ -5,8 +5,8 @@ Runs from INSTALL.md step 6, and from a run that finds no brand kit or no `<home
 that is done: a kit `node "$HOME/.boqo-clips/tools/brand.mjs" list` already shows (kits are shared by every boqo skill, so
 another one may have made it), the rule already in `config.json`.
 
-Open with two sentences: in about two minutes you set up their brand kit (a name, a logo, two colours, and a caption
-style they pick by looking at it), then make their first clips. When they already gave a link or file, say it is
+Open with two sentences: in about two minutes you set up their brand kit (a name, a logo, a colour or two, and a
+caption style they pick by looking at it), then make their first clips. When they already gave a link or file, say it is
 clipped right after.
 
 ## 1. The brand kit
@@ -24,10 +24,13 @@ Four questions. Ask the first two in one message.
    BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/brand.mjs" save "<samples>/logo.json" --logo "<url>"
    ```
    From then on `<logo>` is the file its reply names in `brand.logo.file`.
-3. **Two colours:** the caption text (usually white) and the accent, which marks the spoken word in the karaoke and
-   highlight styles. Open the logo image and offer its strongest colour as the accent, in hex: "#E63946 from your
-   logo, with white text?".
-4. **Caption style,** by sight: render the four samples below, show them, and ask which one they want.
+3. **Colours:** the accent, which marks the spoken or key word, and the caption text colour when it is not white.
+   Open the logo image and offer its strongest colour as the accent, in hex: "#E63946 from your logo?".
+4. **Caption style,** by sight: render the sample sheet below, show it, and ask which one they want.
+
+**The styles,** boqo's own, by the key a kit names: `karaoke`, `punch`, `clean`, `highlight`, `classic`, `bounce`,
+`neon`, `boldkeys`, `typewriter`, `slide`, `comic`, `marker`, `stack`, `minimal`, `editorial`. **Headline styles** (the
+title plate at the top): `plate`, `outline`, `neon`, `marker`, `tag`, `stack`.
 
 **The samples.** The sample kits are saved into a scratch home inside `<samples>`, so nothing real is saved before
 the person chooses.
@@ -45,35 +48,31 @@ the person chooses.
     {"w":"logo.","s":3.5,"e":4.2}]
    ```
 3. `<samples>/pick.json`: `[{"s": 0, "e": 5, "title": "<name>"}]`.
-4. For each preset, `karaoke`, `punch`, `clean` and `highlight`: write `<samples>/<preset>.json`, the kit (below)
-   with `"name": "<preset>"` and that preset, then
+4. For each style key above, in that order, numbered `01` to `15`: write `<samples>/<style>.json`,
+   `{"name": "<style>", "captions": {"style": "<style>", "accentColours": ["<accent>"]}}` (add
+   `"baseColour": "<text>"` when the text is not white), then
    ```sh
-   BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/brand.mjs" save "<samples>/<preset>.json" --logo "<logo>"
+   BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/brand.mjs" save "<samples>/<style>.json" --logo "<logo>"
    BOQO_HOME="<samples>/home" node "$HOME/.boqo-clips/tools/render.mjs" --src "<samples>/src.mp4" \
-     --picks "<samples>/pick.json" --words "<samples>/words.json" --brand "<preset>" --out "<samples>/<preset>"
+     --picks "<samples>/pick.json" --words "<samples>/words.json" --brand "<style>" --out "<samples>/<style>"
+   ffmpeg -v error -y -ss 2.8 -i "<samples>/<style>/clip-01.mp4" -vf scale=360:640 -frames:v 1 "<samples>/f<NN>.jpg"
    ```
-   With no logo, leave out `--logo`. Each sample is `<samples>/<preset>/clip-01.mp4`.
-5. One picture of the four side by side, at 2.8 s, in the order karaoke, punch, clean, highlight:
+   With no logo, leave out `--logo`. Each sample is `<samples>/<style>/clip-01.mp4`.
+5. One sheet, 5 across and 3 down, in the order of the list:
    ```sh
-   ffmpeg -v error -y -ss 2.8 -i "<samples>/karaoke/clip-01.mp4" -ss 2.8 -i "<samples>/punch/clip-01.mp4" \
-     -ss 2.8 -i "<samples>/clean/clip-01.mp4" -ss 2.8 -i "<samples>/highlight/clip-01.mp4" -filter_complex \
-     "[0:v]scale=360:640[a];[1:v]scale=360:640[b];[2:v]scale=360:640[c];[3:v]scale=360:640[d];[a][b][c][d]hstack=4" \
-     -frames:v 1 "<samples>/styles.jpg"
+   ffmpeg -v error -y -framerate 1 -i "<samples>/f%02d.jpg" -vf tile=5x3 -frames:v 1 "<samples>/styles.jpg"
    ```
-   Give the person `<samples>/styles.jpg` first, then the four clips, which show how the words move, and say
-   what each does, a line each: karaoke shows 3 or 4 words, the spoken one in the accent; punch, 1 or 2 big uppercase
-   words at a time, all in the text colour (no accent); clean, up to 6 words in the text colour; highlight, 3 or 4
-   words, the spoken one on an accent box.
+   Give the person `<samples>/styles.jpg` first, with the style names in order, then the clips of the ones they ask
+   about, which show how the words move.
 
 **The kit.** Once they choose, write `<samples>/brand.json` and save it for real:
 
 ```json
 {
+  "version": 2,
   "name": "<name>",
-  "colors": { "text": "#FFFFFF", "accent": "#E63946" },
-  "font": "Inter",
-  "captions": { "preset": "karaoke" },
-  "logo": { "corner": "tr" }
+  "captions": { "style": "neon", "accentColours": ["#E63946"] },
+  "logo": { "anchor": "top-right" }
 }
 ```
 
@@ -84,12 +83,22 @@ node "$HOME/.boqo-clips/tools/brand.mjs" save "<samples>/brand.json" --logo "<lo
 Then `rm -rf "<samples>"`, with the path written out in full (never empty), and tell the person in one line that the
 kit is saved and every boqo skill uses it.
 - A key not in the kit's schema is refused, and the error names it: fix the file, never work around it.
-- On the person's ask only: `"font": "Anton"` (tall and condensed), `logo.corner` `tl`, `tr`, `bl` or `br`,
-  `logo.scale` 0.08 to 0.3 (0.16, the share of the frame's width), `captions.position` 0.1 to 0.9 (0.72, how far
-  down), `captions.size` 0.7 to 1.4 (1.0), and `"hook": false` for no title at the top.
+- What a kit leaves out is boqo's Default template: `captions` punch in `#E900FA` at 0.7, `headline` the lime title
+  plate for the first 12 s, `logo` bottom-left at 0.1 of the frame's width and 0.35 opacity (the whole clip), `ratio`
+  `9:16`. `"headline": null` is no title plate, `"logo": null` no logo.
+- On the person's ask only, under `captions`: `positionFraction` 0.1 to 0.9, `sizeScale` 0.7 to 1.4, `baseColour`,
+  `accentColours` (one or two), `textCase` (`upper`, `preserve`, `lower`), `font`, `keyFont`, `outlineColour`,
+  `glowColour`, `glowStrength`, `shadowColour`, `cycle`, `speed`, `wordsTarget`. Under `headline`: `style`, `source`
+  (`title` or `hook`), `plateColour`, `textCase`, `entrance`, `positionFraction` 0.08 to 0.92, `timing`; a block names
+  the fields it changes, the other required ones are the Default's. Under `logo`: `anchor` (`top-left`, `top-centre`,
+  `top-right`, `bottom-left`, `bottom-centre`, `bottom-right`), `width` up to 0.5, `marginX`, `marginY`, `opacity` 0.05
+  to 1, `timing` (`{"kind": "whole"}` or `{"kind": "window", "startSec": 0, "holdSec": 12}`).
 - The first kit saved becomes the default; `brand.mjs default "<name>"` changes it.
 - **Changing a kit later:** `brand.mjs show "<name>"`, change the keys in its `brand`, and save that with `--logo`
   again, or with `logo.file` as `show` printed it. A save with neither drops the logo.
+- **A kit made before boqo's template shape** (no `"version"`: `preset`, `colors`, `font`, `hook`) loads converted and
+  stays as it is on disk until the person next saves it. One that used `"font": "Anton"` now draws as `boldkeys`; say
+  so once, in one line, when you meet one.
 
 ## 2. The boqo connection
 

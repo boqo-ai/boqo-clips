@@ -1,0 +1,101 @@
+{
+ "cases": [
+  {
+   "name": "five frames with astats noise between them",
+   "fromSec": 544.755,
+   "stderrLines": [
+    "Input #0, lavfi, from 'sine':",
+    "  Stream #0:0: Audio: pcm_s16le, 16000 Hz, mono, s16, 256 kb/s",
+    "Stream mapping:",
+    "Press [q] to stop, [?] for help",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:0    pts:0       pts_time:0",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-35.920910",
+    "[Parsed_astats_2 @ 0xb5aab9a56a30] Noise floor dB: nan",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:1    pts:320       pts_time:0.02",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-35.569181",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:2    pts:640       pts_time:0.04",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-20.5",
+    "[Parsed_astats_2 @ 0xb5aab9a56a30] Number of samples: 320",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:3    pts:960       pts_time:0.06",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-8.671558",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:4    pts:1280       pts_time:0.08",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-9",
+    "[Parsed_astats_2 @ 0xb5aab9a56a30] Noise floor dB: nan",
+    "[Parsed_astats_2 @ 0xb5aab9a56a30] Number of samples: 320",
+    "video:0kB audio:2kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown"
+   ]
+  },
+  {
+   "name": "digital silence prints -inf",
+   "fromSec": 1,
+   "stderrLines": [
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:0    pts:0       pts_time:0",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-inf",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:1    pts:320       pts_time:0.02",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-12.5"
+   ]
+  },
+  {
+   "name": "no frame at all",
+   "fromSec": 0,
+   "stderrLines": [
+    "no frames here",
+    "[Parsed_astats_2 @ 0xb5aab9a56a30] Noise floor dB: nan",
+    "[Parsed_astats_2 @ 0xb5aab9a56a30] Number of samples: 320",
+    "video:0kB audio:2kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown"
+   ]
+  },
+  {
+   "name": "a time with no level, then a full frame",
+   "fromSec": 2,
+   "stderrLines": [
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:0    pts:0       pts_time:0",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:1    pts:320       pts_time:0.02",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-30"
+   ]
+  },
+  {
+   "name": "a level with no time before it is dropped",
+   "fromSec": 2,
+   "stderrLines": [
+    "lavfi.astats.Overall.RMS_level=-12",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:1    pts:320       pts_time:0.02",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-30"
+   ]
+  },
+  {
+   "name": "a non-finite time is skipped, its level too",
+   "fromSec": 2,
+   "stderrLines": [
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:0    pts:0       pts_time:N/A",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-20",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:1    pts:320       pts_time:0.02",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-30"
+   ]
+  },
+  {
+   "name": "an unparseable level is skipped",
+   "fromSec": 2,
+   "stderrLines": [
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:0    pts:0       pts_time:0",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=nan",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:1    pts:320       pts_time:0.02",
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] lavfi.astats.Overall.RMS_level=-30"
+   ]
+  },
+  {
+   "name": "a level repeated under one time counts once",
+   "fromSec": 0,
+   "stderrLines": [
+    "[Parsed_ametadata_3 @ 0xb5aab9a56a30] frame:0    pts:0       pts_time:0",
+    "lavfi.astats.Overall.RMS_level=-20",
+    "lavfi.astats.Overall.RMS_level=-21"
+   ]
+  },
+  {
+   "name": "empty stderr",
+   "fromSec": 0,
+   "stderrLines": []
+  }
+ ]
+}

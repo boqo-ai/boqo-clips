@@ -247,6 +247,9 @@ test('tools/asr.mjs says the language it ran in, and englishOnly for an .en mode
     assert.equal(j.lang, 'en');
     assert.equal(j.englishOnly, true);
     assert.deepEqual(JSON.parse(readFileSync(out, 'utf8')).map((x) => x.w), ['Hello']);
+    // segments.json (source whisper) lands next to words.json
+    const [w0] = JSON.parse(readFileSync(out, 'utf8'));
+    assert.deepEqual(JSON.parse(readFileSync(join(root, 'segments.json'), 'utf8')), [{ start: w0.s, end: w0.e, text: 'Hello', speaker: null }]);
 
     const multi = touch(root, 'ggml-small.bin');
     fakeWhisper(bin, 'de');

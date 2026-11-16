@@ -109,6 +109,19 @@ test('an auto track through wordsFromJson3: a long silence between word events s
   assert.deepEqual(segs.map((x) => x.text), ['one two', 'three']);
 });
 
+test('json3 auto words: the pause is measured from the synthesized end, so a split needs 1.6 s start to start', () => {
+  // wordsFromJson3 ends a word at min(next start, start + 1.0 s): the gap is
+  // next.s - prev.s - 1.0 when the cap binds, else 0 (E2 may revisit the metric)
+  const ev = (ms, w) => ({ tStartMs: ms, dDurationMs: 500, segs: [{ utf8: w, tOffsetMs: 0 }] });
+  const count = (gapMs) => segmentsFromWords(wordsFromJson3({ events: [ev(0, 'one'), ev(gapMs, 'two')] }), { source: 'auto' }).length;
+  assert.equal(count(500), 1);
+  assert.equal(count(1000), 1);
+  assert.equal(count(1500), 1);
+  assert.equal(count(1599), 1);
+  assert.equal(count(1600), 2);
+  assert.equal(count(1700), 2);
+});
+
 test('blank words are skipped; input order is by start time; empty in, empty out', () => {
   assert.deepEqual(segmentsFromWords([], { source: 'whisper' }), []);
   const segs = segmentsFromWords([{ w: 'b', s: 1, e: 1.2 }, { w: ' ', s: 0.5, e: 0.6 }, { w: 'a', s: 0, e: 0.2 }], { source: 'whisper' });

@@ -17,6 +17,17 @@ export const MAX_SEGMENT_WORDS = 40;
  * Auto captions carry no punctuation, so a pause of at least this many seconds
  * between one word's end and the next one's start ends a segment. Provisional:
  * tuned against Deepgram's segments on the evaluation videos (Task E2).
+ *
+ * What it means on real YouTube auto captions: `wordsFromJson3` ends a word at
+ * the next word's start, but never more than 1.0 s after its own start. So a
+ * word's end is a synthesized one, and the gap this rule measures is
+ * `next.s - prev.s - 1.0` when the 1 s cap binds and 0 when it does not. At
+ * 0.6 a split therefore needs next.s - prev.s >= 1.6 s, i.e. PAUSE_SPLIT_SEC
+ * plus up to 1.0 s start to start. A value below about 1.0 s changes nothing
+ * on real auto captions: every start-to-start spacing under 1 s has a gap of
+ * 0. On words with true ends (whisper-like, hand-built) it is the plain gap.
+ * The metric is spec section 7.2 as written; E2 tunes the value and may
+ * change the metric on real tracks.
  */
 export const PAUSE_SPLIT_SEC = 0.6;
 
@@ -34,7 +45,7 @@ const EPS = 1e-9;
  * @param {{ source: 'manual'|'auto'|'whisper', pauseSplitSec?: number }} opts
  *   `manual` (cues re-split into sentences) and `whisper` are punctuated: split
  *   on . ! ? or at 40 words. `auto` (unpunctuated, word-timed) also splits on a
- *   pause.
+ *   pause (see PAUSE_SPLIT_SEC for what that is on real json3 words).
  * @returns {Segment[]}
  */
 export function segmentsFromWords(words, { source, pauseSplitSec = PAUSE_SPLIT_SEC } = {}) {

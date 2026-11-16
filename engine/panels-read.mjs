@@ -17,10 +17,11 @@
 // `exec(command, args, { timeoutMs }) -> Promise<{ stdout, stderr }>` is injected (rejecting when the command fails),
 // as engine/window.mjs does; the default runs the real ffmpeg and ffprobe.
 import { execFile } from 'node:child_process';
-import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs';
-import { dirname, join, resolve } from 'node:path';
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import { z } from 'zod';
 import { toolEnv } from './env.mjs';
+import { writeAtomic } from './order.mjs';
 import { clipToWindowSec, cutsDurationSec } from './boqo/cut-map.mjs';
 import { PanelDecision, PanelProbe, PanelSample } from './boqo/panels.mjs';
 import { enoughFrames, frameArgs, readFrameFile, sampleTimes } from './boqo/panels-frames.mjs';
@@ -72,17 +73,6 @@ function readJson(path, what) {
   } catch {
     throw new PanelsError(`${what} is not valid JSON`);
   }
-}
-
-/**
- * Writes `text` to `path` by a temp file in the same folder and a rename, so a reader never sees half a file. The same
- * helper as engine/order.mjs's `writeAtomic` on the select lane (a local copy: that lane's file is not on this branch;
- * reconcile at the join, keeping one).
- */
-export function writeAtomic(path, text, rename = renameSync) {
-  const next = join(dirname(path), `.panels-new.${path.split(/[\\/]/).pop()}`);
-  writeFileSync(next, text);
-  rename(next, path);
 }
 
 /** <run>/clips.json: the run's record, one row for each clip (§7.3). */

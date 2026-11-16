@@ -516,7 +516,7 @@ test('probe-frames writes 6 frames at 640 px from the render set; probe-record s
     writeFileSync(file, '{"isStream": true, "gameTitle": "Dota 2"}');
     assert.deepEqual(jsonOut(cli('probe-record', '--run', dir, '--file', file)), { ok: true, isStream: true, gameTitle: 'Dota 2' });
     assert.deepEqual(recordOf(dir).panelProbe, { version: 1, isStream: true, gameTitle: 'Dota 2' });
-    assert.ok(readdirSync(dir).every((f) => !f.startsWith('.panels-new')), 'no temp file left');
+    assert.ok(readdirSync(dir).every((f) => !f.startsWith('.order-new')), 'no temp file left');
     // Once a run: the stored probe is reported, no frames are written again.
     rmSync(join(dir, 'panels'), { recursive: true });
     assert.deepEqual(jsonOut(cli('probe-frames', '--run', dir, '--src', src)), { eligible: true, recorded: true, isStream: true, gameTitle: 'Dota 2' });
@@ -619,7 +619,7 @@ test('read-record stores a PanelDecision as the clip\'s panels, snapping times t
     assert.equal(stored.samples[1].why, 'the hero');
     assert.equal(recordOf(dir).clips[1].panels, null);
     assert.ok(PanelDecision.safeParse(stored).success);
-    assert.ok(readdirSync(dir).every((f) => !f.startsWith('.panels-new')));
+    assert.ok(readdirSync(dir).every((f) => !f.startsWith('.order-new')));
     // The stored read is what the render plans from: clip 1 is 10 s in the video, so the samples are in source seconds.
     const shots = [{ startSec: 0, endSec: 19 }];
     const { placed } = planShots({ shots, faces: { unavailable: true, reason: 'x' }, frame: { width: 1920, height: 1080 }, output: { width: 1080, height: 1920 }, subjectRule: 'speaker', panels: { samples: stored.samples, startSec: 10 } });

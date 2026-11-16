@@ -120,7 +120,7 @@ function filesOf(run, row) {
 const TMP = '.order-tmp.';
 export const JOURNAL = `${TMP}journal.json`;
 
-// Exported: the stranger record writes clips.json the same way.
+// Exported: the stranger record (tools/stranger.mjs) and the panels read (engine/panels-read.mjs) write clips.json the same way.
 export function writeAtomic(path, text, rename = renameSync) {
   const next = join(dirname(path), `.order-new.${basename(path)}`);
   writeFileSync(next, text);

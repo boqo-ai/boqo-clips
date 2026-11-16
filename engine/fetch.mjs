@@ -1,7 +1,8 @@
 // Fetch: read a YouTube video's info and ONE caption track first (no video
 // download), then later download only the picked sections, with one fallback
 // to a whole download and local cuts. Everything runs through yt-dlp, ffmpeg
-// and ffprobe with argument arrays (no shell).
+// and ffprobe with argument arrays (no shell). Viewer comments (best effort,
+// for the selection request) come from `yt-dlp --write-comments`.
 import { execFile } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -19,6 +20,8 @@ const CUT_MARGIN_SEC = 2;
 const SHORT_BELOW = 0.9;
 const WHOLE_RETRY_MS = 5000;
 const CONCURRENCY = 3;
+const COMMENTS_TIMEOUT_MS = 60000;
+const COMMENTS_MAX = 200;
 
 const BASE = ['--js-runtimes', 'node', '--no-playlist'];
 const round3 = (x) => Math.round(x * 1000) / 1000;
@@ -45,6 +48,24 @@ export const captionArgs = (url, track, dir) => [
   'json3',
   '-o',
   join(dir, 'captions.%(ext)s'),
+  url,
+];
+
+/**
+ * The top-level comments, most relevant first. Hosted reads two pages of 100
+ * from the YouTube Data API (relevance order); yt-dlp's equivalent is
+ * `max_comments=<total>,<parents>,<replies>,<replies per thread>,<depth>`
+ * with a depth of 1 (no replies, so the reply counts are 0) and
+ * `comment_sort=top`. The comments come back inside the `-J` info dict.
+ * @param {string} url
+ */
+export const commentArgs = (url) => [
+  ...BASE,
+  '--skip-download',
+  '--write-comments',
+  '--extractor-args',
+  `youtube:max_comments=${COMMENTS_MAX},${COMMENTS_MAX},0,0,1;comment_sort=top`,
+  '-J',
   url,
 ];
 
@@ -169,6 +190,27 @@ export function planFallback(url, picks, dir, duration) {
 
 // ---- runners (injectable for tests)
 
+/**
+ * yt-dlp's comments as the hosted filter reads them (`RawComment`, text and
+ * likes): top-level ones only (`parent` is "root"; a comment with no `parent`
+ * counts as top level), those with a text, at most 200. yt-dlp's `text` is plain
+ * text and `like_count` its likes (a missing or non-numeric one is 0). Null
+ * when the info has no comment list.
+ * @param {object} info yt-dlp -J output read with --write-comments
+ * @returns {{ text: string, likes: number }[] | null}
+ */
+export function commentsFromInfo(info) {
+  if (!Array.isArray(info?.comments)) return null;
+  const out = [];
+  for (const c of info.comments) {
+    if (out.length === COMMENTS_MAX) break;
+    if (!c || typeof c.text !== 'string') continue;
+    if (c.parent !== undefined && c.parent !== 'root') continue;
+    out.push({ text: c.text, likes: Number.isFinite(c.like_count) ? c.like_count : 0 });
+  }
+  return out;
+}
+
 const exec = (file, args, opts = {}) =>
   new Promise((resolve, reject) => {
     execFile(file, args, { maxBuffer: MAX_BUFFER, env: toolEnv(), ...opts }, (err, stdout, stderr) => {
@@ -181,7 +223,7 @@ const exec = (file, args, opts = {}) =>
 
 /** The real yt-dlp, ffprobe and ffmpeg. */
 export const realRun = {
-  ytdlp: (args) => exec('yt-dlp', args),
+  ytdlp: (args, opts) => exec('yt-dlp', args, opts),
   ffmpeg: (args, cwd) => exec('ffmpeg', args, { cwd }),
   /** Duration in seconds, or null when the file is missing or unreadable. */
   probe: async (file) => {
@@ -238,6 +280,41 @@ export async function fetchInfo({ url, dir, run = realRun }) {
   writeFileSync(join(dir, 'transcript.md'), md.text);
   writeFileSync(join(dir, 'segments.json'), JSON.stringify(segmentsFromWords(words, { source: track.kind })));
   return { ...head, captions: track.kind, chunks: md.chunks };
+}
+
+/**
+ * Viewer comments for the selection request, best effort: write
+ * `<dir>/comments.json` (`[{text, likes}]`, top level, at most 200) and return
+ * `{ file, count }`, or null on ANY failure (yt-dlp failing, no comments in
+ * the info, a slow connection: `timeoutMs` aborts the run). Never throws. An
+ * older comments.json is removed first, so a failed read never leaves a stale
+ * one for the request to pick up.
+ * @param {{ url: string, dir: string, run?: typeof realRun, timeoutMs?: number }} o
+ * @returns {Promise<{ file: string, count: number } | null>}
+ */
+export async function fetchComments({ url, dir, run = realRun, timeoutMs = COMMENTS_TIMEOUT_MS }) {
+  const file = join(dir, 'comments.json');
+  const abort = new AbortController();
+  let timer;
+  try {
+    mkdirSync(dir, { recursive: true });
+    rmSync(file, { force: true });
+    const timedOut = new Promise((_, reject) => {
+      timer = setTimeout(() => {
+        abort.abort();
+        reject(new Error(`yt-dlp comments took longer than ${timeoutMs} ms`));
+      }, timeoutMs);
+    });
+    const { stdout } = await Promise.race([run.ytdlp(commentArgs(url), { signal: abort.signal }), timedOut]);
+    const comments = commentsFromInfo(JSON.parse(stdout));
+    if (comments === null) return null;
+    writeFileSync(file, JSON.stringify(comments));
+    return { file, count: comments.length };
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 // ---- sections

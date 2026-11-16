@@ -5,10 +5,14 @@ import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'no
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { pickReactions } from '../engine/boqo/viewer-reactions.mjs';
 import {
   FORMAT,
   captionArgs,
   captionTrackOf,
+  commentArgs,
+  commentsFromInfo,
+  fetchComments,
   fetchInfo,
   fetchSections,
   heatOf,
@@ -354,8 +358,95 @@ test('fetchSections: fallback failing too names both failures', async () => {
   rmSync(dir, { recursive: true });
 });
 
+test('fetchInfo keeps chapters, description and channel in info.json', async () => {
+  const dir = tmp();
+  const info = {
+    id: 'abc123', title: 'Talk', duration: 1800, channel: 'Some Channel', description: 'About this talk',
+    chapters: [{ start_time: 0, end_time: 60, title: 'Start' }], subtitles: {}, automatic_captions: {},
+  };
+  await fetchInfo({ url: URL1, dir, run: fakeRun({ ytdlp: async () => ({ stdout: JSON.stringify(info), stderr: '' }) }) });
+  const kept = JSON.parse(readFileSync(join(dir, 'info.json'), 'utf8'));
+  assert.equal(kept.channel, 'Some Channel');
+  assert.equal(kept.description, 'About this talk');
+  assert.deepEqual(kept.chapters, info.chapters);
+  rmSync(dir, { recursive: true });
+});
+
+// ---- viewer comments (best effort)
+
+const COMMENTS_FIXTURE = JSON.parse(readFileSync(fileURLToPath(new URL('./fixtures/ytdlp-comments.json', import.meta.url)), 'utf8'));
+
+test('commentArgs: top order, at most 200 top-level comments, no replies', () => {
+  assert.deepEqual(commentArgs(URL1), [
+    '--js-runtimes', 'node', '--no-playlist', '--skip-download', '--write-comments',
+    '--extractor-args', 'youtube:max_comments=200,200,0,0,1;comment_sort=top', '-J', URL1,
+  ]);
+});
+
+test('commentsFromInfo maps yt-dlp comments onto {text, likes}: top level only, text only, likes a whole number', () => {
+  assert.deepEqual(commentsFromInfo(COMMENTS_FIXTURE), [
+    { text: '12:30 the split colony part made me laugh', likes: 410 },
+    { text: 'At 31:05 never open a hive on a cold afternoon', likes: 230 },
+    { text: 'no timestamp, just praise', likes: 80 },
+    { text: '0:00 intro 3:10 winter 12:30 splits 31:05 wax 38:00 outro', likes: 55 },
+    { text: 'a comment with no parent field, 20:00 counts as top level', likes: 7 },
+    { text: '40:00 likes missing', likes: 0 },
+    { text: '40:00 likes not a number', likes: 0 },
+  ]);
+  assert.equal(commentsFromInfo({}), null);
+  assert.equal(commentsFromInfo({ comments: 'x' }), null);
+  assert.equal(commentsFromInfo(null), null);
+  const many = { comments: Array.from({ length: 250 }, (_, i) => ({ parent: 'root', text: `c${i}`, like_count: i })) };
+  assert.equal(commentsFromInfo(many).length, 200);
+});
+
+test('the mapped comments feed the hosted filter: timestamped ones only, chapter list and replies out', () => {
+  const reactions = pickReactions(commentsFromInfo(COMMENTS_FIXTURE), 2400);
+  assert.deepEqual(reactions.map((r) => [r.sec, r.likes]), [[750, 410], [1200, 7], [1865, 230], [2400, 0]]);
+});
+
+test('fetchComments writes comments.json and returns it', async () => {
+  const dir = tmp();
+  const seen = [];
+  const run = fakeRun({ ytdlp: async (args, opts) => { seen.push([args, opts]); return { stdout: JSON.stringify(COMMENTS_FIXTURE), stderr: '' }; } });
+  const out = await fetchComments({ url: URL1, dir, run });
+  assert.equal(out.count, 7);
+  assert.equal(out.file, join(dir, 'comments.json'));
+  assert.deepEqual(JSON.parse(readFileSync(out.file, 'utf8')), commentsFromInfo(COMMENTS_FIXTURE));
+  assert.deepEqual(seen[0][0], commentArgs(URL1));
+  assert.ok(seen[0][1].signal instanceof AbortSignal);
+  rmSync(dir, { recursive: true });
+});
+
+test('fetchComments never throws: a failed run, bad JSON and an info with no comments are all null, and an old file is removed', async () => {
+  const dir = tmp();
+  writeFileSync(join(dir, 'comments.json'), '[{"text":"stale","likes":1}]');
+  const fails = [
+    async () => { throw new Error('HTTP 429'); },
+    () => { throw new Error('threw before returning a promise'); },
+    async () => ({ stdout: 'not json', stderr: '' }),
+    async () => ({ stdout: JSON.stringify({ id: 'x' }), stderr: '' }),
+  ];
+  for (const ytdlp of fails) {
+    assert.equal(await fetchComments({ url: URL1, dir, run: fakeRun({ ytdlp }) }), null);
+    assert.equal(existsSync(join(dir, 'comments.json')), false);
+  }
+  rmSync(dir, { recursive: true });
+});
+
+test('fetchComments: a run that hangs is aborted at timeoutMs and returns null', async () => {
+  const dir = tmp();
+  let signal;
+  const run = fakeRun({ ytdlp: (args, opts) => { signal = opts.signal; return new Promise(() => {}); } });
+  const t0 = Date.now();
+  assert.equal(await fetchComments({ url: URL1, dir, run, timeoutMs: 50 }), null);
+  assert.ok(Date.now() - t0 < 2000, 'returned long before any real timeout');
+  assert.equal(signal.aborted, true, 'the run was told to stop');
+  rmSync(dir, { recursive: true });
+});
+
 test('CLI: usage errors are one JSON line and exit 1', () => {
-  for (const args of [[], ['nope'], ['info'], ['info', 'https://x.test/v'], ['sections', URL1, '--dir', 'd'], ['info', 'ftp://x', '--dir', 'd']]) {
+  for (const args of [[], ['nope'], ['info'], ['comments'], ['comments', 'ftp://x', '--dir', 'd'], ['info', 'https://x.test/v'], ['sections', URL1, '--dir', 'd'], ['info', 'ftp://x', '--dir', 'd']]) {
     const r = spawnSync(process.execPath, [CLI, ...args], { encoding: 'utf8' });
     assert.equal(r.status, 1, args.join(' '));
     const lines = r.stdout.trim().split('\n');

@@ -9,6 +9,8 @@
 //   --length  auto (default), under_30, 30_60, 60_90, 90_120 or 120_180
 //   --prompt  the person's own words about what they want, quoted into the request
 //   --lang    the transcript's language code when info.json does not say
+//   Also writes <run>/select-options.json ({genre, length, language}), the choices
+//   tools/select-check.mjs reads so the check uses the same length band.
 //   Prints {"target":n,"segments":n,"chars":n}. Exit 1 with {"error":"..."} on failure.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -74,8 +76,9 @@ function main(argv) {
   const text = `${SELECTION_RUBRIC}\n---\n${buildUserMessage(input)}\n`;
   try {
     writeFileSync(join(run, 'select-request.md'), text);
+    writeFileSync(join(run, 'select-options.json'), JSON.stringify({ genre: opt.genre ?? 'auto', length: opt.length ?? 'auto', language: input.language }) + '\n');
   } catch (err) {
-    fail(`cannot write select-request.md: ${err.code ?? err.message}`);
+    fail(`cannot write the request files: ${err.code ?? err.message}`);
   }
   process.stdout.write(JSON.stringify({ target: input.maxClips, segments: segments.length, chars: text.length }) + '\n');
 }

@@ -9,6 +9,7 @@ tools/asr.mjs -text
 tools/boqo-upload.mjs -text
 tools/transcript.mjs -text
 tools/select-request.mjs -text
+tools/select-check.mjs -text
 scripts/parity/golden.mjs -text
 scripts/parity/strip.mjs -text
 scripts/boqo-drift.mjs -text

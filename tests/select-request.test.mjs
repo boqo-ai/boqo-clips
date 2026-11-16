@@ -219,6 +219,15 @@ test('CLI: a run with no info.json and no comments still builds a request (a loc
   assert.equal(lastJson(r).target, Math.round(input('build-user-message-bare').segments.at(-1).end / 60));
 });
 
+test('CLI: select-options.json holds the genre, length and language, for select-check', () => {
+  const { dir, raw } = runDir('build-user-message-full');
+  assert.equal(runCli(['--run', dir, '--genre', raw.genre, '--length', raw.length, '--lang', 'ru']).status, 0);
+  assert.deepEqual(JSON.parse(readFileSync(join(dir, 'select-options.json'), 'utf8')), { genre: raw.genre, length: raw.length, language: 'ru' });
+  const bare = runDir('build-user-message-bare');
+  assert.equal(runCli(['--run', bare.dir]).status, 0);
+  assert.deepEqual(JSON.parse(readFileSync(join(bare.dir, 'select-options.json'), 'utf8')), { genre: 'auto', length: 'auto', language: 'en' });
+});
+
 test('CLI: usage errors, an unknown genre or length, and a missing segments.json are one JSON line, exit 1, nothing written', () => {
   const { dir } = runDir('build-user-message-bare');
   const empty = mkdtempSync(join(tmpdir(), 'boqo-select-request-'));

@@ -94,6 +94,24 @@ function chaptersOf(value) {
   return chapters.sort((a, b) => a.startSec - b.startSec).slice(0, MAX_STORED_CHAPTERS);
 }
 
+/** Hosted: `project.durationSec ?? segments.at(-1).end`, the duration being yt-dlp's, rounded. `segments` are the run's (non-empty). */
+export function durationOf(info, segments) {
+  const d = isRecord(info) ? info.duration : undefined;
+  return typeof d === 'number' && Number.isFinite(d) && d > 0 ? Math.round(d) : segments.at(-1).end;
+}
+
+/** The discounted most-replayed curve of a yt-dlp info dict (null: none, flat, or under three usable bins). The markers and the replay percentiles read it. */
+export function replayCurveOf(info) {
+  const meta = isRecord(info) ? info : {};
+  const chapters = chaptersOf(meta.chapters);
+  return discountHeatmap(heatmapOf(meta.heatmap), (chapters ?? []).map((c) => c.startSec), DEFAULT_REPLAY_TUNABLES);
+}
+
+/** The transcript language the request names: the caller's, then yt-dlp's, else English. */
+export function languageFor(info, language = null) {
+  return languageOf(language) ?? languageOf(isRecord(info) ? info.language : undefined) ?? 'en';
+}
+
 /**
  * @param {{
  *   info?: object | null,
@@ -113,16 +131,14 @@ export function buildSelectionInput({ info = null, segments, comments = null, ge
   known(CLIP_LENGTH_PRESETS, length, 'length');
 
   const meta = isRecord(info) ? info : {};
-  // Hosted: `project.durationSec ?? segments.at(-1).end`, the duration being yt-dlp's, rounded.
-  const durationSec = typeof meta.duration === 'number' && Number.isFinite(meta.duration) && meta.duration > 0 ? Math.round(meta.duration) : clean.at(-1).end;
-  const heatmap = heatmapOf(meta.heatmap);
+  const durationSec = durationOf(info, clean);
   const chapters = chaptersOf(meta.chapters);
   const reactions = comments === null ? null : pickReactions(comments, durationSec);
   // The curve is discounted once and the markers are read off it (B9 spec §3.5).
-  const replay = discountHeatmap(heatmap, (chapters ?? []).map((c) => c.startSec), DEFAULT_REPLAY_TUNABLES);
+  const replay = replayCurveOf(info);
 
   return {
-    language: languageOf(language) ?? languageOf(meta.language) ?? 'en',
+    language: languageFor(info, language),
     durationSec,
     segments: clean,
     peaks: findPeakRegions(replay === null ? null : curveBins(replay), durationSec),

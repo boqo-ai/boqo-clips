@@ -76,5 +76,5 @@ test('every engine file and tool that starts a process runs it with toolEnv', ()
     assert.ok(sites.length > 0, `${f} has a call site`);
     for (const line of sites) assert.match(line, /toolEnv\(\)|\benv\b/, `${f}: ${line.trim()}`);
   }
-  assert.deepEqual(spawners.sort(), ['engine/asr.mjs', 'engine/doctor.mjs', 'engine/fetch.mjs', 'engine/render.mjs', 'tools/boqo-upload.mjs']);
+  assert.deepEqual(spawners.sort(), ['engine/asr.mjs', 'engine/doctor.mjs', 'engine/fetch.mjs', 'engine/render.mjs', 'tools/boqo-upload.mjs', 'tools/stranger.mjs']);
 });

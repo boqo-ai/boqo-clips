@@ -11,6 +11,7 @@ tools/transcript.mjs -text
 tools/select-request.mjs -text
 tools/select-check.mjs -text
 tools/clips.mjs -text
+tools/stranger.mjs -text
 scripts/parity/golden.mjs -text
 scripts/parity/strip.mjs -text
 scripts/boqo-drift.mjs -text

@@ -118,9 +118,10 @@ function filesOf(run, row) {
 // bytes twice), so running it again, or after a crash inside it, changes nothing it already did. The journal and clips.json
 // are written through a temporary name and a rename, so neither is ever half there.
 const TMP = '.order-tmp.';
-const JOURNAL = `${TMP}journal.json`;
+export const JOURNAL = `${TMP}journal.json`;
 
-function writeAtomic(path, text, rename) {
+// Exported: the stranger record writes clips.json the same way.
+export function writeAtomic(path, text, rename = renameSync) {
   const next = join(dirname(path), `.order-new.${basename(path)}`);
   writeFileSync(next, text);
   rename(next, path);

@@ -2,7 +2,8 @@
 import { z } from "zod";
 import { parseReplay } from "./replay.mjs";
 import { parseStandaloneTest } from "./standalone.mjs";
-// Cut: the import of packages/core/src/stranger.ts (Task A6 ports it whole). The order reads only the
+// Cut: the import of packages/core/src/stranger.ts (A6 ported it whole as ./stranger.mjs; this stays a subset because the
+// skill's row has no promptVersion, model, effort, cost or the rest, and the order's goldens and tests build rows without them). The order reads only the
 // `judgment`, and the stand-alone chip's reason reads `why` and `frames` (engine/boqo/handbook-outcomes.mjs),
 // so `parseStranger` here is a stated SUBSET of hosted's StrangerSchema: it checks those three fields as
 // hosted does (judgment an integer 1..5, why a string, frames a number) and not the other ten (v, promptVersion,

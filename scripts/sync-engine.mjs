@@ -2,7 +2,8 @@
 // node scripts/sync-engine.mjs <target-repo-dir>
 //   Copies the shared engine and tools (SHARED in engine/hash.mjs) into a
 //   sibling skill repo, byte for byte, and writes <target>/engine/ENGINE.json
-//   {from, commit, hash, files}. Deleted source files disappear from the
+//   {from, commit, hash, files, deps}; deps is {zod, onnxruntime-node} from this
+//   repo's package.json dependencies (a target's own package.json must match). Deleted source files disappear from the
 //   target. Prints one JSON line {"synced","hash","files"}; exit 1 with
 //   {"error"} if it refuses (no .git in the target, the target is this repo,
 //   uncommitted changes in a SHARED path, a SHARED file missing).
@@ -54,13 +55,33 @@ function main() {
 
   const hash = engineHash(target);
   if (hash !== engineHash(source)) fail('copy does not hash like the source; target left as is for inspection');
+  const deps = engineDeps();
   writeFileSync(
     join(target, 'engine/ENGINE.json'),
-    JSON.stringify({ from: 'boqo-ai/boqo-clips', commit, hash, files: SHARED }, null, 2) + '\n',
+    JSON.stringify({ from: 'boqo-ai/boqo-clips', commit, hash, files: SHARED, deps }, null, 2) + '\n',
   );
   writeAttributes(join(target, '.gitattributes'));
 
   process.stdout.write(JSON.stringify({ synced: target, hash, files: files.length }) + '\n');
+}
+
+// The npm dependency versions the shared engine needs. They live in each repo's
+// own package.json (own name and Node floor, so package.json is not shared);
+// ENGINE.json carries them so a target's tests can assert its package.json agrees.
+const ENGINE_DEPS = ['zod', 'onnxruntime-node'];
+function engineDeps() {
+  let dependencies;
+  try {
+    ({ dependencies } = JSON.parse(readFileSync(join(source, 'package.json'), 'utf8')));
+  } catch (e) {
+    fail(`cannot read boqo-clips package.json: ${e.message}`);
+  }
+  const deps = {};
+  for (const name of ENGINE_DEPS) {
+    if (!dependencies?.[name]) fail(`boqo-clips package.json has no dependency ${name}`);
+    deps[name] = dependencies[name];
+  }
+  return deps;
 }
 
 // Put (or refresh) our managed block in the target's .gitattributes, keeping

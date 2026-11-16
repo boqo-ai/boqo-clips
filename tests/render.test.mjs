@@ -190,7 +190,7 @@ test('renderClip makes a 1080x1920 h264 yuv420p clip of the right length, with a
     // so the logged path is relative) and the style's font resolved to it: a
     // silent fallback would log another face
     const fontLog = log.split('\n').filter((l) => /font/i.test(l)).join('\n');
-    assert.match(log, /Loading font file 'fonts[\\/]Inter-Bold\.ttf'/, fontLog);
+    assert.match(log, /Loading font file 'fonts[\\/]Inter-Bold\.otf'/, fontLog);
     const line = log.split('\n').find((l) => /fontselect/.test(l) && /Inter/.test(l));
     console.log(`# fontselect (${layout}): ${line?.trim()}`);
     assert.ok(line, `no fontselect line resolving Inter:\n${fontLog}`);
@@ -210,7 +210,7 @@ test('renderClip: a failed render keeps the work folder and names it', async () 
     assert.ok(m, err.message);
     assert.ok(existsSync(m[1]), 'the folder is still there');
     assert.ok(existsSync(join(m[1], 'captions.ass')));
-    assert.ok(existsSync(join(m[1], 'fonts', 'Inter-Bold.ttf')), 'the font is in the work folder');
+    assert.ok(existsSync(join(m[1], 'fonts', 'Inter-Bold.otf')), 'the font is in the work folder');
     assert.ok(existsSync(join(m[1], 'logo.png')));
     return true;
   });

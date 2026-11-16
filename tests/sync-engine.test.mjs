@@ -71,7 +71,7 @@ test('engineHash changes when a byte under engine/ changes', () => {
 test('engineHash changes when a byte in a binary under engine/ changes', () => {
   const src = makeSource();
   const before = engineHash(src);
-  const f = join(src, 'engine/fonts/Inter-Bold.ttf');
+  const f = join(src, 'engine/fonts/Inter-Bold.otf');
   const b = readFileSync(f);
   b[b.length - 1] ^= 0xff;
   writeFileSync(f, b);

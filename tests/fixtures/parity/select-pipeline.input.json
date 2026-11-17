@@ -2922,6 +2922,1118 @@
    "heatmap": null,
    "chapterStartsSec": [],
    "length": "auto"
+  },
+  {
+   "name": "a cap above the survivors keeps all seven, the context clip among them (1200 s: target 20, cap 10)",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 300.4,
+      "end_sec": 337.2,
+      "title": "Clip 300.4",
+      "hook": "Hook 300.4",
+      "score": 92,
+      "hook_score": 89,
+      "flow_score": 90,
+      "standalone_score": 82,
+      "value_score": 87,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": true,
+      "claim": "Claim 300.4",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "Alt A 300.4",
+       "Alt B 300.4"
+      ]
+     },
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "Clip 10",
+      "hook": "Hook 10",
+      "score": 70,
+      "hook_score": 67,
+      "flow_score": 68,
+      "standalone_score": 60,
+      "value_score": 65,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": true,
+      "claim": "  padded  ",
+      "bridge_from_sec": 22.4,
+      "context_line": null,
+      "title_alternatives": [
+       "Alt A 10",
+       "Alt B 10"
+      ]
+     },
+     {
+      "start_sec": 60,
+      "end_sec": 90,
+      "title": "Clip 60",
+      "hook": "Hook 60",
+      "score": 66,
+      "hook_score": 63,
+      "flow_score": 64,
+      "standalone_score": 56,
+      "value_score": 61,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": false,
+      "claim": "needs context",
+      "bridge_from_sec": null,
+      "context_line": " The second hive failed earlier. ",
+      "title_alternatives": [
+       "Alt A 60",
+       "Alt B 60"
+      ]
+     },
+     {
+      "start_sec": 100,
+      "end_sec": 135,
+      "title": "Clip 100",
+      "hook": "Hook 100",
+      "score": 61,
+      "hook_score": 58,
+      "flow_score": 59,
+      "standalone_score": 51,
+      "value_score": 56,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": false,
+      "claim": "",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "Alt A 100",
+       "Alt B 100"
+      ]
+     },
+     {
+      "start_sec": 110,
+      "end_sec": 140,
+      "title": "Clip 110",
+      "hook": "Hook 110",
+      "score": 80,
+      "hook_score": 77,
+      "flow_score": 78,
+      "standalone_score": 70,
+      "value_score": 75,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": true,
+      "claim": "Claim 110",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "Alt A 110",
+       "Alt B 110"
+      ]
+     },
+     {
+      "start_sec": 200,
+      "end_sec": 208,
+      "title": "Clip 200",
+      "hook": "Hook 200",
+      "score": 99,
+      "hook_score": 96,
+      "flow_score": 97,
+      "standalone_score": 89,
+      "value_score": 94,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": true,
+      "claim": "Claim 200",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "Alt A 200",
+       "Alt B 200"
+      ]
+     },
+     {
+      "start_sec": 400,
+      "end_sec": 520,
+      "title": "Clip 400",
+      "hook": "Hook 400",
+      "score": 90,
+      "hook_score": 87,
+      "flow_score": 88,
+      "standalone_score": 80,
+      "value_score": 85,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": true,
+      "claim": "Claim 400",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "Alt A 400",
+       "Alt B 400"
+      ]
+     },
+     {
+      "start_sec": 150,
+      "end_sec": 185,
+      "title": "Clip 150",
+      "hook": "Hook 150",
+      "score": 55,
+      "hook_score": 52,
+      "flow_score": 53,
+      "standalone_score": 45,
+      "value_score": 50,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": true,
+      "claim": "Claim 150",
+      "bridge_from_sec": null,
+      "context_line": "should not be here",
+      "title_alternatives": [
+       "Alt A 150",
+       "Alt B 150"
+      ]
+     },
+     {
+      "start_sec": 540,
+      "end_sec": 600,
+      "title": "Clip 540",
+      "hook": "Hook 540",
+      "score": 77,
+      "hook_score": 74,
+      "flow_score": 75,
+      "standalone_score": 67,
+      "value_score": 72,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": true,
+      "claim": "Claim 540",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "Alt A 540",
+       "Alt B 540"
+      ]
+     },
+     {
+      "start_sec": 250,
+      "end_sec": 250,
+      "title": "Clip 250",
+      "hook": "Hook 250",
+      "score": 90,
+      "hook_score": 87,
+      "flow_score": 88,
+      "standalone_score": 80,
+      "value_score": 85,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": true,
+      "claim": "Claim 250",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "Alt A 250",
+       "Alt B 250"
+      ]
+     },
+     {
+      "start_sec": 420,
+      "end_sec": 380,
+      "title": "Clip 420",
+      "hook": "Hook 420",
+      "score": 50,
+      "hook_score": 47,
+      "flow_score": 48,
+      "standalone_score": 40,
+      "value_score": 45,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": true,
+      "claim": "Claim 420",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "Alt A 420",
+       "Alt B 420"
+      ]
+     },
+     {
+      "start_sec": 480,
+      "end_sec": 515,
+      "title": "Same",
+      "hook": "Hook 480",
+      "score": 82,
+      "hook_score": 79,
+      "flow_score": 80,
+      "standalone_score": 72,
+      "value_score": 77,
+      "emphasis_words": [
+       "alpha",
+       "beta"
+      ],
+      "stands_alone": true,
+      "claim": "Claim 480",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       " same ",
+       "Different"
+      ]
+     }
+    ]
+   },
+   "segments": [
+    {
+     "start": 0,
+     "end": 5,
+     "text": "Synthetic line 0.",
+     "speaker": null
+    },
+    {
+     "start": 5,
+     "end": 10,
+     "text": "Synthetic line 1.",
+     "speaker": null
+    },
+    {
+     "start": 10,
+     "end": 15,
+     "text": "Synthetic line 2.",
+     "speaker": null
+    },
+    {
+     "start": 15,
+     "end": 20,
+     "text": "Synthetic line 3.",
+     "speaker": null
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Synthetic line 4.",
+     "speaker": null
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "text": "Synthetic line 5.",
+     "speaker": null
+    },
+    {
+     "start": 30,
+     "end": 35,
+     "text": "Synthetic line 6.",
+     "speaker": null
+    },
+    {
+     "start": 35,
+     "end": 40,
+     "text": "Synthetic line 7.",
+     "speaker": null
+    },
+    {
+     "start": 40,
+     "end": 45,
+     "text": "Synthetic line 8.",
+     "speaker": null
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Synthetic line 9.",
+     "speaker": null
+    },
+    {
+     "start": 50,
+     "end": 55,
+     "text": "Synthetic line 10.",
+     "speaker": null
+    },
+    {
+     "start": 55,
+     "end": 60,
+     "text": "Synthetic line 11.",
+     "speaker": null
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Synthetic line 12.",
+     "speaker": null
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Synthetic line 13.",
+     "speaker": null
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Synthetic line 14.",
+     "speaker": null
+    },
+    {
+     "start": 75,
+     "end": 80,
+     "text": "Synthetic line 15.",
+     "speaker": null
+    },
+    {
+     "start": 80,
+     "end": 85,
+     "text": "Synthetic line 16.",
+     "speaker": null
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Synthetic line 17.",
+     "speaker": null
+    },
+    {
+     "start": 90,
+     "end": 95,
+     "text": "Synthetic line 18.",
+     "speaker": null
+    },
+    {
+     "start": 95,
+     "end": 100,
+     "text": "Synthetic line 19.",
+     "speaker": null
+    },
+    {
+     "start": 100,
+     "end": 105,
+     "text": "Synthetic line 20.",
+     "speaker": null
+    },
+    {
+     "start": 105,
+     "end": 110,
+     "text": "Synthetic line 21.",
+     "speaker": null
+    },
+    {
+     "start": 110,
+     "end": 115,
+     "text": "Synthetic line 22.",
+     "speaker": null
+    },
+    {
+     "start": 115,
+     "end": 120,
+     "text": "Synthetic line 23.",
+     "speaker": null
+    },
+    {
+     "start": 120,
+     "end": 125,
+     "text": "Synthetic line 24.",
+     "speaker": null
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Synthetic line 25.",
+     "speaker": null
+    },
+    {
+     "start": 130,
+     "end": 135,
+     "text": "Synthetic line 26.",
+     "speaker": null
+    },
+    {
+     "start": 135,
+     "end": 140,
+     "text": "Synthetic line 27.",
+     "speaker": null
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "text": "Synthetic line 28.",
+     "speaker": null
+    },
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Synthetic line 29.",
+     "speaker": null
+    },
+    {
+     "start": 150,
+     "end": 155,
+     "text": "Synthetic line 30.",
+     "speaker": null
+    },
+    {
+     "start": 155,
+     "end": 160,
+     "text": "Synthetic line 31.",
+     "speaker": null
+    },
+    {
+     "start": 160,
+     "end": 165,
+     "text": "Synthetic line 32.",
+     "speaker": null
+    },
+    {
+     "start": 165,
+     "end": 170,
+     "text": "Synthetic line 33.",
+     "speaker": null
+    },
+    {
+     "start": 170,
+     "end": 175,
+     "text": "Synthetic line 34.",
+     "speaker": null
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Synthetic line 35.",
+     "speaker": null
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Synthetic line 36.",
+     "speaker": null
+    },
+    {
+     "start": 185,
+     "end": 190,
+     "text": "Synthetic line 37.",
+     "speaker": null
+    },
+    {
+     "start": 190,
+     "end": 195,
+     "text": "Synthetic line 38.",
+     "speaker": null
+    },
+    {
+     "start": 195,
+     "end": 200,
+     "text": "Synthetic line 39.",
+     "speaker": null
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Synthetic line 40.",
+     "speaker": null
+    },
+    {
+     "start": 205,
+     "end": 210,
+     "text": "Synthetic line 41.",
+     "speaker": null
+    },
+    {
+     "start": 210,
+     "end": 215,
+     "text": "Synthetic line 42.",
+     "speaker": null
+    },
+    {
+     "start": 215,
+     "end": 220,
+     "text": "Synthetic line 43.",
+     "speaker": null
+    },
+    {
+     "start": 220,
+     "end": 225,
+     "text": "Synthetic line 44.",
+     "speaker": null
+    },
+    {
+     "start": 225,
+     "end": 230,
+     "text": "Synthetic line 45.",
+     "speaker": null
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "text": "Synthetic line 46.",
+     "speaker": null
+    },
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Synthetic line 47.",
+     "speaker": null
+    },
+    {
+     "start": 240,
+     "end": 245,
+     "text": "Synthetic line 48.",
+     "speaker": null
+    },
+    {
+     "start": 245,
+     "end": 250,
+     "text": "Synthetic line 49.",
+     "speaker": null
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Synthetic line 50.",
+     "speaker": null
+    },
+    {
+     "start": 255,
+     "end": 260,
+     "text": "Synthetic line 51.",
+     "speaker": null
+    },
+    {
+     "start": 260,
+     "end": 265,
+     "text": "Synthetic line 52.",
+     "speaker": null
+    },
+    {
+     "start": 265,
+     "end": 270,
+     "text": "Synthetic line 53.",
+     "speaker": null
+    },
+    {
+     "start": 270,
+     "end": 275,
+     "text": "Synthetic line 54.",
+     "speaker": null
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Synthetic line 55.",
+     "speaker": null
+    },
+    {
+     "start": 280,
+     "end": 285,
+     "text": "Synthetic line 56.",
+     "speaker": null
+    },
+    {
+     "start": 285,
+     "end": 290,
+     "text": "Synthetic line 57.",
+     "speaker": null
+    },
+    {
+     "start": 290,
+     "end": 295,
+     "text": "Synthetic line 58.",
+     "speaker": null
+    },
+    {
+     "start": 295,
+     "end": 300,
+     "text": "Synthetic line 59.",
+     "speaker": null
+    },
+    {
+     "start": 300,
+     "end": 305,
+     "text": "Synthetic line 60.",
+     "speaker": null
+    },
+    {
+     "start": 305,
+     "end": 310,
+     "text": "Synthetic line 61.",
+     "speaker": null
+    },
+    {
+     "start": 310,
+     "end": 315,
+     "text": "Synthetic line 62.",
+     "speaker": null
+    },
+    {
+     "start": 315,
+     "end": 320,
+     "text": "Synthetic line 63.",
+     "speaker": null
+    },
+    {
+     "start": 320,
+     "end": 325,
+     "text": "Synthetic line 64.",
+     "speaker": null
+    },
+    {
+     "start": 325,
+     "end": 330,
+     "text": "Synthetic line 65.",
+     "speaker": null
+    },
+    {
+     "start": 330,
+     "end": 335,
+     "text": "Synthetic line 66.",
+     "speaker": null
+    },
+    {
+     "start": 335,
+     "end": 340,
+     "text": "Synthetic line 67.",
+     "speaker": null
+    },
+    {
+     "start": 340,
+     "end": 345,
+     "text": "Synthetic line 68.",
+     "speaker": null
+    },
+    {
+     "start": 345,
+     "end": 350,
+     "text": "Synthetic line 69.",
+     "speaker": null
+    },
+    {
+     "start": 350,
+     "end": 355,
+     "text": "Synthetic line 70.",
+     "speaker": null
+    },
+    {
+     "start": 355,
+     "end": 360,
+     "text": "Synthetic line 71.",
+     "speaker": null
+    },
+    {
+     "start": 360,
+     "end": 365,
+     "text": "Synthetic line 72.",
+     "speaker": null
+    },
+    {
+     "start": 365,
+     "end": 370,
+     "text": "Synthetic line 73.",
+     "speaker": null
+    },
+    {
+     "start": 370,
+     "end": 375,
+     "text": "Synthetic line 74.",
+     "speaker": null
+    },
+    {
+     "start": 375,
+     "end": 380,
+     "text": "Synthetic line 75.",
+     "speaker": null
+    },
+    {
+     "start": 380,
+     "end": 385,
+     "text": "Synthetic line 76.",
+     "speaker": null
+    },
+    {
+     "start": 385,
+     "end": 390,
+     "text": "Synthetic line 77.",
+     "speaker": null
+    },
+    {
+     "start": 390,
+     "end": 395,
+     "text": "Synthetic line 78.",
+     "speaker": null
+    },
+    {
+     "start": 395,
+     "end": 400,
+     "text": "Synthetic line 79.",
+     "speaker": null
+    },
+    {
+     "start": 400,
+     "end": 405,
+     "text": "Synthetic line 80.",
+     "speaker": null
+    },
+    {
+     "start": 405,
+     "end": 410,
+     "text": "Synthetic line 81.",
+     "speaker": null
+    },
+    {
+     "start": 410,
+     "end": 415,
+     "text": "Synthetic line 82.",
+     "speaker": null
+    },
+    {
+     "start": 415,
+     "end": 420,
+     "text": "Synthetic line 83.",
+     "speaker": null
+    },
+    {
+     "start": 420,
+     "end": 425,
+     "text": "Synthetic line 84.",
+     "speaker": null
+    },
+    {
+     "start": 425,
+     "end": 430,
+     "text": "Synthetic line 85.",
+     "speaker": null
+    },
+    {
+     "start": 430,
+     "end": 435,
+     "text": "Synthetic line 86.",
+     "speaker": null
+    },
+    {
+     "start": 435,
+     "end": 440,
+     "text": "Synthetic line 87.",
+     "speaker": null
+    },
+    {
+     "start": 440,
+     "end": 445,
+     "text": "Synthetic line 88.",
+     "speaker": null
+    },
+    {
+     "start": 445,
+     "end": 450,
+     "text": "Synthetic line 89.",
+     "speaker": null
+    },
+    {
+     "start": 450,
+     "end": 455,
+     "text": "Synthetic line 90.",
+     "speaker": null
+    },
+    {
+     "start": 455,
+     "end": 460,
+     "text": "Synthetic line 91.",
+     "speaker": null
+    },
+    {
+     "start": 460,
+     "end": 465,
+     "text": "Synthetic line 92.",
+     "speaker": null
+    },
+    {
+     "start": 465,
+     "end": 470,
+     "text": "Synthetic line 93.",
+     "speaker": null
+    },
+    {
+     "start": 470,
+     "end": 475,
+     "text": "Synthetic line 94.",
+     "speaker": null
+    },
+    {
+     "start": 475,
+     "end": 480,
+     "text": "Synthetic line 95.",
+     "speaker": null
+    },
+    {
+     "start": 480,
+     "end": 485,
+     "text": "Synthetic line 96.",
+     "speaker": null
+    },
+    {
+     "start": 485,
+     "end": 490,
+     "text": "Synthetic line 97.",
+     "speaker": null
+    },
+    {
+     "start": 490,
+     "end": 495,
+     "text": "Synthetic line 98.",
+     "speaker": null
+    },
+    {
+     "start": 495,
+     "end": 500,
+     "text": "Synthetic line 99.",
+     "speaker": null
+    },
+    {
+     "start": 500,
+     "end": 505,
+     "text": "Synthetic line 100.",
+     "speaker": null
+    },
+    {
+     "start": 505,
+     "end": 510,
+     "text": "Synthetic line 101.",
+     "speaker": null
+    },
+    {
+     "start": 510,
+     "end": 515,
+     "text": "Synthetic line 102.",
+     "speaker": null
+    },
+    {
+     "start": 515,
+     "end": 520,
+     "text": "Synthetic line 103.",
+     "speaker": null
+    },
+    {
+     "start": 520,
+     "end": 525,
+     "text": "Synthetic line 104.",
+     "speaker": null
+    },
+    {
+     "start": 525,
+     "end": 530,
+     "text": "Synthetic line 105.",
+     "speaker": null
+    },
+    {
+     "start": 530,
+     "end": 535,
+     "text": "Synthetic line 106.",
+     "speaker": null
+    },
+    {
+     "start": 535,
+     "end": 540,
+     "text": "Synthetic line 107.",
+     "speaker": null
+    },
+    {
+     "start": 540,
+     "end": 545,
+     "text": "Synthetic line 108.",
+     "speaker": null
+    },
+    {
+     "start": 545,
+     "end": 550,
+     "text": "Synthetic line 109.",
+     "speaker": null
+    },
+    {
+     "start": 550,
+     "end": 555,
+     "text": "Synthetic line 110.",
+     "speaker": null
+    },
+    {
+     "start": 555,
+     "end": 560,
+     "text": "Synthetic line 111.",
+     "speaker": null
+    },
+    {
+     "start": 560,
+     "end": 565,
+     "text": "Synthetic line 112.",
+     "speaker": null
+    },
+    {
+     "start": 565,
+     "end": 570,
+     "text": "Synthetic line 113.",
+     "speaker": null
+    },
+    {
+     "start": 570,
+     "end": 575,
+     "text": "Synthetic line 114.",
+     "speaker": null
+    },
+    {
+     "start": 575,
+     "end": 580,
+     "text": "Synthetic line 115.",
+     "speaker": null
+    },
+    {
+     "start": 580,
+     "end": 585,
+     "text": "Synthetic line 116.",
+     "speaker": null
+    },
+    {
+     "start": 585,
+     "end": 590,
+     "text": "Synthetic line 117.",
+     "speaker": null
+    },
+    {
+     "start": 590,
+     "end": 595,
+     "text": "Synthetic line 118.",
+     "speaker": null
+    },
+    {
+     "start": 595,
+     "end": 600,
+     "text": "Synthetic line 119.",
+     "speaker": null
+    }
+   ],
+   "durationSec": 1200,
+   "heatmap": [
+    {
+     "startTime": 0,
+     "endTime": 30,
+     "value": 0.9
+    },
+    {
+     "startTime": 30,
+     "endTime": 60,
+     "value": 0.8
+    },
+    {
+     "startTime": 60,
+     "endTime": 90,
+     "value": 0.3
+    },
+    {
+     "startTime": 90,
+     "endTime": 120,
+     "value": 0.32
+    },
+    {
+     "startTime": 120,
+     "endTime": 150,
+     "value": 0.35
+    },
+    {
+     "startTime": 150,
+     "endTime": 180,
+     "value": 0.4
+    },
+    {
+     "startTime": 180,
+     "endTime": 210,
+     "value": 0.45
+    },
+    {
+     "startTime": 210,
+     "endTime": 240,
+     "value": 0.5
+    },
+    {
+     "startTime": 240,
+     "endTime": 270,
+     "value": 0.6
+    },
+    {
+     "startTime": 270,
+     "endTime": 300,
+     "value": 0.8
+    },
+    {
+     "startTime": 300,
+     "endTime": 330,
+     "value": 1
+    },
+    {
+     "startTime": 330,
+     "endTime": 360,
+     "value": 0.9
+    },
+    {
+     "startTime": 360,
+     "endTime": 390,
+     "value": 0.6
+    },
+    {
+     "startTime": 390,
+     "endTime": 420,
+     "value": 0.5
+    },
+    {
+     "startTime": 420,
+     "endTime": 450,
+     "value": 0.4
+    },
+    {
+     "startTime": 450,
+     "endTime": 480,
+     "value": 0.38
+    },
+    {
+     "startTime": 480,
+     "endTime": 510,
+     "value": 0.36
+    },
+    {
+     "startTime": 510,
+     "endTime": 540,
+     "value": 0.3
+    },
+    {
+     "startTime": 540,
+     "endTime": 570,
+     "value": 0.28
+    },
+    {
+     "startTime": 570,
+     "endTime": 600,
+     "value": 0.25
+    }
+   ],
+   "chapterStartsSec": [
+    240
+   ],
+   "length": "auto"
   }
  ]
 }

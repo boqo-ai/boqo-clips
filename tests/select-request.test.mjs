@@ -6,7 +6,8 @@ import assert from 'node:assert/strict';
 import { readFileSync, rmSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { expectGolden } from './helpers/golden.mjs';
-import { clipTargetFor, keepCeilingFor } from '../engine/boqo/clip-target.mjs';
+import { clipTargetFor, keepCapFor, keepCeilingFor } from '../engine/boqo/clip-target.mjs';
+import { SELECT_KEEP_SHARE } from '../engine/clips-record.mjs';
 import { CLIP_LENGTH_PRESETS, GENRE_PRESETS, resolveClipLength, resolveGenre } from '../engine/boqo/selection-presets.mjs';
 
 import { findPeakRegions } from '../engine/boqo/peaks.mjs';
@@ -31,6 +32,27 @@ test('clipTargetFor matches the golden, and 2400 s is 40', () => {
 
 test('keepCeilingFor is min(round(target x 1.25), 120)', () => {
   assert.deepEqual([1, 40, 96, 100, 120].map(keepCeilingFor), [1, 50, 120, 120, 120]);
+});
+
+test('keepCapFor matches the golden at every target, and the check\'s share is hosted\'s production one', () => {
+  const { targets, shares } = input('keep-cap');
+  expectGolden('keep-cap', {
+    shareDefault: SELECT_KEEP_SHARE,
+    byShare: shares.map((share) => ({ share, caps: targets.map((t) => keepCapFor(t, share)) })),
+  });
+});
+
+test('keepCapFor: half the target, at least 3 where the ceiling reaches 3, never past the ceiling (hosted\'s own cases)', () => {
+  // packages/core/tests/clip-target.test.ts at 04480cf52, plus a 4-minute and a 40-minute video.
+  assert.equal(SELECT_KEEP_SHARE, 0.5);
+  assert.equal(keepCapFor(20, SELECT_KEEP_SHARE), 10);
+  assert.equal(keepCapFor(21, 0.5), 11, '10.5 rounds up');
+  assert.equal(keepCapFor(clipTargetFor(240), SELECT_KEEP_SHARE), 3, 'a 4-minute video keeps 3, not 2');
+  assert.equal(keepCapFor(clipTargetFor(2400), SELECT_KEEP_SHARE), 20, 'target 40 keeps 20');
+  assert.equal(keepCapFor(1, 0.5), keepCeilingFor(1), 'a one-minute video keeps the one it kept before');
+  assert.equal(keepCapFor(20, 1.25), keepCeilingFor(20), 'the headroom share is the old ceiling');
+  assert.equal(keepCapFor(109, 1.25), 120);
+  assert.equal(keepCapFor(20, 3), keepCeilingFor(20), 'the ceiling binds above the headroom share');
 });
 
 test('presets: auto is 20-75 s soft and 15-90 s hard, series_film is gone', () => {

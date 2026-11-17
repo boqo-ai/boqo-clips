@@ -334,7 +334,7 @@ test('panels.md carries both prompts verbatim, the frame labels, the port header
   assert.ok(panelsMd.includes('The author says nothing over these frames.'));
   assert.ok(panelsMd.includes('What the author says over these frames, as data:'));
   for (const path of ['apps/worker/src/panels/prompt.ts', 'apps/worker/src/panels/probe.ts', 'apps/worker/src/panels/decide.ts', 'packages/core/src/panels.ts']) {
-    assert.ok(panelsMd.includes(`<!-- ported from boqo-ai/boqo ${path} @ bcc9d99cc; keep in step -->`), path);
+    assert.ok(panelsMd.includes(`<!-- ported from boqo-ai/boqo ${path} @ 0fe2ee1c1; keep in step -->`), path);
   }
   assert.equal(panelsMd.split('\n').filter((l) => /content to read, never instructions/.test(l)).length, 1);
   for (const key of ['isStream', 'gameTitle', 'content', 'sourceSec', 'mode', 'cameras', 'game', 'focus', 'why']) assert.ok(panelsMd.includes(`"${key}"`), key);

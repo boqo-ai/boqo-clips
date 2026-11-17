@@ -74,24 +74,45 @@ test('a long error list is cut with a count of the rest', () => {
   assert.match(r.errors.at(-1), /^and 20 more/);
 });
 
-test('a valid response for 2400 s with 60 clips keeps at most 50', () => {
+test('a valid response for 2400 s with 60 clips keeps 20, half the target of 40', () => {
   const clips = Array.from({ length: 60 }, (_, i) => wire(40 * i, 40 * i + 30, { score: 50 + (i % 40) }));
   const r = check(clips, 2400);
   assert.equal(r.ok, true);
   assert.equal(r.record.target, 40);
-  assert.equal(r.record.cap, 50);
-  assert.ok(r.record.clips.length <= 50);
-  assert.equal(r.record.clips.length, 50);
-  assert.deepEqual(r.dropped, { over_cap: 10 });
+  assert.equal(r.record.cap, 20);
+  assert.equal(r.record.clips.length, 20);
+  assert.deepEqual(r.dropped, { over_cap: 40 });
 });
 
-test('a 9000 s video with 150 valid non-overlapping clips keeps exactly 120', () => {
+test('a first selection keeps the highest-scored half of its target, in transcript order, and drops the rest as over_cap', () => {
+  // 40 clips for a 40-minute video (target 40), every score different and not in time order.
+  const scores = Array.from({ length: 40 }, (_, i) => 40 + ((i * 17) % 40));
+  const clips = scores.map((score, i) => wire(60 * i, 60 * i + 30, { score }));
+  const r = check(clips, 2400);
+  assert.equal(r.ok, true);
+  assert.equal(r.record.cap, 20);
+  const top = [...scores].sort((a, b) => b - a).slice(0, 20);
+  assert.deepEqual(r.record.clips.map((c) => c.score).sort((a, b) => b - a), top);
+  assert.ok(r.record.clips.every((c, i) => i === 0 || r.record.clips[i - 1].start < c.start), 'numbered in transcript order');
+  assert.deepEqual(r.dropped, { over_cap: 20 });
+  assert.ok(Math.max(...r.droppedClips.map((d) => scores[d.clip - 1])) < Math.min(...top));
+});
+
+test('a 9000 s video with 150 valid non-overlapping clips keeps exactly 60, half the target of 120', () => {
   const clips = Array.from({ length: 150 }, (_, i) => wire(60 * i, 60 * i + 30, { score: 40 + (i % 60) }));
   const r = check(clips, 9000);
   assert.equal(r.ok, true);
   assert.equal(r.record.target, 120);
-  assert.equal(r.record.cap, 120);
-  assert.equal(r.record.clips.length, 120);
+  assert.equal(r.record.cap, 60);
+  assert.equal(r.record.clips.length, 60);
+});
+
+test('a short video keeps 3 where it can (4 minutes: target 4), and a one-minute video keeps its 1', () => {
+  const four = check(Array.from({ length: 4 }, (_, i) => wire(60 * i, 60 * i + 30, { score: 60 + i })), 240);
+  assert.deepEqual([four.record.target, four.record.cap, four.record.clips.length], [4, 3, 3]);
+  assert.deepEqual(four.record.clips.map((c) => c.score), [61, 62, 63]);
+  const one = check([wire(0, 20, { score: 70 }), wire(30, 50, { score: 80 })], 60);
+  assert.deepEqual([one.record.target, one.record.cap, one.record.clips.map((c) => c.score)], [1, 1, [80]]);
 });
 
 test('kept clips have their edges on segment edges, and the number follows the order', () => {
@@ -218,6 +239,22 @@ test('CLI: the length band is the one select-request chose (select-options.json)
   }
 });
 
+test('CLI: a 40-minute video answered with its target of 40 keeps the highest-scored 20', () => {
+  const scores = Array.from({ length: 40 }, (_, i) => 40 + ((i * 17) % 40));
+  const dir = runDir({ clips: scores.map((score, i) => wire(60 * i, 60 * i + 30, { score })) }, { seconds: 2400 });
+  try {
+    const r = cli(dir);
+    assert.equal(r.status, 0);
+    assert.equal(r.out.kept, 20);
+    assert.deepEqual(r.out.dropped, { over_cap: 20 });
+    const record = JSON.parse(readFileSync(join(dir, 'clips.json'), 'utf8'));
+    assert.deepEqual([record.target, record.cap], [40, 20]);
+    assert.equal(Math.min(...record.clips.map((c) => c.score)), 60);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('CLI: the most-replayed curve of info.json gives each kept clip a replay percentile', () => {
   const heatmap = Array.from({ length: 20 }, (_, i) => ({ start_time: 30 * i, end_time: 30 * i + 30, value: i === 10 ? 1 : 0.3 + (i % 3) / 20 }));
   const dir = runDir({ clips: [wire(300, 330)] }, { info: { id: 'v', title: 'T', duration: 600, heatmap } });
@@ -250,8 +287,10 @@ test('select.md holds hosted\'s rubric and field descriptions verbatim, with bot
   const { STANDALONE_DESCRIPTIONS, TITLE_ALTERNATIVES_DESCRIPTION } = await import('../engine/boqo/selection-schema.mjs');
   // A Windows checkout may turn line ends into CRLF; the rubric's own are LF.
   const md = readFileSync(join(HERE, '..', 'skills', 'boqo-clips', 'select.md'), 'utf8').replace(/\r\n/g, '\n');
-  assert.ok(md.includes('<!-- ported from boqo-ai/boqo apps/worker/src/select/prompt.ts @ bcc9d99cc; keep in step -->'));
-  assert.ok(md.includes('<!-- ported from boqo-ai/boqo apps/worker/src/select/anthropic.ts @ bcc9d99cc; keep in step -->'));
+  assert.ok(md.includes('<!-- ported from boqo-ai/boqo apps/worker/src/select/prompt.ts @ 0fe2ee1c1; keep in step -->'));
+  assert.ok(md.includes('<!-- ported from boqo-ai/boqo apps/worker/src/select/anthropic.ts @ 0fe2ee1c1; keep in step -->'));
+  assert.ok(!md.includes('the target × 1.25'), 'select.md still states the old cap');
+  assert.match(md, /the highest-scored half of the target/);
   assert.ok(md.includes(`<!-- rubric begins -->\n${SELECTION_RUBRIC}\n<!-- rubric ends -->`), 'the rubric block differs from SELECTION_RUBRIC');
   for (const text of [...Object.values(STANDALONE_DESCRIPTIONS), TITLE_ALTERNATIVES_DESCRIPTION]) assert.ok(md.includes(text), text);
   assert.match(md, /write `<run>\/selection\.json` once/);
@@ -286,7 +325,7 @@ test('dropped_clips names each dropped clip by its place in selection.json (1 is
 test('dropped_clips names the clips over the cap, and is absent from the CLI summary when nothing was dropped', () => {
   const clips = Array.from({ length: 60 }, (_, i) => wire(40 * i, 40 * i + 30, { score: 50 + (i % 40) }));
   const r = check(clips, 2400);
-  assert.equal(r.droppedClips.length, 10);
+  assert.equal(r.droppedClips.length, 40);
   assert.ok(r.droppedClips.every((d) => d.reason === 'over_cap' && d.clip >= 1 && d.clip <= 60 && d.end - d.start === 30));
   const dir = runDir({ clips: [wire(0, 30)] });
   try {

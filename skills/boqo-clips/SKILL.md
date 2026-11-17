@@ -153,7 +153,7 @@ local file, below. `/boqo-clips render …`: Render more, below.
    node "$HOME/.boqo-clips/tools/select-request.mjs" --run "<run>"
    ```
    It writes `<run>/select-request.md` and `<run>/select-options.json` (the length band the check reads) and
-   prints `{"target", "segments", "chars"}`. Tell the person, in one line, how many clips it aims for (`target`). The language comes from `info.json`, or from
+   prints `{"target", "segments", "chars"}`. Tell the person, in one line, how many clips it aims for (`target`) and that the best half are kept. The language comes from `info.json`, or from
    `<run>/transcript-language.txt` on the boqo path; `--lang` overrides both.
 6. **Select.** Read `select.md`, then the whole of `<run>/select-request.md` (in pages when it is long), and write
    `<run>/selection.json` once.

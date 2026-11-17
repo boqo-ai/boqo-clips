@@ -51,7 +51,7 @@ export const PAUSE_SPLIT_SEC = 0.8;
 const SOURCES = ['manual', 'auto', 'whisper'];
 const EPS = 1e-9;
 
-// ported from boqo-ai/boqo apps/worker/src/transcribe/normalize.ts @ bcc9d99cc; keep in step (scripts/boqo-drift.mjs)
+// ported from boqo-ai/boqo apps/worker/src/transcribe/normalize.ts @ 0fe2ee1c1; keep in step (scripts/boqo-drift.mjs)
 // segmentsFromWords, the fallback split: a segment ends after a word that ends
 // in . ! or ? (and an optional closing double quote), or when it holds
 // MAX_SEGMENT_WORDS words; what is left at the end is a segment too. Hosted

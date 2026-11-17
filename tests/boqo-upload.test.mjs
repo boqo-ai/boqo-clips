@@ -334,3 +334,80 @@ test("run put takes a transcribe upload's reply (upload_id) and prints that id, 
     await rm(dir, { recursive: true });
   }
 });
+
+// ---- a clip's title and hook from <run>/clips.json: on a shell line, `$`, `"` and a backtick belong to the shell
+
+import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
+
+const TITLE = 'I made $100k in "one" week with `this`';
+const HOOK = 'The $5 trick: "free" money, `echo now`';
+
+async function runFolder(clips) {
+  const dir = await mkdtemp(join(tmpdir(), "boqo post run "));
+  await writeFile(join(dir, "clips.json"), JSON.stringify({ clips }));
+  return dir;
+}
+
+test("run name --run --n takes the clip's title from clips.json; the title rules are the same", async () => {
+  const dir = await runFolder([{ n: 1, title: TITLE, hook: HOOK }, { n: 2, title: "The five-minute rule", hook: null }, { n: 3, title: "", hook: null }]);
+  try {
+    const deps = { readFile };
+    assert.deepEqual(JSON.parse((await run(["name", "--run", dir, "--n", "1"], deps)).line), { filename: `${TITLE}.mp4` });
+    const cases = [
+      [["name", "--run", dir, "--n", "2"], /- or _/],
+      [["name", "--run", dir, "--n", "3"], /clip 3 has no title/],
+      [["name", "--run", dir, "--n", "9"], /clips\.json has no clip 9/],
+      [["name", "--run", dir, "--n", "x"], /--n/],
+      [["name", "--run", dir], /--n/],
+      [["name", "--run", join(dir, "missing"), "--n", "1"], /cannot read clips\.json/],
+    ];
+    for (const [args, re] of cases) {
+      const { code, line } = await run(args, deps);
+      assert.equal(code, 1, args.join(" "));
+      assert.match(JSON.parse(line).error, re, args.join(" "));
+    }
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test("run caption --run --n gives the same words as --title and --hook; with no hook, the title alone", async () => {
+  const dir = await runFolder([{ n: 1, title: TITLE, hook: HOOK }, { n: 2, title: "Only a title", hook: null }]);
+  try {
+    const deps = { readFile };
+    const fromRun = await run(["caption", "--run", dir, "--n", "1", "--tags", "#clips, gaming"], deps);
+    assert.equal(fromRun.code, 0, fromRun.line);
+    assert.deepEqual(JSON.parse(fromRun.line), JSON.parse((await run(["caption", "--title", TITLE, "--hook", HOOK, "--tags", "#clips, gaming"], deps)).line));
+    assert.equal(JSON.parse(fromRun.line).tiktok.text, `${HOOK}\n\n${TITLE}\n\n#clips #gaming`);
+    assert.deepEqual(JSON.parse((await run(["caption", "--run", dir, "--n", "2"], deps)).line).youtube, { title: "Only a title", text: "" });
+    for (const args of [["caption", "--run", dir, "--n", "1", "--title", "t"], ["caption", "--run", dir, "--n", "1", "--hook", "h"], ["caption", "--run", dir]]) {
+      const { code, line } = await run(args, deps);
+      assert.equal(code, 1, args.join(" "));
+      assert.ok(JSON.parse(line).error, args.join(" "));
+    }
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+const CLI = fileURLToPath(new URL("../tools/boqo-upload.mjs", import.meta.url));
+const sh = (cmd) => spawnSync("sh", ["-c", cmd], { encoding: "utf8" });
+
+test("name and caption through a shell, as post.md writes them: $100k, a \" and a backtick reach the post", { skip: process.platform === "win32" && "needs sh" }, async () => {
+  const dir = await runFolder([{ n: 1, title: TITLE, hook: HOOK }]);
+  try {
+    const name = sh(`"${process.execPath}" "${CLI}" name --run "${dir}" --n 1`);
+    assert.equal(name.status, 0, name.stdout + name.stderr);
+    assert.deepEqual(JSON.parse(name.stdout), { filename: `${TITLE}.mp4` });
+    const caption = sh(`"${process.execPath}" "${CLI}" caption --run "${dir}" --n 1`);
+    assert.equal(caption.status, 0, caption.stdout + caption.stderr);
+    assert.equal(JSON.parse(caption.stdout).instagram.text, `${HOOK}\n\n${TITLE}`);
+    assert.deepEqual(JSON.parse(caption.stdout).youtube, { title: TITLE, text: HOOK });
+    // The control: a title in --title's double quotes loses $100k to the shell (`$1` is empty) before the tool runs.
+    const old = sh(`"${process.execPath}" "${CLI}" caption --title "I made $100k"`);
+    assert.equal(JSON.parse(old.stdout).youtube.title, "I made 00k");
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});

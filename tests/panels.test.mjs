@@ -705,3 +705,27 @@ test('recordProbe and recordRead write clips.json atomically: the old file is re
     rmSync(dir, { recursive: true, force: true });
   }
 });
+
+test('probe-record, read-frames and read-record refuse while an interrupted order is pending, and change nothing', async () => {
+  const { JOURNAL } = await import('../engine/order.mjs');
+  const dir = tmp('journal');
+  try {
+    writeRun(dir, [row(1, 10, 30)], { panelProbe: { version: 1, isStream: true, gameTitle: null } });
+    const before = readFileSync(join(dir, 'clips.json'), 'utf8');
+    writeFileSync(join(dir, JOURNAL), JSON.stringify({ phase: 1, moves: [], record: before }));
+    const probe = join(dir, 'probe.json');
+    writeFileSync(probe, '{"isStream": false}');
+    const d = framesDir(dir, 1, [11, 14]);
+    writeFileSync(join(d, 'read.json'), JSON.stringify({ content: 'other', gameTitle: null, samples: [goodSample(11), goodSample(14)] }));
+    const pending = /an interrupted order is pending: run clips\.mjs order first/;
+    assert.throws(() => recordProbe({ run: dir, file: probe }), pending);
+    assert.throws(() => recordRead({ run: dir, n: 1, file: join(d, 'read.json') }), pending);
+    await assert.rejects(() => readFrames({ run: dir, n: 1, src: join(dir, 'none.mp4'), exec: async () => ({ stdout: '', stderr: '' }) }), pending);
+    const r = cli('probe-record', '--run', dir, '--file', probe);
+    assert.equal(r.status, 1);
+    assert.match(jsonOut(r).errors[0], pending);
+    assert.equal(readFileSync(join(dir, 'clips.json'), 'utf8'), before);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});

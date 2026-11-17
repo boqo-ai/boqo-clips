@@ -23,15 +23,17 @@ full, in double quotes (SKILL.md → Overview).
 
 ## Each clip
 
-One clip at a time. `<file>` is its path, `<k>` its number.
+One clip at a time. `<file>` is its path, `<k>` its number: its `n` in `<run>/clips.json`, which holds its title and
+hook. Both commands in step 2 read them from there: a title on a command line is the shell's to rewrite (SKILL.md →
+Rules).
 1. `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" probe "<file>"` gives `sizeBytes`, `contentType` and `passthrough`.
    `passthrough: false`: say its `reasons` and skip the clip.
-2. `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" name "<the clip's title>"` gives `filename`. An error (a `-`, `_` or `/`,
-   a single word): reword the title without it, and use the new title from here on.
-   `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" caption --title "<the clip's title>" --hook "<the clip's hook>"`
-   gives the words boqo's own Clips page writes for a post, `{tiktok, instagram, youtube}` (The caption). The hook is
-   the clip's `hook` in `<run>/clips.json`; leave `--hook` out when it has none. Add `--tags a,b` only for hashtags
-   the person named.
+2. `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" name --run "<run>" --n <k>` gives `filename`. An error (a `-`, `_`
+   or `/`, a single word): reword that row's `title` in `<run>/clips.json` without it (your file tool, 60 characters
+   at most), and run `name` again; the new title is the post's from here on.
+   `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" caption --run "<run>" --n <k>` gives the words boqo's own Clips
+   page writes for a post from the clip's title and hook, `{tiktok, instagram, youtube}` (The caption). Add
+   `--tags '<a>,<b>'`, in single quotes, only for hashtags the person named.
 3. `create_upload {filename, contentType: "video/mp4", sizeBytes, kind: "post"}`. Write its reply, exactly as it came,
    to `<run>/upload-<k>.json`. It holds signed upload URLs: never print them, quote them or put them in `runs.md`.
 4. `node "$HOME/.boqo-clips/tools/boqo-upload.mjs" put "<file>" --reply "<run>/upload-<k>.json"` gives

@@ -136,3 +136,37 @@ test('SKILL.md stops polling get_transcript on not_found', () => {
   const skill = readFileSync(join(SKILL_DIR, 'SKILL.md'), 'utf8').replace(/\r\n/g, '\n');
   assert.match(skill, /\{not_found: true\}` is final, so stop polling/);
 });
+
+// Words never go on a command line: inside double quotes the shell rewrites `$100k`, ends at a `"` and runs a
+// backtick. Every double-quoted argument a doc's tool command passes is a path, a link or a brand name (NAME_RE in
+// engine/brand.mjs: letters, digits, spaces, - and _); titles, hooks and the person's words come from clips.json or a file.
+test('the skill docs pass no title, hook or request on a command line, only paths, links and brand names', () => {
+  const SAFE = /^<(run|home|samples|file|url|name|brand|style|logo)>/;
+  let quoted = 0;
+  for (const f of ['SKILL.md', 'onboarding.md', 'post.md', 'panels.md', 'stranger.md']) {
+    const text = readFileSync(join(SKILL_DIR, f), 'utf8').replace(/\\\n\s*/g, ' ');
+    assert.doesNotMatch(text, /"<the clip's|"<their words>"|--title "|--hook "|--prompt "/, f);
+    for (const m of text.matchAll(/node "\$HOME\/\.boqo-clips\/tools\/([a-z-]+)\.mjs"([^\n`]*)/g)) {
+      for (const [, arg] of m[2].matchAll(/"([^"]*)"/g)) {
+        assert.match(arg, SAFE, `${f}: ${m[0]}`);
+        quoted++;
+      }
+    }
+  }
+  assert.ok(quoted > 30, `only ${quoted} quoted arguments checked`);
+});
+
+test('the docs carry the fix-wave lines: zod goes to the doctor, whisper\'s 0 words, stranger after the render, the Default kit\'s file, the update\'s question', () => {
+  const read = (f) => readFileSync(f, 'utf8').replace(/\r\n/g, '\n').replace(/\n\s*/g, ' ');
+  const skill = read(join(SKILL_DIR, 'SKILL.md'));
+  assert.match(skill, /onnxruntime or zod, or saying the skill's packages are not installed: run `node "\$HOME\/\.boqo-clips\/tools\/doctor\.mjs"/);
+  assert.ok(!skill.includes('the words file has no words'), 'v0.1 transcript.mjs wording; asr.mjs prints {"words": 0}');
+  assert.match(skill, /`"words": 0` in `<run>\/asr\.json`: whisper heard no speech/);
+  assert.match(skill, /12\. \*\*Stranger\.\*\* Once `<run>\/render\.json` holds its line/);
+  assert.match(skill, /--prompt-file "<run>\/prompt\.txt"/);
+  const post = read(join(SKILL_DIR, 'post.md'));
+  assert.match(post, /boqo-upload\.mjs" name --run "<run>" --n <k>/);
+  assert.match(post, /boqo-upload\.mjs" caption --run "<run>" --n <k>/);
+  assert.match(read(join(SKILL_DIR, 'onboarding.md')), /to `<samples>\/default\.json`.*brand\.mjs" save "<samples>\/default\.json"/);
+  assert.match(read(join(SKILL_DIR, '..', '..', 'INSTALL.md')), /when it is not \(an install from before the packages, about 258 MB of them\), ask step 4's question first/);
+});

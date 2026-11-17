@@ -5,7 +5,7 @@ import { mkdtempSync, writeFileSync, chmodSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { BUNDLED_FONTS, hintsFor, runChecks, isOk, ytDlpAtLeast, MIN_YTDLP } from '../engine/doctor.mjs';
+import { BUNDLED_FONTS, hintsFor, runChecks, isOk, ytDlpAtLeast, MIN_YTDLP, MIN_FFMPEG, ffmpegAtLeast } from '../engine/doctor.mjs';
 import { copyFileSync, mkdirSync, readdirSync } from 'node:fs';
 
 const chk = (name, ok, detail = '', required = true) => ({ name, ok, detail, required });
@@ -144,6 +144,13 @@ test('ytDlpAtLeast compares dated versions', () => {
   assert.equal(ytDlpAtLeast('garbage'), false);
 });
 
+test('ffmpegAtLeast: 5.1 or newer for a release, null for a git build (the option list decides)', () => {
+  assert.equal(MIN_FFMPEG, '5.1');
+  for (const v of ['5.1', '5.1.9', '6.1.1-3ubuntu5', '7.1-full_build-www.gyan.dev', '7.0.2', '8.0', '10.0']) assert.equal(ffmpegAtLeast(v), true, v);
+  for (const v of ['4.4.2-0ubuntu0.22.04.1', '4.3.8-0+deb11u1', '5.0.1', '3.4.13']) assert.equal(ffmpegAtLeast(v), false, v);
+  for (const v of ['N-117000-g1234abcd-20241001', '2025-01-02-git-baaa8d0a4d-full_build-www.gyan.dev', 'git-2021']) assert.equal(ffmpegAtLeast(v), null, v);
+});
+
 // ---- runChecks against a controlled PATH (no dependence on the runner's tools)
 
 async function withEnv(vars, fn) {
@@ -172,7 +179,7 @@ test('runChecks on an empty PATH: tools fail with where-to-look details, node st
       runChecks({ nodeMin: 20, whisper: 'required', streamlink: true, env: process.env }),
     );
     const c = byName(checks);
-    assert.deepEqual(checks.map((x) => x.name), ['node', 'ffmpeg', 'ffprobe', 'ffmpeg-filters', 'ffmpeg-https', 'yt-dlp', 'whisper', 'whisper-model', 'onnxruntime', 'fonts', 'streamlink']);
+    assert.deepEqual(checks.map((x) => x.name), ['node', 'ffmpeg', 'ffprobe', 'ffmpeg-filters', 'ffmpeg-https', 'yt-dlp', 'whisper', 'whisper-model', 'zod', 'onnxruntime', 'fonts', 'streamlink']);
     assert.equal(c.node.ok, true);
     assert.match(c.node.detail, /^node \d+\.\d+\.\d+/);
     for (const n of ['ffmpeg', 'ffprobe', 'ffmpeg-filters', 'yt-dlp', 'whisper', 'whisper-model']) assert.equal(c[n].ok, false, n);
@@ -362,7 +369,7 @@ test('tools/doctor.mjs prints one JSON line, exits 0 even when checks fail, and 
     assert.equal(lines.length, 1);
     const out = JSON.parse(lines[0]);
     assert.equal(out.ok, false);
-    assert.equal(out.checks.length, 11);
+    assert.equal(out.checks.length, 12);
     assert.ok(out.hints.length >= 4);
     const bad = spawnSync(process.execPath, [script, '--node', '18'], { encoding: 'utf8' });
     assert.equal(bad.status, 1);
@@ -475,4 +482,95 @@ test('runChecks: a missing or empty face fails the required fonts check, and the
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
+});
+
+// ---- ffmpeg 5.1 or newer (the renders pass -fps_mode)
+
+const UBUNTU_2204 = 'ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers';
+
+test('runChecks: Ubuntu 22.04\'s ffmpeg 4.4.2 fails the required ffmpeg check; its filters are still looked at', posix, async () => {
+  const bin = fakeBin({ ffmpeg: FFMPEG_OK.replace('ffmpeg version 7.1.1 Copyright (c) the FFmpeg developers', UBUNTU_2204), ffprobe: FFPROBE_OK, 'yt-dlp': 'echo 2026.10.26' });
+  try {
+    const checks = await withEnv({ PATH: bin, BOQO_HOME: bin, BOQO_WHISPER_MODEL: undefined }, () => runChecks({ nodeMin: 20, whisper: 'optional', env: process.env }));
+    const c = byName(checks);
+    assert.equal(c.ffmpeg.ok, false);
+    assert.equal(c.ffmpeg.required, true);
+    assert.equal(c.ffmpeg.cause, 'old');
+    assert.equal(c.ffmpeg.detail, `ffmpeg 4.4.2-0ubuntu0.22.04.1 at ${join(bin, 'ffmpeg')} is older than 5.1`);
+    assert.equal(c['ffmpeg-filters'].ok, true, c['ffmpeg-filters'].detail);
+    assert.equal(c['ffmpeg-https'].ok, true, c['ffmpeg-https'].detail);
+    assert.equal(isOk(checks), false);
+    const linux = hintsFor(checks.filter((x) => !x.ok && x.name.startsWith('ffmpeg')), 'linux');
+    assert.equal(linux.length, 1, linux.join('\n'));
+    assert.match(linux[0], /^ffmpeg: ffmpeg 4\.4\.2-0ubuntu0\.22\.04\.1 at .* is older than 5\.1, which the renders need \(`-fps_mode`\): /);
+    assert.ok(all(linux, 'Ubuntu 22.04'));
+    assert.ok(all(linux, 'github.com/BtbN/FFmpeg-Builds'));
+    assert.ok(all(linux, '~/.local/bin'));
+  } finally {
+    rmSync(bin, { recursive: true, force: true });
+  }
+});
+
+test('hintsFor: a too-old ffmpeg says upgrade, per OS; a missing one says install', () => {
+  const old = { ...fail('ffmpeg', 'ffmpeg 4.4.2 at /usr/bin/ffmpeg is older than 5.1'), cause: 'old' };
+  const mac = hintsFor([old], 'darwin');
+  assert.equal(mac.length, 1);
+  assert.ok(all(mac, '`brew upgrade ffmpeg-full`'));
+  const win = hintsFor([old], 'win32');
+  assert.ok(all(win, '`winget upgrade Gyan.FFmpeg`'));
+  assert.match(win.at(-1), /restart the agent/);
+  assert.ok(!all(hintsFor([fail('ffmpeg', 'not found on PATH')], 'darwin'), 'upgrade'));
+  assert.ok(all(hintsFor([fail('ffmpeg', 'not found on PATH')], 'linux'), '5.1 or newer'));
+});
+
+test('runChecks: a git build of ffmpeg passes when its option list has -fps_mode, and fails when it has not', posix, async () => {
+  const git = (help) =>
+    fakeBin({
+      ffmpeg: FFMPEG_OK.replace('ffmpeg version 7.1.1 Copyright (c) the FFmpeg developers', 'ffmpeg version N-117000-g1234abcd-20241001 Copyright (c) 2000-2024 the FFmpeg developers').replace(
+        '*https://*) exit 0;;',
+        () => `*https://*) exit 0;;\n  *" -h long"*) ${help};;`,
+      ),
+    });
+  const recent = git(`echo "-fps_mode[:<stream_spec>]  set framerate mode for matching video streams; overrides vsync"`);
+  const old = git(`echo "-vsync <>           set video sync method globally; deprecated, use -fps_mode"`);
+  try {
+    const opts = { nodeMin: 20, whisper: 'optional', env: process.env };
+    const a = byName(await withEnv({ PATH: recent, BOQO_HOME: recent, BOQO_WHISPER_MODEL: undefined }, () => runChecks(opts)));
+    assert.equal(a.ffmpeg.ok, true, a.ffmpeg.detail);
+    assert.equal(a.ffmpeg.detail, `ffmpeg N-117000-g1234abcd-20241001 at ${join(recent, 'ffmpeg')}`);
+    const b = byName(await withEnv({ PATH: old, BOQO_HOME: old, BOQO_WHISPER_MODEL: undefined }, () => runChecks(opts)));
+    assert.equal(b.ffmpeg.ok, false);
+    assert.equal(b.ffmpeg.cause, 'old');
+  } finally {
+    rmSync(recent, { recursive: true, force: true });
+    rmSync(old, { recursive: true, force: true });
+  }
+});
+
+// ---- zod, the other npm package
+
+test('runChecks: zod loads here, a required check', async () => {
+  const checks = await runChecks({ nodeMin: 20, whisper: 'optional', env: { PATH: '' } });
+  const z = byName(checks).zod;
+  assert.deepEqual([z.ok, z.required, z.detail], [true, true, 'zod loads']);
+});
+
+test('runChecks: zod that is not installed fails with cause not-installed; one npm line when onnxruntime-node is missing too', async () => {
+  const missing = (name) => async () => {
+    throw Object.assign(new Error(`Cannot find package '${name}' imported from /x/y.mjs`), { code: 'ERR_MODULE_NOT_FOUND' });
+  };
+  const checks = await runChecks({ nodeMin: 20, whisper: 'optional', env: { PATH: '' }, loadZod: missing('zod'), loadOnnx: missing('onnxruntime-node') });
+  const c = byName(checks);
+  assert.deepEqual([c.zod.ok, c.zod.cause, c.zod.detail], [false, 'not-installed', 'zod is not installed']);
+  assert.equal(c.onnxruntime.cause, 'not-installed');
+  assert.equal(isOk(checks), false);
+  for (const p of ['darwin', 'win32', 'linux']) {
+    const h = hintsFor([c.zod, c.onnxruntime], p);
+    assert.equal(h.filter((l) => l.includes('npm ci')).length, 1, `${p}: ${h.join('\n')}`);
+  }
+  // zod alone: its own line, with the same command
+  assert.deepEqual(hintsFor([c.zod], 'linux'), ["zod: the skill's packages are not installed: `cd \"$HOME/.boqo-clips\" && npm ci --omit=dev --ignore-scripts`"]);
+  const broken = byName(await runChecks({ nodeMin: 20, whisper: 'optional', env: { PATH: '' }, loadZod: async () => ({}) })).zod;
+  assert.deepEqual([broken.ok, broken.cause], [false, 'runtime']);
+  assert.match(hintsFor([broken], 'linux')[0], /^zod: zod did not load: .*; reinstall the skill's packages: `cd/);
 });

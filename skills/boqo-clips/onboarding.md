@@ -5,7 +5,10 @@ Runs from INSTALL.md step 6, and from a run that finds no brand kit or no `<home
 that is done: a kit `node "$HOME/.boqo-clips/tools/brand.mjs" list` already shows (kits are shared by every boqo skill, so
 another one may have made it), the rule already in `config.json`.
 
-If the person says "defaults" (or "skip", or gives no brand), take the Default kit: save `{"version": 2, "name": "default"}` with `brand.mjs save` (no logo), ask no questions, render no samples, and go on to part 2.
+If the person says "defaults" (or "skip", or gives no brand), take the Default kit: write
+`{"version": 2, "name": "default"}` to `<samples>/default.json` (`<samples>` is below; `mkdir -p` it first), save it
+with `node "$HOME/.boqo-clips/tools/brand.mjs" save "<samples>/default.json"` (no logo), then `rm -rf "<samples>"`.
+Ask no questions, render no samples, and go on to part 2.
 
 Open with two sentences: in about two minutes you set up their brand kit (a name, a logo, a colour or two, and a
 caption style they pick by looking at it), then make their first clips. When they already gave a link or file, say it is

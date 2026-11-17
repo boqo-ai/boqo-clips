@@ -334,3 +334,20 @@ test('dropped_clips names the clips over the cap, and is absent from the CLI sum
     rmSync(dir, { recursive: true, force: true });
   }
 });
+
+// An order journal (<run>/.order-tmp.journal.json, engine/order.mjs) holds the record the next `clips order` writes
+// back: a fresh check written before it finishes would be overwritten without a word. render and stranger refuse too.
+test('CLI: an interrupted order still pending is refused, and clips.json is left as it is', async () => {
+  const { JOURNAL } = await import('../engine/order.mjs');
+  const dir = runDir({ clips: [wire(0, 30)] });
+  try {
+    writeFileSync(join(dir, 'clips.json'), '{"clips":[]}');
+    writeFileSync(join(dir, JOURNAL), JSON.stringify({ phase: 1, moves: [], record: '{"clips":[]}\n' }));
+    const r = cli(dir);
+    assert.equal(r.status, 1);
+    assert.deepEqual(r.out, { ok: false, errors: ['an interrupted order is pending: run clips.mjs order first, then check again'] });
+    assert.equal(readFileSync(join(dir, 'clips.json'), 'utf8'), '{"clips":[]}');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});

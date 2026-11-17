@@ -326,3 +326,41 @@ test('a speaker that is not a whole number is dropped, so it cannot lead a line'
   assert.deepEqual(si.segments.map((s) => s.speaker), [null, null, null, 2]);
   assert.deepEqual(buildUserMessage(si).split('\n').slice(-4), ['[0.0] one', '[6.0] two', '[10.0] three', '[13.0] S2: four']);
 });
+
+// ---- the person's words from a file: on a shell line, `$`, `"` and a backtick belong to the shell
+
+const posix = { skip: process.platform === 'win32' && 'needs sh' };
+const sh = (cmd) => spawnSync('sh', ['-c', cmd], { encoding: 'utf8' });
+const RISKY = 'Find the "secret" $100k part, and `echo this` too';
+
+test('CLI --prompt-file: the words in the file are the request, exactly as --prompt gives them', () => {
+  const { dir, raw } = runDir('build-user-message-full');
+  writeFileSync(join(dir, 'prompt.txt'), `${raw.prompt}\n`);
+  const r = runCli(['--run', dir, '--genre', raw.genre, '--length', raw.length, '--prompt-file', join(dir, 'prompt.txt')]);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  const golden = JSON.parse(readFileSync(fileURLToPath(new URL('./golden/build-user-message-full.json', import.meta.url)), 'utf8'));
+  assert.equal(readFileSync(join(dir, 'select-request.md'), 'utf8'), `${golden.rubric}\n---\n${golden.message}\n`);
+});
+
+test('CLI --prompt-file through a shell, as SKILL.md writes it: $100k, a " and a backtick reach the request', posix, () => {
+  const { dir } = runDir('build-user-message-bare');
+  writeFileSync(join(dir, 'prompt.txt'), RISKY);
+  const r = sh(`"${process.execPath}" "${CLI}" --run "${dir}" --prompt-file "${join(dir, 'prompt.txt')}"`);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  const text = readFileSync(join(dir, 'select-request.md'), 'utf8');
+  assert.ok(text.includes(`${REQUEST_BEGIN}\n${RISKY}\n`), text.slice(-400));
+  // The control: the same words in --prompt's double quotes lose $100k to the shell (`$1` is empty) before the tool runs.
+  assert.equal(sh(`"${process.execPath}" "${CLI}" --run "${dir}" --prompt "Find the $100k part"`).status, 0);
+  assert.ok(readFileSync(join(dir, 'select-request.md'), 'utf8').includes(`${REQUEST_BEGIN}\nFind the 00k part\n`));
+});
+
+test('CLI --prompt-file: refused with --prompt, or when the file cannot be read; nothing written', () => {
+  const { dir } = runDir('build-user-message-bare');
+  writeFileSync(join(dir, 'prompt.txt'), 'x');
+  for (const args of [['--prompt', 'a', '--prompt-file', join(dir, 'prompt.txt')], ['--prompt-file', join(dir, 'missing.txt')]]) {
+    const r = runCli(['--run', dir, ...args]);
+    assert.equal(r.status, 1, args.join(' '));
+    assert.match(lastJson(r).error, /prompt/);
+  }
+  assert.equal(existsSync(join(dir, 'select-request.md')), false);
+});

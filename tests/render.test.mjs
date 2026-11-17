@@ -104,9 +104,9 @@ test('renderClip: 20 s of testsrc2 and a tone become a 1080x1920 h264/aac 48 kHz
   assert.ok(existsSync(r.thumb));
   const th = probe(r.thumb).streams[0];
   assert.deepEqual([th.width, th.height], [1080, 1920]);
-  assert.equal(r.notes.length, 2);
+  assert.equal(r.notes.length, 1, r.notes.join('; '));
   assert.match(r.notes[0], /^Faces unavailable, every shot is Fit: .*onnxruntime-node is not installed/);
-  assert.equal(r.notes[1], 'No logo: the kit has none.', 'a kit with no logo says so, as SKILL.md promises');
+  assert.ok(!r.notes.some((n) => /kit has none/.test(n)), 'a kit with no logo is the run\'s note (tools/render.mjs), not each clip\'s');
   assert.deepEqual(r.layouts, ['fit']);
   assert.deepEqual(r.cuts, []);
   assert.deepEqual(r.window, { start: 0, end: 20 });
@@ -211,6 +211,16 @@ test('CLI --first and --n render rows by number into clips.json; clips order the
   assert.ok(existsSync(join(run, 'out', 'clip-02.jpg')));
 });
 
+test('CLI with a kit that has no logo: "No logo: the kit has none." once, in the run\'s notes, and in no clip\'s', { skip }, () => {
+  const run = runFolder([clipRow(1, 2, 5), clipRow(2, 10, 13)]);
+  const r = cli(['--run', run, '--all', '--src', fx.src], { BOQO_HOME: emptyHome() });
+  assert.equal(r.status, 0, r.stdout + r.stderr);
+  const out = last(r);
+  assert.deepEqual(out.rendered.map((x) => x.n), [1, 2]);
+  assert.deepEqual(out.notes, ['No logo: the kit has none.']);
+  for (const x of [...out.rendered, ...readRecord(run).clips]) assert.ok(!x.notes.some((n) => /^No logo/.test(n)), JSON.stringify(x.notes));
+});
+
 test('CLI with sections.json: each clip renders from its own section; a section too short for its clip fails that clip only', { skip }, () => {
   const run = runFolder([clipRow(1, 6, 9), clipRow(2, 14, 17)]);
   // clip 1 from the section (video 5..13); clip 2 is claimed by an entry that says 5..20 for the same 8 s file.
@@ -247,6 +257,7 @@ test('CLI renders with a saved kit whose logo file is gone: no logo, one note, t
   const rec = readRecord(run);
   assert.equal(rec.clips[0].rendered, true);
   assert.equal(rec.clips[0].notes.filter((n) => /^No logo: the file is missing/.test(n)).length, 1);
+  assert.equal(last(r).notes, undefined, 'the kit names a logo: no run note');
 });
 
 test('CLI refusals: no --run, a pending order, an unknown clip, two selections, no sections and no --src', () => {

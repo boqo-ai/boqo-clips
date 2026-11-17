@@ -2,7 +2,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { MAC_FFMPEG_DIRS, toolEnv } from '../engine/env.mjs';
+import { homedir } from 'node:os';
+import { join } from 'node:path';
+import { MAC_FFMPEG_DIRS, boqoHome, toolEnv } from '../engine/env.mjs';
 
 const ARM = '/opt/homebrew/opt/ffmpeg-full/bin';
 const INTEL = '/usr/local/opt/ffmpeg-full/bin';
@@ -77,4 +79,19 @@ test('every engine file and tool that starts a process runs it with toolEnv', ()
     for (const line of sites) assert.match(line, /toolEnv\(\)|\benv\b/, `${f}: ${line.trim()}`);
   }
   assert.deepEqual(spawners.sort(), ['engine/asr.mjs', 'engine/doctor.mjs', 'engine/fetch.mjs', 'engine/panels-read.mjs', 'engine/render.mjs', 'tools/boqo-upload.mjs', 'tools/stranger.mjs']);
+});
+
+// The doctor and whisper read the home folder from here, so they load without the npm packages brand.mjs needs.
+test('boqoHome is $BOQO_HOME, else ~/.boqo; brand.mjs hands out the same function', async () => {
+  const was = process.env.BOQO_HOME;
+  try {
+    process.env.BOQO_HOME = '/x/boqo home';
+    assert.equal(boqoHome(), '/x/boqo home');
+    delete process.env.BOQO_HOME;
+    assert.equal(boqoHome(), join(homedir(), '.boqo'));
+    assert.equal((await import('../engine/brand.mjs')).boqoHome, boqoHome);
+  } finally {
+    if (was === undefined) delete process.env.BOQO_HOME;
+    else process.env.BOQO_HOME = was;
+  }
 });

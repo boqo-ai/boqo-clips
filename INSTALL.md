@@ -68,12 +68,12 @@ hold a space); `~` does not expand inside quotes, so the commands use `"$HOME/..
 
 5. **Check the tools the skill uses.** Run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional`, after the
    install, so that it can load onnxruntime-node. It only looks, and prints one JSON line: `ok` is true when every
-   required tool works (Node 20+, ffmpeg with libass and its ffprobe, yt-dlp, onnxruntime-node running the face model,
-   the bundled fonts), and `hints` says how to install each one that is missing or too old, the optional whisper.cpp
-   included (it transcribes videos that have no captions). Its Windows hints run in PowerShell 5.1 as they stand.
-   When it cannot run, `node --version` (it must be 20 or newer). Name what is missing and how the person installs
-   it, in the words of `hints`. Install nothing yourself. A missing tool does not stop the install: say what it is
-   needed for and go on.
+   required tool works (Node 20+, ffmpeg 5.1 or newer with libass and its ffprobe, yt-dlp, the two npm packages with
+   onnxruntime-node running the face model, the bundled fonts), and `hints` says how to install each one that is
+   missing or too old, the optional whisper.cpp included (it transcribes videos that have no captions). Its Windows
+   hints run in PowerShell 5.1 as they stand. When it cannot run, `node --version` (it must be 20 or newer). Name
+   what is missing and how the person installs it, in the words of `hints`. Install nothing yourself. A missing tool
+   does not stop the install: say what it is needed for and go on.
 
 6. **Start now, in this chat,** connecting no service first (onboarding asks for each when it is needed). Read
    `<skills>/boqo-clips/SKILL.md`, then `<skills>/boqo-clips/onboarding.md`, and run onboarding. It opens with what the next minutes give them (their brand kit, then their first clips) and
@@ -99,8 +99,11 @@ git -C "$HOME/.boqo-clips" pull --ff-only
 cd "$HOME/.boqo-clips" && npm ci --omit=dev --ignore-scripts
 ```
 
-The second command puts the packages back in step with the update (the person's yes in step 4 covers it). A copied folder (step 3, on Windows without real links) is updated by copying the files into it again, after the
-person's yes (the `/.` copies the folder's contents, never a second folder inside it):
+The second command puts the packages back in step with the update. The person's yes in step 4 covers it when
+`~/.boqo-clips/node_modules` is there; when it is not (an install from before the packages, about 258 MB of them),
+ask step 4's question first, and run it only on a yes. A copied folder (step 3, on Windows without real links) is
+updated by copying the files into it again, after the person's yes (the `/.` copies the folder's contents, never a
+second folder inside it):
 
 ```sh
 cp -R "$HOME/.boqo-clips/skills/boqo-clips/." "<skills>/boqo-clips/"

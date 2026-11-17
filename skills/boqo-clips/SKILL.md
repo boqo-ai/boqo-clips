@@ -49,9 +49,12 @@ person's rule (`post.md`), or to transcribe, when the person chose that and said
   elsewhere end the command with ` &` and look at the file about once a minute. Never wait with a foreground `sleep`.
   Any other command gets up to 10 minutes (Claude Code: the shell tool's `timeout` of 600000).
 - **One yt-dlp call at a time.** YouTube rate-limits parallel requests.
+- **Words never go on a command line.** A title, a hook or the person's own words inside double quotes are the
+  shell's to rewrite (`$100k` loses `$1`, a `"` ends them, a backtick runs a command). The commands here read them
+  from `clips.json`, or from a file you write with your file tool, never with `echo`.
 - Install nothing without the person's yes; INSTALL.md's one `npm ci` is the only npm command. An error naming ffmpeg,
-  ffprobe, yt-dlp, whisper-cli or onnxruntime: run `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional` and
-  give the person its `hints`.
+  ffprobe, yt-dlp, whisper-cli, onnxruntime or zod, or saying the skill's packages are not installed: run
+  `node "$HOME/.boqo-clips/tools/doctor.mjs" --whisper optional` and give the person its `hints`.
 
 ## The run
 
@@ -114,7 +117,7 @@ local file, below. `/boqo-clips render …`: Render more, below.
         then run whisper again with the video's language, `--lang <code>` (`--lang ru`) before `--out`: with a
         language other than English it takes a multilingual model, and `select-request` gets the same
         `--lang <code>` (step 5).
-        `the words file has no words`: whisper heard no speech. Tell the person, and stop. Known limit: whisper can
+        `"words": 0` in `<run>/asr.json`: whisper heard no speech. Tell the person, and stop. Known limit: whisper can
         hear a word that is not there ("Oh") in silence at a multiple of 30 s, its window edge; never set an edge on one.
 
      **The boqo transcript** (`"transcript": "boqo"`), Deepgram's own sentences, identical to hosted's:
@@ -148,7 +151,8 @@ local file, below. `/boqo-clips render …`: Render more, below.
 4. **Segments.** `<run>/segments.json` (sentences, `speaker` null locally) exists after step 2, 3a's or 3b's whisper or
    3b's boqo transcript. Nothing to run; with no file there, the transcript step failed: say so and stop.
 5. **Request.** With the person's choices when they made any (`--genre podcast|talk|gaming|vlog|entertainment`,
-   `--length under_30|30_60|60_90|90_120|120_180`, `--prompt "<their words>"`, `--lang <code>`):
+   `--length under_30|30_60|60_90|90_120|120_180`, `--lang <code>`; what they want the clips to be about: write their
+   words, as they wrote them, to `<run>/prompt.txt` with your file tool, then `--prompt-file "<run>/prompt.txt"`):
    ```sh
    node "$HOME/.boqo-clips/tools/select-request.mjs" --run "<run>"
    ```
@@ -186,14 +190,15 @@ local file, below. `/boqo-clips render …`: Render more, below.
     ```sh
     node "$HOME/.boqo-clips/tools/render.mjs" --run "<run>" --first 10 --brand "<name>" > "<run>/render.json"
     ```
-    `<run>/render.json` gets `{"rendered": [{n, file, thumb, seconds, notes}], "failed": [{n, error}]}`, and each
-    rendered row of `clips.json` says `rendered: true`. A failed clip does not stop the others; its work folder stays
-    at `<run>/render/clip-<nn>/` (`<nn>` its number, two digits). Say each `n` and error in one line, and where that
-    folder is. A render takes about 1–2× the clips' length, longer on a laptop. A note is a step that was
-    skipped, not a failure (no face model: every shot framed to fit; no logo): give the person the notes that
-    matter, one line each, with no file paths. Framing, captions, headline, logo, pauses and loudness are boqo's own
-    defaults, from the kit.
-12. **Stranger.** For each rendered clip, `stranger.md`: its frames, your annotation, the record.
+    `<run>/render.json` gets `{"rendered": [{n, file, thumb, seconds, notes}], "failed": [{n, error}]}`, with the
+    run's own `notes` beside them when the kit has no logo (say that once), and each rendered row of `clips.json`
+    says `rendered: true`. A failed clip does not stop the others; its work folder stays at `<run>/render/clip-<nn>/`
+    (`<nn>` its number, two digits). Say each `n` and error in one line, and where that folder is. A render takes
+    about 1–2× the clips' length, longer on a laptop. A note is a step that was skipped, not a failure (no face
+    model: every shot framed to fit; no logo): give the person the notes that matter, one line each, with no file
+    paths. Framing, captions, headline, logo, pauses and loudness are boqo's own defaults, from the kit.
+12. **Stranger.** Once `<run>/render.json` holds its line (a stranger record and a render both write `clips.json`):
+    for each rendered clip, `stranger.md`: its frames, your annotation, the record.
 13. **Order again.** `node "$HOME/.boqo-clips/tools/clips.mjs" order --run "<run>"`: the rendered clips are ranked
     with the stranger judgment, the files renamed to their new places (`clip-01.mp4` is the best), and the clips not
     rendered follow in their earlier order.

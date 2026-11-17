@@ -30,7 +30,7 @@ final order. The rest render on request.
 ## Requirements
 
 - Node 20 or newer
-- ffmpeg with libass (macOS: `brew install ffmpeg-full`)
+- ffmpeg 5.1 or newer, with libass (macOS: `brew install ffmpeg-full`; Ubuntu 22.04's own ffmpeg is too old)
 - yt-dlp
 - Two npm packages, installed into `~/.boqo-clips` after your yes: `onnxruntime-node` (face detection; about 258 MB unpacked) and `zod`
 - Optional: whisper.cpp (`whisper-cli`) and a model, for videos without captions

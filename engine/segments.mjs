@@ -18,8 +18,9 @@ export const MAX_SEGMENT_WORDS = 40;
  * between one word's START and the next one's start ends a segment. Start to
  * start, not end to start: on YouTube auto captions `wordsFromJson3` ends a word
  * at the next word's start but never more than 1.0 s after its own, so a word's
- * end is a synthesized one and an end-to-start gap is 0 whenever the spacing is
- * under 1.0 s (read out of `engine/words.mjs`; the data below agrees: of 17,828
+ * end is a synthesized one and an end-to-start gap is 0 unless the caption
+ * event's own span ends the word earlier (so under 1.0 s of spacing it is
+ * almost always 0; read out of `engine/words.mjs`; the data below agrees: of 17,828
  * real auto words 825 have any gap at all). Spec section 7.2 wrote the rule as
  * the end-to-start gap; E2 changed the metric (a deviation from the spec's
  * wording) because that gap cannot reach the values that agree best. Only
@@ -32,8 +33,7 @@ export const MAX_SEGMENT_WORDS = 40;
  * within 0.3 s, one to one; both sides restricted to the span the words cover
  * (1,562 hosted boundaries; 2,364 skill ones at 0.8 s).
  *   - Start to start, 0.8 s: pooled F1 0.298 (P 0.247, R 0.375). Per video F1:
- *     vivo 0.100, Air India 0.134, Dota 0.330, Rothenburg 0.178, HAPPENING
- *     0.458; macro mean 0.240. Pooled F1 is 0.269 at 0.5, 0.289 at 0.6, 0.293
+ *     hi-1 0.100, hi-2 0.134, ru 0.330, fil 0.178, en 0.458; macro mean 0.240. Pooled F1 is 0.269 at 0.5, 0.289 at 0.6, 0.293
  *     at 0.7, 0.296 at 0.9, 0.287 at 1.0: a plateau from 0.6 to 1.0, with the
  *     same peak at 0.2 s and at 0.5 s tolerance.
  *   - The old end-to-start gap, best positive value (0.1 s): pooled F1 0.255;
@@ -42,9 +42,8 @@ export const MAX_SEGMENT_WORDS = 40;
  *   - Time-block bootstrap (120 s blocks), start to start 0.8 minus gap 0.6:
  *     +0.050 pooled F1, 95% CI [+0.017, +0.088]. Random placement of as many
  *     boundaries as the 0.8 s rule makes scores 0.128.
- * Rothenburg and HAPPENING agree better with the old gap at 0.6 (by 0.015 and
- * 0.057 F1). Agreement is weak in absolute terms (hosted splits on sentences and
- * speakers, not on pauses), and vivo and Air India are Hindi speech that
+ * fil and en agree better with the old gap at 0.6 (by 0.015 and 0.057 F1). Agreement is weak in absolute terms (hosted splits on sentences and
+ * speakers, not on pauses), and hi-1 and hi-2 are Hindi speech that
  * Deepgram transcribed as English.
  */
 export const PAUSE_SPLIT_SEC = 0.8;
@@ -63,7 +62,8 @@ const EPS = 1e-9;
  * @param {{ source: 'manual'|'auto'|'whisper', pauseSplitSec?: number }} opts
  *   `manual` (cues re-split into sentences) and `whisper` are punctuated: split
  *   on . ! ? or at 40 words. `auto` (unpunctuated, word-timed) also splits when
- *   two words start at least `pauseSplitSec` apart (see PAUSE_SPLIT_SEC).
+ *   two words start at least `pauseSplitSec` apart (see PAUSE_SPLIT_SEC), so
+ *   hand-built words with true ends should not be passed as 'auto'.
  * @returns {Segment[]}
  */
 export function segmentsFromWords(words, { source, pauseSplitSec = PAUSE_SPLIT_SEC } = {}) {

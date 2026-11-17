@@ -1,0 +1,223 @@
+{
+ "output": {
+  "width": 1080,
+  "height": 1920
+ },
+ "scenarios": [
+  {
+   "name": "no panels shot",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "text": []
+  },
+  {
+   "name": "a seam at 600",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "text": []
+  },
+  {
+   "name": "a seam at 900",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 900
+     }
+    }
+   ],
+   "text": []
+  },
+  {
+   "name": "a seam at 1300",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 1300
+     }
+    }
+   ],
+   "text": []
+  },
+  {
+   "name": "a seam at 1500",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 1500
+     }
+    }
+   ],
+   "text": []
+  },
+  {
+   "name": "a seam at 1600",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 1600
+     }
+    }
+   ],
+   "text": []
+  },
+  {
+   "name": "a seam at 1700",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 1700
+     }
+    }
+   ],
+   "text": []
+  },
+  {
+   "name": "a seam at 1900",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 1900
+     }
+    }
+   ],
+   "text": []
+  },
+  {
+   "name": "two panels shots, the lower seam decides",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 3
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 1450
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 3,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 1550
+     }
+    }
+   ],
+   "text": []
+  },
+  {
+   "name": "a headline on the seam at 1500",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 1500
+     }
+    }
+   ],
+   "text": [
+    {
+     "text": "SEAM TITLE",
+     "positionFraction": 0.78125,
+     "span": {
+      "startSec": 0,
+      "endSec": 6
+     }
+    }
+   ]
+  },
+  {
+   "name": "a headline on the seam at 600",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "text": [
+    {
+     "text": "SEAM TITLE",
+     "positionFraction": 0.3125,
+     "span": {
+      "startSec": 0,
+      "endSec": 6
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "cases": [
+  {
+   "cutTimes": [],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    2,
+    5
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    5,
+    2,
+    5,
+    2
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    0,
+    -1,
+    10,
+    11,
+    4
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    2,
+    2.3,
+    2.5,
+    2.99,
+    3
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    2,
+    2.5
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    2,
+    2.4999
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    0.3
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    0.5
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    4,
+    9.7
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    4,
+    9.5
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    9.8
+   ],
+   "durationSec": 10,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    1,
+    2,
+    3
+   ],
+   "durationSec": 3,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    1,
+    2
+   ],
+   "durationSec": 0,
+   "minShotSec": 0.5
+  },
+  {
+   "cutTimes": [
+    1,
+    2,
+    3.2
+   ],
+   "durationSec": 6,
+   "minShotSec": 1.5
+  },
+  {
+   "cutTimes": [
+    1,
+    2,
+    3.2
+   ],
+   "durationSec": 6,
+   "minShotSec": 0
+  },
+  {
+   "cutTimes": [
+    0.27,
+    0.9,
+    1.12,
+    1.4
+   ],
+   "durationSec": 3.5,
+   "minShotSec": 0.5
+  }
+ ]
+}

@@ -27,8 +27,9 @@ function makeSource() {
     mkdirSync(dirname(join(dir, p)), { recursive: true });
     cpSync(join(repoRoot, p), join(dir, p), { recursive: true });
   }
-  mkdirSync(join(dir, 'scripts'));
+  mkdirSync(join(dir, 'scripts'), { recursive: true });
   cpSync(join(repoRoot, 'scripts/sync-engine.mjs'), join(dir, 'scripts/sync-engine.mjs'));
+  cpSync(join(repoRoot, 'package.json'), join(dir, 'package.json'));
   git(dir, 'init', '-q', '-b', 'main');
   git(dir, 'add', '-A');
   git(dir, 'commit', '-q', '-m', 'seed');
@@ -49,7 +50,8 @@ const sync = (source, target) =>
 test('SHARED is the agreed list', () => {
   assert.deepEqual(SHARED, [
     'engine/', 'tools/doctor.mjs', 'tools/fetch.mjs', 'tools/render.mjs',
-    'tools/picks-check.mjs', 'tools/brand.mjs', 'tools/asr.mjs', 'tools/boqo-upload.mjs', 'tools/transcript.mjs',
+    'tools/picks-check.mjs', 'tools/brand.mjs', 'tools/asr.mjs', 'tools/boqo-upload.mjs', 'tools/transcript.mjs', 'tools/select-request.mjs', 'tools/select-check.mjs', 'tools/clips.mjs', 'tools/stranger.mjs', 'tools/transcript-boqo.mjs', 'tools/panels.mjs',
+    'scripts/parity/golden.mjs', 'scripts/parity/strip.mjs', 'scripts/boqo-drift.mjs', 'tests/helpers/golden.mjs',
   ]);
 });
 
@@ -69,7 +71,7 @@ test('engineHash changes when a byte under engine/ changes', () => {
 test('engineHash changes when a byte in a binary under engine/ changes', () => {
   const src = makeSource();
   const before = engineHash(src);
-  const f = join(src, 'engine/fonts/Inter-Bold.ttf');
+  const f = join(src, 'engine/fonts/Inter-Bold.otf');
   const b = readFileSync(f);
   b[b.length - 1] ^= 0xff;
   writeFileSync(f, b);
@@ -128,11 +130,25 @@ test('sync copies SHARED, writes ENGINE.json whose hash equals engineHash(target
   assert.equal(meta.hash, engineHash(src));
   assert.equal(out.hash, meta.hash);
   assert.deepEqual(meta.files, SHARED);
+  const pkg = JSON.parse(readFileSync(join(repoRoot, 'package.json'), 'utf8'));
+  assert.deepEqual(meta.deps, { zod: pkg.dependencies.zod, 'onnxruntime-node': pkg.dependencies['onnxruntime-node'] });
+  assert.match(meta.deps['onnxruntime-node'], /^\d+\.\d+\.\d+$/, 'onnxruntime-node is pinned exactly');
   assert.ok(out.files > 10);
   for (const f of ['engine/words.mjs', 'engine/fonts/Anton-Regular.ttf', 'tools/doctor.mjs', 'tools/boqo-upload.mjs']) {
     assert.deepEqual(readFileSync(join(tgt, f)), readFileSync(join(src, f)), f);
   }
   assert.equal(r.stdout.trim().split('\n').length, 1, 'exactly one stdout line');
+});
+
+test('sync refuses when the source package.json lacks an engine dependency', () => {
+  const src = makeSource();
+  const pkg = JSON.parse(readFileSync(join(src, 'package.json'), 'utf8'));
+  delete pkg.dependencies.zod;
+  writeFileSync(join(src, 'package.json'), JSON.stringify(pkg));
+  const tgt = makeTarget();
+  const r = sync(src, tgt);
+  assert.equal(r.status, 1);
+  assert.match(JSON.parse(r.stdout).error, /zod/);
 });
 
 test('sync propagates deletions and replaces stale files', () => {

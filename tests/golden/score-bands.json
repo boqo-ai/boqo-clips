@@ -1,0 +1,212 @@
+[
+  {
+    "score": -5,
+    "band": "weak",
+    "label": "weak",
+    "fill": 1,
+    "grade": "F"
+  },
+  {
+    "score": 0,
+    "band": "weak",
+    "label": "weak",
+    "fill": 1,
+    "grade": "F"
+  },
+  {
+    "score": 1,
+    "band": "weak",
+    "label": "weak",
+    "fill": 1,
+    "grade": "F"
+  },
+  {
+    "score": 39,
+    "band": "weak",
+    "label": "weak",
+    "fill": 1,
+    "grade": "F"
+  },
+  {
+    "score": 39.99,
+    "band": "weak",
+    "label": "weak",
+    "fill": 1,
+    "grade": "F"
+  },
+  {
+    "score": 40,
+    "band": "watchable",
+    "label": "watchable",
+    "fill": 2,
+    "grade": "F"
+  },
+  {
+    "score": 41,
+    "band": "watchable",
+    "label": "watchable",
+    "fill": 2,
+    "grade": "F"
+  },
+  {
+    "score": 59,
+    "band": "watchable",
+    "label": "watchable",
+    "fill": 2,
+    "grade": "F"
+  },
+  {
+    "score": 59.5,
+    "band": "watchable",
+    "label": "watchable",
+    "fill": 2,
+    "grade": "F"
+  },
+  {
+    "score": 59.99,
+    "band": "watchable",
+    "label": "watchable",
+    "fill": 2,
+    "grade": "F"
+  },
+  {
+    "score": 60,
+    "band": "decent",
+    "label": "decent",
+    "fill": 3,
+    "grade": "D"
+  },
+  {
+    "score": 61,
+    "band": "decent",
+    "label": "decent",
+    "fill": 3,
+    "grade": "D"
+  },
+  {
+    "score": 69,
+    "band": "decent",
+    "label": "decent",
+    "fill": 3,
+    "grade": "D"
+  },
+  {
+    "score": 69.99,
+    "band": "decent",
+    "label": "decent",
+    "fill": 3,
+    "grade": "D"
+  },
+  {
+    "score": 70,
+    "band": "strong",
+    "label": "strong",
+    "fill": 4,
+    "grade": "C"
+  },
+  {
+    "score": 71,
+    "band": "strong",
+    "label": "strong",
+    "fill": 4,
+    "grade": "C"
+  },
+  {
+    "score": 79,
+    "band": "strong",
+    "label": "strong",
+    "fill": 4,
+    "grade": "C"
+  },
+  {
+    "score": 79.99,
+    "band": "strong",
+    "label": "strong",
+    "fill": 4,
+    "grade": "C"
+  },
+  {
+    "score": 80,
+    "band": "strong",
+    "label": "strong",
+    "fill": 4,
+    "grade": "B"
+  },
+  {
+    "score": 84,
+    "band": "strong",
+    "label": "strong",
+    "fill": 4,
+    "grade": "B"
+  },
+  {
+    "score": 84.99,
+    "band": "strong",
+    "label": "strong",
+    "fill": 4,
+    "grade": "B"
+  },
+  {
+    "score": 85,
+    "band": "exceptional",
+    "label": "exceptional",
+    "fill": 5,
+    "grade": "B"
+  },
+  {
+    "score": 86,
+    "band": "exceptional",
+    "label": "exceptional",
+    "fill": 5,
+    "grade": "B"
+  },
+  {
+    "score": 89,
+    "band": "exceptional",
+    "label": "exceptional",
+    "fill": 5,
+    "grade": "B"
+  },
+  {
+    "score": 89.99,
+    "band": "exceptional",
+    "label": "exceptional",
+    "fill": 5,
+    "grade": "B"
+  },
+  {
+    "score": 90,
+    "band": "exceptional",
+    "label": "exceptional",
+    "fill": 5,
+    "grade": "A"
+  },
+  {
+    "score": 92,
+    "band": "exceptional",
+    "label": "exceptional",
+    "fill": 5,
+    "grade": "A"
+  },
+  {
+    "score": 95,
+    "band": "exceptional",
+    "label": "exceptional",
+    "fill": 5,
+    "grade": "A"
+  },
+  {
+    "score": 100,
+    "band": "exceptional",
+    "label": "exceptional",
+    "fill": 5,
+    "grade": "A"
+  },
+  {
+    "score": 120,
+    "band": "exceptional",
+    "label": "exceptional",
+    "fill": 5,
+    "grade": "A"
+  }
+]

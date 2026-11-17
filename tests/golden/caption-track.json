@@ -1,0 +1,2471 @@
+[
+  {
+    "name": "default template, a pause cut, a scene cut",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.30,0:00:00.44,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO {\\c&HFA00E9&\\fscx130\\fscy130}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE {\\c&HFA00E9&\\fscx130\\fscy130}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS LAUNCHED\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE 3 {\\c&HFA00E9&\\fscx130\\fscy130}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100} LAUNCHED\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE 3 ROCKETS {\\c&HFA00E9&\\fscx130\\fscy130}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.94,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1344)}AND {\\c&HFA00E9&\\fscx130\\fscy130}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.32,0:00:02.60,boqo,,0,0,0,,{\\an5\\pos(540,1344)}AND NOBODY {\\c&HFA00E9&\\fscx130\\fscy130}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.62,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SEE {\\c&HFA00E9&\\fscx130\\fscy130}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SEE IT {\\c&HFA00E9&\\fscx130\\fscy130}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "default template at 1:1",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1080\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,59,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,4,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,756)}{\\c&HFA00E9&\\fscx130\\fscy130}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.30,0:00:00.44,boqo,,0,0,0,,{\\an5\\pos(540,756)}SO {\\c&HFA00E9&\\fscx130\\fscy130}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,756)}SO THE {\\c&HFA00E9&\\fscx130\\fscy130}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS LAUNCHED\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,756)}SO THE 3 {\\c&HFA00E9&\\fscx130\\fscy130}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100} LAUNCHED\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,756)}SO THE 3 ROCKETS {\\c&HFA00E9&\\fscx130\\fscy130}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,756)}{\\c&HFA00E9&\\fscx130\\fscy130}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.94,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,756)}AND {\\c&HFA00E9&\\fscx130\\fscy130}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.32,0:00:02.60,boqo,,0,0,0,,{\\an5\\pos(540,756)}AND NOBODY {\\c&HFA00E9&\\fscx130\\fscy130}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.62,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,756)}{\\c&HFA00E9&\\fscx130\\fscy130}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,756)}SEE {\\c&HFA00E9&\\fscx130\\fscy130}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,756)}SEE IT {\\c&HFA00E9&\\fscx130\\fscy130}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,756)}{\\c&HFA00E9&\\fscx130\\fscy130}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "default template at 16:9",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1920\nPlayResY: 1080\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,59,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,4,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(960,756)}{\\c&HFA00E9&\\fscx130\\fscy130}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.30,0:00:00.44,boqo,,0,0,0,,{\\an5\\pos(960,756)}SO {\\c&HFA00E9&\\fscx130\\fscy130}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(960,756)}SO THE {\\c&HFA00E9&\\fscx130\\fscy130}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS LAUNCHED\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(960,756)}SO THE 3 {\\c&HFA00E9&\\fscx130\\fscy130}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100} LAUNCHED\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(960,756)}SO THE 3 ROCKETS {\\c&HFA00E9&\\fscx130\\fscy130}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(960,756)}{\\c&HFA00E9&\\fscx130\\fscy130}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.94,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(960,756)}AND {\\c&HFA00E9&\\fscx130\\fscy130}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.32,0:00:02.60,boqo,,0,0,0,,{\\an5\\pos(960,756)}AND NOBODY {\\c&HFA00E9&\\fscx130\\fscy130}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.62,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(960,756)}{\\c&HFA00E9&\\fscx130\\fscy130}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(960,756)}SEE {\\c&HFA00E9&\\fscx130\\fscy130}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(960,756)}SEE IT {\\c&HFA00E9&\\fscx130\\fscy130}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(960,756)}{\\c&HFA00E9&\\fscx130\\fscy130}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "no cuts, no scene cuts",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 4.5,
+        "end": 5,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS\nDialogue: 0,0:00:00.30,0:00:00.44,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO {\\c&HFA00E9&\\fscx130\\fscy130}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE {\\c&HFA00E9&\\fscx130\\fscy130}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE 3 {\\c&HFA00E9&\\fscx130\\fscy130}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100} AND NOBODY DIDN'T\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,1344)}LAUNCHED {\\c&HFA00E9&\\fscx130\\fscy130}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.94,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1344)}LAUNCHED AND {\\c&HFA00E9&\\fscx130\\fscy130}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.32,0:00:02.60,boqo,,0,0,0,,{\\an5\\pos(540,1344)}LAUNCHED AND NOBODY {\\c&HFA00E9&\\fscx130\\fscy130}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.62,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SEE {\\c&HFA00E9&\\fscx130\\fscy130}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SEE IT {\\c&HFA00E9&\\fscx130\\fscy130}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:04.50,0:00:05.00,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "cuts that clamp a word and drop one",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.6,
+        "end": 0.9999999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.0299999999999927,
+        "end": 1.4999999999999916,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.6499999999999972,
+        "end": 1.7699999999999876,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.7899999999999978,
+        "end": 2.1499999999999972,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.1699999999999933,
+        "end": 2.4499999999999944,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.4699999999999904,
+        "end": 2.6499999999999972,
+        "index": 9
+      },
+      {
+        "word": "coming.",
+        "start": 2.6699999999999875,
+        "end": 3.1499999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.45,
+        "end": 3.95,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3\nDialogue: 0,0:00:00.30,0:00:00.44,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO {\\c&HFA00E9&\\fscx130\\fscy130}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3\nDialogue: 0,0:00:00.44,0:00:00.60,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE {\\c&HFA00E9&\\fscx130\\fscy130}3{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.60,0:00:01.03,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100} LAUNCHED AND\nDialogue: 0,0:00:01.03,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,1344)}ROCKETS {\\c&HFA00E9&\\fscx130\\fscy130}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100} AND\nDialogue: 0,0:00:01.65,0:00:01.77,boqo,,0,0,0,,{\\an5\\pos(540,1344)}ROCKETS LAUNCHED {\\c&HFA00E9&\\fscx130\\fscy130}AND{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.79,0:00:02.17,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T SEE COMING\nDialogue: 0,0:00:02.17,0:00:02.47,boqo,,0,0,0,,{\\an5\\pos(540,1344)}NOBODY {\\c&HFA00E9&\\fscx130\\fscy130}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100} SEE COMING\nDialogue: 0,0:00:02.47,0:00:02.67,boqo,,0,0,0,,{\\an5\\pos(540,1344)}NOBODY DIDN'T {\\c&HFA00E9&\\fscx130\\fscy130}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.67,0:00:03.15,boqo,,0,0,0,,{\\an5\\pos(540,1344)}NOBODY DIDN'T SEE {\\c&HFA00E9&\\fscx130\\fscy130}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.45,0:00:03.95,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "no emphasis",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.30,0:00:00.44,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO {\\c&HFA00E9&\\fscx130\\fscy130}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE {\\c&HFA00E9&\\fscx130\\fscy130}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS LAUNCHED\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE 3 {\\c&HFA00E9&\\fscx130\\fscy130}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100} LAUNCHED\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE 3 ROCKETS {\\c&HFA00E9&\\fscx130\\fscy130}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.94,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1344)}AND {\\c&HFA00E9&\\fscx130\\fscy130}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.32,0:00:02.60,boqo,,0,0,0,,{\\an5\\pos(540,1344)}AND NOBODY {\\c&HFA00E9&\\fscx130\\fscy130}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.62,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SEE {\\c&HFA00E9&\\fscx130\\fscy130}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SEE IT {\\c&HFA00E9&\\fscx130\\fscy130}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 0,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "emphasis null",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}SO{\\c&HFFFFFF&\\fscx100\\fscy100} THE 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.30,0:00:00.44,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO {\\c&HFA00E9&\\fscx130\\fscy130}THE{\\c&HFFFFFF&\\fscx100\\fscy100} 3 ROCKETS LAUNCHED\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE {\\c&HFA00E9&\\fscx130\\fscy130}3{\\c&HFFFFFF&\\fscx100\\fscy100} ROCKETS LAUNCHED\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE 3 {\\c&HFA00E9&\\fscx130\\fscy130}ROCKETS{\\c&HFFFFFF&\\fscx100\\fscy100} LAUNCHED\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SO THE 3 ROCKETS {\\c&HFA00E9&\\fscx130\\fscy130}LAUNCHED{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}AND{\\c&HFFFFFF&\\fscx100\\fscy100} NOBODY DIDN'T\nDialogue: 0,0:00:01.94,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1344)}AND {\\c&HFA00E9&\\fscx130\\fscy130}NOBODY{\\c&HFFFFFF&\\fscx100\\fscy100} DIDN'T\nDialogue: 0,0:00:02.32,0:00:02.60,boqo,,0,0,0,,{\\an5\\pos(540,1344)}AND NOBODY {\\c&HFA00E9&\\fscx130\\fscy130}DIDN'T{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.62,0:00:02.82,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}SEE{\\c&HFFFFFF&\\fscx100\\fscy100} IT COMING\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SEE {\\c&HFA00E9&\\fscx130\\fscy130}IT{\\c&HFFFFFF&\\fscx100\\fscy100} COMING\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1344)}SEE IT {\\c&HFA00E9&\\fscx130\\fscy130}COMING{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1344)}{\\c&HFA00E9&\\fscx130\\fscy130}REALLY{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 0,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "a window with no words",
+    "words": [],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 0,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "cyrillic, punch",
+    "words": [
+      {
+        "word": "Итак",
+        "start": 0.09999999999999432,
+        "end": 0.3999999999999915,
+        "index": 0
+      },
+      {
+        "word": "три",
+        "start": 0.4199999999999875,
+        "end": 0.6999999999999886,
+        "index": 1
+      },
+      {
+        "word": "ракеты",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 2
+      },
+      {
+        "word": "взлетели,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 3
+      },
+      {
+        "word": "и",
+        "start": 1.7999999999999972,
+        "end": 1.8799999999999955,
+        "index": 4
+      },
+      {
+        "word": "никто",
+        "start": 1.8999999999999915,
+        "end": 2.299999999999997,
+        "index": 5
+      },
+      {
+        "word": "не",
+        "start": 2.319999999999993,
+        "end": 2.4199999999999875,
+        "index": 6
+      },
+      {
+        "word": "ожидал",
+        "start": 2.4399999999999977,
+        "end": 2.8999999999999915,
+        "index": 7
+      },
+      {
+        "word": "этого.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 8
+      },
+      {
+        "word": "Правда?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 9
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100} ТРИ РАКЕТЫ ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}ИТАК {\\c&H00F8F8&\\fscx130\\fscy130}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100} РАКЕТЫ ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1546)}ИТАК ТРИ {\\c&H00F8F8&\\fscx130\\fscy130}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100} ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1546)}ИТАК ТРИ РАКЕТЫ {\\c&H00F8F8&\\fscx130\\fscy130}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100} И\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1546)}ИТАК ТРИ РАКЕТЫ ВЗЛЕТЕЛИ {\\c&H00F8F8&\\fscx130\\fscy130}И{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100} НЕ ОЖИДАЛ ЭТОГО\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1546)}НИКТО {\\c&H00F8F8&\\fscx130\\fscy130}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100} ОЖИДАЛ ЭТОГО\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1546)}НИКТО НЕ {\\c&H00F8F8&\\fscx130\\fscy130}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100} ЭТОГО\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1546)}НИКТО НЕ ОЖИДАЛ {\\c&H00F8F8&\\fscx130\\fscy130}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx130\\fscy130}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "cyrillic, comic",
+    "words": [
+      {
+        "word": "Итак",
+        "start": 0.09999999999999432,
+        "end": 0.3999999999999915,
+        "index": 0
+      },
+      {
+        "word": "три",
+        "start": 0.4199999999999875,
+        "end": 0.6999999999999886,
+        "index": 1
+      },
+      {
+        "word": "ракеты",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 2
+      },
+      {
+        "word": "взлетели,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 3
+      },
+      {
+        "word": "и",
+        "start": 1.7999999999999972,
+        "end": 1.8799999999999955,
+        "index": 4
+      },
+      {
+        "word": "никто",
+        "start": 1.8999999999999915,
+        "end": 2.299999999999997,
+        "index": 5
+      },
+      {
+        "word": "не",
+        "start": 2.319999999999993,
+        "end": 2.4199999999999875,
+        "index": 6
+      },
+      {
+        "word": "ожидал",
+        "start": 2.4399999999999977,
+        "end": 2.8999999999999915,
+        "index": 7
+      },
+      {
+        "word": "этого.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 8
+      },
+      {
+        "word": "Правда?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 9
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,109,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,11,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} ТРИ {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}ТРИ{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\org(758,1503)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ТРИ{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\frz3}РАКЕТЫ{\\c&HFFFFFF&\\frz0}\nDialogue: 1,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} ТРИ {\\c&H00D4FF&\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}ТРИ{\\alpha&H00&} {\\c&H00D4FF&\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\org(758,1503)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\alpha&HFF&}ТРИ{\\alpha&H00&} {\\c&H00D4FF&\\frz3}РАКЕТЫ{\\c&HFFFFFF&\\frz0}\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1589)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}ИТАК {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ИТАК{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\org(753,1503)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ИТАК{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\frz3}РАКЕТЫ{\\c&HFFFFFF&\\frz0}\nDialogue: 1,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}ИТАК {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H00D4FF&\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}{\\alpha&HFF&}ИТАК{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H00D4FF&\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\org(753,1503)\\bord0\\shad0}{\\alpha&HFF&}ИТАК{\\alpha&H00&} {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H00D4FF&\\frz3}РАКЕТЫ{\\c&HFFFFFF&\\frz0}\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1589)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}ИТАК ТРИ {\\c&H00D4FF&\\fscx114\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\org(743,1503)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ИТАК{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ТРИ{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz3}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\frz0}\nDialogue: 1,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}ИТАК ТРИ {\\c&H00D4FF&\\fscx114\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\org(743,1503)\\bord0\\shad0}{\\alpha&HFF&}ИТАК{\\alpha&H00&} {\\alpha&HFF&}ТРИ{\\alpha&H00&} {\\c&H00D4FF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz3}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\frz0}\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1589)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}ИТАК ТРИ {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\org(743,1503)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ИТАК{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ТРИ{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\frz3}РАКЕТЫ{\\c&HFFFFFF&\\frz0}\nDialogue: 1,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}ИТАК ТРИ {\\c&H00D4FF&\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\org(743,1503)\\bord0\\shad0}{\\alpha&HFF&}ИТАК{\\alpha&H00&} {\\alpha&HFF&}ТРИ{\\alpha&H00&} {\\c&H00D4FF&\\frz3}РАКЕТЫ{\\c&HFFFFFF&\\frz0}\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} И\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}И{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} И\nDialogue: 1,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}И{\\alpha&H00&}\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}ИТАК ТРИ {\\c&H00D4FF&\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\org(743,1503)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ИТАК{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ТРИ{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\frz3}РАКЕТЫ{\\c&HFFFFFF&\\frz0}\nDialogue: 1,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}ИТАК ТРИ {\\c&H00D4FF&\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\org(743,1503)\\bord0\\shad0}{\\alpha&HFF&}ИТАК{\\alpha&H00&} {\\alpha&HFF&}ТРИ{\\alpha&H00&} {\\c&H00D4FF&\\frz3}РАКЕТЫ{\\c&HFFFFFF&\\frz0}\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\1a&HFF&}ВЗЛЕТЕЛИ {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}И{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ВЗЛЕТЕЛИ{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,79,\\fscx114\\fscy114)}И{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\bord0\\shad0}ВЗЛЕТЕЛИ {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}И{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\bord0\\shad0}{\\alpha&HFF&}ВЗЛЕТЕЛИ{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,79,\\fscx114\\fscy114)}И{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} НЕ\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}НЕ{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} НЕ\nDialogue: 1,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}НЕ{\\alpha&H00&}\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\1a&HFF&}ОЖИДАЛ {\\c&H1F5AFF&\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\org(732,1589)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\alpha&H00&\\1a&HFF&} {\\c&H1F5AFF&\\frz-3}ЭТОГО{\\c&HFFFFFF&\\frz0}\nDialogue: 1,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\bord0\\shad0}ОЖИДАЛ {\\c&H1F5AFF&\\alpha&HFF&}ЭТОГО{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\org(732,1589)\\bord0\\shad0}{\\alpha&HFF&}ОЖИДАЛ{\\alpha&H00&} {\\c&H1F5AFF&\\frz-3}ЭТОГО{\\c&HFFFFFF&\\frz0}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}НИКТО {\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}НИКТО{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}НИКТО {\\c&HFFFFFF&\\fscx114\\alpha&HFF&}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1503)\\bord0\\shad0}{\\alpha&HFF&}НИКТО{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\1a&HFF&}ОЖИДАЛ {\\c&H1F5AFF&\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\org(732,1589)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\alpha&H00&\\1a&HFF&} {\\c&H1F5AFF&\\frz-3}ЭТОГО{\\c&HFFFFFF&\\frz0}\nDialogue: 1,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\bord0\\shad0}ОЖИДАЛ {\\c&H1F5AFF&\\alpha&HFF&}ЭТОГО{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\org(732,1589)\\bord0\\shad0}{\\alpha&HFF&}ОЖИДАЛ{\\alpha&H00&} {\\c&H1F5AFF&\\frz-3}ЭТОГО{\\c&HFFFFFF&\\frz0}\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1503)}НИКТО НЕ\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H1F5AFF&\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H1F5AFF&\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\c&HFFFFFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\org(758,1589)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H1F5AFF&\\frz-3}ЭТОГО{\\c&HFFFFFF&\\frz0}\nDialogue: 1,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H1F5AFF&\\alpha&HFF&}ЭТОГО{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H1F5AFF&\\alpha&HFF&}ЭТОГО{\\c&HFFFFFF&\\alpha&H00&}\nDialogue: 1,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\org(758,1589)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H1F5AFF&\\frz-3}ЭТОГО{\\c&HFFFFFF&\\frz0}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1503)}НИКТО НЕ\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\1a&HFF&}ОЖИДАЛ {\\c&H1F5AFF&\\fscx114\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\org(732,1589)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\alpha&H00&\\1a&HFF&} {\\c&H1F5AFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz-3}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100\\frz0}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\bord0\\shad0}ОЖИДАЛ {\\c&H1F5AFF&\\fscx114\\alpha&HFF&}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1589)\\org(732,1589)\\bord0\\shad0}{\\alpha&HFF&}ОЖИДАЛ{\\alpha&H00&} {\\c&H1F5AFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz-3}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100\\frz0}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&\\1a&HFF&}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx114\\alpha&HFF&}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": true
+    }
+  },
+  {
+    "name": "cyrillic, boldkeys",
+    "words": [
+      {
+        "word": "Итак",
+        "start": 0.09999999999999432,
+        "end": 0.3999999999999915,
+        "index": 0
+      },
+      {
+        "word": "три",
+        "start": 0.4199999999999875,
+        "end": 0.6999999999999886,
+        "index": 1
+      },
+      {
+        "word": "ракеты",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 2
+      },
+      {
+        "word": "взлетели,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 3
+      },
+      {
+        "word": "и",
+        "start": 1.7999999999999972,
+        "end": 1.8799999999999955,
+        "index": 4
+      },
+      {
+        "word": "никто",
+        "start": 1.8999999999999915,
+        "end": 2.299999999999997,
+        "index": 5
+      },
+      {
+        "word": "не",
+        "start": 2.319999999999993,
+        "end": 2.4199999999999875,
+        "index": 6
+      },
+      {
+        "word": "ожидал",
+        "start": 2.4399999999999977,
+        "end": 2.8999999999999915,
+        "index": 7
+      },
+      {
+        "word": "этого.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 8
+      },
+      {
+        "word": "Правда?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 9
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,91,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} ТРИ {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}ТРИ{\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} ТРИ {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 1,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}ТРИ{\\alpha&H00&} {\\c&H14FF39&\\fnOswald\\fs102\\b1\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&}\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1582)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}ИТАК {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ИТАК{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H14FF39&\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}ИТАК {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 1,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}{\\alpha&HFF&}ИТАК{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H14FF39&\\fnOswald\\fs102\\b1\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&}\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1582)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}ИТАК ТРИ {\\c&H14FF39&\\fscx118\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ИТАК{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ТРИ{\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 1,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}ИТАК ТРИ {\\c&H14FF39&\\fscx118\\fnOswald\\fs102\\b1\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&}\nDialogue: 1,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}{\\alpha&HFF&}ИТАК{\\alpha&H00&} {\\alpha&HFF&}ТРИ{\\alpha&H00&} {\\c&H14FF39&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1582)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1510)}ИТАК ТРИ {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} И\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}И{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} И\nDialogue: 1,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}И{\\alpha&H00&}\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1510)}ИТАК ТРИ {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\1a&HFF&}ВЗЛЕТЕЛИ {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}И{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ВЗЛЕТЕЛИ{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,79,\\fscx118\\fscy118)}И{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\bord0\\shad0}ВЗЛЕТЕЛИ {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}И{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\bord0\\shad0}{\\alpha&HFF&}ВЗЛЕТЕЛИ{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,79,\\fscx118\\fscy118)}И{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} НЕ ОЖИДАЛ {\\c&H00D4FF&\\fnOswald\\fs102\\b1}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}НЕ{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} НЕ ОЖИДАЛ {\\c&H00D4FF&\\fnOswald\\fs102\\b1}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 1,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}НЕ{\\alpha&H00&} {\\alpha&HFF&}ОЖИДАЛ{\\alpha&H00&} {\\c&H00D4FF&\\fnOswald\\fs102\\b1\\alpha&HFF&}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}НИКТО {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} ОЖИДАЛ {\\c&H00D4FF&\\fnOswald\\fs102\\b1}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}НИКТО{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}НИКТО {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} ОЖИДАЛ {\\c&H00D4FF&\\fnOswald\\fs102\\b1}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 1,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}НИКТО{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}ОЖИДАЛ{\\alpha&H00&} {\\c&H00D4FF&\\fnOswald\\fs102\\b1\\alpha&HFF&}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&}\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}НИКТО НЕ {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\fnOswald\\fs102\\b1}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}НИКТО{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}НЕ{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H00D4FF&\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}НИКТО НЕ {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H00D4FF&\\fnOswald\\fs102\\b1}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 1,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}НИКТО{\\alpha&H00&} {\\alpha&HFF&}НЕ{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H00D4FF&\\fnOswald\\fs102\\b1\\alpha&HFF&}ЭТОГО{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}НИКТО НЕ ОЖИДАЛ {\\c&H00D4FF&\\fscx118\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}НИКТО{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}НЕ{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\alpha&H00&\\1a&HFF&} {\\c&H00D4FF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnOswald\\fs102\\b1}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}НИКТО НЕ ОЖИДАЛ {\\c&H00D4FF&\\fscx118\\fnOswald\\fs102\\b1\\alpha&HFF&}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}НИКТО{\\alpha&H00&} {\\alpha&HFF&}НЕ{\\alpha&H00&} {\\alpha&HFF&}ОЖИДАЛ{\\alpha&H00&} {\\c&H00D4FF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnOswald\\fs102\\b1}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": true
+    }
+  },
+  {
+    "name": "cyrillic, editorial",
+    "words": [
+      {
+        "word": "Итак",
+        "start": 0.09999999999999432,
+        "end": 0.3999999999999915,
+        "index": 0
+      },
+      {
+        "word": "три",
+        "start": 0.4199999999999875,
+        "end": 0.6999999999999886,
+        "index": 1
+      },
+      {
+        "word": "ракеты",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 2
+      },
+      {
+        "word": "взлетели,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 3
+      },
+      {
+        "word": "и",
+        "start": 1.7999999999999972,
+        "end": 1.8799999999999955,
+        "index": 4
+      },
+      {
+        "word": "никто",
+        "start": 1.8999999999999915,
+        "end": 2.299999999999997,
+        "index": 5
+      },
+      {
+        "word": "не",
+        "start": 2.319999999999993,
+        "end": 2.4199999999999875,
+        "index": 6
+      },
+      {
+        "word": "ожидал",
+        "start": 2.4399999999999977,
+        "end": 2.8999999999999915,
+        "index": 7
+      },
+      {
+        "word": "этого.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 8
+      },
+      {
+        "word": "Правда?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 9
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1502)}{\\c&H4DE1FF&}ИТАК{\\c&HFFFFFF&} ТРИ {\\c&H356BFF&\\fnMontserrat ExtraBold\\fs135\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnOswald\\fs106\\b1}\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1591)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1502)}ИТАК {\\c&H4DE1FF&}ТРИ{\\c&HFFFFFF&} {\\c&H356BFF&\\fnMontserrat ExtraBold\\fs135\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnOswald\\fs106\\b1}\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1591)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1502)}ИТАК ТРИ {\\c&H356BFF&\\fnMontserrat ExtraBold\\fs135\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnOswald\\fs106\\b1}\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1591)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1502)}ИТАК ТРИ {\\c&H356BFF&\\fnMontserrat ExtraBold\\fs135\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnOswald\\fs106\\b1}\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1591)}{\\c&H4DE1FF&}ВЗЛЕТЕЛИ{\\c&HFFFFFF&} И\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1502)}ИТАК ТРИ {\\c&H356BFF&\\fnMontserrat ExtraBold\\fs135\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnOswald\\fs106\\b1}\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1591)}ВЗЛЕТЕЛИ {\\c&H4DE1FF&}И{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H4DE1FF&}НИКТО{\\c&HFFFFFF&} НЕ ОЖИДАЛ {\\c&H356BFF&\\fnMontserrat ExtraBold\\fs135\\b1}ЭТОГО{\\c&HFFFFFF&\\fnOswald\\fs106\\b1}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1546)}НИКТО {\\c&H4DE1FF&}НЕ{\\c&HFFFFFF&} ОЖИДАЛ {\\c&H356BFF&\\fnMontserrat ExtraBold\\fs135\\b1}ЭТОГО{\\c&HFFFFFF&\\fnOswald\\fs106\\b1}\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1546)}НИКТО НЕ {\\c&H4DE1FF&}ОЖИДАЛ{\\c&HFFFFFF&} {\\c&H356BFF&\\fnMontserrat ExtraBold\\fs135\\b1}ЭТОГО{\\c&HFFFFFF&\\fnOswald\\fs106\\b1}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1546)}НИКТО НЕ ОЖИДАЛ {\\c&H356BFF&\\fnMontserrat ExtraBold\\fs135\\b1}ЭТОГО{\\c&HFFFFFF&\\fnOswald\\fs106\\b1}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H4DE1FF&}ПРАВДА{\\c&HFFFFFF&}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": true
+    }
+  },
+  {
+    "name": "cyrillic, classic",
+    "words": [
+      {
+        "word": "Итак",
+        "start": 0.09999999999999432,
+        "end": 0.3999999999999915,
+        "index": 0
+      },
+      {
+        "word": "три",
+        "start": 0.4199999999999875,
+        "end": 0.6999999999999886,
+        "index": 1
+      },
+      {
+        "word": "ракеты",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 2
+      },
+      {
+        "word": "взлетели,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 3
+      },
+      {
+        "word": "и",
+        "start": 1.7999999999999972,
+        "end": 1.8799999999999955,
+        "index": 4
+      },
+      {
+        "word": "никто",
+        "start": 1.8999999999999915,
+        "end": 2.299999999999997,
+        "index": 5
+      },
+      {
+        "word": "не",
+        "start": 2.319999999999993,
+        "end": 2.4199999999999875,
+        "index": 6
+      },
+      {
+        "word": "ожидал",
+        "start": 2.4399999999999977,
+        "end": 2.8999999999999915,
+        "index": 7
+      },
+      {
+        "word": "этого.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 8
+      },
+      {
+        "word": "Правда?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 9
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,DejaVu Sans,84,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,60,60,420,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\c&H00E5FF&}Итак{\\c&HFFFFFF&} три ракеты\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,Итак {\\c&H00E5FF&}три{\\c&HFFFFFF&} ракеты\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,Итак три {\\c&H00E5FF&}ракеты{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\c&H00E5FF&}взлетели,{\\c&HFFFFFF&} и никто\nDialogue: 0,0:00:01.80,0:00:01.90,boqo,,0,0,0,,взлетели, {\\c&H00E5FF&}и{\\c&HFFFFFF&} никто\nDialogue: 0,0:00:01.90,0:00:02.30,boqo,,0,0,0,,взлетели, и {\\c&H00E5FF&}никто{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\c&H00E5FF&}не{\\c&HFFFFFF&} ожидал этого.\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,не {\\c&H00E5FF&}ожидал{\\c&HFFFFFF&} этого.\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,не ожидал {\\c&H00E5FF&}этого.{\\c&HFFFFFF&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\c&H00E5FF&}Правда?{\\c&HFFFFFF&}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 0,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "cyrillic, karaoke",
+    "words": [
+      {
+        "word": "Итак",
+        "start": 0.09999999999999432,
+        "end": 0.3999999999999915,
+        "index": 0
+      },
+      {
+        "word": "три",
+        "start": 0.4199999999999875,
+        "end": 0.6999999999999886,
+        "index": 1
+      },
+      {
+        "word": "ракеты",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 2
+      },
+      {
+        "word": "взлетели,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 3
+      },
+      {
+        "word": "и",
+        "start": 1.7999999999999972,
+        "end": 1.8799999999999955,
+        "index": 4
+      },
+      {
+        "word": "никто",
+        "start": 1.8999999999999915,
+        "end": 2.299999999999997,
+        "index": 5
+      },
+      {
+        "word": "не",
+        "start": 2.319999999999993,
+        "end": 2.4199999999999875,
+        "index": 6
+      },
+      {
+        "word": "ожидал",
+        "start": 2.4399999999999977,
+        "end": 2.8999999999999915,
+        "index": 7
+      },
+      {
+        "word": "этого.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 8
+      },
+      {
+        "word": "Правда?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 9
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,98,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1508)}{\\c&H00F8F8&\\fscx128\\fscy128}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100} ТРИ РАКЕТЫ\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1585)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1508)}ИТАК {\\c&H00F8F8&\\fscx128\\fscy128}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100} РАКЕТЫ\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1585)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1508)}ИТАК ТРИ {\\c&H20F000&\\fscx128\\fscy128}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1585)}ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1508)}ИТАК ТРИ РАКЕТЫ\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1585)}{\\c&H00F8F8&\\fscx128\\fscy128}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100} И\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1508)}ИТАК ТРИ РАКЕТЫ\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1585)}ВЗЛЕТЕЛИ {\\c&H00F8F8&\\fscx128\\fscy128}И{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1508)}{\\c&H00F8F8&\\fscx128\\fscy128}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100} НЕ\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1585)}ОЖИДАЛ ЭТОГО\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1508)}НИКТО {\\c&H00F8F8&\\fscx128\\fscy128}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1585)}ОЖИДАЛ ЭТОГО\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1508)}НИКТО НЕ\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1585)}{\\c&H00F8F8&\\fscx128\\fscy128}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100} ЭТОГО\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1508)}НИКТО НЕ\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1585)}ОЖИДАЛ {\\c&H20F000&\\fscx128\\fscy128}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)}{\\c&H00F8F8&\\fscx128\\fscy128}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "cyrillic, neon",
+    "words": [
+      {
+        "word": "Итак",
+        "start": 0.09999999999999432,
+        "end": 0.3999999999999915,
+        "index": 0
+      },
+      {
+        "word": "три",
+        "start": 0.4199999999999875,
+        "end": 0.6999999999999886,
+        "index": 1
+      },
+      {
+        "word": "ракеты",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 2
+      },
+      {
+        "word": "взлетели,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 3
+      },
+      {
+        "word": "и",
+        "start": 1.7999999999999972,
+        "end": 1.8799999999999955,
+        "index": 4
+      },
+      {
+        "word": "никто",
+        "start": 1.8999999999999915,
+        "end": 2.299999999999997,
+        "index": 5
+      },
+      {
+        "word": "не",
+        "start": 2.319999999999993,
+        "end": 2.4199999999999875,
+        "index": 6
+      },
+      {
+        "word": "ожидал",
+        "start": 2.4399999999999977,
+        "end": 2.8999999999999915,
+        "index": 7
+      },
+      {
+        "word": "этого.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 8
+      },
+      {
+        "word": "Правда?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 9
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,106,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 1,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)}{\\c&HFFFFFF&}ИТАК{\\c&HFFFFFF&} ТРИ РАКЕТЫ ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}ИТАК{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} ТРИ РАКЕТЫ ВЗЛЕТЕЛИ И\nDialogue: 1,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)}ИТАК {\\c&HFFFFFF&}ТРИ{\\c&HFFFFFF&} РАКЕТЫ ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}ИТАК {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}ТРИ{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} РАКЕТЫ ВЗЛЕТЕЛИ И\nDialogue: 1,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1546)}ИТАК ТРИ {\\c&HFFFFFF&}РАКЕТЫ{\\c&HFFFFFF&} ВЗЛЕТЕЛИ И\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}ИТАК ТРИ {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}РАКЕТЫ{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} ВЗЛЕТЕЛИ И\nDialogue: 1,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1546)}ИТАК ТРИ РАКЕТЫ {\\c&HFFFFFF&}ВЗЛЕТЕЛИ{\\c&HFFFFFF&} И\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}ИТАК ТРИ РАКЕТЫ {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}ВЗЛЕТЕЛИ{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} И\nDialogue: 1,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1546)}ИТАК ТРИ РАКЕТЫ ВЗЛЕТЕЛИ {\\c&HFFFFFF&}И{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}ИТАК ТРИ РАКЕТЫ ВЗЛЕТЕЛИ {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}И{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}\nDialogue: 1,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)}{\\c&HFFFFFF&}НИКТО{\\c&HFFFFFF&} НЕ ОЖИДАЛ ЭТОГО\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}НИКТО{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} НЕ ОЖИДАЛ ЭТОГО\nDialogue: 1,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1546)}НИКТО {\\c&HFFFFFF&}НЕ{\\c&HFFFFFF&} ОЖИДАЛ ЭТОГО\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}НИКТО {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}НЕ{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} ОЖИДАЛ ЭТОГО\nDialogue: 1,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1546)}НИКТО НЕ {\\c&HFFFFFF&}ОЖИДАЛ{\\c&HFFFFFF&} ЭТОГО\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}НИКТО НЕ {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}ОЖИДАЛ{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0} ЭТОГО\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1546)}НИКТО НЕ ОЖИДАЛ {\\c&HFFFFFF&}ЭТОГО{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}НИКТО НЕ ОЖИДАЛ {\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}ЭТОГО{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)}{\\c&HFFFFFF&}ПРАВДА{\\c&HFFFFFF&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H00&\\shad0}ПРАВДА{\\1a&HFF&\\bord7\\blur17\\3c&HD62BFF&\\3a&H38&\\shad0}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": true
+    }
+  },
+  {
+    "name": "cyrillic, minimal",
+    "words": [
+      {
+        "word": "Итак",
+        "start": 0.09999999999999432,
+        "end": 0.3999999999999915,
+        "index": 0
+      },
+      {
+        "word": "три",
+        "start": 0.4199999999999875,
+        "end": 0.6999999999999886,
+        "index": 1
+      },
+      {
+        "word": "ракеты",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 2
+      },
+      {
+        "word": "взлетели,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 3
+      },
+      {
+        "word": "и",
+        "start": 1.7999999999999972,
+        "end": 1.8799999999999955,
+        "index": 4
+      },
+      {
+        "word": "никто",
+        "start": 1.8999999999999915,
+        "end": 2.299999999999997,
+        "index": 5
+      },
+      {
+        "word": "не",
+        "start": 2.319999999999993,
+        "end": 2.4199999999999875,
+        "index": 6
+      },
+      {
+        "word": "ожидал",
+        "start": 2.4399999999999977,
+        "end": 2.8999999999999915,
+        "index": 7
+      },
+      {
+        "word": "этого.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 8
+      },
+      {
+        "word": "Правда?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 9
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Inter,50,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1521)\\fad(280,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}итак{\\alpha&H66&\\4a&HA0&} три ракеты\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1572)\\fad(280,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}взлетели и\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1521)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}итак {\\alpha&H00&\\4a&H60&}три{\\alpha&H66&\\4a&HA0&} ракеты\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1572)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}взлетели и\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1521)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}итак три {\\alpha&H00&\\4a&H60&}ракеты{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1572)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}взлетели и\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1521)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}итак три ракеты\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\an5\\pos(540,1572)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}взлетели{\\alpha&H66&\\4a&HA0&} и\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1521)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}итак три ракеты\nDialogue: 0,0:00:01.80,0:00:01.88,boqo,,0,0,0,,{\\an5\\pos(540,1572)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}взлетели {\\alpha&H00&\\4a&H60&}и{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}никто{\\alpha&H66&\\4a&HA0&} не ожидал этого\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}никто {\\alpha&H00&\\4a&H60&}не{\\alpha&H66&\\4a&HA0&} ожидал этого\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}никто не {\\alpha&H00&\\4a&H60&}ожидал{\\alpha&H66&\\4a&HA0&} этого\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}никто не ожидал {\\alpha&H00&\\4a&H60&}этого{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\fad(280,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}правда{\\alpha&H66&\\4a&HA0&}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "cyrillic, boldkeys in Bangers with an Anton key face",
+    "words": [
+      {
+        "word": "Итак",
+        "start": 0.09999999999999432,
+        "end": 0.3999999999999915,
+        "index": 0
+      },
+      {
+        "word": "три",
+        "start": 0.4199999999999875,
+        "end": 0.6999999999999886,
+        "index": 1
+      },
+      {
+        "word": "ракеты",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 2
+      },
+      {
+        "word": "взлетели,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 3
+      },
+      {
+        "word": "и",
+        "start": 1.7999999999999972,
+        "end": 1.8799999999999955,
+        "index": 4
+      },
+      {
+        "word": "никто",
+        "start": 1.8999999999999915,
+        "end": 2.299999999999997,
+        "index": 5
+      },
+      {
+        "word": "не",
+        "start": 2.319999999999993,
+        "end": 2.4199999999999875,
+        "index": 6
+      },
+      {
+        "word": "ожидал",
+        "start": 2.4399999999999977,
+        "end": 2.8999999999999915,
+        "index": 7
+      },
+      {
+        "word": "этого.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 8
+      },
+      {
+        "word": "Правда?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 9
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,91,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} ТРИ {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1} ВЗЛЕТЕЛИ\nDialogue: 0,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}ТРИ{\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ВЗЛЕТЕЛИ{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} ТРИ {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1} ВЗЛЕТЕЛИ\nDialogue: 1,0:00:00.10,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ИТАК{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}ТРИ{\\alpha&H00&} {\\c&H14FF39&\\fnOswald\\fs102\\b1\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&} {\\alpha&HFF&}ВЗЛЕТЕЛИ{\\alpha&H00&}\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}ИТАК {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1} ВЗЛЕТЕЛИ\nDialogue: 0,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ИТАК{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H14FF39&\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ВЗЛЕТЕЛИ{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}ИТАК {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1} ВЗЛЕТЕЛИ\nDialogue: 1,0:00:00.42,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}ИТАК{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ТРИ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\c&H14FF39&\\fnOswald\\fs102\\b1\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&} {\\alpha&HFF&}ВЗЛЕТЕЛИ{\\alpha&H00&}\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}ИТАК ТРИ {\\c&H14FF39&\\fscx118\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&} ВЗЛЕТЕЛИ\nDialogue: 0,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ИТАК{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ТРИ{\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1} {\\alpha&HFF&\\1a&HFF&}ВЗЛЕТЕЛИ{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}ИТАК ТРИ {\\c&H14FF39&\\fscx118\\fnOswald\\fs102\\b1\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&} ВЗЛЕТЕЛИ\nDialogue: 1,0:00:00.72,0:00:01.18,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}ИТАК{\\alpha&H00&} {\\alpha&HFF&}ТРИ{\\alpha&H00&} {\\c&H14FF39&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fscx100\\fscy100\\fnMontserrat ExtraBold\\fs91\\b1} {\\alpha&HFF&}ВЗЛЕТЕЛИ{\\alpha&H00&}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}ИТАК ТРИ {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1} {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ИТАК{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}ТРИ{\\alpha&H00&\\1a&HFF&} {\\c&H14FF39&\\fnOswald\\fs102\\b1\\alpha&HFF&\\1a&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}ИТАК ТРИ {\\c&H14FF39&\\fnOswald\\fs102\\b1}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1} {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\alpha&HFF&}ИТАК{\\alpha&H00&} {\\alpha&HFF&}ТРИ{\\alpha&H00&} {\\c&H14FF39&\\fnOswald\\fs102\\b1\\alpha&HFF&}РАКЕТЫ{\\c&HFFFFFF&\\fnMontserrat ExtraBold\\fs91\\b1\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ВЗЛЕТЕЛИ{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.90,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}И{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} НИКТО НЕ\nDialogue: 0,0:00:01.80,0:00:01.90,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}И{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}НИКТО{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}НЕ{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.80,0:00:01.90,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}И{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} НИКТО НЕ\nDialogue: 1,0:00:01.80,0:00:01.90,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}И{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}НИКТО{\\alpha&H00&} {\\alpha&HFF&}НЕ{\\alpha&H00&}\nDialogue: 0,0:00:01.80,0:00:01.90,boqo,,0,0,0,,{\\an5\\pos(540,1582)}ОЖИДАЛ ЭТОГО\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}И {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} НЕ\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}И{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}НЕ{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}И {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} НЕ\nDialogue: 1,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}{\\alpha&HFF&}И{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}НИКТО{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}НЕ{\\alpha&H00&}\nDialogue: 0,0:00:01.90,0:00:02.32,boqo,,0,0,0,,{\\an5\\pos(540,1582)}ОЖИДАЛ ЭТОГО\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}И НИКТО {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}И{\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}НИКТО{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}И НИКТО {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1510)\\bord0\\shad0}{\\alpha&HFF&}И{\\alpha&H00&} {\\alpha&HFF&}НИКТО{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}НЕ{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.32,0:00:02.44,boqo,,0,0,0,,{\\an5\\pos(540,1582)}ОЖИДАЛ ЭТОГО\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1510)}И НИКТО НЕ\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} ЭТОГО\nDialogue: 0,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&} ЭТОГО\nDialogue: 1,0:00:02.44,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ОЖИДАЛ{\\c&HFFFFFF&\\fscx100\\fscy100} {\\alpha&HFF&}ЭТОГО{\\alpha&H00&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1510)}И НИКТО НЕ\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\1a&HFF&}ОЖИДАЛ {\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}ОЖИДАЛ{\\alpha&H00&\\1a&HFF&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\bord0\\shad0}ОЖИДАЛ {\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,1582)\\bord0\\shad0}{\\alpha&HFF&}ОЖИДАЛ{\\alpha&H00&} {\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ЭТОГО{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&\\1a&HFF&}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\1a&HFF&}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx118\\alpha&HFF&}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,1546)\\bord0\\shad0}{\\c&HFFFFFF&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}ПРАВДА{\\c&HFFFFFF&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 1,
+      "fallbackUsed": true
+    }
+  },
+  {
+    "name": "every knob, karaoke",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,122,&H00FAFAFA,&H00030201,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx128\\fscy128}So{\\c&HFAFAFA&\\fscx100\\fscy100} the\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)}So {\\c&H332211&\\fscx128\\fscy128}the{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx128\\fscy128}3{\\c&HFAFAFA&\\fscx100\\fscy100} rockets\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)}3 {\\c&H665544&\\fscx128\\fscy128}rockets{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx128\\fscy128}launched{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx128\\fscy128}and{\\c&HFAFAFA&\\fscx100\\fscy100} nobody\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}and {\\c&H332211&\\fscx128\\fscy128}nobody{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx128\\fscy128}didn't{\\c&HFAFAFA&\\fscx100\\fscy100} see\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)}didn't {\\c&H332211&\\fscx128\\fscy128}see{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx128\\fscy128}it{\\c&HFAFAFA&\\fscx100\\fscy100} coming\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)}it {\\c&H665544&\\fscx128\\fscy128}coming{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx128\\fscy128}Really{\\c&HFAFAFA&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, punch",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Oswald,133,&H00FAFAFA,&H00030201,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx130\\fscy130}So{\\c&HFAFAFA&\\fscx100\\fscy100} the\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)}So {\\c&H332211&\\fscx130\\fscy130}the{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx130\\fscy130}3{\\c&HFAFAFA&\\fscx100\\fscy100} rockets\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)}3 {\\c&H665544&\\fscx130\\fscy130}rockets{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx130\\fscy130}launched{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx130\\fscy130}and{\\c&HFAFAFA&\\fscx100\\fscy100} nobody\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}and {\\c&H332211&\\fscx130\\fscy130}nobody{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx130\\fscy130}didn't{\\c&HFAFAFA&\\fscx100\\fscy100} see\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)}didn't {\\c&H332211&\\fscx130\\fscy130}see{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx130\\fscy130}it{\\c&HFAFAFA&\\fscx100\\fscy100} coming\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)}it {\\c&H665544&\\fscx130\\fscy130}coming{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx130\\fscy130}Really{\\c&HFAFAFA&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, clean",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Inter,83,&H00FAFAFA,&H00030201,&H00000000,-1,0,0,0,100,100,0,0,1,4,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx110\\fscy110}So{\\c&HFAFAFA&\\fscx100\\fscy100} the\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)}So {\\c&H332211&\\fscx110\\fscy110}the{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx110\\fscy110}3{\\c&HFAFAFA&\\fscx100\\fscy100} rockets\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)}3 {\\c&H665544&\\fscx110\\fscy110}rockets{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx110\\fscy110}launched{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx110\\fscy110}and{\\c&HFAFAFA&\\fscx100\\fscy100} nobody\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}and {\\c&H332211&\\fscx110\\fscy110}nobody{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx110\\fscy110}didn't{\\c&HFAFAFA&\\fscx100\\fscy100} see\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)}didn't {\\c&H332211&\\fscx110\\fscy110}see{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx110\\fscy110}it{\\c&HFAFAFA&\\fscx100\\fscy100} coming\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)}it {\\c&H665544&\\fscx110\\fscy110}coming{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&\\fscx110\\fscy110}Really{\\c&HFAFAFA&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, highlight",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,117,&H00FAFAFA,&H00030201,&H00000000,-1,0,0,0,100,100,0,0,3,8,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}So{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&} the\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}So {\\3a&H00&\\3c&H20F000&\\c&H000000&}the{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}3{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&} rockets\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}3 {\\3a&H00&\\3c&H665544&\\c&H000000&}rockets{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}launched{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}and{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&} nobody\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}and {\\3a&H00&\\3c&H20F000&\\c&H000000&}nobody{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}didn't{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&} see\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}didn't {\\3a&H00&\\3c&H20F000&\\c&H000000&}see{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}it{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&} coming\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}it {\\3a&H00&\\3c&H665544&\\c&H000000&}coming{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\3a&H66&\\3c&H000000&}{\\3a&H00&\\3c&H20F000&\\c&H000000&}Really{\\3a&H66&\\3c&H000000&\\c&HFAFAFA&}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, classic",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,DejaVu Sans,84,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,60,60,420,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\c&H00E5FF&}So{\\c&HFFFFFF&} the 3 rockets\nDialogue: 0,0:00:00.30,0:00:00.44,boqo,,0,0,0,,So {\\c&H00E5FF&}the{\\c&HFFFFFF&} 3 rockets\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,So the {\\c&H00E5FF&}3{\\c&HFFFFFF&} rockets\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,So the 3 {\\c&H00E5FF&}rockets{\\c&HFFFFFF&}\nDialogue: 0,0:00:01.18,0:00:01.80,boqo,,0,0,0,,{\\c&H00E5FF&}launched,{\\c&HFFFFFF&} and nobody didn't\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,launched, {\\c&H00E5FF&}and{\\c&HFFFFFF&} nobody didn't\nDialogue: 0,0:00:01.94,0:00:02.32,boqo,,0,0,0,,launched, and {\\c&H00E5FF&}nobody{\\c&HFFFFFF&} didn't\nDialogue: 0,0:00:02.32,0:00:02.60,boqo,,0,0,0,,launched, and nobody {\\c&H00E5FF&}didn't{\\c&HFFFFFF&}\nDialogue: 0,0:00:02.62,0:00:02.82,boqo,,0,0,0,,{\\c&H00E5FF&}see{\\c&HFFFFFF&} it coming.\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,see {\\c&H00E5FF&}it{\\c&HFFFFFF&} coming.\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,see it {\\c&H00E5FF&}coming.{\\c&HFFFFFF&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\c&H00E5FF&}Really?{\\c&HFFFFFF&}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 0,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, bounce",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,122,&H00FAFAFA,&H00030201,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\alpha&HFF&\\1a&HFF&}So{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}the{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}So{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}the{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\alpha&HFF&}So{\\c&HFAFAFA&\\alpha&H00&} {\\alpha&HFF&}the{\\alpha&H00&}\nDialogue: 1,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}So{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}the{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}So {\\c&H332211&\\alpha&HFF&\\1a&HFF&}the{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}So{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,119,\\fscx115\\fscy115)\\t(119,119,\\fscx100\\fscy100)\\c&H332211&}the{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}So {\\c&H332211&\\alpha&HFF&}the{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}So{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,119,\\fscx115\\fscy115)\\t(119,119,\\fscx100\\fscy100)\\c&H332211&}the{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\alpha&HFF&\\1a&HFF&}3{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}rockets{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}3{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}rockets{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\alpha&HFF&}3{\\c&HFAFAFA&\\alpha&H00&} {\\alpha&HFF&}rockets{\\alpha&H00&}\nDialogue: 1,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}3{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}rockets{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}3 {\\c&H665544&\\alpha&HFF&\\1a&HFF&}rockets{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H665544&}rockets{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}3 {\\c&H665544&\\alpha&HFF&}rockets{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}3{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H665544&}rockets{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\alpha&HFF&\\1a&HFF&}launched{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}launched{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\alpha&HFF&}launched{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}launched{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\alpha&HFF&\\1a&HFF&}and{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}nobody{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,140,\\fscx100\\fscy100)\\c&H332211&}and{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}nobody{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\alpha&HFF&}and{\\c&HFAFAFA&\\alpha&H00&} {\\alpha&HFF&}nobody{\\alpha&H00&}\nDialogue: 1,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,140,\\fscx100\\fscy100)\\c&H332211&}and{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}nobody{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}and {\\c&H332211&\\alpha&HFF&\\1a&HFF&}nobody{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}and{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}nobody{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}and {\\c&H332211&\\alpha&HFF&}nobody{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}and{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}nobody{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\alpha&HFF&\\1a&HFF&}didn't{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}see{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}didn't{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}see{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\alpha&HFF&}didn't{\\c&HFAFAFA&\\alpha&H00&} {\\alpha&HFF&}see{\\alpha&H00&}\nDialogue: 1,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}didn't{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}see{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}didn't {\\c&H332211&\\alpha&HFF&\\1a&HFF&}see{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}didn't{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,180,\\fscx100\\fscy100)\\c&H332211&}see{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}didn't {\\c&H332211&\\alpha&HFF&}see{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}didn't{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,180,\\fscx100\\fscy100)\\c&H332211&}see{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\alpha&HFF&\\1a&HFF&}it{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&} {\\alpha&HFF&\\1a&HFF&}coming{\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,99,\\fscx115\\fscy115)\\t(99,99,\\fscx100\\fscy100)\\c&H332211&}it{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&\\alpha&HFF&\\1a&HFF&}coming{\\alpha&H00&\\1a&HFF&\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\alpha&HFF&}it{\\c&HFAFAFA&\\alpha&H00&} {\\alpha&HFF&}coming{\\alpha&H00&}\nDialogue: 1,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,99,\\fscx115\\fscy115)\\t(99,99,\\fscx100\\fscy100)\\c&H332211&}it{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\alpha&HFF&}coming{\\alpha&H00&\\alpha&H00&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}it {\\c&H665544&\\alpha&HFF&\\1a&HFF&}coming{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}it{\\alpha&H00&\\1a&HFF&} {\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H665544&}coming{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}it {\\c&H665544&\\alpha&HFF&}coming{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}it{\\alpha&H00&} {\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H665544&}coming{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\alpha&HFF&\\1a&HFF&}Really{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}Really{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\alpha&HFF&}Really{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\fscx0\\fscy0\\t(0,120,\\fscx115\\fscy115)\\t(120,200,\\fscx100\\fscy100)\\c&H332211&}Really{\\c&HFAFAFA&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, neon",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Bebas Neue,120,&H00FAFAFA,&H00030201,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 1,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)}{\\c&H332211&}So{\\c&HFAFAFA&} the\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}So{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0} the\nDialogue: 1,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)}So {\\c&H332211&}the{\\c&HFAFAFA&}\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}So {\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}the{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}\nDialogue: 1,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)}{\\c&H332211&}3{\\c&HFAFAFA&} rockets\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}3{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0} rockets\nDialogue: 1,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)}3 {\\c&H332211&}rockets{\\c&HFAFAFA&}\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}3 {\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}rockets{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}\nDialogue: 1,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)}{\\c&H332211&}launched{\\c&HFAFAFA&}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}launched{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}\nDialogue: 1,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(140,0)}{\\c&H332211&}and{\\c&HFAFAFA&} nobody\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(140,0)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}and{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0} nobody\nDialogue: 1,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}and {\\c&H332211&}nobody{\\c&HFAFAFA&}\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}and {\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}nobody{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}\nDialogue: 1,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)}{\\c&H332211&}didn't{\\c&HFAFAFA&} see\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}didn't{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0} see\nDialogue: 1,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)}didn't {\\c&H332211&}see{\\c&HFAFAFA&}\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}didn't {\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}see{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}\nDialogue: 1,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(99,0)}{\\c&H332211&}it{\\c&HFAFAFA&} coming\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(99,0)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}it{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0} coming\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)}it {\\c&H332211&}coming{\\c&HFAFAFA&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}it {\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}coming{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)}{\\c&H332211&}Really{\\c&HFAFAFA&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H2B&\\shad0}Really{\\1a&HFF&\\bord9\\blur21\\3c&H00FF00&\\3a&H85&\\shad0}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, boldkeys",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Poppins Black,133,&H00FAFAFA,&H00030201,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx118\\alpha&HFF&\\1a&HFF&}So{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} the\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}So{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}the{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx118\\alpha&HFF&}So{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} the\nDialogue: 1,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}So{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&}the{\\alpha&H00&}\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}So {\\c&H332211&\\fscx118\\alpha&HFF&\\1a&HFF&}the{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}So{\\alpha&H00&\\1a&HFF&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}the{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}So {\\c&H332211&\\fscx118\\alpha&HFF&}the{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}So{\\alpha&H00&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}the{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx118\\alpha&HFF&\\1a&HFF&}3{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H665544&\\fnArchivo Black\\fs124\\b0}rockets{\\c&HFAFAFA&\\fnPoppins Black\\fs133\\b1}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}3{\\c&HFAFAFA&\\fscx100\\fscy100} {\\c&H665544&\\fnArchivo Black\\fs124\\b0\\alpha&HFF&\\1a&HFF&}rockets{\\c&HFAFAFA&\\fnPoppins Black\\fs133\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx118\\alpha&HFF&}3{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} {\\c&H665544&\\fnArchivo Black\\fs124\\b0}rockets{\\c&HFAFAFA&\\fnPoppins Black\\fs133\\b1}\nDialogue: 1,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}3{\\c&HFAFAFA&\\fscx100\\fscy100} {\\c&H665544&\\fnArchivo Black\\fs124\\b0\\alpha&HFF&}rockets{\\c&HFAFAFA&\\fnPoppins Black\\fs133\\b1\\alpha&H00&}\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}3 {\\c&H665544&\\fscx118\\fnArchivo Black\\fs124\\b0\\alpha&HFF&\\1a&HFF&}rockets{\\c&HFAFAFA&\\fscx100\\fscy100\\fnPoppins Black\\fs133\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H665544&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnArchivo Black\\fs124\\b0}rockets{\\c&HFAFAFA&\\fscx100\\fscy100\\fnPoppins Black\\fs133\\b1}\nDialogue: 1,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}3 {\\c&H665544&\\fscx118\\fnArchivo Black\\fs124\\b0\\alpha&HFF&}rockets{\\c&HFAFAFA&\\fscx100\\fscy100\\fnPoppins Black\\fs133\\b1\\alpha&H00&}\nDialogue: 1,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}3{\\alpha&H00&} {\\c&H665544&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnArchivo Black\\fs124\\b0}rockets{\\c&HFAFAFA&\\fscx100\\fscy100\\fnPoppins Black\\fs133\\b1}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx118\\alpha&HFF&\\1a&HFF&}launched{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}launched{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx118\\alpha&HFF&}launched{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}launched{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx118\\alpha&HFF&\\1a&HFF&}and{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} nobody\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}and{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}nobody{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx118\\alpha&HFF&}and{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} nobody\nDialogue: 1,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}and{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&}nobody{\\alpha&H00&}\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}and {\\c&H332211&\\fscx118\\alpha&HFF&\\1a&HFF&}nobody{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}and{\\alpha&H00&\\1a&HFF&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}nobody{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}and {\\c&H332211&\\fscx118\\alpha&HFF&}nobody{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}and{\\alpha&H00&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}nobody{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx118\\alpha&HFF&\\1a&HFF&}didn't{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} see\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}didn't{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}see{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx118\\alpha&HFF&}didn't{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} see\nDialogue: 1,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}didn't{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&}see{\\alpha&H00&}\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}didn't {\\c&H332211&\\fscx118\\alpha&HFF&\\1a&HFF&}see{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}didn't{\\alpha&H00&\\1a&HFF&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}see{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}didn't {\\c&H332211&\\fscx118\\alpha&HFF&}see{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}didn't{\\alpha&H00&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}see{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx118\\alpha&HFF&\\1a&HFF&}it{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H665544&\\fnArchivo Black\\fs124\\b0}coming{\\c&HFAFAFA&\\fnPoppins Black\\fs133\\b1}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}it{\\c&HFAFAFA&\\fscx100\\fscy100} {\\c&H665544&\\fnArchivo Black\\fs124\\b0\\alpha&HFF&\\1a&HFF&}coming{\\c&HFAFAFA&\\fnPoppins Black\\fs133\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx118\\alpha&HFF&}it{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} {\\c&H665544&\\fnArchivo Black\\fs124\\b0}coming{\\c&HFAFAFA&\\fnPoppins Black\\fs133\\b1}\nDialogue: 1,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}it{\\c&HFAFAFA&\\fscx100\\fscy100} {\\c&H665544&\\fnArchivo Black\\fs124\\b0\\alpha&HFF&}coming{\\c&HFAFAFA&\\fnPoppins Black\\fs133\\b1\\alpha&H00&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}it {\\c&H665544&\\fscx118\\fnArchivo Black\\fs124\\b0\\alpha&HFF&\\1a&HFF&}coming{\\c&HFAFAFA&\\fscx100\\fscy100\\fnPoppins Black\\fs133\\b1\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}it{\\alpha&H00&\\1a&HFF&} {\\c&H665544&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnArchivo Black\\fs124\\b0}coming{\\c&HFAFAFA&\\fscx100\\fscy100\\fnPoppins Black\\fs133\\b1}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}it {\\c&H665544&\\fscx118\\fnArchivo Black\\fs124\\b0\\alpha&HFF&}coming{\\c&HFAFAFA&\\fscx100\\fscy100\\fnPoppins Black\\fs133\\b1\\alpha&H00&}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}it{\\alpha&H00&} {\\c&H665544&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)\\fnArchivo Black\\fs124\\b0}coming{\\c&HFAFAFA&\\fscx100\\fscy100\\fnPoppins Black\\fs133\\b1}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx118\\alpha&HFF&\\1a&HFF&}Really{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}Really{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx118\\alpha&HFF&}Really{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx118\\fscy118)}Really{\\c&HFAFAFA&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, typewriter",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Archivo Black,94,&H00FAFAFA,&H00030201,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}So {\\alpha&HFF&}the{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}So the\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}3 {\\alpha&HFF&}rockets{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}3 rockets\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}launched\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}and {\\alpha&HFF&}nobody{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}and nobody\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}didn't {\\alpha&HFF&}see{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}didn't see\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}it {\\alpha&HFF&}coming{\\alpha&H00&\\4a&H60&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}it coming\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&}Really\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, slide",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Montserrat ExtraBold,122,&H00FAFAFA,&H00030201,&H00000000,-1,0,0,0,100,100,0,0,1,7,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\move(540,607,540,576,0,187)\\fad(187,0)}{\\c&H332211&}So{\\c&HFAFAFA&} the\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)}So {\\c&H332211&}the{\\c&HFAFAFA&}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\move(540,607,540,576,0,187)\\fad(187,0)}{\\c&H332211&}3{\\c&HFAFAFA&} rockets\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)}3 {\\c&H665544&}rockets{\\c&HFAFAFA&}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\move(540,607,540,576,0,187)\\fad(187,0)}{\\c&H332211&}launched{\\c&HFAFAFA&}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\move(540,607,540,576,0,140)\\fad(140,0)}{\\c&H332211&}and{\\c&HFAFAFA&} nobody\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}and {\\c&H332211&}nobody{\\c&HFAFAFA&}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\move(540,607,540,576,0,187)\\fad(187,0)}{\\c&H332211&}didn't{\\c&HFAFAFA&} see\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)}didn't {\\c&H332211&}see{\\c&HFAFAFA&}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\move(540,607,540,576,0,99)\\fad(99,0)}{\\c&H332211&}it{\\c&HFAFAFA&} coming\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)}it {\\c&H665544&}coming{\\c&HFAFAFA&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\move(540,607,540,576,0,187)\\fad(187,0)}{\\c&H332211&}Really{\\c&HFAFAFA&}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, comic",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Bangers,150,&H00FAFAFA,&H00030201,&H00000000,0,0,0,0,100,100,0,0,1,11,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}So{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} the\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}So{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}the{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx114\\alpha&HFF&}So{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} the\nDialogue: 1,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}So{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&}the{\\alpha&H00&}\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}So {\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}the{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}So{\\alpha&H00&\\1a&HFF&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}the{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}So {\\c&H332211&\\fscx114\\alpha&HFF&}the{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}So{\\alpha&H00&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}the{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}3{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H665544&\\alpha&HFF&\\1a&HFF&}rockets{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}3{\\c&HFAFAFA&\\fscx100\\fscy100} {\\c&H665544&\\alpha&HFF&\\1a&HFF&}rockets{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\org(570,576)\\1a&HFF&}{\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}3{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H665544&\\frz3}rockets{\\c&HFAFAFA&\\frz0}\nDialogue: 1,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx114\\alpha&HFF&}3{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} {\\c&H665544&\\alpha&HFF&}rockets{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}3{\\c&HFAFAFA&\\fscx100\\fscy100} {\\c&H665544&\\alpha&HFF&}rockets{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\org(570,576)\\bord0\\shad0}{\\c&H332211&\\fscx114\\alpha&HFF&}3{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} {\\c&H665544&\\frz3}rockets{\\c&HFAFAFA&\\frz0}\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}3 {\\c&H665544&\\fscx114\\alpha&HFF&\\1a&HFF&}rockets{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\org(568,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}3{\\alpha&H00&\\1a&HFF&} {\\c&H665544&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz3}rockets{\\c&HFAFAFA&\\fscx100\\fscy100\\frz0}\nDialogue: 1,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}3 {\\c&H665544&\\fscx114\\alpha&HFF&}rockets{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\org(568,576)\\bord0\\shad0}{\\alpha&HFF&}3{\\alpha&H00&} {\\c&H665544&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz3}rockets{\\c&HFAFAFA&\\fscx100\\fscy100\\frz0}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}launched{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}launched{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx114\\alpha&HFF&}launched{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}launched{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}and{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} nobody\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}and{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}nobody{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx114\\alpha&HFF&}and{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} nobody\nDialogue: 1,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}and{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&}nobody{\\alpha&H00&}\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}and {\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}nobody{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}and{\\alpha&H00&\\1a&HFF&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}nobody{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}and {\\c&H332211&\\fscx114\\alpha&HFF&}nobody{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}and{\\alpha&H00&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}nobody{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}didn't{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} see\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}didn't{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&\\1a&HFF&}see{\\alpha&H00&\\1a&HFF&}\nDialogue: 1,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx114\\alpha&HFF&}didn't{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} see\nDialogue: 1,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}didn't{\\c&HFAFAFA&\\fscx100\\fscy100} {\\alpha&HFF&}see{\\alpha&H00&}\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}didn't {\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}see{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}didn't{\\alpha&H00&\\1a&HFF&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}see{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}didn't {\\c&H332211&\\fscx114\\alpha&HFF&}see{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\alpha&HFF&}didn't{\\alpha&H00&} {\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}see{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}it{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H665544&\\alpha&HFF&\\1a&HFF&}coming{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}it{\\c&HFAFAFA&\\fscx100\\fscy100} {\\c&H665544&\\alpha&HFF&\\1a&HFF&}coming{\\c&HFAFAFA&\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\org(576,576)\\1a&HFF&}{\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}it{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&} {\\c&H665544&\\frz-3}coming{\\c&HFAFAFA&\\frz0}\nDialogue: 1,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx114\\alpha&HFF&}it{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} {\\c&H665544&\\alpha&HFF&}coming{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}it{\\c&HFAFAFA&\\fscx100\\fscy100} {\\c&H665544&\\alpha&HFF&}coming{\\c&HFAFAFA&\\alpha&H00&}\nDialogue: 1,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\org(576,576)\\bord0\\shad0}{\\c&H332211&\\fscx114\\alpha&HFF&}it{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&} {\\c&H665544&\\frz-3}coming{\\c&HFAFAFA&\\frz0}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}it {\\c&H665544&\\fscx114\\alpha&HFF&\\1a&HFF&}coming{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\org(572,576)\\1a&HFF&}{\\alpha&HFF&\\1a&HFF&}it{\\alpha&H00&\\1a&HFF&} {\\c&H665544&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz-3}coming{\\c&HFAFAFA&\\fscx100\\fscy100\\frz0}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}it {\\c&H665544&\\fscx114\\alpha&HFF&}coming{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\org(572,576)\\bord0\\shad0}{\\alpha&HFF&}it{\\alpha&H00&} {\\c&H665544&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)\\frz-3}coming{\\c&HFAFAFA&\\fscx100\\fscy100\\frz0}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx114\\alpha&HFF&\\1a&HFF&}Really{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&\\1a&HFF&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\1a&HFF&}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}Really{\\c&HFAFAFA&\\fscx100\\fscy100}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx114\\alpha&HFF&}Really{\\c&HFAFAFA&\\fscx100\\fscy100\\alpha&H00&}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\bord0\\shad0}{\\c&H332211&\\fscx100\\fscy100\\t(0,80,\\fscx114\\fscy114)}Really{\\c&HFAFAFA&\\fscx100\\fscy100}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, marker",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Permanent Marker,104,&H00FAFAFA,&H00030201,&H00000000,0,0,0,0,100,100,0,0,1,5,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 1,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H1C1316&\\bord0}So{\\c&HFAFAFA&\\bord5} the\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(418,541,418,610)\\t(0,147,\\clip(418,541,519,610))\\p1}m 418 541 l 519 541 l 519 610 l 418 610{\\p0}\nDialogue: 1,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)}So {\\c&H1C1316&\\bord0}the{\\c&HFAFAFA&\\bord5}\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(532,541,532,610)\\t(0,119,\\clip(532,541,661,610))\\p1}m 532 541 l 661 541 l 661 610 l 532 610{\\p0}\nDialogue: 1,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H1C1316&\\bord0}3{\\c&HFAFAFA&\\bord5} rockets\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(360,541,360,610)\\t(0,147,\\clip(360,541,414,610))\\p1}m 360 541 l 414 541 l 414 610 l 360 610{\\p0}\nDialogue: 1,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)}3 {\\c&H1C1316&\\bord0}rockets{\\c&HFAFAFA&\\bord5}\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(428,541,428,610)\\t(0,147,\\clip(428,541,718,610))\\p1}m 428 541 l 718 541 l 718 610 l 428 610{\\p0}\nDialogue: 1,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H1C1316&\\bord0}launched{\\c&HFAFAFA&\\bord5}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(374,541,374,610)\\t(0,147,\\clip(374,541,706,610))\\p1}m 374 541 l 706 541 l 706 610 l 374 610{\\p0}\nDialogue: 1,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H1C1316&\\bord0}and{\\c&HFAFAFA&\\bord5} nobody\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(340,541,340,610)\\t(0,140,\\clip(340,541,473,610))\\p1}m 340 541 l 473 541 l 473 610 l 340 610{\\p0}\nDialogue: 1,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}and {\\c&H1C1316&\\bord0}nobody{\\c&HFAFAFA&\\bord5}\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(486,541,486,610)\\t(0,147,\\clip(486,541,739,610))\\p1}m 486 541 l 739 541 l 739 610 l 486 610{\\p0}\nDialogue: 1,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H1C1316&\\bord0}didn't{\\c&HFAFAFA&\\bord5} see\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(369,541,369,610)\\t(0,147,\\clip(369,541,573,610))\\p1}m 369 541 l 573 541 l 573 610 l 369 610{\\p0}\nDialogue: 1,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)}didn't {\\c&H1C1316&\\bord0}see{\\c&HFAFAFA&\\bord5}\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(587,541,587,610)\\t(0,147,\\clip(587,541,710,610))\\p1}m 587 541 l 710 541 l 710 610 l 587 610{\\p0}\nDialogue: 1,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H1C1316&\\bord0}it{\\c&HFAFAFA&\\bord5} coming\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(363,541,363,610)\\t(0,99,\\clip(363,541,435,610))\\p1}m 363 541 l 435 541 l 435 610 l 363 610{\\p0}\nDialogue: 1,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)}it {\\c&H1C1316&\\bord0}coming{\\c&HFAFAFA&\\bord5}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(449,541,449,610)\\t(0,147,\\clip(449,541,716,610))\\p1}m 449 541 l 716 541 l 716 610 l 449 610{\\p0}\nDialogue: 1,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H1C1316&\\bord0}Really{\\c&HFAFAFA&\\bord5}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H332211&\\1a&H00&\\clip(416,541,416,610)\\t(0,147,\\clip(416,541,663,610))\\p1}m 416 541 l 663 541 l 663 610 l 416 610{\\p0}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, stack",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Archivo Black,100,&H00FAFAFA,&H00030201,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}{\\c&H332211&}So{\\c&HFAFAFA&} the\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}So {\\c&H332211&}the{\\c&HFAFAFA&}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}{\\c&H332211&}3{\\c&HFAFAFA&} rockets\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}3 {\\c&H665544&}rockets{\\c&HFAFAFA&}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}{\\c&H332211&}launched{\\c&HFAFAFA&}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}{\\c&H332211&}and{\\c&HFAFAFA&} nobody\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}and {\\c&H332211&}nobody{\\c&HFAFAFA&}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}{\\c&H332211&}didn't{\\c&HFAFAFA&} see\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}didn't {\\c&H332211&}see{\\c&HFAFAFA&}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}{\\c&H332211&}it{\\c&HFAFAFA&} coming\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}it {\\c&H665544&}coming{\\c&HFAFAFA&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad5\\4c&HFF0000&\\4a&H00&}{\\c&H332211&}Really{\\c&HFAFAFA&}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, minimal",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Inter,63,&H00FAFAFA,&H00030201,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}So{\\alpha&H66&\\4a&HA0&} the\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}So {\\alpha&H00&\\4a&H60&}the{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}3{\\alpha&H66&\\4a&HA0&} rockets\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}3 {\\alpha&H00&\\4a&H60&}rockets{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}launched{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(140,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}and{\\alpha&H66&\\4a&HA0&} nobody\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}and {\\alpha&H00&\\4a&H60&}nobody{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}didn't{\\alpha&H66&\\4a&HA0&} see\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}didn't {\\alpha&H00&\\4a&H60&}see{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(99,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}it{\\alpha&H66&\\4a&HA0&} coming\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}it {\\alpha&H00&\\4a&H60&}coming{\\alpha&H66&\\4a&HA0&}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)\\fad(187,0)\\shad2\\4c&H000000&\\4a&H60&\\alpha&H66&\\4a&HA0&}{\\alpha&H00&\\4a&H60&}Really{\\alpha&H66&\\4a&HA0&}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  },
+  {
+    "name": "every knob, editorial",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.09999999999999432,
+        "end": 0.28000000000000114,
+        "index": 1
+      },
+      {
+        "word": "the",
+        "start": 0.29999999999999716,
+        "end": 0.4199999999999875,
+        "index": 2
+      },
+      {
+        "word": "3",
+        "start": 0.4399999999999977,
+        "end": 0.6999999999999886,
+        "index": 3
+      },
+      {
+        "word": "rockets",
+        "start": 0.7199999999999989,
+        "end": 1.1499999999999915,
+        "index": 4
+      },
+      {
+        "word": "launched,",
+        "start": 1.1799999999999926,
+        "end": 1.6499999999999915,
+        "index": 5
+      },
+      {
+        "word": "and",
+        "start": 1.7999999999999972,
+        "end": 1.9199999999999875,
+        "index": 6
+      },
+      {
+        "word": "nobody",
+        "start": 1.9399999999999977,
+        "end": 2.299999999999997,
+        "index": 7
+      },
+      {
+        "word": "didn't",
+        "start": 2.319999999999993,
+        "end": 2.5999999999999943,
+        "index": 8
+      },
+      {
+        "word": "see",
+        "start": 2.6199999999999903,
+        "end": 2.799999999999997,
+        "index": 9
+      },
+      {
+        "word": "it",
+        "start": 2.819999999999993,
+        "end": 2.8999999999999915,
+        "index": 10
+      },
+      {
+        "word": "coming.",
+        "start": 2.9199999999999875,
+        "end": 3.3999999999999915,
+        "index": 11
+      },
+      {
+        "word": "Really?",
+        "start": 3.7,
+        "end": 4.2,
+        "index": 12
+      }
+    ],
+    "result": {
+      "ass": "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: boqo,Bebas Neue,120,&H00FAFAFA,&H00030201,&H00000000,0,0,0,0,100,100,0,0,1,6,0,5,0,0,0,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\nDialogue: 0,0:00:00.10,0:00:00.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&}So{\\c&HFAFAFA&} the\nDialogue: 0,0:00:00.30,0:00:00.42,boqo,,0,0,0,,{\\an5\\pos(540,576)}So {\\c&H332211&}the{\\c&HFAFAFA&}\nDialogue: 0,0:00:00.44,0:00:00.72,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&}3{\\c&HFAFAFA&} {\\c&H665544&\\fnArchivo Black\\fs153\\b0}rockets{\\c&HFAFAFA&\\fnBebas Neue\\fs120\\b0}\nDialogue: 0,0:00:00.72,0:00:01.15,boqo,,0,0,0,,{\\an5\\pos(540,576)}3 {\\c&H665544&\\fnArchivo Black\\fs153\\b0}rockets{\\c&HFAFAFA&\\fnBebas Neue\\fs120\\b0}\nDialogue: 0,0:00:01.18,0:00:01.65,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&}launched{\\c&HFAFAFA&}\nDialogue: 0,0:00:01.80,0:00:01.94,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&}and{\\c&HFAFAFA&} nobody\nDialogue: 0,0:00:01.94,0:00:02.30,boqo,,0,0,0,,{\\an5\\pos(540,576)}and {\\c&H332211&}nobody{\\c&HFAFAFA&}\nDialogue: 0,0:00:02.32,0:00:02.62,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&}didn't{\\c&HFAFAFA&} see\nDialogue: 0,0:00:02.62,0:00:02.80,boqo,,0,0,0,,{\\an5\\pos(540,576)}didn't {\\c&H332211&}see{\\c&HFAFAFA&}\nDialogue: 0,0:00:02.82,0:00:02.92,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&}it{\\c&HFAFAFA&} {\\c&H665544&\\fnArchivo Black\\fs153\\b0}coming{\\c&HFAFAFA&\\fnBebas Neue\\fs120\\b0}\nDialogue: 0,0:00:02.92,0:00:03.40,boqo,,0,0,0,,{\\an5\\pos(540,576)}it {\\c&H665544&\\fnArchivo Black\\fs153\\b0}coming{\\c&HFAFAFA&\\fnBebas Neue\\fs120\\b0}\nDialogue: 0,0:00:03.70,0:00:04.20,boqo,,0,0,0,,{\\an5\\pos(540,576)}{\\c&H332211&}Really{\\c&HFAFAFA&}\n",
+      "overflowGroups": 0,
+      "emphasisMatched": 2,
+      "fallbackUsed": false
+    }
+  }
+]

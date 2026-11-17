@@ -1,0 +1,1308 @@
+{
+ "cases": [
+  {
+   "name": "valid, one clip",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "valid, no clips",
+   "raw": {
+    "clips": []
+   }
+  },
+  {
+   "name": "title empty",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "title 200 chars",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "title 201 chars",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "hook empty",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "hook 500 chars",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "hook 501 chars",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "score 100",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 100,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "score 101",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 101,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "score -1",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": -1,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "score fractional",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 87.5,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "score a string",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": "90",
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "hook_score 101",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 101,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "flow_score -3",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": -3,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "standalone_score 120",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 120,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "value_score missing",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "12 emphasis words",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "word0",
+       "word1",
+       "word2",
+       "word3",
+       "word4",
+       "word5",
+       "word6",
+       "word7",
+       "word8",
+       "word9",
+       "word10",
+       "word11"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "13 emphasis words",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "word0",
+       "word1",
+       "word2",
+       "word3",
+       "word4",
+       "word5",
+       "word6",
+       "word7",
+       "word8",
+       "word9",
+       "word10",
+       "word11",
+       "word12"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "emphasis word empty",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "ok",
+       ""
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "emphasis word 60 chars",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "emphasis word 61 chars",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "emphasis words missing",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "emphasis words empty list",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "stands_alone missing",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "stands_alone a string",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": "yes",
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "claim missing",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "bridge_from_sec missing",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "bridge_from_sec a number",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": 20,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "context_line missing",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "context_line a long string",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": false,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "title_alternatives missing",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "title_alternatives three",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "one",
+       "two",
+       "three"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "title_alternatives one",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "only one"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "title_alternatives empty",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": []
+     }
+    ]
+   }
+  },
+  {
+   "name": "title_alternatives clean-up",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "Same Title",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "  same title ",
+       "Fresh angle",
+       "fresh ANGLE",
+       "Third angle"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "title_alternatives blanks and long",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "   ",
+       "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "title_alternatives not strings",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "ok",
+       5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "start_sec a string",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": "10",
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "end_sec before start_sec",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 50,
+      "end_sec": 20,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "unknown key ignored",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ],
+      "extra": "x"
+     }
+    ]
+   }
+  },
+  {
+   "name": "second clip bad",
+   "raw": {
+    "clips": [
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "The hive at thirty-five degrees",
+      "hook": "Bees run a thermostat",
+      "score": 82,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     },
+     {
+      "start_sec": 10,
+      "end_sec": 45,
+      "title": "",
+      "hook": "Bees run a thermostat",
+      "score": 300,
+      "hook_score": 80,
+      "flow_score": 78,
+      "standalone_score": 85,
+      "value_score": 70,
+      "emphasis_words": [
+       "thermostat",
+       "degrees"
+      ],
+      "stands_alone": true,
+      "claim": "Bees keep the hive warm.",
+      "bridge_from_sec": null,
+      "context_line": null,
+      "title_alternatives": [
+       "How bees heat a hive",
+       "Why the hive never freezes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "clips missing",
+   "raw": {}
+  },
+  {
+   "name": "clips not an array",
+   "raw": {
+    "clips": "none"
+   }
+  },
+  {
+   "name": "raw is an array",
+   "raw": [
+    {
+     "start_sec": 10,
+     "end_sec": 45,
+     "title": "The hive at thirty-five degrees",
+     "hook": "Bees run a thermostat",
+     "score": 82,
+     "hook_score": 80,
+     "flow_score": 78,
+     "standalone_score": 85,
+     "value_score": 70,
+     "emphasis_words": [
+      "thermostat",
+      "degrees"
+     ],
+     "stands_alone": true,
+     "claim": "Bees keep the hive warm.",
+     "bridge_from_sec": null,
+     "context_line": null,
+     "title_alternatives": [
+      "How bees heat a hive",
+      "Why the hive never freezes"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "raw is null",
+   "raw": null
+  }
+ ]
+}

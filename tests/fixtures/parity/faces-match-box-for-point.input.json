@@ -1,0 +1,189 @@
+{
+ "calls": [
+  {
+   "boxes": [
+    {
+     "x": 0.1,
+     "y": 0.1,
+     "width": 0.2,
+     "height": 0.3,
+     "confidence": 0.9
+    },
+    {
+     "x": 0.5,
+     "y": 0.1,
+     "width": 0.2,
+     "height": 0.3,
+     "confidence": 0.9
+    }
+   ],
+   "point": [
+    0.6,
+    0.2
+   ]
+  },
+  {
+   "boxes": [
+    {
+     "x": 0.1,
+     "y": 0.1,
+     "width": 0.5,
+     "height": 0.5,
+     "confidence": 0.9
+    },
+    {
+     "x": 0.2,
+     "y": 0.2,
+     "width": 0.2,
+     "height": 0.2,
+     "confidence": 0.9
+    }
+   ],
+   "point": [
+    0.3,
+    0.3
+   ]
+  },
+  {
+   "boxes": [
+    {
+     "x": 0.1,
+     "y": 0.1,
+     "width": 0.2,
+     "height": 0.2,
+     "confidence": 0.9
+    }
+   ],
+   "point": [
+    0.35,
+    0.2
+   ]
+  },
+  {
+   "boxes": [
+    {
+     "x": 0.1,
+     "y": 0.1,
+     "width": 0.2,
+     "height": 0.2,
+     "confidence": 0.9
+    }
+   ],
+   "point": [
+    0.6,
+    0.6
+   ]
+  },
+  {
+   "boxes": [],
+   "point": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "boxes": [
+    {
+     "x": 0.4,
+     "y": 0.4,
+     "width": 0.2,
+     "height": 0.2,
+     "confidence": 0.9
+    }
+   ],
+   "point": [
+    0.62,
+    0.66
+   ]
+  },
+  {
+   "boxes": [
+    {
+     "x": 0.4,
+     "y": 0.4,
+     "width": 0.2,
+     "height": 0.2,
+     "confidence": 0.9
+    }
+   ],
+   "point": [
+    0.66,
+    0.62
+   ]
+  },
+  {
+   "boxes": [
+    {
+     "x": 0,
+     "y": 0,
+     "width": 0.1,
+     "height": 0.1,
+     "confidence": 0.9
+    },
+    {
+     "x": 0.4,
+     "y": 0,
+     "width": 0.1,
+     "height": 0.1,
+     "confidence": 0.9
+    }
+   ],
+   "point": [
+    0.25,
+    0.05
+   ]
+  },
+  {
+   "boxes": [
+    {
+     "x": 0.1,
+     "y": 0.1,
+     "width": 0.2,
+     "height": 0.2,
+     "confidence": 0.9
+    }
+   ],
+   "point": [
+    0.3,
+    0.3
+   ]
+  },
+  {
+   "boxes": [
+    {
+     "x": 0.1,
+     "y": 0.1,
+     "width": 0.2,
+     "height": 0.2,
+     "confidence": 0.9
+    }
+   ],
+   "point": [
+    0.1,
+    0.1
+   ]
+  },
+  {
+   "boxes": [
+    {
+     "x": 0.3,
+     "y": 0.3,
+     "width": 0.1,
+     "height": 0.1,
+     "confidence": 0.9
+    },
+    {
+     "x": 0.1,
+     "y": 0.1,
+     "width": 0.1,
+     "height": 0.1,
+     "confidence": 0.9
+    }
+   ],
+   "point": [
+    0.25,
+    0.25
+   ]
+  }
+ ]
+}

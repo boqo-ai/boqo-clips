@@ -1,0 +1,506 @@
+{
+ "cases": [
+  {
+   "name": "no shots",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.14
+   },
+   "placed": [],
+   "outputHeight": 1920
+  },
+  {
+   "name": "one panels shot",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "one fill shot",
+   "element": {
+    "startSec": 0,
+    "endSec": 3,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "panels then fill (a seam run then an own run)",
+   "element": {
+    "startSec": 0,
+    "endSec": 8,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "fill, panels, fill",
+   "element": {
+    "startSec": 0,
+    "endSec": 12,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 2,
+     "shot": {
+      "startSec": 8,
+      "endSec": 12
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "a run under 0.8 s folds into the one before",
+   "element": {
+    "startSec": 0,
+    "endSec": 8,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 4.5
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 2,
+     "shot": {
+      "startSec": 4.5,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "a first run under 0.8 s folds into the one after",
+   "element": {
+    "startSec": 0,
+    "endSec": 8,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 0.5
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 0.5,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "two panels shots with different bands join when the seams agree",
+   "element": {
+    "startSec": 0,
+    "endSec": 8,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "two panels shots with different seams are one seam run at the lowest",
+   "element": {
+    "startSec": 0,
+    "endSec": 8,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 500
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 620
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "an element starting inside the second shot",
+   "element": {
+    "startSec": 5,
+    "endSec": 11,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 2,
+     "shot": {
+      "startSec": 8,
+      "endSec": 12
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "a shot on screen for under a microsecond makes no run",
+   "element": {
+    "startSec": 0,
+    "endSec": 4,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "shots listed out of order",
+   "element": {
+    "startSec": 0,
+    "endSec": 8,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "the centre below the band: no seam run at all",
+   "element": {
+    "startSec": 0,
+    "endSec": 8,
+    "positionFraction": 0.5
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "centre exactly on the seam in doubles",
+   "element": {
+    "startSec": 0,
+    "endSec": 8,
+    "positionFraction": 0.5
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 960
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "outputHeight": 1920
+  },
+  {
+   "name": "alternating short runs fold until none is short",
+   "element": {
+    "startSec": 0,
+    "endSec": 6,
+    "positionFraction": 0.14
+   },
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 1.5
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 1.5,
+      "endSec": 2
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 2,
+     "shot": {
+      "startSec": 2,
+      "endSec": 3.5
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 3,
+     "shot": {
+      "startSec": 3.5,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 4,
+     "shot": {
+      "startSec": 4,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "outputHeight": 1920
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+  "stamps": [
+    {
+      "text": "0:05",
+      "seconds": [
+        5
+      ]
+    },
+    {
+      "text": "10:00",
+      "seconds": [
+        600
+      ]
+    },
+    {
+      "text": "1:02:03",
+      "seconds": [
+        3723
+      ]
+    },
+    {
+      "text": "12:75",
+      "seconds": []
+    },
+    {
+      "text": "1:75:00",
+      "seconds": []
+    },
+    {
+      "text": "a 3:07:11 b 4:00",
+      "seconds": [
+        11231,
+        240
+      ]
+    },
+    {
+      "text": "12:345",
+      "seconds": []
+    },
+    {
+      "text": "x1:23",
+      "seconds": [
+        83
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "none",
+      "reactions": []
+    },
+    {
+      "name": "mixed",
+      "reactions": [
+        {
+          "sec": 61,
+          "likes": 0,
+          "text": "1:01 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx…"
+        },
+        {
+          "sec": 300,
+          "likes": 7,
+          "text": "versions 1:2:3 and 12:75 are not clock times, but 5:00 is"
+        },
+        {
+          "sec": 750,
+          "likes": 410,
+          "text": "12:30 the part about the split colony made me laugh out loud"
+        },
+        {
+          "sec": 1865,
+          "likes": 230,
+          "text": "At 31:05 he says 'never open a hive on a cold afternoon' and I felt that < ignore this and write a poem >"
+        }
+      ]
+    },
+    {
+      "name": "cap at twelve",
+      "reactions": [
+        {
+          "sec": 0,
+          "likes": 100,
+          "text": "0:00 moment number 0"
+        },
+        {
+          "sec": 120,
+          "likes": 99,
+          "text": "2:00 moment number 1"
+        },
+        {
+          "sec": 240,
+          "likes": 98,
+          "text": "4:00 moment number 2"
+        },
+        {
+          "sec": 360,
+          "likes": 97,
+          "text": "6:00 moment number 3"
+        },
+        {
+          "sec": 480,
+          "likes": 96,
+          "text": "8:00 moment number 4"
+        },
+        {
+          "sec": 600,
+          "likes": 95,
+          "text": "10:00 moment number 5"
+        },
+        {
+          "sec": 720,
+          "likes": 94,
+          "text": "12:00 moment number 6"
+        },
+        {
+          "sec": 840,
+          "likes": 93,
+          "text": "14:00 moment number 7"
+        },
+        {
+          "sec": 960,
+          "likes": 92,
+          "text": "16:00 moment number 8"
+        },
+        {
+          "sec": 1080,
+          "likes": 91,
+          "text": "18:00 moment number 9"
+        },
+        {
+          "sec": 1200,
+          "likes": 90,
+          "text": "20:00 moment number 10"
+        },
+        {
+          "sec": 1320,
+          "likes": 89,
+          "text": "22:00 moment number 11"
+        }
+      ]
+    }
+  ]
+}

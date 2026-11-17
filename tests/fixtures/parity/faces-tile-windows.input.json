@@ -1,0 +1,154 @@
+{
+ "calls": [
+  {
+   "width": 1080,
+   "height": 1920,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1080,
+   "height": 1080,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1920,
+   "height": 1080,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1920,
+   "height": 810,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 2560,
+   "height": 1080,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 3840,
+   "height": 1080,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1280,
+   "height": 720,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1281,
+   "height": 721,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1920,
+   "height": 1081,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1920,
+   "height": 1083,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1440,
+   "height": 960,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1441,
+   "height": 960,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 2160,
+   "height": 1080,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 2700,
+   "height": 1080,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1080,
+   "height": 1920,
+   "maxAspect": 0.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1080,
+   "height": 1080,
+   "maxAspect": 0.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 3000,
+   "height": 1000,
+   "maxAspect": 1.5,
+   "overlap": 0
+  },
+  {
+   "width": 1920,
+   "height": 1080,
+   "maxAspect": 1.5,
+   "overlap": 0.75
+  },
+  {
+   "width": 1920,
+   "height": 1080,
+   "maxAspect": 1,
+   "overlap": 0.25
+  },
+  {
+   "width": 640,
+   "height": 360,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 854,
+   "height": 480,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1920,
+   "height": 800,
+   "maxAspect": 1.5,
+   "overlap": 0.3
+  },
+  {
+   "width": 0,
+   "height": 1080,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": 1920,
+   "height": -5,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  },
+  {
+   "width": -1,
+   "height": -1,
+   "maxAspect": 1.5,
+   "overlap": 0.5
+  }
+ ]
+}

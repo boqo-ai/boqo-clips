@@ -1,0 +1,400 @@
+{
+  "POSTED_VIDEO_ENCODE": [
+    "-c:v",
+    "libx264",
+    "-preset",
+    "fast",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "-fpsmax",
+    "60"
+  ],
+  "POSTED_MAX_SIZE": {
+    "width": 1920,
+    "height": 3840
+  },
+  "frames": [
+    {
+      "f": {
+        "width": 1080,
+        "height": 1920
+      },
+      "frame": {
+        "width": 1080,
+        "height": 1920
+      }
+    },
+    {
+      "f": {
+        "width": 2160,
+        "height": 3840
+      },
+      "frame": {
+        "width": 1920,
+        "height": 3412
+      }
+    },
+    {
+      "f": {
+        "width": 3840,
+        "height": 2160
+      },
+      "frame": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "f": {
+        "width": 1081,
+        "height": 1921
+      },
+      "frame": {
+        "width": 1080,
+        "height": 1920
+      }
+    },
+    {
+      "f": {
+        "width": 4000,
+        "height": 9000
+      },
+      "frame": {
+        "width": 1706,
+        "height": 3840
+      }
+    }
+  ],
+  "compose": [
+    {
+      "c": {
+        "videoPath": "/run/render/clip-01/window-cut.mp4",
+        "filterGraph": "[0:v]null[vout]",
+        "outPath": "clip.mp4",
+        "filterThreads": 2,
+        "encodeThreads": 4
+      },
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-filter_complex_threads",
+        "2",
+        "-filter_threads",
+        "2",
+        "-threads",
+        "4",
+        "-i",
+        "/run/render/clip-01/window-cut.mp4",
+        "-filter_complex",
+        "[0:v]null[vout]",
+        "-map",
+        "[vout]",
+        "-map",
+        "0:a?",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "fast",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-fpsmax",
+        "60",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "128k",
+        "-movflags",
+        "+faststart",
+        "clip.mp4"
+      ]
+    },
+    {
+      "c": {
+        "videoPath": "window.mp4",
+        "filterGraph": "[0:v]null[vout]",
+        "outPath": "clip.mp4",
+        "filterThreads": 2,
+        "encodeThreads": 4,
+        "brandingMark": {
+          "path": "logo.png",
+          "durationSec": 23.456
+        }
+      },
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-filter_complex_threads",
+        "2",
+        "-filter_threads",
+        "2",
+        "-threads",
+        "4",
+        "-i",
+        "window.mp4",
+        "-loop",
+        "1",
+        "-t",
+        "23.456",
+        "-i",
+        "logo.png",
+        "-filter_complex",
+        "[0:v]null[vout]",
+        "-map",
+        "[vout]",
+        "-map",
+        "0:a?",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "fast",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-fpsmax",
+        "60",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "128k",
+        "-movflags",
+        "+faststart",
+        "clip.mp4"
+      ]
+    },
+    {
+      "c": {
+        "videoPath": "window.mp4",
+        "filterGraph": "[0:v]null[vout]",
+        "outPath": "clip.mp4",
+        "filterThreads": 1,
+        "encodeThreads": 8,
+        "brandingMark": null,
+        "progress": true
+      },
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-progress",
+        "pipe:1",
+        "-stats_period",
+        "1",
+        "-filter_complex_threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-threads",
+        "8",
+        "-i",
+        "window.mp4",
+        "-filter_complex",
+        "[0:v]null[vout]",
+        "-map",
+        "[vout]",
+        "-map",
+        "0:a?",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "fast",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-fpsmax",
+        "60",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "128k",
+        "-movflags",
+        "+faststart",
+        "clip.mp4"
+      ]
+    },
+    {
+      "c": {
+        "videoPath": "window.mp4",
+        "filterGraph": "[0:v]null[vout]",
+        "outPath": "clip.mp4",
+        "filterThreads": 2,
+        "encodeThreads": 4,
+        "brandingMark": {
+          "path": "logo.jpg",
+          "durationSec": 9.8
+        },
+        "progress": false
+      },
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-filter_complex_threads",
+        "2",
+        "-filter_threads",
+        "2",
+        "-threads",
+        "4",
+        "-i",
+        "window.mp4",
+        "-loop",
+        "1",
+        "-t",
+        "9.8",
+        "-i",
+        "logo.jpg",
+        "-filter_complex",
+        "[0:v]null[vout]",
+        "-map",
+        "[vout]",
+        "-map",
+        "0:a?",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "fast",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-fpsmax",
+        "60",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "128k",
+        "-movflags",
+        "+faststart",
+        "clip.mp4"
+      ]
+    }
+  ],
+  "thumbnails": [
+    {
+      "d": 0.4,
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-ss",
+        "0.2",
+        "-i",
+        "clip.mp4",
+        "-frames:v",
+        "1",
+        "-q:v",
+        "3",
+        "clip.jpg"
+      ]
+    },
+    {
+      "d": 1,
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-ss",
+        "0.5",
+        "-i",
+        "clip.mp4",
+        "-frames:v",
+        "1",
+        "-q:v",
+        "3",
+        "clip.jpg"
+      ]
+    },
+    {
+      "d": 1.99,
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-ss",
+        "0.995",
+        "-i",
+        "clip.mp4",
+        "-frames:v",
+        "1",
+        "-q:v",
+        "3",
+        "clip.jpg"
+      ]
+    },
+    {
+      "d": 2,
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-ss",
+        "1",
+        "-i",
+        "clip.mp4",
+        "-frames:v",
+        "1",
+        "-q:v",
+        "3",
+        "clip.jpg"
+      ]
+    },
+    {
+      "d": 2.5,
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-ss",
+        "1",
+        "-i",
+        "clip.mp4",
+        "-frames:v",
+        "1",
+        "-q:v",
+        "3",
+        "clip.jpg"
+      ]
+    },
+    {
+      "d": 20,
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-ss",
+        "1",
+        "-i",
+        "clip.mp4",
+        "-frames:v",
+        "1",
+        "-q:v",
+        "3",
+        "clip.jpg"
+      ]
+    },
+    {
+      "d": 61.25,
+      "args": [
+        "-nostats",
+        "-hide_banner",
+        "-y",
+        "-ss",
+        "1",
+        "-i",
+        "clip.mp4",
+        "-frames:v",
+        "1",
+        "-q:v",
+        "3",
+        "clip.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4210 @@
+{
+  "parse": [
+    {
+      "success": true,
+      "data": {
+        "accentColours": [
+          "#E900FA"
+        ],
+        "positionFraction": 0.7,
+        "style": "punch"
+      }
+    },
+    {
+      "success": true,
+      "data": {
+        "font": {
+          "kind": "builtin",
+          "name": "Inter"
+        },
+        "baseColour": "#FAFAFA",
+        "accentColours": [
+          "#112233",
+          "#445566"
+        ],
+        "outlineColour": "#010203",
+        "textCase": "lower",
+        "positionFraction": 0.35,
+        "wordsTarget": 2,
+        "sizeScale": 1.2,
+        "style": "boldkeys",
+        "keyFont": "Bangers",
+        "glowColour": "#00FF00",
+        "glowStrength": 0.3,
+        "shadowColour": "#0000FF",
+        "cycle": false,
+        "speed": 1.5
+      }
+    },
+    {
+      "success": true,
+      "data": {}
+    },
+    {
+      "success": true,
+      "data": {
+        "accentColours": [
+          "#00FF00"
+        ],
+        "style": "marker",
+        "speed": 0.5
+      }
+    },
+    {
+      "success": true,
+      "data": {
+        "style": "neon",
+        "keyFont": "Anton",
+        "glowStrength": 1
+      }
+    },
+    {
+      "success": true,
+      "data": {
+        "wordsTarget": 5,
+        "sizeScale": 0.7,
+        "style": "stack",
+        "shadowColour": "#123456"
+      }
+    },
+    {
+      "success": true,
+      "data": {
+        "wordsTarget": 1,
+        "style": "comic",
+        "keyFont": "Luckiest Guy",
+        "cycle": false
+      }
+    },
+    {
+      "success": true,
+      "data": {
+        "positionFraction": 0.1,
+        "sizeScale": 1.4,
+        "style": "karaoke",
+        "cycle": true,
+        "speed": 2
+      }
+    },
+    {
+      "success": true,
+      "data": {
+        "font": {
+          "kind": "builtin",
+          "name": "Anton"
+        },
+        "sizeScale": 0.7,
+        "style": "classic"
+      }
+    },
+    {
+      "success": true,
+      "data": {
+        "accentColours": [
+          "#ABCDEF"
+        ],
+        "textCase": "preserve",
+        "positionFraction": 0.9
+      }
+    },
+    {
+      "success": true,
+      "data": {
+        "baseColour": "#FFFFFF"
+      }
+    },
+    {
+      "success": true,
+      "data": {}
+    },
+    {
+      "success": true,
+      "data": {}
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": true,
+      "data": {
+        "baseColour": "#000000"
+      }
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    },
+    {
+      "success": false
+    }
+  ],
+  "apply": [
+    {
+      "b": 0,
+      "key": "karaoke",
+      "undefinedBlock": true,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 0,
+      "key": "karaoke",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"karaoke\",\"label\":\"Karaoke\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 0,
+      "key": "punch",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"punch\",\"label\":\"Punch\",\"emission\":\"positioned\",\"fontName\":\"Oswald\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 0,
+      "key": "clean",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"clean\",\"label\":\"Clean\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":40,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":4,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 0,
+      "key": "highlight",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"highlight\",\"label\":\"Highlight\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":43,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":8,\"borderStyle\":3,\"emphasis\":{\"kind\":\"box\",\"boxColour\":\"#00F020\",\"textColour\":\"#000000\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 0,
+      "key": "classic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 0,
+      "key": "none",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 0,
+      "key": "bounce",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"bounce\",\"label\":\"Bounce\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"entrance\":\"bounce\",\"reveal\":true}"
+    },
+    {
+      "b": 0,
+      "key": "neon",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"neon\",\"label\":\"Neon\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"glow\",\"boost\":0.35},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"glow\":{\"colour\":\"#FF2BD6\",\"strength\":0.8},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 0,
+      "key": "boldkeys",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"boldkeys\",\"label\":\"Bold Keys\",\"emission\":\"positioned\",\"fontName\":\"Poppins Black\",\"capHeightPx\":42,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FFD400\",\"#FF3B3B\"],\"keyFont\":\"Anton\",\"keyScalePct\":118,\"keyAlways\":true,\"animatePop\":true}"
+    },
+    {
+      "b": 0,
+      "key": "typewriter",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"typewriter\",\"label\":\"Typewriter\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":38,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"none\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"type\",\"reveal\":true}"
+    },
+    {
+      "b": 0,
+      "key": "slide",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"slide\",\"label\":\"Slide\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"entrance\":\"slide\"}"
+    },
+    {
+      "b": 0,
+      "key": "comic",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"comic\",\"label\":\"Comic\",\"emission\":\"positioned\",\"fontName\":\"Bangers\",\"capHeightPx\":50,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FF5A1F\",\"#3AE0FF\"],\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}"
+    },
+    {
+      "b": 0,
+      "key": "marker",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"marker\",\"label\":\"Marker\",\"emission\":\"positioned\",\"fontName\":\"Permanent Marker\",\"capHeightPx\":44,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":5,\"borderStyle\":1,\"emphasis\":{\"kind\":\"marker\",\"colour\":\"#E900FA\",\"textColour\":\"#16131C\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\"}"
+    },
+    {
+      "b": 0,
+      "key": "stack",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"stack\",\"label\":\"Shadow Stack\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":41,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"hard\",\"colour\":\"#FF2E63\"}}"
+    },
+    {
+      "b": 0,
+      "key": "minimal",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"minimal\",\"label\":\"Minimal\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":30,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"dim\",\"restOpacity\":0.6},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 0,
+      "key": "editorial",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"editorial\",\"label\":\"Editorial\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Luckiest Guy\",\"keyScalePct\":120,\"keyAlways\":true}"
+    },
+    {
+      "b": 0,
+      "key": "illustrated",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"illustrated\",\"label\":\"Illustrated\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":34,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":112},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":6,\"maxLines\":2,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"keyFont\":\"Anton\",\"keyScalePct\":165,\"keyAlways\":true,\"numbersKey\":true,\"keyMax\":2}"
+    },
+    {
+      "b": 1,
+      "key": "karaoke",
+      "undefinedBlock": true,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 1,
+      "key": "karaoke",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"karaoke\",\"label\":\"Karaoke\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":54,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 1,
+      "key": "punch",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"punch\",\"label\":\"Punch\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":62,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 1,
+      "key": "clean",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"clean\",\"label\":\"Clean\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":48,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":4,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 1,
+      "key": "highlight",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"highlight\",\"label\":\"Highlight\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":52,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":8,\"borderStyle\":3,\"emphasis\":{\"kind\":\"box\",\"boxColour\":\"#00F020\",\"textColour\":\"#000000\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 1,
+      "key": "classic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 1,
+      "key": "none",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 1,
+      "key": "bounce",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"bounce\",\"label\":\"Bounce\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":54,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"entrance\":\"bounce\",\"reveal\":true,\"speed\":1.5}"
+    },
+    {
+      "b": 1,
+      "key": "neon",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"neon\",\"label\":\"Neon\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":62,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"glow\",\"boost\":0.35},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"glow\":{\"colour\":\"#00FF00\",\"strength\":0.3},\"entrance\":\"fade\",\"speed\":1.5}"
+    },
+    {
+      "b": 1,
+      "key": "boldkeys",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"boldkeys\",\"label\":\"Bold Keys\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":50,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Bangers\",\"keyScalePct\":118,\"keyAlways\":true,\"animatePop\":true}"
+    },
+    {
+      "b": 1,
+      "key": "typewriter",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"typewriter\",\"label\":\"Typewriter\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":46,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"none\"},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"type\",\"reveal\":true,\"speed\":1.5}"
+    },
+    {
+      "b": 1,
+      "key": "slide",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"slide\",\"label\":\"Slide\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":54,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"entrance\":\"slide\",\"speed\":1.5}"
+    },
+    {
+      "b": 1,
+      "key": "comic",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"comic\",\"label\":\"Comic\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":60,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}"
+    },
+    {
+      "b": 1,
+      "key": "marker",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"marker\",\"label\":\"Marker\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":53,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":5,\"borderStyle\":1,\"emphasis\":{\"kind\":\"marker\",\"colour\":\"#112233\",\"textColour\":\"#16131C\"},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"speed\":1.5}"
+    },
+    {
+      "b": 1,
+      "key": "stack",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"stack\",\"label\":\"Shadow Stack\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":49,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"hard\",\"colour\":\"#0000FF\"}}"
+    },
+    {
+      "b": 1,
+      "key": "minimal",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"minimal\",\"label\":\"Minimal\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":36,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"dim\",\"restOpacity\":0.6},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"fade\",\"speed\":1.5}"
+    },
+    {
+      "b": 1,
+      "key": "editorial",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"editorial\",\"label\":\"Editorial\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":62,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Bangers\",\"keyScalePct\":120,\"keyAlways\":true}"
+    },
+    {
+      "b": 1,
+      "key": "illustrated",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"illustrated\",\"label\":\"Illustrated\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":41,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":112},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":6,\"maxLines\":2,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"keyFont\":\"Bangers\",\"keyScalePct\":165,\"keyAlways\":true,\"numbersKey\":true,\"keyMax\":2}"
+    },
+    {
+      "b": 2,
+      "key": "karaoke",
+      "undefinedBlock": true,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "karaoke",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "punch",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "clean",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "highlight",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "classic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "none",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "bounce",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "neon",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "boldkeys",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "typewriter",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "slide",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "comic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "marker",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "stack",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "minimal",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "editorial",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 2,
+      "key": "illustrated",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 3,
+      "key": "karaoke",
+      "undefinedBlock": true,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 3,
+      "key": "karaoke",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"karaoke\",\"label\":\"Karaoke\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 3,
+      "key": "punch",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"punch\",\"label\":\"Punch\",\"emission\":\"positioned\",\"fontName\":\"Oswald\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 3,
+      "key": "clean",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"clean\",\"label\":\"Clean\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":40,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":4,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 3,
+      "key": "highlight",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"highlight\",\"label\":\"Highlight\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":43,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":8,\"borderStyle\":3,\"emphasis\":{\"kind\":\"box\",\"boxColour\":\"#00F020\",\"textColour\":\"#000000\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 3,
+      "key": "classic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 3,
+      "key": "none",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 3,
+      "key": "bounce",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"bounce\",\"label\":\"Bounce\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"entrance\":\"bounce\",\"reveal\":true,\"speed\":0.5}"
+    },
+    {
+      "b": 3,
+      "key": "neon",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"neon\",\"label\":\"Neon\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"glow\",\"boost\":0.35},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"glow\":{\"colour\":\"#FF2BD6\",\"strength\":0.8},\"entrance\":\"fade\",\"speed\":0.5}"
+    },
+    {
+      "b": 3,
+      "key": "boldkeys",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"boldkeys\",\"label\":\"Bold Keys\",\"emission\":\"positioned\",\"fontName\":\"Poppins Black\",\"capHeightPx\":42,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FFD400\",\"#FF3B3B\"],\"keyFont\":\"Anton\",\"keyScalePct\":118,\"keyAlways\":true,\"animatePop\":true}"
+    },
+    {
+      "b": 3,
+      "key": "typewriter",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"typewriter\",\"label\":\"Typewriter\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":38,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"none\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"type\",\"reveal\":true,\"speed\":0.5}"
+    },
+    {
+      "b": 3,
+      "key": "slide",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"slide\",\"label\":\"Slide\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"entrance\":\"slide\",\"speed\":0.5}"
+    },
+    {
+      "b": 3,
+      "key": "comic",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"comic\",\"label\":\"Comic\",\"emission\":\"positioned\",\"fontName\":\"Bangers\",\"capHeightPx\":50,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FF5A1F\",\"#3AE0FF\"],\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}"
+    },
+    {
+      "b": 3,
+      "key": "marker",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"marker\",\"label\":\"Marker\",\"emission\":\"positioned\",\"fontName\":\"Permanent Marker\",\"capHeightPx\":44,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":5,\"borderStyle\":1,\"emphasis\":{\"kind\":\"marker\",\"colour\":\"#00FF00\",\"textColour\":\"#16131C\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"speed\":0.5}"
+    },
+    {
+      "b": 3,
+      "key": "stack",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"stack\",\"label\":\"Shadow Stack\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":41,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"hard\",\"colour\":\"#FF2E63\"}}"
+    },
+    {
+      "b": 3,
+      "key": "minimal",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"minimal\",\"label\":\"Minimal\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":30,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"dim\",\"restOpacity\":0.6},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"fade\",\"speed\":0.5}"
+    },
+    {
+      "b": 3,
+      "key": "editorial",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"editorial\",\"label\":\"Editorial\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Luckiest Guy\",\"keyScalePct\":120,\"keyAlways\":true}"
+    },
+    {
+      "b": 3,
+      "key": "illustrated",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"illustrated\",\"label\":\"Illustrated\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":34,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":112},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":6,\"maxLines\":2,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"keyFont\":\"Anton\",\"keyScalePct\":165,\"keyAlways\":true,\"numbersKey\":true,\"keyMax\":2}"
+    },
+    {
+      "b": 4,
+      "key": "karaoke",
+      "undefinedBlock": true,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 4,
+      "key": "karaoke",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"karaoke\",\"label\":\"Karaoke\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\",\"#00F020\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 4,
+      "key": "punch",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"punch\",\"label\":\"Punch\",\"emission\":\"positioned\",\"fontName\":\"Oswald\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 4,
+      "key": "clean",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"clean\",\"label\":\"Clean\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":40,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00E5FF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":4,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 4,
+      "key": "highlight",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"highlight\",\"label\":\"Highlight\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":43,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":8,\"borderStyle\":3,\"emphasis\":{\"kind\":\"box\",\"boxColour\":\"#00F020\",\"textColour\":\"#000000\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 4,
+      "key": "classic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 4,
+      "key": "none",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 4,
+      "key": "bounce",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"bounce\",\"label\":\"Bounce\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"entrance\":\"bounce\",\"reveal\":true}"
+    },
+    {
+      "b": 4,
+      "key": "neon",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"neon\",\"label\":\"Neon\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"glow\",\"boost\":0.35},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"glow\":{\"colour\":\"#FF2BD6\",\"strength\":1},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 4,
+      "key": "boldkeys",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"boldkeys\",\"label\":\"Bold Keys\",\"emission\":\"positioned\",\"fontName\":\"Poppins Black\",\"capHeightPx\":42,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#39FF14\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FFD400\",\"#FF3B3B\"],\"keyFont\":\"Anton\",\"keyScalePct\":118,\"keyAlways\":true,\"animatePop\":true}"
+    },
+    {
+      "b": 4,
+      "key": "typewriter",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"typewriter\",\"label\":\"Typewriter\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":38,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"none\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"type\",\"reveal\":true}"
+    },
+    {
+      "b": 4,
+      "key": "slide",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"slide\",\"label\":\"Slide\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00E5FF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"entrance\":\"slide\"}"
+    },
+    {
+      "b": 4,
+      "key": "comic",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"comic\",\"label\":\"Comic\",\"emission\":\"positioned\",\"fontName\":\"Bangers\",\"capHeightPx\":50,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FF5A1F\",\"#3AE0FF\"],\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}"
+    },
+    {
+      "b": 4,
+      "key": "marker",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"marker\",\"label\":\"Marker\",\"emission\":\"positioned\",\"fontName\":\"Permanent Marker\",\"capHeightPx\":44,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE14D\"],\"outlineColour\":\"#000000\",\"outlineWidth\":5,\"borderStyle\":1,\"emphasis\":{\"kind\":\"marker\",\"colour\":\"#FFE14D\",\"textColour\":\"#16131C\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\"}"
+    },
+    {
+      "b": 4,
+      "key": "stack",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"stack\",\"label\":\"Shadow Stack\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":41,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"hard\",\"colour\":\"#FF2E63\"}}"
+    },
+    {
+      "b": 4,
+      "key": "minimal",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"minimal\",\"label\":\"Minimal\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":30,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"dim\",\"restOpacity\":0.6},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 4,
+      "key": "editorial",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"editorial\",\"label\":\"Editorial\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE14D\",\"#FF6B35\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Anton\",\"keyScalePct\":120,\"keyAlways\":true}"
+    },
+    {
+      "b": 4,
+      "key": "illustrated",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"illustrated\",\"label\":\"Illustrated\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":34,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":112},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":6,\"maxLines\":2,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"keyFont\":\"Anton\",\"keyScalePct\":165,\"keyAlways\":true,\"numbersKey\":true,\"keyMax\":2}"
+    },
+    {
+      "b": 5,
+      "key": "karaoke",
+      "undefinedBlock": true,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 5,
+      "key": "karaoke",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"karaoke\",\"label\":\"Karaoke\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":31,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\",\"#00F020\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 5,
+      "key": "punch",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"punch\",\"label\":\"Punch\",\"emission\":\"positioned\",\"fontName\":\"Oswald\",\"capHeightPx\":36,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 5,
+      "key": "clean",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"clean\",\"label\":\"Clean\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":28,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00E5FF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":4,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 5,
+      "key": "highlight",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"highlight\",\"label\":\"Highlight\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":30,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":8,\"borderStyle\":3,\"emphasis\":{\"kind\":\"box\",\"boxColour\":\"#00F020\",\"textColour\":\"#000000\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 5,
+      "key": "classic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 5,
+      "key": "none",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 5,
+      "key": "bounce",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"bounce\",\"label\":\"Bounce\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":31,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"entrance\":\"bounce\",\"reveal\":true}"
+    },
+    {
+      "b": 5,
+      "key": "neon",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"neon\",\"label\":\"Neon\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":36,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"glow\",\"boost\":0.35},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"glow\":{\"colour\":\"#FF2BD6\",\"strength\":0.8},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 5,
+      "key": "boldkeys",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"boldkeys\",\"label\":\"Bold Keys\",\"emission\":\"positioned\",\"fontName\":\"Poppins Black\",\"capHeightPx\":29,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#39FF14\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FFD400\",\"#FF3B3B\"],\"keyFont\":\"Anton\",\"keyScalePct\":118,\"keyAlways\":true,\"animatePop\":true}"
+    },
+    {
+      "b": 5,
+      "key": "typewriter",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"typewriter\",\"label\":\"Typewriter\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":27,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"none\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"type\",\"reveal\":true}"
+    },
+    {
+      "b": 5,
+      "key": "slide",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"slide\",\"label\":\"Slide\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":31,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00E5FF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"entrance\":\"slide\"}"
+    },
+    {
+      "b": 5,
+      "key": "comic",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"comic\",\"label\":\"Comic\",\"emission\":\"positioned\",\"fontName\":\"Bangers\",\"capHeightPx\":35,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FF5A1F\",\"#3AE0FF\"],\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}"
+    },
+    {
+      "b": 5,
+      "key": "marker",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"marker\",\"label\":\"Marker\",\"emission\":\"positioned\",\"fontName\":\"Permanent Marker\",\"capHeightPx\":31,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE14D\"],\"outlineColour\":\"#000000\",\"outlineWidth\":5,\"borderStyle\":1,\"emphasis\":{\"kind\":\"marker\",\"colour\":\"#FFE14D\",\"textColour\":\"#16131C\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\"}"
+    },
+    {
+      "b": 5,
+      "key": "stack",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"stack\",\"label\":\"Shadow Stack\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":29,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"hard\",\"colour\":\"#123456\"}}"
+    },
+    {
+      "b": 5,
+      "key": "minimal",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"minimal\",\"label\":\"Minimal\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":21,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"dim\",\"restOpacity\":0.6},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 5,
+      "key": "editorial",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"editorial\",\"label\":\"Editorial\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":36,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE14D\",\"#FF6B35\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Luckiest Guy\",\"keyScalePct\":120,\"keyAlways\":true}"
+    },
+    {
+      "b": 5,
+      "key": "illustrated",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"illustrated\",\"label\":\"Illustrated\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":24,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":112},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":6,\"maxLines\":2,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"keyFont\":\"Anton\",\"keyScalePct\":165,\"keyAlways\":true,\"numbersKey\":true,\"keyMax\":2}"
+    },
+    {
+      "b": 6,
+      "key": "karaoke",
+      "undefinedBlock": true,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 6,
+      "key": "karaoke",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"karaoke\",\"label\":\"Karaoke\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\",\"#00F020\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 6,
+      "key": "punch",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"punch\",\"label\":\"Punch\",\"emission\":\"positioned\",\"fontName\":\"Oswald\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 6,
+      "key": "clean",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"clean\",\"label\":\"Clean\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":40,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00E5FF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":4,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 6,
+      "key": "highlight",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"highlight\",\"label\":\"Highlight\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":43,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":8,\"borderStyle\":3,\"emphasis\":{\"kind\":\"box\",\"boxColour\":\"#00F020\",\"textColour\":\"#000000\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 6,
+      "key": "classic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 6,
+      "key": "none",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 6,
+      "key": "bounce",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"bounce\",\"label\":\"Bounce\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"entrance\":\"bounce\",\"reveal\":true}"
+    },
+    {
+      "b": 6,
+      "key": "neon",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"neon\",\"label\":\"Neon\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"glow\",\"boost\":0.35},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"glow\":{\"colour\":\"#FF2BD6\",\"strength\":0.8},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 6,
+      "key": "boldkeys",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"boldkeys\",\"label\":\"Bold Keys\",\"emission\":\"positioned\",\"fontName\":\"Poppins Black\",\"capHeightPx\":42,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#39FF14\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Luckiest Guy\",\"keyScalePct\":118,\"keyAlways\":true,\"animatePop\":true}"
+    },
+    {
+      "b": 6,
+      "key": "typewriter",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"typewriter\",\"label\":\"Typewriter\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":38,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"none\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"type\",\"reveal\":true}"
+    },
+    {
+      "b": 6,
+      "key": "slide",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"slide\",\"label\":\"Slide\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00E5FF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"entrance\":\"slide\"}"
+    },
+    {
+      "b": 6,
+      "key": "comic",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"comic\",\"label\":\"Comic\",\"emission\":\"positioned\",\"fontName\":\"Bangers\",\"capHeightPx\":50,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}"
+    },
+    {
+      "b": 6,
+      "key": "marker",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"marker\",\"label\":\"Marker\",\"emission\":\"positioned\",\"fontName\":\"Permanent Marker\",\"capHeightPx\":44,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE14D\"],\"outlineColour\":\"#000000\",\"outlineWidth\":5,\"borderStyle\":1,\"emphasis\":{\"kind\":\"marker\",\"colour\":\"#FFE14D\",\"textColour\":\"#16131C\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\"}"
+    },
+    {
+      "b": 6,
+      "key": "stack",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"stack\",\"label\":\"Shadow Stack\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":41,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"hard\",\"colour\":\"#FF2E63\"}}"
+    },
+    {
+      "b": 6,
+      "key": "minimal",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"minimal\",\"label\":\"Minimal\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":30,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"dim\",\"restOpacity\":0.6},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 6,
+      "key": "editorial",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"editorial\",\"label\":\"Editorial\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE14D\",\"#FF6B35\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Luckiest Guy\",\"keyScalePct\":120,\"keyAlways\":true}"
+    },
+    {
+      "b": 6,
+      "key": "illustrated",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"illustrated\",\"label\":\"Illustrated\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":34,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":112},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":6,\"maxLines\":2,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"keyFont\":\"Luckiest Guy\",\"keyScalePct\":165,\"keyAlways\":true,\"numbersKey\":true,\"keyMax\":2}"
+    },
+    {
+      "b": 7,
+      "key": "karaoke",
+      "undefinedBlock": true,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 7,
+      "key": "karaoke",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"karaoke\",\"label\":\"Karaoke\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":63,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\",\"#00F020\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 7,
+      "key": "punch",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"punch\",\"label\":\"Punch\",\"emission\":\"positioned\",\"fontName\":\"Oswald\",\"capHeightPx\":73,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 7,
+      "key": "clean",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"clean\",\"label\":\"Clean\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":56,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00E5FF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":4,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 7,
+      "key": "highlight",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"highlight\",\"label\":\"Highlight\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":60,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":8,\"borderStyle\":3,\"emphasis\":{\"kind\":\"box\",\"boxColour\":\"#00F020\",\"textColour\":\"#000000\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 7,
+      "key": "classic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 7,
+      "key": "none",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 7,
+      "key": "bounce",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"bounce\",\"label\":\"Bounce\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":63,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"entrance\":\"bounce\",\"reveal\":true,\"speed\":2}"
+    },
+    {
+      "b": 7,
+      "key": "neon",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"neon\",\"label\":\"Neon\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":73,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"glow\",\"boost\":0.35},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"glow\":{\"colour\":\"#FF2BD6\",\"strength\":0.8},\"entrance\":\"fade\",\"speed\":2}"
+    },
+    {
+      "b": 7,
+      "key": "boldkeys",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"boldkeys\",\"label\":\"Bold Keys\",\"emission\":\"positioned\",\"fontName\":\"Poppins Black\",\"capHeightPx\":59,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#39FF14\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FFD400\",\"#FF3B3B\"],\"keyFont\":\"Anton\",\"keyScalePct\":118,\"keyAlways\":true,\"animatePop\":true}"
+    },
+    {
+      "b": 7,
+      "key": "typewriter",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"typewriter\",\"label\":\"Typewriter\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":53,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"none\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"type\",\"reveal\":true,\"speed\":2}"
+    },
+    {
+      "b": 7,
+      "key": "slide",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"slide\",\"label\":\"Slide\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":63,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00E5FF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"entrance\":\"slide\",\"speed\":2}"
+    },
+    {
+      "b": 7,
+      "key": "comic",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"comic\",\"label\":\"Comic\",\"emission\":\"positioned\",\"fontName\":\"Bangers\",\"capHeightPx\":70,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FF5A1F\",\"#3AE0FF\"],\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}"
+    },
+    {
+      "b": 7,
+      "key": "marker",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"marker\",\"label\":\"Marker\",\"emission\":\"positioned\",\"fontName\":\"Permanent Marker\",\"capHeightPx\":62,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE14D\"],\"outlineColour\":\"#000000\",\"outlineWidth\":5,\"borderStyle\":1,\"emphasis\":{\"kind\":\"marker\",\"colour\":\"#FFE14D\",\"textColour\":\"#16131C\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"speed\":2}"
+    },
+    {
+      "b": 7,
+      "key": "stack",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"stack\",\"label\":\"Shadow Stack\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":57,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"hard\",\"colour\":\"#FF2E63\"}}"
+    },
+    {
+      "b": 7,
+      "key": "minimal",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"minimal\",\"label\":\"Minimal\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":42,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"dim\",\"restOpacity\":0.6},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"fade\",\"speed\":2}"
+    },
+    {
+      "b": 7,
+      "key": "editorial",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"editorial\",\"label\":\"Editorial\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":73,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE14D\",\"#FF6B35\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Luckiest Guy\",\"keyScalePct\":120,\"keyAlways\":true}"
+    },
+    {
+      "b": 7,
+      "key": "illustrated",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"illustrated\",\"label\":\"Illustrated\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":48,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":112},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":6,\"maxLines\":2,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"keyFont\":\"Anton\",\"keyScalePct\":165,\"keyAlways\":true,\"numbersKey\":true,\"keyMax\":2}"
+    },
+    {
+      "b": 8,
+      "key": "karaoke",
+      "undefinedBlock": true,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 8,
+      "key": "karaoke",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"karaoke\",\"label\":\"Karaoke\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":31,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\",\"#00F020\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 8,
+      "key": "punch",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"punch\",\"label\":\"Punch\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":36,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 8,
+      "key": "clean",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"clean\",\"label\":\"Clean\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":28,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00E5FF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":4,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 8,
+      "key": "highlight",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"highlight\",\"label\":\"Highlight\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":30,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":8,\"borderStyle\":3,\"emphasis\":{\"kind\":\"box\",\"boxColour\":\"#00F020\",\"textColour\":\"#000000\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 8,
+      "key": "classic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 8,
+      "key": "none",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 8,
+      "key": "bounce",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"bounce\",\"label\":\"Bounce\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":31,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"entrance\":\"bounce\",\"reveal\":true}"
+    },
+    {
+      "b": 8,
+      "key": "neon",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"neon\",\"label\":\"Neon\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":36,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"glow\",\"boost\":0.35},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"glow\":{\"colour\":\"#FF2BD6\",\"strength\":0.8},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 8,
+      "key": "boldkeys",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"boldkeys\",\"label\":\"Bold Keys\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":29,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#39FF14\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FFD400\",\"#FF3B3B\"],\"keyFont\":\"Anton\",\"keyScalePct\":118,\"keyAlways\":true,\"animatePop\":true}"
+    },
+    {
+      "b": 8,
+      "key": "typewriter",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"typewriter\",\"label\":\"Typewriter\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":27,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"none\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"type\",\"reveal\":true}"
+    },
+    {
+      "b": 8,
+      "key": "slide",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"slide\",\"label\":\"Slide\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":31,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00E5FF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"entrance\":\"slide\"}"
+    },
+    {
+      "b": 8,
+      "key": "comic",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"comic\",\"label\":\"Comic\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":35,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FF5A1F\",\"#3AE0FF\"],\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}"
+    },
+    {
+      "b": 8,
+      "key": "marker",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"marker\",\"label\":\"Marker\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":31,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE14D\"],\"outlineColour\":\"#000000\",\"outlineWidth\":5,\"borderStyle\":1,\"emphasis\":{\"kind\":\"marker\",\"colour\":\"#FFE14D\",\"textColour\":\"#16131C\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\"}"
+    },
+    {
+      "b": 8,
+      "key": "stack",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"stack\",\"label\":\"Shadow Stack\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":29,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"hard\",\"colour\":\"#FF2E63\"}}"
+    },
+    {
+      "b": 8,
+      "key": "minimal",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"minimal\",\"label\":\"Minimal\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":21,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"dim\",\"restOpacity\":0.6},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 8,
+      "key": "editorial",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"editorial\",\"label\":\"Editorial\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":36,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE14D\",\"#FF6B35\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Luckiest Guy\",\"keyScalePct\":120,\"keyAlways\":true}"
+    },
+    {
+      "b": 8,
+      "key": "illustrated",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"illustrated\",\"label\":\"Illustrated\",\"emission\":\"positioned\",\"fontName\":\"Anton\",\"capHeightPx\":24,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":112},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":6,\"maxLines\":2,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"keyFont\":\"Anton\",\"keyScalePct\":165,\"keyAlways\":true,\"numbersKey\":true,\"keyMax\":2}"
+    },
+    {
+      "b": 9,
+      "key": "karaoke",
+      "undefinedBlock": true,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 9,
+      "key": "karaoke",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"karaoke\",\"label\":\"Karaoke\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 9,
+      "key": "punch",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"punch\",\"label\":\"Punch\",\"emission\":\"positioned\",\"fontName\":\"Oswald\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 9,
+      "key": "clean",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"clean\",\"label\":\"Clean\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":40,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":4,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 9,
+      "key": "highlight",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"highlight\",\"label\":\"Highlight\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":43,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":8,\"borderStyle\":3,\"emphasis\":{\"kind\":\"box\",\"boxColour\":\"#00F020\",\"textColour\":\"#000000\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}"
+    },
+    {
+      "b": 9,
+      "key": "classic",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 9,
+      "key": "none",
+      "undefinedBlock": false,
+      "identity": true,
+      "result": null
+    },
+    {
+      "b": 9,
+      "key": "bounce",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"bounce\",\"label\":\"Bounce\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"entrance\":\"bounce\",\"reveal\":true}"
+    },
+    {
+      "b": 9,
+      "key": "neon",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"neon\",\"label\":\"Neon\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"glow\",\"boost\":0.35},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"glow\":{\"colour\":\"#FF2BD6\",\"strength\":0.8},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 9,
+      "key": "boldkeys",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"boldkeys\",\"label\":\"Bold Keys\",\"emission\":\"positioned\",\"fontName\":\"Poppins Black\",\"capHeightPx\":42,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FFD400\",\"#FF3B3B\"],\"keyFont\":\"Anton\",\"keyScalePct\":118,\"keyAlways\":true,\"animatePop\":true}"
+    },
+    {
+      "b": 9,
+      "key": "typewriter",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"typewriter\",\"label\":\"Typewriter\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":38,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"none\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"type\",\"reveal\":true}"
+    },
+    {
+      "b": 9,
+      "key": "slide",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"slide\",\"label\":\"Slide\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"entrance\":\"slide\"}"
+    },
+    {
+      "b": 9,
+      "key": "comic",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"comic\",\"label\":\"Comic\",\"emission\":\"positioned\",\"fontName\":\"Bangers\",\"capHeightPx\":50,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FF5A1F\",\"#3AE0FF\"],\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}"
+    },
+    {
+      "b": 9,
+      "key": "marker",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"marker\",\"label\":\"Marker\",\"emission\":\"positioned\",\"fontName\":\"Permanent Marker\",\"capHeightPx\":44,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":5,\"borderStyle\":1,\"emphasis\":{\"kind\":\"marker\",\"colour\":\"#ABCDEF\",\"textColour\":\"#16131C\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\"}"
+    },
+    {
+      "b": 9,
+      "key": "stack",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"stack\",\"label\":\"Shadow Stack\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":41,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"hard\",\"colour\":\"#FF2E63\"}}"
+    },
+    {
+      "b": 9,
+      "key": "minimal",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"minimal\",\"label\":\"Minimal\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":30,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"dim\",\"restOpacity\":0.6},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"soft\"},\"entrance\":\"fade\"}"
+    },
+    {
+      "b": 9,
+      "key": "editorial",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"editorial\",\"label\":\"Editorial\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Luckiest Guy\",\"keyScalePct\":120,\"keyAlways\":true}"
+    },
+    {
+      "b": 9,
+      "key": "illustrated",
+      "undefinedBlock": false,
+      "identity": false,
+      "result": "{\"key\":\"illustrated\",\"label\":\"Illustrated\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":34,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":112},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":6,\"maxLines\":2,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"free\",\"keyFont\":\"Anton\",\"keyScalePct\":165,\"keyAlways\":true,\"numbersKey\":true,\"keyMax\":2}"
+    }
+  ],
+  "project": [
+    {
+      "key": "default",
+      "b": -1,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\",\"#00F020\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}",
+      "overridesApplied": 0
+    },
+    {
+      "key": "default",
+      "b": 0,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Oswald\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}",
+      "overridesApplied": 3
+    },
+    {
+      "key": "default",
+      "b": 1,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Inter\",\"capHeightPx\":50,\"baseColour\":\"#FAFAFA\",\"accentColours\":[\"#112233\",\"#445566\"],\"outlineColour\":\"#010203\",\"outlineWidth\":6,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"textCase\":\"lower\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":2,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.35,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyFont\":\"Bangers\",\"keyScalePct\":118,\"keyAlways\":true,\"animatePop\":true}",
+      "overridesApplied": 15
+    },
+    {
+      "key": "default",
+      "b": 2,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\",\"#00F020\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}",
+      "overridesApplied": 0
+    },
+    {
+      "key": "default",
+      "b": 3,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Permanent Marker\",\"capHeightPx\":44,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#00FF00\"],\"outlineColour\":\"#000000\",\"outlineWidth\":5,\"borderStyle\":1,\"emphasis\":{\"kind\":\"marker\",\"colour\":\"#00FF00\",\"textColour\":\"#16131C\"},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"speed\":0.5}",
+      "overridesApplied": 3
+    },
+    {
+      "key": "default",
+      "b": 4,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Bebas Neue\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"glow\",\"boost\":0.35},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"glow\":{\"colour\":\"#FF2BD6\",\"strength\":1},\"entrance\":\"fade\"}",
+      "overridesApplied": 3
+    },
+    {
+      "key": "default",
+      "b": 5,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Archivo Black\",\"capHeightPx\":29,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"borderStyle\":1,\"emphasis\":{\"kind\":\"colour\"},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":5,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"shadow\":{\"kind\":\"hard\",\"colour\":\"#123456\"}}",
+      "overridesApplied": 4
+    },
+    {
+      "key": "default",
+      "b": 6,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Bangers\",\"capHeightPx\":50,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFFFFF\",\"#FFD400\"],\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":1,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}",
+      "overridesApplied": 4
+    },
+    {
+      "key": "default",
+      "b": 7,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":63,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\",\"#00F020\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.1,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}",
+      "overridesApplied": 5
+    },
+    {
+      "key": "default",
+      "b": 8,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"legacy\",\"fontName\":\"DejaVu Sans\",\"fontSize\":84,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE500\"],\"outlineColour\":\"#000000\",\"marginVertical\":420,\"maxWordsPerLine\":4}",
+      "overridesApplied": 3
+    },
+    {
+      "key": "default",
+      "b": 9,
+      "presetKey": "default",
+      "tableEntry": false,
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":45,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#ABCDEF\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"preserve\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.9,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}",
+      "overridesApplied": 3
+    },
+    {
+      "key": "karaoke",
+      "b": -1,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "karaoke",
+      "b": 0,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "karaoke",
+      "b": 1,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "karaoke",
+      "b": 2,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "karaoke",
+      "b": 3,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "karaoke",
+      "b": 4,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "karaoke",
+      "b": 5,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "karaoke",
+      "b": 6,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "karaoke",
+      "b": 7,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "karaoke",
+      "b": 8,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "karaoke",
+      "b": 9,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": -1,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": 0,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": 1,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": 2,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": 3,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": 4,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": 5,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": 6,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": 7,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": 8,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "punch",
+      "b": 9,
+      "presetKey": "punch",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": -1,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": 0,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": 1,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": 2,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": 3,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": 4,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": 5,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": 6,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": 7,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": 8,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "classic",
+      "b": 9,
+      "presetKey": "classic",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": -1,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": 0,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": 1,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": 2,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": 3,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": 4,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": 5,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": 6,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": 7,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": 8,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "none",
+      "b": 9,
+      "presetKey": "none",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": -1,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": 0,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": 1,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": 2,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": 3,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": 4,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": 5,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": 6,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": 7,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": 8,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "boldkeys",
+      "b": 9,
+      "presetKey": "boldkeys",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": -1,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": 0,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": 1,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": 2,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": 3,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": 4,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": 5,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": 6,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": 7,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": 8,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "illustrated",
+      "b": 9,
+      "presetKey": "illustrated",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": -1,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": 0,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": 1,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": 2,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": 3,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": 4,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": 5,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": 6,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": 7,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": 8,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": "bogus",
+      "b": 9,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": -1,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": 0,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": 1,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": 2,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": 3,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": 4,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": 5,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": 6,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": 7,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": 8,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    },
+    {
+      "key": null,
+      "b": 9,
+      "presetKey": "karaoke",
+      "tableEntry": true,
+      "preset": null,
+      "overridesApplied": 0
+    }
+  ],
+  "clip": [
+    {
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Oswald\",\"capHeightPx\":52,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#E900FA\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.7,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}",
+      "overridesApplied": 3,
+      "clipOverridesApplied": 0
+    },
+    {
+      "preset": "{\"key\":\"comic\",\"label\":\"Comic\",\"emission\":\"positioned\",\"fontName\":\"Bangers\",\"capHeightPx\":50,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#000001\"],\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8,\"tier\":\"plus\",\"cycleColours\":[\"#FF5A1F\",\"#3AE0FF\"],\"keyAlways\":true,\"tilt\":\"keywords\",\"animatePop\":true}",
+      "overridesApplied": 0,
+      "clipOverridesApplied": 1
+    },
+    {
+      "preset": "{\"key\":\"default\",\"label\":\"Default\",\"emission\":\"positioned\",\"fontName\":\"Montserrat ExtraBold\",\"capHeightPx\":50,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#F8F800\",\"#00F020\"],\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"borderStyle\":1,\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"textCase\":\"upper\",\"stripPunctuation\":true,\"wordsMin\":3,\"wordsTarget\":4,\"wordsMax\":5,\"maxLines\":3,\"centreFraction\":0.805,\"lineSpacingRatio\":1.711,\"sideMarginPx\":60,\"gapSplitSec\":0.8}",
+      "overridesApplied": 0,
+      "clipOverridesApplied": 1
+    },
+    {
+      "preset": "{\"key\":\"classic\",\"label\":\"Classic\",\"emission\":\"legacy\",\"fontName\":\"DejaVu Sans\",\"fontSize\":84,\"baseColour\":\"#FFFFFF\",\"accentColours\":[\"#FFE500\"],\"outlineColour\":\"#000000\",\"marginVertical\":420,\"maxWordsPerLine\":4}",
+      "overridesApplied": 0,
+      "clipOverridesApplied": 1
+    }
+  ],
+  "defaultStyle": [
+    "karaoke",
+    "default",
+    "default",
+    "default",
+    "default",
+    "default",
+    "default",
+    "default",
+    "default",
+    "default",
+    "default"
+  ],
+  "count": [
+    0,
+    3,
+    15,
+    0,
+    3,
+    3,
+    4,
+    4,
+    5,
+    3,
+    3
+  ],
+  "reach": [
+    true,
+    true,
+    true,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true
+  ],
+  "tier": [
+    "free",
+    "free",
+    "free",
+    "free",
+    "free",
+    "plus",
+    "free",
+    "free",
+    "free"
+  ],
+  "resolve": [
+    "default",
+    "karaoke",
+    "punch",
+    "classic",
+    "none",
+    "boldkeys",
+    "illustrated",
+    "karaoke",
+    "karaoke"
+  ],
+  "knobs": [
+    {
+      "key": "karaoke",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "keyColour",
+          "label": "Key words",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        }
+      ]
+    },
+    {
+      "key": "punch",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        }
+      ]
+    },
+    {
+      "key": "clean",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        }
+      ]
+    },
+    {
+      "key": "highlight",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        }
+      ]
+    },
+    {
+      "key": "classic",
+      "knobs": []
+    },
+    {
+      "key": "bounce",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "neon",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "glowColour",
+          "label": "Glow",
+          "kind": "colour"
+        },
+        {
+          "key": "glowStrength",
+          "label": "Glow strength",
+          "kind": "range"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "boldkeys",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "keyFont",
+          "label": "Key-word font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "keyColour",
+          "label": "Key words",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        },
+        {
+          "key": "cycle",
+          "label": "Cycle key-word colours",
+          "kind": "switch"
+        }
+      ]
+    },
+    {
+      "key": "typewriter",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "slide",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "comic",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "keyColour",
+          "label": "Key words",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        },
+        {
+          "key": "cycle",
+          "label": "Cycle key-word colours",
+          "kind": "switch"
+        }
+      ]
+    },
+    {
+      "key": "marker",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Highlighter",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "stack",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "shadowColour",
+          "label": "Shadow",
+          "kind": "colour"
+        }
+      ]
+    },
+    {
+      "key": "minimal",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "editorial",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "keyFont",
+          "label": "Key-word font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "keyColour",
+          "label": "Key words",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        }
+      ]
+    },
+    {
+      "key": "bounce",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "neon",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "glowColour",
+          "label": "Glow",
+          "kind": "colour"
+        },
+        {
+          "key": "glowStrength",
+          "label": "Glow strength",
+          "kind": "range"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "boldkeys",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "keyFont",
+          "label": "Key-word font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "keyColour",
+          "label": "Key words",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        },
+        {
+          "key": "cycle",
+          "label": "Cycle key-word colours",
+          "kind": "switch"
+        }
+      ]
+    },
+    {
+      "key": "typewriter",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "slide",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "comic",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "keyColour",
+          "label": "Key words",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        },
+        {
+          "key": "cycle",
+          "label": "Cycle key-word colours",
+          "kind": "switch"
+        }
+      ]
+    },
+    {
+      "key": "marker",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Highlighter",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "stack",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "shadowColour",
+          "label": "Shadow",
+          "kind": "colour"
+        }
+      ]
+    },
+    {
+      "key": "minimal",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "speed",
+          "label": "Animation speed",
+          "kind": "range"
+        }
+      ]
+    },
+    {
+      "key": "editorial",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "keyFont",
+          "label": "Key-word font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "keyColour",
+          "label": "Key words",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        }
+      ]
+    },
+    {
+      "key": "illustrated",
+      "knobs": [
+        {
+          "key": "font",
+          "label": "Font",
+          "kind": "font"
+        },
+        {
+          "key": "keyFont",
+          "label": "Key-word font",
+          "kind": "font"
+        },
+        {
+          "key": "size",
+          "label": "Size",
+          "kind": "range"
+        },
+        {
+          "key": "words",
+          "label": "Words on screen",
+          "kind": "step"
+        },
+        {
+          "key": "case",
+          "label": "Case",
+          "kind": "seg"
+        },
+        {
+          "key": "textColour",
+          "label": "Text",
+          "kind": "colour"
+        },
+        {
+          "key": "accentColour",
+          "label": "Active word",
+          "kind": "colour"
+        },
+        {
+          "key": "outlineColour",
+          "label": "Outline",
+          "kind": "colour"
+        }
+      ]
+    }
+  ],
+  "constants": {
+    "BRAND_CAPTION_KEY": "default",
+    "DEFAULT_CAPTION_PRESET_KEY": "karaoke",
+    "CAPTION_WORDS_MIN": 1,
+    "CAPTION_WORDS_MAX": 5,
+    "CAPTION_SIZE_MIN": 0.7,
+    "CAPTION_SIZE_MAX": 1.4,
+    "CAPTION_POSITION_MIN": 0.1,
+    "CAPTION_POSITION_MAX": 0.9,
+    "CAPTION_FONTS": [
+      "Montserrat ExtraBold",
+      "Oswald",
+      "Inter",
+      "DejaVu Sans",
+      "Anton",
+      "Bebas Neue",
+      "Bangers",
+      "Poppins Black",
+      "Archivo Black",
+      "Luckiest Guy",
+      "Permanent Marker"
+    ],
+    "GALLERY_CAPTION_STYLE_KEYS": [
+      "karaoke",
+      "punch",
+      "clean",
+      "highlight",
+      "classic",
+      "bounce",
+      "neon",
+      "boldkeys",
+      "typewriter",
+      "slide",
+      "comic",
+      "marker",
+      "stack",
+      "minimal",
+      "editorial"
+    ],
+    "positioned": [
+      "karaoke",
+      "punch",
+      "clean",
+      "highlight"
+    ],
+    "pickable": [
+      "karaoke",
+      "punch",
+      "clean",
+      "highlight",
+      "classic",
+      "bounce",
+      "neon",
+      "boldkeys",
+      "typewriter",
+      "slide",
+      "comic",
+      "marker",
+      "stack",
+      "minimal",
+      "editorial",
+      "none"
+    ]
+  },
+  "fingerprints": {
+    "presets": "[{\"accentColours\":[\"#F8F800\",\"#00F020\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":45,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"fontName\":\"Montserrat ExtraBold\",\"gapSplitSec\":0.8,\"key\":\"karaoke\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#F8F800\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":52,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"fontName\":\"Oswald\",\"gapSplitSec\":0.8,\"key\":\"punch\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#00E5FF\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":40,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"fontName\":\"Inter\",\"gapSplitSec\":0.8,\"key\":\"clean\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":4,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#FFFFFF\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":3,\"capHeightPx\":43,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"boxColour\":\"#00F020\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6,\"kind\":\"box\",\"textColour\":\"#000000\"},\"fontName\":\"Montserrat ExtraBold\",\"gapSplitSec\":0.8,\"key\":\"highlight\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":8,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#FFE500\"],\"baseColour\":\"#FFFFFF\",\"emission\":\"legacy\",\"fontName\":\"DejaVu Sans\",\"fontSize\":84,\"key\":\"classic\",\"marginVertical\":420,\"maxWordsPerLine\":4,\"outlineColour\":\"#000000\"},{\"emission\":\"none\",\"key\":\"none\"}]",
+    "styles": "[{\"accentColours\":[\"#F8F800\",\"#00F020\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":45,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"scale\",\"scalePct\":128},\"fontName\":\"Montserrat ExtraBold\",\"gapSplitSec\":0.8,\"key\":\"karaoke\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#F8F800\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":52,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"scale\",\"scalePct\":130},\"fontName\":\"Oswald\",\"gapSplitSec\":0.8,\"key\":\"punch\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#00E5FF\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":40,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"scale\",\"scalePct\":110},\"fontName\":\"Inter\",\"gapSplitSec\":0.8,\"key\":\"clean\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":4,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#FFFFFF\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":3,\"capHeightPx\":43,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"boxColour\":\"#00F020\",\"inactiveBoxColour\":\"#000000\",\"inactiveBoxOpacity\":0.6,\"kind\":\"box\",\"textColour\":\"#000000\"},\"fontName\":\"Montserrat ExtraBold\",\"gapSplitSec\":0.8,\"key\":\"highlight\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":8,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#FFE500\"],\"baseColour\":\"#FFFFFF\",\"emission\":\"legacy\",\"fontName\":\"DejaVu Sans\",\"fontSize\":84,\"key\":\"classic\",\"marginVertical\":420,\"maxWordsPerLine\":4,\"outlineColour\":\"#000000\"},{\"accentColours\":[\"#FFD400\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":45,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"colour\"},\"entrance\":\"bounce\",\"fontName\":\"Montserrat ExtraBold\",\"gapSplitSec\":0.8,\"key\":\"bounce\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"reveal\":true,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"tier\":\"free\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#FFFFFF\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":52,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"boost\":0.35,\"kind\":\"glow\"},\"entrance\":\"fade\",\"fontName\":\"Bebas Neue\",\"gapSplitSec\":0.8,\"glow\":{\"colour\":\"#FF2BD6\",\"strength\":0.8},\"key\":\"neon\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"tier\":\"plus\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#FFFFFF\",\"#39FF14\"],\"animatePop\":true,\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":42,\"centreFraction\":0.805,\"cycleColours\":[\"#FFD400\",\"#FF3B3B\"],\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"scale\",\"scalePct\":118},\"fontName\":\"Poppins Black\",\"gapSplitSec\":0.8,\"key\":\"boldkeys\",\"keyAlways\":true,\"keyFont\":\"Anton\",\"keyScalePct\":118,\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"tier\":\"plus\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#F8F800\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":38,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"none\"},\"entrance\":\"type\",\"fontName\":\"Archivo Black\",\"gapSplitSec\":0.8,\"key\":\"typewriter\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"reveal\":true,\"shadow\":{\"kind\":\"soft\"},\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"preserve\",\"tier\":\"plus\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#00E5FF\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":45,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"colour\"},\"entrance\":\"slide\",\"fontName\":\"Montserrat ExtraBold\",\"gapSplitSec\":0.8,\"key\":\"slide\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":7,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"tier\":\"plus\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#FFFFFF\",\"#FFD400\"],\"animatePop\":true,\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":50,\"centreFraction\":0.805,\"cycleColours\":[\"#FF5A1F\",\"#3AE0FF\"],\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"scale\",\"scalePct\":114},\"fontName\":\"Bangers\",\"gapSplitSec\":0.8,\"key\":\"comic\",\"keyAlways\":true,\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":11,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"tier\":\"plus\",\"tilt\":\"keywords\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#FFE14D\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":44,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"colour\":\"#FFE14D\",\"kind\":\"marker\",\"textColour\":\"#16131C\"},\"fontName\":\"Permanent Marker\",\"gapSplitSec\":0.8,\"key\":\"marker\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":5,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"preserve\",\"tier\":\"plus\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#FFD400\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":41,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"colour\"},\"fontName\":\"Archivo Black\",\"gapSplitSec\":0.8,\"key\":\"stack\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"shadow\":{\"colour\":\"#FF2E63\",\"kind\":\"hard\"},\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"tier\":\"plus\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4},{\"accentColours\":[\"#F8F800\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":30,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"dim\",\"restOpacity\":0.6},\"entrance\":\"fade\",\"fontName\":\"Inter\",\"gapSplitSec\":0.8,\"key\":\"minimal\",\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":0,\"shadow\":{\"kind\":\"soft\"},\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"lower\",\"tier\":\"plus\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":5},{\"accentColours\":[\"#FFE14D\",\"#FF6B35\"],\"baseColour\":\"#FFFFFF\",\"borderStyle\":1,\"capHeightPx\":52,\"centreFraction\":0.805,\"emission\":\"positioned\",\"emphasis\":{\"kind\":\"colour\"},\"fontName\":\"Bebas Neue\",\"gapSplitSec\":0.8,\"key\":\"editorial\",\"keyAlways\":true,\"keyFont\":\"Luckiest Guy\",\"keyScalePct\":120,\"lineSpacingRatio\":1.711,\"maxLines\":3,\"outlineColour\":\"#000000\",\"outlineWidth\":6,\"sideMarginPx\":60,\"stripPunctuation\":true,\"textCase\":\"upper\",\"tier\":\"plus\",\"wordsMax\":5,\"wordsMin\":3,\"wordsTarget\":4}]"
+  },
+  "sizes": [
+    {
+      "output": {
+        "width": 1080,
+        "height": 1920
+      },
+      "ceiling": 1.6090874299829518,
+      "perPreset": [
+        {
+          "key": "karaoke",
+          "ceiling": 1.8593899190914107,
+          "scaled": [
+            45,
+            7,
+            60
+          ],
+          "exact": [
+            45,
+            7,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "punch",
+          "ceiling": 1.6090874299829518,
+          "scaled": [
+            52,
+            7,
+            60
+          ],
+          "exact": [
+            52,
+            7,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "clean",
+          "ceiling": 2.1257349615558563,
+          "scaled": [
+            40,
+            4,
+            60
+          ],
+          "exact": [
+            40,
+            4,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "highlight",
+          "ceiling": 1.9353549377846488,
+          "scaled": [
+            43,
+            8,
+            60
+          ],
+          "exact": [
+            43,
+            8,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "bounce",
+          "ceiling": 1.8593899190914107,
+          "scaled": [
+            45,
+            7,
+            60
+          ],
+          "exact": [
+            45,
+            7,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "neon",
+          "ceiling": 1.66997181922555,
+          "scaled": [
+            52,
+            0,
+            60
+          ],
+          "exact": [
+            52,
+            0,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "boldkeys",
+          "ceiling": 2.0029721522258828,
+          "scaled": [
+            42,
+            6,
+            60
+          ],
+          "exact": [
+            42,
+            6,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "typewriter",
+          "ceiling": 2.2852245947296996,
+          "scaled": [
+            38,
+            0,
+            60
+          ],
+          "exact": [
+            38,
+            0,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "slide",
+          "ceiling": 1.8593899190914107,
+          "scaled": [
+            45,
+            7,
+            60
+          ],
+          "exact": [
+            45,
+            7,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "comic",
+          "ceiling": 1.6372682044323827,
+          "scaled": [
+            50,
+            11,
+            60
+          ],
+          "exact": [
+            50,
+            11,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "marker",
+          "ceiling": 1.9222071460877421,
+          "scaled": [
+            44,
+            5,
+            60
+          ],
+          "exact": [
+            44,
+            5,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "stack",
+          "ceiling": 2.1180130390177707,
+          "scaled": [
+            41,
+            0,
+            60
+          ],
+          "exact": [
+            41,
+            0,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "minimal",
+          "ceiling": 2.894617819990953,
+          "scaled": [
+            30,
+            0,
+            60
+          ],
+          "exact": [
+            30,
+            0,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "editorial",
+          "ceiling": 1.6177851998747514,
+          "scaled": [
+            52,
+            6,
+            60
+          ],
+          "exact": [
+            52,
+            6,
+            60
+          ],
+          "scaledIsPreset": true
+        },
+        {
+          "key": "illustrated",
+          "ceiling": 4.014147156464945,
+          "scaled": [
+            34,
+            7,
+            60
+          ],
+          "exact": [
+            34,
+            7,
+            60
+          ],
+          "scaledIsPreset": true
+        }
+      ]
+    },
+    {
+      "output": {
+        "width": 1080,
+        "height": 1080
+      },
+      "ceiling": 1.6090874299829518,
+      "perPreset": [
+        {
+          "key": "karaoke",
+          "ceiling": 1.8593899190914107,
+          "scaled": [
+            25,
+            4,
+            60
+          ],
+          "exact": [
+            25.3125,
+            3.9375,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "punch",
+          "ceiling": 1.6090874299829518,
+          "scaled": [
+            29,
+            4,
+            60
+          ],
+          "exact": [
+            29.25,
+            3.9375,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "clean",
+          "ceiling": 2.1257349615558563,
+          "scaled": [
+            23,
+            2,
+            60
+          ],
+          "exact": [
+            22.5,
+            2.25,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "highlight",
+          "ceiling": 1.9353549377846488,
+          "scaled": [
+            24,
+            5,
+            60
+          ],
+          "exact": [
+            24.1875,
+            4.5,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "bounce",
+          "ceiling": 1.8593899190914107,
+          "scaled": [
+            25,
+            4,
+            60
+          ],
+          "exact": [
+            25.3125,
+            3.9375,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "neon",
+          "ceiling": 1.6699718192255502,
+          "scaled": [
+            29,
+            0,
+            60
+          ],
+          "exact": [
+            29.25,
+            0,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "boldkeys",
+          "ceiling": 2.0029721522258828,
+          "scaled": [
+            24,
+            3,
+            60
+          ],
+          "exact": [
+            23.625,
+            3.375,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "typewriter",
+          "ceiling": 2.2852245947296996,
+          "scaled": [
+            21,
+            0,
+            60
+          ],
+          "exact": [
+            21.375,
+            0,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "slide",
+          "ceiling": 1.8593899190914107,
+          "scaled": [
+            25,
+            4,
+            60
+          ],
+          "exact": [
+            25.3125,
+            3.9375,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "comic",
+          "ceiling": 1.6372682044323827,
+          "scaled": [
+            28,
+            6,
+            60
+          ],
+          "exact": [
+            28.125,
+            6.1875,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "marker",
+          "ceiling": 1.9222071460877423,
+          "scaled": [
+            25,
+            3,
+            60
+          ],
+          "exact": [
+            24.75,
+            2.8125,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "stack",
+          "ceiling": 2.1180130390177707,
+          "scaled": [
+            23,
+            0,
+            60
+          ],
+          "exact": [
+            23.0625,
+            0,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "minimal",
+          "ceiling": 2.8946178199909536,
+          "scaled": [
+            17,
+            0,
+            60
+          ],
+          "exact": [
+            16.875,
+            0,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "editorial",
+          "ceiling": 1.6177851998747517,
+          "scaled": [
+            29,
+            3,
+            60
+          ],
+          "exact": [
+            29.25,
+            3.375,
+            60
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "illustrated",
+          "ceiling": 4.014147156464945,
+          "scaled": [
+            19,
+            4,
+            60
+          ],
+          "exact": [
+            19.125,
+            3.9375,
+            60
+          ],
+          "scaledIsPreset": false
+        }
+      ]
+    },
+    {
+      "output": {
+        "width": 1920,
+        "height": 1080
+      },
+      "ceiling": 1.6090874299829518,
+      "perPreset": [
+        {
+          "key": "karaoke",
+          "ceiling": 1.8593899190914107,
+          "scaled": [
+            25,
+            4,
+            107
+          ],
+          "exact": [
+            25.3125,
+            3.9375,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "punch",
+          "ceiling": 1.6090874299829518,
+          "scaled": [
+            29,
+            4,
+            107
+          ],
+          "exact": [
+            29.25,
+            3.9375,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "clean",
+          "ceiling": 2.1257349615558563,
+          "scaled": [
+            23,
+            2,
+            107
+          ],
+          "exact": [
+            22.5,
+            2.25,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "highlight",
+          "ceiling": 1.9353549377846488,
+          "scaled": [
+            24,
+            5,
+            107
+          ],
+          "exact": [
+            24.1875,
+            4.5,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "bounce",
+          "ceiling": 1.8593899190914107,
+          "scaled": [
+            25,
+            4,
+            107
+          ],
+          "exact": [
+            25.3125,
+            3.9375,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "neon",
+          "ceiling": 1.6699718192255502,
+          "scaled": [
+            29,
+            0,
+            107
+          ],
+          "exact": [
+            29.25,
+            0,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "boldkeys",
+          "ceiling": 2.0029721522258828,
+          "scaled": [
+            24,
+            3,
+            107
+          ],
+          "exact": [
+            23.625,
+            3.375,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "typewriter",
+          "ceiling": 2.2852245947296996,
+          "scaled": [
+            21,
+            0,
+            107
+          ],
+          "exact": [
+            21.375,
+            0,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "slide",
+          "ceiling": 1.8593899190914107,
+          "scaled": [
+            25,
+            4,
+            107
+          ],
+          "exact": [
+            25.3125,
+            3.9375,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "comic",
+          "ceiling": 1.6372682044323827,
+          "scaled": [
+            28,
+            6,
+            107
+          ],
+          "exact": [
+            28.125,
+            6.1875,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "marker",
+          "ceiling": 1.9222071460877423,
+          "scaled": [
+            25,
+            3,
+            107
+          ],
+          "exact": [
+            24.75,
+            2.8125,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "stack",
+          "ceiling": 2.1180130390177707,
+          "scaled": [
+            23,
+            0,
+            107
+          ],
+          "exact": [
+            23.0625,
+            0,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "minimal",
+          "ceiling": 2.8946178199909536,
+          "scaled": [
+            17,
+            0,
+            107
+          ],
+          "exact": [
+            16.875,
+            0,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "editorial",
+          "ceiling": 1.6177851998747517,
+          "scaled": [
+            29,
+            3,
+            107
+          ],
+          "exact": [
+            29.25,
+            3.375,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        },
+        {
+          "key": "illustrated",
+          "ceiling": 4.014147156464945,
+          "scaled": [
+            19,
+            4,
+            107
+          ],
+          "exact": [
+            19.125,
+            3.9375,
+            106.66666666666666
+          ],
+          "scaledIsPreset": false
+        }
+      ]
+    }
+  ]
+}

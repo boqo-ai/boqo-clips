@@ -1,0 +1,44 @@
+[
+  {
+    "endSec": 545.285
+  },
+  {
+    "reason": "too-early"
+  },
+  {
+    "endSec": 1172.0049999999999
+  },
+  {
+    "reason": "quiet-end"
+  },
+  {
+    "endSec": 875.43
+  },
+  {
+    "reason": "quiet-end"
+  },
+  {
+    "reason": "short-read"
+  },
+  {
+    "reason": "too-long"
+  },
+  {
+    "reason": "no-dip"
+  },
+  {
+    "reason": "no-dip"
+  },
+  {
+    "endSec": 9.93
+  },
+  {
+    "endSec": 9.51
+  },
+  {
+    "endSec": 19.930000000000003
+  },
+  {
+    "reason": "no-dip"
+  }
+]

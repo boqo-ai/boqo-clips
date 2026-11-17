@@ -1,0 +1,226 @@
+[
+  {
+    "name": "nothing",
+    "chips": []
+  },
+  {
+    "name": "stands gives no stand-alone chip",
+    "chips": [
+      {
+        "key": "replay",
+        "tone": "go",
+        "text": "Replayed · top 50%",
+        "reason": "Viewers of the full video rewound this part more than 50% of it. From YouTube's most-replayed graph, with the intro and chapter starts discounted. One of the two signals that order this list."
+      },
+      {
+        "key": "stranger",
+        "tone": "go",
+        "text": "Keeps watching · 4/5",
+        "reason": "A model's guess from 12 frames and the words, 1 to 5, of whether a stranger keeps watching to the end. It helps order this list and is a little better than chance.\nWhy 4."
+      }
+    ]
+  },
+  {
+    "name": "top of the curve reads top 1%",
+    "chips": [
+      {
+        "key": "replay",
+        "tone": "go",
+        "text": "Replayed · top 1%",
+        "reason": "Viewers of the full video rewound this part more than 99% of it. From YouTube's most-replayed graph, with the intro and chapter starts discounted. One of the two signals that order this list."
+      }
+    ]
+  },
+  {
+    "name": "top 0.999 reads top 1%",
+    "chips": [
+      {
+        "key": "replay",
+        "tone": "go",
+        "text": "Replayed · top 1%",
+        "reason": "Viewers of the full video rewound this part more than 99% of it. From YouTube's most-replayed graph, with the intro and chapter starts discounted. One of the two signals that order this list."
+      }
+    ]
+  },
+  {
+    "name": "bottom half warns",
+    "chips": [
+      {
+        "key": "replay",
+        "tone": "warn",
+        "text": "Replayed · top 80%",
+        "reason": "Viewers of the full video rewound this part more than 20% of it. From YouTube's most-replayed graph, with the intro and chapter starts discounted. One of the two signals that order this list."
+      }
+    ]
+  },
+  {
+    "name": "midpoint 0.5 goes",
+    "chips": [
+      {
+        "key": "replay",
+        "tone": "go",
+        "text": "Replayed · top 50%",
+        "reason": "Viewers of the full video rewound this part more than 50% of it. From YouTube's most-replayed graph, with the intro and chapter starts discounted. One of the two signals that order this list."
+      }
+    ]
+  },
+  {
+    "name": "pct 0.97 is top 3%",
+    "chips": [
+      {
+        "key": "replay",
+        "tone": "go",
+        "text": "Replayed · top 3%",
+        "reason": "Viewers of the full video rewound this part more than 97% of it. From YouTube's most-replayed graph, with the intro and chapter starts discounted. One of the two signals that order this list."
+      },
+      {
+        "key": "stranger",
+        "tone": "warn",
+        "text": "Keeps watching · 2/5",
+        "reason": "A model's guess from 12 frames and the words, 1 to 5, of whether a stranger keeps watching to the end. It helps order this list and is a little better than chance.\nWhy 2."
+      }
+    ]
+  },
+  {
+    "name": "null pct has no replay chip",
+    "chips": [
+      {
+        "key": "stranger",
+        "tone": "go",
+        "text": "Keeps watching · 5/5",
+        "reason": "A model's guess from 7 frames and the words, 1 to 5, of whether a stranger keeps watching to the end. It helps order this list and is a little better than chance.\nWhy 5."
+      }
+    ]
+  },
+  {
+    "name": "judgment 1 to 5",
+    "chips": [
+      {
+        "key": "stranger",
+        "tone": "warn",
+        "text": "Keeps watching · 1/5",
+        "reason": "A model's guess from 12 frames and the words, 1 to 5, of whether a stranger keeps watching to the end. It helps order this list and is a little better than chance.\nWhy 1."
+      }
+    ]
+  },
+  {
+    "name": "judgment 5 with 8 frames",
+    "chips": [
+      {
+        "key": "stranger",
+        "tone": "go",
+        "text": "Keeps watching · 5/5",
+        "reason": "A model's guess from 8 frames and the words, 1 to 5, of whether a stranger keeps watching to the end. It helps order this list and is a little better than chance.\nWhy 5."
+      }
+    ]
+  },
+  {
+    "name": "bridged with a bridge time",
+    "chips": [
+      {
+        "key": "standalone",
+        "tone": "go",
+        "text": "Opens on context",
+        "reason": "Starts 12 s earlier so a stranger gets the fact. Claim: \"Bees hold the hive at 35 degrees.\""
+      }
+    ]
+  },
+  {
+    "name": "bridged with no bridge time",
+    "chips": [
+      {
+        "key": "standalone",
+        "tone": "go",
+        "text": "Opens on context",
+        "reason": "Starts earlier so a stranger gets the fact. Claim: \"Bees hold the hive at 35 degrees.\""
+      }
+    ]
+  },
+  {
+    "name": "context not drawn: no chip",
+    "chips": []
+  },
+  {
+    "name": "context drawn: Context line added",
+    "chips": [
+      {
+        "key": "standalone",
+        "tone": "go",
+        "text": "Context line added",
+        "reason": "Shown over the first seconds: \"A line\""
+      }
+    ]
+  },
+  {
+    "name": "context drawn but off in the plan",
+    "chips": [
+      {
+        "key": "standalone",
+        "tone": "go",
+        "text": "Context line added",
+        "reason": "Shown over the first seconds: \"A line\" Off in this clip's plan."
+      }
+    ]
+  },
+  {
+    "name": "context drawn, no line text",
+    "chips": [
+      {
+        "key": "standalone",
+        "tone": "go",
+        "text": "Context line added",
+        "reason": "Shown over the first seconds: \"\""
+      }
+    ]
+  },
+  {
+    "name": "fails: Needs context",
+    "chips": [
+      {
+        "key": "replay",
+        "tone": "warn",
+        "text": "Replayed · top 70%",
+        "reason": "Viewers of the full video rewound this part more than 30% of it. From YouTube's most-replayed graph, with the intro and chapter starts discounted. One of the two signals that order this list."
+      },
+      {
+        "key": "stranger",
+        "tone": "warn",
+        "text": "Keeps watching · 2/5",
+        "reason": "A model's guess from 12 frames and the words, 1 to 5, of whether a stranger keeps watching to the end. It helps order this list and is a little better than chance.\nWhy 2."
+      },
+      {
+        "key": "standalone",
+        "tone": "warn",
+        "text": "Needs context",
+        "reason": "A stranger could not say what is claimed from the first sentence, and no earlier line or context line supplies it. Listed after clips that stand alone."
+      }
+    ]
+  },
+  {
+    "name": "all three",
+    "chips": [
+      {
+        "key": "replay",
+        "tone": "go",
+        "text": "Replayed · top 12%",
+        "reason": "Viewers of the full video rewound this part more than 88% of it. From YouTube's most-replayed graph, with the intro and chapter starts discounted. One of the two signals that order this list."
+      },
+      {
+        "key": "stranger",
+        "tone": "go",
+        "text": "Keeps watching · 4/5",
+        "reason": "A model's guess from 12 frames and the words, 1 to 5, of whether a stranger keeps watching to the end. It helps order this list and is a little better than chance.\nWhy 4."
+      },
+      {
+        "key": "standalone",
+        "tone": "go",
+        "text": "Opens on context",
+        "reason": "Starts 6 s earlier so a stranger gets the fact. Claim: \"Bees hold the hive at 35 degrees.\""
+      }
+    ]
+  },
+  {
+    "name": "malformed columns give no chips",
+    "chips": []
+  }
+]

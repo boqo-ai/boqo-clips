@@ -1,0 +1,324 @@
+{
+ "scenarios": [
+  {
+   "name": "no panels shot returns the same array",
+   "elements": [
+    {
+     "text": "A",
+     "positionFraction": 0.14,
+     "span": null,
+     "timing": {
+      "kind": "window",
+      "startSec": 0,
+      "holdSec": 3
+     }
+    }
+   ],
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 12
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "clipDurationSec": 12
+  },
+  {
+   "name": "one panels shot moves the headline to the seam",
+   "elements": [
+    {
+     "text": "A",
+     "positionFraction": 0.14,
+     "span": null,
+     "timing": {
+      "kind": "window",
+      "startSec": 0,
+      "holdSec": 3
+     }
+    }
+   ],
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 12
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "clipDurationSec": 12
+  },
+  {
+   "name": "a mixed clip splits the headline into parts",
+   "elements": [
+    {
+     "text": "A",
+     "positionFraction": 0.14,
+     "span": {
+      "startSec": 0,
+      "endSec": 12
+     },
+     "timing": {
+      "kind": "window",
+      "startSec": 0,
+      "holdSec": 3
+     }
+    }
+   ],
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 8
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 2,
+     "shot": {
+      "startSec": 8,
+      "endSec": 12
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "clipDurationSec": 12
+  },
+  {
+   "name": "a headline already below the seam is unmoved",
+   "elements": [
+    {
+     "text": "A",
+     "positionFraction": 0.5,
+     "span": null,
+     "timing": {
+      "kind": "window",
+      "startSec": 0,
+      "holdSec": 3
+     }
+    }
+   ],
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 12
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "clipDurationSec": 12
+  },
+  {
+   "name": "a whole-clip headline",
+   "elements": [
+    {
+     "text": "A",
+     "positionFraction": 0.14,
+     "span": null,
+     "timing": {
+      "kind": "whole"
+     }
+    }
+   ],
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 6,
+      "endSec": 12
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "clipDurationSec": 12
+  },
+  {
+   "name": "a window headline that holds 3 s over a panels shot",
+   "elements": [
+    {
+     "text": "A",
+     "positionFraction": 0.14,
+     "span": null,
+     "timing": {
+      "kind": "window",
+      "startSec": 5,
+      "holdSec": 4
+     }
+    }
+   ],
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 4
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 4,
+      "endSec": 12
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 560
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "clipDurationSec": 12
+  },
+  {
+   "name": "two elements, one moved",
+   "elements": [
+    {
+     "text": "A",
+     "positionFraction": 0.14,
+     "span": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "timing": {
+      "kind": "window",
+      "startSec": 0,
+      "holdSec": 3
+     }
+    },
+    {
+     "text": "B",
+     "positionFraction": 0.8,
+     "span": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "timing": {
+      "kind": "window",
+      "startSec": 0,
+      "holdSec": 3
+     }
+    }
+   ],
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 12
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "clipDurationSec": 12
+  },
+  {
+   "name": "a window past the clip is clamped",
+   "elements": [
+    {
+     "text": "A",
+     "positionFraction": 0.14,
+     "span": null,
+     "timing": {
+      "kind": "window",
+      "startSec": 20,
+      "holdSec": 3
+     }
+    }
+   ],
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 12
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "clipDurationSec": 12
+  }
+ ]
+}

@@ -1,0 +1,804 @@
+[
+  {
+    "name": "auto length with a heatmap",
+    "target": 10,
+    "cap": 13,
+    "kept": [
+      {
+        "clip": {
+          "startSec": 10,
+          "endSec": 45,
+          "title": "Clip 10",
+          "hook": "Hook 10",
+          "score": 70,
+          "hookScore": 67,
+          "flowScore": 68,
+          "standaloneScore": 60,
+          "valueScore": 65,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "  padded  ",
+            "bridgeFromSec": 22.4,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Alt A 10",
+            "Alt B 10"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": 0.6,
+          "pctRaw": 0.85,
+          "heat": 0.425,
+          "discounted": true,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 20
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "bridged",
+            "claim": "padded",
+            "bridgeFromSec": 20,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 60,
+          "endSec": 90,
+          "title": "Clip 60",
+          "hook": "Hook 60",
+          "score": 66,
+          "hookScore": 63,
+          "flowScore": 64,
+          "standaloneScore": 56,
+          "valueScore": 61,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": false,
+            "claim": "needs context",
+            "bridgeFromSec": null,
+            "contextLine": " The second hive failed earlier. "
+          },
+          "titleAlternatives": [
+            "Alt A 60",
+            "Alt B 60"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": 0.25,
+          "pctRaw": 0.2,
+          "heat": 0.3,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 20
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "context",
+            "claim": "needs context",
+            "bridgeFromSec": null,
+            "contextLine": "The second hive failed earlier.",
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 110,
+          "endSec": 140,
+          "title": "Clip 110",
+          "hook": "Hook 110",
+          "score": 80,
+          "hookScore": 77,
+          "flowScore": 78,
+          "standaloneScore": 70,
+          "valueScore": 75,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 110",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Alt A 110",
+            "Alt B 110"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": 0.3,
+          "pctRaw": 0.25,
+          "heat": 0.335,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 20
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 110",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 150,
+          "endSec": 185,
+          "title": "Clip 150",
+          "hook": "Hook 150",
+          "score": 55,
+          "hookScore": 52,
+          "flowScore": 53,
+          "standaloneScore": 45,
+          "valueScore": 50,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 150",
+            "bridgeFromSec": null,
+            "contextLine": "should not be here"
+          },
+          "titleAlternatives": [
+            "Alt A 150",
+            "Alt B 150"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": 0.6,
+          "pctRaw": 0.5,
+          "heat": 0.425,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 20
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 150",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": true,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 300,
+          "endSec": 335,
+          "title": "Clip 300.4",
+          "hook": "Hook 300.4",
+          "score": 92,
+          "hookScore": 89,
+          "flowScore": 90,
+          "standaloneScore": 82,
+          "valueScore": 87,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 300.4",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Alt A 300.4",
+            "Alt B 300.4"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": 0.95,
+          "pctRaw": 0.95,
+          "heat": 0.95,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 20
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 300.4",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 480,
+          "endSec": 515,
+          "title": "Same",
+          "hook": "Hook 480",
+          "score": 82,
+          "hookScore": 79,
+          "flowScore": 80,
+          "standaloneScore": 72,
+          "valueScore": 77,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 480",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Different"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": 0.3,
+          "pctRaw": 0.25,
+          "heat": 0.33,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 20
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 480",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 540,
+          "endSec": 600,
+          "title": "Clip 540",
+          "hook": "Hook 540",
+          "score": 77,
+          "hookScore": 74,
+          "flowScore": 75,
+          "standaloneScore": 67,
+          "valueScore": 72,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 540",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Alt A 540",
+            "Alt B 540"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": 0.05,
+          "pctRaw": 0.05,
+          "heat": 0.265,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 20
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 540",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      }
+    ],
+    "dropped": [
+      "too_short",
+      "too_long",
+      "inverted",
+      "inverted",
+      "overlaps"
+    ]
+  },
+  {
+    "name": "a 30-60 s length without a heatmap",
+    "target": 10,
+    "cap": 13,
+    "kept": [
+      {
+        "clip": {
+          "startSec": 10,
+          "endSec": 45,
+          "title": "Clip 10",
+          "hook": "Hook 10",
+          "score": 70,
+          "hookScore": 67,
+          "flowScore": 68,
+          "standaloneScore": 60,
+          "valueScore": 65,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "  padded  ",
+            "bridgeFromSec": 22.4,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Alt A 10",
+            "Alt B 10"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": null,
+          "pctRaw": null,
+          "heat": null,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 0
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "bridged",
+            "claim": "padded",
+            "bridgeFromSec": 20,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 60,
+          "endSec": 90,
+          "title": "Clip 60",
+          "hook": "Hook 60",
+          "score": 66,
+          "hookScore": 63,
+          "flowScore": 64,
+          "standaloneScore": 56,
+          "valueScore": 61,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": false,
+            "claim": "needs context",
+            "bridgeFromSec": null,
+            "contextLine": " The second hive failed earlier. "
+          },
+          "titleAlternatives": [
+            "Alt A 60",
+            "Alt B 60"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": null,
+          "pctRaw": null,
+          "heat": null,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 0
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "context",
+            "claim": "needs context",
+            "bridgeFromSec": null,
+            "contextLine": "The second hive failed earlier.",
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 110,
+          "endSec": 140,
+          "title": "Clip 110",
+          "hook": "Hook 110",
+          "score": 80,
+          "hookScore": 77,
+          "flowScore": 78,
+          "standaloneScore": 70,
+          "valueScore": 75,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 110",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Alt A 110",
+            "Alt B 110"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": null,
+          "pctRaw": null,
+          "heat": null,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 0
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 110",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 150,
+          "endSec": 185,
+          "title": "Clip 150",
+          "hook": "Hook 150",
+          "score": 55,
+          "hookScore": 52,
+          "flowScore": 53,
+          "standaloneScore": 45,
+          "valueScore": 50,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 150",
+            "bridgeFromSec": null,
+            "contextLine": "should not be here"
+          },
+          "titleAlternatives": [
+            "Alt A 150",
+            "Alt B 150"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": null,
+          "pctRaw": null,
+          "heat": null,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 0
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 150",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": true,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 300,
+          "endSec": 335,
+          "title": "Clip 300.4",
+          "hook": "Hook 300.4",
+          "score": 92,
+          "hookScore": 89,
+          "flowScore": 90,
+          "standaloneScore": 82,
+          "valueScore": 87,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 300.4",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Alt A 300.4",
+            "Alt B 300.4"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": null,
+          "pctRaw": null,
+          "heat": null,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 0
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 300.4",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 480,
+          "endSec": 515,
+          "title": "Same",
+          "hook": "Hook 480",
+          "score": 82,
+          "hookScore": 79,
+          "flowScore": 80,
+          "standaloneScore": 72,
+          "valueScore": 77,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 480",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Different"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": null,
+          "pctRaw": null,
+          "heat": null,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 0
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 480",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      },
+      {
+        "clip": {
+          "startSec": 540,
+          "endSec": 600,
+          "title": "Clip 540",
+          "hook": "Hook 540",
+          "score": 77,
+          "hookScore": 74,
+          "flowScore": 75,
+          "standaloneScore": 67,
+          "valueScore": 72,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 540",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Alt A 540",
+            "Alt B 540"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": null,
+          "pctRaw": null,
+          "heat": null,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 0
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 540",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      }
+    ],
+    "dropped": [
+      "too_short",
+      "too_long",
+      "inverted",
+      "inverted",
+      "overlaps"
+    ]
+  },
+  {
+    "name": "cap of one on a 60 s video",
+    "target": 1,
+    "cap": 1,
+    "kept": [
+      {
+        "clip": {
+          "startSec": 35,
+          "endSec": 65,
+          "title": "Clip 35",
+          "hook": "Hook 35",
+          "score": 90,
+          "hookScore": 87,
+          "flowScore": 88,
+          "standaloneScore": 80,
+          "valueScore": 85,
+          "emphasisWords": [
+            "alpha",
+            "beta"
+          ],
+          "standalone": {
+            "standsAlone": true,
+            "claim": "Claim 35",
+            "bridgeFromSec": null,
+            "contextLine": null
+          },
+          "titleAlternatives": [
+            "Alt A 35",
+            "Alt B 35"
+          ]
+        },
+        "replay": {
+          "v": 1,
+          "pct": null,
+          "pctRaw": null,
+          "heat": null,
+          "discounted": false,
+          "factor": 0.5,
+          "introBins": 2,
+          "chapterBins": 1,
+          "sha": null,
+          "bins": 0
+        },
+        "standalone": {
+          "test": {
+            "v": 1,
+            "outcome": "stands",
+            "claim": "Claim 35",
+            "bridgeFromSec": null,
+            "contextLine": null,
+            "sha": null
+          },
+          "inconsistent": false,
+          "lineDropped": false
+        }
+      }
+    ],
+    "dropped": [
+      "over_cap",
+      "over_cap"
+    ]
+  }
+]

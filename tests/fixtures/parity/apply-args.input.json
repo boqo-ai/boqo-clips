@@ -1,0 +1,49 @@
+{
+  "inPath": "/scratch/clip dir/clip.mp4",
+  "outPath": "/scratch/clip dir/clip-loud.mp4",
+  "targets": [
+    {
+      "integrated": -16,
+      "truePeak": -1,
+      "lra": 7
+    },
+    {
+      "integrated": -9,
+      "truePeak": -1,
+      "lra": 7
+    }
+  ],
+  "loudness": [
+    null,
+    -14,
+    -16,
+    "off"
+  ],
+  "measures": [
+    {
+      "inputI": -21.75,
+      "inputTp": -18.06,
+      "inputLra": 0,
+      "inputThresh": -31.75,
+      "targetOffset": -0.05
+    },
+    {
+      "inputI": -30.12,
+      "inputTp": -3.5,
+      "inputLra": 11.2,
+      "inputThresh": -40.2,
+      "targetOffset": 0.3
+    }
+  ],
+  "stderr": [
+    "Using SSH key: /Users/m55d4tzd/.ssh/id_ed25519.pub\nInput #0, lavfi, from 'sine=frequency=440:duration=3':\n  Duration: N/A, start: 0.000000, bitrate: 705 kb/s\n  Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s\nStream mapping:\n  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    encoder         : Lavf59.27.100\n  Stream #0:0: Audio: pcm_s16le, 192000 Hz, mono, s16, 3072 kb/s\n    Metadata:\n      encoder         : Lavc59.37.100 pcm_s16le\nsize=N/A time=00:00:03.00 bitrate=N/A speed= 108x    \nvideo:0kB audio:1125kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\n[Parsed_loudnorm_0 @ 0x55c0b2064280] \n{\n\t\"input_i\" : \"-21.75\",\n\t\"input_tp\" : \"-18.06\",\n\t\"input_lra\" : \"0.00\",\n\t\"input_thresh\" : \"-31.75\",\n\t\"output_i\" : \"-13.95\",\n\t\"output_tp\" : \"-10.27\",\n\t\"output_lra\" : \"0.00\",\n\t\"output_thresh\" : \"-23.95\",\n\t\"normalization_type\" : \"dynamic\",\n\t\"target_offset\" : \"-0.05\"\n}\n",
+    "Input #0, lavfi, from 'sine=frequency=440:duration=3':\n  Duration: N/A, start: 0.000000, bitrate: 705 kb/s\n  Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s\nStream mapping:\n  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    encoder         : Lavf62.12.102\n  Stream #0:0: Audio: pcm_s16le, 192000 Hz, mono, s16, 3072 kb/s\n    Metadata:\n      encoder         : Lavc62.28.102 pcm_s16le\n[Parsed_loudnorm_0 @ 0xc31005140] \n{\n\t\"input_i\" : \"-21.75\",\n\t\"input_tp\" : \"-18.06\",\n\t\"input_lra\" : \"0.00\",\n\t\"input_thresh\" : \"-31.75\",\n\t\"output_i\" : \"-13.95\",\n\t\"output_tp\" : \"-10.27\",\n\t\"output_lra\" : \"0.00\",\n\t\"output_thresh\" : \"-23.95\",\n\t\"normalization_type\" : \"dynamic\",\n\t\"target_offset\" : \"-0.05\"\n}\n[out#0/null @ 0xc31004a80] video:0KiB audio:1125KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:03.00 bitrate=N/A speed= 122x elapsed=0:00:00.02    \n",
+    "no json here",
+    "{ \"input_i\" : -21.75 }",
+    "{ \"input_i\" : \"-inf\", \"input_tp\" : \"-inf\" }",
+    "{ broken",
+    "[x] {\"a\":\"1\"}\n{\"input_i\":\"-20.00\",\"input_tp\":\"-2.00\"}\nsize=N/A",
+    "[1,2]",
+    "{}"
+  ]
+}

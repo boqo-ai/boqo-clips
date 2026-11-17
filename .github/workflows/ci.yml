@@ -40,6 +40,9 @@ jobs:
       - name: Install ffmpeg (Windows)
         if: runner.os == 'Windows'
         run: choco install ffmpeg-full -y
+      # --ignore-scripts, as the person's install runs it (INSTALL.md): onnxruntime-node's postinstall would
+      # otherwise try to fetch extra GPU binaries, and its bundled CPU binary is the one the skill uses.
+      - run: npm ci --ignore-scripts
       - run: npm test
 
   gitleaks:

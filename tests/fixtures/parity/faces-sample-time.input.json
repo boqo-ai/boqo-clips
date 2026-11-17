@@ -1,0 +1,79 @@
+{
+ "calls": [
+  {
+   "index": 1,
+   "requested": 12,
+   "duration": 0.375
+  },
+  {
+   "index": 3,
+   "requested": 12,
+   "duration": 0.375
+  },
+  {
+   "index": 5,
+   "requested": 12,
+   "duration": 0.375
+  },
+  {
+   "index": 7,
+   "requested": 12,
+   "duration": 0.375
+  },
+  {
+   "index": 0,
+   "requested": 12,
+   "duration": 5
+  },
+  {
+   "index": 11,
+   "requested": 12,
+   "duration": 6
+  },
+  {
+   "index": 1,
+   "requested": 3,
+   "duration": 1
+  },
+  {
+   "index": 2,
+   "requested": 3,
+   "duration": 1
+  },
+  {
+   "index": 5,
+   "requested": 24,
+   "duration": 13.7
+  },
+  {
+   "index": 119,
+   "requested": 120,
+   "duration": 60
+  },
+  {
+   "index": 7,
+   "requested": 13,
+   "duration": 6.4
+  },
+  {
+   "index": 3,
+   "requested": 12,
+   "duration": 2.0000000001
+  },
+  {
+   "index": 9,
+   "requested": 75,
+   "duration": 37.3
+  },
+  {
+   "index": 1,
+   "requested": 32,
+   "duration": 1
+  },
+  {
+   "index": 1,
+   "requested": 12,
+   "duration": 0.001
+  }
+ ]
+}

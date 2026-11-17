@@ -1,0 +1,416 @@
+{
+ "logos": [
+  {
+   "name": "default logo (boqo Default template values)",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "anchor top-left",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "top-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "anchor top-centre",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "top-centre",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "anchor top-right",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "top-right",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "anchor bottom-left",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "anchor bottom-centre",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-centre",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "anchor bottom-right",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-right",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "opacity 1",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 1,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "opacity 0.99",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.99,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "opacity 0.5",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.5,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "opacity 0.05",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.05,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "width 0.05",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.05,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "width 0.1",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "width 0.1234",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1234,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "width 0.25",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.25,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "width 0.5",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.5,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "width 0.001",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.001,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "margins 0/0",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0,
+    "marginY": 0,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "margins 0.45/0.45",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.45,
+    "marginY": 0.45,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "margins 0.0854/0.06",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "margins 0.1/0.0333",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.1,
+    "marginY": 0.0333,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    }
+   }
+  },
+  {
+   "name": "window opacity 1",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 1,
+    "timing": {
+     "kind": "window",
+     "startSec": 3,
+     "holdSec": 4
+    }
+   }
+  },
+  {
+   "name": "window at 0 opacity 1",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 1,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 0.5
+    }
+   }
+  },
+  {
+   "name": "window opacity 0.35",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "window",
+     "startSec": 3,
+     "holdSec": 4
+    }
+   }
+  },
+  {
+   "name": "window at 0 opacity 0.35",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "window",
+     "startSec": 0,
+     "holdSec": 0.5
+    }
+   }
+  },
+  {
+   "name": "with uploadedAt",
+   "logo": {
+    "key": "logo.png",
+    "width": 0.1,
+    "anchor": "bottom-left",
+    "marginX": 0.0854,
+    "marginY": 0.06,
+    "opacity": 0.35,
+    "timing": {
+     "kind": "whole"
+    },
+    "uploadedAt": "2026-11-16T00:00:00.000Z"
+   }
+  }
+ ],
+ "frames": [
+  {
+   "width": 1080,
+   "height": 1920
+  },
+  {
+   "width": 1080,
+   "height": 1080
+  },
+  {
+   "width": 1920,
+   "height": 1080
+  },
+  {
+   "width": 720,
+   "height": 1280
+  },
+  {
+   "width": 1081,
+   "height": 1919
+  },
+  {
+   "width": 3,
+   "height": 3
+  }
+ ],
+ "durations": [
+  0,
+  1,
+  7.28,
+  7.64,
+  8,
+  30
+ ],
+ "offsets": [
+  0,
+  1.7,
+  0.333
+ ]
+}

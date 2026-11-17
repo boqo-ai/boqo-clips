@@ -1,0 +1,146 @@
+{
+ "language": "en",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 2.05,
+   "text": "Welcome back to the show everyone.",
+   "speaker": 0
+  },
+  {
+   "start": 2.5,
+   "end": 5.25,
+   "text": "Today we talk about a very silly thing.",
+   "speaker": 1
+  },
+  {
+   "start": 5.7,
+   "end": 7.75,
+   "text": "Honestly I did not expect that!",
+   "speaker": 0
+  },
+  {
+   "start": 8.2,
+   "end": 9.2,
+   "text": "Thanks for watching.",
+   "speaker": null
+  }
+ ],
+ "words": [
+  {
+   "w": "Welcome",
+   "s": 0.0,
+   "e": 0.3
+  },
+  {
+   "w": "back",
+   "s": 0.35,
+   "e": 0.65
+  },
+  {
+   "w": "to",
+   "s": 0.7,
+   "e": 1.0
+  },
+  {
+   "w": "the",
+   "s": 1.05,
+   "e": 1.35
+  },
+  {
+   "w": "show",
+   "s": 1.4,
+   "e": 1.7
+  },
+  {
+   "w": "everyone.",
+   "s": 1.75,
+   "e": 2.05
+  },
+  {
+   "w": "Today",
+   "s": 2.5,
+   "e": 2.8
+  },
+  {
+   "w": "we",
+   "s": 2.85,
+   "e": 3.15
+  },
+  {
+   "w": "talk",
+   "s": 3.2,
+   "e": 3.5
+  },
+  {
+   "w": "about",
+   "s": 3.55,
+   "e": 3.85
+  },
+  {
+   "w": "a",
+   "s": 3.9,
+   "e": 4.2
+  },
+  {
+   "w": "very",
+   "s": 4.25,
+   "e": 4.55
+  },
+  {
+   "w": "silly",
+   "s": 4.6,
+   "e": 4.9
+  },
+  {
+   "w": "thing.",
+   "s": 4.95,
+   "e": 5.25
+  },
+  {
+   "w": "Honestly",
+   "s": 5.7,
+   "e": 6.0
+  },
+  {
+   "w": "I",
+   "s": 6.05,
+   "e": 6.35
+  },
+  {
+   "w": "did",
+   "s": 6.4,
+   "e": 6.7
+  },
+  {
+   "w": "not",
+   "s": 6.75,
+   "e": 7.05
+  },
+  {
+   "w": "expect",
+   "s": 7.1,
+   "e": 7.4
+  },
+  {
+   "w": "that!",
+   "s": 7.45,
+   "e": 7.75
+  },
+  {
+   "w": "Thanks",
+   "s": 8.2,
+   "e": 8.5
+  },
+  {
+   "w": "for",
+   "s": 8.55,
+   "e": 8.85
+  },
+  {
+   "w": "watching.",
+   "s": 8.9,
+   "e": 9.2
+  }
+ ]
+}

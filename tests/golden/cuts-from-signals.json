@@ -1,0 +1,108 @@
+[
+  {
+    "cuts": [
+      0.8
+    ],
+    "strong": 1,
+    "weak": 0
+  },
+  {
+    "cuts": [
+      0.8
+    ],
+    "strong": 1,
+    "weak": 0
+  },
+  {
+    "cuts": [
+      0.8
+    ],
+    "strong": 0,
+    "weak": 1
+  },
+  {
+    "cuts": [],
+    "strong": 0,
+    "weak": 0
+  },
+  {
+    "cuts": [],
+    "strong": 0,
+    "weak": 0
+  },
+  {
+    "cuts": [],
+    "strong": 0,
+    "weak": 0
+  },
+  {
+    "cuts": [
+      0.8
+    ],
+    "strong": 0,
+    "weak": 1
+  },
+  {
+    "cuts": [
+      0.8
+    ],
+    "strong": 0,
+    "weak": 1
+  },
+  {
+    "cuts": [
+      0.4,
+      1.2
+    ],
+    "strong": 1,
+    "weak": 1
+  },
+  {
+    "cuts": [],
+    "strong": 0,
+    "weak": 0
+  },
+  {
+    "cuts": [],
+    "strong": 0,
+    "weak": 0
+  },
+  {
+    "cuts": [],
+    "strong": 0,
+    "weak": 0
+  },
+  {
+    "cuts": [
+      0.8
+    ],
+    "strong": 0,
+    "weak": 1
+  },
+  {
+    "cuts": [],
+    "strong": 0,
+    "weak": 0
+  },
+  {
+    "cuts": [
+      0.333333
+    ],
+    "strong": 0,
+    "weak": 1
+  },
+  {
+    "cuts": [
+      0.8
+    ],
+    "strong": 0,
+    "weak": 1
+  },
+  {
+    "cuts": [
+      0.4
+    ],
+    "strong": 1,
+    "weak": 0
+  }
+]

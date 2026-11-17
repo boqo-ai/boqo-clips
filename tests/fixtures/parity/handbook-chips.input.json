@@ -1,0 +1,595 @@
+{
+  "cases": [
+    {
+      "name": "nothing",
+      "clip": {
+        "startSec": 100,
+        "replay": null,
+        "stranger": null,
+        "standaloneTest": null
+      }
+    },
+    {
+      "name": "stands gives no stand-alone chip",
+      "clip": {
+        "startSec": 100,
+        "replay": {
+          "v": 1,
+          "pct": 0.5,
+          "pctRaw": 0.5,
+          "heat": 0.4,
+          "discounted": true,
+          "bins": 100,
+          "factor": 1,
+          "introBins": 3,
+          "chapterBins": 0,
+          "sha": null
+        },
+        "stranger": {
+          "v": 1,
+          "promptVersion": "annotate-2026-10-16",
+          "model": "m",
+          "selectionModel": "s",
+          "effort": "high",
+          "frames": 12,
+          "fileVersion": "f1",
+          "judgment": 4,
+          "why": "Why 4.",
+          "annotation": {
+            "hook_type": "spoken_claim",
+            "hook_text": "A claim.",
+            "hook_promises_payoff": true,
+            "time_to_payoff_s": 12,
+            "narrative_arc": "setup_tension_payoff",
+            "ends_with": "punchline_or_payoff",
+            "comprehensible_without_context": 4,
+            "share_trigger": "humour",
+            "comment_bait": false,
+            "caption_style": "none",
+            "caption_position": "none",
+            "title_card_or_headline": false,
+            "on_screen_text_other": false,
+            "broll_or_cutaways": "none",
+            "layout": "single_speaker_crop",
+            "visible_zoom_punches_or_jumpcuts": "none",
+            "music_present_guess": "unknown",
+            "emotional_peak": "none",
+            "overall_quality_judgment": 4,
+            "one_line_why": "Short."
+          },
+          "costUsd": 0.01,
+          "sha": null,
+          "judgedAt": "2026-11-01T00:00:00Z"
+        },
+        "standaloneTest": {
+          "v": 1,
+          "outcome": "stands",
+          "claim": "Bees hold the hive at 35 degrees.",
+          "bridgeFromSec": null,
+          "contextLine": null,
+          "sha": null
+        }
+      }
+    },
+    {
+      "name": "top of the curve reads top 1%",
+      "clip": {
+        "startSec": 100,
+        "replay": {
+          "v": 1,
+          "pct": 1,
+          "pctRaw": 1,
+          "heat": 0.8,
+          "discounted": true,
+          "bins": 100,
+          "factor": 1,
+          "introBins": 3,
+          "chapterBins": 0,
+          "sha": null
+        },
+        "stranger": null,
+        "standaloneTest": null
+      }
+    },
+    {
+      "name": "top 0.999 reads top 1%",
+      "clip": {
+        "startSec": 100,
+        "replay": {
+          "v": 1,
+          "pct": 0.999,
+          "pctRaw": 0.999,
+          "heat": 0.7992,
+          "discounted": true,
+          "bins": 100,
+          "factor": 1,
+          "introBins": 3,
+          "chapterBins": 0,
+          "sha": null
+        },
+        "stranger": null,
+        "standaloneTest": null
+      }
+    },
+    {
+      "name": "bottom half warns",
+      "clip": {
+        "startSec": 100,
+        "replay": {
+          "v": 1,
+          "pct": 0.2,
+          "pctRaw": 0.2,
+          "heat": 0.16000000000000003,
+          "discounted": true,
+          "bins": 100,
+          "factor": 1,
+          "introBins": 3,
+          "chapterBins": 0,
+          "sha": null
+        },
+        "stranger": null,
+        "standaloneTest": null
+      }
+    },
+    {
+      "name": "midpoint 0.5 goes",
+      "clip": {
+        "startSec": 100,
+        "replay": {
+          "v": 1,
+          "pct": 0.5,
+          "pctRaw": 0.5,
+          "heat": 0.4,
+          "discounted": true,
+          "bins": 100,
+          "factor": 1,
+          "introBins": 3,
+          "chapterBins": 0,
+          "sha": null
+        },
+        "stranger": null,
+        "standaloneTest": null
+      }
+    },
+    {
+      "name": "pct 0.97 is top 3%",
+      "clip": {
+        "startSec": 100,
+        "replay": {
+          "v": 1,
+          "pct": 0.97,
+          "pctRaw": 0.97,
+          "heat": 0.776,
+          "discounted": true,
+          "bins": 100,
+          "factor": 1,
+          "introBins": 3,
+          "chapterBins": 0,
+          "sha": null
+        },
+        "stranger": {
+          "v": 1,
+          "promptVersion": "annotate-2026-10-16",
+          "model": "m",
+          "selectionModel": "s",
+          "effort": "high",
+          "frames": 12,
+          "fileVersion": "f1",
+          "judgment": 2,
+          "why": "Why 2.",
+          "annotation": {
+            "hook_type": "spoken_claim",
+            "hook_text": "A claim.",
+            "hook_promises_payoff": true,
+            "time_to_payoff_s": 12,
+            "narrative_arc": "setup_tension_payoff",
+            "ends_with": "punchline_or_payoff",
+            "comprehensible_without_context": 4,
+            "share_trigger": "humour",
+            "comment_bait": false,
+            "caption_style": "none",
+            "caption_position": "none",
+            "title_card_or_headline": false,
+            "on_screen_text_other": false,
+            "broll_or_cutaways": "none",
+            "layout": "single_speaker_crop",
+            "visible_zoom_punches_or_jumpcuts": "none",
+            "music_present_guess": "unknown",
+            "emotional_peak": "none",
+            "overall_quality_judgment": 2,
+            "one_line_why": "Short."
+          },
+          "costUsd": 0.01,
+          "sha": null,
+          "judgedAt": "2026-11-01T00:00:00Z"
+        },
+        "standaloneTest": null
+      }
+    },
+    {
+      "name": "null pct has no replay chip",
+      "clip": {
+        "startSec": 100,
+        "replay": {
+          "v": 1,
+          "pct": null,
+          "pctRaw": null,
+          "heat": null,
+          "discounted": true,
+          "bins": 100,
+          "factor": 1,
+          "introBins": 3,
+          "chapterBins": 0,
+          "sha": null
+        },
+        "stranger": {
+          "v": 1,
+          "promptVersion": "annotate-2026-10-16",
+          "model": "m",
+          "selectionModel": "s",
+          "effort": "high",
+          "frames": 7,
+          "fileVersion": "f1",
+          "judgment": 5,
+          "why": "Why 5.",
+          "annotation": {
+            "hook_type": "spoken_claim",
+            "hook_text": "A claim.",
+            "hook_promises_payoff": true,
+            "time_to_payoff_s": 12,
+            "narrative_arc": "setup_tension_payoff",
+            "ends_with": "punchline_or_payoff",
+            "comprehensible_without_context": 4,
+            "share_trigger": "humour",
+            "comment_bait": false,
+            "caption_style": "none",
+            "caption_position": "none",
+            "title_card_or_headline": false,
+            "on_screen_text_other": false,
+            "broll_or_cutaways": "none",
+            "layout": "single_speaker_crop",
+            "visible_zoom_punches_or_jumpcuts": "none",
+            "music_present_guess": "unknown",
+            "emotional_peak": "none",
+            "overall_quality_judgment": 5,
+            "one_line_why": "Short."
+          },
+          "costUsd": 0.01,
+          "sha": null,
+          "judgedAt": "2026-11-01T00:00:00Z"
+        },
+        "standaloneTest": null
+      }
+    },
+    {
+      "name": "judgment 1 to 5",
+      "clip": {
+        "startSec": 100,
+        "replay": null,
+        "stranger": {
+          "v": 1,
+          "promptVersion": "annotate-2026-10-16",
+          "model": "m",
+          "selectionModel": "s",
+          "effort": "high",
+          "frames": 12,
+          "fileVersion": "f1",
+          "judgment": 1,
+          "why": "Why 1.",
+          "annotation": {
+            "hook_type": "spoken_claim",
+            "hook_text": "A claim.",
+            "hook_promises_payoff": true,
+            "time_to_payoff_s": 12,
+            "narrative_arc": "setup_tension_payoff",
+            "ends_with": "punchline_or_payoff",
+            "comprehensible_without_context": 4,
+            "share_trigger": "humour",
+            "comment_bait": false,
+            "caption_style": "none",
+            "caption_position": "none",
+            "title_card_or_headline": false,
+            "on_screen_text_other": false,
+            "broll_or_cutaways": "none",
+            "layout": "single_speaker_crop",
+            "visible_zoom_punches_or_jumpcuts": "none",
+            "music_present_guess": "unknown",
+            "emotional_peak": "none",
+            "overall_quality_judgment": 1,
+            "one_line_why": "Short."
+          },
+          "costUsd": 0.01,
+          "sha": null,
+          "judgedAt": "2026-11-01T00:00:00Z"
+        },
+        "standaloneTest": null
+      }
+    },
+    {
+      "name": "judgment 5 with 8 frames",
+      "clip": {
+        "startSec": 100,
+        "replay": null,
+        "stranger": {
+          "v": 1,
+          "promptVersion": "annotate-2026-10-16",
+          "model": "m",
+          "selectionModel": "s",
+          "effort": "high",
+          "frames": 8,
+          "fileVersion": "f1",
+          "judgment": 5,
+          "why": "Why 5.",
+          "annotation": {
+            "hook_type": "spoken_claim",
+            "hook_text": "A claim.",
+            "hook_promises_payoff": true,
+            "time_to_payoff_s": 12,
+            "narrative_arc": "setup_tension_payoff",
+            "ends_with": "punchline_or_payoff",
+            "comprehensible_without_context": 4,
+            "share_trigger": "humour",
+            "comment_bait": false,
+            "caption_style": "none",
+            "caption_position": "none",
+            "title_card_or_headline": false,
+            "on_screen_text_other": false,
+            "broll_or_cutaways": "none",
+            "layout": "single_speaker_crop",
+            "visible_zoom_punches_or_jumpcuts": "none",
+            "music_present_guess": "unknown",
+            "emotional_peak": "none",
+            "overall_quality_judgment": 5,
+            "one_line_why": "Short."
+          },
+          "costUsd": 0.01,
+          "sha": null,
+          "judgedAt": "2026-11-01T00:00:00Z"
+        },
+        "standaloneTest": null
+      }
+    },
+    {
+      "name": "bridged with a bridge time",
+      "clip": {
+        "startSec": 100,
+        "replay": null,
+        "stranger": null,
+        "standaloneTest": {
+          "v": 1,
+          "outcome": "bridged",
+          "claim": "Bees hold the hive at 35 degrees.",
+          "bridgeFromSec": 112.4,
+          "contextLine": null,
+          "sha": null
+        }
+      }
+    },
+    {
+      "name": "bridged with no bridge time",
+      "clip": {
+        "startSec": 100,
+        "replay": null,
+        "stranger": null,
+        "standaloneTest": {
+          "v": 1,
+          "outcome": "bridged",
+          "claim": "Bees hold the hive at 35 degrees.",
+          "bridgeFromSec": null,
+          "contextLine": null,
+          "sha": null
+        }
+      }
+    },
+    {
+      "name": "context not drawn: no chip",
+      "clip": {
+        "startSec": 100,
+        "replay": null,
+        "stranger": null,
+        "standaloneTest": {
+          "v": 1,
+          "outcome": "context",
+          "claim": "Bees hold the hive at 35 degrees.",
+          "bridgeFromSec": null,
+          "contextLine": "A line",
+          "sha": null
+        }
+      }
+    },
+    {
+      "name": "context drawn: Context line added",
+      "clip": {
+        "startSec": 100,
+        "replay": null,
+        "stranger": null,
+        "standaloneTest": {
+          "v": 1,
+          "outcome": "context",
+          "claim": "Bees hold the hive at 35 degrees.",
+          "bridgeFromSec": null,
+          "contextLine": "A line",
+          "sha": null,
+          "drawn": true
+        }
+      }
+    },
+    {
+      "name": "context drawn but off in the plan",
+      "clip": {
+        "startSec": 100,
+        "replay": null,
+        "stranger": null,
+        "standaloneTest": {
+          "v": 1,
+          "outcome": "context",
+          "claim": "Bees hold the hive at 35 degrees.",
+          "bridgeFromSec": null,
+          "contextLine": "A line",
+          "sha": null,
+          "drawn": true,
+          "plan": {
+            "on": false,
+            "text": "A line"
+          }
+        }
+      }
+    },
+    {
+      "name": "context drawn, no line text",
+      "clip": {
+        "startSec": 100,
+        "replay": null,
+        "stranger": null,
+        "standaloneTest": {
+          "v": 1,
+          "outcome": "context",
+          "claim": "Bees hold the hive at 35 degrees.",
+          "bridgeFromSec": null,
+          "contextLine": null,
+          "sha": null,
+          "drawn": true
+        }
+      }
+    },
+    {
+      "name": "fails: Needs context",
+      "clip": {
+        "startSec": 100,
+        "replay": {
+          "v": 1,
+          "pct": 0.3,
+          "pctRaw": 0.3,
+          "heat": 0.24,
+          "discounted": true,
+          "bins": 100,
+          "factor": 1,
+          "introBins": 3,
+          "chapterBins": 0,
+          "sha": null
+        },
+        "stranger": {
+          "v": 1,
+          "promptVersion": "annotate-2026-10-16",
+          "model": "m",
+          "selectionModel": "s",
+          "effort": "high",
+          "frames": 12,
+          "fileVersion": "f1",
+          "judgment": 2,
+          "why": "Why 2.",
+          "annotation": {
+            "hook_type": "spoken_claim",
+            "hook_text": "A claim.",
+            "hook_promises_payoff": true,
+            "time_to_payoff_s": 12,
+            "narrative_arc": "setup_tension_payoff",
+            "ends_with": "punchline_or_payoff",
+            "comprehensible_without_context": 4,
+            "share_trigger": "humour",
+            "comment_bait": false,
+            "caption_style": "none",
+            "caption_position": "none",
+            "title_card_or_headline": false,
+            "on_screen_text_other": false,
+            "broll_or_cutaways": "none",
+            "layout": "single_speaker_crop",
+            "visible_zoom_punches_or_jumpcuts": "none",
+            "music_present_guess": "unknown",
+            "emotional_peak": "none",
+            "overall_quality_judgment": 2,
+            "one_line_why": "Short."
+          },
+          "costUsd": 0.01,
+          "sha": null,
+          "judgedAt": "2026-11-01T00:00:00Z"
+        },
+        "standaloneTest": {
+          "v": 1,
+          "outcome": "fails",
+          "claim": "Bees hold the hive at 35 degrees.",
+          "bridgeFromSec": null,
+          "contextLine": null,
+          "sha": null
+        }
+      }
+    },
+    {
+      "name": "all three",
+      "clip": {
+        "startSec": 40,
+        "replay": {
+          "v": 1,
+          "pct": 0.88,
+          "pctRaw": 0.88,
+          "heat": 0.7040000000000001,
+          "discounted": true,
+          "bins": 100,
+          "factor": 1,
+          "introBins": 3,
+          "chapterBins": 0,
+          "sha": null
+        },
+        "stranger": {
+          "v": 1,
+          "promptVersion": "annotate-2026-10-16",
+          "model": "m",
+          "selectionModel": "s",
+          "effort": "high",
+          "frames": 12,
+          "fileVersion": "f1",
+          "judgment": 4,
+          "why": "Why 4.",
+          "annotation": {
+            "hook_type": "spoken_claim",
+            "hook_text": "A claim.",
+            "hook_promises_payoff": true,
+            "time_to_payoff_s": 12,
+            "narrative_arc": "setup_tension_payoff",
+            "ends_with": "punchline_or_payoff",
+            "comprehensible_without_context": 4,
+            "share_trigger": "humour",
+            "comment_bait": false,
+            "caption_style": "none",
+            "caption_position": "none",
+            "title_card_or_headline": false,
+            "on_screen_text_other": false,
+            "broll_or_cutaways": "none",
+            "layout": "single_speaker_crop",
+            "visible_zoom_punches_or_jumpcuts": "none",
+            "music_present_guess": "unknown",
+            "emotional_peak": "none",
+            "overall_quality_judgment": 4,
+            "one_line_why": "Short."
+          },
+          "costUsd": 0.01,
+          "sha": null,
+          "judgedAt": "2026-11-01T00:00:00Z"
+        },
+        "standaloneTest": {
+          "v": 1,
+          "outcome": "bridged",
+          "claim": "Bees hold the hive at 35 degrees.",
+          "bridgeFromSec": 46,
+          "contextLine": null,
+          "sha": null
+        }
+      }
+    },
+    {
+      "name": "malformed columns give no chips",
+      "clip": {
+        "startSec": 0,
+        "replay": {
+          "pct": 0.5
+        },
+        "stranger": {
+          "judgment": 9
+        },
+        "standaloneTest": {
+          "outcome": "nope"
+        }
+      }
+    }
+  ]
+}

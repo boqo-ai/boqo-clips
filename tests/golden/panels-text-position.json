@@ -1,0 +1,50 @@
+[
+  {
+    "name": "no shots",
+    "position": 0.14
+  },
+  {
+    "name": "a fill shot only",
+    "position": 0.14
+  },
+  {
+    "name": "a panels shot holding the centre (moves to the seam)",
+    "position": 0.3125
+  },
+  {
+    "name": "a panels shot whose band does not hold the centre",
+    "position": 0.5
+  },
+  {
+    "name": "centre exactly on the seam",
+    "position": 0.3125
+  },
+  {
+    "name": "the lowest of two seams",
+    "position": 0.3229166666666667
+  },
+  {
+    "name": "a shot that does not overlap the element",
+    "position": 0.14
+  },
+  {
+    "name": "a shot touching the element at its end only",
+    "position": 0.14
+  },
+  {
+    "name": "a seam above the headline minimum is clamped",
+    "position": 0.08
+  },
+  {
+    "name": "a seam below the headline maximum is clamped",
+    "position": 0.92
+  },
+  {
+    "name": "centre exactly on the seam in doubles (0.5 of 1920 is 960)",
+    "position": 0.5
+  },
+  {
+    "name": "mixed panels and track",
+    "position": 0.2916666666666667
+  }
+]

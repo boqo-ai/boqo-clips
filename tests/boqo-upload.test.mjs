@@ -5,7 +5,7 @@ import http from "node:http";
 import { mkdtemp, writeFile, readFile, stat, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { captionFilename, contentTypeOf, probeVerdict, partsFromReply, putParts, run } from "../engine/boqo-upload-lib.mjs";
+import { audioContentTypeOf, captionFilename, contentTypeOf, probeVerdict, partsFromReply, putParts, run } from "../engine/boqo-upload-lib.mjs";
 
 const FEED = {
   streams: [
@@ -250,4 +250,87 @@ test("probeVerdict names Instagram's 300 MB cap", () => {
   assert.equal(over.passthrough, false);
   assert.ok(over.reasons.includes("over 300 MB (Instagram)"), over.reasons.join("; "));
   assert.ok(probeVerdict(FEED, 2_147_483_649).reasons.includes("over 2 GiB"));
+});
+
+test("run caption gives the words for each platform, as hosted writes them from a title and a hook", async () => {
+  const { code, line } = await run(["caption", "--title", "The eight hour stream", "--hook", "He did not see this coming", "--tags", "#clips, gaming"], {});
+  assert.equal(code, 0);
+  assert.deepEqual(JSON.parse(line), {
+    tiktok: { text: "He did not see this coming\n\nThe eight hour stream\n\n#clips #gaming" },
+    instagram: { text: "He did not see this coming\n\nThe eight hour stream\n\n#clips #gaming" },
+    youtube: { title: "The eight hour stream", text: "He did not see this coming\n\n#clips #gaming" },
+  });
+  const bare = JSON.parse((await run(["caption", "--title", "Only a title"], {})).line);
+  assert.deepEqual(bare.tiktok, { text: "Only a title" });
+  assert.deepEqual(bare.youtube, { title: "Only a title", text: "" });
+});
+
+test("run caption refuses a missing title, a stray argument and a tag with a space", async () => {
+  for (const args of [["caption"], ["caption", "--hook", "h"], ["caption", "--title", "t", "extra"], ["caption", "--title", "t", "--tags", "two words"]]) {
+    const { code, line } = await run(args, {});
+    assert.equal(code, 1, args.join(" "));
+    assert.ok(JSON.parse(line).error);
+  }
+});
+
+// ---- audio for boqo's transcribe tool
+
+test("audioContentTypeOf maps the containers boqo's transcribe measures, and refuses mp3, raw aac and video", () => {
+  assert.equal(audioContentTypeOf("/r/audio.m4a"), "audio/mp4");
+  assert.equal(audioContentTypeOf("/r/audio.WEBM"), "audio/webm");
+  assert.equal(audioContentTypeOf("a.opus"), "audio/ogg");
+  assert.equal(audioContentTypeOf("a.ogg"), "audio/ogg");
+  assert.equal(audioContentTypeOf("a.flac"), "audio/flac");
+  assert.equal(audioContentTypeOf("a.wav"), "audio/wav");
+  for (const name of ["a.mp3", "a.aac", "a.mp4", "a"]) assert.throws(() => audioContentTypeOf(name), /m4a, webm, ogg, opus, flac or wav/, name);
+});
+
+test("run probe-audio gives the size, the content type and the length of an audio file; a file with video is refused", async () => {
+  const audio = { streams: [{ codec_type: "audio", codec_name: "aac" }], format: { duration: "1501.2" } };
+  const deps = { exec: async () => ({ stdout: JSON.stringify(audio) }), stat: async () => ({ size: 12_000_000 }), now: () => new Date() };
+  const ok = await run(["probe-audio", "/r/audio.m4a"], deps);
+  assert.equal(ok.code, 0, ok.line);
+  assert.deepEqual(JSON.parse(ok.line), { file: "/r/audio.m4a", sizeBytes: 12_000_000, contentType: "audio/mp4", durationSec: 1501.2, minutes: 26, credits: 3 });
+  const video = await run(["probe-audio", "/r/audio.m4a"], { ...deps, exec: async () => ({ stdout: JSON.stringify(FEED) }) });
+  assert.equal(video.code, 1);
+  assert.match(JSON.parse(video.line).error, /has a video stream/);
+  const mp3 = await run(["probe-audio", "/r/audio.mp3"], deps);
+  assert.equal(mp3.code, 1);
+  assert.match(JSON.parse(mp3.line).error, /m4a, webm/);
+  const none = await run(["probe-audio", "/r/audio.m4a"], { ...deps, exec: async () => ({ stdout: JSON.stringify({ streams: [], format: {} }) }) });
+  assert.equal(none.code, 1);
+  assert.match(JSON.parse(none.line).error, /no audio stream/);
+});
+
+test("run probe-audio: credits are 1 for each started 10 minutes, at least 1", async () => {
+  const at = async (sec) => {
+    const deps = { exec: async () => ({ stdout: JSON.stringify({ streams: [{ codec_type: "audio" }], format: { duration: String(sec) } }) }), stat: async () => ({ size: 1 }), now: () => new Date() };
+    const out = JSON.parse((await run(["probe-audio", "/r/a.m4a"], deps)).line);
+    return [out.minutes, out.credits];
+  };
+  assert.deepEqual(await at(5), [1, 1]);
+  assert.deepEqual(await at(600), [10, 1]);
+  assert.deepEqual(await at(600.5), [11, 2]);
+  assert.deepEqual(await at(3600), [60, 6]);
+});
+
+test("run put takes a transcribe upload's reply (upload_id) and prints that id, never a URL", async () => {
+  const { dir, path } = await tmpFile(Buffer.from("0123456789"));
+  try {
+    const reply = { upload_id: "u1-m4a", expiresAt: "2026-11-12T12:00:00Z", parts: [{ partNumber: 1, offset: 0, size: 10, url: "https://r2.example/a?X-Amz-Signature=abc" }] };
+    const replyPath = join(dir, "reply.json");
+    await writeFile(replyPath, JSON.stringify(reply));
+    const deps = { exec: async () => assert.fail("no ffprobe"), fetch: async () => ({ status: 200 }), sleep: async () => {}, readFile, stat, now: () => new Date("2026-11-10T12:00:00Z") };
+    const ok = await run(["put", path, "--reply", replyPath], deps);
+    assert.equal(ok.code, 0, ok.line);
+    assert.deepEqual(JSON.parse(ok.line), { ok: true, upload_id: "u1-m4a", parts: 1, bytes: 10 });
+    const bad = await run(["put", path, "--reply", replyPath], { ...deps, fetch: async () => ({ status: 403 }) });
+    assert.deepEqual(JSON.parse(bad.line), { ok: false, upload_id: "u1-m4a", partNumber: 1, status: 403 });
+    await writeFile(replyPath, JSON.stringify({ ...reply, projectId: "p1" }));
+    const both = await run(["put", path, "--reply", replyPath], deps);
+    assert.equal(both.code, 1);
+    assert.match(JSON.parse(both.line).error, /exactly one of projectId and upload_id/);
+  } finally {
+    await rm(dir, { recursive: true });
+  }
 });

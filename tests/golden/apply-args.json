@@ -1,0 +1,272 @@
+{
+  "CLIP_LOUDNESS": {
+    "integrated": -14,
+    "truePeak": -1,
+    "lra": 7
+  },
+  "targets": [
+    {
+      "l": null,
+      "target": {
+        "integrated": -14,
+        "truePeak": -1,
+        "lra": 7
+      }
+    },
+    {
+      "l": -14,
+      "target": {
+        "integrated": -14,
+        "truePeak": -1,
+        "lra": 7
+      }
+    },
+    {
+      "l": -16,
+      "target": {
+        "integrated": -16,
+        "truePeak": -1,
+        "lra": 7
+      }
+    },
+    {
+      "l": "off",
+      "target": null
+    }
+  ],
+  "measure": [
+    [
+      "-hide_banner",
+      "-nostats",
+      "-filter_threads",
+      "1",
+      "-threads",
+      "1",
+      "-i",
+      "/scratch/clip dir/clip.mp4",
+      "-vn",
+      "-af",
+      "loudnorm=I=-14:TP=-1:LRA=7:print_format=json",
+      "-f",
+      "null",
+      "-"
+    ],
+    [
+      "-hide_banner",
+      "-nostats",
+      "-filter_threads",
+      "1",
+      "-threads",
+      "1",
+      "-i",
+      "/scratch/clip dir/clip.mp4",
+      "-vn",
+      "-af",
+      "loudnorm=I=-16:TP=-1:LRA=7:print_format=json",
+      "-f",
+      "null",
+      "-"
+    ],
+    [
+      "-hide_banner",
+      "-nostats",
+      "-filter_threads",
+      "1",
+      "-threads",
+      "1",
+      "-i",
+      "/scratch/clip dir/clip.mp4",
+      "-vn",
+      "-af",
+      "loudnorm=I=-9:TP=-1:LRA=7:print_format=json",
+      "-f",
+      "null",
+      "-"
+    ]
+  ],
+  "apply": [
+    [
+      "-hide_banner",
+      "-nostats",
+      "-y",
+      "-filter_threads",
+      "1",
+      "-threads",
+      "1",
+      "-i",
+      "/scratch/clip dir/clip.mp4",
+      "-c:v",
+      "copy",
+      "-af",
+      "loudnorm=I=-14:TP=-1:LRA=7:measured_I=-21.75:measured_TP=-18.06:measured_LRA=0:measured_thresh=-31.75:offset=-0.05:linear=true:print_format=json",
+      "-ar",
+      "48000",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "192k",
+      "-movflags",
+      "+faststart",
+      "/scratch/clip dir/clip-loud.mp4"
+    ],
+    [
+      "-hide_banner",
+      "-nostats",
+      "-y",
+      "-filter_threads",
+      "1",
+      "-threads",
+      "1",
+      "-i",
+      "/scratch/clip dir/clip.mp4",
+      "-c:v",
+      "copy",
+      "-af",
+      "loudnorm=I=-14:TP=-1:LRA=7:measured_I=-30.12:measured_TP=-3.5:measured_LRA=11.2:measured_thresh=-40.2:offset=0.3:linear=true:print_format=json",
+      "-ar",
+      "48000",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "192k",
+      "-movflags",
+      "+faststart",
+      "/scratch/clip dir/clip-loud.mp4"
+    ],
+    [
+      "-hide_banner",
+      "-nostats",
+      "-y",
+      "-filter_threads",
+      "1",
+      "-threads",
+      "1",
+      "-i",
+      "/scratch/clip dir/clip.mp4",
+      "-c:v",
+      "copy",
+      "-af",
+      "loudnorm=I=-16:TP=-1:LRA=7:measured_I=-21.75:measured_TP=-18.06:measured_LRA=0:measured_thresh=-31.75:offset=-0.05:linear=true:print_format=json",
+      "-ar",
+      "48000",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "192k",
+      "-movflags",
+      "+faststart",
+      "/scratch/clip dir/clip-loud.mp4"
+    ],
+    [
+      "-hide_banner",
+      "-nostats",
+      "-y",
+      "-filter_threads",
+      "1",
+      "-threads",
+      "1",
+      "-i",
+      "/scratch/clip dir/clip.mp4",
+      "-c:v",
+      "copy",
+      "-af",
+      "loudnorm=I=-16:TP=-1:LRA=7:measured_I=-30.12:measured_TP=-3.5:measured_LRA=11.2:measured_thresh=-40.2:offset=0.3:linear=true:print_format=json",
+      "-ar",
+      "48000",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "192k",
+      "-movflags",
+      "+faststart",
+      "/scratch/clip dir/clip-loud.mp4"
+    ],
+    [
+      "-hide_banner",
+      "-nostats",
+      "-y",
+      "-filter_threads",
+      "1",
+      "-threads",
+      "1",
+      "-i",
+      "/scratch/clip dir/clip.mp4",
+      "-c:v",
+      "copy",
+      "-af",
+      "loudnorm=I=-9:TP=-1:LRA=7:measured_I=-21.75:measured_TP=-18.06:measured_LRA=0:measured_thresh=-31.75:offset=-0.05:linear=true:print_format=json",
+      "-ar",
+      "48000",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "192k",
+      "-movflags",
+      "+faststart",
+      "/scratch/clip dir/clip-loud.mp4"
+    ],
+    [
+      "-hide_banner",
+      "-nostats",
+      "-y",
+      "-filter_threads",
+      "1",
+      "-threads",
+      "1",
+      "-i",
+      "/scratch/clip dir/clip.mp4",
+      "-c:v",
+      "copy",
+      "-af",
+      "loudnorm=I=-9:TP=-1:LRA=7:measured_I=-30.12:measured_TP=-3.5:measured_LRA=11.2:measured_thresh=-40.2:offset=0.3:linear=true:print_format=json",
+      "-ar",
+      "48000",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "192k",
+      "-movflags",
+      "+faststart",
+      "/scratch/clip dir/clip-loud.mp4"
+    ]
+  ],
+  "parsed": [
+    {
+      "input_i": "-21.75",
+      "input_tp": "-18.06",
+      "input_lra": "0.00",
+      "input_thresh": "-31.75",
+      "output_i": "-13.95",
+      "output_tp": "-10.27",
+      "output_lra": "0.00",
+      "output_thresh": "-23.95",
+      "normalization_type": "dynamic",
+      "target_offset": "-0.05"
+    },
+    {
+      "input_i": "-21.75",
+      "input_tp": "-18.06",
+      "input_lra": "0.00",
+      "input_thresh": "-31.75",
+      "output_i": "-13.95",
+      "output_tp": "-10.27",
+      "output_lra": "0.00",
+      "output_thresh": "-23.95",
+      "normalization_type": "dynamic",
+      "target_offset": "-0.05"
+    },
+    null,
+    null,
+    {
+      "input_i": "-inf",
+      "input_tp": "-inf"
+    },
+    null,
+    {
+      "input_i": "-20.00",
+      "input_tp": "-2.00"
+    },
+    null,
+    {}
+  ]
+}

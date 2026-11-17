@@ -1,0 +1,10 @@
+{
+ "cases": [
+  {
+   "fromStreamMoment": false
+  },
+  {
+   "fromStreamMoment": true
+  }
+ ]
+}

@@ -8,4 +8,18 @@ tools/brand.mjs -text
 tools/asr.mjs -text
 tools/boqo-upload.mjs -text
 tools/transcript.mjs -text
+tools/select-request.mjs -text
+tools/select-check.mjs -text
+tools/clips.mjs -text
+tools/stranger.mjs -text
+tools/transcript-boqo.mjs -text
+tools/panels.mjs -text
+scripts/parity/golden.mjs -text
+scripts/parity/strip.mjs -text
+scripts/boqo-drift.mjs -text
+tests/helpers/golden.mjs -text
 # boqo-engine:end
+
+# The skill docs: LF on every checkout (a Windows checkout would write CRLF), so byte compares against them hold.
+# Outside the managed block on purpose: skills/ is per repo, not shared engine.
+skills/** text eol=lf

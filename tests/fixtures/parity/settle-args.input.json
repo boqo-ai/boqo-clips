@@ -1,0 +1,19 @@
+{
+ "cases": [
+  {
+   "name": "half a second plus pre-roll before the edge",
+   "sourceUrl": "https://example.test/source.mp4",
+   "endSec": 545.355
+  },
+  {
+   "name": "never seeks before zero",
+   "sourceUrl": "u",
+   "endSec": 0.3
+  },
+  {
+   "name": "a local path",
+   "sourceUrl": "/tmp/in.mp4",
+   "endSec": 12
+  }
+ ]
+}

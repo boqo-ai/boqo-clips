@@ -1,0 +1,402 @@
+{
+ "cases": [
+  {
+   "name": "no panels shot",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": []
+  },
+  {
+   "name": "one panels shot",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": []
+  },
+  {
+   "name": "the lowest seam of two",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 3
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 500
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 3,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 640
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": []
+  },
+  {
+   "name": "a headline on the seam over the shot pushes the floor down",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": [
+    {
+     "text": "SEAM TITLE",
+     "positionFraction": 0.3125,
+     "span": {
+      "startSec": 0,
+      "endSec": 3
+     }
+    }
+   ]
+  },
+  {
+   "name": "a headline within the seam tolerance",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 496
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": [
+    {
+     "text": "SEAM TITLE",
+     "positionFraction": 0.25833333333333336,
+     "span": {
+      "startSec": 0,
+      "endSec": 3
+     }
+    }
+   ]
+  },
+  {
+   "name": "a headline above the seam (centred in the band)",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": [
+    {
+     "text": "Top title",
+     "positionFraction": 0.14,
+     "span": {
+      "startSec": 0,
+      "endSec": 3
+     }
+    }
+   ]
+  },
+  {
+   "name": "a headline below the seam does not count",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": [
+    {
+     "text": "Low title",
+     "positionFraction": 0.5,
+     "span": {
+      "startSec": 0,
+      "endSec": 3
+     }
+    }
+   ]
+  },
+  {
+   "name": "a headline on a seam only outside its span",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 3
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 3,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": [
+    {
+     "text": "Late title",
+     "positionFraction": 0.3125,
+     "span": {
+      "startSec": 4,
+      "endSec": 6
+     }
+    }
+   ]
+  },
+  {
+   "name": "a headline with no span counts for the whole clip",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 3
+     },
+     "placement": {
+      "kind": "crop"
+     }
+    },
+    {
+     "shotIndex": 1,
+     "shot": {
+      "startSec": 3,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": [
+    {
+     "text": "Whole clip title",
+     "positionFraction": 0.3125,
+     "span": null
+    }
+   ]
+  },
+  {
+   "name": "two headlines, the lower bottom wins",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 600
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": [
+    {
+     "text": "ONE",
+     "positionFraction": 0.2,
+     "span": {
+      "startSec": 0,
+      "endSec": 6
+     }
+    },
+    {
+     "text": "A much longer second headline that wraps onto two lines of the plate",
+     "positionFraction": 0.3125,
+     "span": {
+      "startSec": 0,
+      "endSec": 6
+     }
+    }
+   ]
+  },
+  {
+   "name": "a headline 0.45 px below the seam (inside the tolerance)",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 496
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": [
+    {
+     "text": "EDGE TITLE",
+     "positionFraction": 0.2585677083333333,
+     "span": {
+      "startSec": 0,
+      "endSec": 3
+     }
+    }
+   ]
+  },
+  {
+   "name": "a headline 0.55 px below the seam (outside the tolerance)",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 496
+     }
+    }
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "text": [
+    {
+     "text": "EDGE TITLE",
+     "positionFraction": 0.25861979166666665,
+     "span": {
+      "startSec": 0,
+      "endSec": 3
+     }
+    }
+   ]
+  },
+  {
+   "name": "a 720x1280 output",
+   "placed": [
+    {
+     "shotIndex": 0,
+     "shot": {
+      "startSec": 0,
+      "endSec": 6
+     },
+     "placement": {
+      "kind": "panels",
+      "topHeight": 400
+     }
+    }
+   ],
+   "output": {
+    "width": 720,
+    "height": 1280
+   },
+   "text": [
+    {
+     "text": "SMALL",
+     "positionFraction": 0.3125,
+     "span": {
+      "startSec": 0,
+      "endSec": 6
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2012 @@
+{
+ "cases": [
+  {
+   "name": "a stream: panels with a face, game, people, then a tie",
+   "frame": {
+    "width": 1920,
+    "height": 1080
+   },
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "subjectRule": "speaker",
+   "startSec": 0,
+   "cuts": [],
+   "layout": "auto",
+   "gameZoom": 1,
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 4
+    },
+    {
+     "startSec": 4,
+     "endSec": 8
+    },
+    {
+     "startSec": 8,
+     "endSec": 12
+    },
+    {
+     "startSec": 12,
+     "endSec": 16
+    }
+   ],
+   "faces": [
+    {
+     "shotIndex": 0,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.82,
+       "y": 0.1,
+       "width": 0.06,
+       "height": 0.13,
+       "faceCentreX": 0.85,
+       "eyeLineY": 0.1455,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.85,
+         "cy": 0.17
+        },
+        {
+         "t": 0.625,
+         "cx": 0.852,
+         "cy": 0.17
+        },
+        {
+         "t": 1.125,
+         "cx": 0.854,
+         "cy": 0.17
+        },
+        {
+         "t": 1.625,
+         "cx": 0.856,
+         "cy": 0.17
+        },
+        {
+         "t": 2.125,
+         "cx": 0.858,
+         "cy": 0.17
+        },
+        {
+         "t": 2.625,
+         "cx": 0.86,
+         "cy": 0.17
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "shotIndex": 1,
+     "faces": []
+    },
+    {
+     "shotIndex": 2,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.45,
+       "y": 0.3,
+       "width": 0.1,
+       "height": 0.2,
+       "faceCentreX": 0.5,
+       "eyeLineY": 0.37,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.5,
+         "cy": 0.4
+        },
+        {
+         "t": 0.625,
+         "cx": 0.502,
+         "cy": 0.4
+        },
+        {
+         "t": 1.125,
+         "cx": 0.504,
+         "cy": 0.4
+        },
+        {
+         "t": 1.625,
+         "cx": 0.506,
+         "cy": 0.4
+        },
+        {
+         "t": 2.125,
+         "cx": 0.508,
+         "cy": 0.4
+        },
+        {
+         "t": 2.625,
+         "cx": 0.51,
+         "cy": 0.4
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "shotIndex": 3,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.2,
+       "y": 0.2,
+       "width": 0.08,
+       "height": 0.16,
+       "faceCentreX": 0.24,
+       "eyeLineY": 0.256,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.24,
+         "cy": 0.28
+        },
+        {
+         "t": 0.625,
+         "cx": 0.242,
+         "cy": 0.28
+        },
+        {
+         "t": 1.125,
+         "cx": 0.244,
+         "cy": 0.28
+        },
+        {
+         "t": 1.625,
+         "cx": 0.246,
+         "cy": 0.28
+        },
+        {
+         "t": 2.125,
+         "cx": 0.248,
+         "cy": 0.28
+        },
+        {
+         "t": 2.625,
+         "cx": 0.25,
+         "cy": 0.28
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3836,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4137,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3254,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5316,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5804,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 7.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6657,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8.5,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.3,
+       "y": 0.1,
+       "w": 0.4,
+       "h": 0.8
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 10.5,
+     "mode": "people",
+     "cameras": [
+      {
+       "x": 0.3,
+       "y": 0.1,
+       "w": 0.4,
+       "h": 0.8
+      }
+     ],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 12.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 14,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": null,
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a stream with no face found anywhere",
+   "frame": {
+    "width": 1920,
+    "height": 1080
+   },
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "subjectRule": "speaker",
+   "startSec": 0,
+   "cuts": [],
+   "layout": "auto",
+   "gameZoom": 1,
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5
+    },
+    {
+     "startSec": 5,
+     "endSec": 10
+    }
+   ],
+   "faces": [
+    {
+     "shotIndex": 0,
+     "faces": []
+    },
+    {
+     "shotIndex": 1,
+     "faces": []
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5336,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5637,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4754,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4329,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5151,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5693,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4947,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a stream through a cut at 100 s",
+   "frame": {
+    "width": 1920,
+    "height": 1080
+   },
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "subjectRule": "speaker",
+   "startSec": 100,
+   "cuts": [
+    {
+     "start": 2.2,
+     "end": 3.4
+    }
+   ],
+   "layout": "auto",
+   "gameZoom": 1,
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2.2
+    },
+    {
+     "startSec": 2.2,
+     "endSec": 5.6
+    },
+    {
+     "startSec": 5.6,
+     "endSec": 8.6
+    }
+   ],
+   "faces": [
+    {
+     "shotIndex": 0,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.82,
+       "y": 0.1,
+       "width": 0.06,
+       "height": 0.13,
+       "faceCentreX": 0.85,
+       "eyeLineY": 0.1455,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.85,
+         "cy": 0.17
+        },
+        {
+         "t": 0.625,
+         "cx": 0.852,
+         "cy": 0.17
+        },
+        {
+         "t": 1.125,
+         "cx": 0.854,
+         "cy": 0.17
+        },
+        {
+         "t": 1.625,
+         "cx": 0.856,
+         "cy": 0.17
+        },
+        {
+         "t": 2.125,
+         "cx": 0.858,
+         "cy": 0.17
+        },
+        {
+         "t": 2.625,
+         "cx": 0.86,
+         "cy": 0.17
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "shotIndex": 1,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.82,
+       "y": 0.1,
+       "width": 0.06,
+       "height": 0.13,
+       "faceCentreX": 0.85,
+       "eyeLineY": 0.1455,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.85,
+         "cy": 0.17
+        },
+        {
+         "t": 0.625,
+         "cx": 0.852,
+         "cy": 0.17
+        },
+        {
+         "t": 1.125,
+         "cx": 0.854,
+         "cy": 0.17
+        },
+        {
+         "t": 1.625,
+         "cx": 0.856,
+         "cy": 0.17
+        },
+        {
+         "t": 2.125,
+         "cx": 0.858,
+         "cy": 0.17
+        },
+        {
+         "t": 2.625,
+         "cx": 0.86,
+         "cy": 0.17
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "shotIndex": 2,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.82,
+       "y": 0.1,
+       "width": 0.06,
+       "height": 0.13,
+       "faceCentreX": 0.85,
+       "eyeLineY": 0.1455,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.85,
+         "cy": 0.17
+        },
+        {
+         "t": 0.625,
+         "cx": 0.852,
+         "cy": 0.17
+        },
+        {
+         "t": 1.125,
+         "cx": 0.854,
+         "cy": 0.17
+        },
+        {
+         "t": 1.625,
+         "cx": 0.856,
+         "cy": 0.17
+        },
+        {
+         "t": 2.125,
+         "cx": 0.858,
+         "cy": 0.17
+        },
+        {
+         "t": 2.625,
+         "cx": 0.86,
+         "cy": 0.17
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 100.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 102.4,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 103.6,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 105,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 107,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a shot with no sample borrows the nearest",
+   "frame": {
+    "width": 1920,
+    "height": 1080
+   },
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "subjectRule": "speaker",
+   "startSec": 0,
+   "cuts": [],
+   "layout": "auto",
+   "gameZoom": 1,
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 2
+    },
+    {
+     "startSec": 2,
+     "endSec": 8
+    },
+    {
+     "startSec": 8,
+     "endSec": 10
+    }
+   ],
+   "faces": [
+    {
+     "shotIndex": 0,
+     "faces": []
+    },
+    {
+     "shotIndex": 1,
+     "faces": []
+    },
+    {
+     "shotIndex": 2,
+     "faces": []
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.5,
+     "mode": "game",
+     "cameras": [],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.6,
+      "y": 0.4,
+      "w": 0.1,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "the fit pin ignores the reading",
+   "frame": {
+    "width": 1920,
+    "height": 1080
+   },
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "subjectRule": "speaker",
+   "startSec": 0,
+   "cuts": [],
+   "layout": "fit",
+   "gameZoom": 1,
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 4
+    },
+    {
+     "startSec": 4,
+     "endSec": 8
+    }
+   ],
+   "faces": [
+    {
+     "shotIndex": 0,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.82,
+       "y": 0.1,
+       "width": 0.06,
+       "height": 0.13,
+       "faceCentreX": 0.85,
+       "eyeLineY": 0.1455,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.85,
+         "cy": 0.17
+        },
+        {
+         "t": 0.625,
+         "cx": 0.852,
+         "cy": 0.17
+        },
+        {
+         "t": 1.125,
+         "cx": 0.854,
+         "cy": 0.17
+        },
+        {
+         "t": 1.625,
+         "cx": 0.856,
+         "cy": 0.17
+        },
+        {
+         "t": 2.125,
+         "cx": 0.858,
+         "cy": 0.17
+        },
+        {
+         "t": 2.625,
+         "cx": 0.86,
+         "cy": 0.17
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "shotIndex": 1,
+     "faces": []
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5336,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5637,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4754,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4329,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5151,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "every reading none: planLayout places it",
+   "frame": {
+    "width": 1920,
+    "height": 1080
+   },
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "subjectRule": "speaker",
+   "startSec": 0,
+   "cuts": [],
+   "layout": "auto",
+   "gameZoom": 1,
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 4
+    },
+    {
+     "startSec": 4,
+     "endSec": 8
+    }
+   ],
+   "faces": [
+    {
+     "shotIndex": 0,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.2,
+       "y": 0.2,
+       "width": 0.08,
+       "height": 0.16,
+       "faceCentreX": 0.24,
+       "eyeLineY": 0.256,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.24,
+         "cy": 0.28
+        },
+        {
+         "t": 0.625,
+         "cx": 0.242,
+         "cy": 0.28
+        },
+        {
+         "t": 1.125,
+         "cx": 0.244,
+         "cy": 0.28
+        },
+        {
+         "t": 1.625,
+         "cx": 0.246,
+         "cy": 0.28
+        },
+        {
+         "t": 2.125,
+         "cx": 0.248,
+         "cy": 0.28
+        },
+        {
+         "t": 2.625,
+         "cx": 0.25,
+         "cy": 0.28
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "shotIndex": 1,
+     "faces": []
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 1,
+     "mode": "none",
+     "cameras": [],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "none",
+     "cameras": [],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a podcast on the presence rule with a panels reading on one shot",
+   "frame": {
+    "width": 1920,
+    "height": 1080
+   },
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "subjectRule": "presence",
+   "startSec": 0,
+   "cuts": [],
+   "layout": "auto",
+   "gameZoom": 1,
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 4
+    },
+    {
+     "startSec": 4,
+     "endSec": 8
+    }
+   ],
+   "faces": [
+    {
+     "shotIndex": 0,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.2,
+       "y": 0.2,
+       "width": 0.08,
+       "height": 0.16,
+       "faceCentreX": 0.24,
+       "eyeLineY": 0.256,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.24,
+         "cy": 0.28
+        },
+        {
+         "t": 0.625,
+         "cx": 0.242,
+         "cy": 0.28
+        },
+        {
+         "t": 1.125,
+         "cx": 0.244,
+         "cy": 0.28
+        },
+        {
+         "t": 1.625,
+         "cx": 0.246,
+         "cy": 0.28
+        },
+        {
+         "t": 2.125,
+         "cx": 0.248,
+         "cy": 0.28
+        },
+        {
+         "t": 2.625,
+         "cx": 0.25,
+         "cy": 0.28
+        }
+       ]
+      },
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.7,
+       "y": 0.22,
+       "width": 0.08,
+       "height": 0.16,
+       "faceCentreX": 0.74,
+       "eyeLineY": 0.276,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.74,
+         "cy": 0.3
+        },
+        {
+         "t": 0.625,
+         "cx": 0.742,
+         "cy": 0.3
+        },
+        {
+         "t": 1.125,
+         "cx": 0.744,
+         "cy": 0.3
+        },
+        {
+         "t": 1.625,
+         "cx": 0.746,
+         "cy": 0.3
+        },
+        {
+         "t": 2.125,
+         "cx": 0.748,
+         "cy": 0.3
+        },
+        {
+         "t": 2.625,
+         "cx": 0.75,
+         "cy": 0.3
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "shotIndex": 1,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.82,
+       "y": 0.1,
+       "width": 0.06,
+       "height": 0.13,
+       "faceCentreX": 0.85,
+       "eyeLineY": 0.1455,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.85,
+         "cy": 0.17
+        },
+        {
+         "t": 0.625,
+         "cx": 0.852,
+         "cy": 0.17
+        },
+        {
+         "t": 1.125,
+         "cx": 0.854,
+         "cy": 0.17
+        },
+        {
+         "t": 1.625,
+         "cx": 0.856,
+         "cy": 0.17
+        },
+        {
+         "t": 2.125,
+         "cx": 0.858,
+         "cy": 0.17
+        },
+        {
+         "t": 2.625,
+         "cx": 0.86,
+         "cy": 0.17
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "none",
+     "cameras": [],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 2.5,
+     "mode": "none",
+     "cameras": [],
+     "game": null,
+     "focus": null,
+     "why": "x"
+    },
+    {
+     "sourceSec": 4.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3316,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3804,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 7.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4657,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "1280x720 stream with a game zoom of 1",
+   "frame": {
+    "width": 1280,
+    "height": 720
+   },
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "subjectRule": "speaker",
+   "startSec": 0,
+   "cuts": [],
+   "layout": "auto",
+   "gameZoom": 1,
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 6
+    }
+   ],
+   "faces": [
+    {
+     "shotIndex": 0,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.82,
+       "y": 0.1,
+       "width": 0.06,
+       "height": 0.13,
+       "faceCentreX": 0.85,
+       "eyeLineY": 0.1455,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.85,
+         "cy": 0.17
+        },
+        {
+         "t": 0.625,
+         "cx": 0.852,
+         "cy": 0.17
+        },
+        {
+         "t": 1.125,
+         "cx": 0.854,
+         "cy": 0.17
+        },
+        {
+         "t": 1.625,
+         "cx": 0.856,
+         "cy": 0.17
+        },
+        {
+         "t": 2.125,
+         "cx": 0.858,
+         "cy": 0.17
+        },
+        {
+         "t": 2.625,
+         "cx": 0.86,
+         "cy": 0.17
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5336,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5637,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4754,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4329,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  },
+  {
+   "name": "a game zoom of 2 on a game-and-camera stream",
+   "frame": {
+    "width": 1920,
+    "height": 1080
+   },
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "subjectRule": "speaker",
+   "startSec": 0,
+   "cuts": [],
+   "layout": "auto",
+   "gameZoom": 2,
+   "shots": [
+    {
+     "startSec": 0,
+     "endSec": 5
+    },
+    {
+     "startSec": 5,
+     "endSec": 10
+    }
+   ],
+   "faces": [
+    {
+     "shotIndex": 0,
+     "faces": [
+      {
+       "confidence": 0.92,
+       "mouthMotion": 0.00002,
+       "x": 0.82,
+       "y": 0.1,
+       "width": 0.06,
+       "height": 0.13,
+       "faceCentreX": 0.85,
+       "eyeLineY": 0.1455,
+       "facing": 0.1,
+       "coverage": 1,
+       "track": [
+        {
+         "t": 0.125,
+         "cx": 0.85,
+         "cy": 0.17
+        },
+        {
+         "t": 0.625,
+         "cx": 0.852,
+         "cy": 0.17
+        },
+        {
+         "t": 1.125,
+         "cx": 0.854,
+         "cy": 0.17
+        },
+        {
+         "t": 1.625,
+         "cx": 0.856,
+         "cy": 0.17
+        },
+        {
+         "t": 2.125,
+         "cx": 0.858,
+         "cy": 0.17
+        },
+        {
+         "t": 2.625,
+         "cx": 0.86,
+         "cy": 0.17
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "shotIndex": 1,
+     "faces": []
+    }
+   ],
+   "samples": [
+    {
+     "sourceSec": 0.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4836,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 2,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5137,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 3.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4254,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.3829,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 6.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4651,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 8,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.5193,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    },
+    {
+     "sourceSec": 9.5,
+     "mode": "panels",
+     "cameras": [
+      {
+       "x": 0.72,
+       "y": 0.05,
+       "w": 0.26,
+       "h": 0.3
+      }
+     ],
+     "game": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+     },
+     "focus": {
+      "x": 0.4447,
+      "y": 0.4,
+      "w": 0.12,
+      "h": 0.2
+     },
+     "why": "x"
+    }
+   ]
+  }
+ ]
+}

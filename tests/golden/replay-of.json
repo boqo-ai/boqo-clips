@@ -1,0 +1,277 @@
+[
+  {
+    "name": "windows on a heatmap",
+    "replays": [
+      {
+        "v": 1,
+        "pct": 1,
+        "pctRaw": 1,
+        "heat": 1,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": 0.95,
+        "pctRaw": 0.95,
+        "heat": 0.9,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": 0.55,
+        "pctRaw": 0.85,
+        "heat": 0.425,
+        "discounted": true,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": 0.2,
+        "pctRaw": 0.2,
+        "heat": 0.31,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": 0.05,
+        "pctRaw": 0.05,
+        "heat": 0.265,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": 0.75,
+        "pctRaw": 0.65,
+        "heat": 0.54,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": 0.55,
+        "pctRaw": 0.85,
+        "heat": 0.425,
+        "discounted": true,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": 0.05,
+        "pctRaw": 0.05,
+        "heat": 0.25,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      }
+    ]
+  },
+  {
+    "name": "with a chapter discount and a sha",
+    "replays": [
+      {
+        "v": 1,
+        "pct": 0.8,
+        "pctRaw": 0.75,
+        "heat": 0.55,
+        "discounted": true,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": "abc1234",
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": 0.8,
+        "pctRaw": 0.75,
+        "heat": 0.55,
+        "discounted": true,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": "abc1234",
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": 0.7,
+        "pctRaw": 0.95,
+        "heat": 0.45,
+        "discounted": true,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": "abc1234",
+        "bins": 20
+      }
+    ]
+  },
+  {
+    "name": "custom tunables",
+    "replays": [
+      {
+        "v": 1,
+        "pct": 0.15,
+        "pctRaw": 0.75,
+        "heat": 0.167,
+        "discounted": true,
+        "factor": 0.25,
+        "introBins": 3,
+        "chapterBins": 2,
+        "sha": null,
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": 0.1,
+        "pctRaw": 0.35,
+        "heat": 0.094,
+        "discounted": true,
+        "factor": 0.25,
+        "introBins": 3,
+        "chapterBins": 2,
+        "sha": null,
+        "bins": 20
+      }
+    ]
+  },
+  {
+    "name": "window outside every bin",
+    "replays": [
+      {
+        "v": 1,
+        "pct": null,
+        "pctRaw": null,
+        "heat": null,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": null,
+        "pctRaw": null,
+        "heat": null,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      },
+      {
+        "v": 1,
+        "pct": null,
+        "pctRaw": null,
+        "heat": null,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 20
+      }
+    ]
+  },
+  {
+    "name": "no heatmap",
+    "replays": [
+      {
+        "v": 1,
+        "pct": null,
+        "pctRaw": null,
+        "heat": null,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 0
+      },
+      {
+        "v": 1,
+        "pct": null,
+        "pctRaw": null,
+        "heat": null,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 0
+      }
+    ]
+  },
+  {
+    "name": "flat heatmap",
+    "replays": [
+      {
+        "v": 1,
+        "pct": null,
+        "pctRaw": null,
+        "heat": null,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 0
+      }
+    ]
+  },
+  {
+    "name": "two bins only",
+    "replays": [
+      {
+        "v": 1,
+        "pct": null,
+        "pctRaw": null,
+        "heat": null,
+        "discounted": false,
+        "factor": 0.5,
+        "introBins": 2,
+        "chapterBins": 1,
+        "sha": null,
+        "bins": 0
+      }
+    ]
+  }
+]

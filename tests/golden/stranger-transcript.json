@@ -1,0 +1,295 @@
+{
+  "system": "You annotate short vertical video clips for a research study. You see keyframes sampled every 5 seconds (in order) and the timed transcript. Judge only what is visible or transcribed; where you must guess, pick the conservative option. You never see the audio track. Answer with the structured fields only.",
+  "transcripts": [
+    {
+      "name": "plain window, lines in file time",
+      "length": 35,
+      "text": "[0.0s] one\n[5.0s] two\n[10.0s] three"
+    },
+    {
+      "name": "a line already in progress at the window start is stamped there",
+      "length": 11,
+      "text": "[8.0s] next"
+    },
+    {
+      "name": "cuts shift later lines",
+      "length": 36,
+      "text": "[0.0s] a\n[3.0s] b\n[5.0s] c\n[10.0s] d"
+    },
+    {
+      "name": "a line inside a cut lands on the join",
+      "length": 12,
+      "text": "[6.0s] after"
+    },
+    {
+      "name": "hook lines first, then the window",
+      "length": 27,
+      "text": "[5.0s] opening\n[23.0s] late"
+    },
+    {
+      "name": "two hook ranges and a cut",
+      "length": 98,
+      "text": "[0.0s] one\n[2.0s] three\n[5.5s] four\n[7.0s] one\n[10.0s] two\n[13.5s] three\n[18.5s] four\n[23.5s] five"
+    },
+    {
+      "name": "render window differs from the pick",
+      "length": 26,
+      "text": "[0.0s] x\n[1.0s] y\n[7.0s] z"
+    },
+    {
+      "name": "no segments",
+      "length": 0,
+      "text": ""
+    },
+    {
+      "name": "no segment in the window",
+      "length": 0,
+      "text": ""
+    },
+    {
+      "name": "text is trimmed, interior spaces kept",
+      "length": 35,
+      "text": "[1.0s] spaced   out\n[7.0s] tab\there"
+    },
+    {
+      "name": "long transcript meets the 6000 cap",
+      "length": 6000,
+      "text": "[0.0s] synthetic line number 0 of the long case\n[1.5s] synthetic line number 1 of the long case\n[3.0s] synthetic line number 2 of the long case\n[4.5s] synthetic line number 3 of the long case\n[6.0s] synthetic line number 4 of the long case\n[7.5s] synthetic line number 5 of the long case\n[9.0s] synthetic line number 6 of the long case\n[10.5s] synthetic line number 7 of the long case\n[12.0s] synthetic line number 8 of the long case\n[13.5s] synthetic line number 9 of the long case\n[15.0s] synthetic line number 10 of the long case\n[16.5s] synthetic line number 11 of the long case\n[18.0s] synthetic line number 12 of the long case\n[19.5s] synthetic line number 13 of the long case\n[21.0s] synthetic line number 14 of the long case\n[22.5s] synthetic line number 15 of the long case\n[24.0s] synthetic line number 16 of the long case\n[25.5s] synthetic line number 17 of the long case\n[27.0s] synthetic line number 18 of the long case\n[28.5s] synthetic line number 19 of the long case\n[30.0s] synthetic line number 20 of the long case\n[31.5s] synthetic line number 21 of the long case\n[33.0s] synthetic line number 22 of the long case\n[34.5s] synthetic line number 23 of the long case\n[36.0s] synthetic line number 24 of the long case\n[37.5s] synthetic line number 25 of the long case\n[39.0s] synthetic line number 26 of the long case\n[40.5s] synthetic line number 27 of the long case\n[42.0s] synthetic line number 28 of the long case\n[43.5s] synthetic line number 29 of the long case\n[45.0s] synthetic line number 30 of the long case\n[46.5s] synthetic line number 31 of the long case\n[48.0s] synthetic line number 32 of the long case\n[49.5s] synthetic line number 33 of the long case\n[51.0s] synthetic line number 34 of the long case\n[52.5s] synthetic line number 35 of the long case\n[54.0s] synthetic line number 36 of the long case\n[55.5s] synthetic line number 37 of the long case\n[57.0s] synthetic line number 38 of the long case\n[58.5s] synthetic line number 39 of the long case\n[60.0s] synthetic line number 40 of the long case\n[61.5s] synthetic line number 41 of the long case\n[63.0s] synthetic line number 42 of the long case\n[64.5s] synthetic line number 43 of the long case\n[66.0s] synthetic line number 44 of the long case\n[67.5s] synthetic line number 45 of the long case\n[69.0s] synthetic line number 46 of the long case\n[70.5s] synthetic line number 47 of the long case\n[72.0s] synthetic line number 48 of the long case\n[73.5s] synthetic line number 49 of the long case\n[75.0s] synthetic line number 50 of the long case\n[76.5s] synthetic line number 51 of the long case\n[78.0s] synthetic line number 52 of the long case\n[79.5s] synthetic line number 53 of the long case\n[81.0s] synthetic line number 54 of the long case\n[82.5s] synthetic line number 55 of the long case\n[84.0s] synthetic line number 56 of the long case\n[85.5s] synthetic line number 57 of the long case\n[87.0s] synthetic line number 58 of the long case\n[88.5s] synthetic line number 59 of the long case\n[90.0s] synthetic line number 60 of the long case\n[91.5s] synthetic line number 61 of the long case\n[93.0s] synthetic line number 62 of the long case\n[94.5s] synthetic line number 63 of the long case\n[96.0s] synthetic line number 64 of the long case\n[97.5s] synthetic line number 65 of the long case\n[99.0s] synthetic line number 66 of the long case\n[100.5s] synthetic line number 67 of the long case\n[102.0s] synthetic line number 68 of the long case\n[103.5s] synthetic line number 69 of the long case\n[105.0s] synthetic line number 70 of the long case\n[106.5s] synthetic line number 71 of the long case\n[108.0s] synthetic line number 72 of the long case\n[109.5s] synthetic line number 73 of the long case\n[111.0s] synthetic line number 74 of the long case\n[112.5s] synthetic line number 75 of the long case\n[114.0s] synthetic line number 76 of the long case\n[115.5s] synthetic line number 77 of the long case\n[117.0s] synthetic line number 78 of the long case\n[118.5s] synthetic line number 79 of the long case\n[120.0s] synthetic line number 80 of the long case\n[121.5s] synthetic line number 81 of the long case\n[123.0s] synthetic line number 82 of the long case\n[124.5s] synthetic line number 83 of the long case\n[126.0s] synthetic line number 84 of the long case\n[127.5s] synthetic line number 85 of the long case\n[129.0s] synthetic line number 86 of the long case\n[130.5s] synthetic line number 87 of the long case\n[132.0s] synthetic line number 88 of the long case\n[133.5s] synthetic line number 89 of the long case\n[135.0s] synthetic line number 90 of the long case\n[136.5s] synthetic line number 91 of the long case\n[138.0s] synthetic line number 92 of the long case\n[139.5s] synthetic line number 93 of the long case\n[141.0s] synthetic line number 94 of the long case\n[142.5s] synthetic line number 95 of the long case\n[144.0s] synthetic line number 96 of the long case\n[145.5s] synthetic line number 97 of the long case\n[147.0s] synthetic line number 98 of the long case\n[148.5s] synthetic line number 99 of the long case\n[150.0s] synthetic line number 100 of the long case\n[151.5s] synthetic line number 101 of the long case\n[153.0s] synthetic line number 102 of the long case\n[154.5s] synthetic line number 103 of the long case\n[156.0s] synthetic line number 104 of the long case\n[157.5s] synthetic line number 105 of the long case\n[159.0s] synthetic line number 106 of the long case\n[160.5s] synthetic line number 107 of the long case\n[162.0s] synthetic line number 108 of the long case\n[163.5s] synthetic line number 109 of the long case\n[165.0s] synthetic line number 110 of the long case\n[166.5s] synthetic line number 111 of the long case\n[168.0s] synthetic line number 112 of the long case\n[169.5s] synthetic line number 113 of the long case\n[171.0s] synthetic line number 114 of the long case\n[172.5s] synthetic line number 115 of the long case\n[174.0s] synthetic line number 116 of the long case\n[175.5s] synthetic line number 117 of the long case\n[177.0s] synthetic line number 118 of the long c"
+    },
+    {
+      "name": "long, with astral characters",
+      "length": 6000,
+      "text": "[0.0s] pad 0 😀😀😀😀😀\n[2.0s] pad 1\n[4.0s] pad 2\n[6.0s] pad 3 😀😀😀😀😀\n[8.0s] pad 4\n[10.0s] pad 5\n[12.0s] pad 6 😀😀😀😀😀\n[14.0s] pad 7\n[16.0s] pad 8\n[18.0s] pad 9 😀😀😀😀😀\n[20.0s] pad 10\n[22.0s] pad 11\n[24.0s] pad 12 😀😀😀😀😀\n[26.0s] pad 13\n[28.0s] pad 14\n[30.0s] pad 15 😀😀😀😀😀\n[32.0s] pad 16\n[34.0s] pad 17\n[36.0s] pad 18 😀😀😀😀😀\n[38.0s] pad 19\n[40.0s] pad 20\n[42.0s] pad 21 😀😀😀😀😀\n[44.0s] pad 22\n[46.0s] pad 23\n[48.0s] pad 24 😀😀😀😀😀\n[50.0s] pad 25\n[52.0s] pad 26\n[54.0s] pad 27 😀😀😀😀😀\n[56.0s] pad 28\n[58.0s] pad 29\n[60.0s] pad 30 😀😀😀😀😀\n[62.0s] pad 31\n[64.0s] pad 32\n[66.0s] pad 33 😀😀😀😀😀\n[68.0s] pad 34\n[70.0s] pad 35\n[72.0s] pad 36 😀😀😀😀😀\n[74.0s] pad 37\n[76.0s] pad 38\n[78.0s] pad 39 😀😀😀😀😀\n[80.0s] pad 40\n[82.0s] pad 41\n[84.0s] pad 42 😀😀😀😀😀\n[86.0s] pad 43\n[88.0s] pad 44\n[90.0s] pad 45 😀😀😀😀😀\n[92.0s] pad 46\n[94.0s] pad 47\n[96.0s] pad 48 😀😀😀😀😀\n[98.0s] pad 49\n[100.0s] pad 50\n[102.0s] pad 51 😀😀😀😀😀\n[104.0s] pad 52\n[106.0s] pad 53\n[108.0s] pad 54 😀😀😀😀😀\n[110.0s] pad 55\n[112.0s] pad 56\n[114.0s] pad 57 😀😀😀😀😀\n[116.0s] pad 58\n[118.0s] pad 59\n[120.0s] pad 60 😀😀😀😀😀\n[122.0s] pad 61\n[124.0s] pad 62\n[126.0s] pad 63 😀😀😀😀😀\n[128.0s] pad 64\n[130.0s] pad 65\n[132.0s] pad 66 😀😀😀😀😀\n[134.0s] pad 67\n[136.0s] pad 68\n[138.0s] pad 69 😀😀😀😀😀\n[140.0s] pad 70\n[142.0s] pad 71\n[144.0s] pad 72 😀😀😀😀😀\n[146.0s] pad 73\n[148.0s] pad 74\n[150.0s] pad 75 😀😀😀😀😀\n[152.0s] pad 76\n[154.0s] pad 77\n[156.0s] pad 78 😀😀😀😀😀\n[158.0s] pad 79\n[160.0s] pad 80\n[162.0s] pad 81 😀😀😀😀😀\n[164.0s] pad 82\n[166.0s] pad 83\n[168.0s] pad 84 😀😀😀😀😀\n[170.0s] pad 85\n[172.0s] pad 86\n[174.0s] pad 87 😀😀😀😀😀\n[176.0s] pad 88\n[178.0s] pad 89\n[180.0s] pad 90 😀😀😀😀😀\n[182.0s] pad 91\n[184.0s] pad 92\n[186.0s] pad 93 😀😀😀😀😀\n[188.0s] pad 94\n[190.0s] pad 95\n[192.0s] pad 96 😀😀😀😀😀\n[194.0s] pad 97\n[196.0s] pad 98\n[198.0s] pad 99 😀😀😀😀😀\n[200.0s] pad 100\n[202.0s] pad 101\n[204.0s] pad 102 😀😀😀😀😀\n[206.0s] pad 103\n[208.0s] pad 104\n[210.0s] pad 105 😀😀😀😀😀\n[212.0s] pad 106\n[214.0s] pad 107\n[216.0s] pad 108 😀😀😀😀😀\n[218.0s] pad 109\n[220.0s] pad 110\n[222.0s] pad 111 😀😀😀😀😀\n[224.0s] pad 112\n[226.0s] pad 113\n[228.0s] pad 114 😀😀😀😀😀\n[230.0s] pad 115\n[232.0s] pad 116\n[234.0s] pad 117 😀😀😀😀😀\n[236.0s] pad 118\n[238.0s] pad 119\n[240.0s] pad 120 😀😀😀😀😀\n[242.0s] pad 121\n[244.0s] pad 122\n[246.0s] pad 123 😀😀😀😀😀\n[248.0s] pad 124\n[250.0s] pad 125\n[252.0s] pad 126 😀😀😀😀😀\n[254.0s] pad 127\n[256.0s] pad 128\n[258.0s] pad 129 😀😀😀😀😀\n[260.0s] pad 130\n[262.0s] pad 131\n[264.0s] pad 132 😀😀😀😀😀\n[266.0s] pad 133\n[268.0s] pad 134\n[270.0s] pad 135 😀😀😀😀😀\n[272.0s] pad 136\n[274.0s] pad 137\n[276.0s] pad 138 😀😀😀😀😀\n[278.0s] pad 139\n[280.0s] pad 140\n[282.0s] pad 141 😀😀😀😀😀\n[284.0s] pad 142\n[286.0s] pad 143\n[288.0s] pad 144 😀😀😀😀😀\n[290.0s] pad 145\n[292.0s] pad 146\n[294.0s] pad 147 😀😀😀😀😀\n[296.0s] pad 148\n[298.0s] pad 149\n[300.0s] pad 150 😀😀😀😀😀\n[302.0s] pad 151\n[304.0s] pad 152\n[306.0s] pad 153 😀😀😀😀😀\n[308.0s] pad 154\n[310.0s] pad 155\n[312.0s] pad 156 😀😀😀😀😀\n[314.0s] pad 157\n[316.0s] pad 158\n[318.0s] pad 159 😀😀😀😀😀\n[320.0s] pad 160\n[322.0s] pad 161\n[324.0s] pad 162 😀😀😀😀😀\n[326.0s] pad 163\n[328.0s] pad 164\n[330.0s] pad 165 😀😀😀😀😀\n[332.0s] pad 166\n[334.0s] pad 167\n[336.0s] pad 168 😀😀😀😀😀\n[338.0s] pad 169\n[340.0s] pad 170\n[342.0s] pad 171 😀😀😀😀😀\n[344.0s] pad 172\n[346.0s] pad 173\n[348.0s] pad 174 😀😀😀😀😀\n[350.0s] pad 175\n[352.0s] pad 176\n[354.0s] pad 177 😀😀😀😀😀\n[356.0s] pad 178\n[358.0s] pad 179\n[360.0s] pad 180 😀😀😀😀😀\n[362.0s] pad 181\n[364.0s] pad 182\n[366.0s] pad 183 😀😀😀😀😀\n[368.0s] pad 184\n[370.0s] pad 185\n[372.0s] pad 186 😀😀😀😀😀\n[374.0s] pad 187\n[376.0s] pad 188\n[378.0s] pad 189 😀😀😀😀😀\n[380.0s] pad 190\n[382.0s] pad 191\n[384.0s] pad 192 😀😀😀😀😀\n[386.0s] pad 193\n[388.0s] pad 194\n[390.0s] pad 195 😀😀😀😀😀\n[392.0s] pad 196\n[394.0s] pad 197\n[396.0s] pad 198 😀😀😀😀😀\n[398.0s] pad 199\n[400.0s] pad 200\n[402.0s] pad 201 😀😀😀😀😀\n[404.0s] pad 202\n[406.0s] pad 203\n[408.0s] pad 204 😀😀😀😀😀\n[410.0s] pad 205\n[412.0s] pad 206\n[414.0s] pad 207 😀😀😀😀😀\n[416.0s] pad 208\n[418.0s] pad 209\n[420.0s] pad 210 😀😀😀😀😀\n[422.0s] pad 211\n[424.0s] pad 212\n[426.0s] pad 213 😀😀😀😀😀\n[428.0s] pad 214\n[430.0s] pad 215\n[432.0s] pad 216 😀😀😀😀😀\n[434.0s] pad 217\n[436.0s] pad 218\n[438.0s] pad 219 😀😀😀😀😀\n[440.0s] pad 220\n[442.0s] pad 221\n[444.0s] pad 222 😀😀😀😀😀\n[446.0s] pad 223\n[448.0s] pad 224\n[450.0s] pad 225 😀😀😀😀😀\n[452.0s] pad 226\n[454.0s] pad 227\n[456.0s] pad 228 😀😀😀😀😀\n[458.0s] pad 229\n[460.0s] pad 230\n[462.0s] pad 231 😀😀😀😀😀\n[464.0s] pad 232\n[466.0s] pad 233\n[468.0s] pad 234 😀😀😀😀😀\n[470.0s] pad 235\n[472.0s] pad 236\n[474.0s] pad 237 😀😀😀😀😀\n[476.0s] pad 238\n[478.0s] pad 239\n[480.0s] pad 240 😀😀😀😀😀\n[482.0s] pad 241\n[484.0s] pad 242\n[486.0s] pad 243 😀😀😀😀😀\n[488.0s] pad 244\n[490.0s] pad 245\n[492.0s] pad 246 😀😀😀😀😀\n[494.0s] pad 247\n[496.0s] pad 248\n[498.0s] pad 249 😀😀😀😀😀\n[500.0s] pad 250\n[502.0s] pad 251\n[504.0s] pad 252 😀😀😀😀😀\n[506.0s] pad 253\n[508.0s] pad 254\n[510.0s] pad 255 😀😀😀😀😀\n[512.0s] pad 256\n[514.0s] pad 257\n[516.0s] pad 258 😀😀😀😀😀\n[518.0s] pad 259\n[520.0s] pad 260\n[522.0s] pad 261 😀😀😀😀😀\n[524.0s] pad 262\n[526.0s] pad 263\n[528.0s] pad 264 😀😀😀😀😀\n[530.0s] pad 265\n[532.0s] pad 266\n[534.0s] pad 267 😀😀😀😀😀\n[536.0s] pad 268\n[538.0s] pad 269\n[540.0s] pad 270 😀😀😀😀😀\n[542.0s] pad 271\n[544.0s] pad 272\n[546.0s] pad 273 😀😀😀😀😀\n[548.0s] pad 274\n[550.0s] pad 275\n[552.0s] pad 276 😀😀😀😀😀\n[554.0s] pad 277\n[556.0s] pad 278\n[558.0s] pad 279 😀😀😀😀😀\n[560.0s] pad 280\n[562.0s] pad 281\n[564.0s] pad 282 😀😀😀😀😀\n[566.0s] pad 283\n[568.0s] pad 284\n[570.0s] pad 285 😀😀😀😀😀\n[572.0s] pad 286\n[574.0s] pad 287\n[576.0s] pad 288 😀😀😀😀😀\n[578.0s] pad 289\n[580.0s] pad 290\n[582.0s] pad 291 😀😀😀😀😀\n[584.0s] pad 292\n[586.0s] pad 293\n[588.0s] pad 294 😀😀😀😀😀\n[590.0s] pad 295\n[592.0s] pad 296\n[594.0s] pad 297 😀😀😀😀😀"
+    }
+  ],
+  "contents": [
+    {
+      "name": "two frames",
+      "content": [
+        {
+          "type": "text",
+          "text": "keyframe 1 at ~0s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy0x"
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 2 at ~5s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy0y"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Clip duration: 31.0s. Timed transcript:\n[0.0s] hello\n[4.2s] world\n\nAnnotate this clip."
+        }
+      ]
+    },
+    {
+      "name": "twelve frames, empty transcript",
+      "content": [
+        {
+          "type": "text",
+          "text": "keyframe 1 at ~0s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy0x"
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 2 at ~5s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy0y"
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 3 at ~10s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy0z"
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 4 at ~15s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy00"
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 5 at ~20s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy01"
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 6 at ~25s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy02"
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 7 at ~30s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy03"
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 8 at ~35s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy04"
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 9 at ~40s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy05"
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 10 at ~45s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy0xMA=="
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 11 at ~50s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy0xMQ=="
+          }
+        },
+        {
+          "type": "text",
+          "text": "keyframe 12 at ~55s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy0xMg=="
+          }
+        },
+        {
+          "type": "text",
+          "text": "Clip duration: 60.0s. Timed transcript:\n\n\nAnnotate this clip."
+        }
+      ]
+    },
+    {
+      "name": "one short frame",
+      "content": [
+        {
+          "type": "text",
+          "text": "keyframe 1 at ~0s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy0x"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Clip duration: 5.0s. Timed transcript:\n[0.0s] hi\n\nAnnotate this clip."
+        }
+      ]
+    },
+    {
+      "name": "duration rounds to one decimal",
+      "content": [
+        {
+          "type": "text",
+          "text": "keyframe 1 at ~0s"
+        },
+        {
+          "type": "image",
+          "source": {
+            "type": "base64",
+            "media_type": "image/jpeg",
+            "data": "anBlZy1ieXRlcy0x"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Clip duration: 0.1s. Timed transcript:\nx\n\nAnnotate this clip."
+        }
+      ]
+    }
+  ]
+}

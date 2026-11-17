@@ -1,0 +1,16 @@
+{
+  "id": "synthetic01",
+  "title": "Synthetic",
+  "comment_count": 9,
+  "comments": [
+    { "id": "c1", "parent": "root", "text": "12:30 the split colony part made me laugh", "like_count": 410, "author": "@a", "is_pinned": true },
+    { "id": "c2", "parent": "root", "text": "At 31:05 never open a hive on a cold afternoon", "like_count": 230, "author": "@b" },
+    { "id": "c3", "parent": "c1", "text": "5:00 a reply that must not count", "like_count": 9000, "author": "@c" },
+    { "id": "c4", "parent": "root", "text": "no timestamp, just praise", "like_count": 80, "author": "@d" },
+    { "id": "c5", "parent": "root", "text": "0:00 intro 3:10 winter 12:30 splits 31:05 wax 38:00 outro", "like_count": 55, "author": "@e" },
+    { "id": "c6", "text": "a comment with no parent field, 20:00 counts as top level", "like_count": 7, "author": "@f" },
+    { "id": "c7", "parent": "root", "text": 12345, "like_count": 1, "author": "@g" },
+    { "id": "c8", "parent": "root", "text": "40:00 likes missing", "author": "@h" },
+    { "id": "c9", "parent": "root", "text": "40:00 likes not a number", "like_count": "many", "author": "@i" }
+  ]
+}

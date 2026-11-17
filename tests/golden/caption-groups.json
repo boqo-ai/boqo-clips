@@ -1,0 +1,3429 @@
+{
+  "groups": [
+    {
+      "name": "twelve words, karaoke bounds",
+      "groups": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          11
+        ]
+      ]
+    },
+    {
+      "name": "twelve words with the scene cut",
+      "groups": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          11
+        ]
+      ]
+    },
+    {
+      "name": "target 1",
+      "groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ]
+      ]
+    },
+    {
+      "name": "minimal 5/5",
+      "groups": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ]
+    },
+    {
+      "name": "illustrated 3/5/6",
+      "groups": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ]
+    },
+    {
+      "name": "thirteen words, no orphan",
+      "groups": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ]
+    },
+    {
+      "name": "eleven words",
+      "groups": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ]
+      ]
+    },
+    {
+      "name": "rounding down over max",
+      "groups": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ]
+    },
+    {
+      "name": "gaps at and past the threshold",
+      "groups": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "speakers, null and absent",
+      "groups": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ]
+    },
+    {
+      "name": "sentence ends and abbreviations",
+      "groups": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16
+        ],
+        [
+          17
+        ],
+        [
+          18
+        ],
+        [
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        [
+          24
+        ]
+      ]
+    },
+    {
+      "name": "cuts at, near and inside joins",
+      "groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7,
+          8,
+          9
+        ]
+      ]
+    },
+    {
+      "name": "one word",
+      "groups": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "name": "none",
+      "groups": []
+    }
+  ],
+  "distribute": [
+    [],
+    [
+      [
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6
+      ],
+      [
+        7,
+        8,
+        9
+      ],
+      [
+        10,
+        11,
+        12
+      ]
+    ],
+    [],
+    [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  ],
+  "endsSentence": [
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true
+  ],
+  "keyFlags": [
+    {
+      "set": [
+        "rockets",
+        "coming"
+      ],
+      "flags": [
+        [
+          true,
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          true,
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "set": [
+        "ракета",
+        "half"
+      ],
+      "flags": [
+        [
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ]
+    }
+  ],
+  "emphasisSets": [
+    [
+      "rocket"
+    ],
+    [
+      "ракета"
+    ],
+    [
+      "...",
+      "ещё",
+      "ёлка",
+      "rock'n'roll",
+      "dash"
+    ],
+    [],
+    []
+  ],
+  "texts": [
+    {
+      "key": "spot",
+      "text": [
+        "SPOT",
+        "SPOT.",
+        "spot",
+        "spot.",
+        "spot",
+        "spot."
+      ],
+      "display": [
+        "SPOT",
+        "spot",
+        "spot",
+        "S***",
+        "s***",
+        "s***",
+        "S#*!",
+        "s#*!",
+        "s#*!",
+        "S@!@",
+        "s@!@",
+        "s@!@"
+      ]
+    },
+    {
+      "key": "you've",
+      "text": [
+        "YOU'VE",
+        "YOU'VE",
+        "YOU'VE",
+        "YOU'VE",
+        "you've",
+        "you've"
+      ],
+      "display": [
+        "YOU'VE",
+        "YOU'VE",
+        "you've",
+        "Y**'**",
+        "Y**'**",
+        "y**'**",
+        "Y#*'!#",
+        "Y#*'!#",
+        "y#*'!#",
+        "Y@!'@!",
+        "Y@!'@!",
+        "y@!'@!"
+      ]
+    },
+    {
+      "key": "brand-new",
+      "text": [
+        "BRAND-NEW",
+        "BRAND-NEW",
+        "brand-new",
+        "brand-new",
+        "brand-new",
+        "brand-new"
+      ],
+      "display": [
+        "BRAND-NEW",
+        "brand-new",
+        "brand-new",
+        "B****-***",
+        "b****-***",
+        "b****-***",
+        "B#*!#-*!#",
+        "b#*!#-*!#",
+        "b#*!#-*!#",
+        "B@!@!-@!@",
+        "b@!@!-@!@",
+        "b@!@!-@!@"
+      ]
+    },
+    {
+      "key": "quote",
+      "text": [
+        "QUOTE",
+        "\"QUOTE\"",
+        "quote",
+        "\"quote\"",
+        "quote",
+        "\"quote\""
+      ],
+      "display": [
+        "QUOTE",
+        "quote",
+        "quote",
+        "Q****",
+        "q****",
+        "q****",
+        "Q#*!#",
+        "q#*!#",
+        "q#*!#",
+        "Q@!@!",
+        "q@!@!",
+        "q@!@!"
+      ]
+    },
+    {
+      "key": "single",
+      "text": [
+        "SINGLE",
+        "‘SINGLE’",
+        "single",
+        "‘single’",
+        "single",
+        "‘single’"
+      ],
+      "display": [
+        "SINGLE",
+        "single",
+        "single",
+        "S*****",
+        "s*****",
+        "s*****",
+        "S#*!#*",
+        "s#*!#*",
+        "s#*!#*",
+        "S@!@!@",
+        "s@!@!@",
+        "s@!@!@"
+      ]
+    },
+    {
+      "key": "—",
+      "text": [
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—"
+      ],
+      "display": [
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "key": "...",
+      "text": [
+        "...",
+        "...",
+        "...",
+        "...",
+        "...",
+        "..."
+      ],
+      "display": [
+        "...",
+        "...",
+        "...",
+        "...",
+        "...",
+        "...",
+        "...",
+        "...",
+        "...",
+        "...",
+        "...",
+        "..."
+      ]
+    },
+    {
+      "key": "now",
+      "text": [
+        "NOW",
+        "(NOW!)",
+        "now",
+        "(now!)",
+        "now",
+        "(now!)"
+      ],
+      "display": [
+        "NOW",
+        "now",
+        "now",
+        "N**",
+        "n**",
+        "n**",
+        "N#*",
+        "n#*",
+        "n#*",
+        "N@!",
+        "n@!",
+        "n@!"
+      ]
+    },
+    {
+      "key": "f@ck",
+      "text": [
+        "F@CK",
+        "F@CK,",
+        "f@ck",
+        "f@ck,",
+        "f@ck",
+        "f@ck,"
+      ],
+      "display": [
+        "F@CK",
+        "f@ck",
+        "f@ck",
+        "F@**",
+        "f@**",
+        "f@**",
+        "F@#*",
+        "f@#*",
+        "f@#*",
+        "F@@!",
+        "f@@!",
+        "f@@!"
+      ]
+    },
+    {
+      "key": "привет",
+      "text": [
+        "ПРИВЕТ",
+        "ПРИВЕТ!",
+        "Привет",
+        "Привет!",
+        "привет",
+        "привет!"
+      ],
+      "display": [
+        "ПРИВЕТ",
+        "Привет",
+        "привет",
+        "П*****",
+        "П*****",
+        "п*****",
+        "П#*!#*",
+        "П#*!#*",
+        "п#*!#*",
+        "П@!@!@",
+        "П@!@!@",
+        "п@!@!@"
+      ]
+    },
+    {
+      "key": "école",
+      "text": [
+        "ÉCOLE",
+        "ÉCOLE",
+        "ÉCOLE",
+        "ÉCOLE",
+        "école",
+        "école"
+      ],
+      "display": [
+        "ÉCOLE",
+        "ÉCOLE",
+        "école",
+        "É****",
+        "É****",
+        "é****",
+        "É#*!#",
+        "É#*!#",
+        "é#*!#",
+        "É@!@!",
+        "É@!@!",
+        "é@!@!"
+      ]
+    },
+    {
+      "key": "don’t",
+      "text": [
+        "DON’T",
+        "DON’T",
+        "don’t",
+        "don’t",
+        "don’t",
+        "don’t"
+      ],
+      "display": [
+        "DON’T",
+        "don’t",
+        "don’t",
+        "D**’*",
+        "d**’*",
+        "d**’*",
+        "D#*’!",
+        "d#*’!",
+        "d#*’!",
+        "D@!’@",
+        "d@!’@",
+        "d@!’@"
+      ]
+    },
+    {
+      "key": "tis",
+      "text": [
+        "TIS",
+        "'TIS",
+        "tis",
+        "'tis",
+        "tis",
+        "'tis"
+      ],
+      "display": [
+        "TIS",
+        "tis",
+        "tis",
+        "T**",
+        "t**",
+        "t**",
+        "T#*",
+        "t#*",
+        "t#*",
+        "T@!",
+        "t@!",
+        "t@!"
+      ]
+    },
+    {
+      "key": "end",
+      "text": [
+        "END",
+        "END-",
+        "end",
+        "end-",
+        "end",
+        "end-"
+      ],
+      "display": [
+        "END",
+        "end",
+        "end",
+        "E**",
+        "e**",
+        "e**",
+        "E#*",
+        "e#*",
+        "e#*",
+        "E@!",
+        "e@!",
+        "e@!"
+      ]
+    },
+    {
+      "key": "йод",
+      "text": [
+        "ЙОД",
+        "ЙОД",
+        "йод",
+        "йод",
+        "йод",
+        "йод"
+      ],
+      "display": [
+        "ЙОД",
+        "йод",
+        "йод",
+        "Й**",
+        "й**",
+        "й**",
+        "Й#*",
+        "й#*",
+        "й#*",
+        "Й@!",
+        "й@!",
+        "й@!"
+      ]
+    },
+    {
+      "key": "fuck",
+      "text": [
+        "FUCK",
+        "FUCK,",
+        "Fuck",
+        "Fuck,",
+        "fuck",
+        "fuck,"
+      ],
+      "display": [
+        "FUCK",
+        "Fuck",
+        "fuck",
+        "F***",
+        "F***",
+        "f***",
+        "F#*!",
+        "F#*!",
+        "f#*!",
+        "F@!@",
+        "F@!@",
+        "f@!@"
+      ]
+    },
+    {
+      "key": "два",
+      "text": [
+        "ДВА",
+        "ДВА",
+        "ДВА",
+        "ДВА",
+        "два",
+        "два"
+      ],
+      "display": [
+        "ДВА",
+        "ДВА",
+        "два",
+        "Д**",
+        "Д**",
+        "д**",
+        "Д#*",
+        "Д#*",
+        "д#*",
+        "Д@!",
+        "Д@!",
+        "д@!"
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "key": "karaoke",
+      "plain": {
+        "fontName": "Montserrat ExtraBold",
+        "fontSize": 98,
+        "lineSpacing": 77,
+        "centreY": 1546,
+        "groups": [
+          {
+            "words": [
+              {
+                "text": "SO",
+                "word": {
+                  "word": "So",
+                  "start": 0,
+                  "end": 0.18,
+                  "index": 0
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 224
+              },
+              {
+                "text": "THE",
+                "word": {
+                  "word": "the",
+                  "start": 0.2,
+                  "end": 0.32,
+                  "index": 1
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 336
+              },
+              {
+                "text": "3",
+                "word": {
+                  "word": "3",
+                  "start": 0.34,
+                  "end": 0.6,
+                  "index": 2
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 486
+              },
+              {
+                "text": "ROCKETS",
+                "word": {
+                  "word": "rockets",
+                  "start": 0.62,
+                  "end": 1.05,
+                  "index": 3
+                },
+                "keyword": true,
+                "keyOrdinal": 0,
+                "x": 542
+              },
+              {
+                "text": "LAUNCHED",
+                "word": {
+                  "word": "launched,",
+                  "start": 1.08,
+                  "end": 1.55,
+                  "index": 4
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 352
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2,
+                3
+              ],
+              [
+                4
+              ]
+            ],
+            "lineY": [
+              1508,
+              1585
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 0,
+                "endSec": 0.2
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 0.2,
+                "endSec": 0.34
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 0.34,
+                "endSec": 0.62
+              },
+              {
+                "wordIndex": 3,
+                "startSec": 0.62,
+                "endSec": 1.08
+              },
+              {
+                "wordIndex": 4,
+                "startSec": 1.08,
+                "endSec": 1.55
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 0,
+            "spoken": [
+              0,
+              1.55
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "AND",
+                "word": {
+                  "word": "and",
+                  "start": 1.7,
+                  "end": 1.82,
+                  "index": 5
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 182
+              },
+              {
+                "text": "NOBODY",
+                "word": {
+                  "word": "nobody",
+                  "start": 1.84,
+                  "end": 2.2,
+                  "index": 6
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 352
+              },
+              {
+                "text": "DIDN'T",
+                "word": {
+                  "word": "didn't",
+                  "start": 2.22,
+                  "end": 2.5,
+                  "index": 7
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 669
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 1.7,
+                "endSec": 1.84
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 1.84,
+                "endSec": 2.22
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.22,
+                "endSec": 2.5
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 5,
+            "spoken": [
+              1.7,
+              2.5
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "SEE",
+                "word": {
+                  "word": "see",
+                  "start": 2.52,
+                  "end": 2.7,
+                  "index": 8
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 291
+              },
+              {
+                "text": "IT",
+                "word": {
+                  "word": "it",
+                  "start": 2.72,
+                  "end": 2.8,
+                  "index": 9
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 433
+              },
+              {
+                "text": "COMING",
+                "word": {
+                  "word": "coming.",
+                  "start": 2.82,
+                  "end": 3.3,
+                  "index": 10
+                },
+                "keyword": true,
+                "keyOrdinal": 1,
+                "x": 512
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 2.52,
+                "endSec": 2.72
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 2.72,
+                "endSec": 2.82
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.82,
+                "endSec": 3.3
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 8,
+            "spoken": [
+              2.52,
+              3.3
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "REALLY",
+                "word": {
+                  "word": "Really?",
+                  "start": 4.4,
+                  "end": 4.9,
+                  "index": 11
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 411
+              }
+            ],
+            "lines": [
+              [
+                0
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 4.4,
+                "endSec": 4.9
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 11,
+            "spoken": [
+              4.4,
+              4.9
+            ]
+          }
+        ],
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "keyFontName": null,
+        "keyFontSize": null,
+        "fallbackUsed": false
+      },
+      "timed": {
+        "fontName": "Montserrat ExtraBold",
+        "fontSize": 98,
+        "lineSpacing": 77,
+        "centreY": 1546,
+        "groups": [
+          {
+            "words": [
+              {
+                "text": "SO",
+                "word": {
+                  "word": "So",
+                  "start": 0.1,
+                  "end": 0.1929032258064516,
+                  "index": 0
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 224
+              },
+              {
+                "text": "THE",
+                "word": {
+                  "word": "the",
+                  "start": 0.20322580645161292,
+                  "end": 0.2651612903225806,
+                  "index": 1
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 336
+              },
+              {
+                "text": "3",
+                "word": {
+                  "word": "3",
+                  "start": 0.27548387096774196,
+                  "end": 0.4096774193548387,
+                  "index": 2
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 486
+              },
+              {
+                "text": "ROCKETS",
+                "word": {
+                  "word": "rockets",
+                  "start": 0.42000000000000004,
+                  "end": 0.6419354838709678,
+                  "index": 3
+                },
+                "keyword": true,
+                "keyOrdinal": 0,
+                "x": 542
+              },
+              {
+                "text": "LAUNCHED",
+                "word": {
+                  "word": "launched,",
+                  "start": 0.6574193548387097,
+                  "end": 0.9000000000000001,
+                  "index": 4
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 352
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2,
+                3
+              ],
+              [
+                4
+              ]
+            ],
+            "lineY": [
+              1508,
+              1585
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 0.1,
+                "endSec": 0.20322580645161292
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 0.20322580645161292,
+                "endSec": 0.27548387096774196
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 0.27548387096774196,
+                "endSec": 0.42000000000000004
+              },
+              {
+                "wordIndex": 3,
+                "startSec": 0.42000000000000004,
+                "endSec": 0.6574193548387097
+              },
+              {
+                "wordIndex": 4,
+                "startSec": 0.6574193548387097,
+                "endSec": 0.9000000000000001
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 0,
+            "spoken": [
+              0,
+              1.55
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "AND",
+                "word": {
+                  "word": "and",
+                  "start": 1.7,
+                  "end": 1.82,
+                  "index": 5
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 182
+              },
+              {
+                "text": "NOBODY",
+                "word": {
+                  "word": "nobody",
+                  "start": 1.84,
+                  "end": 2.2,
+                  "index": 6
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 352
+              },
+              {
+                "text": "DIDN'T",
+                "word": {
+                  "word": "didn't",
+                  "start": 2.22,
+                  "end": 2.5,
+                  "index": 7
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 669
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 1.7,
+                "endSec": 1.84
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 1.84,
+                "endSec": 2.22
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.22,
+                "endSec": 2.5
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 5,
+            "spoken": [
+              1.7,
+              2.5
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "SEE",
+                "word": {
+                  "word": "see",
+                  "start": 2.52,
+                  "end": 2.7,
+                  "index": 8
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 291
+              },
+              {
+                "text": "IT",
+                "word": {
+                  "word": "it",
+                  "start": 2.72,
+                  "end": 2.8,
+                  "index": 9
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 433
+              },
+              {
+                "text": "COMING",
+                "word": {
+                  "word": "coming.",
+                  "start": 2.82,
+                  "end": 3.3,
+                  "index": 10
+                },
+                "keyword": true,
+                "keyOrdinal": 1,
+                "x": 512
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 2.52,
+                "endSec": 2.72
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 2.72,
+                "endSec": 2.82
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.82,
+                "endSec": 3.3
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 8,
+            "spoken": [
+              2.52,
+              3.3
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "REALLY",
+                "word": {
+                  "word": "Really?",
+                  "start": 4.4,
+                  "end": 4.9,
+                  "index": 11
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 411
+              }
+            ],
+            "lines": [
+              [
+                0
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 4.4,
+                "endSec": 4.9
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 11,
+            "spoken": [
+              4.4,
+              4.9
+            ]
+          }
+        ],
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "keyFontName": null,
+        "keyFontSize": null,
+        "fallbackUsed": false
+      }
+    },
+    {
+      "key": "boldkeys",
+      "plain": {
+        "fontName": "Poppins Black",
+        "fontSize": 105,
+        "lineSpacing": 72,
+        "centreY": 1546,
+        "groups": [
+          {
+            "words": [
+              {
+                "text": "SO",
+                "word": {
+                  "word": "So",
+                  "start": 0,
+                  "end": 0.18,
+                  "index": 0
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 144
+              },
+              {
+                "text": "THE",
+                "word": {
+                  "word": "the",
+                  "start": 0.2,
+                  "end": 0.32,
+                  "index": 1
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 238
+              },
+              {
+                "text": "3",
+                "word": {
+                  "word": "3",
+                  "start": 0.34,
+                  "end": 0.6,
+                  "index": 2
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 362
+              },
+              {
+                "text": "ROCKETS",
+                "word": {
+                  "word": "rockets",
+                  "start": 0.62,
+                  "end": 1.05,
+                  "index": 3
+                },
+                "keyword": true,
+                "keyOrdinal": 0,
+                "x": 409
+              },
+              {
+                "text": "LAUNCHED",
+                "word": {
+                  "word": "launched,",
+                  "start": 1.08,
+                  "end": 1.55,
+                  "index": 4
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 605
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 0,
+                "endSec": 0.2
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 0.2,
+                "endSec": 0.34
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 0.34,
+                "endSec": 0.62
+              },
+              {
+                "wordIndex": 3,
+                "startSec": 0.62,
+                "endSec": 1.08
+              },
+              {
+                "wordIndex": 4,
+                "startSec": 1.08,
+                "endSec": 1.55
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 0,
+            "spoken": [
+              0,
+              1.55
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "AND",
+                "word": {
+                  "word": "and",
+                  "start": 1.7,
+                  "end": 1.82,
+                  "index": 5
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 225
+              },
+              {
+                "text": "NOBODY",
+                "word": {
+                  "word": "nobody",
+                  "start": 1.84,
+                  "end": 2.2,
+                  "index": 6
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 372
+              },
+              {
+                "text": "DIDN'T",
+                "word": {
+                  "word": "didn't",
+                  "start": 2.22,
+                  "end": 2.5,
+                  "index": 7
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 649
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 1.7,
+                "endSec": 1.84
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 1.84,
+                "endSec": 2.22
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.22,
+                "endSec": 2.5
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 5,
+            "spoken": [
+              1.7,
+              2.5
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "SEE",
+                "word": {
+                  "word": "see",
+                  "start": 2.52,
+                  "end": 2.7,
+                  "index": 8
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 365
+              },
+              {
+                "text": "IT",
+                "word": {
+                  "word": "it",
+                  "start": 2.72,
+                  "end": 2.8,
+                  "index": 9
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 478
+              },
+              {
+                "text": "COMING",
+                "word": {
+                  "word": "coming.",
+                  "start": 2.82,
+                  "end": 3.3,
+                  "index": 10
+                },
+                "keyword": true,
+                "keyOrdinal": 1,
+                "x": 544
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 2.52,
+                "endSec": 2.72
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 2.72,
+                "endSec": 2.82
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.82,
+                "endSec": 3.3
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 8,
+            "spoken": [
+              2.52,
+              3.3
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "REALLY",
+                "word": {
+                  "word": "Really?",
+                  "start": 4.4,
+                  "end": 4.9,
+                  "index": 11
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 429
+              }
+            ],
+            "lines": [
+              [
+                0
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 4.4,
+                "endSec": 4.9
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 11,
+            "spoken": [
+              4.4,
+              4.9
+            ]
+          }
+        ],
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "keyFontName": "Anton",
+        "keyFontSize": 102,
+        "fallbackUsed": false
+      },
+      "timed": {
+        "fontName": "Montserrat ExtraBold",
+        "fontSize": 91,
+        "lineSpacing": 72,
+        "centreY": 1546,
+        "groups": [
+          {
+            "words": [
+              {
+                "text": "SO",
+                "word": {
+                  "word": "So",
+                  "start": 0.1,
+                  "end": 0.1929032258064516,
+                  "index": 0
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 99
+              },
+              {
+                "text": "THE",
+                "word": {
+                  "word": "the",
+                  "start": 0.20322580645161292,
+                  "end": 0.2651612903225806,
+                  "index": 1
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 202
+              },
+              {
+                "text": "3",
+                "word": {
+                  "word": "3",
+                  "start": 0.27548387096774196,
+                  "end": 0.4096774193548387,
+                  "index": 2
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 342
+              },
+              {
+                "text": "ROCKETS",
+                "word": {
+                  "word": "rockets",
+                  "start": 0.42000000000000004,
+                  "end": 0.6419354838709678,
+                  "index": 3
+                },
+                "keyword": true,
+                "keyOrdinal": 0,
+                "x": 394
+              },
+              {
+                "text": "LAUNCHED",
+                "word": {
+                  "word": "launched,",
+                  "start": 0.6574193548387097,
+                  "end": 0.9000000000000001,
+                  "index": 4
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 632
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 0.1,
+                "endSec": 0.20322580645161292
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 0.20322580645161292,
+                "endSec": 0.27548387096774196
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 0.27548387096774196,
+                "endSec": 0.42000000000000004
+              },
+              {
+                "wordIndex": 3,
+                "startSec": 0.42000000000000004,
+                "endSec": 0.6574193548387097
+              },
+              {
+                "wordIndex": 4,
+                "startSec": 0.6574193548387097,
+                "endSec": 0.9000000000000001
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 0,
+            "spoken": [
+              0,
+              1.55
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "AND",
+                "word": {
+                  "word": "and",
+                  "start": 1.7,
+                  "end": 1.82,
+                  "index": 5
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 208
+              },
+              {
+                "text": "NOBODY",
+                "word": {
+                  "word": "nobody",
+                  "start": 1.84,
+                  "end": 2.2,
+                  "index": 6
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 365
+              },
+              {
+                "text": "DIDN'T",
+                "word": {
+                  "word": "didn't",
+                  "start": 2.22,
+                  "end": 2.5,
+                  "index": 7
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 660
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 1.7,
+                "endSec": 1.84
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 1.84,
+                "endSec": 2.22
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.22,
+                "endSec": 2.5
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 5,
+            "spoken": [
+              1.7,
+              2.5
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "SEE",
+                "word": {
+                  "word": "see",
+                  "start": 2.52,
+                  "end": 2.7,
+                  "index": 8
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 339
+              },
+              {
+                "text": "IT",
+                "word": {
+                  "word": "it",
+                  "start": 2.72,
+                  "end": 2.8,
+                  "index": 9
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 472
+              },
+              {
+                "text": "COMING",
+                "word": {
+                  "word": "coming.",
+                  "start": 2.82,
+                  "end": 3.3,
+                  "index": 10
+                },
+                "keyword": true,
+                "keyOrdinal": 1,
+                "x": 545
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 2.52,
+                "endSec": 2.72
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 2.72,
+                "endSec": 2.82
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.82,
+                "endSec": 3.3
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 8,
+            "spoken": [
+              2.52,
+              3.3
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "REALLY",
+                "word": {
+                  "word": "Really?",
+                  "start": 4.4,
+                  "end": 4.9,
+                  "index": 11
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 421
+              }
+            ],
+            "lines": [
+              [
+                0
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 4.4,
+                "endSec": 4.9
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 11,
+            "spoken": [
+              4.4,
+              4.9
+            ]
+          }
+        ],
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "keyFontName": "Oswald",
+        "keyFontSize": 102,
+        "fallbackUsed": true
+      }
+    },
+    {
+      "key": "illustrated",
+      "plain": {
+        "fontName": "Montserrat ExtraBold",
+        "fontSize": 74,
+        "lineSpacing": 58,
+        "centreY": 1546,
+        "groups": [
+          {
+            "words": [
+              {
+                "text": "SO",
+                "word": {
+                  "word": "So",
+                  "start": 0,
+                  "end": 0.18,
+                  "index": 0
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 165
+              },
+              {
+                "text": "THE",
+                "word": {
+                  "word": "the",
+                  "start": 0.2,
+                  "end": 0.32,
+                  "index": 1
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 250
+              },
+              {
+                "text": "3",
+                "word": {
+                  "word": "3",
+                  "start": 0.34,
+                  "end": 0.6,
+                  "index": 2
+                },
+                "keyword": true,
+                "keyOrdinal": 0,
+                "x": 363
+              },
+              {
+                "text": "ROCKETS",
+                "word": {
+                  "word": "rockets",
+                  "start": 0.62,
+                  "end": 1.05,
+                  "index": 3
+                },
+                "keyword": true,
+                "keyOrdinal": 1,
+                "x": 409
+              },
+              {
+                "text": "LAUNCHED",
+                "word": {
+                  "word": "launched,",
+                  "start": 1.08,
+                  "end": 1.55,
+                  "index": 4
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 631
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 0,
+                "endSec": 0.2
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 0.2,
+                "endSec": 0.34
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 0.34,
+                "endSec": 0.62
+              },
+              {
+                "wordIndex": 3,
+                "startSec": 0.62,
+                "endSec": 1.08
+              },
+              {
+                "wordIndex": 4,
+                "startSec": 1.08,
+                "endSec": 1.55
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 0,
+            "spoken": [
+              0,
+              1.55
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "AND",
+                "word": {
+                  "word": "and",
+                  "start": 1.7,
+                  "end": 1.82,
+                  "index": 5
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 84
+              },
+              {
+                "text": "NOBODY",
+                "word": {
+                  "word": "nobody",
+                  "start": 1.84,
+                  "end": 2.2,
+                  "index": 6
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 212
+              },
+              {
+                "text": "DIDN'T",
+                "word": {
+                  "word": "didn't",
+                  "start": 2.22,
+                  "end": 2.5,
+                  "index": 7
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 452
+              },
+              {
+                "text": "SEE",
+                "word": {
+                  "word": "see",
+                  "start": 2.52,
+                  "end": 2.7,
+                  "index": 8
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 638
+              },
+              {
+                "text": "IT",
+                "word": {
+                  "word": "it",
+                  "start": 2.72,
+                  "end": 2.8,
+                  "index": 9
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 746
+              },
+              {
+                "text": "COMING",
+                "word": {
+                  "word": "coming.",
+                  "start": 2.82,
+                  "end": 3.3,
+                  "index": 10
+                },
+                "keyword": true,
+                "keyOrdinal": 2,
+                "x": 805
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 1.7,
+                "endSec": 1.84
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 1.84,
+                "endSec": 2.22
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.22,
+                "endSec": 2.52
+              },
+              {
+                "wordIndex": 3,
+                "startSec": 2.52,
+                "endSec": 2.72
+              },
+              {
+                "wordIndex": 4,
+                "startSec": 2.72,
+                "endSec": 2.82
+              },
+              {
+                "wordIndex": 5,
+                "startSec": 2.82,
+                "endSec": 3.3
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 5,
+            "spoken": [
+              1.7,
+              3.3
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "REALLY",
+                "word": {
+                  "word": "Really?",
+                  "start": 4.4,
+                  "end": 4.9,
+                  "index": 11
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 443
+              }
+            ],
+            "lines": [
+              [
+                0
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 4.4,
+                "endSec": 4.9
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 11,
+            "spoken": [
+              4.4,
+              4.9
+            ]
+          }
+        ],
+        "overflowGroups": 0,
+        "emphasisMatched": 3,
+        "keyFontName": "Anton",
+        "keyFontSize": 114,
+        "fallbackUsed": false
+      },
+      "timed": {
+        "fontName": "Montserrat ExtraBold",
+        "fontSize": 74,
+        "lineSpacing": 58,
+        "centreY": 1546,
+        "groups": [
+          {
+            "words": [
+              {
+                "text": "SO",
+                "word": {
+                  "word": "So",
+                  "start": 0.1,
+                  "end": 0.1929032258064516,
+                  "index": 0
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 144
+              },
+              {
+                "text": "THE",
+                "word": {
+                  "word": "the",
+                  "start": 0.20322580645161292,
+                  "end": 0.2651612903225806,
+                  "index": 1
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 229
+              },
+              {
+                "text": "3",
+                "word": {
+                  "word": "3",
+                  "start": 0.27548387096774196,
+                  "end": 0.4096774193548387,
+                  "index": 2
+                },
+                "keyword": true,
+                "keyOrdinal": 0,
+                "x": 342
+              },
+              {
+                "text": "ROCKETS",
+                "word": {
+                  "word": "rockets",
+                  "start": 0.42000000000000004,
+                  "end": 0.6419354838709678,
+                  "index": 3
+                },
+                "keyword": true,
+                "keyOrdinal": 1,
+                "x": 390
+              },
+              {
+                "text": "LAUNCHED",
+                "word": {
+                  "word": "launched,",
+                  "start": 0.6574193548387097,
+                  "end": 0.9000000000000001,
+                  "index": 4
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 652
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 0.1,
+                "endSec": 0.20322580645161292
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 0.20322580645161292,
+                "endSec": 0.27548387096774196
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 0.27548387096774196,
+                "endSec": 0.42000000000000004
+              },
+              {
+                "wordIndex": 3,
+                "startSec": 0.42000000000000004,
+                "endSec": 0.6574193548387097
+              },
+              {
+                "wordIndex": 4,
+                "startSec": 0.6574193548387097,
+                "endSec": 0.9000000000000001
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 0,
+            "spoken": [
+              0,
+              1.55
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "AND",
+                "word": {
+                  "word": "and",
+                  "start": 1.7,
+                  "end": 1.82,
+                  "index": 5
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 270
+              },
+              {
+                "text": "NOBODY",
+                "word": {
+                  "word": "nobody",
+                  "start": 1.84,
+                  "end": 2.2,
+                  "index": 6
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 398
+              },
+              {
+                "text": "DIDN'T",
+                "word": {
+                  "word": "didn't",
+                  "start": 2.22,
+                  "end": 2.5,
+                  "index": 7
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 637
+              },
+              {
+                "text": "SEE",
+                "word": {
+                  "word": "see",
+                  "start": 2.52,
+                  "end": 2.7,
+                  "index": 8
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 347
+              },
+              {
+                "text": "IT",
+                "word": {
+                  "word": "it",
+                  "start": 2.72,
+                  "end": 2.8,
+                  "index": 9
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 455
+              },
+              {
+                "text": "COMING",
+                "word": {
+                  "word": "coming.",
+                  "start": 2.82,
+                  "end": 3.3,
+                  "index": 10
+                },
+                "keyword": true,
+                "keyOrdinal": 2,
+                "x": 514
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ]
+            ],
+            "lineY": [
+              1517,
+              1575
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 1.7,
+                "endSec": 1.84
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 1.84,
+                "endSec": 2.22
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.22,
+                "endSec": 2.52
+              },
+              {
+                "wordIndex": 3,
+                "startSec": 2.52,
+                "endSec": 2.72
+              },
+              {
+                "wordIndex": 4,
+                "startSec": 2.72,
+                "endSec": 2.82
+              },
+              {
+                "wordIndex": 5,
+                "startSec": 2.82,
+                "endSec": 3.3
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 5,
+            "spoken": [
+              1.7,
+              3.3
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "REALLY",
+                "word": {
+                  "word": "Really?",
+                  "start": 4.4,
+                  "end": 4.9,
+                  "index": 11
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 443
+              }
+            ],
+            "lines": [
+              [
+                0
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 4.4,
+                "endSec": 4.9
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 11,
+            "spoken": [
+              4.4,
+              4.9
+            ]
+          }
+        ],
+        "overflowGroups": 0,
+        "emphasisMatched": 3,
+        "keyFontName": "Oswald",
+        "keyFontSize": 114,
+        "fallbackUsed": true
+      }
+    },
+    {
+      "key": "comic",
+      "plain": {
+        "fontName": "Bangers",
+        "fontSize": 119,
+        "lineSpacing": 86,
+        "centreY": 1546,
+        "groups": [
+          {
+            "words": [
+              {
+                "text": "SO",
+                "word": {
+                  "word": "So",
+                  "start": 0,
+                  "end": 0.18,
+                  "index": 0
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 216
+              },
+              {
+                "text": "THE",
+                "word": {
+                  "word": "the",
+                  "start": 0.2,
+                  "end": 0.32,
+                  "index": 1
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 292
+              },
+              {
+                "text": "3",
+                "word": {
+                  "word": "3",
+                  "start": 0.34,
+                  "end": 0.6,
+                  "index": 2
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 384
+              },
+              {
+                "text": "ROCKETS",
+                "word": {
+                  "word": "rockets",
+                  "start": 0.62,
+                  "end": 1.05,
+                  "index": 3
+                },
+                "keyword": true,
+                "keyOrdinal": 0,
+                "x": 428
+              },
+              {
+                "text": "LAUNCHED",
+                "word": {
+                  "word": "launched,",
+                  "start": 1.08,
+                  "end": 1.55,
+                  "index": 4
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 642
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 0,
+                "endSec": 0.2
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 0.2,
+                "endSec": 0.34
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 0.34,
+                "endSec": 0.62
+              },
+              {
+                "wordIndex": 3,
+                "startSec": 0.62,
+                "endSec": 1.08
+              },
+              {
+                "wordIndex": 4,
+                "startSec": 1.08,
+                "endSec": 1.55
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 0,
+            "spoken": [
+              0,
+              1.55
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "AND",
+                "word": {
+                  "word": "and",
+                  "start": 1.7,
+                  "end": 1.82,
+                  "index": 5
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 318
+              },
+              {
+                "text": "NOBODY",
+                "word": {
+                  "word": "nobody",
+                  "start": 1.84,
+                  "end": 2.2,
+                  "index": 6
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 422
+              },
+              {
+                "text": "DIDN'T",
+                "word": {
+                  "word": "didn't",
+                  "start": 2.22,
+                  "end": 2.5,
+                  "index": 7
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 619
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 1.7,
+                "endSec": 1.84
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 1.84,
+                "endSec": 2.22
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.22,
+                "endSec": 2.5
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 5,
+            "spoken": [
+              1.7,
+              2.5
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "SEE",
+                "word": {
+                  "word": "see",
+                  "start": 2.52,
+                  "end": 2.7,
+                  "index": 8
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 378
+              },
+              {
+                "text": "IT",
+                "word": {
+                  "word": "it",
+                  "start": 2.72,
+                  "end": 2.8,
+                  "index": 9
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 467
+              },
+              {
+                "text": "COMING",
+                "word": {
+                  "word": "coming.",
+                  "start": 2.82,
+                  "end": 3.3,
+                  "index": 10
+                },
+                "keyword": true,
+                "keyOrdinal": 1,
+                "x": 519
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 2.52,
+                "endSec": 2.72
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 2.72,
+                "endSec": 2.82
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.82,
+                "endSec": 3.3
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 8,
+            "spoken": [
+              2.52,
+              3.3
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "REALLY",
+                "word": {
+                  "word": "Really?",
+                  "start": 4.4,
+                  "end": 4.9,
+                  "index": 11
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 465
+              }
+            ],
+            "lines": [
+              [
+                0
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 4.4,
+                "endSec": 4.9
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 11,
+            "spoken": [
+              4.4,
+              4.9
+            ]
+          }
+        ],
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "keyFontName": null,
+        "keyFontSize": null,
+        "fallbackUsed": false
+      },
+      "timed": {
+        "fontName": "Montserrat ExtraBold",
+        "fontSize": 109,
+        "lineSpacing": 86,
+        "centreY": 1546,
+        "groups": [
+          {
+            "words": [
+              {
+                "text": "SO",
+                "word": {
+                  "word": "So",
+                  "start": 0.1,
+                  "end": 0.1929032258064516,
+                  "index": 0
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 189
+              },
+              {
+                "text": "THE",
+                "word": {
+                  "word": "the",
+                  "start": 0.20322580645161292,
+                  "end": 0.2651612903225806,
+                  "index": 1
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 313
+              },
+              {
+                "text": "3",
+                "word": {
+                  "word": "3",
+                  "start": 0.27548387096774196,
+                  "end": 0.4096774193548387,
+                  "index": 2
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 480
+              },
+              {
+                "text": "ROCKETS",
+                "word": {
+                  "word": "rockets",
+                  "start": 0.42000000000000004,
+                  "end": 0.6419354838709678,
+                  "index": 3
+                },
+                "keyword": true,
+                "keyOrdinal": 0,
+                "x": 542
+              },
+              {
+                "text": "LAUNCHED",
+                "word": {
+                  "word": "launched,",
+                  "start": 0.6574193548387097,
+                  "end": 0.9000000000000001,
+                  "index": 4
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 331
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2,
+                3
+              ],
+              [
+                4
+              ]
+            ],
+            "lineY": [
+              1503,
+              1589
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 0.1,
+                "endSec": 0.20322580645161292
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 0.20322580645161292,
+                "endSec": 0.27548387096774196
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 0.27548387096774196,
+                "endSec": 0.42000000000000004
+              },
+              {
+                "wordIndex": 3,
+                "startSec": 0.42000000000000004,
+                "endSec": 0.6574193548387097
+              },
+              {
+                "wordIndex": 4,
+                "startSec": 0.6574193548387097,
+                "endSec": 0.9000000000000001
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 0,
+            "spoken": [
+              0,
+              1.55
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "AND",
+                "word": {
+                  "word": "and",
+                  "start": 1.7,
+                  "end": 1.82,
+                  "index": 5
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 142
+              },
+              {
+                "text": "NOBODY",
+                "word": {
+                  "word": "nobody",
+                  "start": 1.84,
+                  "end": 2.2,
+                  "index": 6
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 330
+              },
+              {
+                "text": "DIDN'T",
+                "word": {
+                  "word": "didn't",
+                  "start": 2.22,
+                  "end": 2.5,
+                  "index": 7
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 683
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 1.7,
+                "endSec": 1.84
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 1.84,
+                "endSec": 2.22
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.22,
+                "endSec": 2.5
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 5,
+            "spoken": [
+              1.7,
+              2.5
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "SEE",
+                "word": {
+                  "word": "see",
+                  "start": 2.52,
+                  "end": 2.7,
+                  "index": 8
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 263
+              },
+              {
+                "text": "IT",
+                "word": {
+                  "word": "it",
+                  "start": 2.72,
+                  "end": 2.8,
+                  "index": 9
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 421
+              },
+              {
+                "text": "COMING",
+                "word": {
+                  "word": "coming.",
+                  "start": 2.82,
+                  "end": 3.3,
+                  "index": 10
+                },
+                "keyword": true,
+                "keyOrdinal": 1,
+                "x": 509
+              }
+            ],
+            "lines": [
+              [
+                0,
+                1,
+                2
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 2.52,
+                "endSec": 2.72
+              },
+              {
+                "wordIndex": 1,
+                "startSec": 2.72,
+                "endSec": 2.82
+              },
+              {
+                "wordIndex": 2,
+                "startSec": 2.82,
+                "endSec": 3.3
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 8,
+            "spoken": [
+              2.52,
+              3.3
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "REALLY",
+                "word": {
+                  "word": "Really?",
+                  "start": 4.4,
+                  "end": 4.9,
+                  "index": 11
+                },
+                "keyword": false,
+                "keyOrdinal": null,
+                "x": 397
+              }
+            ],
+            "lines": [
+              [
+                0
+              ]
+            ],
+            "lineY": [
+              1546
+            ],
+            "steps": [
+              {
+                "wordIndex": 0,
+                "startSec": 4.4,
+                "endSec": 4.9
+              }
+            ],
+            "overflow": false,
+            "firstIndex": 11,
+            "spoken": [
+              4.4,
+              4.9
+            ]
+          }
+        ],
+        "overflowGroups": 0,
+        "emphasisMatched": 2,
+        "keyFontName": null,
+        "keyFontSize": null,
+        "fallbackUsed": true
+      }
+    }
+  ]
+}

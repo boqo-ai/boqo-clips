@@ -1,0 +1,134 @@
+[
+  {
+    "name": "no panels shot",
+    "seam": null,
+    "floor": null,
+    "extents": {}
+  },
+  {
+    "name": "one panels shot",
+    "seam": 0.3125,
+    "floor": 0.3125,
+    "extents": {}
+  },
+  {
+    "name": "the lowest seam of two",
+    "seam": 0.3333333333333333,
+    "floor": 0.3333333333333333,
+    "extents": {}
+  },
+  {
+    "name": "a headline on the seam over the shot pushes the floor down",
+    "seam": 0.3125,
+    "floor": 0.34750000000000003,
+    "extents": {
+      "SEAM TITLE": {
+        "top": 553,
+        "bottom": 648
+      }
+    }
+  },
+  {
+    "name": "a headline within the seam tolerance",
+    "seam": 0.25833333333333336,
+    "floor": 0.29333333333333333,
+    "extents": {
+      "SEAM TITLE": {
+        "top": 449,
+        "bottom": 544
+      }
+    }
+  },
+  {
+    "name": "a headline above the seam (centred in the band)",
+    "seam": 0.3125,
+    "floor": 0.3125,
+    "extents": {
+      "Top title": {
+        "top": 221,
+        "bottom": 316
+      }
+    }
+  },
+  {
+    "name": "a headline below the seam does not count",
+    "seam": 0.3125,
+    "floor": 0.3125,
+    "extents": {
+      "Low title": {
+        "top": 913,
+        "bottom": 1008
+      }
+    }
+  },
+  {
+    "name": "a headline on a seam only outside its span",
+    "seam": 0.3125,
+    "floor": 0.3125,
+    "extents": {
+      "Late title": {
+        "top": 553,
+        "bottom": 648
+      }
+    }
+  },
+  {
+    "name": "a headline with no span counts for the whole clip",
+    "seam": 0.3125,
+    "floor": 0.34750000000000003,
+    "extents": {
+      "Whole clip title": {
+        "top": 553,
+        "bottom": 648
+      }
+    }
+  },
+  {
+    "name": "two headlines, the lower bottom wins",
+    "seam": 0.3125,
+    "floor": 0.3766666666666667,
+    "extents": {
+      "ONE": {
+        "top": 337,
+        "bottom": 432
+      },
+      "A much longer second headline that wraps onto two lines of the plate": {
+        "top": 496,
+        "bottom": 704
+      }
+    }
+  },
+  {
+    "name": "a headline 0.45 px below the seam (inside the tolerance)",
+    "seam": 0.25833333333333336,
+    "floor": 0.29333333333333333,
+    "extents": {
+      "EDGE TITLE": {
+        "top": 449,
+        "bottom": 544
+      }
+    }
+  },
+  {
+    "name": "a headline 0.55 px below the seam (outside the tolerance)",
+    "seam": 0.25833333333333336,
+    "floor": 0.25833333333333336,
+    "extents": {
+      "EDGE TITLE": {
+        "top": 449,
+        "bottom": 544
+      }
+    }
+  },
+  {
+    "name": "a 720x1280 output",
+    "seam": 0.3125,
+    "floor": 0.34750000000000003,
+    "extents": {
+      "SMALL": {
+        "top": 369,
+        "bottom": 432
+      }
+    }
+  }
+]

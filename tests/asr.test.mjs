@@ -7,6 +7,7 @@ import { delimiter, dirname, join, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { findModel, whisperArgs, whisperLang, transcribe } from '../engine/asr.mjs';
 import { toolEnv } from '../engine/env.mjs';
+import { wordsFromWhisper } from '../engine/words.mjs';
 
 const tmp = () => mkdtempSync(join(tmpdir(), 'boqo-asr-test-'));
 const touch = (dir, name) => {
@@ -214,10 +215,10 @@ const CLI = fileURLToPath(new URL('../tools/asr.mjs', import.meta.url));
 const ffmpegOk = has('ffmpeg', ['-version']);
 
 // A whisper-cli stand-in: `-h` exits 0; a run writes `<-of>.json` with one word.
-function fakeWhisper(dir, language) {
+function fakeWhisper(dir, language, items = [{ offsets: { from: 100, to: 400 }, text: ' Hello' }]) {
   mkdirSync(dir, { recursive: true });
   const p = join(dir, 'whisper-cli');
-  const json = JSON.stringify({ result: { language }, transcription: [{ offsets: { from: 0, to: 0 }, text: '' }, { offsets: { from: 100, to: 400 }, text: ' Hello' }] });
+  const json = JSON.stringify({ result: { language }, transcription: [{ offsets: { from: 0, to: 0 }, text: '' }, ...items] });
   writeFileSync(p, `#!/bin/sh\nout=""; prev=""\nfor a in "$@"; do [ "$prev" = "-of" ] && out="$a"; prev="$a"; done\n[ -z "$out" ] && exit 0\nprintf '%s' '${json}' > "$out.json"\n`);
   chmodSync(p, 0o755);
   return dir;
@@ -247,6 +248,9 @@ test('tools/asr.mjs says the language it ran in, and englishOnly for an .en mode
     assert.equal(j.lang, 'en');
     assert.equal(j.englishOnly, true);
     assert.deepEqual(JSON.parse(readFileSync(out, 'utf8')).map((x) => x.w), ['Hello']);
+    // segments.json (source whisper) lands next to words.json
+    const [w0] = JSON.parse(readFileSync(out, 'utf8'));
+    assert.deepEqual(JSON.parse(readFileSync(join(root, 'segments.json'), 'utf8')), [{ start: w0.s, end: w0.e, text: 'Hello', speaker: null }]);
 
     const multi = touch(root, 'ggml-small.bin');
     fakeWhisper(bin, 'de');
@@ -265,6 +269,107 @@ test('tools/asr.mjs says the language it ran in, and englishOnly for an .en mode
     const de = JSON.parse((await runCli([audio, '--lang', 'de', '--out', out], base)).stdout);
     assert.equal(de.model, 'ggml-base.bin');
     assert.equal(de.englishOnly, false);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('tools/asr.mjs replaces the caption track\'s language file and transcript.md with whisper\'s own', { skip: (process.platform === 'win32' || !ffmpegOk) && 'needs sh and ffmpeg' }, async () => {
+  const root = tmp();
+  try {
+    const audio = join(root, 'a.wav');
+    const mk = spawnSync('ffmpeg', ['-v', 'error', '-f', 'lavfi', '-i', 'sine=frequency=440:duration=1', audio], { env: toolEnv() });
+    assert.equal(mk.status, 0, String(mk.stderr));
+    const bin = join(root, 'bin');
+    const env = { ...toolEnv(), PATH: [bin, toolEnv().PATH].join(delimiter), BOQO_WHISPER_MODEL: touch(root, 'ggml-small.bin') };
+    const out = join(root, 'words.json');
+    const lang = join(root, 'transcript-language.txt');
+    const md = join(root, 'transcript.md');
+    // what `fetch info` left from a partial caption track
+    const stale = () => {
+      writeFileSync(lang, 'fil\n');
+      writeFileSync(md, '## Part 1\n');
+    };
+
+    stale();
+    fakeWhisper(bin, 'tl');
+    assert.equal((await runCli([audio, '--out', out], env)).code, 0);
+    assert.equal(readFileSync(lang, 'utf8'), 'tl\n', 'the language whisper heard');
+    assert.equal(existsSync(md), false, 'the caption transcript is stale');
+
+    // an explicit --lang that whisper reports back is the one written
+    stale();
+    fakeWhisper(bin, 'de');
+    assert.equal((await runCli([audio, '--lang', 'de', '--out', out], env)).code, 0);
+    assert.equal(readFileSync(lang, 'utf8'), 'de\n');
+
+    // no language heard and none asked: no stale one is left behind either
+    stale();
+    fakeWhisper(bin, undefined);
+    assert.equal((await runCli([audio, '--out', out], env)).code, 0);
+    assert.equal(existsSync(lang), false);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+// whisper hears a lone "Oh" at the seam of its 30 s windows; the filter (spec 7.10)
+const item = (from, to, text) => ({ offsets: { from, to }, text: ` ${text}` });
+const heard = (items, off) => wordsFromWhisper({ transcription: items }, off).map((x) => x.w);
+
+test('whisper window edge: a lone word in the last 0.3 s of a 30 s window is dropped', () => {
+  assert.deepEqual(heard([item(1000, 1400, 'Hi'), item(29850, 30000, 'Oh')]), ['Hi']);
+  // the grid is the audio's, not the source's: the offset does not move it
+  assert.deepEqual(heard([item(1000, 1400, 'Hi'), item(29850, 30000, 'Oh')], 100), ['Hi']);
+  // later windows too
+  assert.deepEqual(heard([item(59900, 60000, 'Oh')]), []);
+});
+
+test('whisper window edge: a lone word in the first 0.3 s of a later window is dropped', () => {
+  assert.deepEqual(heard([item(1000, 1400, 'Hi'), item(30050, 30200, 'Oh')]), ['Hi']);
+  assert.deepEqual(heard([item(60000, 60200, 'Oh')]), []);
+});
+
+test('whisper window edge: a word with a neighbour within 1 s is kept', () => {
+  assert.deepEqual(heard([item(29850, 30000, 'Oh'), item(30200, 30500, 'my')]), ['Oh', 'my']);
+  assert.deepEqual(heard([item(29000, 29500, 'well'), item(29850, 30000, 'Oh')]), ['well', 'Oh']);
+  // 1 s exactly, edge to edge, still counts; just over does not
+  assert.deepEqual(heard([item(29850, 30000, 'Oh'), item(31000, 31300, 'my')]), ['Oh', 'my']);
+  assert.deepEqual(heard([item(29850, 30000, 'Oh'), item(31010, 31300, 'my')]), ['my']);
+});
+
+test('whisper window edge: the start of the audio is not a seam, nor is a word away from the edge', () => {
+  assert.deepEqual(heard([item(0, 200, 'Oh')]), ['Oh']);
+  assert.deepEqual(heard([item(100, 400, 'Hello')]), ['Hello']);
+  assert.deepEqual(heard([item(15000, 15200, 'Oh')]), ['Oh']);
+  assert.deepEqual(heard([item(44900, 45000, 'Oh')]), ['Oh']); // last window, shorter than 30 s, no seam at 45 s
+});
+
+test('whisper window edge: exactly 0.3 s from the edge is outside it', () => {
+  assert.deepEqual(heard([item(30300, 30500, 'Oh')]), ['Oh']);
+  assert.deepEqual(heard([item(29700, 29900, 'Oh')]), ['Oh']);
+  assert.deepEqual(heard([item(30299, 30500, 'Oh')]), []);
+  assert.deepEqual(heard([item(29701, 29900, 'Oh')]), []);
+});
+
+test('whisper window edge: non-speech markers are not neighbours', () => {
+  assert.deepEqual(heard([item(29850, 30000, 'Oh'), item(30100, 30400, '[MUSIC]')]), []);
+});
+
+test('tools/asr.mjs: a dropped window-edge word is in neither words.json nor segments.json', { skip: (process.platform === 'win32' || !ffmpegOk) && 'needs sh and ffmpeg' }, async () => {
+  const root = tmp();
+  try {
+    const audio = join(root, 'a.wav');
+    const mk = spawnSync('ffmpeg', ['-v', 'error', '-f', 'lavfi', '-i', 'sine=frequency=440:duration=1', audio], { env: toolEnv() });
+    assert.equal(mk.status, 0, String(mk.stderr));
+    const bin = fakeWhisper(join(root, 'bin'), 'en', [item(100, 400, 'Hello'), item(29850, 30000, 'Oh')]);
+    const env = { ...toolEnv(), PATH: [bin, toolEnv().PATH].join(delimiter), BOQO_WHISPER_MODEL: touch(root, 'ggml-small.en.bin') };
+    const out = join(root, 'words.json');
+    const r = await runCli([audio, '--out', out], env);
+    assert.equal(r.code, 0, r.stdout + r.stderr);
+    assert.equal(JSON.parse(r.stdout).words, 1);
+    assert.deepEqual(JSON.parse(readFileSync(out, 'utf8')).map((x) => x.w), ['Hello']);
+    assert.deepEqual(JSON.parse(readFileSync(join(root, 'segments.json'), 'utf8')).map((x) => x.text), ['Hello']);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

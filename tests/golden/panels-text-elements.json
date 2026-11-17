@@ -1,0 +1,185 @@
+[
+  {
+    "name": "no panels shot returns the same array",
+    "sameArray": true,
+    "elements": [
+      {
+        "text": "A",
+        "positionFraction": 0.14,
+        "span": null,
+        "part": null,
+        "sameObject": true
+      }
+    ]
+  },
+  {
+    "name": "one panels shot moves the headline to the seam",
+    "sameArray": false,
+    "elements": [
+      {
+        "text": "A",
+        "positionFraction": 0.3125,
+        "span": null,
+        "part": null,
+        "sameObject": false
+      }
+    ]
+  },
+  {
+    "name": "a mixed clip splits the headline into parts",
+    "sameArray": false,
+    "elements": [
+      {
+        "text": "A",
+        "positionFraction": 0.14,
+        "span": {
+          "startSec": 0,
+          "endSec": 4
+        },
+        "part": {
+          "index": 0,
+          "window": {
+            "startSec": 0,
+            "endSec": 12
+          }
+        },
+        "sameObject": false
+      },
+      {
+        "text": "A",
+        "positionFraction": 0.3125,
+        "span": {
+          "startSec": 4,
+          "endSec": 8
+        },
+        "part": {
+          "index": 1,
+          "window": {
+            "startSec": 0,
+            "endSec": 12
+          }
+        },
+        "sameObject": false
+      },
+      {
+        "text": "A",
+        "positionFraction": 0.14,
+        "span": {
+          "startSec": 8,
+          "endSec": 12
+        },
+        "part": {
+          "index": 2,
+          "window": {
+            "startSec": 0,
+            "endSec": 12
+          }
+        },
+        "sameObject": false
+      }
+    ]
+  },
+  {
+    "name": "a headline already below the seam is unmoved",
+    "sameArray": true,
+    "elements": [
+      {
+        "text": "A",
+        "positionFraction": 0.5,
+        "span": null,
+        "part": null,
+        "sameObject": true
+      }
+    ]
+  },
+  {
+    "name": "a whole-clip headline",
+    "sameArray": false,
+    "elements": [
+      {
+        "text": "A",
+        "positionFraction": 0.14,
+        "span": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "part": {
+          "index": 0,
+          "window": {
+            "startSec": 0,
+            "endSec": 12
+          }
+        },
+        "sameObject": false
+      },
+      {
+        "text": "A",
+        "positionFraction": 0.3125,
+        "span": {
+          "startSec": 6,
+          "endSec": 12
+        },
+        "part": {
+          "index": 1,
+          "window": {
+            "startSec": 0,
+            "endSec": 12
+          }
+        },
+        "sameObject": false
+      }
+    ]
+  },
+  {
+    "name": "a window headline that holds 3 s over a panels shot",
+    "sameArray": false,
+    "elements": [
+      {
+        "text": "A",
+        "positionFraction": 0.2916666666666667,
+        "span": null,
+        "part": null,
+        "sameObject": false
+      }
+    ]
+  },
+  {
+    "name": "two elements, one moved",
+    "sameArray": false,
+    "elements": [
+      {
+        "text": "A",
+        "positionFraction": 0.3125,
+        "span": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "part": null,
+        "sameObject": false
+      },
+      {
+        "text": "B",
+        "positionFraction": 0.8,
+        "span": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "part": null,
+        "sameObject": true
+      }
+    ]
+  },
+  {
+    "name": "a window past the clip is clamped",
+    "sameArray": true,
+    "elements": [
+      {
+        "text": "A",
+        "positionFraction": 0.14,
+        "span": null,
+        "part": null,
+        "sameObject": true
+      }
+    ]
+  }
+]

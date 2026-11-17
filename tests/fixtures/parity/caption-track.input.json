@@ -1,0 +1,1212 @@
+{
+ "words": {
+  "en": [
+   {
+    "word": "before",
+    "start": 98.4,
+    "end": 98.8
+   },
+   {
+    "word": "So",
+    "start": 100,
+    "end": 100.18
+   },
+   {
+    "word": "the",
+    "start": 100.2,
+    "end": 100.32
+   },
+   {
+    "word": "3",
+    "start": 100.34,
+    "end": 100.6
+   },
+   {
+    "word": "rockets",
+    "start": 100.62,
+    "end": 101.05
+   },
+   {
+    "word": "launched,",
+    "start": 101.08,
+    "end": 101.55
+   },
+   {
+    "word": "and",
+    "start": 101.7,
+    "end": 101.82
+   },
+   {
+    "word": "nobody",
+    "start": 101.84,
+    "end": 102.2
+   },
+   {
+    "word": "didn't",
+    "start": 102.22,
+    "end": 102.5
+   },
+   {
+    "word": "see",
+    "start": 102.52,
+    "end": 102.7
+   },
+   {
+    "word": "it",
+    "start": 102.72,
+    "end": 102.8
+   },
+   {
+    "word": "coming.",
+    "start": 102.82,
+    "end": 103.3
+   },
+   {
+    "word": "Really?",
+    "start": 104.4,
+    "end": 104.9
+   },
+   {
+    "word": "after",
+    "start": 106.4,
+    "end": 106.8
+   }
+  ],
+  "ru": [
+   {
+    "word": "Итак",
+    "start": 100,
+    "end": 100.3
+   },
+   {
+    "word": "три",
+    "start": 100.32,
+    "end": 100.6
+   },
+   {
+    "word": "ракеты",
+    "start": 100.62,
+    "end": 101.05
+   },
+   {
+    "word": "взлетели,",
+    "start": 101.08,
+    "end": 101.55
+   },
+   {
+    "word": "и",
+    "start": 101.7,
+    "end": 101.78
+   },
+   {
+    "word": "никто",
+    "start": 101.8,
+    "end": 102.2
+   },
+   {
+    "word": "не",
+    "start": 102.22,
+    "end": 102.32
+   },
+   {
+    "word": "ожидал",
+    "start": 102.34,
+    "end": 102.8
+   },
+   {
+    "word": "этого.",
+    "start": 102.82,
+    "end": 103.3
+   },
+   {
+    "word": "Правда?",
+    "start": 104.4,
+    "end": 104.9
+   }
+  ]
+ },
+ "scenarios": [
+  {
+   "name": "default template, a pause cut, a scene cut",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  },
+  {
+   "name": "default template at 1:1",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1080
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  },
+  {
+   "name": "default template at 16:9",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1920,
+    "height": 1080
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  },
+  {
+   "name": "no cuts, no scene cuts",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [],
+   "sceneCuts": [],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  },
+  {
+   "name": "cuts that clamp a word and drop one",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 0.6,
+     "end": 0.75
+    },
+    {
+     "start": 2.81,
+     "end": 2.91
+    },
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  },
+  {
+   "name": "no emphasis",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  },
+  {
+   "name": "emphasis null",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": null,
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  },
+  {
+   "name": "a window with no words",
+   "words": "en",
+   "startSec": 110,
+   "endSec": 115,
+   "cuts": [],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "accentColours": [
+     "#E900FA"
+    ],
+    "positionFraction": 0.7
+   }
+  },
+  {
+   "name": "cyrillic, punch",
+   "words": "ru",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [],
+   "emphasis": [
+    "ракеты",
+    "этого"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "punch"
+   }
+  },
+  {
+   "name": "cyrillic, comic",
+   "words": "ru",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [],
+   "emphasis": [
+    "ракеты",
+    "этого"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "comic"
+   }
+  },
+  {
+   "name": "cyrillic, boldkeys",
+   "words": "ru",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [],
+   "emphasis": [
+    "ракеты",
+    "этого"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "boldkeys"
+   }
+  },
+  {
+   "name": "cyrillic, editorial",
+   "words": "ru",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [],
+   "emphasis": [
+    "ракеты",
+    "этого"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "editorial"
+   }
+  },
+  {
+   "name": "cyrillic, classic",
+   "words": "ru",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [],
+   "emphasis": [
+    "ракеты",
+    "этого"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "classic"
+   }
+  },
+  {
+   "name": "cyrillic, karaoke",
+   "words": "ru",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [],
+   "emphasis": [
+    "ракеты",
+    "этого"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "karaoke"
+   }
+  },
+  {
+   "name": "cyrillic, neon",
+   "words": "ru",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [],
+   "emphasis": [
+    "ракеты",
+    "этого"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "neon"
+   }
+  },
+  {
+   "name": "cyrillic, minimal",
+   "words": "ru",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [],
+   "emphasis": [
+    "ракеты",
+    "этого"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "minimal"
+   }
+  },
+  {
+   "name": "cyrillic, boldkeys in Bangers with an Anton key face",
+   "words": "ru",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "ракеты"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "boldkeys",
+    "font": {
+     "kind": "builtin",
+     "name": "Bangers"
+    },
+    "keyFont": "Anton"
+   }
+  },
+  {
+   "name": "every knob, karaoke",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "karaoke",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, punch",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "punch",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, clean",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "clean",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, highlight",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "highlight",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, classic",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "classic",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, bounce",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "bounce",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, neon",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "neon",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, boldkeys",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "boldkeys",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, typewriter",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "typewriter",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, slide",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "slide",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, comic",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "comic",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, marker",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "marker",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, stack",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "stack",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, minimal",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "minimal",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  },
+  {
+   "name": "every knob, editorial",
+   "words": "en",
+   "startSec": 99.9,
+   "endSec": 105.2,
+   "cuts": [
+    {
+     "start": 3.55,
+     "end": 4.35
+    }
+   ],
+   "sceneCuts": [
+    1.72
+   ],
+   "emphasis": [
+    "rockets",
+    "coming"
+   ],
+   "output": {
+    "width": 1080,
+    "height": 1920
+   },
+   "brandCaptions": {
+    "style": "editorial",
+    "baseColour": "#FAFAFA",
+    "accentColours": [
+     "#112233",
+     "#445566"
+    ],
+    "outlineColour": "#010203",
+    "textCase": "preserve",
+    "positionFraction": 0.3,
+    "wordsTarget": 2,
+    "sizeScale": 1.25,
+    "keyFont": "Archivo Black",
+    "glowColour": "#00FF00",
+    "glowStrength": 0.3,
+    "shadowColour": "#0000FF",
+    "cycle": false,
+    "speed": 1.5
+   }
+  }
+ ]
+}

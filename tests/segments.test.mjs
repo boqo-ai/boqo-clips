@@ -15,8 +15,8 @@ const tmp = () => mkdtempSync(join(tmpdir(), 'boqo-segments-test-'));
 const spoken = (text, t0 = 0) =>
   text.split(' ').map((w, i) => ({ w, s: Math.round((t0 + i * 0.3) * 1000) / 1000, e: Math.round((t0 + i * 0.3 + 0.25) * 1000) / 1000 }));
 
-test('constants: 0.6 s pause (provisional), 40 words', () => {
-  assert.equal(PAUSE_SPLIT_SEC, 0.6);
+test('constants: 0.8 s start-to-start pause (tuned in E2), 40 words', () => {
+  assert.equal(PAUSE_SPLIT_SEC, 0.8);
   assert.equal(MAX_SEGMENT_WORDS, 40);
 });
 
@@ -47,17 +47,32 @@ test('the hosted terminal rule: . ! ? with an optional closing double quote, not
   assert.deepEqual(segs.map((x) => x.text), ['Stop!', 'Really?', 'He said "go."', 'Then, (maybe) 5.5 done']);
 });
 
-test('auto: a 0.7 s gap splits, a 0.5 s gap does not (default 0.6); exactly 0.6 splits', () => {
-  const mk = (gap) => [
+// The pause on an auto track is the spacing between two word STARTS: the ends are
+// synthesized (see PAUSE_SPLIT_SEC), so a gap measured from them is 0 under 1.0 s.
+test('auto: a start-to-start spacing of 0.8 s splits, 0.7 s does not (default 0.8)', () => {
+  // 'one' and 'two' 0.3 s apart; 'three' starts `d` s after 'two'
+  const mk = (d) => [
     { w: 'one', s: 0, e: 0.3 },
     { w: 'two', s: 0.3, e: 0.6 },
-    { w: 'three', s: 0.6 + gap, e: 0.9 + gap },
+    { w: 'three', s: 0.3 + d, e: 0.6 + d },
   ];
-  assert.deepEqual(segmentsFromWords(mk(0.7), { source: 'auto' }).map((x) => x.text), ['one two', 'three']);
-  assert.equal(segmentsFromWords(mk(0.5), { source: 'auto' }).length, 1);
-  assert.equal(segmentsFromWords(mk(0.6), { source: 'auto' }).length, 2);
-  assert.equal(segmentsFromWords(mk(0.5), { source: 'auto', pauseSplitSec: 0.4 }).length, 2);
-  assert.equal(segmentsFromWords(mk(0.7), { source: 'auto', pauseSplitSec: 1 }).length, 1);
+  assert.deepEqual(segmentsFromWords(mk(0.8), { source: 'auto' }).map((x) => x.text), ['one two', 'three']);
+  assert.equal(segmentsFromWords(mk(1.5), { source: 'auto' }).length, 2);
+  assert.equal(segmentsFromWords(mk(0.7), { source: 'auto' }).length, 1);
+  assert.equal(segmentsFromWords(mk(0.79), { source: 'auto' }).length, 1);
+  assert.equal(segmentsFromWords(mk(0.7), { source: 'auto', pauseSplitSec: 0.5 }).length, 2);
+  assert.equal(segmentsFromWords(mk(0.8), { source: 'auto', pauseSplitSec: 1 }).length, 1);
+});
+
+test('auto: the pause ignores word ends, so a long word is no pause and a short one with a gap is', () => {
+  // 'one' lasts 0.9 s and ends 0.1 s before 'two': spacing 1.0 s, a split. 'a'
+  // and 'b' end exactly where the next word starts: spacing 0.3 s, no split.
+  const long = [{ w: 'one', s: 0, e: 0.9 }, { w: 'two', s: 1.0, e: 1.2 }];
+  assert.equal(segmentsFromWords(long, { source: 'auto' }).length, 2);
+  const abut = [{ w: 'a', s: 0, e: 0.3 }, { w: 'b', s: 0.3, e: 0.6 }];
+  assert.equal(segmentsFromWords(abut, { source: 'auto' }).length, 1);
+  const endsApart = [{ w: 'a', s: 0, e: 0.1 }, { w: 'b', s: 0.7, e: 0.8 }]; // 0.6 s true gap, 0.7 s spacing
+  assert.equal(segmentsFromWords(endsApart, { source: 'auto' }).length, 1);
 });
 
 test('auto still splits on .!? and at 40 words', () => {
@@ -78,7 +93,7 @@ test('a segment starts at its first word s and ends at its last word e; speaker 
   ]);
 });
 
-test('Russian auto captions: "привет как дела" + 0.8 s + "хорошо" is 2 segments', () => {
+test('Russian auto captions: "привет как дела" + a 0.8 s silence + "хорошо" is 2 segments', () => {
   const words = [
     { w: 'привет', s: 0, e: 0.4 },
     { w: 'как', s: 0.4, e: 0.7 },
@@ -109,16 +124,15 @@ test('an auto track through wordsFromJson3: a long silence between word events s
   assert.deepEqual(segs.map((x) => x.text), ['one two', 'three']);
 });
 
-test('json3 auto words: the pause is measured from the synthesized end, so a split needs 1.6 s start to start', () => {
-  // wordsFromJson3 ends a word at min(next start, start + 1.0 s): the gap is
-  // next.s - prev.s - 1.0 when the cap binds, else 0 (E2 may revisit the metric)
+test('json3 auto words: a split needs 0.8 s from one word start to the next, whatever the synthesized end', () => {
+  // wordsFromJson3 ends a word at min(next start, start + 1.0 s), so an end-to-start
+  // gap is 0 below 1.0 s of spacing (E2 replaced that metric by start to start)
   const ev = (ms, w) => ({ tStartMs: ms, dDurationMs: 500, segs: [{ utf8: w, tOffsetMs: 0 }] });
   const count = (gapMs) => segmentsFromWords(wordsFromJson3({ events: [ev(0, 'one'), ev(gapMs, 'two')] }), { source: 'auto' }).length;
-  assert.equal(count(500), 1);
-  assert.equal(count(1000), 1);
-  assert.equal(count(1500), 1);
-  assert.equal(count(1599), 1);
-  assert.equal(count(1600), 2);
+  assert.equal(count(300), 1);
+  assert.equal(count(700), 1);
+  assert.equal(count(799), 1);
+  assert.equal(count(800), 2);
   assert.equal(count(1700), 2);
 });
 
@@ -160,7 +174,7 @@ test('transcript.mjs --segments: --pause-split reaches auto; --source is require
   const run = (...a) => spawnSync(process.execPath, [CLI, '--words', wf, ...a], { encoding: 'utf8' });
   assert.equal(run('--segments', out, '--source', 'auto').status, 0);
   assert.equal(JSON.parse(readFileSync(out, 'utf8')).length, 2);
-  assert.equal(run('--segments', out, '--source', 'auto', '--pause-split', '1').status, 0);
+  assert.equal(run('--segments', out, '--source', 'auto', '--pause-split', '1.5').status, 0);
   assert.equal(JSON.parse(readFileSync(out, 'utf8')).length, 1);
   for (const bad of [['--segments', out], ['--segments', out, '--source', 'deepgram'], ['--segments', out, '--source', 'auto', '--pause-split', '0'], ['--segments', out, '--out', join(d, 't.md'), '--source', 'auto'], ['--source', 'auto', '--out', join(d, 't.md')]]) {
     const r = run(...bad);
